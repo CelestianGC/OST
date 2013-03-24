@@ -1,0 +1,31 @@
+<entries>
+  <NonWeaponProfClass>
+    <myID>b2224785-b90d-4c87-9442-3f97738fcb5b</myID>
+    <name>fire building</name>
+    <description>Enter Description of this new non-weapon prof.</description>
+    <cost>1</cost>
+    <abilityBase>2</abilityBase>
+    <baseAdjustment>0</baseAdjustment>
+    <perAdjustment>1</perAdjustment>
+    <allowedClass/>
+    <allowedRace>
+      <string>3d2dc775-3973-465f-aeac-db24deb7d769</string>
+    </allowedRace>
+  </NonWeaponProfClass>
+  <NonWeaponProfClass>
+    <myID>37c7e985-2e65-4903-aa1d-9bff3111ac8c</myID>
+    <name>swimming</name>
+    <description>You know more than the average person when it comes to swimming.</description>
+    <cost>1</cost>
+    <abilityBase>0</abilityBase>
+    <baseAdjustment>0</baseAdjustment>
+    <perAdjustment>1</perAdjustment>
+    <allowedClass/>
+    <allowedRace>
+      <string>57e7c1e4-dbf7-43a8-aedb-91ca9493f71b</string>
+      <string>3d2dc775-3973-465f-aeac-db24deb7d769</string>
+      <string>3ee4b2f4-6e4e-471e-9b54-599b2ae40677</string>
+      <string>e7b0d282-c63a-492c-b7ac-e2fc65b54353</string>
+    </allowedRace>
+  </NonWeaponProfClass>
+</entries>

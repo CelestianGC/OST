@@ -1,0 +1,17 @@
+<entries>
+  <EquipmentClass>
+    <myID>f30b5fdf-1355-46f3-adb2-020c8e146e57</myID>
+    <name>wineskin</name>
+    <description>Carries 1 day supply of water or other substances.</description>
+    <count>1</count>
+    <type>1</type>
+    <magic>false</magic>
+    <charges>0</charges>
+    <chargesMax>0</chargesMax>
+    <equipped>false</equipped>
+    <weight>0.5</weight>
+    <weaponType>0</weaponType>
+    <armorType/>
+    <armorBulkType>0</armorBulkType>
+  </EquipmentClass>
+</entries>

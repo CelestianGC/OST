@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OST</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>creatures.xml</name>
+			<type>1</type>
+			<location>D:/Dev/eclipse/WorkSpace/OST/creatures.xml</location>
+		</link>
+		<link>
+			<name>images/Heart-icon.png</name>
+			<type>1</type>
+			<location>D:/Dev/eclipse/WorkSpace/OST/images/Heart-icon.png</location>
+		</link>
+		<link>
+			<name>images/Red-dot-icon.png</name>
+			<type>1</type>
+			<location>D:/Dev/eclipse/WorkSpace/OST/images/Red-dot-icon.png</location>
+		</link>
+		<link>
+			<name>images/shield-icon.png</name>
+			<type>1</type>
+			<location>D:/Dev/eclipse/WorkSpace/OST/images/shield-icon.png</location>
+		</link>
+		<link>
+			<name>images/sword-icon.png</name>
+			<type>1</type>
+			<location>D:/Dev/eclipse/WorkSpace/OST/images/sword-icon.png</location>
+		</link>
+	</linkedResources>
+</projectDescription>

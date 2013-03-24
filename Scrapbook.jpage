@@ -1,0 +1,4 @@
+MyRandomClass oR = new MyRandomClass(1,6,false);
+oR.setPerDice(true);
+oR.isPerDice()
+

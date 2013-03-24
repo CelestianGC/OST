@@ -1,0 +1,823 @@
+<entries>
+  <PlayerClass>
+    <name>Bob the Fighter</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>a54f9d22-c5da-4296-9354-41a3c9b4ed77</myID>
+    <hpMax>0</hpMax>
+    <hpCurrent>0</hpCurrent>
+    <armorRatings>
+      <string>-5</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>9</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense>NA</specialDefense>
+    <specialAttacks>NA</specialAttacks>
+    <alignment>Lawful Neutral</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>3</pcLevel>
+    <notes>Bob is an amazing fighter.
+
+Str:8
+Dex:8
+Con:8
+Int:8
+Wis:8
+Chr:8
+
+Equipment:
+-Backpack filled with pipeweed.
+
+Magic Items:
+-Pipe of smoking
+
+
+</notes>
+    <log>health adjusted (-5)
+health adjusted (+2)
+health adjusted (-1)
+health adjusted (-9)
+health adjusted (+5)
+health adjusted (-6)
+health adjusted (-5)
+health adjusted (+7)
+health adjusted (+7)
+health adjusted (+4)
+health adjusted (-1)
+health adjusted (-5)
+health adjusted (+7)
+health adjusted (-3)
+health adjusted (-25)
+health adjusted (+2)
+health adjusted (-25)
+health adjusted (+1)
+health adjusted (+3)
+health adjusted (+4)
+health adjusted (+4)
+health adjusted (-1)
+health adjusted (-2)
+health adjusted (-5)
+health adjusted (-6)
+health adjusted (-10)
+health adjusted (-1)
+health adjusted (+25)
+health adjusted (-3)
+health adjusted (-4)
+health adjusted (-5)
+health adjusted (-6)
+health adjusted (-1)
+health adjusted (-5)
+health adjusted (-1)
+health adjusted (-3)
+health adjusted (-3)
+health adjusted (-1)
+health adjusted (-4)
+health adjusted (-5)
+health adjusted (-1)
+health adjusted (-1)
+health adjusted (-0)
+health adjusted (+25)
+health adjusted (-14)
+health adjusted (-3)
+health adjusted (+3)
+health adjusted (-3)
+health adjusted (+17)
+health adjusted (-1)
+health adjusted (-15)
+health adjusted (+2)
+health adjusted (-1)
+health adjusted (-16)
+health adjusted (+3)
+health adjusted (-4)
+health adjusted (+3)
+health adjusted (-3)
+health adjusted (+4)
+health adjusted (-5)
+health adjusted (+6)
+health adjusted (-1)
+health adjusted (-3)
+health adjusted (+3)
+health adjusted (-4)
+health adjusted (-2)
+health adjusted (-1)
+health adjusted (-3)
+health adjusted (+6)
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>thief</name>
+        <classID>d8c06682-f801-4fda-8a9e-f5ea84b78b53</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+    </myClass>
+    <myRace>
+      <name>elf</name>
+      <raceID>0daa6bb1-c9ef-4cba-baad-73dc3b9c2039</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>14</int>
+      <int>15</int>
+      <int>15</int>
+      <int>16</int>
+      <int>17</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>1</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Cluth of the Kuddle</name>
+    <namePlayer>Johnny Smit</namePlayer>
+    <myID>983049f3-006f-481f-a61d-2c8716923d6a</myID>
+    <hpMax>23</hpMax>
+    <hpCurrent>23</hpCurrent>
+    <armorRatings>
+      <string>3</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>4</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense>NA</specialDefense>
+    <specialAttacks>NA</specialAttacks>
+    <alignment>Lawful Good</alignment>
+    <gear/>
+    <pcClass>Cleric</pcClass>
+    <pcLevel>2</pcLevel>
+    <notes>
+Str:8
+Dex:8
+Con:8
+Int:8
+Wis:8
+Chr:8
+
+Equipment:
+-
+
+Magic Items:
+-
+
+
+</notes>
+    <log>health adjusted (-2)
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>NoClassYet</name>
+        <classID>NoClassSet</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls/>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+    </myClass>
+    <myRace>
+      <name>NoRaceYet</name>
+      <raceID>NoRaceSET</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Fighter Bob</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>5366a582-cd2b-410c-a0df-a5f9f6ff9441</myID>
+    <hpMax>66</hpMax>
+    <hpCurrent>66</hpCurrent>
+    <armorRatings>
+      <string>5</string>
+    </armorRatings>
+    <moveRate>9</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense>NA</specialDefense>
+    <specialAttacks>NA</specialAttacks>
+    <alignment>LN</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>3</pcLevel>
+    <notes>
+Str:8
+Dex:8
+Con:8
+Int:8
+Wis:8
+Chr:8
+
+Equipment:
+-
+
+Magic Items:
+-
+
+
+</notes>
+    <log>health adjusted (-3)
+health adjusted (-3)
+health adjusted (-3)
+health adjusted (-3)
+health adjusted (-8)
+health adjusted (-2)
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>NoClassYet</name>
+        <classID>NoClassSet</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls/>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+    </myClass>
+    <myRace>
+      <name>NoRaceYet</name>
+      <raceID>NoRaceSET</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Longshot Windblown</name>
+    <namePlayer>Jon Smithe</namePlayer>
+    <myID>da4ba612-ed48-4319-92f6-be9358c8b2b7</myID>
+    <hpMax>17</hpMax>
+    <hpCurrent>17</hpCurrent>
+    <armorRatings>
+      <string>5</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense>NA</specialDefense>
+    <specialAttacks>NA</specialAttacks>
+    <alignment>NG</alignment>
+    <gear/>
+    <pcClass>Ranger</pcClass>
+    <pcLevel>2</pcLevel>
+    <notes>
+Str:8
+Dex:8
+Con:8
+Int:8
+Wis:8
+Chr:8
+
+Equipment:
+-
+
+Magic Items:
+-
+
+
+</notes>
+    <log>health adjusted (-0)
+health adjusted (-2)
+</log>
+    <saveLast></saveLast>
+    <tag>clone</tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>NoClassYet</name>
+        <classID>NoClassSet</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls/>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+    </myClass>
+    <myRace>
+      <name>NoRaceYet</name>
+      <raceID>NoRaceSET</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Magic Hands Wizbro</name>
+    <namePlayer>John Smithy</namePlayer>
+    <myID>de5c4111-0490-4b99-abf2-91840302c97a</myID>
+    <hpMax>16</hpMax>
+    <hpCurrent>16</hpCurrent>
+    <armorRatings>
+      <string>5</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense>NA</specialDefense>
+    <specialAttacks>NA</specialAttacks>
+    <alignment>CN</alignment>
+    <gear/>
+    <pcClass>Magic-User</pcClass>
+    <pcLevel>3</pcLevel>
+    <notes>
+Str:8
+Dex:8
+Con:8
+Int:8
+Wis:8
+Chr:8
+
+Equipment:
+-
+
+Magic Items:
+-
+
+
+</notes>
+    <log>health adjusted (-0)
+health adjusted (-1)
+health adjusted (-0)
+health adjusted (-26)
+health adjusted (+23)
+health adjusted (-26)
+health adjusted (+3)
+health adjusted (-26)
+health adjusted (-26)
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>NoClassYet</name>
+        <classID>NoClassSet</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls/>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+    </myClass>
+    <myRace>
+      <name>NoRaceYet</name>
+      <raceID>NoRaceSET</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+</entries>
