@@ -1265,14 +1265,148 @@ public class PlayerClass implements Serializable, Comparable {
 		return(aS);
 	}
 
-	
-	public ArrayList<Integer> getAllArcaneSpellsPerLevel() {
+	/**
+	 * return spells per level from all sources
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public int[] getAllArcaneSpellsPerLevel(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
 
-		return(null);
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		int aScores[] = new int[MAX_MAGE_SPELL_LEVEL];
+
+
+		// iterate over all classes pc might have
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			if (oC!= null) // if no class is set == null
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					// get saves from level settings
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						for (int i=0;i<lE.getSpellsPerLevelArcane().length;i++) {
+							int iS = lE.getSpellsPerLevelArcane()[i];
+							aScores[i] += iS;
+						}
+					} // was high enough level/exp
+
+				}
+		}
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			for (int i=0;i<eA.getMageSpellsBase().length;i++) {
+				int  iS = eA.getMageSpellsBase()[i];
+				aScores[i] += iS;
+			}
+
+		return(aScores);
 	}
-	public ArrayList<Integer> getAllDivineSpellsPerLevel() {
 
-		return(null);
+	/**
+	 * return all cleric spells per level from all sources
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public int[] getAllDivineSpellsPerLevel(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		int aScores[] = new int[MAX_CLERIC_SPELL_LEVEL];
+
+
+		// iterate over all classes pc might have
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			if (oC!= null) // if no class is set == null
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					// get saves from level settings
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						for (int i=0;i<lE.getSpellsPerLevelDivine().length;i++) {
+							int iS = lE.getSpellsPerLevelDivine()[i];
+							aScores[i] += iS;
+						}
+					} // was high enough level/exp
+
+				}
+		}
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			for (int i=0;i<eA.getClericSpellsBase().length;i++) {
+				int  iS = eA.getClericSpellsBase()[i];
+				aScores[i] += iS;
+			}
+
+		return(aScores);
+	}
+
+	/**
+	 * return all bonus spell slots from all sources
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public int[] getAllArcaneBonusSpellsPerLevel(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		int aScores[] = new int[MAX_MAGE_SPELL_LEVEL];
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			for (int i=0;i<eA.getMageSpellsBonus().length;i++) {
+				int  iS = eA.getMageSpellsBonus()[i];
+				aScores[i] += iS;
+			}
+		//TODO get spells from ability scores (wisdom/int)
+		return(aScores);
+	}
+
+	/**
+	 * return all bonus spell slots from all sources
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public int[] getAllDivineBonusSpellsPerLevel(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		int aScores[] = new int[MAX_CLERIC_SPELL_LEVEL];
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			for (int i=0;i<eA.getClericSpellsBonus().length;i++) {
+				int  iS = eA.getClericSpellsBonus()[i];
+				aScores[i] += iS;
+			}
+		//TODO get spells from ability scores (wisdom/int)		
+		return(aScores);
 	}
 
 }

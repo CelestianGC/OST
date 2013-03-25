@@ -183,6 +183,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 				"/images/treasure-chest-open-icon-24.png"))); // NOI18N
 		itemButton.setText("item");
 		itemButton.setToolTipText("Create and modify items.");
+		itemButton.setEnabled(false);
 		itemButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				itemButtonActionPerformed(evt);
@@ -190,7 +191,12 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		});
 
 		extraAbilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraAbilitiesButton.setIcon(new javax.swing.ImageIcon(
+				getClass().getResource(
+						"/images/Apps-utilities-desktop-extra-icon-24.png"))); // NOI18N
 		extraAbilitiesButton.setText("X-Abilities");
+		extraAbilitiesButton
+				.setToolTipText("Extra-Abilities attached to class, race, objects or proficiencies.");
 		extraAbilitiesButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,6 +206,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 
 		nonWeaponProfsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		nonWeaponProfsButton.setText("non-weapon");
+		nonWeaponProfsButton.setEnabled(false);
 		nonWeaponProfsButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +216,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 
 		nonWeaponProfsButton1.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		nonWeaponProfsButton1.setText("weapon profs");
+		nonWeaponProfsButton1.setEnabled(false);
 		nonWeaponProfsButton1
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,16 +265,16 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 																		.addGroup(
 																				mainPanelLayout
 																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
+																								javax.swing.GroupLayout.Alignment.TRAILING)
 																						.addComponent(
-																								itemButton)
+																								chartsButton)
 																						.addComponent(
-																								chartsButton)))
+																								extraAbilitiesButton)))
 														.addGroup(
 																mainPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				extraAbilitiesButton)
+																				itemButton)
 																		.addGap(0,
 																				0,
 																				0)
@@ -312,18 +320,18 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 														.addComponent(
 																raceButton)
 														.addComponent(
-																itemButton))
+																extraAbilitiesButton))
 										.addGap(0, 0, 0)
 										.addGroup(
 												mainPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
 														.addComponent(
-																extraAbilitiesButton)
-														.addComponent(
 																nonWeaponProfsButton)
 														.addComponent(
-																nonWeaponProfsButton1))
+																nonWeaponProfsButton1)
+														.addComponent(
+																itemButton))
 										.addContainerGap(175, Short.MAX_VALUE)));
 
 		mainPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,

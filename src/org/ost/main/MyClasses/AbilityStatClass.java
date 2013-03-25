@@ -139,18 +139,20 @@ public class AbilityStatClass {
 		public int reactionAdjustment;
 		public int attackAdjustment;
 		public int defensiveAdjustment;
+		public int defensiveAdjustmentBarbarian;
+		
 		public ArrayList<SkillsClass> skillsAdjustments;
 		
 		public ArrayList<String> bonusAbilities;
 		
 		public Dexterity() {
-			this(0,"Dexterity","Dexterity",0,0,0,new ArrayList<SkillsClass>(),
+			this(0,"Dexterity","Dexterity",0,0,0,0,new ArrayList<SkillsClass>(),
 					new ArrayList<String>());
 		}
 
 		public Dexterity(int score, String name, String description,
 				int reactionAdjustment, int attackAdjustment,
-				int defensiveAdjustment, ArrayList<SkillsClass> skillsAdjustments,
+				int defensiveAdjustment, int defensiveAdjustmentBarbarian, ArrayList<SkillsClass> skillsAdjustments,
 				ArrayList<String> bonusAbilities) {
 			super();
 			this.score = score;
@@ -159,6 +161,7 @@ public class AbilityStatClass {
 			this.reactionAdjustment = reactionAdjustment;
 			this.attackAdjustment = attackAdjustment;
 			this.defensiveAdjustment = defensiveAdjustment;
+			this.defensiveAdjustmentBarbarian = defensiveAdjustmentBarbarian;
 			this.bonusAbilities = bonusAbilities;
 			
 			this.skillsAdjustments = skillsAdjustments;
@@ -176,15 +179,16 @@ public class AbilityStatClass {
 		public String description;
 		public int hitpointAdjustment;
 		public int hitpointAdjustmentFighter;
+		public int hitpointAdjustmentBarbarian;
 		public int systemShock;
 		public int resurrectionSurvival;
 		public ArrayList<String> bonusAbilities;
 		
 		public Consitution() {
-			this(0,"Consitution","Consitution",0,0,0,0,new ArrayList<String>());
+			this(0,"Consitution","Consitution",0,0,0,0,0,new ArrayList<String>());
 		}
 		public Consitution(int score, String name, String description,
-				int hitpointAdjustment, int hitpointAdjustmentFighter,
+				int hitpointAdjustment, int hitpointAdjustmentFighter,int hitpointAdjustmentBarbarian,
 				int systemShock, int resurrectionSurvival,
 				ArrayList<String> bonusAbilities) {
 			super();
@@ -193,6 +197,7 @@ public class AbilityStatClass {
 			this.description = description;
 			this.hitpointAdjustment = hitpointAdjustment;
 			this.hitpointAdjustmentFighter = hitpointAdjustmentFighter;
+			this.hitpointAdjustmentBarbarian = hitpointAdjustmentBarbarian;
 			this.systemShock = systemShock;
 			this.resurrectionSurvival = resurrectionSurvival;
 			this.bonusAbilities = bonusAbilities;

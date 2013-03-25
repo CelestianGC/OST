@@ -7,6 +7,7 @@
 package org.ost.main;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import static org.ost.main.MyClasses.MyStatics.*;
@@ -27,8 +28,10 @@ import javax.swing.tree.TreePath;
 
 import org.jdom.Document;
 import org.ost.main.MyClasses.AbilityScoreClass;
+import org.ost.main.MyClasses.AbilityStatClass;
 import org.ost.main.MyClasses.CharacterClassList;
 import org.ost.main.MyClasses.EquipmentClass;
+import org.ost.main.MyClasses.ExtraAbilitiesList;
 import org.ost.main.MyClasses.MyCellRendererList;
 import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.SkillsClass;
@@ -767,7 +770,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																				playerEditButton)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																				460,
+																				443,
 																				Short.MAX_VALUE)
 																		.addComponent(
 																				buttonsPanel,
@@ -792,20 +795,20 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																												javax.swing.GroupLayout.PREFERRED_SIZE,
 																												javax.swing.GroupLayout.DEFAULT_SIZE,
 																												javax.swing.GroupLayout.PREFERRED_SIZE)
-																										.addGap(0,
-																												0,
-																												0)
-																										.addComponent(
-																												playerStatsPanel,
-																												javax.swing.GroupLayout.DEFAULT_SIZE,
-																												298,
-																												Short.MAX_VALUE))
+																										.addGap(281,
+																												281,
+																												281))
 																						.addComponent(
 																								playerTabbedPane,
 																								javax.swing.GroupLayout.DEFAULT_SIZE,
-																								624,
+																								607,
+																								Short.MAX_VALUE)
+																						.addComponent(
+																								playerStatsPanel,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								607,
 																								Short.MAX_VALUE))))
-										.addGap(16, 16, 16)));
+										.addGap(8, 8, 8)));
 		mainPanelLayout
 				.setVerticalGroup(mainPanelLayout
 						.createParallelGroup(
@@ -813,26 +816,22 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 						.addGroup(
 								mainPanelLayout
 										.createSequentialGroup()
-										.addGroup(
-												mainPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																playerStatsPanel,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
-																90,
-																Short.MAX_VALUE)
-														.addComponent(
-																simpleFieldsPanel,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																89,
-																javax.swing.GroupLayout.PREFERRED_SIZE))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addComponent(
+												simpleFieldsPanel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												89,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addGap(0, 0, 0)
+										.addComponent(
+												playerStatsPanel,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												113, Short.MAX_VALUE)
+										.addGap(0, 0, 0)
 										.addComponent(
 												playerTabbedPane,
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												229, Short.MAX_VALUE)
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												170,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
@@ -998,7 +997,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																jPanel9,
 																javax.swing.GroupLayout.Alignment.TRAILING,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
+																219,
 																Short.MAX_VALUE)
 														.addGroup(
 																javax.swing.GroupLayout.Alignment.TRAILING,
@@ -1012,18 +1011,18 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																								jPanel8,
 																								javax.swing.GroupLayout.Alignment.LEADING,
 																								javax.swing.GroupLayout.DEFAULT_SIZE,
-																								194,
+																								217,
 																								Short.MAX_VALUE)
 																						.addComponent(
 																								jPanel17,
 																								javax.swing.GroupLayout.Alignment.LEADING,
 																								javax.swing.GroupLayout.DEFAULT_SIZE,
-																								194,
+																								217,
 																								Short.MAX_VALUE)
 																						.addComponent(
 																								jScrollPane1,
 																								0,
-																								194,
+																								217,
 																								Short.MAX_VALUE))
 																		.addGap(2,
 																				2,
@@ -1045,7 +1044,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(0, 0, 0)
 						.addComponent(jScrollPane1,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 269,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 312,
 								Short.MAX_VALUE)
 						.addGap(0, 0, 0)
 						.addComponent(jPanel8,
@@ -1387,7 +1386,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 		//TODO do something with this later
 		//deal with armor/weapons eventually
-		
+
 		if (!editMode) {
 			ost.equipmentList.add(oNew);
 			DefaultMutableTreeNode oNewNode = new DefaultMutableTreeNode(oNew);
@@ -1647,10 +1646,11 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		// string fields
 		if (currentPlayer != null && currentPlayer.getName() != null) {
 			playerStatsPanel.removeAll();
-			
+
 			nameLabel7.setText(currentPlayer.getName());
 			playerNameLabel.setText(currentPlayer.getNamePlayer());
-			classNameLabel.setText(currentPlayer.getMyClassName(ost.characterClassList));
+			classNameLabel.setText(currentPlayer
+					.getMyClassName(ost.characterClassList));
 			levelField.setText(currentPlayer.getPcLevel());
 			hitPointsLabel
 					.setText(String.format("%d", currentPlayer.getHpMax()));
@@ -1678,34 +1678,151 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			}
 
 			//ABILITY SCORES
-			JPanel abilityScores = new JPanel(new GridLayout(0, 2,5,5));
-			ArrayList<AbilityScoreClass> abilityScoresAdj = currentPlayer.getAllAbilityScoreAdjustments(
-					ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-			
-			for (int i=0;i<currentPlayer.getMyAbilityScores().size();i++) {
-			AbilityScoreClass aJ = abilityScoresAdj.get(i);
-			AbilityScoreClass aS = currentPlayer.getMyAbilityScores().get(i);
+			JPanel abilityScores = new JPanel(new GridLayout(0, 1, 1, 1));
+			ArrayList<AbilityScoreClass> abilityScoresAdj = currentPlayer
+					.getAllAbilityScoreAdjustments(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList);
+
+			for (int i = 0; i < currentPlayer.getMyAbilityScores().size(); i++) {
+				JPanel scorePanel = new JPanel(new FlowLayout(FlowLayout.LEFT,
+						1, 1));
+				AbilityScoreClass aJ = abilityScoresAdj.get(i);
+				AbilityScoreClass aS = currentPlayer.getMyAbilityScores()
+						.get(i);
 				JLabel name = new JLabel(aS.getAbbrev());
 				name.setToolTipText(aS.getName());
-				JLabel value = new 
-						JLabel(String.format("%d", aS.getScore()+aJ.getScore()));
-				if (aS.getPercentile()>0 || aJ.getPercentile()>0)
-					value.setText(String.format("%d/%d", aS.getScore()+aJ.getScore(),
-														aS.getPercentile()+aJ.getPercentile()));
-							
-				abilityScores.add(name);
-				abilityScores.add(value);
+				int abilityTotal = aS.getScore() + aJ.getScore();
+				int abilityPercentTotal = aS.getPercentile()
+						+ aJ.getPercentile();
+				JLabel value = new JLabel(String.format("%d", abilityTotal));
+				if (abilityPercentTotal > 0)
+					value.setText(String.format("%d/%d", abilityTotal,
+							abilityPercentTotal));
+
+				String bonusText = "";
+				if (abilityTotal >= 0) {
+					AbilityStatClass aStat = ost.abilityStatList.getContent()
+							.get(abilityTotal);
+					switch (i) {
+					case ABILITY_CHARISMA:
+						bonusText = String
+								.format("Loyalty %d, Max Henchmen %d, Reaction Adjustment %d",
+										aStat.charisma.loyaltyBase,
+										aStat.charisma.maxNumberHenchmen,
+										aStat.charisma.reactionAdjustment);
+						break;
+					case ABILITY_COMELINESS:
+						bonusText = String.format("Under construction", "");
+
+						break;
+					case ABILITY_CONSTITUTION:
+						//TODO test for fighter/barb features in class and show just that
+						bonusText = String
+								.format("HP Adjustment %d, "
+										+ "HP Adjustment (Barbarian) %d, HP Adjustment (Fighter), "
+										+ "Resurrection Survival %d, System Shock %d",
+										aStat.consitution.hitpointAdjustment,
+										aStat.consitution.hitpointAdjustmentBarbarian,
+										aStat.consitution.hitpointAdjustmentFighter,
+										aStat.consitution.resurrectionSurvival,
+										aStat.consitution.systemShock);
+
+						break;
+					case ABILITY_DEXTERITY:
+						//TODO get thief skill adjustments and display
+						//if class can use them?
+						bonusText = String
+								.format("Missle Attack %d,"
+										+ "Defense Adjustment %d, Defense Adjustment (Barbarian) %d,"
+										+ "Reaction Adjustment %d",
+										aStat.dexterity.attackAdjustment,
+										aStat.dexterity.defensiveAdjustment,
+										aStat.dexterity.defensiveAdjustmentBarbarian,
+										aStat.dexterity.reactionAdjustment);
+
+						break;
+					case ABILITY_INTELLIGENCE:
+						//TODO get bonus spells and list if can cast spells
+						String magicSpells = "";
+						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+							magicSpells = magicSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.intelligence.bonusSpells[ii],
+											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
+													: "");
+						}
+						bonusText = String
+								.format("Know Spell %d, # Languages %d, "
+										+ "Max Spells %d, Min Spells %d, Bonus spells %s",
+										aStat.intelligence.knowSpell,
+										aStat.intelligence.languages,
+										aStat.intelligence.maxSpells,
+										aStat.intelligence.minSpells,
+										magicSpells);
+
+						break;
+					case ABILITY_STRENGTH:
+						//TODO sort out percentile strength if it is 
+						// allowed by class
+						bonusText = String.format(
+								"Bend Bars %d, Damage Adjust %d, Hit Adjust %d,"
+										+ "Open Doors 1-%d (%dD%d), "
+										+ "weight allowance %d",
+								aStat.strength.bendBars,
+								aStat.strength.damageAdjustment,
+								aStat.strength.hitProbability,
+								aStat.strength.minOpenDoor,
+								aStat.strength.numDiceOpenDoor,
+								aStat.strength.sizeDiceOpenDoor,
+								aStat.strength.weightAllowance);
+
+						break;
+					case ABILITY_WISDOM:
+						//TODO get bonus spells from wisdom if caster can use
+						//divine spells
+						String clericSpells = "";
+						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+							clericSpells = clericSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.intelligence.bonusSpells[ii],
+											ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
+													: "");
+						}
+						bonusText = String
+								.format("Magical Adjustment %d, Spell Failure %d, Bonus Spells %s",
+										aStat.wisdom.magicalAdjustment,
+										aStat.wisdom.spellFailure, clericSpells);
+
+						break;
+
+					default:
+						bonusText = String.format("ERROR", "");
+						// error
+						break;
+					}
+				} // else abilityTotal was smaller than 0
+
+				scorePanel.add(name);
+				scorePanel.add(value);
+				scorePanel.add(new JLabel(bonusText));
+				abilityScores.add(scorePanel);
 			}
 			playerStatsPanel.add(abilityScores);
 
 			// SAVES 
-			JPanel saves = new JPanel(new GridLayout(0, 3,5,5));
+			JPanel saves = new JPanel(new GridLayout(0, 3, 5, 5));
 			ArrayList<Integer> bestSaves = currentPlayer.getAllSaves(
-					ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+					ost.characterClassList, ost.extraAbilitiesList,
+					ost.raceList);
 			currentPlayer.setMySaves(bestSaves);
-			
-			ArrayList<Integer> bestSaveAdj = currentPlayer.getAllSaveAdjustments(
-					ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+
+			ArrayList<Integer> bestSaveAdj = currentPlayer
+					.getAllSaveAdjustments(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList);
 			currentPlayer.setMySaveAdjustments(bestSaveAdj);
 
 			for (int i = 0; i < currentPlayer.getMySaves().size(); i++) {
@@ -1715,38 +1832,38 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				name.setToolTipText(SAVES[i]);
 				JLabel value = new JLabel(String.format("%d", aB));
 				value.setToolTipText(SAVES[i]);
-				JLabel adjustment = new JLabel(String.format("(%d)",aJ));
-				adjustment.setToolTipText(SAVES[i]+" adjustment.");
+				JLabel adjustment = new JLabel(String.format("(%d)", aJ));
+				adjustment.setToolTipText(SAVES[i] + " adjustment.");
 
 				saves.add(name);
 				saves.add(value);
-				saves.add(aJ>0?adjustment:new JLabel(""));
+				saves.add(aJ > 0 ? adjustment : new JLabel(""));
 			}
 			playerStatsPanel.add(saves);
-			
+
 			//SKILLS
-			JPanel skillsPanel = new JPanel(new GridLayout(0, 2,5,5));
-			ArrayList<SkillsClass> skillsBase = currentPlayer.getAllThiefSkillsBase(
-					ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-			ArrayList<SkillsClass> skillsAdj = currentPlayer.getAllThiefSkillAdjustments(
-					ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-			
-			for (int i=0;i<skillsBase.size();i++) {
+			JPanel skillsPanel = new JPanel(new GridLayout(0, 2, 5, 5));
+			ArrayList<SkillsClass> skillsBase = currentPlayer
+					.getAllThiefSkillsBase(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList);
+			ArrayList<SkillsClass> skillsAdj = currentPlayer
+					.getAllThiefSkillAdjustments(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList);
+
+			for (int i = 0; i < skillsBase.size(); i++) {
 				SkillsClass tJ = skillsAdj.get(i);
 				SkillsClass tS = skillsBase.get(i);
-				int finalSkill = tS.getScore()+tJ.getScore();
+				int finalSkill = tS.getScore() + tJ.getScore();
 				if (finalSkill != 0) {
-				JLabel name = new JLabel(tS.getAbbrev());
-				name.setToolTipText(tS.getName());
-				JLabel value = new 
-						JLabel(String.format("%d", finalSkill));
-				skillsPanel.add(name);
-				skillsPanel.add(value);
+					JLabel name = new JLabel(tS.getAbbrev());
+					name.setToolTipText(tS.getName());
+					JLabel value = new JLabel(String.format("%d", finalSkill));
+					skillsPanel.add(name);
+					skillsPanel.add(value);
 				}
 			}
 			playerStatsPanel.add(skillsPanel);
 
-			
 			playerStatsPanel.revalidate();
 			playerStatsPanel.repaint();
 		}

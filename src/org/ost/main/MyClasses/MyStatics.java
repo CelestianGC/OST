@@ -20,13 +20,13 @@ public class MyStatics {
 	public static final String CHART_MONSTER_THACO = "Monster THACO Matrix";
 	public static final String CHART_MONSTER_BAB = "Monster BaB Matrix";
 
-	public static final int ABILITY_STRENGTH = 1;
-	public static final int ABILITY_INTELLIGENCE = 2;
-	public static final int ABILITY_WISDOM = 3;
-	public static final int ABILITY_DEXTERITY = 4;
-	public static final int ABILITY_CONSTITUTION = 5;
-	public static final int ABILITY_CHARISMA = 6;
-	public static final int ABILITY_COMELINESS = 7;
+	public static final int ABILITY_STRENGTH = 0;
+	public static final int ABILITY_INTELLIGENCE = 1;
+	public static final int ABILITY_WISDOM = 2;
+	public static final int ABILITY_DEXTERITY = 3;
+	public static final int ABILITY_CONSTITUTION = 4;
+	public static final int ABILITY_CHARISMA = 5;
+	public static final int ABILITY_COMELINESS = 6;
 	public static final int MAX_ABILITY_SCORE=25;
 	public static final int MAX_ABILITIES=7;
 	public static final	String[] ABILITIES = {"Strength","Intelligence","Wisdom",

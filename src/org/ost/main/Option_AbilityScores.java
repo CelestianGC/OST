@@ -35,7 +35,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		strengthRadioButtonActionPerformed(null);
 	}
 
-//GEN-BEGIN:initComponents
+	//GEN-BEGIN:initComponents
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 		java.awt.GridBagConstraints gridBagConstraints;
@@ -143,6 +143,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		dexCWSpinner = new javax.swing.JSpinner();
 		dexRLPanel23 = new javax.swing.JPanel();
 		dexRLSpinner = new javax.swing.JSpinner();
+		dexterityDefAdjBarbSpinner = new javax.swing.JSpinner();
+		dexterityDefAdjBarbLabel = new javax.swing.JLabel();
 		constitutionPanel = new javax.swing.JPanel();
 		constitutionScoreLabel = new javax.swing.JLabel();
 		constitutionScoreSpinner = new javax.swing.JSpinner();
@@ -155,6 +157,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		constitutionResurrectionSurvivelLabel = new javax.swing.JLabel();
 		constitutionResurrectionSurvivelSpinner = new javax.swing.JSpinner();
 		jPanel10 = new javax.swing.JPanel();
+		constitutionHitPointAdjustmentBarbarianSpinner1 = new javax.swing.JSpinner();
+		constitutionHitpointAdjustmentBarbarianLabel = new javax.swing.JLabel();
 		charismaPanel = new javax.swing.JPanel();
 		charismaScoreLabel = new javax.swing.JLabel();
 		charismaScoreSpinner = new javax.swing.JSpinner();
@@ -902,7 +906,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				gridBagConstraints);
 
 		dexterityDefensiveAdjustmentSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 5;
@@ -1085,6 +1089,25 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		dexterityPanel.add(jPanel9, gridBagConstraints);
 
+		dexterityDefAdjBarbSpinner.setModel(new javax.swing.SpinnerNumberModel(
+				0, -99, 99, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 6;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+		dexterityPanel.add(dexterityDefAdjBarbSpinner, gridBagConstraints);
+
+		dexterityDefAdjBarbLabel.setText("defensive adjustment for barbarian");
+		dexterityDefAdjBarbLabel
+				.setToolTipText("Barbarian style defense adjustment while in light armor.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+		dexterityPanel.add(dexterityDefAdjBarbLabel, gridBagConstraints);
+
 		constitutionPanel.setBackground(new java.awt.Color(204, 204, 204));
 		constitutionPanel.setBorder(javax.swing.BorderFactory
 				.createTitledBorder(new javax.swing.border.LineBorder(
@@ -1163,7 +1186,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		constitutionSystemShockLabel.setText("system shock");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
@@ -1173,7 +1196,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
 		constitutionPanel.add(constitutionSystemShockSpinner,
 				gridBagConstraints);
@@ -1181,7 +1204,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		constitutionResurrectionSurvivelLabel.setText("resurrection survival");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
@@ -1192,7 +1215,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
 		constitutionPanel.add(constitutionResurrectionSurvivelSpinner,
 				gridBagConstraints);
@@ -1206,6 +1229,28 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		gridBagConstraints.weightx = 10.0;
 		gridBagConstraints.weighty = 10.0;
 		constitutionPanel.add(jPanel10, gridBagConstraints);
+
+		constitutionHitPointAdjustmentBarbarianSpinner1
+				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+		constitutionPanel.add(constitutionHitPointAdjustmentBarbarianSpinner1,
+				gridBagConstraints);
+
+		constitutionHitpointAdjustmentBarbarianLabel
+				.setText("hitpoint adjustment *barbarians*");
+		constitutionHitpointAdjustmentBarbarianLabel
+				.setToolTipText("Fighter type classes hitpoint adjustment.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+		constitutionPanel.add(constitutionHitpointAdjustmentBarbarianLabel,
+				gridBagConstraints);
 
 		charismaPanel.setBackground(new java.awt.Color(204, 204, 204));
 		charismaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1343,6 +1388,11 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		abilitySelectbuttonGroup.add(wisdomRadioButton);
 		wisdomRadioButton.setText("Wisdom");
+		wisdomRadioButton.addItemListener(new java.awt.event.ItemListener() {
+			public void itemStateChanged(java.awt.event.ItemEvent evt) {
+				wisdomRadioButtonItemStateChanged(evt);
+			}
+		});
 		wisdomRadioButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1353,6 +1403,11 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		abilitySelectbuttonGroup.add(dexterityRadioButton);
 		dexterityRadioButton.setText("Dexterity");
+		dexterityRadioButton.addItemListener(new java.awt.event.ItemListener() {
+			public void itemStateChanged(java.awt.event.ItemEvent evt) {
+				dexterityRadioButtonItemStateChanged(evt);
+			}
+		});
 		dexterityRadioButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1364,6 +1419,12 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		abilitySelectbuttonGroup.add(constitutionRadioButton);
 		constitutionRadioButton.setText("Constitution");
 		constitutionRadioButton
+				.addItemListener(new java.awt.event.ItemListener() {
+					public void itemStateChanged(java.awt.event.ItemEvent evt) {
+						constitutionRadioButtonItemStateChanged(evt);
+					}
+				});
+		constitutionRadioButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
 						constitutionRadioButtonActionPerformed(evt);
@@ -1373,6 +1434,11 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		abilitySelectbuttonGroup.add(charismaRadioButton);
 		charismaRadioButton.setText("Charisma");
+		charismaRadioButton.addItemListener(new java.awt.event.ItemListener() {
+			public void itemStateChanged(java.awt.event.ItemEvent evt) {
+				charismaRadioButtonItemStateChanged(evt);
+			}
+		});
 		charismaRadioButton
 				.addActionListener(new java.awt.event.ActionListener() {
 					public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1411,7 +1477,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		pack();
 	}// </editor-fold>
-	//GEN-END:initComponents
+		//GEN-END:initComponents
 
 	private void formWindowClosed(java.awt.event.WindowEvent evt) {
 		// make sure to save the last entry to memory when they close up shop
@@ -1438,8 +1504,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void charismaUpdatePanel(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oB = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oB = ost.abilityStatList.getContent().get(nScore);
 			charismaScoreSpinner.setValue(oB.getCharisma().score);
 			charismaMaxHenchSpinner
 					.setValue(oB.getCharisma().maxNumberHenchmen);
@@ -1458,8 +1523,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void charismaUpdateStored(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oA = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oA = ost.abilityStatList.getContent().get(nScore);
 			oA.getCharisma().score = nScore;
 			oA.getCharisma().maxNumberHenchmen = (int) charismaMaxHenchSpinner
 					.getValue();
@@ -1469,6 +1533,14 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.getValue();
 		}
 	}
+
+	private void charismaRadioButtonItemStateChanged(
+			java.awt.event.ItemEvent evt) {
+		// TODO add your handling code here:
+		if (!charismaRadioButton.isSelected())
+			charismaUpdateStored((int) charismaScoreSpinner.getValue());
+	}
+
 
 	private void charismaScoreSpinnerStateChanged(
 			javax.swing.event.ChangeEvent evt) {
@@ -1496,13 +1568,14 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void constitutionUpdatePanel(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oB = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oB = ost.abilityStatList.getContent().get(nScore);
 			constitutionScoreSpinner.setValue(oB.getConsitution().score);
 			constitutionHitPointAdjustmentSpinner
 					.setValue(oB.getConsitution().hitpointAdjustment);
 			constitutionHitPointAdjustmentFighterSpinner.setValue(oB
 					.getConsitution().hitpointAdjustmentFighter);
+			constitutionHitPointAdjustmentBarbarianSpinner1.setValue(oB
+					.getConsitution().hitpointAdjustmentBarbarian);
 			constitutionSystemShockSpinner
 					.setValue(oB.getConsitution().systemShock);
 			constitutionResurrectionSurvivelSpinner.setValue(oB
@@ -1519,12 +1592,13 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void constitutionUpdateStored(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oA = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oA = ost.abilityStatList.getContent().get(nScore);
 			oA.getConsitution().score = nScore;
 			oA.getConsitution().hitpointAdjustment = (int) constitutionHitPointAdjustmentSpinner
 					.getValue();
 			oA.getConsitution().hitpointAdjustmentFighter = (int) constitutionHitPointAdjustmentFighterSpinner
+					.getValue();
+			oA.getConsitution().hitpointAdjustmentBarbarian = (int) constitutionHitPointAdjustmentBarbarianSpinner1
 					.getValue();
 			oA.getConsitution().systemShock = (int) constitutionSystemShockSpinner
 					.getValue();
@@ -1532,6 +1606,14 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.getValue();
 		}
 	}
+
+	private void constitutionRadioButtonItemStateChanged(
+			java.awt.event.ItemEvent evt) {
+		// TODO add your handling code here:
+		if (!constitutionRadioButton.isSelected())
+			constitutionUpdateStored((int) constitutionScoreSpinner.getValue());		
+	}
+
 
 	private void constitutionScoreSpinnerStateChanged(
 			javax.swing.event.ChangeEvent evt) {
@@ -1558,8 +1640,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void dexterityUpdatePanel(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oB = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oB = ost.abilityStatList.getContent().get(nScore);
 			dexterityScoreSpinner.setValue(oB.getDexterity().score);
 			dexterityreactionAdjustmentSpinner
 					.setValue(oB.getDexterity().reactionAdjustment);
@@ -1567,15 +1648,25 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.setValue(oB.getDexterity().attackAdjustment);
 			dexterityDefensiveAdjustmentSpinner
 					.setValue(oB.getDexterity().defensiveAdjustment);
+			dexterityDefAdjBarbSpinner
+					.setValue(oB.getDexterity().defensiveAdjustmentBarbarian);
 
-			dexPPSpinner.setValue(oB.getDexterity().skillsAdjustments.get(0).score);
-			dexOLSpinner.setValue(oB.getDexterity().skillsAdjustments.get(1).score);
-			dexFRTSpinner.setValue(oB.getDexterity().skillsAdjustments.get(2).score);
-			dexMSSpinner.setValue(oB.getDexterity().skillsAdjustments.get(3).score);
-			dexHSSpinner.setValue(oB.getDexterity().skillsAdjustments.get(4).score);
-			dexHNSpinner.setValue(oB.getDexterity().skillsAdjustments.get(5).score);
-			dexCWSpinner.setValue(oB.getDexterity().skillsAdjustments.get(6).score);
-			dexRLSpinner.setValue(oB.getDexterity().skillsAdjustments.get(7).score);
+			dexPPSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(0).score);
+			dexOLSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(1).score);
+			dexFRTSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(2).score);
+			dexMSSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(3).score);
+			dexHSSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(4).score);
+			dexHNSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(5).score);
+			dexCWSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(6).score);
+			dexRLSpinner
+					.setValue(oB.getDexterity().skillsAdjustments.get(7).score);
 
 			nPreviousDexterity = nScore;
 		}
@@ -1588,8 +1679,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void dexterityUpdateStored(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oA = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oA = ost.abilityStatList.getContent().get(nScore);
 			oA.getDexterity().score = nScore;
 
 			oA.getDexterity().reactionAdjustment = (int) dexterityreactionAdjustmentSpinner
@@ -1597,6 +1687,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			oA.getDexterity().attackAdjustment = (int) dexterityAttackAdjustmentSpinner
 					.getValue();
 			oA.getDexterity().defensiveAdjustment = (int) dexterityDefensiveAdjustmentSpinner
+					.getValue();
+			oA.getDexterity().defensiveAdjustmentBarbarian = (int) dexterityDefAdjBarbSpinner
 					.getValue();
 
 			oA.getDexterity().skillsAdjustments.get(0).score = (int) dexPPSpinner
@@ -1616,6 +1708,13 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			oA.getDexterity().skillsAdjustments.get(7).score = (int) dexRLSpinner
 					.getValue();
 		}
+	}
+
+	private void dexterityRadioButtonItemStateChanged(
+			java.awt.event.ItemEvent evt) {
+		// TODO add your handling code here:
+		if (!dexterityRadioButton.isSelected())
+			dexterityUpdateStored((int) dexterityScoreSpinner.getValue());
 	}
 
 	private void dexterityScoreSpinnerStateChanged(
@@ -1644,8 +1743,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void wisdomUpdatePanel(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oB = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oB = ost.abilityStatList.getContent().get(nScore);
 			wisdomScoreSpinner1.setValue(oB.getWisdom().score);
 			wisdomMagicAdjustSpinner.setValue(oB.getWisdom().magicalAdjustment);
 			wisdomSpellFailureSpinner.setValue(oB.getWisdom().spellFailure);
@@ -1669,8 +1767,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void wisdomUpdateStored(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oA = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oA = ost.abilityStatList.getContent().get(nScore);
 			oA.getWisdom().score = nScore;
 			oA.getWisdom().magicalAdjustment = (int) wisdomMagicAdjustSpinner
 					.getValue();
@@ -1692,6 +1789,13 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			oA.getWisdom().bonusSpells[6] = (int) wisSpellBonusLevel7Spinner7
 					.getValue();
 		}
+	}
+
+	private void wisdomRadioButtonItemStateChanged(java.awt.event.ItemEvent evt) {
+		// TODO add your handling code here:
+		if (!wisdomRadioButton.isSelected())
+			wisdomUpdateStored((int) wisdomScoreSpinner1.getValue());
+
 	}
 
 	private void wisdomScoreSpinner1StateChanged(
@@ -1734,8 +1838,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void intelligenceUpdatePanel(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oB = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oB = ost.abilityStatList.getContent().get(nScore);
 			intelligenceScoreSpinner.setValue(oB.getIntelligence().score);
 			intelligenceKnowSpellSpinner1
 					.setValue(oB.getIntelligence().knowSpell);
@@ -1776,8 +1879,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void intelligenceUpdateStored(int nScore) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oA = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oA = ost.abilityStatList.getContent().get(nScore);
 			oA.getIntelligence().score = nScore;
 			oA.getIntelligence().knowSpell = (int) intelligenceKnowSpellSpinner1
 					.getValue();
@@ -1835,8 +1937,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void strengthUpdatePanel(int nScore, Strength oSI) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oG = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oG = ost.abilityStatList.getContent().get(nScore);
 			Strength oS = oG.getStrength();
 			if (oSI != null) { // percentile strength
 				oS = oSI;
@@ -1871,8 +1972,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	 */
 	private void strengthUpdateStored(int nScore, Strength oSI) {
 		if (nScore >= 0 && nScore <= MAX_ABILITY_SCORE) {
-			AbilityStatClass oG = ost.abilityStatList.getContent().get(
-					nScore);
+			AbilityStatClass oG = ost.abilityStatList.getContent().get(nScore);
 			Strength oS = oG.getStrength();
 			if (oSI != null) { // percentile strength
 				oS = oSI;
@@ -1997,9 +2097,11 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	private javax.swing.JSpinner charismaReactionAdjSpinner;
 	private javax.swing.JLabel charismaScoreLabel;
 	private javax.swing.JSpinner charismaScoreSpinner;
+	private javax.swing.JSpinner constitutionHitPointAdjustmentBarbarianSpinner1;
 	private javax.swing.JSpinner constitutionHitPointAdjustmentFighterSpinner;
 	private javax.swing.JLabel constitutionHitPointAdjustmentLabel;
 	private javax.swing.JSpinner constitutionHitPointAdjustmentSpinner;
+	private javax.swing.JLabel constitutionHitpointAdjustmentBarbarianLabel;
 	private javax.swing.JLabel constitutionHitpointAdjustmentFighterLabel;
 	private javax.swing.JPanel constitutionPanel;
 	private javax.swing.JRadioButton constitutionRadioButton;
@@ -2027,6 +2129,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	private javax.swing.JSpinner dexRLSpinner;
 	private javax.swing.JLabel dexterityAttackAdjustmenLabel;
 	private javax.swing.JSpinner dexterityAttackAdjustmentSpinner;
+	private javax.swing.JLabel dexterityDefAdjBarbLabel;
+	private javax.swing.JSpinner dexterityDefAdjBarbSpinner;
 	private javax.swing.JLabel dexterityDefensiveAdjustmentLabel;
 	private javax.swing.JSpinner dexterityDefensiveAdjustmentSpinner;
 	private javax.swing.JPanel dexterityPanel;

@@ -170,10 +170,6 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 					javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 					javax.swing.border.TitledBorder.BELOW_TOP, fFont));
 
-			JCheckBox primeReq = new JCheckBox("prime");
-			primeReq.setFont(fFont);
-			primeReq.setToolTipText("Prime requisite ability.");
-
 			JSpinner score = new JSpinner();
 			JSpinner percentile = new JSpinner();
 			score.setFont(fFont);
@@ -194,14 +190,19 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 			exceptional
 					.setToolTipText("Allow exceptional value. Note: Only useful for Strength at this time.");
 
-			if (settingClass)
-				pPanel.add(primeReq);
+			JCheckBox primeReq = new JCheckBox("prime");
+			primeReq.setFont(fFont);
+			primeReq.setToolTipText("Prime requisite ability.");
+			
 			pPanel.add(score);
 			pPanel.add(new JLabel("/"));
 			pPanel.add(percentile);
 			pPanel.add(new JLabel("%"));
-			if (settingClass)
+			if (settingClass) {
 				pPanel.add(exceptional);
+				pPanel.add(primeReq);
+			}
+
 			mainPanel.add(pPanel);
 			i++;
 		}

@@ -129,8 +129,8 @@ health adjusted (+6)
     <myNonWeaponProfs/>
     <myAbilityScores>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
-        <percentile>0</percentile>
+        <score>18</score>
+        <percentile>23</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
         <min>0</min>
@@ -139,7 +139,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
@@ -149,7 +149,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>9</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -159,7 +159,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>16</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
         <abbrev>DEX</abbrev>
@@ -169,7 +169,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>16</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -179,7 +179,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Charisma</name>
         <abbrev>CHR</abbrev>
@@ -189,7 +189,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
         <abbrev>COM</abbrev>

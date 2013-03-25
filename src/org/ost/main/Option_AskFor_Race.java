@@ -43,7 +43,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		//		setLocation(windowX, windowY);
 		//		setSize(windowSize.width - 2, windowSize.height - 2);
 
-		setSize(360, 340);
+		//setSize(360, 340);
 		setLocationRelativeTo(parent);
 
 	}
