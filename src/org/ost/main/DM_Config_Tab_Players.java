@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTree;
@@ -167,6 +168,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		addEncounterButton = new javax.swing.JButton();
 		playerEditButton = new javax.swing.JButton();
 		playerStatsPanel = new javax.swing.JPanel();
+		testButton = new javax.swing.JButton();
 		listPlayerPanel = new javax.swing.JPanel();
 		jPanel10 = new javax.swing.JPanel();
 		jPanel9 = new javax.swing.JPanel();
@@ -747,6 +749,14 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		playerStatsPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.LEFT));
 
+		testButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		testButton.setText("test");
+		testButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				testButtonActionPerformed(evt);
+			}
+		});
+
 		javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(
 				mainPanel);
 		mainPanel.setLayout(mainPanelLayout);
@@ -769,8 +779,12 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																		.addComponent(
 																				playerEditButton)
 																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				testButton)
+																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																				443,
+																				384,
 																				Short.MAX_VALUE)
 																		.addComponent(
 																				buttonsPanel,
@@ -843,8 +857,14 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																javax.swing.GroupLayout.PREFERRED_SIZE,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
 																javax.swing.GroupLayout.PREFERRED_SIZE)
-														.addComponent(
-																playerEditButton))
+														.addGroup(
+																mainPanelLayout
+																		.createParallelGroup(
+																				javax.swing.GroupLayout.Alignment.BASELINE)
+																		.addComponent(
+																				playerEditButton)
+																		.addComponent(
+																				testButton)))
 										.addContainerGap()));
 
 		playerSplitPane.setRightComponent(mainPanel);
@@ -1060,6 +1080,13 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		add(playerSplitPane, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
 	//GEN-END:initComponents
+
+	private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code here:
+		JDialog dDialog = new JDialog();
+		dDialog.add(new Panel_Player(ost, currentPlayer));
+		dDialog.setVisible(true);
+	}
 
 	private void playerEditButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
@@ -2116,6 +2143,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private javax.swing.JLabel specialDefenseLabel;
 	private javax.swing.JPanel stacksAdjustPanel;
 	private javax.swing.JSpinner stacksAdjustSpinner;
+	private javax.swing.JButton testButton;
 	// End of variables declaration//GEN-END:variables
 	private PlayerClass currentPlayer;
 	private DefaultListModel playerListModel;

@@ -119,6 +119,14 @@ health adjusted (+6)
         <primaryClass>false</primaryClass>
         <outer-class reference="../../.."/>
       </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>fighter</name>
+        <classID>0ee07238-8f71-40c9-80ff-164af4e1b11f</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
     </myClass>
     <myRace>
       <name>elf</name>

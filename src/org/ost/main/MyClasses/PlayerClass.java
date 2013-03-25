@@ -267,6 +267,23 @@ public class PlayerClass implements Serializable, Comparable {
 			this.hdRolls = hdRolls;
 		}
 
+		/**
+		 * return max level for this class
+		 * 
+		 * @param cList
+		 * @return
+		 */
+		public int getCurrentLevel(CharacterClassList cList) {
+			int maxLevel = 0;
+			CharacterClass oC = CharacterClass.getClassByMyID(getClassID(), cList);
+			for (int i=0;i<oC.getLevelDetails().size();i++) {
+				CharacterClass.LevelClass lC = oC.getLevelDetails().get(i);
+				if (getExperience() >= lC.getExpReq())
+					maxLevel = lC.getLevel();
+			}
+			return maxLevel;
+		}
+
 		
 		
 	}
@@ -288,15 +305,45 @@ public class PlayerClass implements Serializable, Comparable {
 		for (PCClass aClass : myClass) {
 			CharacterClass oC = CharacterClass.getClassByMyID(aClass.getClassID(), cList);
 			if (oC != null) {
-			if (classNames.length()<1) {
-				classNames = oC.getName();
-			} else {
-				classNames = String.format("%s/%s",classNames,oC.getName());
-			}
+				if (classNames.length()<1) {
+					classNames = oC.getName();
+				} else {
+					classNames = String.format("%s/%s",classNames,oC.getName());
+				}
 			}
 		}
 		return classNames;
 	}
+	/**
+	 * return class levels in string format "2/3"
+	 * @param cList
+	 * @return
+	 */
+	public String getMyLevelName(CharacterClassList cList) {
+		String level = "";
+		for (PCClass aClass : myClass) {
+			int cLevel = aClass.getCurrentLevel(cList);
+			level = level+String.format("%d%s", cLevel,
+					myClass.get(myClass.size()-1).equals(aClass)?"":"/");
+		}
+		return level;
+	}
+
+	/**
+	 * return exp in string format "2000/2500"
+	 * @param cList
+	 * @return
+	 */
+	public String getMyExperienceName(CharacterClassList cList) {
+		String exp = "";
+		for (PCClass aClass : myClass) {
+			int cEXP = aClass.getExperience();
+			exp = exp+String.format("%d%s", cEXP,
+					myClass.get(myClass.size()-1).equals(aClass)?"":"/");
+		}
+		return exp;
+	}
+	
 	/**
 	 * @param myClass the myClass to set
 	 */
