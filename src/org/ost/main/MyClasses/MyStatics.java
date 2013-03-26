@@ -32,7 +32,15 @@ public class MyStatics {
 	public static final	String[] ABILITIES = {"Strength","Intelligence","Wisdom",
 		"Dexterity","Constitution","Charisma","Comeliness"};
 	public static final	String[] ABILITIES_ABBREV = {"STR","INT","WIS","DEX","CON","CHR","COM"};
-
+	public static final int STRENGTH_PERCENT_0 = -1;
+	public static final int STRENGTH_PERCENT_1_50 = 0;
+	public static final int STRENGTH_PERCENT_51_75 = 1;
+	public static final int STRENGTH_PERCENT_76_90 = 2;
+	public static final int STRENGTH_PERCENT_91_99 = 3;
+	public static final int STRENGTH_PERCENT_100 = 4;
+	public static final String[] STRENGTH_PERCENTILE = 
+		{"0", "1-50", "51-75", "76-90", "91-99", "100"};
+			
 	public static final int MAX_ALIGNMENT=9;
 	public static final String[] ALIGNMENTS = {"Lawful Good","Lawful Neutral","Lawful Evil",
 		"Neutral Good","True Neutral","Neutral Evil",

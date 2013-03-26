@@ -119,9 +119,17 @@ public class Panel_Player extends javax.swing.JPanel {
 				case ABILITY_CONSTITUTION:
 					pcConstitutionLabel.setText(String.format("%d",
 							abilityTotal));
-					//TODO test for fighter/barb features in class and show just that
-					pcHPAdjLabel.setText(String.format("%d",
-							aStat.consitution.hitpointAdjustment));
+
+					//test for fighter/barb features in class and show just that
+					int nConBonus = aStat.consitution.hitpointAdjustment;
+					if (pc.hasBarbarianCon(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+					if (pc.hasFighterCon(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+					pcHPAdjLabel.setText(String.format("%d", nConBonus));
+
 					pcResurrectionSurvivalLabel.setText(String.format("%d",
 							aStat.consitution.resurrectionSurvival));
 					pcSystemShockLabel.setText(String.format("%d",
@@ -133,9 +141,13 @@ public class Panel_Player extends javax.swing.JPanel {
 							aStat.dexterity.attackAdjustment));
 					pcReactionAdjLabel.setText(String.format("%d",
 							aStat.dexterity.reactionAdjustment));
-					//TODO sort out if they get barb bonuses
-					pcDefenseAdjLabel.setText(String.format("%d",
-							aStat.dexterity.defensiveAdjustment));
+					//sort out if they get barb bonuses
+					int nDexBonus = aStat.dexterity.defensiveAdjustment;
+					if (pc.hasBarbarianDex(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						nDexBonus = aStat.dexterity.defensiveAdjustmentBarbarian;
+					pcDefenseAdjLabel.setText(String.format("%d", nDexBonus));
+
 					break;
 				case ABILITY_INTELLIGENCE:
 					pcIntelligenceLabel.setText(String.format("%d",
@@ -160,23 +172,114 @@ public class Panel_Player extends javax.swing.JPanel {
 					pcMinSpellsLabel.setText(String.format("%d",
 							aStat.intelligence.minSpells));
 					break;
-				case ABILITY_STRENGTH:
+				case ABILITY_STRENGTH: {
 					pcStrengthLabel.setText(String.format("%d", abilityTotal));
-					//TODO sort out percentile strength if can have
-					pcPercentileStrLabel.setText(String.format("%d",
-							abilityPercentTotal));
-					pcBendBarsLabel.setText(String.format("%d",
-							aStat.strength.bendBars));
-					pcHitAdjLabel.setText(String.format("%d",
-							aStat.strength.hitProbability));
-					pcDmgAdjLabel.setText(String.format("%d",
-							aStat.strength.damageAdjustment));
+					boolean hasPercentileStrength = pc.hasPercentileStrength(
+							ost.characterClassList, ost.extraAbilitiesList,
+							ost.raceList);
+					int nBBars, nHit, nDmg, nOpen, nNumDice, nSizeDice, nWeight = 0;
+					nBBars = aStat.strength.bendBars;
+					nHit = aStat.strength.hitProbability;
+					nDmg = aStat.strength.damageAdjustment;
+					nOpen = aStat.strength.minOpenDoor;
+					nNumDice = aStat.strength.numDiceOpenDoor;
+					nSizeDice = aStat.strength.sizeDiceOpenDoor;
+					nWeight = aStat.strength.weightAllowance;
+
+					pcPercentileStrLabel.setText("");
+
+					//sort out percentile strength if can have
+					if (hasPercentileStrength) {
+						ost.dprint("Str %" + abilityPercentTotal + "\n");
+						pcPercentileStrLabel.setText(String.format("%d",
+								abilityPercentTotal));
+						if (abilityPercentTotal <= 0) {
+							// 18/0 is 18 so do not need to assign here
+						} else if (abilityPercentTotal <= 50) {
+							nBBars = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).bendBars;
+							nHit = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).hitProbability;
+							nDmg = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).damageAdjustment;
+							nOpen = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).minOpenDoor;
+							nNumDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).numDiceOpenDoor;
+							nSizeDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).sizeDiceOpenDoor;
+							nWeight = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_1_50).weightAllowance;
+						} else if (abilityPercentTotal <= 75) {
+							nBBars = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).bendBars;
+							nHit = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).hitProbability;
+							nDmg = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).damageAdjustment;
+							nOpen = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).minOpenDoor;
+							nNumDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).numDiceOpenDoor;
+							nSizeDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).sizeDiceOpenDoor;
+							nWeight = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_51_75).weightAllowance;
+						} else if (abilityPercentTotal <= 90) {
+							nBBars = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).bendBars;
+							nHit = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).hitProbability;
+							nDmg = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).damageAdjustment;
+							nOpen = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).minOpenDoor;
+							nNumDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).numDiceOpenDoor;
+							nSizeDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).sizeDiceOpenDoor;
+							nWeight = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_76_90).weightAllowance;
+						} else if (abilityPercentTotal <= 99) {
+							nBBars = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).bendBars;
+							nHit = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).hitProbability;
+							nDmg = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).damageAdjustment;
+							nOpen = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).minOpenDoor;
+							nNumDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).numDiceOpenDoor;
+							nSizeDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).sizeDiceOpenDoor;
+							nWeight = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_91_99).weightAllowance;
+						} else if (abilityPercentTotal >= 100) {
+							nBBars = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).bendBars;
+							nHit = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).hitProbability;
+							nDmg = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).damageAdjustment;
+							nOpen = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).minOpenDoor;
+							nNumDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).numDiceOpenDoor;
+							nSizeDice = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).sizeDiceOpenDoor;
+							nWeight = aStat.strength.percentile
+									.get(STRENGTH_PERCENT_100).weightAllowance;
+						}
+					}
+					pcBendBarsLabel.setText(String.format("%d", nBBars));
+					pcHitAdjLabel.setText(String.format("%d", nHit));
+					pcDmgAdjLabel.setText(String.format("%d", nDmg));
 					pcOpenDoorLabel.setText(String.format("1-%d (%dD%d)",
-							aStat.strength.minOpenDoor,
-							aStat.strength.numDiceOpenDoor,
-							aStat.strength.sizeDiceOpenDoor));
-					pcWeightAllowanceLabel.setText(String.format("%d",
-							aStat.strength.weightAllowance));
+							nOpen, nNumDice, nSizeDice));
+					pcWeightAllowanceLabel
+							.setText(String.format("%d", nWeight));
+				}
 					break;
 				case ABILITY_WISDOM:
 					pcWisdomLabel.setText(String.format("%d", abilityTotal));
@@ -249,31 +352,6 @@ public class Panel_Player extends javax.swing.JPanel {
 
 		}
 
-		// skills?
-		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-
-		skillsPanel.removeAll();
-		for (int i = 0; i < skillsBase.size(); i++) {
-			JPanel skills = new JPanel(new GridLayout(2, 0, 1, 1));
-			SkillsClass tJ = skillsAdj.get(i);
-			SkillsClass tS = skillsBase.get(i);
-			int finalSkill = tS.getScore() + tJ.getScore();
-			if (finalSkill != 0) {
-				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
-						+ tJ.getScore();
-				JLabel name = new JLabel(tS.getAbbrev());
-				name.setToolTipText(tooltip);
-				JLabel value = new JLabel(String.format("%d%%", finalSkill));
-				value.setToolTipText(tooltip);
-
-				skills.add(name);
-				skills.add(value);
-				skillsPanel.add(skills);
-			}
-		}
 
 		// combat
 
@@ -320,6 +398,84 @@ public class Panel_Player extends javax.swing.JPanel {
 			pcCombatMatrixTable.setValueAt(attackList[i], 0, i);
 		}
 
+		// skills?
+		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+
+		skillsPanel.removeAll();
+		for (int i = 0; i < skillsBase.size(); i++) {
+			JPanel skills = new JPanel(new GridLayout(2, 0, 1, 1));
+			SkillsClass tJ = skillsAdj.get(i);
+			SkillsClass tS = skillsBase.get(i);
+			int finalSkill = tS.getScore() + tJ.getScore();
+			if (finalSkill != 0) {
+				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
+						+ tJ.getScore();
+				JLabel name = new JLabel(tS.getAbbrev());
+				name.setToolTipText(tooltip);
+				JLabel value = new JLabel(String.format("%d%%", finalSkill));
+				value.setToolTipText(tooltip);
+
+				skills.add(name);
+				skills.add(value);
+				skillsPanel.add(skills);
+			}
+		}
+
+		// arcane spells
+		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+		int arcaneAdj[] = pc.getAllArcaneBonusSpellsPerLevel(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
+				ost.abilityStatList);
+
+		arcaneSpellsPanel.removeAll();
+		for (int i = 0; i < arcaneBase.length; i++) {
+			JPanel arcanePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+			int base = arcaneBase[i];
+			int adj = arcaneAdj[i];
+			int finalSkill = base+adj;
+			if (finalSkill != 0) {
+				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
+				JLabel name = new JLabel("L"+(i+1));
+				name.setToolTipText(tooltip);
+				JLabel value = new JLabel(String.format("%d", finalSkill));
+				value.setToolTipText(tooltip);
+
+				arcanePanel.add(name);
+				arcanePanel.add(value);
+				arcaneSpellsPanel.add(arcanePanel);
+			}
+		}
+		
+		// divine spells
+		int divineBase[] = pc.getAllDivineSpellsPerLevel(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+		int divineAdj[] = pc.getAllDivineBonusSpellsPerLevel(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
+				ost.abilityStatList);
+
+		divineSpellsPanel.removeAll();
+		for (int i = 0; i < divineBase.length; i++) {
+			JPanel divinePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+			int base = divineBase[i];
+			int adj = divineAdj[i];
+			int finalSkill = base+adj;
+			if (finalSkill != 0) {
+				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
+				JLabel name = new JLabel("L"+(i+1));
+				name.setToolTipText(tooltip);
+				JLabel value = new JLabel(String.format("%d", finalSkill));
+				value.setToolTipText(tooltip);
+
+				divinePanel.add(name);
+				divinePanel.add(value);
+				divineSpellsPanel.add(divinePanel);
+			}
+		}
+		
 	}
 
 	/** This method is called from within the constructor to
@@ -433,6 +589,8 @@ public class Panel_Player extends javax.swing.JPanel {
 		jLabel41 = new javax.swing.JLabel();
 		jLabel43 = new javax.swing.JLabel();
 		skillsPanel = new javax.swing.JPanel();
+		arcaneSpellsPanel = new javax.swing.JPanel();
+		divineSpellsPanel = new javax.swing.JPanel();
 
 		setBackground(new java.awt.Color(255, 204, 153));
 		setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1604,6 +1762,20 @@ public class Panel_Player extends javax.swing.JPanel {
 		skillsPanel
 				.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
+		arcaneSpellsPanel
+				.setBorder(javax.swing.BorderFactory.createTitledBorder(
+						new javax.swing.border.LineBorder(new java.awt.Color(0,
+								0, 0), 1, true), "Arcane Spells"));
+		arcaneSpellsPanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
+		divineSpellsPanel
+				.setBorder(javax.swing.BorderFactory.createTitledBorder(
+						new javax.swing.border.LineBorder(new java.awt.Color(0,
+								0, 0), 1, true), "Divine Spells"));
+		divineSpellsPanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
 		this.setLayout(layout);
 		layout.setHorizontalGroup(layout
@@ -1654,6 +1826,22 @@ public class Panel_Player extends javax.swing.JPanel {
 																						javax.swing.GroupLayout.DEFAULT_SIZE,
 																						javax.swing.GroupLayout.DEFAULT_SIZE,
 																						Short.MAX_VALUE))
+																.addContainerGap())
+												.addGroup(
+														layout.createSequentialGroup()
+																.addComponent(
+																		arcaneSpellsPanel,
+																		javax.swing.GroupLayout.DEFAULT_SIZE,
+																		673,
+																		Short.MAX_VALUE)
+																.addContainerGap())
+												.addGroup(
+														layout.createSequentialGroup()
+																.addComponent(
+																		divineSpellsPanel,
+																		javax.swing.GroupLayout.DEFAULT_SIZE,
+																		673,
+																		Short.MAX_VALUE)
 																.addContainerGap()))));
 		layout.setVerticalGroup(layout
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1689,9 +1877,19 @@ public class Panel_Player extends javax.swing.JPanel {
 										javax.swing.GroupLayout.PREFERRED_SIZE,
 										67,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addContainerGap(
-										javax.swing.GroupLayout.DEFAULT_SIZE,
-										Short.MAX_VALUE)));
+								.addPreferredGap(
+										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+								.addComponent(arcaneSpellsPanel,
+										javax.swing.GroupLayout.PREFERRED_SIZE,
+										67,
+										javax.swing.GroupLayout.PREFERRED_SIZE)
+								.addPreferredGap(
+										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+								.addComponent(divineSpellsPanel,
+										javax.swing.GroupLayout.PREFERRED_SIZE,
+										67,
+										javax.swing.GroupLayout.PREFERRED_SIZE)
+								.addContainerGap(27, Short.MAX_VALUE)));
 	}// </editor-fold>
 	//GEN-END:initComponents
 
@@ -1720,8 +1918,10 @@ public class Panel_Player extends javax.swing.JPanel {
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
 	private javax.swing.JPanel AbilitiesPanel;
+	private javax.swing.JPanel arcaneSpellsPanel;
 	private javax.swing.JPanel combatPanel;
 	private javax.swing.JPanel detailsPanel;
+	private javax.swing.JPanel divineSpellsPanel;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel11;
 	private javax.swing.JLabel jLabel13;

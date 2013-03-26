@@ -9,6 +9,7 @@ package org.ost.main;
 import static org.ost.main.MyClasses.MyStatics.*;
 
 import javax.swing.ButtonModel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -29,7 +30,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		super(parent, modal);
 		this.ost = ost;
 		initComponents();
-
+		
+		strengthPercentComboBox.setModel(
+				new DefaultComboBoxModel<>(STRENGTH_PERCENTILE));
+		
 		buildAbilityTables();
 		// force first time to load things up
 		strengthRadioButtonActionPerformed(null);
@@ -356,9 +360,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		jPanel4.add(strengthScoreLabel, gridBagConstraints);
 
 		strengthPercentComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		strengthPercentComboBox
-				.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
-						"0", "1-50", "51-75", "76-90", "91-99", "100" }));
 		strengthPercentComboBox
 				.setToolTipText("Percentile Strength, for 18 only.");
 		strengthPercentComboBox.setEnabled(false);
@@ -1477,7 +1478,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		pack();
 	}// </editor-fold>
-		//GEN-END:initComponents
+	//GEN-END:initComponents
 
 	private void formWindowClosed(java.awt.event.WindowEvent evt) {
 		// make sure to save the last entry to memory when they close up shop
@@ -1540,7 +1541,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		if (!charismaRadioButton.isSelected())
 			charismaUpdateStored((int) charismaScoreSpinner.getValue());
 	}
-
 
 	private void charismaScoreSpinnerStateChanged(
 			javax.swing.event.ChangeEvent evt) {
@@ -1611,9 +1611,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			java.awt.event.ItemEvent evt) {
 		// TODO add your handling code here:
 		if (!constitutionRadioButton.isSelected())
-			constitutionUpdateStored((int) constitutionScoreSpinner.getValue());		
+			constitutionUpdateStored((int) constitutionScoreSpinner.getValue());
 	}
-
 
 	private void constitutionScoreSpinnerStateChanged(
 			javax.swing.event.ChangeEvent evt) {
@@ -2004,8 +2003,12 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 	/**
 	 * get the percentile strength object for the selected dropdown index
+	 * 
 	 * @param nRange
 	 * @return
+	 * 
+	 * ugly but could not come up with a better way to deal with percentile strength
+	 * 
 	 */
 	private Strength strengthGetPercentile(int nRange) {
 		Strength oS = null;

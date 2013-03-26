@@ -2379,8 +2379,8 @@
       <maxSpells>0</maxSpells>
       <languages>0</languages>
       <bonusSpells>
-        <int>0</int>
-        <int>0</int>
+        <int>1</int>
+        <int>2</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -2832,25 +2832,25 @@
       <name>Strength</name>
       <description>Strength</description>
       <hitProbability>1</hitProbability>
-      <damageAdjustment>2</damageAdjustment>
-      <weightAllowance>750</weightAllowance>
+      <damageAdjustment>3</damageAdjustment>
+      <weightAllowance>1000</weightAllowance>
       <minOpenDoor>3</minOpenDoor>
       <numDiceOpenDoor>1</numDiceOpenDoor>
       <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
-      <bendBars>0</bendBars>
+      <bendBars>20</bendBars>
       <bonusAbilities/>
       <percentile>
         <org.ost.main.MyClasses.AbilityStatClass_-Strength>
           <score>50</score>
           <name>Strength-Percentile</name>
           <description>Strength</description>
-          <hitProbability>0</hitProbability>
-          <damageAdjustment>0</damageAdjustment>
-          <weightAllowance>0</weightAllowance>
-          <minOpenDoor>1</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
-          <bendBars>0</bendBars>
+          <hitProbability>1</hitProbability>
+          <damageAdjustment>3</damageAdjustment>
+          <weightAllowance>1000</weightAllowance>
+          <minOpenDoor>3</minOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
+          <bendBars>20</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
         </org.ost.main.MyClasses.AbilityStatClass_-Strength>
@@ -2858,13 +2858,13 @@
           <score>75</score>
           <name>Strength-Percentile</name>
           <description>Strength</description>
-          <hitProbability>0</hitProbability>
-          <damageAdjustment>0</damageAdjustment>
-          <weightAllowance>0</weightAllowance>
-          <minOpenDoor>1</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
-          <bendBars>0</bendBars>
+          <hitProbability>2</hitProbability>
+          <damageAdjustment>3</damageAdjustment>
+          <weightAllowance>1250</weightAllowance>
+          <minOpenDoor>4</minOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
+          <bendBars>25</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
         </org.ost.main.MyClasses.AbilityStatClass_-Strength>

@@ -2645,7 +2645,7 @@
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
-    <THACO>17 to 15</THACO>
+    <THACO>0</THACO>
     <Organization>Flock</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -18485,7 +18485,7 @@
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
-    <THACO>As per dragon type</THACO>
+    <THACO>0</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -18531,7 +18531,7 @@ of the dracolisk extends into the astral and ethereal planes and
 those who seek to avoid looking directly at the beast attack
 with a -4 penalty.
 
-ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Chances of meeting the gaze of a dracolisk or a large creature using a 	 
+Chances of meeting the gaze of a dracolisk or a large creature using a 	 
 gaze weapon are as follows (add 1 if the creature is man-sized, such as a 	 
 medusa, and 2 if the creature is small): 	 
 
@@ -18570,7 +18570,7 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>MM2 (Monstrous Manual II, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -26209,7 +26209,7 @@ Flolite is prized by adventurers because it protects the owner from the
 level or prime requisite draining abilities of Vampires, Night Hags,
 Wights, and similar creatures. The eye is hidden from view when the
 creature is alive because of the intense light the creature gives off. The
-intensity of the light equals daylight in a 30ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ radius around the Flolite.
+intensity of the light equals daylight in a 30 radius around the Flolite.
 In a dungeon Flolites are often mistaken for dancing lights by
 adventurers. A tail of light can be seen as a Flolite propels itself through
 the air. When it can, a Flolite will dive down very swiftly from the sky to
@@ -27699,7 +27699,7 @@ double damage from all magical cold and ice attacks.
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2018: Oriental Adventures</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -38351,7 +38351,7 @@ Fifth level: wall of force (from level gain due to familiar)
 Familiar:
 Kriitch: AC 2, MV 15 &quot;, HD 3, hp 16, #AT 3, D 1-2/1-2/1-4, SA claw poison (save or lose 1 point Dexterity for 2-12 rounds), fear blast once per day (30&apos; radius), SD 25% MR, regenerate 1 hp/round, hit only by iron or magic weapons, immune to cold, fire, and lightning; XP 373
 
-While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance and regenerates 1 hp per round. If Kriitch is slain, Falrinth immediately drops to Level 4 (retaining only five spellsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½three of first level, two of second) and flees.
+While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance and regenerates 1 hp per round. If Kriitch is slain, Falrinth immediately drops to Level 4 (retaining only five spells three of first level, two of second) and flees.
 
 </Description>
     <Treasure>NA</Treasure>

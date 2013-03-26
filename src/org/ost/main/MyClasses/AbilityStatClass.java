@@ -43,7 +43,9 @@ public class AbilityStatClass {
 		public int sizeDiceOpenDoor;
 		public int bendBars;
 		public ArrayList<String> bonusAbilities;
-		
+
+		// this is ugly but I could not come up with a more
+		// elegant want to do it.
 		public ArrayList<Strength> percentile;
 		
 		public Strength() {

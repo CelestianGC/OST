@@ -1147,6 +1147,33 @@ public class PlayerClass implements Serializable, Comparable {
 
 		return(aScores);
 	}
+	/**
+	 * get a single ability score ABILITY_* = findMe
+	 * 
+	 * @param findMe
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @param aList
+	 * @return
+	 */
+	public int getAbilityScore(int findMe, CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+		
+		int theStat = 0;
+		
+		ArrayList<AbilityScoreClass> abilityScoresAdj = 
+				getAllAbilityScoreAdjustments(cList,eList, rList);
+
+		AbilityScoreClass aJ = abilityScoresAdj.get(findMe);
+		AbilityScoreClass aS = getMyAbilityScores().get(findMe);
+		int abilityTotal = aS.getScore() + aJ.getScore();
+		//int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+		
+		theStat = abilityTotal;
+
+		return theStat;
+	}
 	
 	/**
 	 * add adjustment oS to aS, account for percentile > 100 and return updated aS
@@ -1410,11 +1437,12 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param cList
 	 * @param eList
 	 * @param rList
+	 * @param aList
 	 * @return
 	 */
 	public int[] getAllArcaneBonusSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
-
+			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
@@ -1427,7 +1455,17 @@ public class PlayerClass implements Serializable, Comparable {
 				int  iS = eA.getMageSpellsBonus()[i];
 				aScores[i] += iS;
 			}
-		//TODO get spells from ability scores (wisdom/int)
+		//get spells from ability scores (wisdom/int)
+		int abilityTotal = 
+				getAbilityScore(ABILITY_INTELLIGENCE, cList, eList, rList, aList);
+
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = 
+					aList.getContent().get(abilityTotal);
+			for(int i=0;i<aStat.intelligence.bonusSpells.length;i++)
+				aScores[i] += aStat.intelligence.bonusSpells[i];
+		}
+		
 		return(aScores);
 	}
 
@@ -1437,10 +1475,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param cList
 	 * @param eList
 	 * @param rList
+	 * @param aList
 	 * @return
 	 */
 	public int[] getAllDivineBonusSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
 
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
@@ -1454,10 +1493,22 @@ public class PlayerClass implements Serializable, Comparable {
 				int  iS = eA.getClericSpellsBonus()[i];
 				aScores[i] += iS;
 			}
-		//TODO get spells from ability scores (wisdom/int)		
+		
+		//get spells from ability scores (wisdom/int)	
+		int abilityTotal = 
+				getAbilityScore(ABILITY_WISDOM, cList, eList, rList, aList);
+
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = 
+					aList.getContent().get(abilityTotal);
+			for(int i=0;i<aStat.wisdom.bonusSpells.length;i++)
+				aScores[i] += aStat.wisdom.bonusSpells[i];
+		}
+		
 		return(aScores);
 	}
 
+	
 	public int getTHACO(CharacterClassList cList,
 			ExtraAbilitiesList eList, RaceList rList) {
 		
@@ -1569,4 +1620,165 @@ public class PlayerClass implements Serializable, Comparable {
 		
 		return(myRaceName);
 	}
+	
+	/**
+	 * return if the character has barbarian dex feature
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasBarbarianDex(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+
+		boolean isBarb = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isBarbarianDexBonus())
+				isBarb = true;
+
+		return isBarb;	
+	}
+	
+	/**
+	 * return if has barbarian con feature
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasBarbarianCon(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isBarb = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isBarbarianConBonus())
+				isBarb = true;
+
+		return isBarb;	
+	}
+
+	/**
+	 * return is the character has a fighter con feature
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasFighterCon(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isFighter = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isFighterConBonus())
+				isFighter = true;
+
+		return isFighter;	
+	}
+
+	/**
+	 * can they have weapon mastery
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasWeaponMastery(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isTrue = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isAllowedWeaponMastery())
+				isTrue = true;
+
+		return isTrue;	
+	}
+	/**
+	 * can they double specialize 
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasDoubleSpecialization(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isTrue = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isAllowedDoubeSpecialize())
+				isTrue = true;
+
+		return isTrue;	
+	}
+	/**
+	 * can they specialize
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasSpecialization(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isTrue = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isAllowedSpecialize())
+				isTrue = true;
+
+		return isTrue;	
+	}
+
+	/**
+	 * does the character have the percentile strength feature
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasPercentileStrength(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isTrue = false;
+
+		for(PCClass cC: getMyClass()) {
+			CharacterClass oC = CharacterClass.getClassByMyID(cC.getClassID(), cList);
+			if (oC != null) {
+				if (oC.percentileStrength)
+					isTrue = true;
+			}
+		}
+		
+		return isTrue;	
+	}
+	
 }

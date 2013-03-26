@@ -127,6 +127,22 @@ health adjusted (+6)
         <primaryClass>false</primaryClass>
         <outer-class reference="../../.."/>
       </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>cleric</name>
+        <classID>76e3c6bf-a016-4ebf-8fa8-a8c8fe7b852e</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+        <name>magic-user</name>
+        <classID>06f61dbb-c9a5-4fb2-b940-300264c88822</classID>
+        <experience>0</experience>
+        <level>1</level>
+        <primaryClass>false</primaryClass>
+        <outer-class reference="../../.."/>
+      </org.ost.main.MyClasses.PlayerClass_-PCClass>
     </myClass>
     <myRace>
       <name>elf</name>
@@ -138,7 +154,7 @@ health adjusted (+6)
     <myAbilityScores>
       <org.ost.main.MyClasses.AbilityScoreClass>
         <score>18</score>
-        <percentile>23</percentile>
+        <percentile>45</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
         <min>0</min>
@@ -147,7 +163,7 @@ health adjusted (+6)
         <allowExceptional>false</allowExceptional>
       </org.ost.main.MyClasses.AbilityScoreClass>
       <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>11</score>
+        <score>15</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
