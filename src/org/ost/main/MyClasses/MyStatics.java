@@ -5,11 +5,11 @@ public class MyStatics {
 	
 	public static final int MAX_MATRIX = 21;
 	
-	public static final int SAVE_DEATH = 1;
-	public static final int SAVE_POLY = 2;
-	public static final int SAVE_ROD = 3;
-	public static final int SAVE_BREATH = 4;
-	public static final int SAVE_SPELL = 5;
+	public static final int SAVE_DEATH = 0;
+	public static final int SAVE_POLY = 1;
+	public static final int SAVE_ROD = 2;
+	public static final int SAVE_BREATH = 3;
+	public static final int SAVE_SPELL = 4;
 	public static final String[] SAVES = {"Death/Paralyzation/Poison","Petrification/Polymorph",
 		"Rod/Staff/Wand","Breath Weapon","Spells"};
 	public static final String[] SAVES_ABBREV = {"Death","Poly","R/S/W","Breath","Spells"};
@@ -105,5 +105,13 @@ public class MyStatics {
 		{"Male","Female","Other"};
 	public static final String[] GENDERS_ABBREV = 
 		{"M","F","O"};
+
+	public static final int AC_NORMAL = 0;
+	public static final int AC_SHIELDLESS = 1;
+	public static final int AC_REAR = 2;
+	public static final String[] AC_NAMES = 
+		{"Normal","No-Shield","Rear"};
+	public static final String[] AC_ABBREV = 
+		{"N","NS","R"};
 
 }

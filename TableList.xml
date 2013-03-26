@@ -1,6 +1,6 @@
 <entries>
   <TableClass>
-    <myID>d68e8a96-e7f5-432e-879e-8e6dee029a27</myID>
+    <myID>1b9b1b56-2363-4be7-97e2-b00ecc90a674</myID>
     <name>1. Map or Magic</name>
     <description>Determine if loot is a map or magical items.</description>
     <type>TREASURE</type>
@@ -28,7 +28,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e0ede01a-1835-4eb0-a4d4-244ef30fc8eb</myID>
+    <myID>dd6349d4-25f0-4857-84cb-8379bdd4f93b</myID>
     <name>2. Magic Item Table</name>
     <description>Randomly determine a magic item.</description>
     <type>Treasure</type>
@@ -116,7 +116,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>58463497-44cb-4f7b-9eea-4a78407eef1e</myID>
+    <myID>a048d60e-7e9f-44c7-8f37-18527e2d0776</myID>
     <name>Armor Size</name>
     <description>Armor size.</description>
     <type>Treasure</type>
@@ -164,7 +164,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a447ae40-d03b-4860-9bcc-8f442ca50185</myID>
+    <myID>d71bf765-d692-440c-a776-63dcc3d78a0e</myID>
     <name>Critical Hit Results</name>
     <description>What happens when a player crits.</description>
     <type>COMBAT</type>
@@ -242,7 +242,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d45f29bf-4185-4537-81ad-ea4c2201bd7f</myID>
+    <myID>1864a41c-4c7d-47e7-b941-2740248563a6</myID>
     <name>Encounter Astral</name>
     <description>Encounters in the Astra/ Plane occur on a 1 in 20 chance; check one, two or three times per journey, depending on the party&apos;s familiarity with the route followed. * These creatures&apos; perceptions extend into the Astral and Ethereal Planes (as do their magical attack forms), but they do not actually travel therein. Their possible appearance applies only to situations in which the encountering party is near to the Prime Material Plane, and could therefore possibly be affected by the creatures&apos; attack forms.</description>
     <type>ENCOUNTER</type>
@@ -490,7 +490,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3bd1e970-2458-4982-9da4-d27ac47e377e</myID>
+    <myID>f021b6fc-2325-400c-a67e-e1f5c6fc41e0</myID>
     <name>Encounter Ethereal</name>
     <description>Encounters occur on a 1 in 20; if the party is following an unfamiliar &quot;path&quot;, check three times total: at the beginning, midpoint, and at the end of the journey. * These creatures&apos; perceptions extend into the Astral and Ethereal Planes (as do their magical attack forms), but they do not actually travel therein. Their possible appearance applies only to situations in which the encountering party is near to the Prime Material Plane, and could therefore possibly be affected by the creatures&apos; attack forms.</description>
     <type>ENCOUNTER</type>
@@ -808,7 +808,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d43f7ee0-c212-4151-bf57-5696b0ed4d5c</myID>
+    <myID>9d8c8102-37eb-40b5-a70c-eb955fa9b4b5</myID>
     <name>Encounter, Random Level 1</name>
     <description>Encounter, Random Level 1</description>
     <type>ENCOUNTER</type>
@@ -1016,7 +1016,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>7ec8d0f0-d902-440b-8eaf-907ed8564021</myID>
+    <myID>e8232f3c-17b1-4b5e-b4f7-29449fe99a6d</myID>
     <name>Encounter, Random Level 2</name>
     <description>Encounter, Random Level 2</description>
     <type>ENCOUNTER</type>
@@ -1224,7 +1224,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a346e5f5-4d81-43bb-b85c-2b4caa6036b8</myID>
+    <myID>71c0ece7-e336-452e-bcbc-efbc6594eab6</myID>
     <name>Encounter, Random Level 3</name>
     <description>Encounter, Random Level 3</description>
     <type>ENCOUNTER</type>
@@ -1442,7 +1442,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b0be2720-f8bd-4e3e-8517-3f34f93ec14e</myID>
+    <myID>b394cf5b-9b50-43e8-a13f-530f55a149c8</myID>
     <name>Encounter, Random Level 3, Dragon SubTable</name>
     <description>Encounter, Random Level 3, Dragon SubTable</description>
     <type>ENCOUNTER</type>
@@ -1480,7 +1480,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>77bac3ce-fd6a-4c0f-9f11-aa1967f0c2bb</myID>
+    <myID>32a62a1f-9699-4109-ad58-2abff8b51a90</myID>
     <name>Encounter, Random Level 4</name>
     <description>Encounter, Random Level 4</description>
     <type>ENCOUNTER</type>
@@ -1698,7 +1698,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>dfb7bc97-8e1d-44de-9893-fe0f013b8cbd</myID>
+    <myID>eb28df99-780b-451d-93c4-c9c2affaafd7</myID>
     <name>Encounter, Random Level 4, Dragon SubTable</name>
     <description>Encounter, Random Level 4, Dragon SubTable</description>
     <type>ENCOUNTER</type>
@@ -1806,7 +1806,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a9fa1b50-c400-4baf-b868-17370e4caa5b</myID>
+    <myID>4f470729-2826-4f00-9c52-ebc231fce576</myID>
     <name>Fumble Results</name>
     <description>What happens when a player fumbles.</description>
     <type>COMBAT</type>
@@ -1894,7 +1894,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>18ca5d90-9d6d-4af2-a45c-58680cdbdfa8</myID>
+    <myID>595e340c-3899-4ed3-ab1e-29a2854c9b91</myID>
     <name>Gem Selection Table</name>
     <description>Base Value of Gems</description>
     <type>TREASURE</type>
@@ -1962,7 +1962,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>15296cf5-69e0-4b9b-a1e6-f3b2c8b1f9ce</myID>
+    <myID>b5d15eee-4038-4c30-8aaf-d7120fa64b42</myID>
     <name>Giant Bag Contents</name>
     <description>Randomly generate contents of a giants bag.</description>
     <type>OTHER</type>
@@ -2180,7 +2180,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1bcbb79e-cdcf-46a0-94f4-b245e5fcb4f3</myID>
+    <myID>35c161c6-b741-4993-9c29-1927b00765af</myID>
     <name>Grappling Table</name>
     <description>Any hold shown remains in effect from round to round unless the target scores a higher percentage hold. Damage accrues until a hold is broken or until the holder elects to try for a different hold. The target may still inflict damage by lesser hold results shown after the double slashes (//). These might result in both opponents falling to the ground and continuing their grappling there. Note: If the opponent is stunned, a second attack may immediately be made, and the stunned opponent cannot counter for 1 round.</description>
     <type>COMBAT</type>
@@ -2258,7 +2258,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>29fc93a0-33c3-4ad6-bc73-1b195c546700</myID>
+    <myID>640ea27d-1944-4527-a58b-56884830be81</myID>
     <name>Hit Location</name>
     <description>Generate a random hit location</description>
     <type>COMBAT</type>
@@ -2346,14 +2346,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1f2c2bb5-a440-452d-8165-c73319da1620</myID>
+    <myID>d2afe0de-6483-4855-98c0-0f57da622644</myID>
     <name>Hit Location II</name>
     <description>Another hit location table.</description>
     <type>COMBAT</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Foot, top</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Foot, top</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -2854,7 +2854,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>595e36a6-4eba-4fc4-8224-0d472e5d7051</myID>
+    <myID>826eaca1-445a-4124-9570-cda5e39df90d</myID>
     <name>Insanity Table</name>
     <description>*House Table*. If you need to inflict random insanity on a PC/NPC.</description>
     <type>OTHER</type>
@@ -3112,7 +3112,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4094e3a9-0c0b-48b1-a64a-84ca564e80d1</myID>
+    <myID>d62f0481-4bb9-4a48-8f48-530cda015821</myID>
     <name>Jewelry Selection Table</name>
     <description>Custom Jewelry selection table</description>
     <type>TREASURE</type>
@@ -3260,7 +3260,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>745af2bf-946d-4d7f-b0f2-a9e4a270b069</myID>
+    <myID>a88a6809-802c-4fc1-8ed6-df4d4d278d77</myID>
     <name>Magic, Deck of Many Things (22 plaque version)</name>
     <description>Do you dare draw from the deck? DMG pg. 142</description>
     <type>ITEMS</type>
@@ -3488,7 +3488,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f7fc3b7a-4f79-43a6-acb8-7c4c2b76933d</myID>
+    <myID>15cec8d4-10b6-4cf7-bcc2-f55d8d5ac3b2</myID>
     <name>Magic, Wand of Wonder</name>
     <description>What is the current effect of a wand of wonder.</description>
     <type>ITEMS</type>
@@ -3686,7 +3686,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>5f4b3727-1864-4349-93fd-6db7b8b90a85</myID>
+    <myID>a8a60fdb-49d4-4f8c-b41b-cd0615d12bab</myID>
     <name>Map I</name>
     <description>Monetary treasure</description>
     <type>TREASURE</type>
@@ -3784,7 +3784,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>fcff28e4-7f65-43d4-9ca9-50403bc89df9</myID>
+    <myID>e527a83f-7a7f-4133-9d82-8bca80a3e8e1</myID>
     <name>Map II</name>
     <description>Map to magical treasure</description>
     <type>TREASURE</type>
@@ -3862,7 +3862,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>44664818-d3a2-4bde-9bda-816b11ffaced</myID>
+    <myID>dc7f3485-cd20-4c77-820c-79378f47124e</myID>
     <name>Map III</name>
     <description>Combined hoard maps</description>
     <type>TREASURE</type>
@@ -3970,7 +3970,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>64ccf420-952c-4254-89c5-bb1eb4cc3f33</myID>
+    <myID>5dbc3bbf-c153-4d21-afd3-7a5a2fec52cc</myID>
     <name>Map Location</name>
     <description>Where is the maps destination</description>
     <type>Treasure</type>
@@ -4018,7 +4018,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>ae076ccb-122d-4680-bced-0ff80e54e585</myID>
+    <myID>75fbfc80-0adc-4669-864a-5f6e874ffed7</myID>
     <name>Map Selection Table</name>
     <description>Type of map discovered.</description>
     <type>Treasure</type>
@@ -4066,7 +4066,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>5832943f-cbc0-42ff-b3c7-3a871978e8ab</myID>
+    <myID>dc3856bd-b3f1-4e57-8d14-4200c6c78a5f</myID>
     <name>Map Treasure Location</name>
     <description>Where is the maps treasure located at the destination</description>
     <type>Treasure</type>
@@ -4134,7 +4134,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>33647913-36f1-4978-bb44-824f3372f4ba</myID>
+    <myID>e0da1af4-3002-485d-8144-3a934670e2c4</myID>
     <name>Minor Treasure</name>
     <description>Simple/minor treasure found.</description>
     <type>TREASURE</type>
@@ -5142,7 +5142,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b2e2151d-8d0a-4347-a71b-ae9d9d858511</myID>
+    <myID>21155ded-a710-4d33-afe1-e5b2a01ae810</myID>
     <name>Misc. Bag of Holding</name>
     <description>Type of bag found.</description>
     <type>TREASURE</type>
@@ -5190,7 +5190,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0524ac81-3985-4544-b734-f62eb84fbc00</myID>
+    <myID>bb670563-e9e5-4454-ab62-ac52f99c68a0</myID>
     <name>Misc. Bracers of Defense</name>
     <description>Which type of bracer found.</description>
     <type>TREASURE</type>
@@ -5268,7 +5268,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>6d8fa7dc-8739-4350-b6bb-ea8356563612</myID>
+    <myID>6be5dfca-29cc-4fb3-88dc-0f474f2489f3</myID>
     <name>Misc. Carpet of Flying</name>
     <description>Which type of carpet found.</description>
     <type>TREASURE</type>
@@ -5316,7 +5316,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>26f59ef0-5e4d-4278-bd98-0198c92a2303</myID>
+    <myID>f179a281-50bc-412b-94a4-5d78f9a81efa</myID>
     <name>Misc. Cloak of Protection</name>
     <description>Type of protection cloak found.</description>
     <type>TREASURE</type>
@@ -5374,7 +5374,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>518f7a68-d414-4bc8-bca0-931396b7a119</myID>
+    <myID>0eadeeb2-1922-4ec9-8b3d-9c0833024750</myID>
     <name>Misc. Crystal Ball</name>
     <description>Type of crystal ball found.</description>
     <type>TREASURE</type>
@@ -5422,7 +5422,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d7760e7c-f69f-4965-82a4-1a914bb237c9</myID>
+    <myID>cc79e11b-f609-4914-9cd9-38ac932af4a4</myID>
     <name>Misc. Figurines of Wondrous Power</name>
     <description>Type of figurine found.</description>
     <type>TREASURE</type>
@@ -5500,7 +5500,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4a4537e4-3ed0-4858-9588-eb45d2f850e6</myID>
+    <myID>410c1d90-ce40-47f9-973b-c82f493afbb4</myID>
     <name>Misc. Girdle of Giant Strength</name>
     <description>Type of girdle of giant strength found.</description>
     <type>TREASURE</type>
@@ -5568,7 +5568,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>54bf9493-3be9-43d5-a7b7-90ef40de0732</myID>
+    <myID>7074ad1e-364d-4f1a-a445-384812cf81d0</myID>
     <name>Misc. Horn of Valhalla</name>
     <description>Type of horn found.</description>
     <type>TREASURE</type>
@@ -5616,7 +5616,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>c95c4c90-1279-42ff-8399-f6b700a9b3b1</myID>
+    <myID>48b77658-1f7b-4f61-b3bb-6f8db2d3ca8e</myID>
     <name>Misc. I</name>
     <description>Miscellaneous Magic items one.</description>
     <type>TREASURE</type>
@@ -5954,7 +5954,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>68f595fb-f26c-4279-b212-cd8fd2bbcab9</myID>
+    <myID>a879dcbe-6723-4f78-88d7-c8b7d572f027</myID>
     <name>Misc. II</name>
     <description>Miscellaneous magic items 2.</description>
     <type>TREASURE</type>
@@ -6262,7 +6262,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>938ee8e6-373d-451e-ac85-ff32477d3681</myID>
+    <myID>2b3a9cdc-1ba3-422b-88e8-91e3c53d1fef</myID>
     <name>Misc. III</name>
     <description>Miscelleneous magic items 3.</description>
     <type>TREASURE</type>
@@ -6600,7 +6600,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a68fe852-59f2-400c-b8b2-cbc33b938e78</myID>
+    <myID>2a3ba3d0-5e39-4fc4-baa6-75b09c092a36</myID>
     <name>Misc. Instrument of the Bards</name>
     <description>What type of instrument found.</description>
     <type>TREASURE</type>
@@ -6678,7 +6678,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>c6c87321-1dd0-4291-ba13-8572223424d0</myID>
+    <myID>1b64bb15-2115-4e9e-b363-6c2fc9ef936a</myID>
     <name>Misc. Ioun Stones</name>
     <description>Type of ioun stone found.</description>
     <type>TREASURE</type>
@@ -6836,7 +6836,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>fe4d8675-d99d-4d77-b137-ba3bdb88abf4</myID>
+    <myID>a3e1e45f-0d01-465a-b166-0043c31a7045</myID>
     <name>Misc. Iron Flask</name>
     <description>What type of creature bound to the flask.</description>
     <type>TREASURE</type>
@@ -7034,7 +7034,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f439c7b5-8769-4187-87db-ea8221e0beb8</myID>
+    <myID>1a0dc7d0-95ec-4789-937d-fba47124ed8d</myID>
     <name>Misc. IV</name>
     <description>Miscellaneous magic items 4.</description>
     <type>TREASURE</type>
@@ -7402,7 +7402,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0a47eb0a-645d-4a96-9cd1-bd2929fe3d5c</myID>
+    <myID>9ade8097-0095-4e9a-a4a6-deaf29d5dddd</myID>
     <name>Misc. Manual of Golems</name>
     <description>Type of golem manual creates</description>
     <type>TREASURE</type>
@@ -7450,7 +7450,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>5c50ae2a-3b9b-42c2-85d6-b027d701ad72</myID>
+    <myID>df6bcf6f-daad-4834-8719-7b4ec442a29f</myID>
     <name>Misc. Medallion of ESP</name>
     <description>Type of medallion found.</description>
     <type>TREASURE</type>
@@ -7498,7 +7498,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>29a607cd-3c46-434d-b48c-1e555bebf34e</myID>
+    <myID>97f55f36-226d-431b-a634-3123ea6eaae7</myID>
     <name>Misc. Necklace of Missiles</name>
     <description>Type of missiles on necklace</description>
     <type>TREASURE</type>
@@ -7576,7 +7576,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>438b007b-155f-426d-aec1-b6dc096d8397</myID>
+    <myID>87c50ecb-30ca-47f6-ae96-9f49b6e5fdc5</myID>
     <name>Misc. Pearl of Power</name>
     <description>Type of pearl found</description>
     <type>TREASURE</type>
@@ -7684,7 +7684,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>bcb5e059-2670-4baa-9c36-2b9f72ddfa1e</myID>
+    <myID>4de7de77-84d6-499c-8963-7ddecf04a2f2</myID>
     <name>Misc. Pearl of Power Curse Check</name>
     <description>Check to see if peal of power is cursed.</description>
     <type>TREASURE</type>
@@ -7712,7 +7712,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>80804346-a9df-4bf5-bc8e-455d97aeb436</myID>
+    <myID>8942732c-b428-47f4-b3b9-6803e5b01818</myID>
     <name>Misc. Periapt of Proof Against Poison</name>
     <description>Which type of periapt is found.</description>
     <type>TREASURE</type>
@@ -7760,7 +7760,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0c966aa1-4eb7-4343-97b0-47e9eb2a7cc4</myID>
+    <myID>09a853a3-bce1-4275-bfc1-84090925127d</myID>
     <name>Misc. Quaals Feather Token</name>
     <description>Type of token found.</description>
     <type>TREASURE</type>
@@ -7828,7 +7828,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3d6f672d-38e2-499e-bbe2-cbad47077e3d</myID>
+    <myID>f46f7936-797b-423c-a63c-adc80a6a2274</myID>
     <name>Misc. Robe of the Archmagi</name>
     <description>Type of robe discovered.</description>
     <type>TREASURE</type>
@@ -7866,7 +7866,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1aa98c59-1e68-489b-8df8-39e978b7dac6</myID>
+    <myID>9c4e201a-545b-4ce7-b8d2-c986c4bcfbc3</myID>
     <name>Misc. Selection Table</name>
     <description>Select one of 7 misc. tables.</description>
     <type>Treasure</type>
@@ -7944,7 +7944,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3290fdc3-92f2-416b-ae0b-9bfd6ccdbfc8</myID>
+    <myID>b36a628c-cfe0-4642-a681-74631f2935b2</myID>
     <name>Misc. V</name>
     <description>Miscellaneous magic items 5.</description>
     <type>TREASURE</type>
@@ -8302,7 +8302,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4a814ba1-4e33-4e0d-9699-303047b88b2d</myID>
+    <myID>4c3b60ea-bab5-4d6c-a28b-93cdba38a3ce</myID>
     <name>Misc. VI</name>
     <description>Miscellaneous magic items 6.</description>
     <type>Treasure</type>
@@ -8610,7 +8610,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4ef59ee5-b1e1-49de-a80a-f920272f746e</myID>
+    <myID>cf57ba8c-3478-46de-ac11-e9b483f755c7</myID>
     <name>Misc. VII</name>
     <description>Miscellaneous magic items 7.</description>
     <type>TREASURE</type>
@@ -8898,7 +8898,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0d76d6d9-feee-4f21-93e4-7f1575623116</myID>
+    <myID>4b0284df-0e28-4879-8228-4cdc9f6533cc</myID>
     <name>Missile Survivability</name>
     <description>When your players ask if they can retrieve their arrows, darts or other ranged weapons. Set the number to arrows they used in fight.</description>
     <type>ITEMS</type>
@@ -8926,7 +8926,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>79eabbc4-66e2-4ef9-a398-785629275c19</myID>
+    <myID>e9bcffaf-936d-4eb3-b7bd-45392039e8ed</myID>
     <name>Names, English, Male, First</name>
     <description>Names, English, Male, First</description>
     <type>GENERAL</type>
@@ -12974,7 +12974,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>65309b15-3e14-4e1a-bb5e-84a2a5cb1da1</myID>
+    <myID>7dfd0d9b-6550-438d-b9ed-037994c05523</myID>
     <name>NONE</name>
     <description>Stub table, do not delete.</description>
     <type>NONE</type>
@@ -12992,7 +12992,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>cdb0da11-d967-4d9b-9ae0-d70e83411c38</myID>
+    <myID>672656f2-712e-47be-bde6-fd6047dcc26e</myID>
     <name>Overbear Results</name>
     <description>Once an opponent is overborne, some other form of combat MUST take place.</description>
     <type>COMBAT</type>
@@ -13060,7 +13060,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>cedb044e-87ad-43d5-be3d-994f42d64129</myID>
+    <myID>3c13d7f0-afed-406d-a197-b42147ec4615</myID>
     <name>Potion Miscibility Table</name>
     <description>What happens when you experiment with multiple potions.</description>
     <type>ITEMS</type>
@@ -13158,7 +13158,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e99376ca-90d7-4bac-8df7-4f54ad497817</myID>
+    <myID>2bcb7e3c-4f0a-475e-8a14-01e2915d1c7e</myID>
     <name>Potion Selection Table</name>
     <description>Select either potion table 1 or potion table 2</description>
     <type>Treasure</type>
@@ -13186,7 +13186,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>8e9c6c0b-7696-4ab0-b79e-b0ea4504407d</myID>
+    <myID>5822e855-d55b-4935-82e7-1b69ead45bd1</myID>
     <name>Potion, Animal Control</name>
     <description>Type of animal the potion will control.</description>
     <type>TREASURE</type>
@@ -13264,7 +13264,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e4d4bc9b-460d-4455-a9f1-110a2a0b3f54</myID>
+    <myID>40bb6d70-d5fb-4c3b-8786-fe53dfa5f342</myID>
     <name>Potion, Dragon Control</name>
     <description>Type of dragon control found.</description>
     <type>TREASURE</type>
@@ -13392,7 +13392,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>beb2af83-9e90-488d-9038-6569c1ae8145</myID>
+    <myID>ce1a8090-215c-4565-8694-6a3f56fe23e7</myID>
     <name>Potion, Giant Control</name>
     <description>Which type of giant does it work on?</description>
     <type>TREASURE</type>
@@ -13460,7 +13460,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4fbb6575-128a-467b-98de-0ea35b09fc5b</myID>
+    <myID>944f232d-a887-4153-9b27-ef664b8286ae</myID>
     <name>Potion, Giant Strength</name>
     <description>What type of giant strength potion was found.</description>
     <type>TREASURE</type>
@@ -13528,7 +13528,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0ff7025a-2ada-4d8c-8c79-c53123192a06</myID>
+    <myID>95c11cf8-3c19-408f-8fd4-4ec3fc6f87e7</myID>
     <name>Potion, Human Control</name>
     <description>Which type of humanoid control potion is found.</description>
     <type>TREASURE</type>
@@ -13616,7 +13616,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>183c60e6-6ed1-4071-9bd8-76187a396d89</myID>
+    <myID>f34a2491-2c0f-498e-8e1b-46f5ba2601f0</myID>
     <name>Potion, Undead Control</name>
     <description>Type of undead the potion controls.</description>
     <type>TREASURE</type>
@@ -13724,7 +13724,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>06705762-cbfb-4192-b43b-35e09c7f439b</myID>
+    <myID>96e6ced1-3671-44ad-8faa-2149ae79817f</myID>
     <name>Potions I</name>
     <description>First table of potions from treasures.</description>
     <type>TREASURE</type>
@@ -14082,7 +14082,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4a3e98c4-6b8d-47c8-81c8-7bf67c1031c0</myID>
+    <myID>a25bea01-3376-4b43-8d27-ef8832d3f559</myID>
     <name>Potions II</name>
     <description>Second table of potions.</description>
     <type>Treasure</type>
@@ -14280,14 +14280,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>50b144d3-b319-416f-8d57-3ebd35e2796c</myID>
+    <myID>fada530b-7a73-4119-aa34-32c011ba4238</myID>
     <name>Pummel Table</name>
     <description>* Series ends, determination of next strike must be.made. ** Opponent unable to attack for 1 full round.</description>
     <type>COMBAT</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿blow misses, opponent may counter; none</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿blow misses, opponent may counter; none</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -14358,7 +14358,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>21803dd0-56b4-49cd-98de-8ef398176b11</myID>
+    <myID>ea67f8d9-7cb1-490b-86e3-8bfdfbf07a89</myID>
     <name>Ring Selection Table</name>
     <description>Select the ring table to use.</description>
     <type>Treasure</type>
@@ -14386,7 +14386,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>18def1cf-2436-4ccd-9202-feebefe62518</myID>
+    <myID>eb0cc294-3982-4736-8ad8-6d14dd88dbb8</myID>
     <name>Ring, Contrariness</name>
     <description>What secondary effect does this ring have?</description>
     <type>TREASURE</type>
@@ -14454,7 +14454,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>6f8519fd-e4e7-4aaa-a792-6f89de4ce109</myID>
+    <myID>f22a4705-be35-4e36-bce2-2829adb996c1</myID>
     <name>Ring, Elemental</name>
     <description>What type of elemental ring is this?</description>
     <type>TREASURE</type>
@@ -14502,7 +14502,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>cb2760b8-79fc-45c6-82bd-ffa172da953b</myID>
+    <myID>a47d873f-157f-47c0-97f6-f4b10c5a861f</myID>
     <name>Ring, Protection</name>
     <description>Type of protection ring found.</description>
     <type>TREASURE</type>
@@ -14580,7 +14580,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a23fd715-ec7e-4e37-8b91-9d52310c1ef0</myID>
+    <myID>ebb3c31c-1b5b-4f4a-bc98-b38430a47c28</myID>
     <name>Ring, Regeneration</name>
     <description>Type of regeneration ring found</description>
     <type>TREASURE</type>
@@ -14608,7 +14608,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3186ca2f-d380-4510-a0d7-2b7568fdf0cd</myID>
+    <myID>a7ce9d85-ce95-491e-b64d-42f74a3e2026</myID>
     <name>Ring, Telekinesis</name>
     <description>Strength of the Telekinesis ring.</description>
     <type>TREASURE</type>
@@ -14666,7 +14666,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>23ebe3d8-a3e9-4817-87e9-9e64a141b368</myID>
+    <myID>ab0e126e-567c-4d11-992a-8e0a49b89d92</myID>
     <name>Ring, Three Wishes</name>
     <description>Type of wishes granted by the ring.</description>
     <type>TREASURE</type>
@@ -14694,7 +14694,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>47590257-a136-4a24-bd58-48b117d35e82</myID>
+    <myID>00881d13-6a43-4c04-87de-7db40fe2435e</myID>
     <name>Ring, Wizardry</name>
     <description>Type of wizadry ring found.</description>
     <type>TREASURE</type>
@@ -14782,7 +14782,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e5743162-4e1b-4341-b853-a37a8bc433a2</myID>
+    <myID>4d7d0024-0995-47be-b62f-a38e6055fc1b</myID>
     <name>Rings I</name>
     <description>Ring table one.</description>
     <type>TREASURE</type>
@@ -15030,7 +15030,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>064c1985-238b-4411-abcd-1e3965514609</myID>
+    <myID>74df86b9-849d-4bf9-bb35-a8677a5834cc</myID>
     <name>Rings II</name>
     <description>Second table of rings</description>
     <type>Treasure</type>
@@ -15168,7 +15168,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>62e653f0-73b2-44a4-aa79-1e5a75143d54</myID>
+    <myID>b6669a39-023f-41bd-8b68-8730a26cfe81</myID>
     <name>Rod Charges</name>
     <description>Determine rod charges.</description>
     <type>Treasure</type>
@@ -15186,7 +15186,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>16bb02c0-a866-46bf-8fdc-ca6661254db5</myID>
+    <myID>ce88e614-b81f-427c-8909-549dd9f51a83</myID>
     <name>Rod, Stave and Wand Selection Table</name>
     <description>Selection for rods, staves and wands.</description>
     <type>Treasure</type>
@@ -15214,7 +15214,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>317d81ee-2a78-4e22-a7ac-133280184e29</myID>
+    <myID>79996862-1126-4795-b04a-5e3454d48203</myID>
     <name>Rods and Staves I</name>
     <description>Rods and Staves.</description>
     <type>Treasure</type>
@@ -15472,7 +15472,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>05e309b8-22f8-48ce-a23c-b3be56c5a442</myID>
+    <myID>c52bd1e1-615d-435f-9d2f-19850db59f74</myID>
     <name>Scroll Class Selection</name>
     <description>Determine which class the scroll is for.</description>
     <type>Treasure</type>
@@ -15500,7 +15500,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>a720fee7-6d49-4b68-823d-81986e48a868</myID>
+    <myID>9a61669a-aa93-44ac-a00f-d2bf4d7c3537</myID>
     <name>Scroll Cleric Selection</name>
     <description>Select which type of cleric spell this is.</description>
     <type>Treasure</type>
@@ -15528,7 +15528,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>05121123-3bb4-49bc-b6c1-ed1e3e155bfe</myID>
+    <myID>f25be7f1-b186-4a32-aca8-3a08ad5fd737</myID>
     <name>Scroll Magic-User Selection</name>
     <description>Select which type of magic-user scroll this is.</description>
     <type>Treasure</type>
@@ -15556,7 +15556,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f78d3fe1-55d8-4418-9352-daa3262ed670</myID>
+    <myID>2c0cf54c-8860-4d61-9c26-2a9f41f99d36</myID>
     <name>Scroll Selection Table</name>
     <description>Table used to pick which scroll table to use.</description>
     <type>Treasure</type>
@@ -15584,7 +15584,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b19a3f32-bcee-4f6e-bcb6-30b9afa96903</myID>
+    <myID>c2dfabe9-0774-43c7-b137-33b1ffc4db3e</myID>
     <name>Scroll, Elementals</name>
     <description>Determine elemental type of protection scroll.</description>
     <type>TREASURE</type>
@@ -15642,7 +15642,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>6be30bd4-bec9-4b56-9fa4-6856ac37e029</myID>
+    <myID>5baa57c0-dc5b-41db-8057-1346c8c19659</myID>
     <name>Scroll, Lycanthropes</name>
     <description>Which type of lycanthrope does it protect against</description>
     <type>TREASURE</type>
@@ -15720,7 +15720,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>30442b8c-b943-4c71-b145-af6c0c3c0e14</myID>
+    <myID>326b0a38-3b8f-4cf8-9121-b48334cdfcef</myID>
     <name>Scrolls I</name>
     <description>Scroll table one.</description>
     <type>TREASURE</type>
@@ -15978,7 +15978,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>ae94edeb-6043-4803-9449-68328be20e86</myID>
+    <myID>92714973-c604-4c46-8d19-871757c61127</myID>
     <name>Scrolls II</name>
     <description>Second table of scrolls.</description>
     <type>Treasure</type>
@@ -16176,7 +16176,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1f6727e3-107c-4601-9bc1-ab5664fabb3d</myID>
+    <myID>a70d6009-ecdb-49f8-a7cf-ea0cf8de313e</myID>
     <name>Semi-Mundane Items</name>
     <description>Mostly mundane items found.</description>
     <type>TREASURE</type>
@@ -17184,7 +17184,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e8eefcca-4b64-497e-9e4b-844fe705438e</myID>
+    <myID>f69a95ec-743e-4da1-8e37-d4c5c8e8cca3</myID>
     <name>Shields and Armor I</name>
     <description>Shields and Armor magic items one.</description>
     <type>Treasure</type>
@@ -17452,7 +17452,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>eb6fe3da-4ff2-42ff-a884-4074e56e14db</myID>
+    <myID>b4a075bd-772d-4a54-be63-7f43fe1b7015</myID>
     <name>Shields and Armor II</name>
     <description>Shields and armor magic items 2.</description>
     <type>Treasure</type>
@@ -17720,7 +17720,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>80c8823e-2fe2-416d-937e-ee1dc09dde67</myID>
+    <myID>494440b5-0b9e-41b4-a573-8f8f237e8ba5</myID>
     <name>Shields and Armor Selection Table</name>
     <description>Select one of the shields and armor tables.</description>
     <type>Treasure</type>
@@ -17748,7 +17748,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>9cda3844-74a8-4aba-ab9e-2a4dd944d666</myID>
+    <myID>93463880-623f-4a1f-88f6-233d5bd15680</myID>
     <name>Spells, Cleric Level 1</name>
     <description>Cleric spells level 1</description>
     <type>SPELLS</type>
@@ -17876,7 +17876,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4b11101e-c31c-4a3b-869f-24463ab27fb7</myID>
+    <myID>3a863c8a-2a93-40fe-b4d8-a0c6cf7b6f11</myID>
     <name>Spells, Cleric Level 2</name>
     <description>Spells, Cleric Level 2</description>
     <type>SPELLS</type>
@@ -17953,7 +17953,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Silence 15Ã¢â‚¬â„¢ Radius</name>
+        <name>Silence 15ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Radius</name>
         <description>empty</description>
         <lowDice>8</lowDice>
         <highDice>8</highDice>
@@ -18004,7 +18004,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f73e0afa-1c00-469a-b516-6ebf08abaa4d</myID>
+    <myID>3cb963c3-ce96-4bb5-8ab8-2c9f175bf5fe</myID>
     <name>Spells, Cleric Level 3</name>
     <description>Spells, Cleric Level 3</description>
     <type>SPELLS</type>
@@ -18132,7 +18132,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>879ec7b2-2bcc-477d-a31f-50f07c1e5b17</myID>
+    <myID>93404c3c-32a1-4d1d-b888-6c25e2d0edb2</myID>
     <name>Spells, Cleric Level 4</name>
     <description>Spells, Cleric Level 4</description>
     <type>SPELLS</type>
@@ -18240,7 +18240,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>26b5790f-1d68-4c1e-9214-d50cfa307570</myID>
+    <myID>bd8903cb-f9de-4793-bfa6-6bcd38198225</myID>
     <name>Spells, Cleric Level 5</name>
     <description>Spells, Cleric Level 5</description>
     <type>SPELLS</type>
@@ -18348,7 +18348,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>311aa6a4-9468-4216-9c61-5e0ecc5122a6</myID>
+    <myID>340024b7-fca5-4513-a6e9-fc59d8256677</myID>
     <name>Spells, Cleric Level 6</name>
     <description>Spells, Cleric Level 6</description>
     <type>SPELLS</type>
@@ -18456,7 +18456,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3106d5d9-8115-47f8-9a4b-44ab6626849b</myID>
+    <myID>5bae7805-d80e-4cce-a715-6955c7107431</myID>
     <name>Spells, Cleric Level 7</name>
     <description>Spells, Cleric Level 7</description>
     <type>SPELLS</type>
@@ -18564,7 +18564,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>2811da76-2316-472f-9598-79ce016cf14d</myID>
+    <myID>bdb3f28e-3410-4233-9a25-c80a1b842b6a</myID>
     <name>Spells, Confusion Effects</name>
     <description>This is what happens each round when someone is confused.</description>
     <type>SPELL-EFFECT</type>
@@ -18612,7 +18612,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f4e36445-9a9d-4681-8fba-45f267111e8b</myID>
+    <myID>47bc62f6-63b2-472b-b293-276073eccb55</myID>
     <name>Spells, Druid Level 1</name>
     <description>Spells, Druid Level 1</description>
     <type>SPELLS</type>
@@ -18780,7 +18780,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0308e9c3-5ef0-4aba-9193-51e3fa9025f4</myID>
+    <myID>64e7c953-5392-4943-bd14-2f62795256f5</myID>
     <name>Spells, Druid Level 2</name>
     <description>Spells, Druid Level 2</description>
     <type>SPELLS</type>
@@ -18948,7 +18948,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1886967d-dfe2-4754-b926-66d2b879e541</myID>
+    <myID>907aea09-002a-47d8-8a47-b62d11872994</myID>
     <name>Spells, Druid Level 3</name>
     <description>Spells, Druid Level 3</description>
     <type>SPELLS</type>
@@ -19116,7 +19116,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>ad3cbcf9-ced4-404f-a2f8-afa36b9d7638</myID>
+    <myID>df2b2499-4301-45e2-b672-432b1fd0a8f6</myID>
     <name>Spells, Druid Level 4</name>
     <description>Spells, Druid Level 4</description>
     <type>SPELLS</type>
@@ -19244,7 +19244,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>8ebeff49-354c-48dd-b954-36dd3d61dee9</myID>
+    <myID>7cdfbc2a-601f-4d4c-9a92-ec0fa0ca9392</myID>
     <name>Spells, Druid Level 5</name>
     <description>Spells, Druid Level 5</description>
     <type>SPELLS</type>
@@ -19372,7 +19372,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>03439055-2f03-483e-b427-fe43add3795f</myID>
+    <myID>99eba3b3-bbdd-42a4-bf1c-8a85aa3889c7</myID>
     <name>Spells, Druid Level 6</name>
     <description>Spells, Druid Level 6</description>
     <type>SPELLS</type>
@@ -19500,7 +19500,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>467d0aa6-927b-40a0-a83e-6202e700cb38</myID>
+    <myID>59b10471-8e66-482b-9a3f-65e37270556a</myID>
     <name>Spells, Druid Level 7</name>
     <description>Spells, Druid Level 7</description>
     <type>SPELLS</type>
@@ -19628,7 +19628,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>ed02f1f9-b791-47ab-bddc-1ee8978e6e8f</myID>
+    <myID>e6f6e48c-61e3-48a5-add3-7b12bb622d32</myID>
     <name>Spells, Magic-User Level 1</name>
     <description>Spells, Magic-User Level 1</description>
     <type>SPELLS</type>
@@ -19936,14 +19936,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>3b942928-ea4b-4d29-aaf1-4f0fc2f4f31a</myID>
+    <myID>749aa20e-c259-44ca-8f8a-78216e2905fa</myID>
     <name>Spells, Magic-User Level 1 (UA)</name>
     <description>Spells, Magic-User Level 1 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Affect normal fires</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Affect normal fires</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -20173,7 +20173,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>NystulÃ¢â‚¬â„¢s magic aura</name>
+        <name>NystulÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s magic aura</name>
         <description>empty</description>
         <lowDice>24</lowDice>
         <highDice>24</highDice>
@@ -20283,7 +20283,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>TenserÃ¢â‚¬â„¢s floating disc</name>
+        <name>TenserÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s floating disc</name>
         <description>empty</description>
         <lowDice>35</lowDice>
         <highDice>35</highDice>
@@ -20334,7 +20334,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>f362954f-4a6f-4c66-b6b4-9f29eaff2a39</myID>
+    <myID>e38e96f1-e2ca-494b-90a3-f34eff0cf9f7</myID>
     <name>Spells, Magic-User Level 2</name>
     <description>Spells, Magic-User Level 2</description>
     <type>SPELLS</type>
@@ -20401,7 +20401,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>FoolÃ¢â‚¬â„¢s Gold</name>
+        <name>FoolÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s Gold</name>
         <description>empty</description>
         <lowDice>7</lowDice>
         <highDice>7</highDice>
@@ -20582,14 +20582,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>42cab5c6-aafc-4e42-b6cf-b6c21b1c3eb2</myID>
+    <myID>5b2ea90e-23e1-43f8-9320-bd0ce5eca426</myID>
     <name>Spells, Magic-User Level 2 (UA)</name>
     <description>Spells, Magic-User Level 2 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Audible glamer</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Audible glamer</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -20619,7 +20619,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Darkness 15Ã¢â‚¬â„¢ radius</name>
+        <name>Darkness 15ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ radius</name>
         <description>empty</description>
         <lowDice>4</lowDice>
         <highDice>4</highDice>
@@ -20739,7 +20739,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>LeomundÃ¢â‚¬â„¢s trap</name>
+        <name>LeomundÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s trap</name>
         <description>empty</description>
         <lowDice>16</lowDice>
         <highDice>16</highDice>
@@ -20779,7 +20779,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MelfÃ¢â‚¬â„¢s acid arrow</name>
+        <name>MelfÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s acid arrow</name>
         <description>empty</description>
         <lowDice>20</lowDice>
         <highDice>20</highDice>
@@ -20879,7 +20879,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>TashaÃ¢â‚¬â„¢s uncontrollable Hideous Laughter</name>
+        <name>TashaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s uncontrollable Hideous Laughter</name>
         <description>empty</description>
         <lowDice>30</lowDice>
         <highDice>30</highDice>
@@ -20940,7 +20940,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>1d1a85a8-8f0c-40d5-8880-6a9cb4902f2b</myID>
+    <myID>1e8ea43e-7eb2-470d-ba50-d344595cbf13</myID>
     <name>Spells, Magic-User Level 3</name>
     <description>Spells, Magic-User level 3</description>
     <type>SPELLS</type>
@@ -21188,14 +21188,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b9aa7e9d-e4e6-4dac-a2b6-0c8e4aea7881</myID>
+    <myID>95bb746a-e77e-4572-af5b-1862299e5526</myID>
     <name>Spells, Magic-User Level 3 (UA)</name>
     <description>Spells, Magic-User Level 3 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Blink</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Blink</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -21345,7 +21345,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Invisibility 10Ã¢â‚¬â„¢ radius</name>
+        <name>Invisibility 10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ radius</name>
         <description>empty</description>
         <lowDice>16</lowDice>
         <highDice>16</highDice>
@@ -21365,7 +21365,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>LeomundÃ¢â‚¬â„¢s tiny hut</name>
+        <name>LeomundÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s tiny hut</name>
         <description>empty</description>
         <lowDice>18</lowDice>
         <highDice>18</highDice>
@@ -21395,7 +21395,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MelfÃ¢â‚¬â„¢s minute meteor</name>
+        <name>MelfÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s minute meteor</name>
         <description>empty</description>
         <lowDice>21</lowDice>
         <highDice>21</highDice>
@@ -21415,7 +21415,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Protection from evil, 10Ã¢â‚¬â„¢radius</name>
+        <name>Protection from evil, 10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢radius</name>
         <description>empty</description>
         <lowDice>23</lowDice>
         <highDice>23</highDice>
@@ -21506,14 +21506,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b7ecafc8-ab2d-4947-9456-38146555934e</myID>
+    <myID>b915319f-15be-4922-93f9-3af9213b50db</myID>
     <name>Spells, Magic-User Level 4</name>
     <description>Spells, Magic-User Level 4</description>
     <type>SPELLS</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Charm Monster</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Charm Monster</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -21754,14 +21754,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>e1132ee6-09e4-4982-b3b0-9f8b83cebf29</myID>
+    <myID>e6d9da1c-f3f1-4237-bf1f-c577a5a36d5e</myID>
     <name>Spells, Magic-User Level 4 (UA)</name>
     <description>Spells, Magic-User Level 4 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Charm monster</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Charm monster</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -21821,7 +21821,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>EvardÃ¢â‚¬â„¢s black tentacles</name>
+        <name>EvardÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s black tentacles</name>
         <description>empty</description>
         <lowDice>7</lowDice>
         <highDice>7</highDice>
@@ -21911,7 +21911,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>LeomundÃ¢â‚¬â„¢s secure shelter</name>
+        <name>LeomundÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s secure shelter</name>
         <description>empty</description>
         <lowDice>16</lowDice>
         <highDice>16</highDice>
@@ -21961,7 +21961,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>OtilukeÃ¢â‚¬â„¢s resilient sphere</name>
+        <name>OtilukeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s resilient sphere</name>
         <description>empty</description>
         <lowDice>21</lowDice>
         <highDice>21</highDice>
@@ -21991,7 +21991,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>RaryÃ¢â‚¬â„¢s mnemonic enhancer</name>
+        <name>RaryÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s mnemonic enhancer</name>
         <description>empty</description>
         <lowDice>24</lowDice>
         <highDice>24</highDice>
@@ -22072,7 +22072,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0ad0e950-f950-4051-a317-dfc84fea6c3a</myID>
+    <myID>49c5dc16-2d67-4d4a-a4cb-c24d6c8b9930</myID>
     <name>Spells, Magic-User Level 5</name>
     <description>Spells, Magic-User Level 5</description>
     <type>SPELLS</type>
@@ -22199,7 +22199,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MageÃ¢â‚¬â„¢s Faithful Hound</name>
+        <name>MageÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s Faithful Hound</name>
         <description>empty</description>
         <lowDice>13</lowDice>
         <highDice>13</highDice>
@@ -22320,14 +22320,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>9210eb83-5fa5-4147-9610-c65d30a6512c</myID>
+    <myID>524da817-b33a-4472-a64b-639218067bfc</myID>
     <name>Spells, Magic-User Level 5 (UA)</name>
     <description>Spells, Magic-User Level 5 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Airy water</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Airy water</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -22367,7 +22367,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>BigbyÃ¢â‚¬â„¢s interposing hand</name>
+        <name>BigbyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s interposing hand</name>
         <description>empty</description>
         <lowDice>5</lowDice>
         <highDice>5</highDice>
@@ -22487,7 +22487,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>LeomundÃ¢â‚¬â„¢s lamentable belabourment</name>
+        <name>LeomundÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s lamentable belabourment</name>
         <description>empty</description>
         <lowDice>17</lowDice>
         <highDice>17</highDice>
@@ -22497,7 +22497,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>LeomundÃ¢â‚¬â„¢s secret chest</name>
+        <name>LeomundÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s secret chest</name>
         <description>empty</description>
         <lowDice>18</lowDice>
         <highDice>18</highDice>
@@ -22527,7 +22527,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MordenkainenÃ¢â‚¬â„¢s Faithful Hound</name>
+        <name>MordenkainenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s Faithful Hound</name>
         <description>empty</description>
         <lowDice>21</lowDice>
         <highDice>21</highDice>
@@ -22628,7 +22628,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d2cf572b-b18d-4277-aee7-708ba835b117</myID>
+    <myID>7029f405-493c-4432-8494-672351963269</myID>
     <name>Spells, Magic-User Level 6</name>
     <description>Spells, Magic-User Level 6</description>
     <type>SPELLS</type>
@@ -22876,14 +22876,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>c4c34c23-0922-417c-855f-766ca43ea869</myID>
+    <myID>ac4f1147-dcd8-4d5b-bfdd-2da9144e55c5</myID>
     <name>Spells, Magic-User Level 6 (UA)</name>
     <description>Spells, Magic-User Level 6 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Anti-magic shell</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Anti-magic shell</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -22893,7 +22893,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>BigbyÃ¢â‚¬â„¢s forceful hand</name>
+        <name>BigbyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s forceful hand</name>
         <description>empty</description>
         <lowDice>2</lowDice>
         <highDice>2</highDice>
@@ -23073,7 +23073,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MordenkainenÃ¢â‚¬â„¢s lucubration</name>
+        <name>MordenkainenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s lucubration</name>
         <description>empty</description>
         <lowDice>20</lowDice>
         <highDice>20</highDice>
@@ -23093,7 +23093,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>OtilukeÃ¢â‚¬â„¢s freezing sphere</name>
+        <name>OtilukeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s freezing sphere</name>
         <description>empty</description>
         <lowDice>22</lowDice>
         <highDice>22</highDice>
@@ -23163,7 +23163,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>TenserÃ¢â‚¬â„¢s transformation</name>
+        <name>TenserÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s transformation</name>
         <description>empty</description>
         <lowDice>29</lowDice>
         <highDice>29</highDice>
@@ -23184,7 +23184,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>84e6e82c-98b5-4347-bdf2-c36f9cfbddd2</myID>
+    <myID>be4c73a1-c3f6-4296-8920-75cac45073b0</myID>
     <name>Spells, Magic-User Level 7</name>
     <description>Spells, Magic-User Level 7</description>
     <type>SPELLS</type>
@@ -23261,7 +23261,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MageÃ¢â‚¬â„¢s Sword</name>
+        <name>MageÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s Sword</name>
         <description>empty</description>
         <lowDice>8</lowDice>
         <highDice>8</highDice>
@@ -23352,14 +23352,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b13cbc7a-e3c1-404e-b739-ab70363f4714</myID>
+    <myID>08c150d1-cf79-4c57-b941-cab69604412c</myID>
     <name>Spells, Magic-User Level 7 (UA)</name>
     <description>Spells, Magic-User Level 7 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Banishment</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Banishment</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -23369,7 +23369,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>BigbyÃ¢â‚¬â„¢s grasping hand</name>
+        <name>BigbyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s grasping hand</name>
         <description>empty</description>
         <lowDice>2</lowDice>
         <highDice>2</highDice>
@@ -23409,7 +23409,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>DrawmijÃ¢â‚¬â„¢s instantsummons</name>
+        <name>DrawmijÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s instantsummons</name>
         <description>empty</description>
         <lowDice>6</lowDice>
         <highDice>6</highDice>
@@ -23469,7 +23469,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MordenkainenÃ¢â‚¬â„¢smagnificent mansion</name>
+        <name>MordenkainenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢smagnificent mansion</name>
         <description>empty</description>
         <lowDice>12</lowDice>
         <highDice>12</highDice>
@@ -23479,7 +23479,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MordenkainenÃ¢â‚¬â„¢s sword</name>
+        <name>MordenkainenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s sword</name>
         <description>empty</description>
         <lowDice>13</lowDice>
         <highDice>13</highDice>
@@ -23600,7 +23600,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>483b5faa-22b8-463e-9ed3-3b5d2e0d7233</myID>
+    <myID>07484f77-e4e2-45f8-88a2-4b53ccf9d06b</myID>
     <name>Spells, Magic-User Level 8</name>
     <description>Spells, Magic-User Level 8</description>
     <type>SPELLS</type>
@@ -23768,14 +23768,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b29eba37-60dd-4fda-9c28-33dabbaf84d5</myID>
+    <myID>79f9e761-8e68-4c16-9c1e-c44397bd8615</myID>
     <name>Spells, Magic-User Level 8 (UA)</name>
     <description>Spells, Magic-User Level 8 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Antipathy/sympathy</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Antipathy/sympathy</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -23785,7 +23785,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>BigbyÃ¢â‚¬â„¢s clenched fist</name>
+        <name>BigbyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s clenched fist</name>
         <description>empty</description>
         <lowDice>2</lowDice>
         <highDice>2</highDice>
@@ -23885,7 +23885,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>OtilukeÃ¢â‚¬â„¢s telekinetic sphere</name>
+        <name>OtilukeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s telekinetic sphere</name>
         <description>empty</description>
         <lowDice>12</lowDice>
         <highDice>12</highDice>
@@ -23895,7 +23895,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>OttoÃ¢â‚¬â„¢s irresistible dance</name>
+        <name>OttoÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s irresistible dance</name>
         <description>empty</description>
         <lowDice>13</lowDice>
         <highDice>13</highDice>
@@ -23935,7 +23935,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>SertenÃ¢â‚¬â„¢s spell immunity</name>
+        <name>SertenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s spell immunity</name>
         <description>empty</description>
         <lowDice>17</lowDice>
         <highDice>17</highDice>
@@ -23976,7 +23976,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>5cb83b78-1005-4620-b18f-9e3464762505</myID>
+    <myID>b6a16be8-2fb0-4444-ac79-8105ca8dc1d6</myID>
     <name>Spells, Magic-User Level 9</name>
     <description>Spells, Magic-User Level 9</description>
     <type>SPELLS</type>
@@ -24104,14 +24104,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>9f8e5c07-6584-4ed3-893c-8c3bf6600972</myID>
+    <myID>717a9a54-ff0c-4062-aa9c-326baa6a4ba2</myID>
     <name>Spells, Magic-User Level 9 (UA)</name>
     <description>Spells, Magic-User Level 9 (UA)</description>
     <type>OTHER</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Astral spell</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Astral spell</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -24121,7 +24121,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>BigbyÃ¢â‚¬â„¢s crushing hand</name>
+        <name>BigbyÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s crushing hand</name>
         <description>empty</description>
         <lowDice>2</lowDice>
         <highDice>2</highDice>
@@ -24191,7 +24191,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>MordenkainenÃ¢â‚¬â„¢s injunction</name>
+        <name>MordenkainenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s injunction</name>
         <description>empty</description>
         <lowDice>9</lowDice>
         <highDice>9</highDice>
@@ -24272,9 +24272,9 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4f05b216-bf20-4d64-b231-0bbf35165169</myID>
+    <myID>5cf89ee5-344b-41c1-930d-24bfde21a3c5</myID>
     <name>Spells, Magic-User Reincarnation Effect</name>
-    <description>The new incarnation will retain the original characterÃ¢â‚¬â„¢s experience points, but will have new physical (Str, Dex, Con) ability scores randomly rolled and adjusted for the new race. The character will retain his or her original mental ability scores (Int, Wis, Cha).</description>
+    <description>The new incarnation will retain the original characterÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s experience points, but will have new physical (Str, Dex, Con) ability scores randomly rolled and adjusted for the new race. The character will retain his or her original mental ability scores (Int, Wis, Cha).</description>
     <type>SPELL-EFFECT</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
@@ -24440,9 +24440,9 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>986ad448-9fef-4334-805e-5102e05d81b7</myID>
+    <myID>e3068497-6e9c-459d-8826-63e589272a81</myID>
     <name>Spells, Monster Summon I</name>
-    <description>Spells, Monster Summon I. Summons 2d4 creatures in 1d3 rounds. duration: 2 rounds + 1 round/ level. Evil casters may get the monsters in parentheses, at the DMÃ¢â‚¬â„¢s option.</description>
+    <description>Spells, Monster Summon I. Summons 2d4 creatures in 1d3 rounds. duration: 2 rounds + 1 round/ level. Evil casters may get the monsters in parentheses, at the DMÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s option.</description>
     <type>SPELL-EFFECT</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
@@ -24508,7 +24508,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>18b65561-0cbd-49bf-9933-66df212c40cc</myID>
+    <myID>03478e13-912c-45ad-8c3d-198fe66de0f4</myID>
     <name>Spells, Monster Summon II</name>
     <description>Spells, Monster Summon II. Summons 1d6 creatures in 1d3 rounds. duration: 3 rounds + 1 round/ level</description>
     <type>SPELL-EFFECT</type>
@@ -24576,7 +24576,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>fe4f78be-a817-41fd-b704-a4134105676f</myID>
+    <myID>f31af8ab-ff57-433c-8a07-88aa634cb125</myID>
     <name>Spells, Summon Monster III</name>
     <description>Spells, Summon Monster III. Summons 1d4 creatures in 1d3 rounds. duration: 4 rounds + 1 round/ level</description>
     <type>SPELL-EFFECT</type>
@@ -24684,7 +24684,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>ee6a2e56-9938-4c8e-99fa-a426a04f1a80</myID>
+    <myID>640fcc95-cd59-42ef-a629-cb92b587fc7a</myID>
     <name>Spells, Summon Monster IV</name>
     <description>Spells, Summon Monster IV. Summons 1d4 creatures in 1d3 rounds. duration: 5 rounds + 1/ level</description>
     <type>SPELL-EFFECT</type>
@@ -24792,7 +24792,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>2341084c-b150-4167-93e5-ac62c24f54a1</myID>
+    <myID>2d4429e9-86a5-4a2f-bab2-1f01d629df38</myID>
     <name>Spells, Summon Monster V</name>
     <description>Spells, Summon Monster V. Summons 1d2 creatures in 1d3 rounds. duration: 6 rounds + 1 round/ level</description>
     <type>SPELL-EFFECT</type>
@@ -24809,7 +24809,7 @@
       </org.ost.main.MyClasses.TreasureTableClass>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>1d2xDoppelgÃƒÂ¤nger</name>
+        <name>1d2xDoppelgÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nger</name>
         <description>empty</description>
         <lowDice>2</lowDice>
         <highDice>2</highDice>
@@ -24860,7 +24860,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>becd7f40-9132-4f4f-8a66-d64ec455e67c</myID>
+    <myID>4a5d6afa-eb94-49b9-a046-baa9a0147dc1</myID>
     <name>Spells, Summon Monster VI</name>
     <description>Spells, Summon Monster VI. Summons 1d2 creatures in 1d3 rounds. duration: 7 rounds + 1 round/ level</description>
     <type>SPELL-EFFECT</type>
@@ -24968,14 +24968,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b8f13584-22ef-432b-86c2-fe938fe46eb6</myID>
+    <myID>c400b7cc-901b-4338-b719-5ff0f583a573</myID>
     <name>Spells, Summon Monster VII</name>
     <description>Spells, Summon Monster VII. Summons 1d2 creatures in 1 round. duration: 8 rounds + 1 round/ level</description>
     <type>SPELL-EFFECT</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>1d2xChimÃƒÂ¦ra</name>
+        <name>1d2xChimÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ra</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -25176,7 +25176,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>9c438a39-1908-41bd-b63d-a1b1d383bb6c</myID>
+    <myID>7d88ba91-0571-43a6-b9e1-69f828b5a0d0</myID>
     <name>Stave Charges</name>
     <description>Determine charges left in staff.</description>
     <type>Treasure</type>
@@ -25194,7 +25194,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>604f4c51-145d-47ec-9e0b-48f5b227dc0d</myID>
+    <myID>f7c5c214-2687-4435-8847-9a278861772e</myID>
     <name>Sword Selection Table</name>
     <description>Sword selection of Sword I or Sword II</description>
     <type>Treasure</type>
@@ -25222,7 +25222,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>64f60397-6fbc-4fc9-a81f-33ab219b1544</myID>
+    <myID>f6771669-3e52-4ac2-bab5-39f760cb6c63</myID>
     <name>Sword Type</name>
     <description>The type of sword found.</description>
     <type>Treasure</type>
@@ -25290,7 +25290,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>5284fb4a-602a-4b2a-9bdc-b2701f940a2a</myID>
+    <myID>f2f73b58-4018-4ee2-878d-b7f7c9682fd6</myID>
     <name>Sword, Dragon Slayer</name>
     <description>What type of dragon is the sword do triple damage against?</description>
     <type>TREASURE</type>
@@ -25398,7 +25398,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>7de48e85-4447-4c02-bfa5-3c64de8fcfbb</myID>
+    <myID>61d99303-f278-4e03-97a8-5e2ac4f0c04b</myID>
     <name>Sword, Unusual Sword Extraordinary Power</name>
     <description>Extraordinary power selection</description>
     <type>TREASURE</type>
@@ -25576,7 +25576,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>339a004d-3507-43c7-9f9e-a8bbca81b133</myID>
+    <myID>76f3e47e-d936-44ff-93e6-631d49010c67</myID>
     <name>Sword, Unusual Sword Languages</name>
     <description>Languages spoken by swords with a special purpose</description>
     <type>TREASURE</type>
@@ -25644,7 +25644,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>2ed2ed5e-d768-4811-affd-6875f5c54d8e</myID>
+    <myID>81b2f207-2502-4f08-8119-d122f92d5a12</myID>
     <name>Sword, Unusual Sword Primary Abilities</name>
     <description>Unusual sword primary abilities selection.</description>
     <type>TREASURE</type>
@@ -25772,7 +25772,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>bae27e09-1bda-4a96-82d0-9f8965e3ff51</myID>
+    <myID>3c6e5841-1986-4390-9100-4f4dac030596</myID>
     <name>Sword, Unusual Sword Purpose Power</name>
     <description>Power triggered when sword is performing it&apos;s special purpose.</description>
     <type>TREASURE</type>
@@ -25850,7 +25850,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>15408160-bfca-4362-9c5d-0a77bbd40f6f</myID>
+    <myID>30c6dccb-8017-49e9-875f-9ad02a7ea85c</myID>
     <name>Sword, Unusual Sword Special Purpose</name>
     <description>Special Purpose Abilities</description>
     <type>TREASURE</type>
@@ -25948,7 +25948,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>2e6c6ce6-a2c8-4e0d-8a6a-74a7b6c10f20</myID>
+    <myID>5e8705ff-7402-4723-b77c-b446d948a884</myID>
     <name>Sword, Unusual Swords</name>
     <description>Check to see if the weapon has an unsual set of powers.</description>
     <type>TREASURE</type>
@@ -26026,7 +26026,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>28e71b15-5641-48be-8884-73e95aea817a</myID>
+    <myID>e83aff4a-5330-47c6-804e-f8319801d6e1</myID>
     <name>Swords I</name>
     <description>Magic swords one.</description>
     <type>TREASURE</type>
@@ -26234,7 +26234,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>231a87fe-dbf2-445b-9ee4-cc7f174c77c4</myID>
+    <myID>0c15b267-5504-4fc0-9bdb-1c5b526667ae</myID>
     <name>Swords II</name>
     <description>Magical swords two.</description>
     <type>TREASURE</type>
@@ -26372,7 +26372,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>0d5b1237-b07c-4621-b6d2-88a843b9032f</myID>
+    <myID>9147444e-184a-4147-bf32-a64934b90df1</myID>
     <name>Swords, Unusual Weapons Alignment</name>
     <description>Alignment for unusual weapons.</description>
     <type>TREASURE</type>
@@ -26470,7 +26470,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>fa46bc24-ed5f-469d-a4d5-c660449791fa</myID>
+    <myID>aa796c1b-2f25-4439-bc1f-ef4b777f626e</myID>
     <name>Wand Charges</name>
     <description>Generate wand charges</description>
     <type>Treasure</type>
@@ -26488,14 +26488,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d426ac71-c2c6-4676-b415-ceb86fff23a1</myID>
+    <myID>0fbb74ba-b261-4cf4-9bde-45ef626e5ad3</myID>
     <name>Wandering Monster, Level 1</name>
     <description>Wandering Monster, Level 1</description>
     <type>RANDOM</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Al-miÃ¢â‚¬â„¢raj Webbird</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Al-miÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢raj Webbird</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -26636,14 +26636,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>2568d50b-5b12-426b-9f40-c4e7ab79e1fc</myID>
+    <myID>1a16cc2a-2dfb-4846-bf4e-1c9e0405b3cf</myID>
     <name>Wandering Monster, Level 10</name>
     <description>Wandering Monster, Level 10</description>
     <type>RANDOM</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Demon Prince</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Demon Prince</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -26834,14 +26834,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>400e0ffd-d88f-40a1-90e7-739a678d8153</myID>
+    <myID>d969f579-26c7-4099-98a3-7e5bf60e84a7</myID>
     <name>Wandering Monster, Level 2</name>
     <description>Wandering Monster, Level 2</description>
     <type>RANDOM</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Azer</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Azer</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -27032,14 +27032,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>74fbe107-721a-47f3-bbfe-276fb3ff5bab</myID>
+    <myID>7f0ea9bb-9f31-4e98-99c6-23948e9abecc</myID>
     <name>Wandering Monster, Level 3</name>
     <description>Wandering Monster, Level 3</description>
     <type>RANDOM</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Leprechaun</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Leprechaun</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -27230,14 +27230,14 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>df9f511a-fab4-4619-b31f-50c57f217fd3</myID>
+    <myID>3a288774-f44a-4a64-a7ac-415dbbbeae22</myID>
     <name>Wandering Monster, Level 4</name>
     <description>Wandering Monster, Level 4</description>
     <type>RANDOM</type>
     <treasureEntry>
       <org.ost.main.MyClasses.TreasureTableClass>
         <ID>0</ID>
-        <name>Ã¯Â»Â¿Lava Children</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Lava Children</name>
         <description>empty</description>
         <lowDice>1</lowDice>
         <highDice>1</highDice>
@@ -27428,7 +27428,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>eaa37cfa-b564-4a6e-9174-0bb0c877a38f</myID>
+    <myID>40ea7e06-e859-44d6-a3ac-2dbe5f6e551d</myID>
     <name>Wandering Monster, Level 5</name>
     <description>Wandering Monster, Level 5</description>
     <type>RANDOM</type>
@@ -27626,7 +27626,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>498e6850-5c1d-4e34-8eb4-f58a5352a8fa</myID>
+    <myID>016ec4ae-16cd-4525-8d38-aa457e8b38b2</myID>
     <name>Wandering Monster, Level 6</name>
     <description>Wandering Monster, Level 6</description>
     <type>RANDOM</type>
@@ -27824,7 +27824,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>4dfd6ce9-ddd8-4362-958d-6157bcc4eb61</myID>
+    <myID>04b53cd6-5485-4bde-8846-3c2b052fbe17</myID>
     <name>Wandering Monster, Level 7</name>
     <description>Wandering Monster, Level 7</description>
     <type>RANDOM</type>
@@ -28022,7 +28022,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>dde8c8f5-286a-4263-8e6b-051816fa0495</myID>
+    <myID>0c336616-ef79-46bd-bf16-0c8eb37febad</myID>
     <name>Wandering Monster, Level 8</name>
     <description>Wandering Monster, Level 8</description>
     <type>RANDOM</type>
@@ -28220,7 +28220,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>8a42f1c5-6527-4c7f-99f1-c606ebcc0090</myID>
+    <myID>8fbd2c6b-22c0-4fc0-bcda-2f3b868cf883</myID>
     <name>Wandering Monster, Level 9</name>
     <description>Wandering Monster, Level 9</description>
     <type>RANDOM</type>
@@ -28418,7 +28418,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>32688d49-820e-4930-b851-32ae25970291</myID>
+    <myID>30cf15b4-79d5-47ab-ac8a-14ec2b972c76</myID>
     <name>Wands I</name>
     <description>Wand item selection.</description>
     <type>Treasure</type>
@@ -28706,7 +28706,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>30267a39-c797-4383-ab63-ada06fbeb897</myID>
+    <myID>caa9a6cb-6268-4614-84e2-a7e9438ebc5e</myID>
     <name>Weapon Misc. Selection Table</name>
     <description>Select between weapon miscellaneous tables.</description>
     <type>Treasure</type>
@@ -28734,7 +28734,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>d2bd7eba-9802-4bda-9013-8ab79d431ba8</myID>
+    <myID>c460bdf3-2f2f-45fe-a81b-e03d18521171</myID>
     <name>Weapons Misc. Arrow of Slaying</name>
     <description>Type of arrow found</description>
     <type>TREASURE</type>
@@ -28982,7 +28982,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>925183b2-1da5-4cb9-866e-d7ae9de74bc8</myID>
+    <myID>fbb97648-25f4-41a6-9bb1-f88f6d28ac57</myID>
     <name>Weapons Misc. I</name>
     <description>Miscellaneous weapons one.</description>
     <type>TREASURE</type>
@@ -29350,7 +29350,7 @@
     </treasureEntry>
   </TableClass>
   <TableClass>
-    <myID>b48a9172-5d98-4332-93c2-6613ca2f7489</myID>
+    <myID>7c8b95a8-d52f-43af-9a0b-165b51765cb1</myID>
     <name>Weapons Misc. II</name>
     <description>Miscellaneous weapons two.</description>
     <type>TREASURE</type>

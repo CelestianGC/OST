@@ -1,6 +1,6 @@
 <entries>
   <ChartClass>
-    <myID>91f56b0a-e351-4879-9693-fdca6e7b6c3a</myID>
+    <myID>bbc00681-0d69-4fe1-b6b4-564bba2c0a7c</myID>
     <name>Ability Check</name>
     <description>*House Rule*. Base chance to perform activity that utilizes this ability score. Modifiers: +/-20% Moderate difficulty, +/-40% Hard Difficulty, +/-70% Impossible (plus for decending, minus for ascending)</description>
     <column>
@@ -101,7 +101,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>79163edb-bc2e-43cb-a6c4-c083aae1e732</myID>
+    <myID>99bc9383-5a1b-4793-a0e4-d400b1b0c899</myID>
     <name>AC Modifiers</name>
     <description>Various mofidiers applied to armor class. * only applies of the target has no dexterity bonus to AC.</description>
     <column>
@@ -109,8 +109,8 @@
         <name>Circumstance</name>
         <width>167</width>
         <row>
-          <string>OttoÃ¢â‚¬â„¢s irresistable dance</string>
-          <string>TensorÃ¢â‚¬â„¢s transformation</string>
+          <string>OttoÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s irresistable dance</string>
+          <string>TensorÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s transformation</string>
           <string>flank attack</string>
           <string>rear attack</string>
           <string>flank attack</string>
@@ -143,7 +143,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>b51116cf-b72c-4700-af8d-eb730c5c1630</myID>
+    <myID>32fa960b-0ed6-4966-a351-9402e4d8c969</myID>
     <name>Armor Encumbrance</name>
     <description>Encumbrance values for armor types.</description>
     <column>
@@ -235,7 +235,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>10c4a637-400d-4625-833b-14f1a9dde18f</myID>
+    <myID>c4465c4a-73ff-4c0f-9e68-1488cc6cda33</myID>
     <name>Armor I</name>
     <description>* For non-magic armour. Magic armour is un-encumbering, and allows a maximum move rate 30 ft faster than normal (up to 120 ft). Magic shields weigh as much as normal shields of the same type. OSRIC, p.30</description>
     <column>
@@ -338,7 +338,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>5946fb06-7635-4b86-9b92-b9016dee1a2f</myID>
+    <myID>dd2ea58b-e66c-40af-9727-ffb13b8ef087</myID>
     <name>Armor Rating</name>
     <description>Armor values for armor. OSRIC, p.30</description>
     <column>
@@ -374,7 +374,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>6e03d51e-2cf6-464a-91f4-02ec3eb5556a</myID>
+    <myID>b5ccf002-e43c-4f92-8a22-4de80900ff23</myID>
     <name>Assassin Matrix</name>
     <description>Assassin attack progression.</description>
     <column>
@@ -602,7 +602,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>e1f077a0-9013-4673-8c36-b6153865c61f</myID>
+    <myID>b35fb4e0-8aad-49c9-bac7-74e425b80309</myID>
     <name>Assassin Saves</name>
     <description>Assassin saving throw chart.</description>
     <column>
@@ -670,7 +670,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>882539da-6f42-45bb-83bb-5c4568ef47dd</myID>
+    <myID>7b3c1851-c0ae-4a29-a635-4da8a7ff82d2</myID>
     <name>Charisma Chart</name>
     <description>Charisma adjustment chart.</description>
     <column>
@@ -770,12 +770,12 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>fb06f801-6eb7-47ed-a9fb-fd24ba9abf4d</myID>
+    <myID>b553433c-1bd7-4390-89e0-bd8298fba5f9</myID>
     <name>Cleric Experience</name>
     <description>Cleric level progression. * Constitution hp adjustments no longer apply Each level gained thereafter requires 225,000 experience points and grants +2 hit points. OSRIC, p. 10</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿level</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿level</name>
         <width>75</width>
         <row>
           <string>1</string>
@@ -868,12 +868,12 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>dd20e9f1-4e25-43a1-81f3-097ddca801c4</myID>
+    <myID>5de4031f-a9b6-4b6b-a7c9-cb96a3781634</myID>
     <name>Cleric Matrix</name>
     <description>Cleric to hit AC matrix, OSRIC p. 11</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿level</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿level</name>
         <width>45</width>
         <row>
           <string>1-3</string>
@@ -1162,7 +1162,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>4c9f9d37-a68e-4274-99d6-cbe734c4c7da</myID>
+    <myID>bab7bf5c-8ca7-4beb-b1b5-6b7429fcbae0</myID>
     <name>Cleric Saves</name>
     <description>Saving throws for Clerics, Druids/etc.</description>
     <column>
@@ -1248,12 +1248,12 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>a10b6e90-201b-40eb-be0b-2a27b42d05fe</myID>
+    <myID>99ca3460-3ebe-49d3-afef-7d740ade52f1</myID>
     <name>Cleric Spell Costs</name>
     <description>List of spells and costs typically charged for NPC to cast for party.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Cleric Spell Requested</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Cleric Spell Requested</name>
         <width>133</width>
         <row>
           <string>astralspell</string>
@@ -1348,7 +1348,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>ba906839-da24-42a2-bc05-0e679b963fee</myID>
+    <myID>cdc55e42-f3b1-4318-97d6-1569467a7486</myID>
     <name>Cleric Spells Gained</name>
     <description>Cleric spells gained per level.</description>
     <column>
@@ -1636,9 +1636,9 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>592898b3-105e-4986-a5d7-1319c2a0b1c0</myID>
+    <myID>747fe0a4-4c59-4da9-be63-df8c08ab8e25</myID>
     <name>Cleric Turn Undead</name>
-    <description>Normally 2d6 creatures are affected by Turn Undead. Exceptions are paladins and Type 13 creatures, of which only 1d2 are affected, and results of Ã¢â‚¬Å“DÃ¢â‚¬ï¿½, which affect 1d6+6 creatures. Turning lasts for 3d4 rounds. OSRIC, p. 123</description>
+    <description>Normally 2d6 creatures are affected by Turn Undead. Exceptions are paladins and Type 13 creatures, of which only 1d2 are affected, and results of ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œDÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½, which affect 1d6+6 creatures. Turning lasts for 3d4 rounds. OSRIC, p. 123</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
         <name>Type of Undead</name>
@@ -1853,7 +1853,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>e20d8942-878f-49ef-bd31-4cd048217151</myID>
+    <myID>acc7087d-6ebd-49b7-956d-6d02a53ef19a</myID>
     <name>Common Healing Results</name>
     <description>Ranges for common healing spells and magic items.</description>
     <column>
@@ -1889,7 +1889,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>0c29c606-98e8-4e1b-9fbc-8a8eb472b884</myID>
+    <myID>20e32324-1d22-41d6-8bc5-775e46196796</myID>
     <name>Constitution Chart</name>
     <description>Adjustments for constitution scores, OSRIC p. 359</description>
     <column>
@@ -1985,7 +1985,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>41bbcac3-4d4a-4a94-bf41-fadff0f50cff</myID>
+    <myID>f552efa7-46ee-4718-b3c9-99b61f8c4ec0</myID>
     <name>Container Capacity</name>
     <description>Various containers max capacity in gp.</description>
     <column>
@@ -2042,15 +2042,15 @@
           <string>3</string>
           <string>2</string>
           <string>1</string>
-          <string>Ã‚Â½</string>
-          <string>Ã‚Â¼</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼</string>
           <string>50</string>
           <string>10</string>
           <string>50</string>
           <string>10</string>
           <string>2</string>
           <string>1</string>
-          <string>Ã‚Â¼</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼</string>
           <string>4</string>
           <string>1</string>
           <string>3</string>
@@ -2062,12 +2062,12 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>b2b60e32-bf9f-4de8-9032-c3a3341c3e5e</myID>
+    <myID>e205d2c4-223f-40e2-9515-66f6f90a4618</myID>
     <name>Cover and Concealment</name>
     <description>Hard cover will increase chances for saving throws as noted. Cover equal to 90% (or better) will also give the target creatures the benefit of no damage whatsoever if the appropriate saving throw is successful.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Target has about</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Target has about</name>
         <width>128</width>
         <row>
           <string>25% cover</string>
@@ -2098,7 +2098,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>4886dc73-108d-49b9-98c4-28b93b80e989</myID>
+    <myID>940c6307-5f50-42f1-acc7-21660d8e182d</myID>
     <name>Detect Invisible</name>
     <description>Note: You may give unintelligent creatures with keen hearing or sense of smell the equivalent of intelligence to reflect detection of invisible creatures. Check each round the creature is exposed to invisibility. Once detected, the invisible creature will be kept track of thereafter, as the detector will be able to note the cause. Any attacks incur the -4 penalty of attacking an invisible opponent, of course, and the invisible creature likewise is entitled to +4 on saving throws.</description>
     <column>
@@ -2241,7 +2241,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>44f1b1a6-0ab4-4e26-8e6c-3f0c619cc658</myID>
+    <myID>9743209b-ffa4-44ca-ba7e-b1a78880b8aa</myID>
     <name>Dexterity Chart</name>
     <description>Dexterity score adjustments, OSRIC P 359</description>
     <column>
@@ -2337,12 +2337,12 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>08a6a442-c05e-4e7b-8a76-ebc5d58ecb9b</myID>
+    <myID>bb021811-d906-415c-8fbe-0734cf1d50de</myID>
     <name>Druid Matrix</name>
     <description>Druid to hit AC table, OSRIC p. 12</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿level</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿level</name>
         <width>45</width>
         <row>
           <string>1-3</string>
@@ -2587,7 +2587,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>dae4160a-e8fd-403c-b5b1-a0006eb74ebf</myID>
+    <myID>3fa2c31a-41c2-493e-be85-885dfaab5438</myID>
     <name>Druid Saves</name>
     <description>Saving throws for druids.</description>
     <column>
@@ -2661,7 +2661,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>a1c4cef9-92d8-430f-ad21-cd97dc830008</myID>
+    <myID>35a9bd71-723a-4551-aa46-0f3c5e254d51</myID>
     <name>Dwarvish Detections</name>
     <description>Racial abilities of dwarves to detect underground features.</description>
     <column>
@@ -2689,7 +2689,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>754def00-8d14-4420-ba06-022c0d545017</myID>
+    <myID>8d5e1a7e-5da2-4ae8-bfe7-1e145e886003</myID>
     <name>Encounter Reaction</name>
     <description>Reaction is determined by rolling percentile dice, adjusting the score for charisma and applicable loyalty adjustment as if the creature were a henchman of the character speaking, and the modified score of the percentile dice is compared to the table. * Or morale check if appropriate.</description>
     <column>
@@ -2723,7 +2723,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>3718162c-cf55-4112-9e69-8cb589255068</myID>
+    <myID>b1c368f4-4a60-4c0d-b2ee-ebd4ff8da752</myID>
     <name>Encumbrance</name>
     <description>Encumbrance for characters in GP.</description>
     <column>
@@ -2851,7 +2851,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>8b3ccb5d-1d8c-46fc-a20e-19cd8a500143</myID>
+    <myID>9e1e8f8d-a011-430d-a738-aa6145dc0c49</myID>
     <name>Fighter Matrix</name>
     <description>Fighter to hit AC chart.</description>
     <column>
@@ -3453,7 +3453,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>7fa2acdd-bb35-4dd9-90b1-403e86a66e3d</myID>
+    <myID>76b23e53-9727-47ec-8b5f-c3bca50510a5</myID>
     <name>Fighter Saves</name>
     <description>Fighter/Monster Saves, OSRIC, p.363. Non-intelligent monsters save at 1/2 HD except for poison/death.</description>
     <column>
@@ -3557,7 +3557,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>6229adc0-6fac-4a7f-bff2-7bec1083de27</myID>
+    <myID>dcb08932-3168-4a92-a7e2-47d51417cbf4</myID>
     <name>Gaze/Eye Attack</name>
     <description>The chances of someone meeting the gaze of a creature with gaze attacks.</description>
     <column>
@@ -3587,20 +3587,20 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>9042dddc-b223-46d9-b87a-de70e06ceec3</myID>
+    <myID>c02adc1d-58df-4396-a377-4d422b8df2b9</myID>
     <name>Grapple Attack Modifiers</name>
-    <description>Base chance to hit. Multiply attackerÃ¢â‚¬â„¢s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker cannot grapple if either or both hands are holding anything.</description>
+    <description>Base chance to hit. Multiply attackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker cannot grapple if either or both hands are holding anything.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
         <name>Reason</name>
         <width>181</width>
         <row>
-          <string>Ã¯Â»Â¿AttackerÃ¢â‚¬â„¢s dexterity, per point</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s dexterity, per point</string>
           <string>target armor leather or padded</string>
           <string>target armor chain, ring, scale</string>
           <string>target banded, plate, splint</string>
           <string>Target slowed/stunned</string>
-          <string>Target base move 3Ã¢â‚¬ï¿½ faster</string>
+          <string>Target base move 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ faster</string>
           <string>Target hasted</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
@@ -3613,7 +3613,7 @@
           <string>+20%</string>
           <string>+30%</string>
           <string>+20%</string>
-          <string>-10% per 3Ã¢â‚¬ï¿½</string>
+          <string>-10% per 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>-20%</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
@@ -3621,12 +3621,12 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>ea6067a2-c338-468f-b12c-29d5f99e0c20</myID>
+    <myID>8848d244-eae2-413b-9a7a-28f9015d580d</myID>
     <name>Grapple Result</name>
     <description>Any hold shown remains in effect from round to round unless the target scores a higher percentage hold. Damage accrues until a hold is broken or until the holder elects to try for a different hold. The target may still inflict damage by lesser hold results shown after the double slashes (//). These might result in both opponents falling to the ground and continuing their grappling there. Note: If the opponent is stunned, a second attack may immediately be made, and the stunned opponent cannot counter for 1 round.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Ã¯Â»Â¿Ã¯Â»Â¿Ã¯Â»Â¿Dice Score</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Dice Score</name>
         <width>67</width>
         <row>
           <string>1-20</string>
@@ -3668,7 +3668,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>5ae2a3a4-468d-42ce-813a-13b8cb895736</myID>
+    <myID>b2114224-2bdb-49b6-9e20-df6f9f6987f4</myID>
     <name>Grapple Result Modifiers</name>
     <description>In each round of grappling combat there will be an attack and a counter. Any existing hold automatically goes first until broken. Once it is determined that a grappling attack succeeds, the percentile dice must be rolled again to find what hold is gained.</description>
     <column>
@@ -3676,9 +3676,9 @@
         <name>Reason</name>
         <width>230</width>
         <row>
-          <string>AttackerÃ¢â‚¬â„¢s dexterity, per point</string>
-          <string>AttackerÃ¢â‚¬Ëœs strength per point</string>
-          <string>AttackerÃ¢â‚¬Ëœs strength per 10% over 18</string>
+          <string>AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s dexterity, per point</string>
+          <string>AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“s strength per point</string>
+          <string>AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“s strength per 10% over 18</string>
           <string>Target slowed</string>
           <string>Target stunned</string>
           <string>Target helpless</string>
@@ -3718,7 +3718,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>e767174a-247e-476b-8c71-8c25c378d4c1</myID>
+    <myID>67546d2f-6212-41eb-b8ea-7e9c272b2541</myID>
     <name>Hear Noise</name>
     <description>Chances to hear noise when listening.</description>
     <column>
@@ -3752,12 +3752,12 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>b26f49ae-1687-4a96-a479-40eb788944b0</myID>
+    <myID>6f2fe909-9465-4eae-a691-0755828b72ac</myID>
     <name>Hit Modifiers</name>
     <description>* dex and shield do not apply. ** shield does not apply.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Circumstance</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Circumstance</name>
         <width>361</width>
         <row>
           <string>Protection From Evil</string>
@@ -3832,20 +3832,20 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>6b179ce9-de57-41ef-95c0-87242e2dbf6d</myID>
+    <myID>d92e6299-7e94-405c-8fb3-f7f095cd4ef7</myID>
     <name>Hurled Weapons and Missiles</name>
-    <description>* Heavy crossbows may not be used from horseback; only a footman can brace them correctly before firing. Ã¢â‚¬Â  Some specially-made bows (sold at special cost if at allÃ¢â‚¬â€�GMÃ¢â‚¬â„¢s discretion) permit the user to add his or her strength bonus to damage inflicted with the weapon. Otherwise the strength damage bonus with missile weapons is restricted to hurled weapons (axes, ham-mers, clubs, darts, javelins and spears). OSRIC, p. 29</description>
+    <description>* Heavy crossbows may not be used from horseback; only a footman can brace them correctly before firing. ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  Some specially-made bows (sold at special cost if at allÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½GMÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s discretion) permit the user to add his or her strength bonus to damage inflicted with the weapon. Otherwise the strength damage bonus with missile weapons is restricted to hurled weapons (axes, ham-mers, clubs, darts, javelins and spears). OSRIC, p. 29</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
         <name>Weapon type</name>
         <width>146</width>
         <row>
           <string>Axe, hand</string>
-          <string>Bow, long Ã¢â‚¬Â </string>
-          <string>Bow, short Ã¢â‚¬Â </string>
+          <string>Bow, long ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â </string>
+          <string>Bow, short ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â </string>
           <string>Club</string>
-          <string>Composite bow, long Ã¢â‚¬Â </string>
-          <string>Composite bow, short Ã¢â‚¬Â </string>
+          <string>Composite bow, long ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â </string>
+          <string>Composite bow, short ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â </string>
           <string>Crossbow, heavy*</string>
           <string>Crossbow, light</string>
           <string>Dagger</string>
@@ -3906,7 +3906,7 @@
           <string>1</string>
           <string>2</string>
           <string>2</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -3949,10 +3949,10 @@
           <string>12</string>
           <string>4</string>
           <string>1</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>5</string>
           <string>2</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>5</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
@@ -3980,7 +3980,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>21749b47-b4dd-4f04-93df-7aa234486368</myID>
+    <myID>d0a21608-e1aa-491c-9f0a-ead65a26d80e</myID>
     <name>Intelligence Chart</name>
     <description>Intelligence adjustments.</description>
     <column>
@@ -4034,7 +4034,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>c4de68bb-b1f5-487a-8868-53a8d5bb3dda</myID>
+    <myID>2b33611e-e9e2-495d-b949-1280a550eb40</myID>
     <name>Item Saves</name>
     <description>Saving throws for items. Source OSRIC, p372</description>
     <column>
@@ -4270,9 +4270,9 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>22dfd309-79f7-4a62-99b3-194964462bed</myID>
+    <myID>5e3536ab-309c-4c50-8ad0-49fae5f3df13</myID>
     <name>Light Sources</name>
-    <description>Duration, range of different light sources.* Illumination is from burning 1 pot (pint) of fine oil. ** Illumination is 1Ã¢â‚¬ï¿½ wide only and can be masked by shutter.</description>
+    <description>Duration, range of different light sources.* Illumination is from burning 1 pot (pint) of fine oil. ** Illumination is 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ wide only and can be masked by shutter.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
         <name>Light Source</name>
@@ -4292,10 +4292,10 @@
         <row>
           <string>40&apos;</string>
           <string>30&apos;</string>
-          <string>80Ã¢â‚¬â„¢*</string>
-          <string>10Ã¢â‚¬â„¢</string>
-          <string>15Ã¢â‚¬â„¢</string>
-          <string>20Ã¢â‚¬â„¢</string>
+          <string>80ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢*</string>
+          <string>10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢</string>
+          <string>15ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢</string>
+          <string>20ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
       <org.ost.main.MyClasses.ChartColumn>
@@ -4314,12 +4314,12 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>25d416c4-ae79-4fd2-97b0-62562ef7eb3e</myID>
+    <myID>f2548f25-4d3a-4839-aef5-92722c3fdbeb</myID>
     <name>Magic-User Experience</name>
     <description>Magic-User level progression. * Constitution-based hp adjustments no longer apply. Each level gained thereafter requires 375,000 experience points and grants +1 hit point. OSRIC, p. 16</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿level</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿level</name>
         <width>75</width>
         <row>
           <string>1</string>
@@ -4412,7 +4412,7 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>211d1bb8-4bd3-4d94-b776-db8518124ffb</myID>
+    <myID>1f4079be-5682-41cb-8a7c-f82062bc9fbc</myID>
     <name>Magic-User Matrix</name>
     <description>Magic-user to hit table. OSRIC, p.17</description>
     <column>
@@ -4662,7 +4662,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>958e7a96-0404-4ea1-9b2e-4f83c8d85d41</myID>
+    <myID>349f1fd4-b93a-4d92-88df-faef2f010a83</myID>
     <name>Magic-User Saves</name>
     <description>Saving throws for magic-users</description>
     <column>
@@ -4736,7 +4736,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>5f804582-4a56-458f-9495-fc417b37d406</myID>
+    <myID>0a288767-0588-47f7-8776-51ab7751cbf0</myID>
     <name>Magic-User Spell Acquisition</name>
     <description>Chance to know spells and min/max number</description>
     <column>
@@ -4783,7 +4783,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>fbe52f0a-ee7c-4a9c-9f4d-089666c27b97</myID>
+    <myID>98c03120-24f2-4ea9-b1b8-2e84aad250bb</myID>
     <name>Magic-User Spells Gained</name>
     <description>Magic-user spells gained per level.</description>
     <column>
@@ -5176,12 +5176,12 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>c2db56d4-f90a-4d97-8b79-f970f3a29bb9</myID>
+    <myID>374e318f-a476-487c-8a96-66863cf8b5fb</myID>
     <name>Melee Weapons</name>
     <description>Melee Weapon type versus Armor, Size, Space, Speed, Damage</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Weapon</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Weapon</name>
         <width>170</width>
         <row>
           <string>Awl pike</string>
@@ -5228,11 +5228,11 @@
           <string>Scimitar</string>
           <string>Spear</string>
           <string>Spetum</string>
-          <string>Ã¯Â»Â¿Sword, bastard</string>
-          <string>Ã¯Â»Â¿Sword, broad</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Sword, bastard</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Sword, broad</string>
           <string>Sword, long</string>
-          <string>Ã¯Â»Â¿Sword, short</string>
-          <string>Ã¯Â»Â¿Ã¯Â»Â¿Sword, two-handed</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Sword, short</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Sword, two-handed</string>
           <string>Trident</string>
           <string>Voulge</string>
         </row>
@@ -5300,14 +5300,14 @@
         <row>
           <string>18&apos;</string>
           <string>c. 4&apos;</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 5&apos;</string>
           <string>c. 6&apos;</string>
           <string>8&apos;+</string>
           <string>c. 5&apos;</string>
           <string>c. 3&apos;</string>
           <string>c. 15&quot;</string>
-          <string>c. 3Ã‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>8&apos;+</string>
           <string>8&apos;</string>
           <string>2&apos;+</string>
@@ -5323,15 +5323,15 @@
           <string>7&apos;+</string>
           <string>5&apos;+</string>
           <string>5&apos;+</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>8&apos;+</string>
           <string>c. 3&apos;-5&apos;</string>
           <string>c. 3&apos;</string>
           <string>c. 14&apos;</string>
           <string>10&apos;</string>
           <string>12&apos;</string>
-          <string>c. 2Ã‚Â½&apos;</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 4&apos;</string>
           <string>3&apos;-5&apos;</string>
           <string>7&apos;+</string>
@@ -5342,9 +5342,9 @@
           <string>c. 3&apos;</string>
           <string>5&apos;-13&apos;+</string>
           <string>8&apos;+</string>
-          <string>c. 4Ã‚Â½&apos;</string>
-          <string>c. 3Ã‚Â½&apos;</string>
-          <string>c. 3Ã‚Â½&apos;</string>
+          <string>c. 4ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 2&apos;</string>
           <string>c. 6&apos;</string>
           <string>4&apos;-8&apos;+</string>
@@ -5364,7 +5364,7 @@
           <string>3&apos;</string>
           <string>1&apos;-3&apos;</string>
           <string>1&apos;</string>
-          <string>3Ã‚Â½&apos;</string>
+          <string>3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>2&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -5381,7 +5381,7 @@
           <string>5&apos;</string>
           <string>5&apos;</string>
           <string>2&apos;</string>
-          <string>2Ã‚Â½&apos;</string>
+          <string>2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>1&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -6096,7 +6096,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>3d2f2b6f-f1b6-4e12-882c-3c3e74867696</myID>
+    <myID>c97e0fe9-e890-4e9f-a78b-69e51dca4c14</myID>
     <name>Missiles Range/Fire Rate</name>
     <description>Hurled weapons range and fire rates. Missiles are -5 at long range, -2 at medium.</description>
     <column>
@@ -6131,7 +6131,7 @@
           <string>2</string>
           <string>2</string>
           <string>1</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -6155,7 +6155,7 @@
           <string>8</string>
           <string>6</string>
           <string>1</string>
-          <string>1Ã‚Â½</string>
+          <string>1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>1</string>
           <string>2</string>
           <string>5</string>
@@ -6197,7 +6197,7 @@
           <string>24</string>
           <string>18</string>
           <string>3</string>
-          <string>4Ã‚Â½</string>
+          <string>4ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>3</string>
           <string>6</string>
           <string>20</string>
@@ -6209,7 +6209,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>fd655c9a-7387-441d-96a5-5b1a286d59af</myID>
+    <myID>fe9e785b-7ae2-4790-8abe-ef954aee4ba3</myID>
     <name>Monster Attack Matrix</name>
     <description>Attack matrix used for monsters or creatures.  Any + above 3 equals another HD, missiles are -5 at long range, -2 at medium. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -6987,7 +6987,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>27f76ae6-4e90-4dbf-9286-8562fc38aba3</myID>
+    <myID>3e071070-5843-48e0-a70f-e2ba40f54a82</myID>
     <name>Monster BaB Matrix</name>
     <description>Monster base attack bonuse. Used if using d20 mode in settings. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -7065,7 +7065,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>7b972fcd-399e-4cd5-9c7e-dd35e718fe21</myID>
+    <myID>f2c78a52-e8dd-4f36-b74f-438038cdfeda</myID>
     <name>Monster HD to Level</name>
     <description>Monster HD to Level Chart, OSRIC, p123</description>
     <column>
@@ -7129,7 +7129,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>c32a283d-2217-4fed-956f-f8d8f240a726</myID>
+    <myID>71220cb2-13dc-4e90-a430-3dbf4ee52dc2</myID>
     <name>Monster Saves</name>
     <description>Saving throws used for monster or creatures. *DO NOT DELETE OR RENAME THIS CHART*</description>
     <column>
@@ -7299,7 +7299,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>443ba832-6b98-4d57-bba6-8e9d4461a11e</myID>
+    <myID>23616e85-c3aa-4e5c-9d34-ffc9ff2da2d5</myID>
     <name>Monster THACO Matrix</name>
     <description>Monster THACOs. Used if using THACO attack in settings. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -7377,7 +7377,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>6aae848f-4185-42d0-ac6a-4df097e3cdd1</myID>
+    <myID>13355a9c-5577-423c-ae98-67debefe3310</myID>
     <name>Monster XP Value</name>
     <description>Experience value of monster based on HD, level and abilities.</description>
     <column>
@@ -7500,7 +7500,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>927ffec2-30e8-4d11-9270-4e57a2b16b2c</myID>
+    <myID>6db5b3ab-d629-4995-a151-aca08d74564e</myID>
     <name>Morale Check</name>
     <description>Morale Check modifiers, base is 50% +5% per HD with the listed adjustments. OSRIC, p.125</description>
     <column>
@@ -7540,20 +7540,20 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>bc6b89b9-bd3f-48af-ba01-b4d548eee553</myID>
+    <myID>18c11214-c39e-4442-8c70-cd614e3584a9</myID>
     <name>Overbear Attack Modifiers</name>
-    <description>Base chance to hit. Multiply attackerÃ¢â‚¬â„¢s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker can have either or both hands otherwise employed.</description>
+    <description>Base chance to hit. Multiply attackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker can have either or both hands otherwise employed.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
         <name>Reason</name>
         <width>181</width>
         <row>
-          <string>Ã¯Â»Â¿AttackerÃ¢â‚¬â„¢s dexterity, per point</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s dexterity, per point</string>
           <string>target armor leather or padded</string>
           <string>target armor chain, ring, scale</string>
           <string>target banded, plate, splint</string>
           <string>Target slowed/stunned</string>
-          <string>Target base move 3Ã¢â‚¬ï¿½ faster</string>
+          <string>Target base move 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ faster</string>
           <string>Target hasted</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
@@ -7566,7 +7566,7 @@
           <string>+20%</string>
           <string>+30%</string>
           <string>+20%</string>
-          <string>-10% per 3Ã¢â‚¬ï¿½</string>
+          <string>-10% per 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>-20%</string>
         </row>
       </org.ost.main.MyClasses.ChartColumn>
@@ -7574,7 +7574,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>d5584215-d5d9-473a-9dea-474a94bde23c</myID>
+    <myID>99a62223-3734-476e-b89b-0e5a67609a1e</myID>
     <name>Overbear Result Modifiers</name>
     <description>Once an opponent is overborne, some other form of combat MUST take place.</description>
     <column>
@@ -7616,7 +7616,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>ecaedfd1-149a-4286-a7c3-bf69b5a81110</myID>
+    <myID>3cd1300c-d8c4-42f9-b102-27f111784ccd</myID>
     <name>Overbear Results</name>
     <description>Once an opponent is overborne, some other form of combat MUST take place.</description>
     <column>
@@ -7660,7 +7660,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>6546a539-724f-4a81-96bf-2faeeef471e0</myID>
+    <myID>3d069be8-a1a1-4753-9270-b3151e4403c8</myID>
     <name>Paladin Saves</name>
     <description>Paladin saving throw table. OSRIC, p.19</description>
     <column>
@@ -7764,7 +7764,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>08a40756-2f4a-47e3-883e-aa8cf5221759</myID>
+    <myID>9ea66dd2-0f8c-4d53-a083-72c98ed1b4f4</myID>
     <name>Poison, Ingestive</name>
     <description>* Saving throw at +4, chance of tasting/smelling/seeing poison 80%. ** Saving throw at +3, chance of tasting/smelling/seeing poison 65%. *** Saving throw at +2, chance of tasting/smelling/seeing poison 40%. **** Saving throw at + 1, chance of tasting/smelling/seeing poison 15%.</description>
     <column>
@@ -7827,7 +7827,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>d56fef21-3d79-4ab2-a8a4-27d786ec7383</myID>
+    <myID>da3a754d-504f-4740-aa27-1ff1b9abebf0</myID>
     <name>Poison, Insinuative</name>
     <description>* Saving throw at +4, chance of tasting/smelling/seeing poison 80%. ** Saving throw at +3, chance of tasting/smelling/seeing poison 65%. *** Saving throw at +2, chance of tasting/smelling/seeing poison 40%. **** Saving throw at + 1, chance of tasting/smelling/seeing poison 15%.</description>
     <column>
@@ -7885,7 +7885,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>ef90507f-551a-44a3-8627-9738b9931b22</myID>
+    <myID>80b1e4ec-dc14-4281-bb79-f1f314db7867</myID>
     <name>Pummel Attack Modifier</name>
     <description>The base score on percentile dice is opponent AC value times 10 to arrive at a percentage chance to hit, i.e. AC 10 = 100%. AC 9 = 90%. all the way to AC ratings of 0 and minus numbers which indicate no chance or a negative chance to score a hit. Magical protections such as rings, bracers, cloaks, etc. do not count as AC, so ignore them.</description>
     <column>
@@ -7893,9 +7893,9 @@
         <name>Reason</name>
         <width>425</width>
         <row>
-          <string>Ã¯Â»Â¿AttackerÃ¢â‚¬â„¢s dexterity, per point</string>
-          <string>AttackerÃ¢â‚¬â„¢s strength, per point over 15</string>
-          <string>AttackerÃ¢â‚¬â„¢s AC, per point (with negative AC being treated as positive)</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s dexterity, per point</string>
+          <string>AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s strength, per point over 15</string>
+          <string>AttackerÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s AC, per point (with negative AC being treated as positive)</string>
           <string>Target slowed</string>
           <string>Target Stunned</string>
           <string>Target prone w/o shield or ready weapon and/or helpless</string>
@@ -7921,7 +7921,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>810b0d2a-d0d8-4656-b469-c96466560f56</myID>
+    <myID>d474e9f6-b206-472d-931f-8be937c89fe7</myID>
     <name>Pummel Result</name>
     <description>* Series ends, determination of next strike must be.made. ** Opponent unable to attack for 1 full round.</description>
     <column>
@@ -7939,7 +7939,7 @@
         </row>
       </org.ost.main.MyClasses.ChartColumn>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Result</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Result</name>
         <width>251</width>
         <row>
           <string>blow misses, opponent may counter</string>
@@ -7968,7 +7968,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>d00a0e13-0a19-46d7-b0ca-335b7931b22e</myID>
+    <myID>6be80466-7021-42da-8ef6-c9aa611f04e1</myID>
     <name>Pummel Results Modifier</name>
     <description>In each round of weaponless melee, there will be two pummeling attacks, and possibly several blows per attack. The attacker determines if a strike is successful, and then whether or not it does any damage and how much, if any. Percentile dice are rolled, and the score is modified as shown below.</description>
     <column>
@@ -8020,12 +8020,12 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>4aaa12a9-2529-4c68-9494-846c18a00260</myID>
+    <myID>c4bc47e7-38ac-44d3-81fb-a1cef4e1a91a</myID>
     <name>Ranged Weapons</name>
     <description>Ranged Weapons vrs Armor, Rate, Range, Damage.</description>
     <column>
       <org.ost.main.MyClasses.ChartColumn>
-        <name>Ã¯Â»Â¿Weapon</name>
+        <name>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¯ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¿Weapon</name>
         <width>197</width>
         <row>
           <string>Axe, hand</string>
@@ -8076,7 +8076,7 @@
           <string>2</string>
           <string>2</string>
           <string>1</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -8100,7 +8100,7 @@
           <string>8</string>
           <string>6</string>
           <string>1</string>
-          <string>1Ã‚Â½</string>
+          <string>1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>1</string>
           <string>2</string>
           <string>5</string>
@@ -8142,7 +8142,7 @@
           <string>24</string>
           <string>18</string>
           <string>3</string>
-          <string>4Ã‚Â½</string>
+          <string>4ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>3</string>
           <string>6</string>
           <string>20</string>
@@ -8385,7 +8385,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>f3531d16-cd1c-4b87-9563-60621e930afe</myID>
+    <myID>4a75a953-39f0-4ba4-999e-27b20ffb1807</myID>
     <name>Ranger Matrix</name>
     <description>Ranger to hit table, OSRIC, p. 22</description>
     <column>
@@ -8965,7 +8965,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>30455f84-ced8-427e-ae36-e29818773871</myID>
+    <myID>5b41187f-759d-42ce-8622-18eeffcc6cae</myID>
     <name>Ranger Saves</name>
     <description>Ranger saving throw table, OSRIC, p. 22</description>
     <column>
@@ -9069,7 +9069,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>0cb7d46d-5fe9-4f86-a111-06ab58f24044</myID>
+    <myID>072c849f-62ce-4a4f-92db-c183710070c2</myID>
     <name>Spell Recovery</name>
     <description>Once rested, magic-users must memorize their spells and clerics must pray and meditate. Allow 15 minutes of game time for memorization or prayer for each spell level. Such activity requires a mind rested by a good sleep and nourished by the body</description>
     <column>
@@ -9119,7 +9119,7 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>5227843e-b11f-46e6-ab14-713327a25dc5</myID>
+    <myID>7aa8383d-d0e9-4a94-bba7-3a279cf94cef</myID>
     <name>Strength Chart</name>
     <description>Adjustments for high strength scores, OSRIC p 359</description>
     <column>
@@ -9253,7 +9253,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>82d80ee5-7b12-4af6-b14f-1473d851df5e</myID>
+    <myID>3d497f43-a563-4e79-864f-07ec34d28e3d</myID>
     <name>Thief Backstab</name>
     <description>Thieves make their backstab attack at +4 to hit. Do not include bonus from strength or magic weapons when multiplying damage.</description>
     <column>
@@ -9281,7 +9281,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>54eb8b54-1594-4a4e-8334-65f3b57033ee</myID>
+    <myID>9b598e3f-ee6b-4fac-be80-00a2687052d6</myID>
     <name>Thief Matrix</name>
     <description>Thief to hit table, OSRIC, p.25</description>
     <column>
@@ -9553,7 +9553,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>02d387c4-6c0e-4993-8d11-f431514d301e</myID>
+    <myID>b05e572b-a333-4ee9-b0c2-bc239c4b1bdf</myID>
     <name>Thief Saves</name>
     <description>Saving Throws for thief.</description>
     <column>
@@ -9633,7 +9633,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>7500dd85-fcdc-480e-bb02-ef4d27bacbdc</myID>
+    <myID>52514e00-e4be-4f13-bff2-7149976da8ab</myID>
     <name>Thief Skills</name>
     <description>Base chance to perform thief abilities for each level.</description>
     <column>
@@ -9911,7 +9911,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>58ba028e-585a-4dc4-951b-b122dc0d09ff</myID>
+    <myID>f2f752b7-d92b-473a-aea5-bde0a0e3b6e9</myID>
     <name>Weapon I</name>
     <description>* Long-hafted, pointed weapons, such as the spear, lance (when used dismounted), pole arm, or trident, inflict double damage when set to receive a charge and the foe actually charges. The lance inflicts double damage when used by a character riding a charging heavy warhorse or similar animal; if the attacker is mounted on a normal riding or cavalry horse, the damage should be reduced. OSRIC, p. 29</description>
     <column>
@@ -10040,7 +10040,7 @@
           <string>2 (per dozen)</string>
           <string>3</string>
           <string>1</string>
-          <string>Ã‚Â½</string>
+          <string>ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½</string>
           <string>10</string>
           <string>4</string>
           <string>18</string>
@@ -10109,7 +10109,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>5d2bd180-f32b-4071-8e2d-84113be94deb</myID>
+    <myID>d1afeb52-a648-4327-85f2-c5f71af36cd0</myID>
     <name>Weapon II</name>
     <description>Weapons damage, space, weight stats.</description>
     <column>
@@ -10246,7 +10246,7 @@
           <string>NA</string>
           <string>18&apos;</string>
           <string>c. 4&apos;</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 5&apos;</string>
           <string>c. 6&apos;</string>
           <string>8&apos;+</string>
@@ -10254,7 +10254,7 @@
           <string>c. 3&apos;</string>
           <string>c. 15&quot;</string>
           <string>NA</string>
-          <string>c. 3Ã‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>8&apos;+</string>
           <string>8&apos;</string>
           <string>2&apos;+</string>
@@ -10270,15 +10270,15 @@
           <string>7&apos;+</string>
           <string>5&apos;+</string>
           <string>5&apos;+</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>8&apos;+</string>
           <string>NA</string>
           <string>c. 3&apos;</string>
           <string>c. 14&apos;</string>
           <string>10&apos;</string>
           <string>12&apos;</string>
-          <string>c. 2Ã‚Â½&apos;</string>
-          <string>c. 1Ã‚Â½&apos;</string>
+          <string>c. 2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 4&apos;</string>
           <string>3&apos;-5&apos;</string>
           <string>7&apos;+</string>
@@ -10293,9 +10293,9 @@
           <string>NA</string>
           <string>5&apos;-13&apos;+</string>
           <string>8&apos;+</string>
-          <string>c. 4Ã‚Â½&apos;</string>
-          <string>c. 3Ã‚Â½&apos;</string>
-          <string>c. 3Ã‚Â½&apos;</string>
+          <string>c. 4ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
+          <string>c. 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>c. 2&apos;</string>
           <string>c. 6&apos;</string>
           <string>4&apos;-8&apos;+</string>
@@ -10317,7 +10317,7 @@
           <string>1&apos;-3&apos;</string>
           <string>1&apos;</string>
           <string>see below</string>
-          <string>3Ã‚Â½&apos;</string>
+          <string>3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>2&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -10334,7 +10334,7 @@
           <string>5&apos;</string>
           <string>5&apos;</string>
           <string>2&apos;</string>
-          <string>2Ã‚Â½&apos;</string>
+          <string>2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½&apos;</string>
           <string>see below</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -10558,7 +10558,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>cb199d9f-58db-4a0c-9934-bb0d3b279eb4</myID>
+    <myID>010b4f47-9f02-41d3-8d70-3fe089cfd619</myID>
     <name>Wisdom Bonus Spells</name>
     <description>Additional spells granted for high wisdom.</description>
     <column>
@@ -10617,7 +10617,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>70c5e494-47ca-46a6-9314-febf79b61daa</myID>
+    <myID>a708950b-bb72-4a7b-ae7e-b346b46ae546</myID>
     <name>Wisdom Chart</name>
     <description>Wisdom ability score adjustments.</description>
     <column>

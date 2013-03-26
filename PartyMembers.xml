@@ -112,16 +112,16 @@ health adjusted (+6)
     <fightingList/>
     <myClass>
       <org.ost.main.MyClasses.PlayerClass_-PCClass>
-        <name>thief</name>
-        <classID>d8c06682-f801-4fda-8a9e-f5ea84b78b53</classID>
+        <name>fighter</name>
+        <classID>0ee07238-8f71-40c9-80ff-164af4e1b11f</classID>
         <experience>0</experience>
         <level>1</level>
         <primaryClass>false</primaryClass>
         <outer-class reference="../../.."/>
       </org.ost.main.MyClasses.PlayerClass_-PCClass>
       <org.ost.main.MyClasses.PlayerClass_-PCClass>
-        <name>fighter</name>
-        <classID>0ee07238-8f71-40c9-80ff-164af4e1b11f</classID>
+        <name>thief</name>
+        <classID>d8c06682-f801-4fda-8a9e-f5ea84b78b53</classID>
         <experience>0</experience>
         <level>1</level>
         <primaryClass>false</primaryClass>
@@ -243,7 +243,8 @@ health adjusted (+6)
     <gear/>
     <pcClass>Cleric</pcClass>
     <pcLevel>2</pcLevel>
-    <notes>
+    <notes>Bob is an amazing fighter.
+
 Str:8
 Dex:8
 Con:8
@@ -252,10 +253,10 @@ Wis:8
 Chr:8
 
 Equipment:
--
+-Backpack filled with pipeweed.
 
 Magic Items:
--
+-Pipe of smoking
 
 
 </notes>
@@ -509,11 +510,11 @@ health adjusted (-2)
       </org.ost.main.MyClasses.AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>
@@ -657,11 +658,11 @@ health adjusted (-2)
       </org.ost.main.MyClasses.AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>
@@ -812,11 +813,11 @@ health adjusted (-26)
       </org.ost.main.MyClasses.AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>

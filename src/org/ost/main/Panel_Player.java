@@ -6,7 +6,25 @@
 
 package org.ost.main;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
+
+import org.ost.main.MyClasses.AbilityScoreClass;
+import org.ost.main.MyClasses.AbilityStatClass;
 import org.ost.main.MyClasses.PlayerClass;
+import org.ost.main.MyClasses.SkillsClass;
+
 import static org.ost.main.MyClasses.MyStatics.*;
 
 /**
@@ -22,31 +40,286 @@ public class Panel_Player extends javax.swing.JPanel {
 		this.ost = ost;
 		this.pc = oPlayer;
 		initComponents();
-		
-		updatePanel();
+
+		// for some reason cellrenderer makes the cells align left, default
+		// for int is right, so just cell render them all so they are all left
+		// TODO figure out why it does that.
+		// make that THACO cell red
+		for (int i = 0; i < pcCombatMatrixTable.getColumnCount(); i++) {
+			TableColumn thacoCol = pcCombatMatrixTable.getColumnModel()
+					.getColumn(i);
+			if (i == 10)
+				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
+						Color.black));
+			else
+				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
+						Color.black));
+		}
+		// this is to make the headers align left to match the numbers
+		TableCellRenderer rendererFromHeader = pcCombatMatrixTable
+				.getTableHeader().getDefaultRenderer();
+		JLabel headerLabel = (JLabel) rendererFromHeader;
+		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		//---
+
+		updatePanel(oPlayer);
 
 	}
 
-	private void updatePanel() {
+	/**
+	 * update Panel_Player with player data
+	 * 
+	 * @param oPlayer
+	 */
+	public void updatePanel(PlayerClass oPlayer) {
 		// TODO Auto-generated method stub
-		
+
+		// added this incase we updated panel
+		pc = oPlayer;
+		// portrait
+
 		// details
 		pcCharacterNameLabel.setText(pc.getName());
 		pcPlayerNameLabel.setText(pc.getNamePlayer());
 		pcAlignmentLabel.setText(ALIGNMENTS[pc.getMyAlignmentType()]);
+		pcRaceLabel.setText(pc.getMyRaceName(ost.raceList));
 		pcClassNameLabel.setText(pc.getMyClassName(ost.characterClassList));
 		pcClassLevelLabel.setText(pc.getMyLevelName(ost.characterClassList));
-		pcExperienceTotalsLabel.setText(pc.getMyExperienceName(ost.characterClassList));
+		pcExperienceTotalsLabel.setText(pc
+				.getMyExperienceName(ost.characterClassList));
 		pcMoveBaseLabel.setText(pc.getMoveRate());
-		
+
 		// abilties
-		
+		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
+				.getAllAbilityScoreAdjustments(ost.characterClassList,
+						ost.extraAbilitiesList, ost.raceList);
+
+		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
+			AbilityScoreClass aJ = abilityScoresAdj.get(i);
+			AbilityScoreClass aS = pc.getMyAbilityScores().get(i);
+			int abilityTotal = aS.getScore() + aJ.getScore();
+			int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+
+			if (abilityTotal >= 0) {
+				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
+						abilityTotal);
+				switch (i) {
+				case ABILITY_CHARISMA:
+					pcCharismaLabel.setText(String.format("%d", abilityTotal));
+					pcLoyaltyLabel.setText(String.format("%d",
+							aStat.charisma.loyaltyBase));
+					pcMaxHenchmenLabel.setText(String.format("%d",
+							aStat.charisma.maxNumberHenchmen));
+					pcReactionAdjCharismaLabel.setText(String.format("%d",
+							aStat.charisma.reactionAdjustment));
+					break;
+				case ABILITY_COMELINESS:
+
+					break;
+				case ABILITY_CONSTITUTION:
+					pcConstitutionLabel.setText(String.format("%d",
+							abilityTotal));
+					//TODO test for fighter/barb features in class and show just that
+					pcHPAdjLabel.setText(String.format("%d",
+							aStat.consitution.hitpointAdjustment));
+					pcResurrectionSurvivalLabel.setText(String.format("%d",
+							aStat.consitution.resurrectionSurvival));
+					pcSystemShockLabel.setText(String.format("%d",
+							aStat.consitution.systemShock));
+					break;
+				case ABILITY_DEXTERITY:
+					pcDexterityLabel.setText(String.format("%d", abilityTotal));
+					pcMissileAdjLabel.setText(String.format("%d",
+							aStat.dexterity.attackAdjustment));
+					pcReactionAdjLabel.setText(String.format("%d",
+							aStat.dexterity.reactionAdjustment));
+					//TODO sort out if they get barb bonuses
+					pcDefenseAdjLabel.setText(String.format("%d",
+							aStat.dexterity.defensiveAdjustment));
+					break;
+				case ABILITY_INTELLIGENCE:
+					pcIntelligenceLabel.setText(String.format("%d",
+							abilityTotal));
+					//bonus arcane spells
+					String magicSpells = "";
+					for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+						magicSpells = magicSpells
+								+ String.format("L%dX%d%s", ii + 1,
+										aStat.intelligence.bonusSpells[ii],
+										ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
+												: "");
+					}
+					pcBonusArcaneSpellsLabel.setText(String.format("%s",
+							magicSpells));
+					pcKnowSpellLabel.setText(String.format("%d",
+							aStat.intelligence.knowSpell));
+					pcLanguagesLabel.setText(String.format("%d",
+							aStat.intelligence.languages));
+					pcMaxSpellsLabel.setText(String.format("%d",
+							aStat.intelligence.maxSpells));
+					pcMinSpellsLabel.setText(String.format("%d",
+							aStat.intelligence.minSpells));
+					break;
+				case ABILITY_STRENGTH:
+					pcStrengthLabel.setText(String.format("%d", abilityTotal));
+					//TODO sort out percentile strength if can have
+					pcPercentileStrLabel.setText(String.format("%d",
+							abilityPercentTotal));
+					pcBendBarsLabel.setText(String.format("%d",
+							aStat.strength.bendBars));
+					pcHitAdjLabel.setText(String.format("%d",
+							aStat.strength.hitProbability));
+					pcDmgAdjLabel.setText(String.format("%d",
+							aStat.strength.damageAdjustment));
+					pcOpenDoorLabel.setText(String.format("1-%d (%dD%d)",
+							aStat.strength.minOpenDoor,
+							aStat.strength.numDiceOpenDoor,
+							aStat.strength.sizeDiceOpenDoor));
+					pcWeightAllowanceLabel.setText(String.format("%d",
+							aStat.strength.weightAllowance));
+					break;
+				case ABILITY_WISDOM:
+					pcWisdomLabel.setText(String.format("%d", abilityTotal));
+					//divine spells
+					String clericSpells = "";
+					for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+						clericSpells = clericSpells
+								+ String.format("L%dX%d%s", ii + 1,
+										aStat.intelligence.bonusSpells[ii],
+										ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
+												: "");
+					}
+					pcBonusSpellsDivineLabel.setText(String.format("%s",
+							clericSpells));
+					pcMagicalAdjLabel.setText(String.format("%d",
+							aStat.wisdom.magicalAdjustment));
+					pcSpellFailureLabel.setText(String.format("%d",
+							aStat.wisdom.spellFailure));
+					break;
+
+				default:
+					// error
+					ost.dprint("Unknown ability type in Pnale_Player updatePanel()\n");
+					break;
+				}
+			} // else abilityTotal was smaller than 0
+		}
+
 		// saves
-		
+		ArrayList<Integer> bestSaves = pc.getAllSaves(ost.characterClassList,
+				ost.extraAbilitiesList, ost.raceList);
+		pc.setMySaves(bestSaves);
+
+		ArrayList<Integer> bestSaveAdj = pc.getAllSaveAdjustments(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+		pc.setMySaveAdjustments(bestSaveAdj);
+
+		for (int i = 0; i < pc.getMySaves().size(); i++) {
+			int aB = pc.getMySaves().get(i);
+			int aJ = pc.getMySaveAdjustments().get(i);
+			switch (i) {
+			case SAVE_BREATH:
+				pcSaveBreathLabel.setText(String.format("%d", (aB - aJ)));
+				pcSaveBreathLabel
+						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				break;
+			case SAVE_DEATH:
+				pcSavePoisonLabel.setText(String.format("%d", (aB - aJ)));
+				pcSavePoisonLabel
+						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				break;
+			case SAVE_POLY:
+				pcSavePolyLabel.setText(String.format("%d", (aB - aJ)));
+				pcSavePolyLabel.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				break;
+			case SAVE_ROD:
+				pcSaveRodLabel.setText(String.format("%d", (aB - aJ)));
+				pcSaveRodLabel.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				break;
+			case SAVE_SPELL:
+				pcSaveSpellsLabel.setText(String.format("%d", (aB - aJ)));
+				pcSaveSpellsLabel
+						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				break;
+
+			default:
+				ost.dprint("Unknown save type in Panel_Player updatePanel()\n");
+				break;
+			}
+
+		}
+
+		// skills?
+		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+
+		skillsPanel.removeAll();
+		for (int i = 0; i < skillsBase.size(); i++) {
+			JPanel skills = new JPanel(new GridLayout(2, 0, 1, 1));
+			SkillsClass tJ = skillsAdj.get(i);
+			SkillsClass tS = skillsBase.get(i);
+			int finalSkill = tS.getScore() + tJ.getScore();
+			if (finalSkill != 0) {
+				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
+						+ tJ.getScore();
+				JLabel name = new JLabel(tS.getAbbrev());
+				name.setToolTipText(tooltip);
+				JLabel value = new JLabel(String.format("%d%%", finalSkill));
+				value.setToolTipText(tooltip);
+
+				skills.add(name);
+				skills.add(value);
+				skillsPanel.add(skills);
+			}
+		}
+
 		// combat
-		
-		//portrait
-		
+
+		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
+		pcMaxHPLabel.setText(String.format("%d", pc.getHpMax()));
+		int iTHACO = pc.getTHACO(ost.characterClassList,
+				ost.extraAbilitiesList, ost.raceList);
+		pcTHACOLabel.setText(String.format("%d", iTHACO));
+		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
+				+ iTHACO);
+
+		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
+			switch (i) {
+			case AC_NORMAL:
+				pcArmorClassLabel.setText(String.format("%s", pc
+						.getArmorRatings().get(i)));
+				pcArmorClassLabel.setToolTipText(AC_NAMES[i]);
+				break;
+			case AC_REAR:
+				pcArmorClassRearLabel.setText(String.format("%s", pc
+						.getArmorRatings().get(i)));
+				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i]);
+				break;
+			case AC_SHIELDLESS:
+				pcArmorClassShieldlessLabel.setText(String.format("%s", pc
+						.getArmorRatings().get(i)));
+				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i]);
+				break;
+
+			default:
+				ost.dprint("Unknown AC type in Panel_Player updatePanel()\n");
+				break;
+			}
+		}
+
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		pcCombatMatrixTable.getTableHeader().setFont(fFont);
+		pcCombatMatrixTable.getTableHeader().setBackground(Color.yellow);
+
+		int attackList[] = pc.getMatrix(ost.characterClassList,
+				ost.extraAbilitiesList, ost.raceList);
+
+		for (int i = 0; i < attackList.length; i++) {
+			pcCombatMatrixTable.setValueAt(attackList[i], 0, i);
+		}
+
 	}
 
 	/** This method is called from within the constructor to
@@ -75,9 +348,8 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcMoveBaseLabel = new javax.swing.JLabel();
 		jLabel6 = new javax.swing.JLabel();
 		pcExperienceTotalsLabel = new javax.swing.JLabel();
-		portraitPanel = new javax.swing.JPanel();
 		AbilitiesPanel = new javax.swing.JPanel();
-		jLabel15 = new javax.swing.JLabel();
+		pcStrengthLabel = new javax.swing.JLabel();
 		jLabel21 = new javax.swing.JLabel();
 		pcPercentileStrLabel = new javax.swing.JLabel();
 		jLabel28 = new javax.swing.JLabel();
@@ -88,7 +360,7 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcOpenDoorLabel = new javax.swing.JLabel();
 		jLabel34 = new javax.swing.JLabel();
 		pcBendBarsLabel = new javax.swing.JLabel();
-		jLabel18 = new javax.swing.JLabel();
+		pcDexterityLabel = new javax.swing.JLabel();
 		jLabel24 = new javax.swing.JLabel();
 		jLabel52 = new javax.swing.JLabel();
 		pcReactionAdjLabel = new javax.swing.JLabel();
@@ -96,7 +368,7 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcMissileAdjLabel = new javax.swing.JLabel();
 		jLabel56 = new javax.swing.JLabel();
 		pcDefenseAdjLabel = new javax.swing.JLabel();
-		jLabel19 = new javax.swing.JLabel();
+		pcConstitutionLabel = new javax.swing.JLabel();
 		jLabel25 = new javax.swing.JLabel();
 		jLabel58 = new javax.swing.JLabel();
 		pcHPAdjLabel = new javax.swing.JLabel();
@@ -104,16 +376,16 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcSystemShockLabel = new javax.swing.JLabel();
 		jLabel62 = new javax.swing.JLabel();
 		pcResurrectionSurvivalLabel = new javax.swing.JLabel();
-		jLabel20 = new javax.swing.JLabel();
+		pcCharismaLabel = new javax.swing.JLabel();
 		jLabel26 = new javax.swing.JLabel();
 		jLabel64 = new javax.swing.JLabel();
 		pcMaxHenchmenLabel = new javax.swing.JLabel();
 		jLabel66 = new javax.swing.JLabel();
 		pcLoyaltyLabel = new javax.swing.JLabel();
 		jLabel68 = new javax.swing.JLabel();
-		jLabel69 = new javax.swing.JLabel();
-		jLabel16 = new javax.swing.JLabel();
-		jLabel17 = new javax.swing.JLabel();
+		pcReactionAdjCharismaLabel = new javax.swing.JLabel();
+		pcIntelligenceLabel = new javax.swing.JLabel();
+		pcWisdomLabel = new javax.swing.JLabel();
 		jLabel22 = new javax.swing.JLabel();
 		jLabel36 = new javax.swing.JLabel();
 		pcLanguagesLabel = new javax.swing.JLabel();
@@ -132,6 +404,8 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcSpellFailureLabel = new javax.swing.JLabel();
 		jLabel50 = new javax.swing.JLabel();
 		pcBonusSpellsDivineLabel = new javax.swing.JLabel();
+		jLabel49 = new javax.swing.JLabel();
+		pcWeightAllowanceLabel = new javax.swing.JLabel();
 		savesPanel = new javax.swing.JPanel();
 		jLabel29 = new javax.swing.JLabel();
 		pcArmorClassLabel = new javax.swing.JLabel();
@@ -158,6 +432,7 @@ public class Panel_Player extends javax.swing.JPanel {
 		jLabel39 = new javax.swing.JLabel();
 		jLabel41 = new javax.swing.JLabel();
 		jLabel43 = new javax.swing.JLabel();
+		skillsPanel = new javax.swing.JPanel();
 
 		setBackground(new java.awt.Color(255, 204, 153));
 		setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -271,6 +546,8 @@ public class Panel_Player extends javax.swing.JPanel {
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
 																				pcExperienceTotalsLabel)))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
@@ -278,8 +555,6 @@ public class Panel_Player extends javax.swing.JPanel {
 														.addGroup(
 																detailsPanelLayout
 																		.createSequentialGroup()
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
 																				jLabel13)
 																		.addPreferredGap(
@@ -289,40 +564,33 @@ public class Panel_Player extends javax.swing.JPanel {
 														.addGroup(
 																detailsPanelLayout
 																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel9)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addGroup(
-																				detailsPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addGroup(
-																								detailsPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												jLabel9)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcRaceLabel))
-																						.addGroup(
-																								detailsPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												jLabel7)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcClassLevelLabel))
-																						.addGroup(
-																								detailsPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												jLabel1)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcPlayerNameLabel)))))
-										.addContainerGap(162, Short.MAX_VALUE)));
+																		.addComponent(
+																				pcRaceLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel7)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcClassLevelLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel1)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcPlayerNameLabel)))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 		detailsPanelLayout
 				.setVerticalGroup(detailsPanelLayout
 						.createParallelGroup(
@@ -333,96 +601,82 @@ public class Panel_Player extends javax.swing.JPanel {
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel3)
+																javax.swing.GroupLayout.Alignment.LEADING)
 														.addComponent(
-																pcCharacterNameLabel)
-														.addComponent(jLabel1)
+																pcCharacterNameLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING)
 														.addComponent(
-																pcPlayerNameLabel))
+																jLabel3,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																jLabel1,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcPlayerNameLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																jLabel5,
 																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addGroup(
-																				detailsPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.BASELINE)
-																						.addComponent(
-																								jLabel5)
-																						.addComponent(
-																								pcClassNameLabel))
-																		.addGap(41,
-																				41,
-																				41))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addGroup(
-																				detailsPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.BASELINE)
-																						.addComponent(
-																								jLabel7)
-																						.addComponent(
-																								pcClassLevelLabel))
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addGroup(
-																				detailsPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.BASELINE)
-																						.addComponent(
-																								jLabel9)
-																						.addComponent(
-																								pcRaceLabel)
-																						.addComponent(
-																								jLabel6)
-																						.addComponent(
-																								pcExperienceTotalsLabel))
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+														.addComponent(
+																pcClassNameLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																jLabel7,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcClassLevelLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel13)
+																javax.swing.GroupLayout.Alignment.LEADING)
 														.addComponent(
-																pcMoveBaseLabel)
-														.addComponent(jLabel11)
+																jLabel6,
+																javax.swing.GroupLayout.Alignment.TRAILING)
 														.addComponent(
-																pcAlignmentLabel))
-										.addContainerGap(60, Short.MAX_VALUE)));
-
-		portraitPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
-				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Portrait",
-				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-				javax.swing.border.TitledBorder.DEFAULT_POSITION,
-				new java.awt.Font("Segoe UI", 0, 10)));
-
-		javax.swing.GroupLayout portraitPanelLayout = new javax.swing.GroupLayout(
-				portraitPanel);
-		portraitPanel.setLayout(portraitPanelLayout);
-		portraitPanelLayout.setHorizontalGroup(portraitPanelLayout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGap(0, 282, Short.MAX_VALUE));
-		portraitPanelLayout.setVerticalGroup(portraitPanelLayout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGap(0, 181, Short.MAX_VALUE));
+																pcExperienceTotalsLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcRaceLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																jLabel9,
+																javax.swing.GroupLayout.Alignment.TRAILING))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																jLabel11,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcAlignmentLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																jLabel13,
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcMoveBaseLabel,
+																javax.swing.GroupLayout.Alignment.TRAILING))
+										.addContainerGap(48, Short.MAX_VALUE)));
 
 		AbilitiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Abilities"));
 
-		jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel15.setText("00");
+		pcStrengthLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcStrengthLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcStrengthLabel.setText("00");
 
 		jLabel21.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		jLabel21.setText("Str");
@@ -457,9 +711,9 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcBendBarsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcBendBarsLabel.setText("999");
 
-		jLabel18.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel18.setText("00");
+		pcDexterityLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcDexterityLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcDexterityLabel.setText("00");
 
 		jLabel24.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		jLabel24.setText("Dex");
@@ -482,9 +736,9 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcDefenseAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcDefenseAdjLabel.setText("99");
 
-		jLabel19.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel19.setText("00");
+		pcConstitutionLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcConstitutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcConstitutionLabel.setText("00");
 
 		jLabel25.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		jLabel25.setText("Con");
@@ -508,9 +762,9 @@ public class Panel_Player extends javax.swing.JPanel {
 				.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcResurrectionSurvivalLabel.setText("999");
 
-		jLabel20.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel20.setText("00");
+		pcCharismaLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcCharismaLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcCharismaLabel.setText("00");
 
 		jLabel26.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		jLabel26.setText("Chr");
@@ -530,16 +784,17 @@ public class Panel_Player extends javax.swing.JPanel {
 		jLabel68.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel68.setText("Reaction Adj");
 
-		jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel69.setText("999");
+		pcReactionAdjCharismaLabel
+				.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcReactionAdjCharismaLabel.setText("999");
 
-		jLabel16.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel16.setText("00");
+		pcIntelligenceLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcIntelligenceLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcIntelligenceLabel.setText("00");
 
-		jLabel17.setBackground(new java.awt.Color(255, 255, 255));
-		jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		jLabel17.setText("00");
+		pcWisdomLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcWisdomLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcWisdomLabel.setText("00");
 
 		jLabel22.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		jLabel22.setText("Int");
@@ -597,6 +852,13 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcBonusSpellsDivineLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
 		pcBonusSpellsDivineLabel.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0");
 
+		jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel49.setText("Weight");
+		jLabel49.setToolTipText("Bend Bars/Lift Gates");
+
+		pcWeightAllowanceLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcWeightAllowanceLabel.setText("999");
+
 		javax.swing.GroupLayout AbilitiesPanelLayout = new javax.swing.GroupLayout(
 				AbilitiesPanel);
 		AbilitiesPanel.setLayout(AbilitiesPanelLayout);
@@ -616,7 +878,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																AbilitiesPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				jLabel15)
+																				pcStrengthLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
@@ -657,14 +919,19 @@ public class Panel_Player extends javax.swing.JPanel {
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
 																				pcBendBarsLabel)
-																		.addGap(215,
-																				215,
-																				215))
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel49)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcWeightAllowanceLabel))
 														.addGroup(
 																AbilitiesPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				jLabel18)
+																				pcDexterityLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
@@ -697,7 +964,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																AbilitiesPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				jLabel19)
+																				pcConstitutionLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
@@ -730,7 +997,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																AbilitiesPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				jLabel20)
+																				pcCharismaLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
@@ -758,7 +1025,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addComponent(
-																				jLabel69))
+																				pcReactionAdjCharismaLabel))
 														.addGroup(
 																AbilitiesPanelLayout
 																		.createSequentialGroup()
@@ -767,9 +1034,9 @@ public class Panel_Player extends javax.swing.JPanel {
 																						.createParallelGroup(
 																								javax.swing.GroupLayout.Alignment.LEADING)
 																						.addComponent(
-																								jLabel16)
+																								pcIntelligenceLabel)
 																						.addComponent(
-																								jLabel17))
+																								pcWisdomLabel))
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																		.addGroup(
@@ -851,9 +1118,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
 																												pcBonusSpellsDivineLabel)))))
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
+										.addContainerGap(29, Short.MAX_VALUE)));
 		AbilitiesPanelLayout
 				.setVerticalGroup(AbilitiesPanelLayout
 						.createParallelGroup(
@@ -865,7 +1130,8 @@ public class Panel_Player extends javax.swing.JPanel {
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel15)
+														.addComponent(
+																pcStrengthLabel)
 														.addComponent(jLabel21)
 														.addComponent(
 																pcPercentileStrLabel)
@@ -880,14 +1146,18 @@ public class Panel_Player extends javax.swing.JPanel {
 																pcOpenDoorLabel)
 														.addComponent(jLabel34)
 														.addComponent(
-																pcBendBarsLabel))
+																pcBendBarsLabel)
+														.addComponent(jLabel49)
+														.addComponent(
+																pcWeightAllowanceLabel))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel16)
+														.addComponent(
+																pcIntelligenceLabel)
 														.addComponent(jLabel22)
 														.addComponent(jLabel36)
 														.addComponent(
@@ -910,7 +1180,8 @@ public class Panel_Player extends javax.swing.JPanel {
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel17)
+														.addComponent(
+																pcWisdomLabel)
 														.addComponent(jLabel23)
 														.addComponent(jLabel46)
 														.addComponent(
@@ -927,7 +1198,8 @@ public class Panel_Player extends javax.swing.JPanel {
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel18)
+														.addComponent(
+																pcDexterityLabel)
 														.addComponent(jLabel24)
 														.addComponent(jLabel52)
 														.addComponent(
@@ -944,7 +1216,8 @@ public class Panel_Player extends javax.swing.JPanel {
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel19)
+														.addComponent(
+																pcConstitutionLabel)
 														.addComponent(jLabel25)
 														.addComponent(jLabel58)
 														.addComponent(
@@ -961,7 +1234,8 @@ public class Panel_Player extends javax.swing.JPanel {
 												AbilitiesPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel20)
+														.addComponent(
+																pcCharismaLabel)
 														.addComponent(jLabel26)
 														.addComponent(jLabel64)
 														.addComponent(
@@ -970,7 +1244,8 @@ public class Panel_Player extends javax.swing.JPanel {
 														.addComponent(
 																pcLoyaltyLabel)
 														.addComponent(jLabel68)
-														.addComponent(jLabel69))
+														.addComponent(
+																pcReactionAdjCharismaLabel))
 										.addContainerGap(
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
@@ -1113,7 +1388,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																				pcMaxHPLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																				600,
+																				438,
 																				Short.MAX_VALUE)
 																		.addComponent(
 																				jLabel47)
@@ -1124,7 +1399,7 @@ public class Panel_Player extends javax.swing.JPanel {
 										.addContainerGap())
 						.addComponent(jScrollPane1,
 								javax.swing.GroupLayout.Alignment.TRAILING,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 825,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 663,
 								Short.MAX_VALUE));
 		savesPanelLayout
 				.setVerticalGroup(savesPanelLayout
@@ -1319,7 +1594,15 @@ public class Panel_Player extends javax.swing.JPanel {
 														.addComponent(
 																pcSaveSpellsLabel)
 														.addComponent(jLabel43))
-										.addContainerGap(48, Short.MAX_VALUE)));
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Skills"));
+		skillsPanel
+				.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
 		this.setLayout(layout);
@@ -1327,11 +1610,11 @@ public class Panel_Player extends javax.swing.JPanel {
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGroup(
 						layout.createSequentialGroup()
+								.addContainerGap()
 								.addGroup(
 										layout.createParallelGroup(
 												javax.swing.GroupLayout.Alignment.LEADING)
 												.addGroup(
-														javax.swing.GroupLayout.Alignment.TRAILING,
 														layout.createSequentialGroup()
 																.addComponent(
 																		detailsPanel,
@@ -1341,73 +1624,98 @@ public class Panel_Player extends javax.swing.JPanel {
 																.addPreferredGap(
 																		javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																.addComponent(
-																		portraitPanel,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		javax.swing.GroupLayout.PREFERRED_SIZE))
-												.addGroup(
-														layout.createSequentialGroup()
-																.addComponent(
-																		AbilitiesPanel,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)
-																.addPreferredGap(
-																		javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																.addComponent(
 																		combatPanel,
 																		javax.swing.GroupLayout.PREFERRED_SIZE,
 																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		javax.swing.GroupLayout.PREFERRED_SIZE))
-												.addComponent(
-														savesPanel,
+																		javax.swing.GroupLayout.PREFERRED_SIZE)
+																.addGap(123,
+																		123,
+																		123))
+												.addGroup(
 														javax.swing.GroupLayout.Alignment.TRAILING,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE))
-								.addContainerGap()));
+														layout.createSequentialGroup()
+																.addGroup(
+																		layout.createParallelGroup(
+																				javax.swing.GroupLayout.Alignment.TRAILING)
+																				.addComponent(
+																						skillsPanel,
+																						javax.swing.GroupLayout.Alignment.LEADING,
+																						javax.swing.GroupLayout.DEFAULT_SIZE,
+																						673,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						savesPanel,
+																						javax.swing.GroupLayout.Alignment.LEADING,
+																						javax.swing.GroupLayout.DEFAULT_SIZE,
+																						javax.swing.GroupLayout.DEFAULT_SIZE,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						AbilitiesPanel,
+																						javax.swing.GroupLayout.DEFAULT_SIZE,
+																						javax.swing.GroupLayout.DEFAULT_SIZE,
+																						Short.MAX_VALUE))
+																.addContainerGap()))));
 		layout.setVerticalGroup(layout
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGroup(
 						layout.createSequentialGroup()
 								.addGroup(
 										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING)
+												javax.swing.GroupLayout.Alignment.LEADING,
+												false)
 												.addComponent(
 														detailsPanel,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														Short.MAX_VALUE)
 												.addComponent(
-														portraitPanel,
-														javax.swing.GroupLayout.PREFERRED_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.PREFERRED_SIZE))
-								.addPreferredGap(
-										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING,
-												false)
-												.addComponent(
 														combatPanel,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE)
-												.addComponent(
-														AbilitiesPanel,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														Short.MAX_VALUE))
 								.addPreferredGap(
 										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+								.addComponent(AbilitiesPanel,
+										javax.swing.GroupLayout.PREFERRED_SIZE,
+										javax.swing.GroupLayout.DEFAULT_SIZE,
+										javax.swing.GroupLayout.PREFERRED_SIZE)
+								.addGap(5, 5, 5)
 								.addComponent(savesPanel,
 										javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addContainerGap()));
+								.addGap(5, 5, 5)
+								.addComponent(skillsPanel,
+										javax.swing.GroupLayout.PREFERRED_SIZE,
+										67,
+										javax.swing.GroupLayout.PREFERRED_SIZE)
+								.addContainerGap(
+										javax.swing.GroupLayout.DEFAULT_SIZE,
+										Short.MAX_VALUE)));
 	}// </editor-fold>
 	//GEN-END:initComponents
+
+	class ColorColumnRenderer extends DefaultTableCellRenderer {
+		Color bkgndColor, fgndColor;
+
+		public ColorColumnRenderer(Color bkgnd, Color foregnd) {
+			super();
+			bkgndColor = bkgnd;
+			fgndColor = foregnd;
+		}
+
+		public Component getTableCellRendererComponent(JTable table,
+				Object value, boolean isSelected, boolean hasFocus, int row,
+				int column) {
+			Component cell = super.getTableCellRendererComponent(table, value,
+					isSelected, hasFocus, row, column);
+
+			cell.setBackground(bkgndColor);
+			cell.setForeground(fgndColor);
+
+			return cell;
+		}
+	}
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
@@ -1417,12 +1725,6 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel11;
 	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel15;
-	private javax.swing.JLabel jLabel16;
-	private javax.swing.JLabel jLabel17;
-	private javax.swing.JLabel jLabel18;
-	private javax.swing.JLabel jLabel19;
-	private javax.swing.JLabel jLabel20;
 	private javax.swing.JLabel jLabel21;
 	private javax.swing.JLabel jLabel22;
 	private javax.swing.JLabel jLabel23;
@@ -1452,6 +1754,7 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel46;
 	private javax.swing.JLabel jLabel47;
 	private javax.swing.JLabel jLabel48;
+	private javax.swing.JLabel jLabel49;
 	private javax.swing.JLabel jLabel5;
 	private javax.swing.JLabel jLabel50;
 	private javax.swing.JLabel jLabel52;
@@ -1464,7 +1767,6 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel64;
 	private javax.swing.JLabel jLabel66;
 	private javax.swing.JLabel jLabel68;
-	private javax.swing.JLabel jLabel69;
 	private javax.swing.JLabel jLabel7;
 	private javax.swing.JLabel jLabel9;
 	private javax.swing.JScrollPane jScrollPane1;
@@ -1476,15 +1778,19 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel pcBonusArcaneSpellsLabel;
 	private javax.swing.JLabel pcBonusSpellsDivineLabel;
 	private javax.swing.JLabel pcCharacterNameLabel;
+	private javax.swing.JLabel pcCharismaLabel;
 	private javax.swing.JLabel pcClassLevelLabel;
 	private javax.swing.JLabel pcClassNameLabel;
 	private javax.swing.JTable pcCombatMatrixTable;
+	private javax.swing.JLabel pcConstitutionLabel;
 	private javax.swing.JLabel pcCurrentHPLabel;
 	private javax.swing.JLabel pcDefenseAdjLabel;
+	private javax.swing.JLabel pcDexterityLabel;
 	private javax.swing.JLabel pcDmgAdjLabel;
 	private javax.swing.JLabel pcExperienceTotalsLabel;
 	private javax.swing.JLabel pcHPAdjLabel;
 	private javax.swing.JLabel pcHitAdjLabel;
+	private javax.swing.JLabel pcIntelligenceLabel;
 	private javax.swing.JLabel pcKnowSpellLabel;
 	private javax.swing.JLabel pcLanguagesLabel;
 	private javax.swing.JLabel pcLoyaltyLabel;
@@ -1499,6 +1805,7 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel pcPercentileStrLabel;
 	private javax.swing.JLabel pcPlayerNameLabel;
 	private javax.swing.JLabel pcRaceLabel;
+	private javax.swing.JLabel pcReactionAdjCharismaLabel;
 	private javax.swing.JLabel pcReactionAdjLabel;
 	private javax.swing.JLabel pcResurrectionSurvivalLabel;
 	private javax.swing.JLabel pcSaveBreathLabel;
@@ -1507,10 +1814,13 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel pcSaveRodLabel;
 	private javax.swing.JLabel pcSaveSpellsLabel;
 	private javax.swing.JLabel pcSpellFailureLabel;
+	private javax.swing.JLabel pcStrengthLabel;
 	private javax.swing.JLabel pcSystemShockLabel;
 	private javax.swing.JLabel pcTHACOLabel;
-	private javax.swing.JPanel portraitPanel;
+	private javax.swing.JLabel pcWeightAllowanceLabel;
+	private javax.swing.JLabel pcWisdomLabel;
 	private javax.swing.JPanel savesPanel;
+	private javax.swing.JPanel skillsPanel;
 	// End of variables declaration//GEN-END:variables
 
 }

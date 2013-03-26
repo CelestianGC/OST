@@ -133,7 +133,7 @@ public class CharacterClass implements Comparable{
 			public ArrayList<Integer> turnMatrix; // for turn undead matrix later on
 			
 			public LevelClass(int level) {
-				this(level,0,0,0,
+				this(level,0,20,0,
 						0,1,6,
 						0,0,
 						0,new int[2],

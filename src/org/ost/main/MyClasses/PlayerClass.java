@@ -276,10 +276,12 @@ public class PlayerClass implements Serializable, Comparable {
 		public int getCurrentLevel(CharacterClassList cList) {
 			int maxLevel = 0;
 			CharacterClass oC = CharacterClass.getClassByMyID(getClassID(), cList);
+			if (oC != null) {
 			for (int i=0;i<oC.getLevelDetails().size();i++) {
 				CharacterClass.LevelClass lC = oC.getLevelDetails().get(i);
 				if (getExperience() >= lC.getExpReq())
 					maxLevel = lC.getLevel();
+			}
 			}
 			return maxLevel;
 		}
@@ -1456,4 +1458,115 @@ public class PlayerClass implements Serializable, Comparable {
 		return(aScores);
 	}
 
+	public int getTHACO(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+		
+		int bestTHACO = 20;
+		
+		// iterate over all classes pc might have
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			if (oC!= null) // if no class is set == null
+			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+				// get saves from level settings
+				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+					if (lE.getThaco() < bestTHACO)
+						bestTHACO = lE.getThaco();
+				} // was high enough level/exp
+				
+			}
+		}
+
+//		// get racial adjustments
+//		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+//		if (myRace != null) {
+//			for (int i=0;i<myRace.getThiefAbiltyAdjustments().size();i++) {
+//				SkillsClass oS = myRace.getThiefAbiltyAdjustments().get(i);
+//				SkillsClass aS = aScores.get(i);
+//				aS = skillsCompare(oS, aS);
+//			}
+//		}
+		
+//		// now flip through all extraAbilities
+//		for (ExtraAbilitiesClass eA : extras)
+//			for (int i=0;i<eA.getThiefSkillsBase().size();i++) {
+//				SkillsClass oS = eA.getThiefSkillsBase().get(i);
+//				SkillsClass aS = aScores.get(i);
+//				aS = skillsCompare(oS, aS);
+//			}
+
+		return(bestTHACO);
+	}
+
+	public int[] getMatrix(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+		
+		int aMatrix[] = new int[MAX_MATRIX];
+		for(int i=0;i<aMatrix.length;i++)
+			aMatrix[i] = 99;
+		
+		// iterate over all classes pc might have
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			if (oC!= null) // if no class is set == null
+			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+				// get saves from level settings
+				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+					// get the lowest roll needed to hit
+					for (int i=0;i<lE.getAttackMatrix().length;i++) {
+						int curTHAC = lE.getAttackMatrix()[i];
+						if (curTHAC < aMatrix[i])
+							aMatrix[i] = curTHAC;
+					}
+				} // was high enough level/exp
+				
+			}
+		}
+
+//		// get racial adjustments
+//		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+//		if (myRace != null) {
+//			for (int i=0;i<myRace.getThiefAbiltyAdjustments().size();i++) {
+//				SkillsClass oS = myRace.getThiefAbiltyAdjustments().get(i);
+//				SkillsClass aS = aScores.get(i);
+//				aS = skillsCompare(oS, aS);
+//			}
+//		}
+		
+//		// now flip through all extraAbilities
+//		for (ExtraAbilitiesClass eA : extras)
+//			for (int i=0;i<eA.getThiefSkillsBase().size();i++) {
+//				SkillsClass oS = eA.getThiefSkillsBase().get(i);
+//				SkillsClass aS = aScores.get(i);
+//				aS = skillsCompare(oS, aS);
+//			}
+
+		return(aMatrix);
+	}
+	
+	/**
+	 * return the name of this character's race
+	 * 
+	 * @param rList
+	 * @return
+	 */
+	public String getMyRaceName(RaceList rList) {
+		String myRaceName = "NoRaceFound";
+
+		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+		if (myRace != null)
+			myRaceName = myRace.getName();
+		
+		return(myRaceName);
+	}
 }

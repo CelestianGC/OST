@@ -34,6 +34,7 @@ import org.ost.main.MyUtils.XMLControl;
  */
 public class MainWindow extends javax.swing.JFrame {
 	private static final long serialVersionUID = 1L;
+	private boolean alreadySaving = false;
 
 	/** Creates new form MainWindow */
 	public MainWindow(MainClass ost) {
@@ -989,19 +990,22 @@ public class MainWindow extends javax.swing.JFrame {
 
 	public void formWindowClosing(java.awt.event.WindowEvent evt) {
 		//TODO save all files on exit
-		ost.saveSettings();
-		ost.dmConfigTab.tabCreatureConfig.saveCreaturesToFile();
-		ost.dmConfigTab.tabPlayers.savePlayersToFile();
-		ost.abilityStatList.xm.serializeToXMLFile();
-		ost.raceList.xm.serializeToXMLFile();
-		ost.nonWeaponProfList.xm.serializeToXMLFile();
-		ost.WeaponProfList.xm.serializeToXMLFile();
-		ost.equipmentList.xm.serializeToXMLFile();
-		ost.statesList.xm.serializeToXMLFile();
-		ost.chartList.xm.serializeToXMLFile();
-		ost.tableList.xm.serializeToXMLFile();
-		ost.extraAbilitiesList.xm.serializeToXMLFile();
-		ost.characterClassList.xm.serializeToXMLFile();
+		if (!alreadySaving) {
+			alreadySaving = true; // spamming X/close causing multiple file dumps?
+			ost.saveSettings();
+			ost.dmConfigTab.tabCreatureConfig.saveCreaturesToFile();
+			ost.dmConfigTab.tabPlayers.savePlayersToFile();
+			ost.abilityStatList.xm.serializeToXMLFile();
+			ost.raceList.xm.serializeToXMLFile();
+			ost.nonWeaponProfList.xm.serializeToXMLFile();
+			ost.WeaponProfList.xm.serializeToXMLFile();
+			ost.equipmentList.xm.serializeToXMLFile();
+			ost.statesList.xm.serializeToXMLFile();
+			ost.chartList.xm.serializeToXMLFile();
+			ost.tableList.xm.serializeToXMLFile();
+			ost.extraAbilitiesList.xm.serializeToXMLFile();
+			ost.characterClassList.xm.serializeToXMLFile();
+		}
 	}
 
 	private void settingsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {

@@ -486,7 +486,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		jLabel14.setToolTipText("To-hit armor rating 0 if using the THACO mode.\n");
 
 		thacoSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, -20, 20, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(20, -20, 20, 1));
 		thacoSpinner
 				.setToolTipText("To-hit armor rating 0 if using the THACO mode.\n");
 
@@ -608,7 +608,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		Option_AskFor_AbilityScores dDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Ability Score Adjustments",
-				currentLevel.getAbilityAdjustment(),false);
+				currentLevel.getAbilityAdjustment(), false);
 		dDialog.setVisible(true);
 	}
 
@@ -731,13 +731,14 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 				for (int ii = 0; ii < newLevel.getSpellsPerLevelArcane().length; ii++)
 					newLevel.getSpellsPerLevelArcane()[ii] = currentLevel
 							.getSpellsPerLevelArcane()[ii];
-				
+
 				for (int ii = 0; ii < newLevel.getSpellsPerLevelDivine().length; ii++)
 					newLevel.getSpellsPerLevelDivine()[ii] = currentLevel
 							.getSpellsPerLevelDivine()[ii];
 
 				for (int ii = 0; ii < newLevel.getThiefSkills().size(); ii++)
-					newLevel.getThiefSkills().set(ii,currentLevel.getThiefSkills().get(ii));
+					newLevel.getThiefSkills().set(ii,
+							currentLevel.getThiefSkills().get(ii));
 
 				// set the new level values to previous just to have preset.
 				for (int ii = 0; ii < MAX_MATRIX; ii++)

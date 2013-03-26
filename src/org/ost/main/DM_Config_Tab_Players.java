@@ -6,6 +6,7 @@
 
 package org.ost.main;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -47,6 +48,7 @@ import org.ost.main.MyUtils.XMLControl;
  */
 public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private MainClass ost;
+	private Panel_Player currentPlayerSheet;
 
 	/** Creates new form DM_Config_Tab_Players */
 	public DM_Config_Tab_Players(MainClass ost) {
@@ -86,36 +88,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gearNewDoneButton = new javax.swing.JButton();
 		gearNewCancelButton = new javax.swing.JButton();
 		gearNewButtonGroup = new javax.swing.ButtonGroup();
-		playerSplitPane = new javax.swing.JSplitPane();
-		mainPanel = new javax.swing.JPanel();
-		simpleFieldsPanel = new javax.swing.JPanel();
-		nameLabel = new javax.swing.JLabel();
-		nameLabel7 = new javax.swing.JLabel();
-		namePlayerLabel = new javax.swing.JLabel();
-		playerNameLabel = new javax.swing.JLabel();
-		classLabel = new javax.swing.JLabel();
-		classNameLabel = new javax.swing.JLabel();
-		levelLabel = new javax.swing.JLabel();
-		levelField = new javax.swing.JTextField();
-		hpMaxLabel = new javax.swing.JLabel();
-		hitPointsLabel = new javax.swing.JLabel();
-		acLabel = new javax.swing.JLabel();
-		armorClassLabel = new javax.swing.JLabel();
-		nameLabel9 = new javax.swing.JLabel();
-		moveRateLabel = new javax.swing.JLabel();
-		nameLabel11 = new javax.swing.JLabel();
-		specialAttackLabel = new javax.swing.JLabel();
-		nameLabel1 = new javax.swing.JLabel();
-		alignmentLabel = new javax.swing.JLabel();
-		nameLabel12 = new javax.swing.JLabel();
-		specialDefenseLabel = new javax.swing.JLabel();
-		nameLabel8 = new javax.swing.JLabel();
-		magicResistanceLabel = new javax.swing.JLabel();
-		playerTabbedPane = new javax.swing.JTabbedPane();
-		notesPanel = new javax.swing.JPanel();
-		jScrollPane2 = new javax.swing.JScrollPane();
-		notesField = new javax.swing.JTextArea();
-		jPanel4 = new javax.swing.JPanel();
+		gearTabPanel = new javax.swing.JPanel();
 		gearPanel = new javax.swing.JPanel();
 		gearScrollPane = new javax.swing.JScrollPane();
 		gearTree = new javax.swing.JTree();
@@ -164,10 +137,16 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		nodeBuyRoot.add(nodeBuyWeapons);
 		nodeBuyRoot.add(nodeBuyTreasure);
 
+		playerSplitPane = new javax.swing.JSplitPane();
+		mainPanel = new javax.swing.JPanel();
+		playerTabbedPane = new javax.swing.JTabbedPane();
+		playerTabPanel = new javax.swing.JPanel();
+		notesPanel = new javax.swing.JPanel();
+		jScrollPane2 = new javax.swing.JScrollPane();
+		notesField = new javax.swing.JTextArea();
 		buttonsPanel = new javax.swing.JPanel();
 		addEncounterButton = new javax.swing.JButton();
 		playerEditButton = new javax.swing.JButton();
-		playerStatsPanel = new javax.swing.JPanel();
 		testButton = new javax.swing.JButton();
 		listPlayerPanel = new javax.swing.JPanel();
 		jPanel10 = new javax.swing.JPanel();
@@ -378,127 +357,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gearNewDialog.getContentPane().add(gearNewButtonsPanel,
 				java.awt.BorderLayout.PAGE_END);
 
-		setLayout(new java.awt.BorderLayout());
-
-		playerSplitPane.setDividerLocation(250);
-
-		mainPanel.setBackground(new java.awt.Color(153, 153, 153));
-		mainPanel.setBorder(new javax.swing.border.LineBorder(
-				new java.awt.Color(0, 0, 0), 1, true));
-		mainPanel.setName("Main-Panel");
-
-		simpleFieldsPanel.setBackground(new java.awt.Color(204, 204, 204));
-		simpleFieldsPanel.setBorder(new javax.swing.border.LineBorder(
-				new java.awt.Color(0, 0, 0), 1, true));
-		simpleFieldsPanel.setLayout(new java.awt.GridLayout(0, 4));
-
-		nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel.setText("Name  ");
-		simpleFieldsPanel.add(nameLabel);
-
-		nameLabel7.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		nameLabel7.setText("name");
-		simpleFieldsPanel.add(nameLabel7);
-
-		namePlayerLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		namePlayerLabel.setText("Player Name");
-		simpleFieldsPanel.add(namePlayerLabel);
-
-		playerNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		playerNameLabel.setText("playerName");
-		simpleFieldsPanel.add(playerNameLabel);
-
-		classLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		classLabel.setText("Class");
-		simpleFieldsPanel.add(classLabel);
-
-		classNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		classNameLabel.setText("class");
-		simpleFieldsPanel.add(classNameLabel);
-
-		levelLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		levelLabel.setText("Level");
-		simpleFieldsPanel.add(levelLabel);
-
-		levelField.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		levelField.setText("1");
-		simpleFieldsPanel.add(levelField);
-
-		hpMaxLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		hpMaxLabel.setText("Hitpoints");
-		simpleFieldsPanel.add(hpMaxLabel);
-
-		hitPointsLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		hitPointsLabel.setText("hp");
-		simpleFieldsPanel.add(hitPointsLabel);
-
-		acLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		acLabel.setText("Armor Class  ");
-		simpleFieldsPanel.add(acLabel);
-
-		armorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		armorClassLabel.setText("10");
-		simpleFieldsPanel.add(armorClassLabel);
-
-		nameLabel9.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel9.setText("Move Rate  ");
-		simpleFieldsPanel.add(nameLabel9);
-
-		moveRateLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		moveRateLabel.setText("MR");
-		simpleFieldsPanel.add(moveRateLabel);
-
-		nameLabel11.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel11.setText("Special Attack  ");
-		simpleFieldsPanel.add(nameLabel11);
-
-		specialAttackLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		specialAttackLabel.setText("SA");
-		simpleFieldsPanel.add(specialAttackLabel);
-
-		nameLabel1.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel1.setText("Alignment  ");
-		simpleFieldsPanel.add(nameLabel1);
-
-		alignmentLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		alignmentLabel.setText("N");
-		simpleFieldsPanel.add(alignmentLabel);
-
-		nameLabel12.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel12.setText("Special Defense  ");
-		simpleFieldsPanel.add(nameLabel12);
-
-		specialDefenseLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		specialDefenseLabel.setText("SD");
-		simpleFieldsPanel.add(specialDefenseLabel);
-
-		nameLabel8.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		nameLabel8.setText("Magic Resistance  ");
-		simpleFieldsPanel.add(nameLabel8);
-
-		magicResistanceLabel.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		magicResistanceLabel.setText("mr");
-		simpleFieldsPanel.add(magicResistanceLabel);
-
-		playerTabbedPane.setFont(new java.awt.Font("Segoe UI", 0, 10));
-
-		notesPanel.setBackground(new java.awt.Color(204, 204, 204));
-		notesPanel.setBorder(new javax.swing.border.LineBorder(
-				new java.awt.Color(0, 0, 0), 1, true));
-		notesPanel.setName("Description");
-		notesPanel.setLayout(new java.awt.BorderLayout());
-
-		notesField.setColumns(20);
-		notesField.setLineWrap(true);
-		notesField.setRows(5);
-		notesField.setWrapStyleWord(true);
-		jScrollPane2.setViewportView(notesField);
-
-		notesPanel.add(jScrollPane2, java.awt.BorderLayout.CENTER);
-
-		playerTabbedPane.addTab("Notes", notesPanel);
-
-		jPanel4.setLayout(new java.awt.GridBagLayout());
+		gearTabPanel.setLayout(new java.awt.GridBagLayout());
 
 		gearPanel.setBackground(new java.awt.Color(0, 0, 0));
 		gearPanel.setLayout(new java.awt.BorderLayout());
@@ -589,7 +448,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.weighty = 1.0;
-		jPanel4.add(gearPanel, gridBagConstraints);
+		gearTabPanel.add(gearPanel, gridBagConstraints);
 
 		jPanel5.setBackground(new java.awt.Color(153, 153, 153));
 		jPanel5.setBorder(javax.swing.BorderFactory
@@ -635,7 +494,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridheight = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-		jPanel4.add(jPanel5, gridBagConstraints);
+		gearTabPanel.add(jPanel5, gridBagConstraints);
 
 		gearBuyPanel.setLayout(new java.awt.BorderLayout());
 
@@ -711,9 +570,37 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.weighty = 1.0;
-		jPanel4.add(gearBuyPanel, gridBagConstraints);
+		gearTabPanel.add(gearBuyPanel, gridBagConstraints);
 
-		playerTabbedPane.addTab("Gear", jPanel4);
+		setLayout(new java.awt.BorderLayout());
+
+		playerSplitPane.setDividerLocation(250);
+
+		mainPanel.setBackground(new java.awt.Color(153, 153, 153));
+		mainPanel.setBorder(new javax.swing.border.LineBorder(
+				new java.awt.Color(0, 0, 0), 1, true));
+		mainPanel.setName("Main-Panel");
+
+		playerTabbedPane.setFont(new java.awt.Font("Segoe UI", 0, 10));
+
+		playerTabPanel.setLayout(new java.awt.BorderLayout());
+		playerTabbedPane.addTab("Player", playerTabPanel);
+
+		notesPanel.setBackground(new java.awt.Color(204, 204, 204));
+		notesPanel.setBorder(new javax.swing.border.LineBorder(
+				new java.awt.Color(0, 0, 0), 1, true));
+		notesPanel.setName("Description");
+		notesPanel.setLayout(new java.awt.BorderLayout());
+
+		notesField.setColumns(20);
+		notesField.setLineWrap(true);
+		notesField.setRows(5);
+		notesField.setWrapStyleWord(true);
+		jScrollPane2.setViewportView(notesField);
+
+		notesPanel.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+		playerTabbedPane.addTab("Notes", notesPanel);
 
 		buttonsPanel.setBackground(new java.awt.Color(153, 153, 153));
 		buttonsPanel.setLayout(new java.awt.GridBagLayout());
@@ -743,12 +630,6 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			}
 		});
 
-		playerStatsPanel.setBackground(new java.awt.Color(204, 204, 204));
-		playerStatsPanel.setBorder(new javax.swing.border.LineBorder(
-				new java.awt.Color(0, 0, 0), 1, true));
-		playerStatsPanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT));
-
 		testButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		testButton.setText("test");
 		testButton.addActionListener(new java.awt.event.ActionListener() {
@@ -765,87 +646,39 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 						.createParallelGroup(
 								javax.swing.GroupLayout.Alignment.LEADING)
 						.addGroup(
+								javax.swing.GroupLayout.Alignment.TRAILING,
 								mainPanelLayout
 										.createSequentialGroup()
-										.addGroup(
-												mainPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																javax.swing.GroupLayout.Alignment.TRAILING,
-																mainPanelLayout
-																		.createSequentialGroup()
-																		.addContainerGap()
-																		.addComponent(
-																				playerEditButton)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				testButton)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																				384,
-																				Short.MAX_VALUE)
-																		.addComponent(
-																				buttonsPanel,
-																				javax.swing.GroupLayout.PREFERRED_SIZE,
-																				javax.swing.GroupLayout.DEFAULT_SIZE,
-																				javax.swing.GroupLayout.PREFERRED_SIZE))
-														.addGroup(
-																mainPanelLayout
-																		.createSequentialGroup()
-																		.addGap(0,
-																				0,
-																				0)
-																		.addGroup(
-																				mainPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addGroup(
-																								mainPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												simpleFieldsPanel,
-																												javax.swing.GroupLayout.PREFERRED_SIZE,
-																												javax.swing.GroupLayout.DEFAULT_SIZE,
-																												javax.swing.GroupLayout.PREFERRED_SIZE)
-																										.addGap(281,
-																												281,
-																												281))
-																						.addComponent(
-																								playerTabbedPane,
-																								javax.swing.GroupLayout.DEFAULT_SIZE,
-																								607,
-																								Short.MAX_VALUE)
-																						.addComponent(
-																								playerStatsPanel,
-																								javax.swing.GroupLayout.DEFAULT_SIZE,
-																								607,
-																								Short.MAX_VALUE))))
-										.addGap(8, 8, 8)));
+										.addGap(14, 14, 14)
+										.addComponent(playerEditButton)
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addComponent(testButton)
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+												254, Short.MAX_VALUE)
+										.addComponent(
+												buttonsPanel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addGap(8, 8, 8))
+						.addComponent(playerTabbedPane,
+								javax.swing.GroupLayout.Alignment.TRAILING,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 485,
+								Short.MAX_VALUE));
 		mainPanelLayout
 				.setVerticalGroup(mainPanelLayout
 						.createParallelGroup(
 								javax.swing.GroupLayout.Alignment.LEADING)
 						.addGroup(
+								javax.swing.GroupLayout.Alignment.TRAILING,
 								mainPanelLayout
 										.createSequentialGroup()
 										.addComponent(
-												simpleFieldsPanel,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												89,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addGap(0, 0, 0)
-										.addComponent(
-												playerStatsPanel,
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												113, Short.MAX_VALUE)
-										.addGap(0, 0, 0)
-										.addComponent(
 												playerTabbedPane,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												170,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												372, Short.MAX_VALUE)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
@@ -1672,21 +1505,13 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private void updatePlayerPanel() {
 		// string fields
 		if (currentPlayer != null && currentPlayer.getName() != null) {
-			playerStatsPanel.removeAll();
 
-			nameLabel7.setText(currentPlayer.getName());
-			playerNameLabel.setText(currentPlayer.getNamePlayer());
-			classNameLabel.setText(currentPlayer
-					.getMyClassName(ost.characterClassList));
-			levelField.setText(currentPlayer.getPcLevel());
-			hitPointsLabel
-					.setText(String.format("%d", currentPlayer.getHpMax()));
-			armorClassLabel.setText(currentPlayer.getArmorRatings().get(0));
-			moveRateLabel.setText(currentPlayer.getMoveRate());
-			specialAttackLabel.setText(currentPlayer.getSpecialAttacks());
-			alignmentLabel.setText(currentPlayer.getAlignment());
-			specialDefenseLabel.setText(currentPlayer.getSpecialDefense());
-			magicResistanceLabel.setText(currentPlayer.getMagicResistance());
+			if (currentPlayerSheet == null) {
+				currentPlayerSheet = new Panel_Player(ost, currentPlayer);
+				playerTabPanel.add(currentPlayerSheet,
+						java.awt.BorderLayout.CENTER);
+			} else
+				currentPlayerSheet.updatePanel(currentPlayer);
 
 			notesField.setText(currentPlayer.getNotes());
 
@@ -1703,196 +1528,8 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				Utils.expandPathOnNode(gearTree, oMyNode);
 				gearTree.repaint();
 			}
-
-			//ABILITY SCORES
-			JPanel abilityScores = new JPanel(new GridLayout(0, 1, 1, 1));
-			ArrayList<AbilityScoreClass> abilityScoresAdj = currentPlayer
-					.getAllAbilityScoreAdjustments(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList);
-
-			for (int i = 0; i < currentPlayer.getMyAbilityScores().size(); i++) {
-				JPanel scorePanel = new JPanel(new FlowLayout(FlowLayout.LEFT,
-						1, 1));
-				AbilityScoreClass aJ = abilityScoresAdj.get(i);
-				AbilityScoreClass aS = currentPlayer.getMyAbilityScores()
-						.get(i);
-				JLabel name = new JLabel(aS.getAbbrev());
-				name.setToolTipText(aS.getName());
-				int abilityTotal = aS.getScore() + aJ.getScore();
-				int abilityPercentTotal = aS.getPercentile()
-						+ aJ.getPercentile();
-				JLabel value = new JLabel(String.format("%d", abilityTotal));
-				if (abilityPercentTotal > 0)
-					value.setText(String.format("%d/%d", abilityTotal,
-							abilityPercentTotal));
-
-				String bonusText = "";
-				if (abilityTotal >= 0) {
-					AbilityStatClass aStat = ost.abilityStatList.getContent()
-							.get(abilityTotal);
-					switch (i) {
-					case ABILITY_CHARISMA:
-						bonusText = String
-								.format("Loyalty %d, Max Henchmen %d, Reaction Adjustment %d",
-										aStat.charisma.loyaltyBase,
-										aStat.charisma.maxNumberHenchmen,
-										aStat.charisma.reactionAdjustment);
-						break;
-					case ABILITY_COMELINESS:
-						bonusText = String.format("Under construction", "");
-
-						break;
-					case ABILITY_CONSTITUTION:
-						//TODO test for fighter/barb features in class and show just that
-						bonusText = String
-								.format("HP Adjustment %d, "
-										+ "HP Adjustment (Barbarian) %d, HP Adjustment (Fighter), "
-										+ "Resurrection Survival %d, System Shock %d",
-										aStat.consitution.hitpointAdjustment,
-										aStat.consitution.hitpointAdjustmentBarbarian,
-										aStat.consitution.hitpointAdjustmentFighter,
-										aStat.consitution.resurrectionSurvival,
-										aStat.consitution.systemShock);
-
-						break;
-					case ABILITY_DEXTERITY:
-						//TODO get thief skill adjustments and display
-						//if class can use them?
-						bonusText = String
-								.format("Missle Attack %d,"
-										+ "Defense Adjustment %d, Defense Adjustment (Barbarian) %d,"
-										+ "Reaction Adjustment %d",
-										aStat.dexterity.attackAdjustment,
-										aStat.dexterity.defensiveAdjustment,
-										aStat.dexterity.defensiveAdjustmentBarbarian,
-										aStat.dexterity.reactionAdjustment);
-
-						break;
-					case ABILITY_INTELLIGENCE:
-						//TODO get bonus spells and list if can cast spells
-						String magicSpells = "";
-						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
-							magicSpells = magicSpells
-									+ String.format(
-											"L%dX%d%s",
-											ii + 1,
-											aStat.intelligence.bonusSpells[ii],
-											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
-													: "");
-						}
-						bonusText = String
-								.format("Know Spell %d, # Languages %d, "
-										+ "Max Spells %d, Min Spells %d, Bonus spells %s",
-										aStat.intelligence.knowSpell,
-										aStat.intelligence.languages,
-										aStat.intelligence.maxSpells,
-										aStat.intelligence.minSpells,
-										magicSpells);
-
-						break;
-					case ABILITY_STRENGTH:
-						//TODO sort out percentile strength if it is 
-						// allowed by class
-						bonusText = String.format(
-								"Bend Bars %d, Damage Adjust %d, Hit Adjust %d,"
-										+ "Open Doors 1-%d (%dD%d), "
-										+ "weight allowance %d",
-								aStat.strength.bendBars,
-								aStat.strength.damageAdjustment,
-								aStat.strength.hitProbability,
-								aStat.strength.minOpenDoor,
-								aStat.strength.numDiceOpenDoor,
-								aStat.strength.sizeDiceOpenDoor,
-								aStat.strength.weightAllowance);
-
-						break;
-					case ABILITY_WISDOM:
-						//TODO get bonus spells from wisdom if caster can use
-						//divine spells
-						String clericSpells = "";
-						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
-							clericSpells = clericSpells
-									+ String.format(
-											"L%dX%d%s",
-											ii + 1,
-											aStat.intelligence.bonusSpells[ii],
-											ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
-													: "");
-						}
-						bonusText = String
-								.format("Magical Adjustment %d, Spell Failure %d, Bonus Spells %s",
-										aStat.wisdom.magicalAdjustment,
-										aStat.wisdom.spellFailure, clericSpells);
-
-						break;
-
-					default:
-						bonusText = String.format("ERROR", "");
-						// error
-						break;
-					}
-				} // else abilityTotal was smaller than 0
-
-				scorePanel.add(name);
-				scorePanel.add(value);
-				scorePanel.add(new JLabel(bonusText));
-				abilityScores.add(scorePanel);
-			}
-			playerStatsPanel.add(abilityScores);
-
-			// SAVES 
-			JPanel saves = new JPanel(new GridLayout(0, 3, 5, 5));
-			ArrayList<Integer> bestSaves = currentPlayer.getAllSaves(
-					ost.characterClassList, ost.extraAbilitiesList,
-					ost.raceList);
-			currentPlayer.setMySaves(bestSaves);
-
-			ArrayList<Integer> bestSaveAdj = currentPlayer
-					.getAllSaveAdjustments(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList);
-			currentPlayer.setMySaveAdjustments(bestSaveAdj);
-
-			for (int i = 0; i < currentPlayer.getMySaves().size(); i++) {
-				int aB = currentPlayer.getMySaves().get(i);
-				int aJ = currentPlayer.getMySaveAdjustments().get(i);
-				JLabel name = new JLabel(SAVES_ABBREV[i]);
-				name.setToolTipText(SAVES[i]);
-				JLabel value = new JLabel(String.format("%d", aB));
-				value.setToolTipText(SAVES[i]);
-				JLabel adjustment = new JLabel(String.format("(%d)", aJ));
-				adjustment.setToolTipText(SAVES[i] + " adjustment.");
-
-				saves.add(name);
-				saves.add(value);
-				saves.add(aJ > 0 ? adjustment : new JLabel(""));
-			}
-			playerStatsPanel.add(saves);
-
-			//SKILLS
-			JPanel skillsPanel = new JPanel(new GridLayout(0, 2, 5, 5));
-			ArrayList<SkillsClass> skillsBase = currentPlayer
-					.getAllThiefSkillsBase(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList);
-			ArrayList<SkillsClass> skillsAdj = currentPlayer
-					.getAllThiefSkillAdjustments(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList);
-
-			for (int i = 0; i < skillsBase.size(); i++) {
-				SkillsClass tJ = skillsAdj.get(i);
-				SkillsClass tS = skillsBase.get(i);
-				int finalSkill = tS.getScore() + tJ.getScore();
-				if (finalSkill != 0) {
-					JLabel name = new JLabel(tS.getAbbrev());
-					name.setToolTipText(tS.getName());
-					JLabel value = new JLabel(String.format("%d", finalSkill));
-					skillsPanel.add(name);
-					skillsPanel.add(value);
-				}
-			}
-			playerStatsPanel.add(skillsPanel);
-
-			playerStatsPanel.revalidate();
-			playerStatsPanel.repaint();
+			//			playerStatsPanel.revalidate();
+			//			playerStatsPanel.repaint();
 		}
 	}// end updatePlayerPanel
 
@@ -2049,16 +1686,11 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
-	private javax.swing.JLabel acLabel;
 	private javax.swing.JButton addEncounterButton;
 	private javax.swing.JPanel adjustButtonPanel;
-	private javax.swing.JLabel alignmentLabel;
-	private javax.swing.JLabel armorClassLabel;
 	private javax.swing.JPanel buttonsPanel;
 	private javax.swing.JPanel chargesAdjustPanel;
 	private javax.swing.JSpinner chargesAdjustSpinner;
-	private javax.swing.JLabel classLabel;
-	private javax.swing.JLabel classNameLabel;
 	private javax.swing.JButton copyButton;
 	private javax.swing.JButton deleteButton;
 	private javax.swing.JButton deleteBuyGearButton;
@@ -2095,10 +1727,9 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private javax.swing.JPanel gearPanel;
 	private javax.swing.JButton gearRemoveItButton;
 	private javax.swing.JScrollPane gearScrollPane;
+	private javax.swing.JPanel gearTabPanel;
 	private javax.swing.JTree gearTree;
 	private javax.swing.JPanel gearTypePanel;
-	private javax.swing.JLabel hitPointsLabel;
-	private javax.swing.JLabel hpMaxLabel;
 	private javax.swing.JButton importButton;
 	private javax.swing.JLabel jLabel4;
 	private javax.swing.JPanel jPanel1;
@@ -2106,41 +1737,24 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private javax.swing.JPanel jPanel17;
 	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanel3;
-	private javax.swing.JPanel jPanel4;
 	private javax.swing.JPanel jPanel5;
 	private javax.swing.JPanel jPanel8;
 	private javax.swing.JPanel jPanel9;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JScrollPane jScrollPane2;
-	private javax.swing.JTextField levelField;
-	private javax.swing.JLabel levelLabel;
 	private javax.swing.JPanel listPlayerPanel;
-	private javax.swing.JLabel magicResistanceLabel;
 	private javax.swing.JPanel mainPanel;
-	private javax.swing.JLabel moveRateLabel;
-	private javax.swing.JLabel nameLabel;
-	private javax.swing.JLabel nameLabel1;
-	private javax.swing.JLabel nameLabel11;
-	private javax.swing.JLabel nameLabel12;
-	private javax.swing.JLabel nameLabel7;
-	private javax.swing.JLabel nameLabel8;
-	private javax.swing.JLabel nameLabel9;
-	private javax.swing.JLabel namePlayerLabel;
 	private javax.swing.JButton newButton;
 	private javax.swing.JButton newGearBuyButton;
 	private javax.swing.JTextArea notesField;
 	private javax.swing.JPanel notesPanel;
 	private javax.swing.JButton playerEditButton;
 	private javax.swing.JList playerList;
-	private javax.swing.JLabel playerNameLabel;
 	private javax.swing.JTextField playerSearchTextField;
 	private javax.swing.JSplitPane playerSplitPane;
-	private javax.swing.JPanel playerStatsPanel;
+	private javax.swing.JPanel playerTabPanel;
 	private javax.swing.JTabbedPane playerTabbedPane;
 	private javax.swing.JButton saveButton;
-	private javax.swing.JPanel simpleFieldsPanel;
-	private javax.swing.JLabel specialAttackLabel;
-	private javax.swing.JLabel specialDefenseLabel;
 	private javax.swing.JPanel stacksAdjustPanel;
 	private javax.swing.JSpinner stacksAdjustSpinner;
 	private javax.swing.JButton testButton;
