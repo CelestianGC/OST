@@ -226,8 +226,8 @@ health adjusted (+6)
     <name>Cluth of the Kuddle</name>
     <namePlayer>Johnny Smit</namePlayer>
     <myID>983049f3-006f-481f-a61d-2c8716923d6a</myID>
-    <hpMax>23</hpMax>
-    <hpCurrent>23</hpCurrent>
+    <hpMax>19</hpMax>
+    <hpCurrent>19</hpCurrent>
     <armorRatings>
       <string>3</string>
       <string>10</string>
@@ -259,6 +259,10 @@ Magic Items:
 
 </notes>
     <log>health adjusted (-2)
+character experience modified :-2000
+character de-level, new MaxHP:10 from 0
+character experience modified :2000
+character level up, new MaxHP:19 from 11
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -267,25 +271,30 @@ Magic Items:
     <fightingList/>
     <myClass>
       <PCClass>
-        <name>NoClassYet</name>
-        <classID>NoClassSet</classID>
-        <experience>0</experience>
-        <level>1</level>
+        <name>thief</name>
+        <classID>d8c06682-f801-4fda-8a9e-f5ea84b78b53</classID>
+        <experience>4002</experience>
+        <level>4</level>
         <primaryClass>false</primaryClass>
-        <hdRolls/>
+        <hdRolls>
+          <int>6</int>
+          <int>11</int>
+          <int>3</int>
+          <int>8</int>
+        </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
     </myClass>
     <myRace>
-      <name>NoRaceYet</name>
-      <raceID>NoRaceSET</raceID>
+      <name>Human</name>
+      <raceID>ce695907-81ab-40f8-8ebb-4642b5b34903</raceID>
       <outer-class reference="../.."/>
     </myRace>
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
@@ -295,7 +304,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
@@ -305,7 +314,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>13</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -315,7 +324,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>17</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
         <abbrev>DEX</abbrev>
@@ -325,7 +334,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>16</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -335,7 +344,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Charisma</name>
         <abbrev>CHR</abbrev>
@@ -345,7 +354,7 @@ Magic Items:
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
         <abbrev>COM</abbrev>
@@ -356,11 +365,11 @@ Magic Items:
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
+      <int>14</int>
+      <int>15</int>
+      <int>15</int>
+      <int>16</int>
+      <int>17</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>

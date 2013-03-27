@@ -21,6 +21,9 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.ost.main.EncounterPlayer;
 import org.ost.main.MainClass;
+import org.ost.main.MainWindow;
+import org.ost.main.MyClasses.CharacterClass.LevelClass;
+import org.ost.main.MyUtils.MyRandomClass;
 import org.ost.main.MyUtils.SimpleDialog;
 import org.ost.main.MyUtils.XMLControl;
 
@@ -210,6 +213,167 @@ public class PlayerClass implements Serializable, Comparable {
 			this.hdRolls = hdRolls;
 		}
 		/**
+		 * level up a character for levels not applied yet
+		 * 
+		 * @param cList
+		 * @param eList
+		 * @param rList
+		 * @param aList
+		 */
+		public void levelUP(CharacterClassList cList,
+				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
+			
+				// TODO
+				int nRaceStartBonus = 0;
+				boolean bRaceBonusUsed = false;
+				RaceClass oR = getMyRace().getRaceByID(rList);
+				nRaceStartBonus = oR.getBonusStartHP();
+				int nRolledHP = 0;
+				int classCount = getMyClass().size();
+
+				CharacterClass cC = getClassByID(cList);
+				
+				if (getHdRolls() == null) // not sure I will ever use this
+					setHdRolls(new ArrayList<Integer>());
+				
+				for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
+
+					ost.dprint("new level "+(ii+1)+"\n");
+
+					LevelClass oL = cC.getLevelByLevel(ii);
+					if (getLevel()< (oL.getLevel()) && 
+							getExperience() >= oL.getExpReq()) {
+						int nRollingHP = 0;
+						int nDiceCount = 1;
+						int nDiceSize = 4;
+						int nClassHPBonus = 0;
+
+						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
+								cList, eList, rList, aList);
+						AbilityStatClass aStat = 
+								aList.getContent().get(nConScore);
+						int nConBonus = aStat.consitution.hitpointAdjustment;
+						if (hasBarbarianCon(cList,eList, rList))
+							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+						if (hasFighterCon(cList, eList, rList))
+							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+						nConBonus /= classCount;
+
+						nDiceCount = oL.getHitDiceNumber();
+						nDiceSize = oL.getHitDiceSize();
+						nClassHPBonus = oL.getHitPointBonus();
+						nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+
+						ost.dprint(String.format("Level %d\n"
+								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+								+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
+								(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+								nClassHPBonus, nRaceStartBonus, nConBonus));
+
+						nRollingHP += nClassHPBonus;
+						nRollingHP += nConBonus; // update conBonus each level?
+						if (ii == 0 && !bRaceBonusUsed) {
+							nRollingHP += nRaceStartBonus;
+							bRaceBonusUsed = true;
+						}
+						nRolledHP += nRollingHP;
+						ost.dprint(String.format("nRollingHP = %d\n"
+								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+						getHdRolls().add(nRolledHP); // saved for de-level?
+						setLevel((getLevel()+1)); // set level to new level
+					}
+				}
+
+				// multi-classed divide hp by number of classes
+				nRolledHP /= classCount;
+				int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+				int newHP = getHpMax()+nRolledHP;
+				int oldHP = getHpMax();
+				
+				ost.dprint(String.format("hpDIFF = %d\n"
+						+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+
+				setLog(getLog()+"character level up, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+
+				setHpCurrent((getHpMax()+nRolledHP));
+				setHpMax((getHpMax()+nRolledHP));
+				
+				ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
+				ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
+		}
+		
+		public void deLevel(CharacterClassList cList,
+				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
+			
+			int classCount = getMyClass().size();
+			int nRolledHP = 0;
+			
+				CharacterClass cC = getClassByID(cList);
+
+				if (getHdRolls() == null)
+					setHdRolls(new ArrayList<Integer>());
+				
+				for (int ii = (getLevel()-1); ii >= 0; ii--) {
+					LevelClass oL = cC.getLevelByLevel(ii);
+					
+					ost.dprint("checking deLevel "+oL.getLevel()+"\n");
+					
+					if (getExperience() < oL.getExpReq()) {
+						int nRollingHP = 0;
+						int nDiceCount = 1;
+						int nDiceSize = 4;
+						int nClassHPBonus = 0;
+						
+						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
+								cList, eList, rList, aList);
+						AbilityStatClass aStat = 
+								aList.getContent().get(nConScore);
+						int nConBonus = aStat.consitution.hitpointAdjustment;
+						if (hasBarbarianCon(cList,eList, rList))
+							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+						if (hasFighterCon(cList, eList, rList))
+							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+						nConBonus /= classCount;
+
+						nDiceCount = oL.getHitDiceNumber();
+						nDiceSize = oL.getHitDiceSize();
+						nClassHPBonus = oL.getHitPointBonus();
+						nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+
+						ost.dprint(String.format("deLevel %d\n"
+								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+								+ "plus ConBonus %d\n",
+								(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+								nClassHPBonus, nConBonus));
+						
+						nRollingHP += nClassHPBonus;
+						nRollingHP += nConBonus; // update conBonus each level?
+						nRolledHP -= nRollingHP;
+						ost.dprint(String.format("nRollingHP = %d\n"
+								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
+						setLevel((getLevel()-1)); // set level to new level
+					}
+				}
+			// multi-classed divide hp by number of classes
+			nRolledHP /= classCount;
+			int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+			int newHP = getHpMax()-nRolledHP;
+			int oldHP = getHpMax();
+			ost.dprint(String.format("hpDIFF = %d\n"
+			+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+
+			setLog(getLog()+"character de-level, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+
+			setHpCurrent((getHpMax()+nRolledHP));
+			setHpMax((getHpMax()+nRolledHP));
+
+			ost.dprint("DeLevel MaxHP:"+ getHpMax()+"\n");
+			ost.dprint("DeLevel CurHP:"+ getHpCurrent()+"\n");
+		}
+		
+		
+		/**
 		 * return this class struct from ID
 		 * @param cList
 		 * @return
@@ -268,6 +432,7 @@ public class PlayerClass implements Serializable, Comparable {
 			this.experience += experience;
 			if (this.experience < 0)
 				this.experience = 0;
+			setLog(getLog()+"character experience modified :"+experience+"\n");
 		}
 		
 		/**
@@ -1286,15 +1451,16 @@ public class PlayerClass implements Serializable, Comparable {
 			}
 		}
 
-		// get racial adjustments
-		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
-		if (myRace != null) {
-			for (int i=0;i<myRace.getThiefAbiltyAdjustments().size();i++) {
-				SkillsClass oS = myRace.getThiefAbiltyAdjustments().get(i);
-				SkillsClass aS = aScores.get(i);
-				aS = skillsCompare(oS, aS);
-			}
-		}
+// RACE does not grant base skills, you can apply a extra-ability to do that
+//		// get racial adjustments
+//		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+//		if (myRace != null) {
+//			for (int i=0;i<myRace.getThiefAbiltyAdjustments().size();i++) {
+//				SkillsClass oS = myRace.getThiefAbiltyAdjustments().get(i);
+//				SkillsClass aS = aScores.get(i);
+//				aS = skillsCompare(oS, aS);
+//			}
+//		}
 		
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1314,7 +1480,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	private SkillsClass skillsCompare(SkillsClass oS, SkillsClass aS) {
-		if (oS.getScore() > oS.getScore())
+		if (oS.getScore() > aS.getScore())
 			aS.setScore(oS.getScore());
 		return(aS);
 	}
@@ -1328,7 +1494,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<SkillsClass> getAllThiefSkillAdjustments(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
@@ -1347,8 +1513,8 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					for (int i=0;i<lE.getThiefSkills().size();i++) {
-						SkillsClass oS = lE.getThiefSkills().get(i);
+					for (int i=0;i<lE.getThiefSkillAdjustments().size();i++) {
+						SkillsClass oS = lE.getThiefSkillAdjustments().get(i);
 						SkillsClass aS = aScores.get(i);
 						aS = skillsAdjustments(oS, aS);
 					}
@@ -1369,12 +1535,26 @@ public class PlayerClass implements Serializable, Comparable {
 		
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
-			for (int i=0;i<eA.getThiefSkillsBase().size();i++) {
-				SkillsClass oS = eA.getThiefSkillsBase().get(i);
+			for (int i=0;i<eA.getThiefSkillsBonus().size();i++) {
+				SkillsClass oS = eA.getThiefSkillsBonus().get(i);
 				SkillsClass aS = aScores.get(i);
 				aS = skillsAdjustments(oS, aS);
 			}
 
+		// now check dex ability score
+		int abilityTotal = 
+				getAbilityScore(ABILITY_DEXTERITY, cList, eList, rList, aList);
+
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = 
+					aList.getContent().get(abilityTotal);
+			for(int i=0;i<aStat.dexterity.skillsAdjustments.size();i++) {
+				SkillsClass oS = aStat.dexterity.skillsAdjustments.get(i);
+				SkillsClass aS = aScores.get(i);
+				aS = skillsAdjustments(oS, aS);
+			}
+		}
+		
 		return(aScores);
 	}
 	

@@ -401,7 +401,8 @@ public class Panel_Player extends javax.swing.JPanel {
 		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(
 				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
 		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
+				ost.abilityStatList);
 
 		skillsPanel.removeAll();
 		for (int i = 0; i < skillsBase.size(); i++) {
@@ -409,7 +410,7 @@ public class Panel_Player extends javax.swing.JPanel {
 			SkillsClass tJ = skillsAdj.get(i);
 			SkillsClass tS = skillsBase.get(i);
 			int finalSkill = tS.getScore() + tJ.getScore();
-			if (finalSkill != 0) {
+			if (tS.getScore() != 0) {
 				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
 						+ tJ.getScore();
 				JLabel name = new JLabel(tS.getAbbrev());
@@ -422,7 +423,8 @@ public class Panel_Player extends javax.swing.JPanel {
 				skillsPanel.add(skills);
 			}
 		}
-
+		skillsPanel.revalidate();
+		
 		// arcane spells
 		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(
 				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
@@ -436,7 +438,7 @@ public class Panel_Player extends javax.swing.JPanel {
 			int base = arcaneBase[i];
 			int adj = arcaneAdj[i];
 			int finalSkill = base+adj;
-			if (finalSkill != 0) {
+			if (base != 0) {
 				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
 				JLabel name = new JLabel("L"+(i+1));
 				name.setToolTipText(tooltip);
@@ -448,6 +450,7 @@ public class Panel_Player extends javax.swing.JPanel {
 				arcaneSpellsPanel.add(arcanePanel);
 			}
 		}
+		arcaneSpellsPanel.revalidate();
 		
 		// divine spells
 		int divineBase[] = pc.getAllDivineSpellsPerLevel(
@@ -462,7 +465,7 @@ public class Panel_Player extends javax.swing.JPanel {
 			int base = divineBase[i];
 			int adj = divineAdj[i];
 			int finalSkill = base+adj;
-			if (finalSkill != 0) {
+			if (base != 0) {
 				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
 				JLabel name = new JLabel("L"+(i+1));
 				name.setToolTipText(tooltip);
@@ -474,7 +477,7 @@ public class Panel_Player extends javax.swing.JPanel {
 				divineSpellsPanel.add(divinePanel);
 			}
 		}
-		
+		divineSpellsPanel.revalidate();
 	}
 
 	/** This method is called from within the constructor to

@@ -927,7 +927,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				ost.mainFrame, true, ost, currentPlayer);
 		dDialog.setVisible(true);
 
-		// when edit done reload character to panel
+		// when edit done reload character to panel to update w/changes
 		updatePlayerPanel();
 	}
 

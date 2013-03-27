@@ -1,8 +1,8 @@
 <entries>
   <ChartClass>
-    <myID>644faffc-0046-4207-b121-ad97e9c44bea</myID>
+    <myID>30bfa334-aa86-4207-bda7-07955af3f844</myID>
     <name>Ability Check</name>
-    <description>*House Rule*. Base chance to perform activity that utilizes this ability score. Modifiers: +/-20% Moderate difficulty, +/-40% Hard Difficulty, +/-70% Impossible (plus for decending, minus for ascending)</description>
+    <description>*House Rule*.Base chance to perform activity that utilizes this ability score. Modifiers: +/-20% Moderate difficulty, +/-40% Hard Difficulty, +/-70% Impossible (plus for decending, minus for ascending)</description>
     <column>
       <ChartColumn>
         <name>Ability Score</name>
@@ -101,7 +101,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>234aac2a-40ce-4850-8758-7f330b38d865</myID>
+    <myID>0d3f1e42-88ef-42f8-8414-f8a3c27c2739</myID>
     <name>AC Modifiers</name>
     <description>Various mofidiers applied to armor class. * only applies of the target has no dexterity bonus to AC.</description>
     <column>
@@ -109,8 +109,8 @@
         <name>Circumstance</name>
         <width>167</width>
         <row>
-          <string>Otto’s irresistable dance</string>
-          <string>Tensor’s transformation</string>
+          <string>Otto&apos;s irresistable dance</string>
+          <string>Tensor&apos;s transformation</string>
           <string>flank attack</string>
           <string>rear attack</string>
           <string>flank attack</string>
@@ -143,7 +143,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>6b6a5bdd-9626-4c32-a55a-de753bd37eaa</myID>
+    <myID>c7cd7bc1-9054-43f7-b978-6a8af04bec52</myID>
     <name>Armor Encumbrance</name>
     <description>Encumbrance values for armor types.</description>
     <column>
@@ -235,7 +235,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>00d4c14b-8ec9-4077-b27a-fdb094016a48</myID>
+    <myID>0e7faf0c-3f38-4c1b-93af-82e9e639aedd</myID>
     <name>Armor I</name>
     <description>* For non-magic armour. Magic armour is un-encumbering, and allows a maximum move rate 30 ft faster than normal (up to 120 ft). Magic shields weigh as much as normal shields of the same type. OSRIC, p.30</description>
     <column>
@@ -338,7 +338,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>b6dd891a-3147-4ef3-8c67-1d3681e69bed</myID>
+    <myID>7878d914-62c9-4ce8-891b-8733e0916445</myID>
     <name>Armor Rating</name>
     <description>Armor values for armor. OSRIC, p.30</description>
     <column>
@@ -374,7 +374,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>ba476b1b-a12b-4b0c-a4c8-054ee8159983</myID>
+    <myID>bbef2601-a586-4856-b202-82786869a88e</myID>
     <name>Assassin Matrix</name>
     <description>Assassin attack progression.</description>
     <column>
@@ -602,7 +602,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>4f364236-2b93-4cab-b450-9194f356527f</myID>
+    <myID>97ee4e42-513f-4bba-9f5e-d2ad5d68f505</myID>
     <name>Assassin Saves</name>
     <description>Assassin saving throw chart.</description>
     <column>
@@ -670,7 +670,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>8a89a08a-ecf8-48d9-87f4-c13cd58777be</myID>
+    <myID>83c02dfe-0b14-4181-b009-c93318d9eae6</myID>
     <name>Charisma Chart</name>
     <description>Charisma adjustment chart.</description>
     <column>
@@ -770,12 +770,12 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>5274326d-9089-47fd-ace1-6d1bbb47d41c</myID>
+    <myID>a92b5d51-b02d-429d-8858-03c16d86249c</myID>
     <name>Cleric Experience</name>
     <description>Cleric level progression. * Constitution hp adjustments no longer apply Each level gained thereafter requires 225,000 experience points and grants +2 hit points. OSRIC, p. 10</description>
     <column>
       <ChartColumn>
-        <name>﻿level</name>
+        <name>ï»¿level</name>
         <width>75</width>
         <row>
           <string>1</string>
@@ -868,12 +868,12 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>10b84700-08ce-48be-979a-3d6928c13746</myID>
+    <myID>1386d418-47ab-4adf-8a61-d57fb6588c58</myID>
     <name>Cleric Matrix</name>
     <description>Cleric to hit AC matrix, OSRIC p. 11</description>
     <column>
       <ChartColumn>
-        <name>﻿level</name>
+        <name>ï»¿level</name>
         <width>45</width>
         <row>
           <string>1-3</string>
@@ -1162,7 +1162,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>02f556df-a75e-48ef-837d-ad6bdacac905</myID>
+    <myID>14bea457-060a-40a3-9e69-11da1b094eb9</myID>
     <name>Cleric Saves</name>
     <description>Saving throws for Clerics, Druids/etc.</description>
     <column>
@@ -1248,12 +1248,12 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>d835c8cc-4900-45bd-91b5-b0fbb4081bf2</myID>
+    <myID>762fbc52-aeff-43c3-b683-eb804c14a678</myID>
     <name>Cleric Spell Costs</name>
     <description>List of spells and costs typically charged for NPC to cast for party.</description>
     <column>
       <ChartColumn>
-        <name>﻿Cleric Spell Requested</name>
+        <name>ï»¿Cleric Spell Requested</name>
         <width>133</width>
         <row>
           <string>astralspell</string>
@@ -1348,7 +1348,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>e1ec364e-d840-4b82-b9e5-74bbe91a2b3d</myID>
+    <myID>2332a5ee-44be-4163-9eb1-b4780d1e2075</myID>
     <name>Cleric Spells Gained</name>
     <description>Cleric spells gained per level.</description>
     <column>
@@ -1636,9 +1636,9 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>bac26d7d-7905-4d30-bc1b-9964f2f010a2</myID>
+    <myID>ed4eaffc-7c43-4601-8d98-1cf2e0e48cc3</myID>
     <name>Cleric Turn Undead</name>
-    <description>Normally 2d6 creatures are affected by Turn Undead. Exceptions are paladins and Type 13 creatures, of which only 1d2 are affected, and results of “D”, which affect 1d6+6 creatures. Turning lasts for 3d4 rounds. OSRIC, p. 123</description>
+    <description>Normally 2d6 creatures are affected by Turn Undead. Exceptions are paladins and Type 13 creatures, of which only 1d2 are affected, and results of &quot;D&quot;, which affect 1d6+6 creatures. Turning lasts for 3d4 rounds. OSRIC, p. 123</description>
     <column>
       <ChartColumn>
         <name>Type of Undead</name>
@@ -1853,7 +1853,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>6ea14dd4-e7e8-4686-a5d4-30e02c0697f0</myID>
+    <myID>e4bcad5d-61af-42f7-9447-e2434be28aa6</myID>
     <name>Common Healing Results</name>
     <description>Ranges for common healing spells and magic items.</description>
     <column>
@@ -1889,7 +1889,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>46b9957e-7516-4517-b920-bcc9885cf050</myID>
+    <myID>01524905-ec4f-4cef-9e87-65a66e2ccce9</myID>
     <name>Constitution Chart</name>
     <description>Adjustments for constitution scores, OSRIC p. 359</description>
     <column>
@@ -1985,7 +1985,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>311ccd4d-5d36-44be-81e5-21ec7c9a0858</myID>
+    <myID>afbb886b-43d4-4d1d-8b41-da77209cb5e7</myID>
     <name>Container Capacity</name>
     <description>Various containers max capacity in gp.</description>
     <column>
@@ -2042,15 +2042,15 @@
           <string>3</string>
           <string>2</string>
           <string>1</string>
-          <string>½</string>
-          <string>¼</string>
+          <string>1/2</string>
+          <string>1/4</string>
           <string>50</string>
           <string>10</string>
           <string>50</string>
           <string>10</string>
           <string>2</string>
           <string>1</string>
-          <string>¼</string>
+          <string>1/4</string>
           <string>4</string>
           <string>1</string>
           <string>3</string>
@@ -2062,12 +2062,12 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>0333157e-fbf1-47df-96b5-75db91d6f685</myID>
+    <myID>4ef0f688-3ca9-43db-84cc-5542724e2f37</myID>
     <name>Cover and Concealment</name>
     <description>Hard cover will increase chances for saving throws as noted. Cover equal to 90% (or better) will also give the target creatures the benefit of no damage whatsoever if the appropriate saving throw is successful.</description>
     <column>
       <ChartColumn>
-        <name>﻿Target has about</name>
+        <name>ï»¿Target has about</name>
         <width>128</width>
         <row>
           <string>25% cover</string>
@@ -2098,7 +2098,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>69781336-5bd0-4d60-a469-0dcffc83bce9</myID>
+    <myID>944e3289-6818-429d-9f27-1a83a2dc191e</myID>
     <name>Detect Invisible</name>
     <description>Note: You may give unintelligent creatures with keen hearing or sense of smell the equivalent of intelligence to reflect detection of invisible creatures. Check each round the creature is exposed to invisibility. Once detected, the invisible creature will be kept track of thereafter, as the detector will be able to note the cause. Any attacks incur the -4 penalty of attacking an invisible opponent, of course, and the invisible creature likewise is entitled to +4 on saving throws.</description>
     <column>
@@ -2241,7 +2241,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>2ba9b736-c6b4-4411-9061-946004a74dd9</myID>
+    <myID>3b77ea29-5aa4-498a-b927-78c8e9129477</myID>
     <name>Dexterity Chart</name>
     <description>Dexterity score adjustments, OSRIC P 359</description>
     <column>
@@ -2337,12 +2337,12 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>eeacd41c-9406-42dd-a106-e3170286cb95</myID>
+    <myID>8eb26dfa-83be-40a4-8f81-4d7530d4efad</myID>
     <name>Druid Matrix</name>
     <description>Druid to hit AC table, OSRIC p. 12</description>
     <column>
       <ChartColumn>
-        <name>﻿level</name>
+        <name>ï»¿level</name>
         <width>45</width>
         <row>
           <string>1-3</string>
@@ -2587,7 +2587,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>df3e6e60-3cf4-45c4-b551-c54541d60565</myID>
+    <myID>dccd2d70-3b8e-4ffe-8ac5-c198990e053d</myID>
     <name>Druid Saves</name>
     <description>Saving throws for druids.</description>
     <column>
@@ -2661,7 +2661,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>cf4a754c-8d9c-42b3-af92-e98ad09ee600</myID>
+    <myID>3fc61703-7207-4547-8e68-17b68cce5578</myID>
     <name>Dwarvish Detections</name>
     <description>Racial abilities of dwarves to detect underground features.</description>
     <column>
@@ -2689,7 +2689,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>586e4324-2ff7-4a92-a0bd-ea7b56abee04</myID>
+    <myID>af6ac404-1e05-46ec-8178-c5bc69f34329</myID>
     <name>Encounter Reaction</name>
     <description>Reaction is determined by rolling percentile dice, adjusting the score for charisma and applicable loyalty adjustment as if the creature were a henchman of the character speaking, and the modified score of the percentile dice is compared to the table. * Or morale check if appropriate.</description>
     <column>
@@ -2723,7 +2723,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>9805a72e-cce1-4396-a736-42768fb7080b</myID>
+    <myID>a23afd96-a365-4d94-954f-836cbc772207</myID>
     <name>Encumbrance</name>
     <description>Encumbrance for characters in GP.</description>
     <column>
@@ -2851,7 +2851,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>4a67c125-bc4e-46ed-b980-b57a972ee41a</myID>
+    <myID>21e595db-054a-4a06-824a-6a8fe06663ea</myID>
     <name>Fighter Matrix</name>
     <description>Fighter to hit AC chart.</description>
     <column>
@@ -3453,7 +3453,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>3a5b4155-c6a1-48bf-b54d-2eec71155f7b</myID>
+    <myID>b618d3e6-5356-4b5b-857e-557f818dcec2</myID>
     <name>Fighter Saves</name>
     <description>Fighter/Monster Saves, OSRIC, p.363. Non-intelligent monsters save at 1/2 HD except for poison/death.</description>
     <column>
@@ -3557,7 +3557,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>a82316c0-fb20-427c-8e57-38d37ed68867</myID>
+    <myID>176351c6-962f-4af0-9afb-9f4f1e51987f</myID>
     <name>Gaze/Eye Attack</name>
     <description>The chances of someone meeting the gaze of a creature with gaze attacks.</description>
     <column>
@@ -3587,20 +3587,20 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>5051de34-0e17-4909-9fcb-ab8873090328</myID>
+    <myID>255ecbfb-6835-4f22-9ee2-9a034aa3141d</myID>
     <name>Grapple Attack Modifiers</name>
-    <description>Base chance to hit. Multiply attacker’s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker cannot grapple if either or both hands are holding anything.</description>
+    <description>Base chance to hit. Multiply attacker&apos;s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker cannot grapple if either or both hands are holding anything.</description>
     <column>
       <ChartColumn>
         <name>Reason</name>
         <width>181</width>
         <row>
-          <string>﻿Attacker’s dexterity, per point</string>
+          <string>ï»¿Attacker&apos;s dexterity, per point</string>
           <string>target armor leather or padded</string>
           <string>target armor chain, ring, scale</string>
           <string>target banded, plate, splint</string>
           <string>Target slowed/stunned</string>
-          <string>Target base move 3” faster</string>
+          <string>Target base move 3&quot; faster</string>
           <string>Target hasted</string>
         </row>
       </ChartColumn>
@@ -3613,7 +3613,7 @@
           <string>+20%</string>
           <string>+30%</string>
           <string>+20%</string>
-          <string>-10% per 3”</string>
+          <string>-10% per 3&quot;</string>
           <string>-20%</string>
         </row>
       </ChartColumn>
@@ -3621,12 +3621,12 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>f9d4efa3-1f80-4b22-9403-831b70baf978</myID>
+    <myID>07389a56-53dc-4d68-a8de-7ea18206445f</myID>
     <name>Grapple Result</name>
     <description>Any hold shown remains in effect from round to round unless the target scores a higher percentage hold. Damage accrues until a hold is broken or until the holder elects to try for a different hold. The target may still inflict damage by lesser hold results shown after the double slashes (//). These might result in both opponents falling to the ground and continuing their grappling there. Note: If the opponent is stunned, a second attack may immediately be made, and the stunned opponent cannot counter for 1 round.</description>
     <column>
       <ChartColumn>
-        <name>﻿﻿﻿﻿Dice Score</name>
+        <name>ï»¿ï»¿ï»¿ï»¿Dice Score</name>
         <width>67</width>
         <row>
           <string>1-20</string>
@@ -3668,7 +3668,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>83b1d8dc-9ef7-4796-bd10-70cb4db2ce9c</myID>
+    <myID>d3ed9e32-7cf4-4c6a-944d-60f845b9f367</myID>
     <name>Grapple Result Modifiers</name>
     <description>In each round of grappling combat there will be an attack and a counter. Any existing hold automatically goes first until broken. Once it is determined that a grappling attack succeeds, the percentile dice must be rolled again to find what hold is gained.</description>
     <column>
@@ -3676,9 +3676,9 @@
         <name>Reason</name>
         <width>230</width>
         <row>
-          <string>Attacker’s dexterity, per point</string>
-          <string>Attacker‘s strength per point</string>
-          <string>Attacker‘s strength per 10% over 18</string>
+          <string>Attacker&apos;s dexterity, per point</string>
+          <string>Attacker&apos;s strength per point</string>
+          <string>Attacker&apos;s strength per 10% over 18</string>
           <string>Target slowed</string>
           <string>Target stunned</string>
           <string>Target helpless</string>
@@ -3718,7 +3718,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>23c33462-0a2e-451d-94e1-73872a9afd55</myID>
+    <myID>6ba407a5-3c34-444d-a493-6e0bb1cea522</myID>
     <name>Hear Noise</name>
     <description>Chances to hear noise when listening.</description>
     <column>
@@ -3752,12 +3752,12 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>d3f46e4c-ab59-4d1d-92e0-9ecb07fbf6b5</myID>
+    <myID>35eb218a-0106-4fa7-af9f-2059f308dfbd</myID>
     <name>Hit Modifiers</name>
     <description>* dex and shield do not apply. ** shield does not apply.</description>
     <column>
       <ChartColumn>
-        <name>﻿Circumstance</name>
+        <name>ï»¿Circumstance</name>
         <width>361</width>
         <row>
           <string>Protection From Evil</string>
@@ -3804,7 +3804,7 @@
           <string>-4/-2</string>
           <string>-4</string>
           <string>-1</string>
-          <string>+l</string>
+          <string>+1</string>
           <string>+4</string>
           <string>-4/-2</string>
           <string>+2</string>
@@ -3832,20 +3832,20 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>63cb885a-931c-4a6c-b174-bc7a0b84dba5</myID>
+    <myID>bb588fe9-43d4-4984-8525-9adbbb2c14b1</myID>
     <name>Hurled Weapons and Missiles</name>
-    <description>* Heavy crossbows may not be used from horseback; only a footman can brace them correctly before firing. † Some specially-made bows (sold at special cost if at all—GM’s discretion) permit the user to add his or her strength bonus to damage inflicted with the weapon. Otherwise the strength damage bonus with missile weapons is restricted to hurled weapons (axes, ham-mers, clubs, darts, javelins and spears). OSRIC, p. 29</description>
+    <description>* Heavy crossbows may not be used from horseback; only a footman can brace them correctly before firing. + Some specially-made bows (sold at special cost if at allâ€”GM&apos;s discretion) permit the user to add his or her strength bonus to damage inflicted with the weapon. Otherwise the strength damage bonus with missile weapons is restricted to hurled weapons (axes, ham-mers, clubs, darts, javelins and spears). OSRIC, p. 29</description>
     <column>
       <ChartColumn>
         <name>Weapon type</name>
         <width>146</width>
         <row>
           <string>Axe, hand</string>
-          <string>Bow, long †</string>
-          <string>Bow, short †</string>
+          <string>Bow, long +</string>
+          <string>Bow, short +</string>
           <string>Club</string>
-          <string>Composite bow, long †</string>
-          <string>Composite bow, short †</string>
+          <string>Composite bow, long +</string>
+          <string>Composite bow, short +</string>
           <string>Crossbow, heavy*</string>
           <string>Crossbow, light</string>
           <string>Dagger</string>
@@ -3906,7 +3906,7 @@
           <string>1</string>
           <string>2</string>
           <string>2</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -3949,10 +3949,10 @@
           <string>12</string>
           <string>4</string>
           <string>1</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>5</string>
           <string>2</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>5</string>
         </row>
       </ChartColumn>
@@ -3980,7 +3980,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>a9a53a38-2306-4754-8b4c-02e651a76a04</myID>
+    <myID>3e0cbdd0-7e85-4343-88ee-e968eb11f82a</myID>
     <name>Intelligence Chart</name>
     <description>Intelligence adjustments.</description>
     <column>
@@ -4034,7 +4034,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>b6f9f129-0083-4f5a-a661-e30029db5af7</myID>
+    <myID>59d1faee-75ef-4af1-8873-28dca13f4e53</myID>
     <name>Item Saves</name>
     <description>Saving throws for items. Source OSRIC, p372</description>
     <column>
@@ -4270,9 +4270,9 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>d96d982d-0c09-4017-ab88-d3e24f1c75f3</myID>
+    <myID>4e3dc0b9-901b-48d7-86be-6a7f3bafe809</myID>
     <name>Light Sources</name>
-    <description>Duration, range of different light sources.* Illumination is from burning 1 pot (pint) of fine oil. ** Illumination is 1” wide only and can be masked by shutter.</description>
+    <description>Duration, range of different light sources.* Illumination is from burning 1 pot (pint) of fine oil. ** Illumination is 1&quot; wide only and can be masked by shutter.</description>
     <column>
       <ChartColumn>
         <name>Light Source</name>
@@ -4292,10 +4292,10 @@
         <row>
           <string>40&apos;</string>
           <string>30&apos;</string>
-          <string>80’*</string>
-          <string>10’</string>
-          <string>15’</string>
-          <string>20’</string>
+          <string>80&apos;*</string>
+          <string>10&apos;</string>
+          <string>15&apos;</string>
+          <string>20&apos;</string>
         </row>
       </ChartColumn>
       <ChartColumn>
@@ -4314,12 +4314,12 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>31f0a5df-a5bf-4f08-94e3-d64549fa387f</myID>
+    <myID>ed856847-ffdd-43a8-8377-662ef7b499d1</myID>
     <name>Magic-User Experience</name>
     <description>Magic-User level progression. * Constitution-based hp adjustments no longer apply. Each level gained thereafter requires 375,000 experience points and grants +1 hit point. OSRIC, p. 16</description>
     <column>
       <ChartColumn>
-        <name>﻿level</name>
+        <name>ï»¿level</name>
         <width>75</width>
         <row>
           <string>1</string>
@@ -4412,7 +4412,7 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>1d2d7ddf-15c5-4a9f-ae8e-5affea0a7c0a</myID>
+    <myID>209c99c1-7bde-4e65-bb11-3454906dc8d5</myID>
     <name>Magic-User Matrix</name>
     <description>Magic-user to hit table. OSRIC, p.17</description>
     <column>
@@ -4662,7 +4662,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>647945a4-1339-4f22-adf0-635b5ace3192</myID>
+    <myID>87cd0844-00c7-4153-9210-3a132eeb1998</myID>
     <name>Magic-User Saves</name>
     <description>Saving throws for magic-users</description>
     <column>
@@ -4736,7 +4736,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>518ad935-b30f-47e2-bd1f-f65653c229d4</myID>
+    <myID>834a6f2d-4fb2-4d17-99e4-40b39d1fde73</myID>
     <name>Magic-User Spell Acquisition</name>
     <description>Chance to know spells and min/max number</description>
     <column>
@@ -4783,7 +4783,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>0815de2c-7dc2-4a2c-b171-ba6913a2adce</myID>
+    <myID>2085418f-6453-42bf-be7d-5c1e4f47ace1</myID>
     <name>Magic-User Spells Gained</name>
     <description>Magic-user spells gained per level.</description>
     <column>
@@ -5176,12 +5176,12 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>1062dd1f-e94c-4732-be46-5d4fa2298bae</myID>
+    <myID>826de776-dde9-4dce-b9c6-127dfcdd61ae</myID>
     <name>Melee Weapons</name>
     <description>Melee Weapon type versus Armor, Size, Space, Speed, Damage</description>
     <column>
       <ChartColumn>
-        <name>﻿Weapon</name>
+        <name>ï»¿Weapon</name>
         <width>170</width>
         <row>
           <string>Awl pike</string>
@@ -5228,11 +5228,11 @@
           <string>Scimitar</string>
           <string>Spear</string>
           <string>Spetum</string>
-          <string>﻿Sword, bastard</string>
-          <string>﻿Sword, broad</string>
+          <string>ï»¿Sword, bastard</string>
+          <string>ï»¿Sword, broad</string>
           <string>Sword, long</string>
-          <string>﻿Sword, short</string>
-          <string>﻿﻿Sword, two-handed</string>
+          <string>ï»¿Sword, short</string>
+          <string>ï»¿ï»¿Sword, two-handed</string>
           <string>Trident</string>
           <string>Voulge</string>
         </row>
@@ -5300,14 +5300,14 @@
         <row>
           <string>18&apos;</string>
           <string>c. 4&apos;</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>c. 5&apos;</string>
           <string>c. 6&apos;</string>
           <string>8&apos;+</string>
           <string>c. 5&apos;</string>
           <string>c. 3&apos;</string>
           <string>c. 15&quot;</string>
-          <string>c. 3½&apos;</string>
+          <string>c. 31/2&apos;</string>
           <string>8&apos;+</string>
           <string>8&apos;</string>
           <string>2&apos;+</string>
@@ -5323,15 +5323,15 @@
           <string>7&apos;+</string>
           <string>5&apos;+</string>
           <string>5&apos;+</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>8&apos;+</string>
           <string>c. 3&apos;-5&apos;</string>
           <string>c. 3&apos;</string>
           <string>c. 14&apos;</string>
           <string>10&apos;</string>
           <string>12&apos;</string>
-          <string>c. 2½&apos;</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 21/2&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>c. 4&apos;</string>
           <string>3&apos;-5&apos;</string>
           <string>7&apos;+</string>
@@ -5342,9 +5342,9 @@
           <string>c. 3&apos;</string>
           <string>5&apos;-13&apos;+</string>
           <string>8&apos;+</string>
-          <string>c. 4½&apos;</string>
-          <string>c. 3½&apos;</string>
-          <string>c. 3½&apos;</string>
+          <string>c. 41/2&apos;</string>
+          <string>c. 31/2&apos;</string>
+          <string>c. 31/2&apos;</string>
           <string>c. 2&apos;</string>
           <string>c. 6&apos;</string>
           <string>4&apos;-8&apos;+</string>
@@ -5364,7 +5364,7 @@
           <string>3&apos;</string>
           <string>1&apos;-3&apos;</string>
           <string>1&apos;</string>
-          <string>3½&apos;</string>
+          <string>31/2&apos;</string>
           <string>2&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -5381,7 +5381,7 @@
           <string>5&apos;</string>
           <string>5&apos;</string>
           <string>2&apos;</string>
-          <string>2½&apos;</string>
+          <string>21/2&apos;</string>
           <string>1&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -6096,7 +6096,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>dd696d63-cac5-45f9-8dc0-c73cce08f34e</myID>
+    <myID>64fa129b-c30c-4285-8514-3a965d0f05d0</myID>
     <name>Missiles Range/Fire Rate</name>
     <description>Hurled weapons range and fire rates. Missiles are -5 at long range, -2 at medium.</description>
     <column>
@@ -6131,7 +6131,7 @@
           <string>2</string>
           <string>2</string>
           <string>1</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -6155,7 +6155,7 @@
           <string>8</string>
           <string>6</string>
           <string>1</string>
-          <string>1½</string>
+          <string>11/2</string>
           <string>1</string>
           <string>2</string>
           <string>5</string>
@@ -6197,7 +6197,7 @@
           <string>24</string>
           <string>18</string>
           <string>3</string>
-          <string>4½</string>
+          <string>41/2</string>
           <string>3</string>
           <string>6</string>
           <string>20</string>
@@ -6209,7 +6209,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>d54fa9cf-fc3a-461d-a7b1-0d4d201d9b4c</myID>
+    <myID>aafe033c-46ef-4557-bc60-abb3c76e14ce</myID>
     <name>Monster Attack Matrix</name>
     <description>Attack matrix used for monsters or creatures.  Any + above 3 equals another HD, missiles are -5 at long range, -2 at medium. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -6987,7 +6987,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>ab10cc93-4c98-428a-b9ca-3086b3392010</myID>
+    <myID>3cf5e3ad-fb0b-4448-a5f0-83c4c497357f</myID>
     <name>Monster BaB Matrix</name>
     <description>Monster base attack bonuse. Used if using d20 mode in settings. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -7065,7 +7065,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>fa67528b-7c62-474e-b390-81e659e85bb7</myID>
+    <myID>385118ae-8cf3-49a0-919e-0955a99edae1</myID>
     <name>Monster HD to Level</name>
     <description>Monster HD to Level Chart, OSRIC, p123</description>
     <column>
@@ -7129,7 +7129,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>0d716604-0ee9-4330-babf-d113ca5e7252</myID>
+    <myID>50a74f7b-d8a2-43fa-9beb-e62897a3114a</myID>
     <name>Monster Saves</name>
     <description>Saving throws used for monster or creatures. *DO NOT DELETE OR RENAME THIS CHART*</description>
     <column>
@@ -7299,7 +7299,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>a3d6ab13-956c-4390-9938-44139d353b3e</myID>
+    <myID>1811fb70-f757-4d94-a293-aa1064958677</myID>
     <name>Monster THACO Matrix</name>
     <description>Monster THACOs. Used if using THACO attack in settings. *DO NOT RENAME OR DELETE THIS CHART*</description>
     <column>
@@ -7377,7 +7377,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>b844afd6-c1c3-4189-9751-291cd20d634e</myID>
+    <myID>d76a50dd-fae1-4870-80c8-2963662c3502</myID>
     <name>Monster XP Value</name>
     <description>Experience value of monster based on HD, level and abilities.</description>
     <column>
@@ -7500,7 +7500,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>b9041724-5136-4f6d-9c02-87a0d3c69ddc</myID>
+    <myID>a9982b0f-0d4b-472c-b4e0-27746d1c338f</myID>
     <name>Morale Check</name>
     <description>Morale Check modifiers, base is 50% +5% per HD with the listed adjustments. OSRIC, p.125</description>
     <column>
@@ -7540,20 +7540,20 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>5947bd4e-0605-4854-9682-8c40f153f11b</myID>
+    <myID>42c87a0b-45dc-4cfe-b999-974eaca7d692</myID>
     <name>Overbear Attack Modifiers</name>
-    <description>Base chance to hit. Multiply attacker’s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker can have either or both hands otherwise employed.</description>
+    <description>Base chance to hit. Multiply attacker&apos;s armor class by 10, ignoring magical devices (bracers, cloaks, rings, etc.), but adding 1 for each + 1 of magical armor, to find a percentage chance from 100% to 0%. Example plate armor ac3, would be 30%, +1 plate armor would be 31%. Note: The attacker can have either or both hands otherwise employed.</description>
     <column>
       <ChartColumn>
         <name>Reason</name>
         <width>181</width>
         <row>
-          <string>﻿Attacker’s dexterity, per point</string>
+          <string>ï»¿Attacker&apos;s dexterity, per point</string>
           <string>target armor leather or padded</string>
           <string>target armor chain, ring, scale</string>
           <string>target banded, plate, splint</string>
           <string>Target slowed/stunned</string>
-          <string>Target base move 3” faster</string>
+          <string>Target base move 3&quot; faster</string>
           <string>Target hasted</string>
         </row>
       </ChartColumn>
@@ -7566,7 +7566,7 @@
           <string>+20%</string>
           <string>+30%</string>
           <string>+20%</string>
-          <string>-10% per 3”</string>
+          <string>-10% per 3&quot;</string>
           <string>-20%</string>
         </row>
       </ChartColumn>
@@ -7574,7 +7574,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>b60ecbbf-3e08-42e2-b02f-db9dfcded4ca</myID>
+    <myID>f76391e5-802e-4ea0-9031-95703ced2fd1</myID>
     <name>Overbear Result Modifiers</name>
     <description>Once an opponent is overborne, some other form of combat MUST take place.</description>
     <column>
@@ -7616,7 +7616,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>716678b5-36b9-4ebd-a23c-67d62d0d0314</myID>
+    <myID>b44dc06c-92ed-432b-bd6b-43a64db10592</myID>
     <name>Overbear Results</name>
     <description>Once an opponent is overborne, some other form of combat MUST take place.</description>
     <column>
@@ -7660,7 +7660,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>aa94df54-de80-4cf0-8d1d-01d62ca82c7f</myID>
+    <myID>ac23115c-3157-4447-a429-7d338bff6a96</myID>
     <name>Paladin Saves</name>
     <description>Paladin saving throw table. OSRIC, p.19</description>
     <column>
@@ -7764,7 +7764,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>53aa9674-3bb9-4912-9571-680669973527</myID>
+    <myID>519f80d2-fb94-4d52-a47c-a31adef4900a</myID>
     <name>Poison, Ingestive</name>
     <description>* Saving throw at +4, chance of tasting/smelling/seeing poison 80%. ** Saving throw at +3, chance of tasting/smelling/seeing poison 65%. *** Saving throw at +2, chance of tasting/smelling/seeing poison 40%. **** Saving throw at + 1, chance of tasting/smelling/seeing poison 15%.</description>
     <column>
@@ -7827,7 +7827,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>1f72dc97-4245-475e-a08a-4ace5856e3ff</myID>
+    <myID>b3c60485-d7ef-4e3a-9795-ebeeddcd3b09</myID>
     <name>Poison, Insinuative</name>
     <description>* Saving throw at +4, chance of tasting/smelling/seeing poison 80%. ** Saving throw at +3, chance of tasting/smelling/seeing poison 65%. *** Saving throw at +2, chance of tasting/smelling/seeing poison 40%. **** Saving throw at + 1, chance of tasting/smelling/seeing poison 15%.</description>
     <column>
@@ -7885,7 +7885,7 @@
     <type>GENERAL</type>
   </ChartClass>
   <ChartClass>
-    <myID>7263ce2c-918f-49aa-917b-9f28ac27e010</myID>
+    <myID>1293099e-f47c-4326-9d85-4b1596fba643</myID>
     <name>Pummel Attack Modifier</name>
     <description>The base score on percentile dice is opponent AC value times 10 to arrive at a percentage chance to hit, i.e. AC 10 = 100%. AC 9 = 90%. all the way to AC ratings of 0 and minus numbers which indicate no chance or a negative chance to score a hit. Magical protections such as rings, bracers, cloaks, etc. do not count as AC, so ignore them.</description>
     <column>
@@ -7893,9 +7893,9 @@
         <name>Reason</name>
         <width>425</width>
         <row>
-          <string>﻿Attacker’s dexterity, per point</string>
-          <string>Attacker’s strength, per point over 15</string>
-          <string>Attacker’s AC, per point (with negative AC being treated as positive)</string>
+          <string>ï»¿Attacker&apos;s dexterity, per point</string>
+          <string>Attacker&apos;s strength, per point over 15</string>
+          <string>Attacker&apos;s AC, per point (with negative AC being treated as positive)</string>
           <string>Target slowed</string>
           <string>Target Stunned</string>
           <string>Target prone w/o shield or ready weapon and/or helpless</string>
@@ -7921,7 +7921,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>de757cd1-f1dd-4ec4-8926-c60e01c5794f</myID>
+    <myID>d8b59f51-d604-40ea-8a20-2a5cb1d2b162</myID>
     <name>Pummel Result</name>
     <description>* Series ends, determination of next strike must be.made. ** Opponent unable to attack for 1 full round.</description>
     <column>
@@ -7939,7 +7939,7 @@
         </row>
       </ChartColumn>
       <ChartColumn>
-        <name>﻿Result</name>
+        <name>ï»¿Result</name>
         <width>251</width>
         <row>
           <string>blow misses, opponent may counter</string>
@@ -7968,7 +7968,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>e9c44842-8b0c-47e1-8acb-e8d6a0131a71</myID>
+    <myID>c428d4c5-2680-4f47-9f3d-e90d0f7f8cbe</myID>
     <name>Pummel Results Modifier</name>
     <description>In each round of weaponless melee, there will be two pummeling attacks, and possibly several blows per attack. The attacker determines if a strike is successful, and then whether or not it does any damage and how much, if any. Percentile dice are rolled, and the score is modified as shown below.</description>
     <column>
@@ -8020,12 +8020,12 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>7583a2d3-ce95-4634-8ea9-152121017f5b</myID>
+    <myID>756ea573-4f8e-474c-9362-35b1922c6f7e</myID>
     <name>Ranged Weapons</name>
     <description>Ranged Weapons vrs Armor, Rate, Range, Damage.</description>
     <column>
       <ChartColumn>
-        <name>﻿Weapon</name>
+        <name>ï»¿Weapon</name>
         <width>197</width>
         <row>
           <string>Axe, hand</string>
@@ -8076,7 +8076,7 @@
           <string>2</string>
           <string>2</string>
           <string>1</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>1</string>
           <string>2</string>
           <string>3</string>
@@ -8100,7 +8100,7 @@
           <string>8</string>
           <string>6</string>
           <string>1</string>
-          <string>1½</string>
+          <string>11/2</string>
           <string>1</string>
           <string>2</string>
           <string>5</string>
@@ -8142,7 +8142,7 @@
           <string>24</string>
           <string>18</string>
           <string>3</string>
-          <string>4½</string>
+          <string>41/2</string>
           <string>3</string>
           <string>6</string>
           <string>20</string>
@@ -8385,7 +8385,7 @@
     <type>COMBAT</type>
   </ChartClass>
   <ChartClass>
-    <myID>4a1df34d-ee5e-461d-ac83-cf2b0e62c11d</myID>
+    <myID>6ad953f4-cffc-4480-a7fc-f859c02e1646</myID>
     <name>Ranger Matrix</name>
     <description>Ranger to hit table, OSRIC, p. 22</description>
     <column>
@@ -8965,7 +8965,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>81d06f7b-7faf-4faf-a5c4-9e2aab0fa610</myID>
+    <myID>c6459051-7678-43e2-8962-2941d256f26c</myID>
     <name>Ranger Saves</name>
     <description>Ranger saving throw table, OSRIC, p. 22</description>
     <column>
@@ -9069,7 +9069,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>03f2a230-9fe8-4a30-a8e6-927da9bcf291</myID>
+    <myID>57db515d-83b2-44d1-bca7-1c9895142a4f</myID>
     <name>Spell Recovery</name>
     <description>Once rested, magic-users must memorize their spells and clerics must pray and meditate. Allow 15 minutes of game time for memorization or prayer for each spell level. Such activity requires a mind rested by a good sleep and nourished by the body</description>
     <column>
@@ -9119,7 +9119,7 @@
     <type>CLASS</type>
   </ChartClass>
   <ChartClass>
-    <myID>3b836b05-2352-4ba8-a68c-7eab2bdbfa41</myID>
+    <myID>6343c8e5-e362-4d3f-9dd2-0ec7495acc53</myID>
     <name>Strength Chart</name>
     <description>Adjustments for high strength scores, OSRIC p 359</description>
     <column>
@@ -9253,7 +9253,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>28a177e7-3bf9-4f49-bdd1-ecb637c100bb</myID>
+    <myID>2b8d3aa7-4467-446d-b839-5713d500cbc2</myID>
     <name>Thief Backstab</name>
     <description>Thieves make their backstab attack at +4 to hit. Do not include bonus from strength or magic weapons when multiplying damage.</description>
     <column>
@@ -9281,7 +9281,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>fb737edb-3909-498a-83bb-2dec16b13969</myID>
+    <myID>fe7a9821-ff55-4fc8-874a-be85b7a1cfc7</myID>
     <name>Thief Matrix</name>
     <description>Thief to hit table, OSRIC, p.25</description>
     <column>
@@ -9553,7 +9553,7 @@
     <type>MATRIX</type>
   </ChartClass>
   <ChartClass>
-    <myID>e71d97ca-4b40-4115-8819-91e87f9eff2e</myID>
+    <myID>0b1fa149-358b-403a-9ca1-97124d028f29</myID>
     <name>Thief Saves</name>
     <description>Saving Throws for thief.</description>
     <column>
@@ -9633,7 +9633,7 @@
     <type>SAVES</type>
   </ChartClass>
   <ChartClass>
-    <myID>08760769-450a-4c90-b234-1a7e981a944a</myID>
+    <myID>14714259-b8d0-4df9-849c-ec6ed7b0db2d</myID>
     <name>Thief Skills</name>
     <description>Base chance to perform thief abilities for each level.</description>
     <column>
@@ -9911,7 +9911,7 @@
     <type>SPELLS/ABILITIES</type>
   </ChartClass>
   <ChartClass>
-    <myID>cd79e7a1-59fe-495a-a4d8-78c688cbd7e2</myID>
+    <myID>1c2fee9f-98a0-40c6-a9ba-59800f657539</myID>
     <name>Weapon I</name>
     <description>* Long-hafted, pointed weapons, such as the spear, lance (when used dismounted), pole arm, or trident, inflict double damage when set to receive a charge and the foe actually charges. The lance inflicts double damage when used by a character riding a charging heavy warhorse or similar animal; if the attacker is mounted on a normal riding or cavalry horse, the damage should be reduced. OSRIC, p. 29</description>
     <column>
@@ -10040,7 +10040,7 @@
           <string>2 (per dozen)</string>
           <string>3</string>
           <string>1</string>
-          <string>½</string>
+          <string>1/2</string>
           <string>10</string>
           <string>4</string>
           <string>18</string>
@@ -10109,7 +10109,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>30ff7e57-310d-4933-be0d-9751e2180828</myID>
+    <myID>80a1e414-3828-4250-89ec-3a196247790a</myID>
     <name>Weapon II</name>
     <description>Weapons damage, space, weight stats.</description>
     <column>
@@ -10246,7 +10246,7 @@
           <string>NA</string>
           <string>18&apos;</string>
           <string>c. 4&apos;</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>c. 5&apos;</string>
           <string>c. 6&apos;</string>
           <string>8&apos;+</string>
@@ -10254,7 +10254,7 @@
           <string>c. 3&apos;</string>
           <string>c. 15&quot;</string>
           <string>NA</string>
-          <string>c. 3½&apos;</string>
+          <string>c. 31/2&apos;</string>
           <string>8&apos;+</string>
           <string>8&apos;</string>
           <string>2&apos;+</string>
@@ -10270,15 +10270,15 @@
           <string>7&apos;+</string>
           <string>5&apos;+</string>
           <string>5&apos;+</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>8&apos;+</string>
           <string>NA</string>
           <string>c. 3&apos;</string>
           <string>c. 14&apos;</string>
           <string>10&apos;</string>
           <string>12&apos;</string>
-          <string>c. 2½&apos;</string>
-          <string>c. 1½&apos;</string>
+          <string>c. 21/2&apos;</string>
+          <string>c. 11/2&apos;</string>
           <string>c. 4&apos;</string>
           <string>3&apos;-5&apos;</string>
           <string>7&apos;+</string>
@@ -10293,9 +10293,9 @@
           <string>NA</string>
           <string>5&apos;-13&apos;+</string>
           <string>8&apos;+</string>
-          <string>c. 4½&apos;</string>
-          <string>c. 3½&apos;</string>
-          <string>c. 3½&apos;</string>
+          <string>c. 41/2&apos;</string>
+          <string>c. 31/2&apos;</string>
+          <string>c. 31/2&apos;</string>
           <string>c. 2&apos;</string>
           <string>c. 6&apos;</string>
           <string>4&apos;-8&apos;+</string>
@@ -10317,7 +10317,7 @@
           <string>1&apos;-3&apos;</string>
           <string>1&apos;</string>
           <string>see below</string>
-          <string>3½&apos;</string>
+          <string>31/2&apos;</string>
           <string>2&apos;</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -10334,7 +10334,7 @@
           <string>5&apos;</string>
           <string>5&apos;</string>
           <string>2&apos;</string>
-          <string>2½&apos;</string>
+          <string>21/2&apos;</string>
           <string>see below</string>
           <string>2&apos;</string>
           <string>1&apos;</string>
@@ -10558,7 +10558,7 @@
     <type>EQUIPMENT</type>
   </ChartClass>
   <ChartClass>
-    <myID>62db4a1c-9d14-4d16-afeb-aef21be0c790</myID>
+    <myID>9e6a4237-3349-4fcb-90cb-1aa0708f23e8</myID>
     <name>Wisdom Bonus Spells</name>
     <description>Additional spells granted for high wisdom.</description>
     <column>
@@ -10617,7 +10617,7 @@
     <type>ABILITY</type>
   </ChartClass>
   <ChartClass>
-    <myID>16b9a7a7-19bf-4cdd-a705-2f6bd4d21e97</myID>
+    <myID>40b2511c-4359-4dcb-9575-4fa66838695f</myID>
     <name>Wisdom Chart</name>
     <description>Wisdom ability score adjustments.</description>
     <column>

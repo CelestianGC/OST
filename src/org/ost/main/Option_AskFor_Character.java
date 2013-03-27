@@ -503,7 +503,11 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		int nEXP = 0;
 		try {
 			nEXP = Integer.parseInt(addExp);
-			int classCount = currentCharacter.getMyClass().size();
+		} catch (Exception e) {
+			SimpleDialog.showError("Value must be a number.");
+		}
+		if (nEXP != 0) {
+		int classCount = currentCharacter.getMyClass().size();
 			nEXP /= classCount;
 			for(PCClass pC : currentCharacter.getMyClass()) {
 				int nOldLevel = pC.getLevel();
@@ -514,17 +518,25 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					if (nDiffLevel > 0) {
 						// TODO levelup();
 						ost.dprint("Level up! "+nDiffLevel+"\n");
+						
+						pC.levelUP(ost.characterClassList, 
+								ost.extraAbilitiesList, ost.raceList, 
+								ost.abilityStatList, ost);
 					}
 					else {
 						ost.dprint("De-Level! "+nDiffLevel+"\n");
 						// TODO delevel();
+						pC.deLevel(ost.characterClassList, 
+								ost.extraAbilitiesList, ost.raceList, 
+								ost.abilityStatList, ost);
 					}
+					
 				}
-				
 			}
-		} catch (Exception e) {
-			SimpleDialog.showError("Value must be a number.");
-		}
+			// set these on the dialog or we lose them if they changed
+			hpSpinner.setValue(currentCharacter.getHpMax());
+			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			}
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {

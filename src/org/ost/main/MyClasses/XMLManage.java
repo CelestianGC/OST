@@ -3,7 +3,11 @@ package org.ost.main.MyClasses;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CodingErrorAction;
 import java.util.ArrayList;
 
 import org.ost.main.MyUtils.SimpleDialog;
@@ -210,6 +214,7 @@ public class XMLManage {
 	 */
 	public void serializeToXMLFile() {
 		XStream xs = new XStream(new DomDriver("UTF-8"));
+//		XStream xs = new XStream();
 		xs.alias(getListAlias(), getList());
 		xs.alias(getDataAlias(), getData());
 		xs.addImplicitCollection(getList(), getListAlias());
@@ -227,6 +232,12 @@ public class XMLManage {
 
 		try {
 			FileOutputStream fs = new FileOutputStream(getFileName());
+//			CharsetDecoder utf8Decoder = Charset.forName("UTF-8").newDecoder();
+//			utf8Decoder.onMalformedInput(CodingErrorAction.IGNORE);
+//			utf8Decoder.onUnmappableCharacter(CodingErrorAction.IGNORE);
+//			Writer writer = new OutputStreamWriter(fs, utf8Decoder);
+//			Writer writer = new OutputStreamWriter(fs, Charset.forName("UTF-8"));
+//			xs.toXML(getListObject(),writer);
 			xs.toXML(getListObject(),fs);
 		} catch (Exception e) {
 			SimpleDialog.showError(e.getLocalizedMessage()+":error in serializeListToXMLFile");
@@ -240,6 +251,7 @@ public class XMLManage {
 	 */
 	public void deserializeFromXMLFile() {
 		XStream xs = new XStream(new DomDriver("UTF-8"));
+//		XStream xs = new XStream(new DomDriver());
 		xs.alias(getListAlias(), getList());
 		xs.alias(getDataAlias(), getData());
 		xs.addImplicitCollection(getList(), getListAlias());
@@ -255,8 +267,18 @@ public class XMLManage {
 				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		try {
+			// using custom decoder because of characters like
+			// ½ that get used on table/chart/creature imports
+			// we just ignore them otherwise the xml files get exponetially larger
+			// as it adds more and more copies
+			CharsetDecoder utf8Decoder = Charset.forName("UTF-8").newDecoder();
+			utf8Decoder.onMalformedInput(CodingErrorAction.IGNORE);
+			utf8Decoder.onUnmappableCharacter(CodingErrorAction.IGNORE);
 			FileInputStream fis = new FileInputStream(getFileName());
-			xs.fromXML(new InputStreamReader(fis), getListObject());
+			InputStreamReader in = new InputStreamReader(fis, utf8Decoder);
+//			FileInputStream fis = new FileInputStream(getFileName());
+//			xs.fromXML(new InputStreamReader(fis), getListObject());
+			xs.fromXML(in, getListObject());
 		} catch (Exception e) {
 			SimpleDialog.showError(e.getLocalizedMessage()+":error in deserializeFromXMLFile");
 		}
@@ -288,7 +310,7 @@ public class XMLManage {
 		try {
 			resultXML = xs.toXML(getListObject());
 		} catch (Exception e) {
-			SimpleDialog.showError(e.getLocalizedMessage()+":error in serializeListToXML");
+			SimpleDialog.showError(e.getLocalizedMessage()+":error in serializeToXML");
 		}
 		
 		return resultXML;

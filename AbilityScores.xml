@@ -2736,7 +2736,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Pick Pockets</name>
           <abbrev>PP</abbrev>
-          <score>0</score>
+          <score>1</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2744,7 +2744,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Open Locks</name>
           <abbrev>OL</abbrev>
-          <score>0</score>
+          <score>2</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2752,7 +2752,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Find/Remove Traps</name>
           <abbrev>F/R</abbrev>
-          <score>0</score>
+          <score>3</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2760,7 +2760,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Move Silently</name>
           <abbrev>MS</abbrev>
-          <score>0</score>
+          <score>4</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2768,7 +2768,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Hide in Shadows</name>
           <abbrev>HS</abbrev>
-          <score>0</score>
+          <score>5</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2776,7 +2776,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Hear Noise</name>
           <abbrev>HN</abbrev>
-          <score>0</score>
+          <score>6</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -2784,7 +2784,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Climb Walls</name>
           <abbrev>CW</abbrev>
-          <score>0</score>
+          <score>7</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
