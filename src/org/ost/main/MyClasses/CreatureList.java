@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.ost.main.MyClasses.XMLManage.AliasClass;
+
 public class CreatureList {
 
 	public List<CreatureClass> entries = new ArrayList<CreatureClass>();

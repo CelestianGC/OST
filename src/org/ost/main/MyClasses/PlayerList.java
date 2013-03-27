@@ -8,6 +8,8 @@ import java.util.UUID;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 
+import org.ost.main.MyClasses.PlayerClass.PCClass;
+import org.ost.main.MyClasses.XMLManage.AliasClass;
 import org.ost.main.MyUtils.SimpleDialog;
 
 import com.thoughtworks.xstream.XStream;
@@ -23,6 +25,11 @@ public class PlayerList {
 		xm = new XMLManage(this, sFileName, 
 				PlayerList.class, "entries", 
 				PlayerClass.class, "PlayerClass", omit);
+
+		// add additional aliases to clean up the xml output
+		xm.setAliasFields(new ArrayList<AliasClass>());
+		xm.getAliasFields().add(xm.new AliasClass(PCClass.class, "PCClass"));
+		xm.getAliasFields().add(xm.new AliasClass(AbilityScoreClass.class, "AbilityScoreClass"));
 	}
 
 	public void add(PlayerClass entry) {

@@ -32,6 +32,7 @@ public class XMLManage {
 	
 	public ArrayList<String> omitFields;
 
+	public ArrayList<AliasClass> aliasFields;
 
 	public XMLManage(Object listObject, String fileName, Class list,
 			String listAlias, Class data, String dataAlias,
@@ -44,6 +45,62 @@ public class XMLManage {
 		this.data = data;
 		this.dataAlias = dataAlias;
 		this.omitFields = omitFields;
+	}
+
+	/**
+	 * 
+	 * @author Celestian
+	 *
+	 */
+	class AliasClass {
+		private Class theClass;
+		private String theAlias;
+		
+		public AliasClass(Class theClass, String theAlias) {
+			super();
+			this.theClass = theClass;
+			this.theAlias = theAlias;
+		}
+		/**
+		 * @return the theClass
+		 */
+		public Class getTheClass() {
+			return theClass;
+		}
+		/**
+		 * @param theClass the theClass to set
+		 */
+		public void setTheClass(Class theClass) {
+			this.theClass = theClass;
+		}
+		/**
+		 * @return the theAlias
+		 */
+		public String getTheAlias() {
+			return theAlias;
+		}
+		/**
+		 * @param theAlias the theAlias to set
+		 */
+		public void setTheAlias(String theAlias) {
+			this.theAlias = theAlias;
+		}
+		
+	}
+	
+	
+	/**
+	 * @return the aliasFields
+	 */
+	public ArrayList<AliasClass> getAliasFields() {
+		return aliasFields;
+	}
+
+	/**
+	 * @param aliasFields the aliasFields to set
+	 */
+	public void setAliasFields(ArrayList<AliasClass> aliasFields) {
+		this.aliasFields = aliasFields;
 	}
 
 	/**
@@ -164,6 +221,10 @@ public class XMLManage {
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
 
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
+
 		try {
 			FileOutputStream fs = new FileOutputStream(getFileName());
 			xs.toXML(getListObject(),fs);
@@ -189,6 +250,9 @@ public class XMLManage {
 		if (getOmitFields() != null)
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		try {
 			FileInputStream fis = new FileInputStream(getFileName());
@@ -217,6 +281,9 @@ public class XMLManage {
 		if (getOmitFields() != null)
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		try {
 			resultXML = xs.toXML(getListObject());
@@ -244,6 +311,9 @@ public class XMLManage {
 		if (getOmitFields() != null)
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		try {
 			xs.fromXML(textXML, getListObject());
@@ -267,6 +337,9 @@ public class XMLManage {
 		if (getOmitFields() != null)
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		return(xs.toXML(obj));
 	}
@@ -287,6 +360,9 @@ public class XMLManage {
 		if (getOmitFields() != null)
 			for (String omit: getOmitFields())
 				xs.omitField(getData(), omit);
+		if (getAliasFields() != null)
+			for (AliasClass oA: getAliasFields())
+				xs.alias(oA.getTheAlias(),oA.getTheClass());
 
 		return(xs.fromXML(xml));
 	}

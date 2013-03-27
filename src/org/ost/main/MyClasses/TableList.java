@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.ost.main.MyClasses.XMLManage.AliasClass;
+
 public class TableList {
 
 	public List<TableClass> entries = new ArrayList<TableClass>();
@@ -16,6 +18,10 @@ public class TableList {
 		xm = new XMLManage(this, sFileName, 
 				TableList.class, "entries", 
 				TableClass.class, "TableClass", omit);
+		
+		// add additional aliases to clean up the xml output
+		xm.setAliasFields(new ArrayList<AliasClass>());
+		xm.getAliasFields().add(xm.new AliasClass(TreasureTableClass.class, "TreasureTableClass"));
 	}
 
 	public void add(TableClass entry) {

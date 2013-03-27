@@ -1047,5 +1047,20 @@ public class CharacterClass implements Comparable{
 				}
 			return oFound;
 		}
+		/**
+		 * return level struct from nLevel
+		 * 
+		 * @param nLevel
+		 * @return
+		 */
+		public LevelClass getLevelByLevel(int nLevel) {
+			LevelClass oL = null;
+			try {
+				oL = getLevelDetails().get(nLevel);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			return oL;
+		}
 		
 }

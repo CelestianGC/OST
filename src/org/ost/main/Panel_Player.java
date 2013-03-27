@@ -190,7 +190,6 @@ public class Panel_Player extends javax.swing.JPanel {
 
 					//sort out percentile strength if can have
 					if (hasPercentileStrength) {
-						ost.dprint("Str %" + abilityPercentTotal + "\n");
 						pcPercentileStrLabel.setText(String.format("%d",
 								abilityPercentTotal));
 						if (abilityPercentTotal <= 0) {

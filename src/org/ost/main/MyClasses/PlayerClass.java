@@ -142,7 +142,23 @@ public class PlayerClass implements Serializable, Comparable {
 			this.name = name;
 			this.raceID = classID;
 		}
-		
+
+		/**
+		 * return this race struct from ID
+		 * 
+		 * @param cList
+		 * @return
+		 */
+		public RaceClass getRaceByID(RaceList rList) {
+			RaceClass oFound = null;
+			for (RaceClass oR: rList.getContent()) 
+				if (oR.getMyID().equalsIgnoreCase(getRaceID())) {
+					oFound = oR;
+					break;
+				}
+			return oFound;
+		}
+
 		/**
 		 * @return the name
 		 */
@@ -181,19 +197,33 @@ public class PlayerClass implements Serializable, Comparable {
 		public ArrayList<Integer> hdRolls; // list of health rolled per level
 
 		public PCClass(String name, String classID) {
-			this(name,classID,0,1,false,new ArrayList<Integer>());
+			this(name,classID,0,false,new ArrayList<Integer>());
 		}
 		
 		public PCClass(String name, String classID, int experience,
-				int level, boolean primaryClass, ArrayList<Integer> hdRolls) {
+				 boolean primaryClass, ArrayList<Integer> hdRolls) {
 			super();
 			this.name = name;
 			this.classID = classID;
 			this.experience = experience;
-			this.level = level;
 			this.primaryClass = primaryClass;
 			this.hdRolls = hdRolls;
 		}
+		/**
+		 * return this class struct from ID
+		 * @param cList
+		 * @return
+		 */
+		public CharacterClass getClassByID(CharacterClassList cList) {
+			CharacterClass oFound = null;
+			for (CharacterClass oC: cList.getContent()) 
+				if (oC.getMyID().equalsIgnoreCase(getClassID())) {
+					oFound = oC;
+					break;
+				}
+			return oFound;
+		}
+		
 		/**
 		 * @return the name
 		 */
@@ -231,17 +261,36 @@ public class PlayerClass implements Serializable, Comparable {
 			this.experience = experience;
 		}
 		/**
+		 * add/modify exp by passed value
+		 * @param experience
+		 */
+		public void addExperience(int experience) {
+			this.experience += experience;
+			if (this.experience < 0)
+				this.experience = 0;
+		}
+		
+		/**
 		 * @return the level
 		 */
 		public int getLevel() {
 			return level;
 		}
+
 		/**
 		 * @param level the level to set
 		 */
 		public void setLevel(int level) {
 			this.level = level;
 		}
+
+		/**
+		 * @return the actual level of classlevel
+		 */
+		public int getLevelActual(CharacterClassList cList) {
+			return getCurrentLevel(cList);
+		}
+		
 		/**
 		 * @return the primaryClass
 		 */
@@ -268,7 +317,7 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 
 		/**
-		 * return max level for this class
+		 * return max level of character for this class
 		 * 
 		 * @param cList
 		 * @return

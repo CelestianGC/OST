@@ -1,7 +1,7 @@
 <entries>
   <ExtraAbilitiesClass>
     <myID>288d39dd-9553-4bd4-bf5b-0855aa542ee3</myID>
-    <name>extra-new</name>
+    <name>fighter con bonus</name>
     <description>Enter Description of this new ability.</description>
     <bonusWeaponProfs>0</bonusWeaponProfs>
     <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
@@ -263,8 +263,8 @@
       <int>0</int>
       <int>0</int>
     </clericSpellsBonus>
-    <type>0</type>
-    <fighterConBonus>false</fighterConBonus>
+    <type>2</type>
+    <fighterConBonus>true</fighterConBonus>
     <barbarianConBonus>false</barbarianConBonus>
     <barbarianDexBonus>false</barbarianDexBonus>
     <allowedWeaponMastery>false</allowedWeaponMastery>

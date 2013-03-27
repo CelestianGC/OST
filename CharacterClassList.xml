@@ -8,7 +8,7 @@
     <percentileStrength>false</percentileStrength>
     <classType>0</classType>
     <abilityReqs>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -17,8 +17,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -27,8 +27,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -37,8 +37,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -47,8 +47,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -57,8 +57,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -67,8 +67,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -77,7 +77,7 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </abilityReqs>
     <raceReqs/>
     <alignmentReq>
@@ -98,7 +98,7 @@
     <allowAllMagicItems>true</allowAllMagicItems>
     <allowedMagic/>
     <levelDetails>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      <LevelClass>
         <level>1</level>
         <expReq>0</expReq>
         <thaco>20</thaco>
@@ -175,141 +175,141 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -318,8 +318,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -328,8 +328,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -338,8 +338,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -348,8 +348,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -358,8 +358,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -368,8 +368,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -378,14 +378,14 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>2</level>
         <expReq>1</expReq>
         <thaco>20</thaco>
@@ -462,85 +462,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -549,8 +549,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -559,8 +559,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -569,8 +569,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -579,8 +579,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -589,8 +589,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -599,8 +599,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -609,13 +609,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
     </levelDetails>
     <allowedMultiClass>true</allowedMultiClass>
     <allowedDualClass>true</allowedDualClass>
@@ -634,7 +634,7 @@
     <percentileStrength>true</percentileStrength>
     <classType>0</classType>
     <abilityReqs>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -643,8 +643,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -653,8 +653,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -663,8 +663,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -673,8 +673,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -683,8 +683,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -693,8 +693,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -703,7 +703,7 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </abilityReqs>
     <raceReqs/>
     <alignmentReq>
@@ -724,7 +724,7 @@
     <allowAllMagicItems>true</allowAllMagicItems>
     <allowedMagic/>
     <levelDetails>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      <LevelClass>
         <level>1</level>
         <expReq>0</expReq>
         <thaco>20</thaco>
@@ -801,141 +801,143 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
-        <bonusAbilities/>
+        <bonusAbilities>
+          <string>288d39dd-9553-4bd4-bf5b-0855aa542ee3</string>
+        </bonusAbilities>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -944,8 +946,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -954,8 +956,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -964,8 +966,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -974,8 +976,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -984,8 +986,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -994,8 +996,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -1004,14 +1006,14 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>2</level>
         <expReq>1</expReq>
         <thaco>19</thaco>
@@ -1088,85 +1090,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -1175,8 +1177,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -1185,8 +1187,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -1195,8 +1197,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -1205,8 +1207,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -1215,8 +1217,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -1225,8 +1227,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -1235,246 +1237,15 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>3</level>
-        <expReq>2</expReq>
-        <thaco>19</thaco>
-        <ac>0</ac>
-        <acBase>0</acBase>
-        <hitDiceNumber>1</hitDiceNumber>
-        <hitDiceSize>10</hitDiceSize>
-        <hitPointBonus>0</hitPointBonus>
-        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
-        <weaponProfAdditional>0</weaponProfAdditional>
-        <attacksPerRound>
-          <int>0</int>
-          <int>0</int>
-        </attacksPerRound>
-        <attacksPerRoundMax>
-          <int>0</int>
-          <int>0</int>
-        </attacksPerRoundMax>
-        <attackMatrix>
-          <int>10</int>
-          <int>11</int>
-          <int>12</int>
-          <int>13</int>
-          <int>14</int>
-          <int>15</int>
-          <int>16</int>
-          <int>17</int>
-          <int>18</int>
-          <int>19</int>
-          <int>20</int>
-          <int>21</int>
-          <int>22</int>
-          <int>23</int>
-          <int>24</int>
-          <int>25</int>
-          <int>26</int>
-          <int>27</int>
-          <int>28</int>
-          <int>29</int>
-          <int>30</int>
-        </attackMatrix>
-        <saves>
-          <int>20</int>
-          <int>20</int>
-          <int>20</int>
-          <int>20</int>
-          <int>20</int>
-        </saves>
-        <savesAdjustments>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </savesAdjustments>
-        <spellsPerLevelArcane>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </spellsPerLevelArcane>
-        <spellsPerLevelDivine>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </spellsPerLevelDivine>
-        <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
-        </thiefSkills>
-        <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Pick Pockets</name>
-            <abbrev>PP</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Open Locks</name>
-            <abbrev>OL</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Find/Remove Traps</name>
-            <abbrev>F/R</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Move Silently</name>
-            <abbrev>MS</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Hide in Shadows</name>
-            <abbrev>HS</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Hear Noise</name>
-            <abbrev>HN</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Climb Walls</name>
-            <abbrev>CW</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
-            <name>Read Languages</name>
-            <abbrev>RL</abbrev>
-            <score>0</score>
-            <min>-200</min>
-            <max>200</max>
-            <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-        </thiefSkillAdjustments>
-        <nwpBonus/>
-        <bonusAbilities/>
-        <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Strength</name>
-            <abbrev>STR</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Intelligence</name>
-            <abbrev>INT</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Wisdom</name>
-            <abbrev>WIS</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Dexterity</name>
-            <abbrev>DEX</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Constitution</name>
-            <abbrev>CON</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Charisma</name>
-            <abbrev>CHR</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
-            <score>0</score>
-            <percentile>0</percentile>
-            <name>Comeliness</name>
-            <abbrev>COM</abbrev>
-            <min>-25</min>
-            <max>25</max>
-            <primeRequisite>false</primeRequisite>
-            <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-        </abilityAdjustment>
-        <extraSpells/>
-        <skillsPoints>0</skillsPoints>
-        <turnMatrix/>
-        <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
-        <level>4</level>
         <expReq>3</expReq>
         <thaco>19</thaco>
         <ac>0</ac>
@@ -1550,85 +1321,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -1637,8 +1408,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -1647,8 +1418,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -1657,8 +1428,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -1667,8 +1438,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -1677,8 +1448,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -1687,8 +1458,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -1697,13 +1468,1630 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
+        <level>4</level>
+        <expReq>4</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>5</level>
+        <expReq>5</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>6</level>
+        <expReq>6</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>7</level>
+        <expReq>7</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>8</level>
+        <expReq>8</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>9</level>
+        <expReq>9</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>10</level>
+        <expReq>10</expReq>
+        <thaco>19</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>10</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
     </levelDetails>
     <allowedMultiClass>true</allowedMultiClass>
     <allowedDualClass>true</allowedDualClass>
@@ -1722,7 +3110,7 @@
     <percentileStrength>false</percentileStrength>
     <classType>0</classType>
     <abilityReqs>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -1731,8 +3119,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -1741,8 +3129,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -1751,8 +3139,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -1761,8 +3149,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -1771,8 +3159,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -1781,8 +3169,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -1791,7 +3179,7 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </abilityReqs>
     <raceReqs/>
     <alignmentReq>
@@ -1812,7 +3200,7 @@
     <allowAllMagicItems>true</allowAllMagicItems>
     <allowedMagic/>
     <levelDetails>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      <LevelClass>
         <level>1</level>
         <expReq>0</expReq>
         <thaco>20</thaco>
@@ -1889,141 +3277,141 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -2032,8 +3420,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -2042,8 +3430,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -2052,8 +3440,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -2062,8 +3450,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -2072,8 +3460,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -2082,8 +3470,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -2092,14 +3480,14 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>2</level>
         <expReq>1</expReq>
         <thaco>20</thaco>
@@ -2176,85 +3564,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -2263,8 +3651,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -2273,8 +3661,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -2283,8 +3671,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -2293,8 +3681,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -2303,8 +3691,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -2313,8 +3701,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -2323,13 +3711,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <turnMatrix/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
     </levelDetails>
     <allowedMultiClass>true</allowedMultiClass>
     <allowedDualClass>true</allowedDualClass>
@@ -2348,7 +3736,7 @@
     <percentileStrength>false</percentileStrength>
     <classType>0</classType>
     <abilityReqs>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -2357,8 +3745,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -2367,8 +3755,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -2377,8 +3765,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -2387,8 +3775,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -2397,8 +3785,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -2407,8 +3795,8 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>1</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -2417,7 +3805,7 @@
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </abilityReqs>
     <raceReqs/>
     <alignmentReq>
@@ -2438,7 +3826,7 @@
     <allowAllMagicItems>true</allowAllMagicItems>
     <allowedMagic/>
     <levelDetails>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      <LevelClass>
         <level>1</level>
         <expReq>0</expReq>
         <thaco>20</thaco>
@@ -2515,141 +3903,141 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>10</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>10</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>5</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>20</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>20</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>25</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>85</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -2658,8 +4046,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -2668,8 +4056,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -2678,8 +4066,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -2688,8 +4076,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -2698,8 +4086,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -2708,8 +4096,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -2718,13 +4106,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>2</level>
         <expReq>1</expReq>
         <thaco>20</thaco>
@@ -2801,85 +4189,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -2888,8 +4276,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -2898,8 +4286,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -2908,8 +4296,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -2918,8 +4306,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -2928,8 +4316,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -2938,8 +4326,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -2948,13 +4336,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>3</level>
         <expReq>1</expReq>
         <thaco>20</thaco>
@@ -3031,85 +4419,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -3118,8 +4506,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -3128,8 +4516,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -3138,8 +4526,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -3148,8 +4536,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -3158,8 +4546,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -3168,8 +4556,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -3178,13 +4566,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>4</level>
         <expReq>1</expReq>
         <thaco>0</thaco>
@@ -3261,85 +4649,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -3348,8 +4736,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -3358,8 +4746,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -3368,8 +4756,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -3378,8 +4766,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -3388,8 +4776,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -3398,8 +4786,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -3408,13 +4796,13 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
-      <org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
+      <LevelClass>
         <level>5</level>
         <expReq>1</expReq>
         <thaco>0</thaco>
@@ -3491,85 +4879,85 @@
           <int>0</int>
         </spellsPerLevelDivine>
         <thiefSkills>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[2]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[3]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[4]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[5]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[6]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[7]"/>
-          <org.ost.main.MyClasses.SkillsClass reference="../../../org.ost.main.MyClasses.CharacterClass_-LevelClass/thiefSkills/org.ost.main.MyClasses.SkillsClass[8]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
         </thiefSkills>
         <thiefSkillAdjustments>
-          <org.ost.main.MyClasses.SkillsClass>
+          <SkillsClass>
             <name>Pick Pockets</name>
             <abbrev>PP</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Open Locks</name>
             <abbrev>OL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Find/Remove Traps</name>
             <abbrev>F/R</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Move Silently</name>
             <abbrev>MS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hide in Shadows</name>
             <abbrev>HS</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Hear Noise</name>
             <abbrev>HN</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Climb Walls</name>
             <abbrev>CW</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
-          <org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
+          <SkillsClass>
             <name>Read Languages</name>
             <abbrev>RL</abbrev>
             <score>0</score>
             <min>-200</min>
             <max>200</max>
             <allowed>true</allowed>
-          </org.ost.main.MyClasses.SkillsClass>
+          </SkillsClass>
         </thiefSkillAdjustments>
         <nwpBonus/>
         <bonusAbilities/>
         <abilityAdjustment>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Strength</name>
@@ -3578,8 +4966,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Intelligence</name>
@@ -3588,8 +4976,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Wisdom</name>
@@ -3598,8 +4986,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Dexterity</name>
@@ -3608,8 +4996,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Constitution</name>
@@ -3618,8 +5006,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Charisma</name>
@@ -3628,8 +5016,8 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
-          <org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
             <score>0</score>
             <percentile>0</percentile>
             <name>Comeliness</name>
@@ -3638,12 +5026,12 @@
             <max>25</max>
             <primeRequisite>false</primeRequisite>
             <allowExceptional>false</allowExceptional>
-          </org.ost.main.MyClasses.AbilityScoreClass>
+          </AbilityScoreClass>
         </abilityAdjustment>
         <extraSpells/>
         <skillsPoints>0</skillsPoints>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.CharacterClass_-LevelClass>
+      </LevelClass>
     </levelDetails>
     <allowedMultiClass>false</allowedMultiClass>
     <allowedDualClass>false</allowedDualClass>

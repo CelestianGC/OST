@@ -3,8 +3,8 @@
     <name>Bob the Fighter</name>
     <namePlayer>John Smith</namePlayer>
     <myID>a54f9d22-c5da-4296-9354-41a3c9b4ed77</myID>
-    <hpMax>0</hpMax>
-    <hpCurrent>0</hpCurrent>
+    <hpMax>47</hpMax>
+    <hpCurrent>47</hpCurrent>
     <armorRatings>
       <string>-5</string>
       <string>10</string>
@@ -111,38 +111,20 @@ health adjusted (+6)
     <states/>
     <fightingList/>
     <myClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <PCClass>
         <name>fighter</name>
         <classID>0ee07238-8f71-40c9-80ff-164af4e1b11f</classID>
-        <experience>0</experience>
-        <level>1</level>
+        <experience>4</experience>
+        <level>0</level>
         <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>14</int>
+          <int>24</int>
+          <int>36</int>
+          <int>47</int>
+        </hdRolls>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
-        <name>thief</name>
-        <classID>d8c06682-f801-4fda-8a9e-f5ea84b78b53</classID>
-        <experience>0</experience>
-        <level>1</level>
-        <primaryClass>false</primaryClass>
-        <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
-        <name>cleric</name>
-        <classID>76e3c6bf-a016-4ebf-8fa8-a8c8fe7b852e</classID>
-        <experience>0</experience>
-        <level>1</level>
-        <primaryClass>false</primaryClass>
-        <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
-        <name>magic-user</name>
-        <classID>06f61dbb-c9a5-4fb2-b940-300264c88822</classID>
-        <experience>0</experience>
-        <level>1</level>
-        <primaryClass>false</primaryClass>
-        <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      </PCClass>
     </myClass>
     <myRace>
       <name>elf</name>
@@ -152,7 +134,7 @@ health adjusted (+6)
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>18</score>
         <percentile>45</percentile>
         <name>Strength</name>
@@ -161,8 +143,8 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>15</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -171,8 +153,8 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>9</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -181,8 +163,8 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>16</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -191,9 +173,9 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
-        <score>16</score>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>19</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -201,8 +183,8 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>12</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -211,8 +193,8 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>11</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -221,14 +203,14 @@ health adjusted (+6)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>14</int>
-      <int>15</int>
-      <int>15</int>
-      <int>16</int>
-      <int>17</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>
@@ -284,7 +266,7 @@ Magic Items:
     <states/>
     <fightingList/>
     <myClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <PCClass>
         <name>NoClassYet</name>
         <classID>NoClassSet</classID>
         <experience>0</experience>
@@ -292,7 +274,7 @@ Magic Items:
         <primaryClass>false</primaryClass>
         <hdRolls/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      </PCClass>
     </myClass>
     <myRace>
       <name>NoRaceYet</name>
@@ -302,7 +284,7 @@ Magic Items:
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -311,8 +293,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -321,8 +303,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -331,8 +313,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -341,8 +323,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -351,8 +333,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -361,8 +343,8 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -371,7 +353,7 @@ Magic Items:
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
       <int>20</int>
@@ -436,7 +418,7 @@ health adjusted (-2)
     <states/>
     <fightingList/>
     <myClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <PCClass>
         <name>NoClassYet</name>
         <classID>NoClassSet</classID>
         <experience>0</experience>
@@ -444,7 +426,7 @@ health adjusted (-2)
         <primaryClass>false</primaryClass>
         <hdRolls/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      </PCClass>
     </myClass>
     <myRace>
       <name>NoRaceYet</name>
@@ -454,7 +436,7 @@ health adjusted (-2)
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -463,8 +445,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -473,8 +455,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -483,8 +465,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -493,8 +475,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -503,8 +485,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -513,8 +495,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -523,7 +505,7 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
       <int>20</int>
@@ -584,7 +566,7 @@ health adjusted (-2)
     <states/>
     <fightingList/>
     <myClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <PCClass>
         <name>NoClassYet</name>
         <classID>NoClassSet</classID>
         <experience>0</experience>
@@ -592,7 +574,7 @@ health adjusted (-2)
         <primaryClass>false</primaryClass>
         <hdRolls/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      </PCClass>
     </myClass>
     <myRace>
       <name>NoRaceYet</name>
@@ -602,7 +584,7 @@ health adjusted (-2)
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -611,8 +593,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -621,8 +603,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -631,8 +613,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -641,8 +623,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -651,8 +633,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -661,8 +643,8 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -671,7 +653,7 @@ health adjusted (-2)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
       <int>20</int>
@@ -739,7 +721,7 @@ health adjusted (-26)
     <states/>
     <fightingList/>
     <myClass>
-      <org.ost.main.MyClasses.PlayerClass_-PCClass>
+      <PCClass>
         <name>NoClassYet</name>
         <classID>NoClassSet</classID>
         <experience>0</experience>
@@ -747,7 +729,7 @@ health adjusted (-26)
         <primaryClass>false</primaryClass>
         <hdRolls/>
         <outer-class reference="../../.."/>
-      </org.ost.main.MyClasses.PlayerClass_-PCClass>
+      </PCClass>
     </myClass>
     <myRace>
       <name>NoRaceYet</name>
@@ -757,7 +739,7 @@ health adjusted (-26)
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Strength</name>
@@ -766,8 +748,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
@@ -776,8 +758,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
@@ -786,8 +768,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
@@ -796,8 +778,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Constitution</name>
@@ -806,8 +788,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Charisma</name>
@@ -816,8 +798,8 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
-      <org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
         <score>0</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
@@ -826,7 +808,7 @@ health adjusted (-26)
         <max>25</max>
         <primeRequisite>false</primeRequisite>
         <allowExceptional>false</allowExceptional>
-      </org.ost.main.MyClasses.AbilityScoreClass>
+      </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
       <int>20</int>

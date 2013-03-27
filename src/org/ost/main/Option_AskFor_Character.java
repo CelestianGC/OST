@@ -12,6 +12,10 @@ import javax.swing.DefaultComboBoxModel;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 import org.ost.main.MyClasses.*;
+import org.ost.main.MyClasses.CharacterClass.LevelClass;
+import org.ost.main.MyClasses.PlayerClass.PCClass;
+import org.ost.main.MyUtils.MyRandomClass;
+import org.ost.main.MyUtils.SimpleDialog;
 
 /**
  *
@@ -87,6 +91,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		savesAdjustmentButton = new javax.swing.JButton();
 		genderComboBox = new javax.swing.JComboBox();
 		genderLabel = new javax.swing.JLabel();
+		rollHDButton = new javax.swing.JButton();
+		expAddButton = new javax.swing.JButton();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -440,6 +446,34 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
 		mainPanel.add(genderLabel, gridBagConstraints);
 
+		rollHDButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		rollHDButton.setText("re-roll HP");
+		rollHDButton.setToolTipText("Re-roll Hitpoints.");
+		rollHDButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				rollHDButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 4;
+		gridBagConstraints.gridy = 7;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(rollHDButton, gridBagConstraints);
+
+		expAddButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		expAddButton.setText("experience");
+		expAddButton.setToolTipText("Re-roll Hitpoints.");
+		expAddButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				expAddButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 7;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(expAddButton, gridBagConstraints);
+
 		jScrollPane1.setViewportView(mainPanel);
 
 		getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
@@ -463,6 +497,110 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	private void expAddButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code here:
+		String addExp = SimpleDialog.showQuestion(this, "Enter value to add/remove.", "Modify Experince", "0");
+		int nEXP = 0;
+		try {
+			nEXP = Integer.parseInt(addExp);
+			int classCount = currentCharacter.getMyClass().size();
+			nEXP /= classCount;
+			for(PCClass pC : currentCharacter.getMyClass()) {
+				int nOldLevel = pC.getLevel();
+				pC.addExperience(nEXP);
+				int nNewLevel = pC.getLevelActual(ost.characterClassList);
+				int nDiffLevel = nNewLevel - nOldLevel; 
+				if (nDiffLevel != 0) { // re-roll health?
+					if (nDiffLevel > 0) {
+						// TODO levelup();
+						ost.dprint("Level up! "+nDiffLevel+"\n");
+					}
+					else {
+						ost.dprint("De-Level! "+nDiffLevel+"\n");
+						// TODO delevel();
+					}
+				}
+				
+			}
+		} catch (Exception e) {
+			SimpleDialog.showError("Value must be a number.");
+		}
+	}
+
+	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code he
+
+		// get con bonuses
+		// TODO
+		// note: fighter/barb con bonus flag can be assigned
+		// at a level other than 1, resolve that by updating conbonus
+		// every level. -- for now we just check at start and assume
+		// level 1 grants it for all rolls
+		int nConScore = currentCharacter.getAbilityScore(ABILITY_CONSTITUTION,
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
+				ost.abilityStatList);
+		AbilityStatClass aStat = ost.abilityStatList.getContent()
+				.get(nConScore);
+		int nConBonus = aStat.consitution.hitpointAdjustment;
+		if (currentCharacter.hasBarbarianCon(ost.characterClassList,
+				ost.extraAbilitiesList, ost.raceList))
+			nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+		if (currentCharacter.hasFighterCon(ost.characterClassList,
+				ost.extraAbilitiesList, ost.raceList))
+			nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+
+		int nRollingHP = 0;
+		int nRolledHP = 0;
+		int nDiceCount = 1;
+		int nDiceSize = 4;
+		int nClassHPBonus = 0;
+		int nRaceStartBonus = 0;
+		boolean bRaceBonusUsed = false;
+		RaceClass oR = currentCharacter.getMyRace().getRaceByID(ost.raceList);
+		nRaceStartBonus = oR.getBonusStartHP();
+
+		int classCount = currentCharacter.getMyClass().size();
+		nConBonus /= classCount;
+		for (int i = 0; i < currentCharacter.getMyClass().size(); i++) {
+			PCClass pC = currentCharacter.getMyClass().get(i);
+			CharacterClass cC = pC.getClassByID(ost.characterClassList);
+			if (pC.getHdRolls() == null)
+				pC.setHdRolls(new ArrayList<Integer>());
+			pC.getHdRolls().clear();
+			for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
+				LevelClass oL = cC.getLevelByLevel(ii);
+				if (pC.getExperience() >= oL.getExpReq()) {
+					nDiceCount = oL.getHitDiceNumber();
+					nDiceSize = oL.getHitDiceSize();
+					nClassHPBonus = oL.getHitPointBonus();
+					nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+					ost.dprint(String.format("Level %d\n"
+							+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+							+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
+							(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+							nClassHPBonus, nRaceStartBonus, nConBonus));
+					nRollingHP += nClassHPBonus;
+					nRollingHP += nConBonus; // update conBonus each level?
+					if (ii == 0 && !bRaceBonusUsed) {
+						nRollingHP += nRaceStartBonus;
+						bRaceBonusUsed = true;
+					}
+					nRolledHP += nRollingHP;
+					ost.dprint(String.format("nRollingHP = %d\n"
+							+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+					pC.getHdRolls().add(nRolledHP); // saved for de-level?
+				}
+			}
+		}
+		// multi-classed divide hp by number of classes
+		nRolledHP /= classCount;
+		ost.dprint(String.format("-----Final HP = %d\n", nRolledHP));
+		currentCharacter.setHpCurrent(nRolledHP);
+		currentCharacter.setHpMax(nRolledHP);
+		hpSpinner.setValue(nRolledHP);
+		currentHPSpinner.setValue(nRolledHP);
+	}
+
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		ArrayList<String> cList = new ArrayList<String>();
@@ -480,7 +618,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		cList = CharacterClass.getAllowedAsString(aList);
 		for (CharacterClass o : aList) {
 			PlayerClass.PCClass e = currentCharacter.new PCClass(o.getName(),
-					o.getMyID(), 0, 1, false, null);
+					o.getMyID(), 0, false, null);
 			currentCharacter.getMyClass().add(e);
 		}
 		// we reset classes so reset hp and they are rerolled
@@ -531,7 +669,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		Option_AskFor_AbilityScores dDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Ability Scores",
-				currentCharacter.getMyAbilityScores(),false);
+				currentCharacter.getMyAbilityScores(), false);
 		dDialog.setVisible(true);
 	}
 
@@ -621,6 +759,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	private javax.swing.JSpinner currentHPSpinner;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JButton equipmentButton;
+	private javax.swing.JButton expAddButton;
 	private javax.swing.JComboBox genderComboBox;
 	private javax.swing.JLabel genderLabel;
 	private javax.swing.JSpinner hpSpinner;
@@ -646,6 +785,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	private javax.swing.JTextField playerTextField;
 	private javax.swing.JButton raceButton;
 	private javax.swing.JLabel raceLabel;
+	private javax.swing.JButton rollHDButton;
 	private javax.swing.JButton savesAdjustmentButton;
 	private javax.swing.JButton savesButton;
 	private javax.swing.JButton weaponProfsButton;

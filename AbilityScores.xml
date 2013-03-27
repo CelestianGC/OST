@@ -2491,9 +2491,9 @@
       <score>15</score>
       <name>Consitution</name>
       <description>Consitution</description>
-      <hitpointAdjustment>0</hitpointAdjustment>
-      <hitpointAdjustmentFighter>0</hitpointAdjustmentFighter>
-      <hitpointAdjustmentBarbarian>0</hitpointAdjustmentBarbarian>
+      <hitpointAdjustment>1</hitpointAdjustment>
+      <hitpointAdjustmentFighter>1</hitpointAdjustmentFighter>
+      <hitpointAdjustmentBarbarian>2</hitpointAdjustmentBarbarian>
       <systemShock>0</systemShock>
       <resurrectionSurvival>0</resurrectionSurvival>
       <bonusAbilities/>
@@ -2648,9 +2648,9 @@
       <score>16</score>
       <name>Consitution</name>
       <description>Consitution</description>
-      <hitpointAdjustment>0</hitpointAdjustment>
-      <hitpointAdjustmentFighter>0</hitpointAdjustmentFighter>
-      <hitpointAdjustmentBarbarian>0</hitpointAdjustmentBarbarian>
+      <hitpointAdjustment>2</hitpointAdjustment>
+      <hitpointAdjustmentFighter>2</hitpointAdjustmentFighter>
+      <hitpointAdjustmentBarbarian>4</hitpointAdjustmentBarbarian>
       <systemShock>0</systemShock>
       <resurrectionSurvival>0</resurrectionSurvival>
       <bonusAbilities/>
@@ -2805,9 +2805,9 @@
       <score>17</score>
       <name>Consitution</name>
       <description>Consitution</description>
-      <hitpointAdjustment>0</hitpointAdjustment>
-      <hitpointAdjustmentFighter>0</hitpointAdjustmentFighter>
-      <hitpointAdjustmentBarbarian>0</hitpointAdjustmentBarbarian>
+      <hitpointAdjustment>2</hitpointAdjustment>
+      <hitpointAdjustmentFighter>3</hitpointAdjustmentFighter>
+      <hitpointAdjustmentBarbarian>6</hitpointAdjustmentBarbarian>
       <systemShock>0</systemShock>
       <resurrectionSurvival>0</resurrectionSurvival>
       <bonusAbilities/>
@@ -3034,9 +3034,9 @@
       <score>18</score>
       <name>Consitution</name>
       <description>Consitution</description>
-      <hitpointAdjustment>0</hitpointAdjustment>
-      <hitpointAdjustmentFighter>0</hitpointAdjustmentFighter>
-      <hitpointAdjustmentBarbarian>0</hitpointAdjustmentBarbarian>
+      <hitpointAdjustment>2</hitpointAdjustment>
+      <hitpointAdjustmentFighter>4</hitpointAdjustmentFighter>
+      <hitpointAdjustmentBarbarian>8</hitpointAdjustmentBarbarian>
       <systemShock>0</systemShock>
       <resurrectionSurvival>0</resurrectionSurvival>
       <bonusAbilities/>
