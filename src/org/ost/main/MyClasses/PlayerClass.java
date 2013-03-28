@@ -281,6 +281,10 @@ public class PlayerClass implements Serializable, Comparable {
 								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
 						getHdRolls().add(nRolledHP); // saved for de-level?
 						setLevel((getLevel()+1)); // set level to new level
+					} else {
+						//to little exp or same level
+						//no need to go any further
+						break;
 					}
 				}
 
@@ -1598,7 +1602,8 @@ public class PlayerClass implements Serializable, Comparable {
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
 						for (int i=0;i<lE.getSpellsPerLevelArcane().length;i++) {
 							int iS = lE.getSpellsPerLevelArcane()[i];
-							aScores[i] += iS;
+							if (iS > aScores[i])
+								aScores[i] = iS;
 						}
 					} // was high enough level/exp
 
@@ -1609,7 +1614,8 @@ public class PlayerClass implements Serializable, Comparable {
 		for (ExtraAbilitiesClass eA : extras)
 			for (int i=0;i<eA.getMageSpellsBase().length;i++) {
 				int  iS = eA.getMageSpellsBase()[i];
-				aScores[i] += iS;
+				if (iS > aScores[i])
+					aScores[i] = iS;
 			}
 
 		return(aScores);
@@ -1643,7 +1649,8 @@ public class PlayerClass implements Serializable, Comparable {
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
 						for (int i=0;i<lE.getSpellsPerLevelDivine().length;i++) {
 							int iS = lE.getSpellsPerLevelDivine()[i];
-							aScores[i] += iS;
+							if (iS > aScores[i])
+								aScores[i] = iS;
 						}
 					} // was high enough level/exp
 
@@ -1654,7 +1661,8 @@ public class PlayerClass implements Serializable, Comparable {
 		for (ExtraAbilitiesClass eA : extras)
 			for (int i=0;i<eA.getClericSpellsBase().length;i++) {
 				int  iS = eA.getClericSpellsBase()[i];
-				aScores[i] += iS;
+				if (iS > aScores[i])
+					aScores[i] = iS;
 			}
 
 		return(aScores);

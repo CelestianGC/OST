@@ -287,8 +287,8 @@
     </thiefAbiltyAdjustments>
     <bonusAbilities/>
     <allowedClasses/>
-    <moveRate>0</moveRate>
-    <naturalAC>0</naturalAC>
+    <moveRate>15</moveRate>
+    <naturalAC>10</naturalAC>
     <bonusStartHP>0</bonusStartHP>
   </RaceClass>
   <RaceClass>

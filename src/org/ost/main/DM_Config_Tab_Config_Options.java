@@ -124,7 +124,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		abilityScoresButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		abilityScoresButton.setIcon(new javax.swing.ImageIcon(getClass()
 				.getResource("/images/Muscles-icon-24.png"))); // NOI18N
-		abilityScoresButton.setText("ability scores");
+		abilityScoresButton.setText("ability stats");
 		abilityScoresButton
 				.setToolTipText("Configure the adjustments for ability scores.");
 		abilityScoresButton
@@ -194,7 +194,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		extraAbilitiesButton.setIcon(new javax.swing.ImageIcon(
 				getClass().getResource(
 						"/images/Apps-utilities-desktop-extra-icon-24.png"))); // NOI18N
-		extraAbilitiesButton.setText("X-Abilities");
+		extraAbilitiesButton.setText("features");
 		extraAbilitiesButton
 				.setToolTipText("Extra-Abilities attached to class, race, objects or proficiencies.");
 		extraAbilitiesButton
@@ -285,7 +285,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 																				0)
 																		.addComponent(
 																				nonWeaponProfsButton1)))
-										.addContainerGap(30, Short.MAX_VALUE)));
+										.addContainerGap(60, Short.MAX_VALUE)));
 
 		mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
 				new java.awt.Component[] { abilityScoresButton, chartsButton,

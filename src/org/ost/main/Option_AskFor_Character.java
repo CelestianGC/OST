@@ -506,25 +506,55 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		} catch (Exception e) {
 			SimpleDialog.showError("Value must be a number.");
 		}
-		if (nEXP != 0) {
+		
+		updateLevelDifferential(nEXP,true);
+		// set these on the dialog or we lose them if they changed
+		hpSpinner.setValue(currentCharacter.getHpMax());
+		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+	}
+
+	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code he
+
+		for(PCClass pC : currentCharacter.getMyClass())
+			pC.setLevel(0);// set level to 0 so it re-levels character up
+		currentCharacter.setHpCurrent(0);
+		currentCharacter.setHpMax(0);
+		updateLevelDifferential(-1,false);
+		
+		// set these on the dialog or we lose them if they changed
+		hpSpinner.setValue(currentCharacter.getHpMax());
+		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+	}
+
+	/**
+	 * update levels by either passing +EXP value and addEXP or -1 and false
+	 * to use current EXP values and re-roll
+	 * 
+	 * @param nEXP
+	 * @param addEXP
+	 */
+	private void updateLevelDifferential(int nEXP, boolean addEXP) {
+		if (nEXP != 0 || !addEXP) {
 		int classCount = currentCharacter.getMyClass().size();
 			nEXP /= classCount;
 			for(PCClass pC : currentCharacter.getMyClass()) {
 				int nOldLevel = pC.getLevel();
-				pC.addExperience(nEXP);
+				if (addEXP)
+					pC.addExperience(nEXP);
 				int nNewLevel = pC.getLevelActual(ost.characterClassList);
 				int nDiffLevel = nNewLevel - nOldLevel; 
 				if (nDiffLevel != 0) { // re-roll health?
 					if (nDiffLevel > 0) {
 						// TODO levelup();
-						ost.dprint("Level up! "+nDiffLevel+"\n");
+						ost.dprint(pC.getName()+" is leveling up! "+nDiffLevel+"\n");
 						
 						pC.levelUP(ost.characterClassList, 
 								ost.extraAbilitiesList, ost.raceList, 
 								ost.abilityStatList, ost);
 					}
 					else {
-						ost.dprint("De-Level! "+nDiffLevel+"\n");
+						ost.dprint(pC.getName()+" De-Leveled! "+nDiffLevel+"\n");
 						// TODO delevel();
 						pC.deLevel(ost.characterClassList, 
 								ost.extraAbilitiesList, ost.raceList, 
@@ -533,86 +563,10 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					
 				}
 			}
-			// set these on the dialog or we lose them if they changed
-			hpSpinner.setValue(currentCharacter.getHpMax());
-			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
 			}
+		
 	}
-
-	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code he
-
-		// get con bonuses
-		// TODO
-		// note: fighter/barb con bonus flag can be assigned
-		// at a level other than 1, resolve that by updating conbonus
-		// every level. -- for now we just check at start and assume
-		// level 1 grants it for all rolls
-		int nConScore = currentCharacter.getAbilityScore(ABILITY_CONSTITUTION,
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
-				ost.abilityStatList);
-		AbilityStatClass aStat = ost.abilityStatList.getContent()
-				.get(nConScore);
-		int nConBonus = aStat.consitution.hitpointAdjustment;
-		if (currentCharacter.hasBarbarianCon(ost.characterClassList,
-				ost.extraAbilitiesList, ost.raceList))
-			nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-		if (currentCharacter.hasFighterCon(ost.characterClassList,
-				ost.extraAbilitiesList, ost.raceList))
-			nConBonus = aStat.consitution.hitpointAdjustmentFighter;
-
-		int nRollingHP = 0;
-		int nRolledHP = 0;
-		int nDiceCount = 1;
-		int nDiceSize = 4;
-		int nClassHPBonus = 0;
-		int nRaceStartBonus = 0;
-		boolean bRaceBonusUsed = false;
-		RaceClass oR = currentCharacter.getMyRace().getRaceByID(ost.raceList);
-		nRaceStartBonus = oR.getBonusStartHP();
-
-		int classCount = currentCharacter.getMyClass().size();
-		nConBonus /= classCount;
-		for (int i = 0; i < currentCharacter.getMyClass().size(); i++) {
-			PCClass pC = currentCharacter.getMyClass().get(i);
-			CharacterClass cC = pC.getClassByID(ost.characterClassList);
-			if (pC.getHdRolls() == null)
-				pC.setHdRolls(new ArrayList<Integer>());
-			pC.getHdRolls().clear();
-			for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
-				LevelClass oL = cC.getLevelByLevel(ii);
-				if (pC.getExperience() >= oL.getExpReq()) {
-					nDiceCount = oL.getHitDiceNumber();
-					nDiceSize = oL.getHitDiceSize();
-					nClassHPBonus = oL.getHitPointBonus();
-					nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
-					ost.dprint(String.format("Level %d\n"
-							+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
-							+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
-							(ii + 1), nDiceCount, nDiceSize, nRollingHP,
-							nClassHPBonus, nRaceStartBonus, nConBonus));
-					nRollingHP += nClassHPBonus;
-					nRollingHP += nConBonus; // update conBonus each level?
-					if (ii == 0 && !bRaceBonusUsed) {
-						nRollingHP += nRaceStartBonus;
-						bRaceBonusUsed = true;
-					}
-					nRolledHP += nRollingHP;
-					ost.dprint(String.format("nRollingHP = %d\n"
-							+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-					pC.getHdRolls().add(nRolledHP); // saved for de-level?
-				}
-			}
-		}
-		// multi-classed divide hp by number of classes
-		nRolledHP /= classCount;
-		ost.dprint(String.format("-----Final HP = %d\n", nRolledHP));
-		currentCharacter.setHpCurrent(nRolledHP);
-		currentCharacter.setHpMax(nRolledHP);
-		hpSpinner.setValue(nRolledHP);
-		currentHPSpinner.setValue(nRolledHP);
-	}
-
+	
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		ArrayList<String> cList = new ArrayList<String>();

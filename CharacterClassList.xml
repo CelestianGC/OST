@@ -79,7 +79,10 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
     </abilityReqs>
-    <raceReqs/>
+    <raceReqs>
+      <string>0daa6bb1-c9ef-4cba-baad-73dc3b9c2039</string>
+      <string>ce695907-81ab-40f8-8ebb-4642b5b34903</string>
+    </raceReqs>
     <alignmentReq>
       <boolean>true</boolean>
       <boolean>true</boolean>
@@ -3207,7 +3210,7 @@
         <ac>0</ac>
         <acBase>0</acBase>
         <hitDiceNumber>1</hitDiceNumber>
-        <hitDiceSize>6</hitDiceSize>
+        <hitDiceSize>4</hitDiceSize>
         <hitPointBonus>0</hitPointBonus>
         <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
         <weaponProfAdditional>0</weaponProfAdditional>
@@ -3489,12 +3492,12 @@
       </LevelClass>
       <LevelClass>
         <level>2</level>
-        <expReq>1</expReq>
+        <expReq>2000</expReq>
         <thaco>20</thaco>
         <ac>0</ac>
         <acBase>0</acBase>
         <hitDiceNumber>1</hitDiceNumber>
-        <hitDiceSize>6</hitDiceSize>
+        <hitDiceSize>4</hitDiceSize>
         <hitPointBonus>0</hitPointBonus>
         <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
         <weaponProfAdditional>0</weaponProfAdditional>
@@ -3544,7 +3547,700 @@
           <int>0</int>
         </savesAdjustments>
         <spellsPerLevelArcane>
+          <int>2</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>3</level>
+        <expReq>3000</expReq>
+        <thaco>20</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>4</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>2</int>
           <int>1</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>4</level>
+        <expReq>4000</expReq>
+        <thaco>20</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>4</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>12</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>2</int>
+          <int>2</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelArcane>
+        <spellsPerLevelDivine>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </spellsPerLevelDivine>
+        <thiefSkills>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[2]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[3]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[4]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[5]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[6]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[7]"/>
+          <SkillsClass reference="../../../LevelClass/thiefSkills/SkillsClass[8]"/>
+        </thiefSkills>
+        <thiefSkillAdjustments>
+          <SkillsClass>
+            <name>Pick Pockets</name>
+            <abbrev>PP</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Open Locks</name>
+            <abbrev>OL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Find/Remove Traps</name>
+            <abbrev>F/R</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Move Silently</name>
+            <abbrev>MS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hide in Shadows</name>
+            <abbrev>HS</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Hear Noise</name>
+            <abbrev>HN</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Climb Walls</name>
+            <abbrev>CW</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+          <SkillsClass>
+            <name>Read Languages</name>
+            <abbrev>RL</abbrev>
+            <score>0</score>
+            <min>-200</min>
+            <max>200</max>
+            <allowed>true</allowed>
+          </SkillsClass>
+        </thiefSkillAdjustments>
+        <nwpBonus/>
+        <bonusAbilities/>
+        <abilityAdjustment>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Strength</name>
+            <abbrev>STR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Intelligence</name>
+            <abbrev>INT</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Wisdom</name>
+            <abbrev>WIS</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Dexterity</name>
+            <abbrev>DEX</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Constitution</name>
+            <abbrev>CON</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Charisma</name>
+            <abbrev>CHR</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+          <AbilityScoreClass>
+            <score>0</score>
+            <percentile>0</percentile>
+            <name>Comeliness</name>
+            <abbrev>COM</abbrev>
+            <min>-25</min>
+            <max>25</max>
+            <primeRequisite>false</primeRequisite>
+            <allowExceptional>false</allowExceptional>
+          </AbilityScoreClass>
+        </abilityAdjustment>
+        <extraSpells/>
+        <skillsPoints>0</skillsPoints>
+        <turnMatrix/>
+        <outer-class reference="../../.."/>
+      </LevelClass>
+      <LevelClass>
+        <level>5</level>
+        <expReq>4001</expReq>
+        <thaco>20</thaco>
+        <ac>0</ac>
+        <acBase>0</acBase>
+        <hitDiceNumber>1</hitDiceNumber>
+        <hitDiceSize>4</hitDiceSize>
+        <hitPointBonus>0</hitPointBonus>
+        <nonWeaponProfAdditional>0</nonWeaponProfAdditional>
+        <weaponProfAdditional>0</weaponProfAdditional>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <attacksPerRoundMax>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRoundMax>
+        <attackMatrix>
+          <int>10</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+        </attackMatrix>
+        <saves>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>20</int>
+          <int>12</int>
+        </saves>
+        <savesAdjustments>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </savesAdjustments>
+        <spellsPerLevelArcane>
+          <int>2</int>
           <int>2</int>
           <int>0</int>
           <int>0</int>

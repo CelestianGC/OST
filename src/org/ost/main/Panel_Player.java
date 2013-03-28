@@ -23,6 +23,7 @@ import javax.swing.table.TableColumn;
 import org.ost.main.MyClasses.AbilityScoreClass;
 import org.ost.main.MyClasses.AbilityStatClass;
 import org.ost.main.MyClasses.PlayerClass;
+import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.SkillsClass;
 
 import static org.ost.main.MyClasses.MyStatics.*;
@@ -73,9 +74,10 @@ public class Panel_Player extends javax.swing.JPanel {
 	 */
 	public void updatePanel(PlayerClass oPlayer) {
 		// TODO Auto-generated method stub
-
 		// added this incase we updated panel
 		pc = oPlayer;
+
+		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
 		// portrait
 
 		// details
@@ -88,6 +90,8 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcExperienceTotalsLabel.setText(pc
 				.getMyExperienceName(ost.characterClassList));
 		pcMoveBaseLabel.setText(pc.getMoveRate());
+		if (race != null)
+			pcMoveBaseLabel.setText(String.format("%d", race.getMoveRate()));
 
 		// abilties
 		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
@@ -351,7 +355,6 @@ public class Panel_Player extends javax.swing.JPanel {
 
 		}
 
-
 		// combat
 
 		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
@@ -424,7 +427,7 @@ public class Panel_Player extends javax.swing.JPanel {
 			}
 		}
 		skillsPanel.revalidate();
-		
+
 		// arcane spells
 		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(
 				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
@@ -437,10 +440,10 @@ public class Panel_Player extends javax.swing.JPanel {
 			JPanel arcanePanel = new JPanel(new GridLayout(2, 0, 1, 1));
 			int base = arcaneBase[i];
 			int adj = arcaneAdj[i];
-			int finalSkill = base+adj;
+			int finalSkill = base + adj;
 			if (base != 0) {
-				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
-				JLabel name = new JLabel("L"+(i+1));
+				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
+				JLabel name = new JLabel("L" + (i + 1));
 				name.setToolTipText(tooltip);
 				JLabel value = new JLabel(String.format("%d", finalSkill));
 				value.setToolTipText(tooltip);
@@ -451,7 +454,7 @@ public class Panel_Player extends javax.swing.JPanel {
 			}
 		}
 		arcaneSpellsPanel.revalidate();
-		
+
 		// divine spells
 		int divineBase[] = pc.getAllDivineSpellsPerLevel(
 				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
@@ -464,10 +467,10 @@ public class Panel_Player extends javax.swing.JPanel {
 			JPanel divinePanel = new JPanel(new GridLayout(2, 0, 1, 1));
 			int base = divineBase[i];
 			int adj = divineAdj[i];
-			int finalSkill = base+adj;
+			int finalSkill = base + adj;
 			if (base != 0) {
-				String tooltip ="Level "+(i+1)+": "+base + "+"+ adj;
-				JLabel name = new JLabel("L"+(i+1));
+				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
+				JLabel name = new JLabel("L" + (i + 1));
 				name.setToolTipText(tooltip);
 				JLabel value = new JLabel(String.format("%d", finalSkill));
 				value.setToolTipText(tooltip);
@@ -478,6 +481,8 @@ public class Panel_Player extends javax.swing.JPanel {
 			}
 		}
 		divineSpellsPanel.revalidate();
+
+		repaint();
 	}
 
 	/** This method is called from within the constructor to
@@ -506,6 +511,17 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcMoveBaseLabel = new javax.swing.JLabel();
 		jLabel6 = new javax.swing.JLabel();
 		pcExperienceTotalsLabel = new javax.swing.JLabel();
+		savesPAnel = new javax.swing.JPanel();
+		pcSavePoisonLabel = new javax.swing.JLabel();
+		jLabel27 = new javax.swing.JLabel();
+		pcSavePolyLabel = new javax.swing.JLabel();
+		pcSaveRodLabel = new javax.swing.JLabel();
+		pcSaveBreathLabel = new javax.swing.JLabel();
+		pcSaveSpellsLabel = new javax.swing.JLabel();
+		jLabel37 = new javax.swing.JLabel();
+		jLabel39 = new javax.swing.JLabel();
+		jLabel41 = new javax.swing.JLabel();
+		jLabel43 = new javax.swing.JLabel();
 		AbilitiesPanel = new javax.swing.JPanel();
 		pcStrengthLabel = new javax.swing.JLabel();
 		jLabel21 = new javax.swing.JLabel();
@@ -564,7 +580,7 @@ public class Panel_Player extends javax.swing.JPanel {
 		pcBonusSpellsDivineLabel = new javax.swing.JLabel();
 		jLabel49 = new javax.swing.JLabel();
 		pcWeightAllowanceLabel = new javax.swing.JLabel();
-		savesPanel = new javax.swing.JPanel();
+		combatPanel = new javax.swing.JPanel();
 		jLabel29 = new javax.swing.JLabel();
 		pcArmorClassLabel = new javax.swing.JLabel();
 		jLabel31 = new javax.swing.JLabel();
@@ -579,17 +595,6 @@ public class Panel_Player extends javax.swing.JPanel {
 		jLabel47 = new javax.swing.JLabel();
 		jScrollPane1 = new javax.swing.JScrollPane();
 		pcCombatMatrixTable = new javax.swing.JTable();
-		combatPanel = new javax.swing.JPanel();
-		pcSavePoisonLabel = new javax.swing.JLabel();
-		jLabel27 = new javax.swing.JLabel();
-		pcSavePolyLabel = new javax.swing.JLabel();
-		pcSaveRodLabel = new javax.swing.JLabel();
-		pcSaveBreathLabel = new javax.swing.JLabel();
-		pcSaveSpellsLabel = new javax.swing.JLabel();
-		jLabel37 = new javax.swing.JLabel();
-		jLabel39 = new javax.swing.JLabel();
-		jLabel41 = new javax.swing.JLabel();
-		jLabel43 = new javax.swing.JLabel();
 		skillsPanel = new javax.swing.JPanel();
 		arcaneSpellsPanel = new javax.swing.JPanel();
 		divineSpellsPanel = new javax.swing.JPanel();
@@ -829,6 +834,157 @@ public class Panel_Player extends javax.swing.JPanel {
 																pcMoveBaseLabel,
 																javax.swing.GroupLayout.Alignment.TRAILING))
 										.addContainerGap(48, Short.MAX_VALUE)));
+
+		savesPAnel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Saves"));
+
+		pcSavePoisonLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSavePoisonLabel.setText("00");
+
+		jLabel27.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		jLabel27.setText("Poison/Paralyzation");
+
+		pcSavePolyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSavePolyLabel.setText("00");
+
+		pcSaveRodLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveRodLabel.setText("00");
+
+		pcSaveBreathLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveBreathLabel.setText("00");
+
+		pcSaveSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveSpellsLabel.setText("00");
+
+		jLabel37.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		jLabel37.setText("Petrify/Poly");
+
+		jLabel39.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		jLabel39.setText("Rod/Staff/Wand");
+
+		jLabel41.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		jLabel41.setText("Breath");
+
+		jLabel43.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		jLabel43.setText("Spells");
+
+		javax.swing.GroupLayout savesPAnelLayout = new javax.swing.GroupLayout(
+				savesPAnel);
+		savesPAnel.setLayout(savesPAnelLayout);
+		savesPAnelLayout
+				.setHorizontalGroup(savesPAnelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								savesPAnelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																savesPAnelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcSavePoisonLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel27))
+														.addGroup(
+																savesPAnelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcSavePolyLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel37))
+														.addGroup(
+																savesPAnelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcSaveRodLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel39))
+														.addGroup(
+																savesPAnelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcSaveBreathLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel41))
+														.addGroup(
+																savesPAnelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcSaveSpellsLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				jLabel43)))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+		savesPAnelLayout
+				.setVerticalGroup(savesPAnelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								savesPAnelLayout
+										.createSequentialGroup()
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(
+																pcSavePoisonLabel)
+														.addComponent(jLabel27))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(
+																pcSavePolyLabel)
+														.addComponent(jLabel37))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(
+																pcSaveRodLabel)
+														.addComponent(jLabel39))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(
+																pcSaveBreathLabel)
+														.addComponent(jLabel41))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												savesPAnelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(
+																pcSaveSpellsLabel)
+														.addComponent(jLabel43))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 
 		AbilitiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -1410,7 +1566,7 @@ public class Panel_Player extends javax.swing.JPanel {
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
 
-		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+		combatPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Combat"));
 
@@ -1489,23 +1645,23 @@ public class Panel_Player extends javax.swing.JPanel {
 		});
 		jScrollPane1.setViewportView(pcCombatMatrixTable);
 
-		javax.swing.GroupLayout savesPanelLayout = new javax.swing.GroupLayout(
-				savesPanel);
-		savesPanel.setLayout(savesPanelLayout);
-		savesPanelLayout
-				.setHorizontalGroup(savesPanelLayout
+		javax.swing.GroupLayout combatPanelLayout = new javax.swing.GroupLayout(
+				combatPanel);
+		combatPanel.setLayout(combatPanelLayout);
+		combatPanelLayout
+				.setHorizontalGroup(combatPanelLayout
 						.createParallelGroup(
 								javax.swing.GroupLayout.Alignment.LEADING)
 						.addGroup(
-								savesPanelLayout
+								combatPanelLayout
 										.createSequentialGroup()
 										.addContainerGap()
 										.addGroup(
-												savesPanelLayout
+												combatPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
 														.addGroup(
-																savesPanelLayout
+																combatPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
 																				jLabel29)
@@ -1530,7 +1686,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																		.addComponent(
 																				pcArmorClassRearLabel))
 														.addGroup(
-																savesPanelLayout
+																combatPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
 																				jLabel35)
@@ -1561,15 +1717,15 @@ public class Panel_Player extends javax.swing.JPanel {
 								javax.swing.GroupLayout.Alignment.TRAILING,
 								javax.swing.GroupLayout.DEFAULT_SIZE, 663,
 								Short.MAX_VALUE));
-		savesPanelLayout
-				.setVerticalGroup(savesPanelLayout
+		combatPanelLayout
+				.setVerticalGroup(combatPanelLayout
 						.createParallelGroup(
 								javax.swing.GroupLayout.Alignment.LEADING)
 						.addGroup(
-								savesPanelLayout
+								combatPanelLayout
 										.createSequentialGroup()
 										.addGroup(
-												savesPanelLayout
+												combatPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
 														.addComponent(jLabel29)
@@ -1584,7 +1740,7 @@ public class Panel_Player extends javax.swing.JPanel {
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
-												savesPanelLayout
+												combatPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
 														.addComponent(jLabel35)
@@ -1603,157 +1759,6 @@ public class Panel_Player extends javax.swing.JPanel {
 												javax.swing.GroupLayout.PREFERRED_SIZE,
 												62,
 												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
-
-		combatPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
-				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Saves"));
-
-		pcSavePoisonLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSavePoisonLabel.setText("00");
-
-		jLabel27.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel27.setText("Poison/Paralyzation");
-
-		pcSavePolyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSavePolyLabel.setText("00");
-
-		pcSaveRodLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSaveRodLabel.setText("00");
-
-		pcSaveBreathLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSaveBreathLabel.setText("00");
-
-		pcSaveSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSaveSpellsLabel.setText("00");
-
-		jLabel37.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel37.setText("Petrify/Poly");
-
-		jLabel39.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel39.setText("Rod/Staff/Wand");
-
-		jLabel41.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel41.setText("Breath");
-
-		jLabel43.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel43.setText("Spells");
-
-		javax.swing.GroupLayout combatPanelLayout = new javax.swing.GroupLayout(
-				combatPanel);
-		combatPanel.setLayout(combatPanelLayout);
-		combatPanelLayout
-				.setHorizontalGroup(combatPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								combatPanelLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																combatPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSavePoisonLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel27))
-														.addGroup(
-																combatPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSavePolyLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel37))
-														.addGroup(
-																combatPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveRodLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel39))
-														.addGroup(
-																combatPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveBreathLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel41))
-														.addGroup(
-																combatPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveSpellsLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel43)))
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
-		combatPanelLayout
-				.setVerticalGroup(combatPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								combatPanelLayout
-										.createSequentialGroup()
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSavePoisonLabel)
-														.addComponent(jLabel27))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSavePolyLabel)
-														.addComponent(jLabel37))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveRodLabel)
-														.addComponent(jLabel39))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveBreathLabel)
-														.addComponent(jLabel41))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveSpellsLabel)
-														.addComponent(jLabel43))
 										.addContainerGap(
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
@@ -1798,7 +1803,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																.addPreferredGap(
 																		javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																.addComponent(
-																		combatPanel,
+																		savesPAnel,
 																		javax.swing.GroupLayout.PREFERRED_SIZE,
 																		javax.swing.GroupLayout.DEFAULT_SIZE,
 																		javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1818,7 +1823,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																						673,
 																						Short.MAX_VALUE)
 																				.addComponent(
-																						savesPanel,
+																						combatPanel,
 																						javax.swing.GroupLayout.Alignment.LEADING,
 																						javax.swing.GroupLayout.DEFAULT_SIZE,
 																						javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -1859,7 +1864,7 @@ public class Panel_Player extends javax.swing.JPanel {
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														Short.MAX_VALUE)
 												.addComponent(
-														combatPanel,
+														savesPAnel,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														Short.MAX_VALUE))
@@ -1870,7 +1875,7 @@ public class Panel_Player extends javax.swing.JPanel {
 										javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
 								.addGap(5, 5, 5)
-								.addComponent(savesPanel,
+								.addComponent(combatPanel,
 										javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2021,7 +2026,7 @@ public class Panel_Player extends javax.swing.JPanel {
 	private javax.swing.JLabel pcTHACOLabel;
 	private javax.swing.JLabel pcWeightAllowanceLabel;
 	private javax.swing.JLabel pcWisdomLabel;
-	private javax.swing.JPanel savesPanel;
+	private javax.swing.JPanel savesPAnel;
 	private javax.swing.JPanel skillsPanel;
 	// End of variables declaration//GEN-END:variables
 

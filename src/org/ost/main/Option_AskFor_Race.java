@@ -234,8 +234,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		moveRateLabel.setText("base move");
 		moveACStartHPPanel.add(moveRateLabel);
 
-		moveRateSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(1, 1, 48, 1));
+		moveRateSpinner.setModel(new javax.swing.SpinnerNumberModel(12, 1, 64,
+				1));
 		moveACStartHPPanel.add(moveRateSpinner);
 
 		naturalACLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
@@ -324,7 +324,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		Option_AskFor_AbilityScores nDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Racial Ability Score Adjustments",
-				currentRace.getAbilityAdjustment(),false);
+				currentRace.getAbilityAdjustment(), false);
 
 		nDialog.updatePanel(currentRace.getAbilityAdjustment());
 
@@ -336,7 +336,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		Option_AskFor_AbilityScores nDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Racial Maximum Ability Scores",
-				currentRace.getMaxAbility(),false);
+				currentRace.getMaxAbility(), false);
 		nDialog.setVisible(true);
 	}
 
@@ -346,7 +346,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		Option_AskFor_AbilityScores nDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Racial Minimum Ability Scores",
-				currentRace.getMinAbility(),false);
+				currentRace.getMinAbility(), false);
 		nDialog.setVisible(true);
 	}
 

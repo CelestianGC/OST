@@ -8,8 +8,10 @@ package org.ost.main;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 
@@ -48,7 +50,9 @@ import org.ost.main.MyUtils.XMLControl;
  */
 public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private MainClass ost;
-	private Panel_Player currentPlayerSheet;
+	private Panel_Player_Details playerDetailsPanel;
+	private Panel_Player_Saves playerSavesPanel;
+	private Panel_Player_Abilities playerAbilitiesPanel;
 
 	/** Creates new form DM_Config_Tab_Players */
 	public DM_Config_Tab_Players(MainClass ost) {
@@ -141,6 +145,9 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		mainPanel = new javax.swing.JPanel();
 		playerTabbedPane = new javax.swing.JTabbedPane();
 		playerTabPanel = new javax.swing.JPanel();
+		pcDetailsPanel = new javax.swing.JPanel();
+		pcSavesPanel = new javax.swing.JPanel();
+		pcAbilitiesPanel = new javax.swing.JPanel();
 		notesPanel = new javax.swing.JPanel();
 		jScrollPane2 = new javax.swing.JScrollPane();
 		notesField = new javax.swing.JTextArea();
@@ -583,7 +590,81 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 		playerTabbedPane.setFont(new java.awt.Font("Segoe UI", 0, 10));
 
-		playerTabPanel.setLayout(new java.awt.BorderLayout());
+		pcDetailsPanel.setBackground(new java.awt.Color(153, 153, 153));
+		pcDetailsPanel.setLayout(new java.awt.BorderLayout());
+
+		pcSavesPanel.setBackground(new java.awt.Color(153, 153, 153));
+		pcSavesPanel.setLayout(new java.awt.BorderLayout());
+
+		pcAbilitiesPanel.setBackground(new java.awt.Color(153, 153, 153));
+		pcAbilitiesPanel.setLayout(new java.awt.BorderLayout());
+
+		javax.swing.GroupLayout playerTabPanelLayout = new javax.swing.GroupLayout(
+				playerTabPanel);
+		playerTabPanel.setLayout(playerTabPanelLayout);
+		playerTabPanelLayout
+				.setHorizontalGroup(playerTabPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								playerTabPanelLayout
+										.createSequentialGroup()
+										.addGap(0, 0, 0)
+										.addGroup(
+												playerTabPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																pcAbilitiesPanel,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																409,
+																Short.MAX_VALUE)
+														.addGroup(
+																javax.swing.GroupLayout.Alignment.TRAILING,
+																playerTabPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				pcDetailsPanel,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				253,
+																				Short.MAX_VALUE)
+																		.addGap(18,
+																				18,
+																				18)
+																		.addComponent(
+																				pcSavesPanel,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				138,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)))));
+		playerTabPanelLayout
+				.setVerticalGroup(playerTabPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								playerTabPanelLayout
+										.createSequentialGroup()
+										.addGroup(
+												playerTabPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(
+																pcSavesPanel,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																164,
+																Short.MAX_VALUE)
+														.addComponent(
+																pcDetailsPanel,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																164,
+																Short.MAX_VALUE))
+										.addGap(18, 18, 18)
+										.addComponent(
+												pcAbilitiesPanel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												190,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap()));
+
 		playerTabbedPane.addTab("Player", playerTabPanel);
 
 		notesPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -624,6 +705,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 		playerEditButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		playerEditButton.setText("edit");
+		playerEditButton.setToolTipText("Edit character.");
 		playerEditButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				playerEditButtonActionPerformed(evt);
@@ -631,7 +713,8 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		});
 
 		testButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		testButton.setText("test");
+		testButton.setText("sheet");
+		testButton.setToolTipText("View a character sheet. *test*");
 		testButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				testButtonActionPerformed(evt);
@@ -656,7 +739,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 										.addComponent(testButton)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-												254, Short.MAX_VALUE)
+												173, Short.MAX_VALUE)
 										.addComponent(
 												buttonsPanel,
 												javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -665,7 +748,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 										.addGap(8, 8, 8))
 						.addComponent(playerTabbedPane,
 								javax.swing.GroupLayout.Alignment.TRAILING,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 485,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 414,
 								Short.MAX_VALUE));
 		mainPanelLayout
 				.setVerticalGroup(mainPanelLayout
@@ -678,7 +761,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 										.addComponent(
 												playerTabbedPane,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
-												372, Short.MAX_VALUE)
+												417, Short.MAX_VALUE)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
@@ -897,7 +980,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(0, 0, 0)
 						.addComponent(jScrollPane1,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 312,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 357,
 								Short.MAX_VALUE)
 						.addGap(0, 0, 0)
 						.addComponent(jPanel8,
@@ -918,6 +1001,16 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		// TODO add your handling code here:
 		JDialog dDialog = new JDialog();
 		dDialog.add(new Panel_Player(ost, currentPlayer));
+
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Dimension windowSize = ost.mainFrame.getSize();
+		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//		setLocation(windowX, windowY);
+		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
+		dDialog.setLocationRelativeTo(ost.mainFrame);
+		//dDialog.setSize(480, 360);
+
 		dDialog.setVisible(true);
 	}
 
@@ -1506,12 +1599,31 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		// string fields
 		if (currentPlayer != null && currentPlayer.getName() != null) {
 
-			if (currentPlayerSheet == null) {
-				currentPlayerSheet = new Panel_Player(ost, currentPlayer);
-				playerTabPanel.add(currentPlayerSheet,
+			if (playerDetailsPanel == null) {
+				playerDetailsPanel = new Panel_Player_Details(ost,
+						currentPlayer);
+				pcDetailsPanel.add(playerDetailsPanel,
 						java.awt.BorderLayout.CENTER);
+				pcDetailsPanel.validate();
 			} else
-				currentPlayerSheet.updatePanel(currentPlayer);
+				playerDetailsPanel.updatePanel(currentPlayer);
+
+			if (playerSavesPanel == null) {
+				playerSavesPanel = new Panel_Player_Saves(ost, currentPlayer);
+				pcSavesPanel
+						.add(playerSavesPanel, java.awt.BorderLayout.CENTER);
+				pcSavesPanel.validate();
+			} else
+				playerSavesPanel.updatePanel(currentPlayer);
+
+			if (playerAbilitiesPanel == null) {
+				playerAbilitiesPanel = new Panel_Player_Abilities(ost,
+						currentPlayer);
+				pcAbilitiesPanel.add(playerAbilitiesPanel,
+						java.awt.BorderLayout.CENTER);
+				pcAbilitiesPanel.validate();
+			} else
+				playerAbilitiesPanel.updatePanel(currentPlayer);
 
 			notesField.setText(currentPlayer.getNotes());
 
@@ -1748,6 +1860,9 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private javax.swing.JButton newGearBuyButton;
 	private javax.swing.JTextArea notesField;
 	private javax.swing.JPanel notesPanel;
+	private javax.swing.JPanel pcAbilitiesPanel;
+	private javax.swing.JPanel pcDetailsPanel;
+	private javax.swing.JPanel pcSavesPanel;
 	private javax.swing.JButton playerEditButton;
 	private javax.swing.JList playerList;
 	private javax.swing.JTextField playerSearchTextField;
