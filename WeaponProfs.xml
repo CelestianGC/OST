@@ -1,34 +1,8 @@
 <entries>
   <WeaponProfClass>
-    <myID>5eeccf39-4114-464b-8bf3-9acb3c6fccc2</myID>
+    <myID>cf77007a-b805-4fc8-be2a-62fd4766b89e</myID>
     <name>long sword</name>
     <description>Longword prof</description>
-    <cost>1</cost>
-    <allowedClass/>
-    <allowedRace/>
-    <allowedWeapons/>
-    <attackAdjustment>0</attackAdjustment>
-    <damageAdjustment>0</damageAdjustment>
-    <speedAdjustment>0</speedAdjustment>
-    <preReqWeaponProfs/>
-  </WeaponProfClass>
-  <WeaponProfClass>
-    <myID>7ee1ea20-4072-4c28-8095-e853ac1ae17f</myID>
-    <name>dagger</name>
-    <description>Enter Description of this new weapon prof.</description>
-    <cost>1</cost>
-    <allowedClass/>
-    <allowedRace/>
-    <allowedWeapons/>
-    <attackAdjustment>0</attackAdjustment>
-    <damageAdjustment>0</damageAdjustment>
-    <speedAdjustment>0</speedAdjustment>
-    <preReqWeaponProfs/>
-  </WeaponProfClass>
-  <WeaponProfClass>
-    <myID>1d90fdea-654a-4d4b-b0c5-fd6dfe5b3fd0</myID>
-    <name>long bow</name>
-    <description>Enter Description of this new weapon prof.</description>
     <cost>1</cost>
     <allowedClass/>
     <allowedRace/>

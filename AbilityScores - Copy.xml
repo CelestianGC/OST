@@ -41,8 +41,8 @@
       <score>0</score>
       <name>Wisdom</name>
       <description>Wisdom</description>
-      <magicalAdjustment>0</magicalAdjustment>
-      <spellFailure>0</spellFailure>
+      <magicalAdjustment>-3</magicalAdjustment>
+      <spellFailure>20</spellFailure>
       <bonusSpells>
         <int>0</int>
         <int>0</int>
@@ -59,15 +59,15 @@
       <score>0</score>
       <name>Dexterity</name>
       <description>Dexterity</description>
-      <reactionAdjustment>0</reactionAdjustment>
-      <attackAdjustment>0</attackAdjustment>
-      <defensiveAdjustment>0</defensiveAdjustment>
+      <reactionAdjustment>-3</reactionAdjustment>
+      <attackAdjustment>-3</attackAdjustment>
+      <defensiveAdjustment>4</defensiveAdjustment>
       <defensiveAdjustmentBarbarian>0</defensiveAdjustmentBarbarian>
       <skillsAdjustments>
         <org.ost.main.MyClasses.SkillsClass>
           <name>Pick Pockets</name>
           <abbrev>PP</abbrev>
-          <score>0</score>
+          <score>-15</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -75,7 +75,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Open Locks</name>
           <abbrev>OL</abbrev>
-          <score>0</score>
+          <score>-10</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -83,7 +83,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Find/Remove Traps</name>
           <abbrev>F/R</abbrev>
-          <score>0</score>
+          <score>-10</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -91,7 +91,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Move Silently</name>
           <abbrev>MS</abbrev>
-          <score>0</score>
+          <score>-20</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -99,7 +99,7 @@
         <org.ost.main.MyClasses.SkillsClass>
           <name>Hide in Shadows</name>
           <abbrev>HS</abbrev>
-          <score>0</score>
+          <score>-10</score>
           <min>-200</min>
           <max>200</max>
           <allowed>true</allowed>
@@ -136,11 +136,11 @@
       <score>0</score>
       <name>Consitution</name>
       <description>Consitution</description>
-      <hitpointAdjustment>0</hitpointAdjustment>
+      <hitpointAdjustment>-2</hitpointAdjustment>
       <hitpointAdjustmentFighter>0</hitpointAdjustmentFighter>
       <hitpointAdjustmentBarbarian>0</hitpointAdjustmentBarbarian>
-      <systemShock>0</systemShock>
-      <resurrectionSurvival>0</resurrectionSurvival>
+      <systemShock>35</systemShock>
+      <resurrectionSurvival>40</resurrectionSurvival>
       <bonusAbilities/>
       <outer-class reference="../.."/>
     </consitution>
@@ -148,9 +148,9 @@
       <score>0</score>
       <name>Charisma</name>
       <description>Charisma</description>
-      <maxNumberHenchmen>1</maxNumberHenchmen>
+      <maxNumberHenchmen>0</maxNumberHenchmen>
       <loyaltyBase>-30</loyaltyBase>
-      <reactionAdjustment>-35</reactionAdjustment>
+      <reactionAdjustment>-25</reactionAdjustment>
       <bonusAbilities/>
       <outer-class reference="../.."/>
     </charisma>

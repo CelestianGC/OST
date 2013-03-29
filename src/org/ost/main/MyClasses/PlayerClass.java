@@ -532,6 +532,8 @@ public class PlayerClass implements Serializable, Comparable {
 				}
 			}
 		}
+		if (classNames.length()<1)
+			classNames = "NoClassSet";
 		return classNames;
 	}
 	/**
@@ -2016,6 +2018,43 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 		
 		return isTrue;	
+	}
+	
+	/**
+	 * returns true if character can cast arcane spells
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean isCasterArcane(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+		boolean caster = false;
+		int base[] = getAllArcaneSpellsPerLevel(cList,eList,rList);
+		for(Integer i: base)
+			if (i > 0) {
+				caster = true;
+				break;
+			}
+		return caster;
+	}
+	/**
+	 * return true if the caster can cast divine spells
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean isCasterDivine(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+		boolean caster = false;
+		int base[] = getAllDivineSpellsPerLevel(cList,eList,rList);
+		for(Integer i: base)
+			if (i > 0) {
+				caster = true;
+				break;
+			}
+		return caster;
 	}
 	
 }

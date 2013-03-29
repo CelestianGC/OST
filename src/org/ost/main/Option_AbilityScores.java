@@ -30,10 +30,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		super(parent, modal);
 		this.ost = ost;
 		initComponents();
-		
-		strengthPercentComboBox.setModel(
-				new DefaultComboBoxModel<>(STRENGTH_PERCENTILE));
-		
+
+		strengthPercentComboBox.setModel(new DefaultComboBoxModel<>(
+				STRENGTH_PERCENTILE));
+
 		buildAbilityTables();
 		// force first time to load things up
 		strengthRadioButtonActionPerformed(null);
@@ -218,7 +218,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		strengthPanel.add(strengthHitBonusLabel, gridBagConstraints);
 
 		strengthHitBonusSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
-				-20, 20, 1));
+				-99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 1;
@@ -235,7 +235,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		strengthPanel.add(strengthDamageAdjLabel, gridBagConstraints);
 
 		strengthDamageAdjSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
-				-10, 10, 1));
+				-99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 2;
@@ -252,7 +252,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		strengthPanel.add(strengthWeightAllowanceLabel, gridBagConstraints);
 
 		strengthWeightAllowanceSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10000, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 99000, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 4;
@@ -691,7 +691,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		wisdomPanel.add(wisdomMagicAdjLabel, gridBagConstraints);
 
 		wisdomMagicAdjustSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
-				0, 100, 1));
+				-99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 4;
@@ -888,7 +888,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		dexterityPanel.add(dexterityAttackAdjustmenLabel, gridBagConstraints);
 
 		dexterityAttackAdjustmentSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 4;
@@ -928,7 +928,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				.add(dexterityReactionAdjustmentLabel, gridBagConstraints);
 
 		dexterityreactionAdjustmentSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 3;
@@ -1155,7 +1155,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				gridBagConstraints);
 
 		constitutionHitPointAdjustmentFighterSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 2;
@@ -1176,7 +1176,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				gridBagConstraints);
 
 		constitutionHitPointAdjustmentSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 1;
@@ -1232,7 +1232,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		constitutionPanel.add(jPanel10, gridBagConstraints);
 
 		constitutionHitPointAdjustmentBarbarianSpinner1
-				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 3;
@@ -1312,7 +1312,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		charismaPanel.add(charismaLoyaltyBaseLabel, gridBagConstraints);
 
 		charismaLoyaltyBaseSpinner.setModel(new javax.swing.SpinnerNumberModel(
-				0, 0, 100, 1));
+				0, -100, 100, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 2;
@@ -1329,7 +1329,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		charismaPanel.add(charismaReactionAdjLabel, gridBagConstraints);
 
 		charismaReactionAdjSpinner.setModel(new javax.swing.SpinnerNumberModel(
-				0, 0, 100, 1));
+				0, -100, 100, 1));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 3;
@@ -1925,7 +1925,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			javax.swing.event.ChangeEvent evt) {
 
 		int nScore = (int) strengthScoreSpinner.getValue();
-		strengthUpdateStored(nPreviousStrength, null);
+		if (strengthPercentComboBox.isEnabled()) {
+			strengthPercentComboBoxActionPerformed(null);
+		} else
+			strengthUpdateStored(nPreviousStrength, null);
 		strengthUpdatePanel(nScore, null);
 	}
 
@@ -2014,7 +2017,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		Strength oS = null;
 		switch (nRange) {
 		case 0: // 0 == 18/0%
-			oS = null;
+			oS = ost.abilityStatList.getContent().get(18).strength;
 			break;
 		case 1: // 1-50
 			oS = ost.abilityStatList.getContent().get(18).strength.percentile

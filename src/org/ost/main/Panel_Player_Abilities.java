@@ -137,6 +137,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 							abilityTotal));
 					//bonus arcane spells
 					String magicSpells = "";
+					if (pc.isCasterArcane(
+							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
 					for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
 						magicSpells = magicSpells
 								+ String.format("L%dX%d%s", ii + 1,
@@ -267,10 +269,12 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					pcWisdomLabel.setText(String.format("%d", abilityTotal));
 					//divine spells
 					String clericSpells = "";
+					if (pc.isCasterDivine(
+							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
 					for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
 						clericSpells = clericSpells
 								+ String.format("L%dX%d%s", ii + 1,
-										aStat.intelligence.bonusSpells[ii],
+										aStat.wisdom.bonusSpells[ii],
 										ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
 												: "");
 					}
