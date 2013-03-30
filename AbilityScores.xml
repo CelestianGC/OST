@@ -2835,8 +2835,8 @@
       <damageAdjustment>2</damageAdjustment>
       <weightAllowance>750</weightAllowance>
       <minOpenDoor>1</minOpenDoor>
-      <numDiceOpenDoor>6</numDiceOpenDoor>
-      <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+      <numDiceOpenDoor>1</numDiceOpenDoor>
+      <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
       <bendBars>16</bendBars>
       <bonusAbilities/>
       <percentile>
@@ -2848,8 +2848,8 @@
           <damageAdjustment>3</damageAdjustment>
           <weightAllowance>1000</weightAllowance>
           <minOpenDoor>3</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
           <bendBars>20</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
@@ -2862,8 +2862,8 @@
           <damageAdjustment>3</damageAdjustment>
           <weightAllowance>1250</weightAllowance>
           <minOpenDoor>4</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
           <bendBars>25</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
@@ -2876,8 +2876,8 @@
           <damageAdjustment>4</damageAdjustment>
           <weightAllowance>1500</weightAllowance>
           <minOpenDoor>4</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
           <bendBars>30</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
@@ -2890,8 +2890,8 @@
           <damageAdjustment>5</damageAdjustment>
           <weightAllowance>2000</weightAllowance>
           <minOpenDoor>4</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
           <bendBars>35</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>
@@ -2904,8 +2904,8 @@
           <damageAdjustment>6</damageAdjustment>
           <weightAllowance>3000</weightAllowance>
           <minOpenDoor>5</minOpenDoor>
-          <numDiceOpenDoor>6</numDiceOpenDoor>
-          <sizeDiceOpenDoor>0</sizeDiceOpenDoor>
+          <numDiceOpenDoor>1</numDiceOpenDoor>
+          <sizeDiceOpenDoor>6</sizeDiceOpenDoor>
           <bendBars>40</bendBars>
           <bonusAbilities/>
           <outer-class reference="../../../.."/>

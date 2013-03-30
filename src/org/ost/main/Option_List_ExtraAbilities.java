@@ -57,7 +57,7 @@ public class Option_List_ExtraAbilities extends javax.swing.JDialog {
 		extraListModel.removeAllElements();
 		Collections.sort(ost.extraAbilitiesList.getContent());
 		for (ExtraAbilitiesClass oR : ost.extraAbilitiesList.getContent()) {
-			ost.dprint("Added new extra-ability>" + oR.getName()+"\n");
+			ost.dprint("Added new extra-ability>" + oR.getName() + "\n");
 			extraListModel.addElement(oR);
 		}
 		if (oSelected != null)
@@ -128,6 +128,7 @@ public class Option_List_ExtraAbilities extends javax.swing.JDialog {
 		});
 		buttonsPanel.add(mainEditButton);
 
+		mainDeleteButton.setBackground(new java.awt.Color(204, 0, 0));
 		mainDeleteButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		mainDeleteButton.setText("delete");
 		mainDeleteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -157,14 +158,14 @@ public class Option_List_ExtraAbilities extends javax.swing.JDialog {
 	//GEN-END:initComponents
 
 	private void mainDeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
-//		Object oSelected = mainList.getSelectedValue();
-//		if (oSelected != null) {
-//			ExtraAbilitiesClass o = (ExtraAbilitiesClass) oSelected;
-//			if (SimpleDialog.AskYN(this, "Delete " + o.getName() + "?")) {
-//				ost.extraAbilitiesList.getContent().remove(o);
-//				extraListModel.removeElement(o);
-//			}
-//		}
+		//		Object oSelected = mainList.getSelectedValue();
+		//		if (oSelected != null) {
+		//			ExtraAbilitiesClass o = (ExtraAbilitiesClass) oSelected;
+		//			if (SimpleDialog.AskYN(this, "Delete " + o.getName() + "?")) {
+		//				ost.extraAbilitiesList.getContent().remove(o);
+		//				extraListModel.removeElement(o);
+		//			}
+		//		}
 		List oSelect = mainList.getSelectedValuesList();
 		boolean bDelete = false;
 		if (!oSelect.isEmpty()) {
@@ -180,8 +181,8 @@ public class Option_List_ExtraAbilities extends javax.swing.JDialog {
 						extraListModel.removeElement(o);
 					}
 				}
-		}	
 		}
+	}
 
 	private void mainEditButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:

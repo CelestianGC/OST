@@ -138,6 +138,17 @@ public class AbilityScoreClass {
 	public void setAbbrev(String abbrev) {
 		this.abbrev = abbrev;
 	}
+
+	/**
+	 * return a clone/new version of this object
+	 * 
+	 * @return
+	 */
+	public AbilityScoreClass cloneMe() {
+		AbilityScoreClass newMe = 
+				new AbilityScoreClass(score, percentile, name, abbrev, min, max);
+		return newMe;
+	}
 	
 	
 }

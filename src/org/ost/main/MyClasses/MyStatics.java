@@ -11,8 +11,8 @@ public class MyStatics {
 	public static final int SAVE_BREATH = 3;
 	public static final int SAVE_SPELL = 4;
 	public static final String[] SAVES = {"Death/Paralyzation/Poison","Petrification/Polymorph",
-		"Rod/Staff/Wand","Breath Weapon","Spells"};
-	public static final String[] SAVES_ABBREV = {"Death","Poly","R/S/W","Breath","Spells"};
+		"Rod/Staff/Wand","Breath Weapon","Spells","Unknown","Unknown"};
+	public static final String[] SAVES_ABBREV = {"Death","Poly","R/S/W","Breath","Spells","NA","NA"};
 	public static final int MAX_SAVES = 5;
 	
 	public static final String CHART_MONSTER_SAVE = "Monster Saves";

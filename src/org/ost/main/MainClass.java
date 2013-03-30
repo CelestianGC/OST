@@ -31,7 +31,7 @@ import static org.ost.main.MyUtils.Utils.*;
 
 public class MainClass implements Serializable {
 	private static final long serialVersionUID = 1L;
-	public String version = "13.03.09";
+	public String version = "13.03.29";
 	public String dateName = "by Mike Wilson";
 	public String aboutURL = "https://sourceforge.net/projects/oldschooltool/";
 	public String aboutEmail = "uce_mike@yahoo.com";

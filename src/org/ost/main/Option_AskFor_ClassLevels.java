@@ -177,16 +177,16 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		jPanel3.add(jLabel4);
 
 		hdNumberSpinner
-				.setModel(new javax.swing.SpinnerNumberModel(1, 1, 99, 1));
+				.setModel(new javax.swing.SpinnerNumberModel(1, 0, 99, 1));
 		jPanel3.add(hdNumberSpinner);
 
 		jLabel5.setText("d");
 		jPanel3.add(jLabel5);
 
-		hdSizeSpinner.setModel(new javax.swing.SpinnerNumberModel(4, 1, 99, 1));
+		hdSizeSpinner.setModel(new javax.swing.SpinnerNumberModel(4, 0, 99, 1));
 		jPanel3.add(hdSizeSpinner);
 
-		jLabel6.setText("bonus");
+		jLabel6.setText("additional");
 		jPanel3.add(jLabel6);
 
 		hdBonusSpinner
@@ -714,38 +714,59 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		int nLevel = (int) levelSpinner.getValue();
 		if (nLevel > currentClass.getLevelDetails().size()) {
 			for (int i = currentClass.getLevelDetails().size(); i < nLevel; i++) {
-				CharacterClass.LevelClass newLevel = currentClass.new LevelClass(
-						i + 1);
+//				CharacterClass.LevelClass newLevel = currentClass.new LevelClass(
+//						i + 1);
+				CharacterClass.LevelClass newLevel = 
+						currentClass.getLevelDetails().get((i-1)).cloneMe();
 				currentClass.getLevelDetails().add(newLevel);
-				// set some defaults for ease 
-				newLevel.setThaco(currentLevel.getThaco());
-				newLevel.setExpReq(currentLevel.getExpReq() + 1);
-				newLevel.setHitDiceNumber(currentLevel.getHitDiceNumber());
-				newLevel.setHitDiceSize(currentLevel.getHitDiceSize());
-				newLevel.setHitPointBonus(currentLevel.getHitPointBonus());
 
-				for (int ii = 0; ii < currentLevel.getSaves().size(); ii++)
-					newLevel.getSaves()
-							.set(ii, currentLevel.getSaves().get(ii));
-
-				for (int ii = 0; ii < newLevel.getSpellsPerLevelArcane().length; ii++)
-					newLevel.getSpellsPerLevelArcane()[ii] = currentLevel
-							.getSpellsPerLevelArcane()[ii];
-
-				for (int ii = 0; ii < newLevel.getSpellsPerLevelDivine().length; ii++)
-					newLevel.getSpellsPerLevelDivine()[ii] = currentLevel
-							.getSpellsPerLevelDivine()[ii];
-
-				for (int ii = 0; ii < newLevel.getThiefSkills().size(); ii++)
-					newLevel.getThiefSkills().set(ii,
-							currentLevel.getThiefSkills().get(ii));
-
-				// set the new level values to previous just to have preset.
-				for (int ii = 0; ii < MAX_MATRIX; ii++)
-					newLevel.getAttackMatrix()[ii] = currentLevel
-							.getAttackMatrix()[ii];
+				int lastEXP = 0;
+				int secondEXP = 0;
+				int newEXP = -1;
+				try {
+					lastEXP = currentClass.getLevelDetails().get((i-1)).getExpReq();
+					secondEXP = currentClass.getLevelDetails().get((i-2)).getExpReq();
+				} catch (Exception e) {
+					// do not really care if we failed
+				}
+				if (secondEXP != 0) // figure out diff and use that
+					newEXP = (lastEXP - secondEXP)+lastEXP;
+				else 
+					newEXP = lastEXP +1;
+				
+				newLevel.setExpReq(newEXP);
+				
+// cloning previous level should negate the need for this
+//				// set some defaults for ease 
+//				newLevel.setThaco(currentLevel.getThaco());
+//				newLevel.setExpReq(currentLevel.getExpReq() + 1);
+//				newLevel.setHitDiceNumber(currentLevel.getHitDiceNumber());
+//				newLevel.setHitDiceSize(currentLevel.getHitDiceSize());
+//				newLevel.setHitPointBonus(currentLevel.getHitPointBonus());
+//
+//				for (int ii = 0; ii < currentLevel.getSaves().size(); ii++)
+//					newLevel.getSaves()
+//							.set(ii, currentLevel.getSaves().get(ii));
+//
+//				for (int ii = 0; ii < newLevel.getSpellsPerLevelArcane().length; ii++)
+//					newLevel.getSpellsPerLevelArcane()[ii] = currentLevel
+//							.getSpellsPerLevelArcane()[ii];
+//
+//				for (int ii = 0; ii < newLevel.getSpellsPerLevelDivine().length; ii++)
+//					newLevel.getSpellsPerLevelDivine()[ii] = currentLevel
+//							.getSpellsPerLevelDivine()[ii];
+//
+//				for (int ii = 0; ii < newLevel.getThiefSkills().size(); ii++)
+//					newLevel.getThiefSkills().set(ii,
+//							currentLevel.getThiefSkills().get(ii));
+//
+//				// set the new level values to previous just to have preset.
+//				if (matrixTable.isEditing())
+//					matrixTable.getCellEditor().stopCellEditing();
+//				for (int ii = 0; ii < MAX_MATRIX; ii++)
+//					newLevel.getAttackMatrix()[ii] = currentLevel
+//							.getAttackMatrix()[ii];
 			}
-
 		} // end creating default level values for new levels
 
 		// now that all that is done set currentLevel to the new value;
@@ -770,9 +791,6 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 				.setValue(currentLevel.getAttacksPerRoundMax()[0]);
 		maxAtkPerRound2Spinner
 				.setValue(currentLevel.getAttacksPerRoundMax()[1]);
-
-		//TODO sort out the table/matrix
-		//matrixTable
 
 		for (int i = 0; i < currentLevel.getAttackMatrix().length; i++) {
 			//			int acNumber = (10 - i);
@@ -809,7 +827,6 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		//TODO sort out the table/matrix
 		//matrixTable
 
-		matrixTable.editingStopped(null);
 		for (int i = 0; i < matrixTable.getColumnCount(); i++) {
 			currentLevel.getAttackMatrix()[i] = (int) matrixTable.getValueAt(0,
 					i);

@@ -262,7 +262,12 @@ public class PlayerClass implements Serializable, Comparable {
 						nDiceCount = oL.getHitDiceNumber();
 						nDiceSize = oL.getHitDiceSize();
 						nClassHPBonus = oL.getHitPointBonus();
-						nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+						// some classes stop getting HD
+						// fighters at level 9 just get +3 hp
+						if (nDiceCount <= 0 || nDiceSize <= 0)
+							nRollingHP = 0; 
+						else
+							nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
 
 						ost.dprint(String.format("Level %d\n"
 								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
@@ -281,10 +286,10 @@ public class PlayerClass implements Serializable, Comparable {
 								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
 						getHdRolls().add(nRolledHP); // saved for de-level?
 						setLevel((getLevel()+1)); // set level to new level
-					} else {
+					} else if (oL.getExpReq() > getExperience()) {
 						//to little exp or same level
 						//no need to go any further
-						break;
+							break;
 					}
 				}
 
@@ -342,7 +347,12 @@ public class PlayerClass implements Serializable, Comparable {
 						nDiceCount = oL.getHitDiceNumber();
 						nDiceSize = oL.getHitDiceSize();
 						nClassHPBonus = oL.getHitPointBonus();
-						nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+						// some classes stop getting HD
+						// fighters at level 9 just get +3 hp
+						if (nDiceCount <= 0 || nDiceSize <= 0)
+							nRollingHP = 0; 
+						else
+							nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
 
 						ost.dprint(String.format("deLevel %d\n"
 								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"

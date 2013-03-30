@@ -27,6 +27,7 @@ public class Option_List_NonWeaponProfs extends javax.swing.JDialog {
 	private MainClass ost;
 	private DefaultListModel<NonWeaponProfClass> listModel;
 	private java.awt.Frame parent;
+
 	/** Creates new form Option_List_Races */
 	public Option_List_NonWeaponProfs(java.awt.Frame parent, boolean modal,
 			MainClass ost) {
@@ -58,7 +59,7 @@ public class Option_List_NonWeaponProfs extends javax.swing.JDialog {
 		listModel.removeAllElements();
 		Collections.sort(ost.nonWeaponProfList.getContent());
 		for (NonWeaponProfClass o : ost.nonWeaponProfList.getContent()) {
-			ost.dprint("Added non-weapon prof>" + o.getName()+"\n");
+			ost.dprint("Added non-weapon prof>" + o.getName() + "\n");
 			listModel.addElement(o);
 		}
 		if (oSelected != null)
@@ -129,6 +130,7 @@ public class Option_List_NonWeaponProfs extends javax.swing.JDialog {
 		});
 		buttonsPanel.add(editButton);
 
+		deleteButton.setBackground(new java.awt.Color(204, 0, 0));
 		deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		deleteButton.setText("delete");
 		deleteButton.addActionListener(new java.awt.event.ActionListener() {

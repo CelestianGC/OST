@@ -1,8 +1,11 @@
 package org.ost.main.MyClasses;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.UUID;
+
+import org.ost.main.MainClass;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 
@@ -98,9 +101,6 @@ public class CharacterClass implements Comparable{
 			this.setMyID(UUID.randomUUID().toString());
 		}
 
-
-
-		//TODO finish
 		public class LevelClass {
 			public int level;
 			public int expReq;
@@ -137,7 +137,7 @@ public class CharacterClass implements Comparable{
 						0,1,6,
 						0,0,
 						0,new int[2],
-						new int[2],	new int[21],new ArrayList<Integer>(),new ArrayList<Integer>(),
+						new int[2],	new int[MAX_MATRIX],new ArrayList<Integer>(),new ArrayList<Integer>(),
 						new ArrayList<SkillsClass>(),new ArrayList<SkillsClass>(),
 						new int[MAX_MAGE_SPELL_LEVEL], new int[MAX_CLERIC_SPELL_LEVEL], new ArrayList<String>(),
 						new ArrayList<String>(),
@@ -180,27 +180,32 @@ public class CharacterClass implements Comparable{
 				this.turnMatrix = new ArrayList<Integer>();
 				
 				this.abilityAdjustment = abilityAdjustment;
-				for(int i=0;i<MAX_ABILITIES;i++)
-					getAbilityAdjustment().add(
-							new AbilityScoreClass(0,0, ABILITIES[i],ABILITIES_ABBREV[i],-25,25));
+				if (abilityAdjustment.size()<=0)
+					for(int i=0;i<MAX_ABILITIES;i++)
+						getAbilityAdjustment().add(
+								new AbilityScoreClass(0,0, ABILITIES[i],ABILITIES_ABBREV[i],-25,25));
 
 				this.saves = saves;
-				for(int i=0;i<MAX_SAVES;i++)
-					getSaves().add(20);
+				if (saves.size()<=0)
+					for(int i=0;i<MAX_SAVES;i++)
+						getSaves().add(20);
 
 				this.savesAdjustments = savesAdj;
-				for(int i=0;i<MAX_SAVES;i++)
-					getSavesAdjustments().add(0);
+				if (savesAdjustments.size()<=0)
+					for(int i=0;i<MAX_SAVES;i++)
+						getSavesAdjustments().add(0);
 
 				this.thiefSkills = thiefSkills;
-				for(int i=0;i<MAX_THIEF_SKILLS;i++)
-					getThiefSkills().add(new 
-							SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
+				if (thiefSkills.size()<=0)
+					for(int i=0;i<MAX_THIEF_SKILLS;i++)
+						getThiefSkills().add(new 
+								SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
 
 				this.thiefSkillAdjustments = thiefSkillsAdjustments;
-				for(int i=0;i<MAX_THIEF_SKILLS;i++)
-					getThiefSkillAdjustments().add(new 
-							SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
+				if (thiefSkillAdjustments.size()<=0)
+					for(int i=0;i<MAX_THIEF_SKILLS;i++)
+						getThiefSkillAdjustments().add(new 
+								SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
 			}
 
 
@@ -534,12 +539,87 @@ public class CharacterClass implements Comparable{
 			public void setExtraSpells(ArrayList<String> extraSpells) {
 				this.extraSpells = extraSpells;
 			}
+
+
+			/**
+			 * return a clone/new version of this object
+			 * 
+			 * @return
+			 */
+			public LevelClass cloneMe() {
+				LevelClass newMe = 
+						new LevelClass(level, expReq, thaco, ac, acBase, hitDiceNumber, 
+								hitDiceSize, hitPointBonus, nonWeaponProfAdditional, 
+								nonWeaponProfAdditional, new int[2],
+								new int[2],	new int[MAX_MATRIX],new ArrayList<Integer>(),new ArrayList<Integer>(),
+								new ArrayList<SkillsClass>(),new ArrayList<SkillsClass>(),
+								new int[MAX_MAGE_SPELL_LEVEL], new int[MAX_CLERIC_SPELL_LEVEL], new ArrayList<String>(),
+								new ArrayList<String>(),
+								new ArrayList<AbilityScoreClass>(),
+								new ArrayList<String>());
+
+				for(int i = 0; i<getAttacksPerRound().length;i++) {
+					int oS = getAttacksPerRound()[i];
+					newMe.getAttacksPerRound()[i] = oS;
+				}
+				for(int i = 0; i<getAttacksPerRoundMax().length;i++) {
+					int oS = getAttacksPerRoundMax()[i];
+					newMe.getAttacksPerRoundMax()[i] = oS;
+				}
+				for(int i = 0; i<getAttackMatrix().length;i++) {
+					int oS = getAttackMatrix()[i];
+					newMe.getAttackMatrix()[i] = oS;
+				}
+
+				for(int i = 0; i<getSaves().size();i++) {
+					int oS = getSaves().get(i);
+					newMe.getSaves().set(i,oS);
+				}
+
+				for(int i = 0; i<getSavesAdjustments().size();i++) {
+					int oS = getSavesAdjustments().get(i);
+					newMe.getSavesAdjustments().set(i,oS);
+				}
+				
+				for(int i = 0; i<getThiefSkills().size();i++) {
+					SkillsClass oB = getThiefSkills().get(i);
+					newMe.getThiefSkills().set(i, oB.cloneMe());
+				}
+				for(int i = 0; i<getThiefSkillAdjustments().size();i++) {
+					SkillsClass oB = getThiefSkillAdjustments().get(i);
+					newMe.getThiefSkillAdjustments().set(i, oB.cloneMe());
+				}
+				for(int i = 0; i<getSpellsPerLevelArcane().length;i++) {
+					int oS = getSpellsPerLevelArcane()[i];
+					newMe.getSpellsPerLevelArcane()[i] = oS;
+				}
+				for(int i = 0; i<getSpellsPerLevelDivine().length;i++) {
+					int oS = getSpellsPerLevelDivine()[i];
+					newMe.getSpellsPerLevelDivine()[i] = oS;
+				}
+				for(int i = 0; i<getNwpBonus().size();i++) {
+					String oS = getNwpBonus().get(i);
+					newMe.getNwpBonus().set(i, oS);
+				}
+				for(int i = 0; i<getBonusAbilities().size();i++) {
+					String oS = getBonusAbilities().get(i);
+					newMe.getBonusAbilities().add(oS);
+				}
+				for(int i = 0; i<getAbilityAdjustment().size();i++) {
+					AbilityScoreClass oB = getAbilityAdjustment().get(i);
+					newMe.getAbilityAdjustment().set(i, oB.cloneMe());
+				}
+				for(int i = 0; i<getExtraSpells().size();i++) {
+					String oS = getExtraSpells().get(i);
+					newMe.getExtraSpells().add(oS);
+				}
+				return newMe;
+			}
 			
 			
 			
 		}// end LevelClass
 
-		//TODO finish
 		public class AlignementReqs  {
 			public boolean alignmentRequired;
 			public int alignmentType;
@@ -1063,4 +1143,58 @@ public class CharacterClass implements Comparable{
 			return oL;
 		}
 		
+		/**
+		 * return a clone/new version of this object
+		 * 
+		 * @return
+		 */
+		public CharacterClass cloneMe() {
+			CharacterClass newMe = new 
+					CharacterClass(getName(), getDescription(), getAbbreviation(), 
+							getLevelMax(), isPercentileStrength(), getAbilityReqs(), 
+							getRaceReqs(), getAlignmentReq(), getAllowedArmor(), 
+							getAllowedWeapons(), getAllowedMajorSpheres(), 
+							getAllowedMinorSpheres(), isAllowAllMagicItems(), 
+							getAllowedMagic(), getLevelDetails());
+
+			for(int i = 0; i<getAbilityReqs().size();i++) {
+				AbilityScoreClass oB = getAbilityReqs().get(i);
+				newMe.getAbilityReqs().set(i, oB.cloneMe());
+			}
+			for(int i = 0; i<getRaceReqs().size();i++) {
+				String oS = getRaceReqs().get(i);
+				newMe.getRaceReqs().set(i, oS);
+			}
+			for(int i = 0; i<getAlignmentReq().length;i++) {
+				boolean oS = getAlignmentReq()[i];
+				newMe.getAlignmentReq()[i] = oS;
+			}
+			for(int i = 0; i<getAllowedArmor().size();i++) {
+				String oS = getAllowedArmor().get(i);
+				newMe.getAllowedArmor().set(i, oS);
+			}
+			for(int i = 0; i<getAllowedWeapons().size();i++) {
+				String oS = getAllowedWeapons().get(i);
+				newMe.getAllowedWeapons().set(i, oS);
+			}
+			for(int i = 0; i<getAllowedMajorSpheres().size();i++) {
+				String oS = getAllowedMajorSpheres().get(i);
+				newMe.getAllowedMajorSpheres().set(i, oS);
+			}
+			for(int i = 0; i<getAllowedMinorSpheres().size();i++) {
+				String oS = getAllowedMinorSpheres().get(i);
+				newMe.getAllowedMinorSpheres().set(i, oS);
+			}
+			newMe.setAllowAllMagicItems(isAllowAllMagicItems());
+			for(int i = 0; i<getAllowedMagic().size();i++) {
+				String oS = getAllowedMagic().get(i);
+				newMe.getAllowedMagic().set(i, oS);
+			}
+			for(int i = 0; i<getLevelDetails().size();i++) {
+				LevelClass oB = getLevelDetails().get(i);
+				newMe.getLevelDetails().set(i, oB.cloneMe());
+			}
+
+			return newMe;
+		}
 }

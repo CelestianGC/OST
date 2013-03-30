@@ -1,7 +1,7 @@
 <entries>
   <ExtraAbilitiesClass>
     <myID>c104f2ff-e619-44de-96ac-a5137655247b</myID>
-    <name>x-ability-name</name>
+    <name>fighter: con bonus</name>
     <description>x-ability description</description>
     <bonusWeaponProfs>0</bonusWeaponProfs>
     <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
@@ -263,8 +263,8 @@
       <int>0</int>
       <int>0</int>
     </clericSpellsBonus>
-    <type>0</type>
-    <fighterConBonus>false</fighterConBonus>
+    <type>2</type>
+    <fighterConBonus>true</fighterConBonus>
     <barbarianConBonus>false</barbarianConBonus>
     <barbarianDexBonus>false</barbarianDexBonus>
     <allowedWeaponMastery>false</allowedWeaponMastery>

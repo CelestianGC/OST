@@ -115,5 +115,17 @@ public class SkillsClass {
 	 * @return the myID
 	 */
 
+	/**
+	 * return a clone/new version of this object
+	 * 
+	 * @return
+	 */
+	public SkillsClass cloneMe() {
+		SkillsClass newMe = 
+				new SkillsClass(name, abbrev, score, min, max, allowed, "");
+		
+		return newMe;
+	}
+
 	
 }

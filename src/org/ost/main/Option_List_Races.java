@@ -37,13 +37,13 @@ public class Option_List_Races extends javax.swing.JDialog {
 		raceListJList.setModel(raceListModel);
 		updateRaceList();
 
-//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-//		Dimension windowSize = parent.getSize();
-//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-//		setLocation(windowX, windowY);
-//		setSize(windowSize.width - 2, windowSize.height - 2);
-//		setSize(300,500);
+		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//		Dimension windowSize = parent.getSize();
+		//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//		setLocation(windowX, windowY);
+		//		setSize(windowSize.width - 2, windowSize.height - 2);
+		//		setSize(300,500);
 		setLocationRelativeTo(parent);
 
 	}
@@ -55,12 +55,13 @@ public class Option_List_Races extends javax.swing.JDialog {
 		raceListModel.removeAllElements();
 		Collections.sort(ost.raceList.getContent());
 		for (RaceClass oR : ost.raceList.getContent()) {
-			ost.dprint("Added Race>" + oR.getName()+"\n");
+			ost.dprint("Added Race>" + oR.getName() + "\n");
 			raceListModel.addElement(oR);
 		}
 		if (oSelected != null)
 			raceListJList.setSelectedValue(oSelected, true);
-		else raceListJList.setSelectedValue(raceListModel.getElementAt(0), true);
+		else
+			raceListJList.setSelectedValue(raceListModel.getElementAt(0), true);
 	}
 
 	/** This method is called from within the constructor to
@@ -126,6 +127,7 @@ public class Option_List_Races extends javax.swing.JDialog {
 		});
 		buttonsPanel.add(raceEditButton);
 
+		raceDeleteButton.setBackground(new java.awt.Color(204, 0, 0));
 		raceDeleteButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		raceDeleteButton.setText("delete");
 		raceDeleteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -153,14 +155,14 @@ public class Option_List_Races extends javax.swing.JDialog {
 	//GEN-END:initComponents
 
 	private void raceDeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
-//		Object oSelected = raceListJList.getSelectedValue();
-//		if (oSelected != null) {
-//			RaceClass oRace = (RaceClass) oSelected;
-//			if (SimpleDialog.AskYN(this, "Delete " + oRace.getName() + "?")) {
-//				ost.raceList.getContent().remove(oRace);
-//				raceListModel.removeElement(oRace);
-//			}
-//		}
+		//		Object oSelected = raceListJList.getSelectedValue();
+		//		if (oSelected != null) {
+		//			RaceClass oRace = (RaceClass) oSelected;
+		//			if (SimpleDialog.AskYN(this, "Delete " + oRace.getName() + "?")) {
+		//				ost.raceList.getContent().remove(oRace);
+		//				raceListModel.removeElement(oRace);
+		//			}
+		//		}
 		List oSelect = raceListJList.getSelectedValuesList();
 		boolean bDelete = false;
 		if (!oSelect.isEmpty()) {
@@ -191,7 +193,7 @@ public class Option_List_Races extends javax.swing.JDialog {
 			raceDialog.setVisible(true);
 
 			updateRaceList();
-			
+
 			raceListJList.repaint();
 		}
 	}

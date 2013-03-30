@@ -3,21 +3,52 @@
     <name>Lost Bob</name>
     <namePlayer>John Smith</namePlayer>
     <myID>b888a035-1707-4a4c-89ee-9d5f35d19c6e</myID>
-    <hpMax>10</hpMax>
-    <hpCurrent>10</hpCurrent>
+    <hpMax>55</hpMax>
+    <hpCurrent>55</hpCurrent>
     <armorRatings>
+      <string>10</string>
+      <string>10</string>
       <string>10</string>
     </armorRatings>
     <moveRate>12</moveRate>
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Neutral</alignment>
+    <alignment>Lawful Good</alignment>
     <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
-    <log></log>
+    <log>character level up, new MaxHP:7 from 0
+character level up, new MaxHP:5 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:8 from 0
+character level up, new MaxHP:12 from 0
+character experience modified :50000
+character level up, new MaxHP:12 from 12
+character experience modified :-50000
+character experience modified :50000
+character level up, new MaxHP:12 from 12
+character level up, new MaxHP:52 from 0
+character experience modified :1000000
+character level up, new MaxHP:52 from 52
+character level up, new MaxHP:95 from 0
+character experience modified :250000
+character level up, new MaxHP:95 from 95
+character experience modified :-1000000
+character de-level, new MaxHP:107 from 95
+character experience modified :-300000
+character de-level, new MaxHP:145 from 83
+character level up, new MaxHP:13 from 0
+character level up, new MaxHP:10 from 0
+character level up, new MaxHP:10 from 0
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:13 from 0
+character experience modified :70000
+character level up, new MaxHP:55 from 13
+</log>
     <saveLast></saveLast>
     <tag></tag>
     <initRoll>0</initRoll>
@@ -25,26 +56,61 @@
     <fightingList/>
     <myClass>
       <PCClass>
-        <name>NoClassYet</name>
-        <classID>NoClassSet</classID>
-        <experience>0</experience>
-        <level>0</level>
+        <name>Fighter</name>
+        <classID>167fc092-1fa4-450f-9e44-b0baaab45aae</classID>
+        <experience>70000</experience>
+        <level>6</level>
         <primaryClass>false</primaryClass>
-        <hdRolls/>
+        <hdRolls>
+          <int>7</int>
+          <int>5</int>
+          <int>3</int>
+          <int>2</int>
+          <int>3</int>
+          <int>8</int>
+          <int>12</int>
+          <int>8</int>
+          <int>12</int>
+          <int>20</int>
+          <int>28</int>
+          <int>40</int>
+          <int>52</int>
+          <int>5</int>
+          <int>9</int>
+          <int>22</int>
+          <int>35</int>
+          <int>39</int>
+          <int>49</int>
+          <int>62</int>
+          <int>71</int>
+          <int>83</int>
+          <int>89</int>
+          <int>95</int>
+          <int>13</int>
+          <int>10</int>
+          <int>10</int>
+          <int>12</int>
+          <int>13</int>
+          <int>10</int>
+          <int>17</int>
+          <int>22</int>
+          <int>35</int>
+          <int>42</int>
+        </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
     </myClass>
     <myRace>
-      <name>NoRaceYet</name>
-      <raceID>NoRaceSET</raceID>
+      <name>Human</name>
+      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
       <outer-class reference="../.."/>
     </myRace>
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
       <AbilityScoreClass>
-        <score>0</score>
-        <percentile>0</percentile>
+        <score>18</score>
+        <percentile>78</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
         <min>0</min>
@@ -53,7 +119,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>9</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
@@ -63,7 +129,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>9</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -73,7 +139,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>16</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
         <abbrev>DEX</abbrev>
@@ -83,7 +149,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>17</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -93,7 +159,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Charisma</name>
         <abbrev>CHR</abbrev>
@@ -103,7 +169,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
         <abbrev>COM</abbrev>
@@ -114,18 +180,18 @@
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
+      <int>11</int>
+      <int>12</int>
+      <int>13</int>
+      <int>13</int>
+      <int>14</int>
     </mySaves>
     <mySaveAdjustments>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>
@@ -134,21 +200,25 @@
     <name>Marry</name>
     <namePlayer>John Smith</namePlayer>
     <myID>62664602-b628-40fa-919b-936fa5f51c12</myID>
-    <hpMax>10</hpMax>
-    <hpCurrent>10</hpCurrent>
+    <hpMax>22</hpMax>
+    <hpCurrent>22</hpCurrent>
     <armorRatings>
+      <string>10</string>
+      <string>10</string>
       <string>10</string>
     </armorRatings>
     <moveRate>12</moveRate>
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Neutral</alignment>
+    <alignment>Lawful Good</alignment>
     <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
-    <log></log>
+    <log>character experience modified :12000
+character level up, new MaxHP:22 from 0
+</log>
     <saveLast></saveLast>
     <tag></tag>
     <initRoll>0</initRoll>
@@ -156,25 +226,30 @@
     <fightingList/>
     <myClass>
       <PCClass>
-        <name>NoClassYet</name>
-        <classID>NoClassSet</classID>
-        <experience>0</experience>
-        <level>0</level>
+        <name>Paladin</name>
+        <classID>d2b75b24-c89e-4428-8a3e-aee91a37752e</classID>
+        <experience>12000</experience>
+        <level>4</level>
         <primaryClass>false</primaryClass>
-        <hdRolls/>
+        <hdRolls>
+          <int>8</int>
+          <int>13</int>
+          <int>20</int>
+          <int>22</int>
+        </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
     </myClass>
     <myRace>
-      <name>NoRaceYet</name>
-      <raceID>NoRaceSET</raceID>
+      <name>Human</name>
+      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
       <outer-class reference="../.."/>
     </myRace>
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
@@ -184,7 +259,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
@@ -194,7 +269,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -204,7 +279,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
         <abbrev>DEX</abbrev>
@@ -214,7 +289,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -224,7 +299,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>17</score>
         <percentile>0</percentile>
         <name>Charisma</name>
         <abbrev>CHR</abbrev>
@@ -234,7 +309,7 @@
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
         <abbrev>COM</abbrev>
@@ -245,18 +320,18 @@
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
+      <int>13</int>
+      <int>14</int>
+      <int>15</int>
+      <int>16</int>
+      <int>16</int>
     </mySaves>
     <mySaveAdjustments>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
+      <int>2</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>

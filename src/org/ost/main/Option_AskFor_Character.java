@@ -563,6 +563,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					
 				}
 			}
+			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			hpSpinner.setValue(currentCharacter.getHpMax());
 			}
 		
 	}

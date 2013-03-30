@@ -13,6 +13,7 @@ import java.util.List;
 
 import javax.swing.DefaultListModel;
 
+import org.jdom.Parent;
 import org.ost.main.MyClasses.ExtraAbilitiesClass;
 import org.ost.main.MyClasses.MyCellRendererList;
 import org.ost.main.MyClasses.CharacterClass;
@@ -26,12 +27,14 @@ import org.ost.main.MyUtils.SimpleDialog;
 public class Option_List_CharacterClasses extends javax.swing.JDialog {
 	private MainClass ost;
 	private DefaultListModel<CharacterClass> listModel;
+	private java.awt.Frame parent;
 
 	/** Creates new form Option_List_Races */
 	public Option_List_CharacterClasses(java.awt.Frame parent, boolean modal,
 			MainClass ost) {
 		super(parent, modal);
 		this.ost = ost;
+		this.parent = parent;
 		initComponents();
 
 		listModel = new DefaultListModel<>();
@@ -57,14 +60,14 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 		listModel.removeAllElements();
 		Collections.sort(ost.characterClassList.getContent());
 		for (CharacterClass o : ost.characterClassList.getContent()) {
-			ost.dprint("Added class>" + o.getName()+"\n");
+			ost.dprint("Added class>" + o.getName() + "\n");
 			listModel.addElement(o);
 		}
 		if (oSelected != null)
 			characterClassList.setSelectedValue(oSelected, true);
 		else
-			characterClassList.setSelectedValue(listModel.getElementAt(0),
-					true);
+			characterClassList
+					.setSelectedValue(listModel.getElementAt(0), true);
 	}
 
 	/** This method is called from within the constructor to
@@ -82,6 +85,7 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 		buttonsPanel = new javax.swing.JPanel();
 		createButton = new javax.swing.JButton();
 		editButton = new javax.swing.JButton();
+		copyButton = new javax.swing.JButton();
 		deleteButton = new javax.swing.JButton();
 		doneButton = new javax.swing.JButton();
 
@@ -130,6 +134,16 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 		});
 		buttonsPanel.add(editButton);
 
+		copyButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		copyButton.setText("copy");
+		copyButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				copyButtonActionPerformed(evt);
+			}
+		});
+		buttonsPanel.add(copyButton);
+
+		deleteButton.setBackground(new java.awt.Color(204, 0, 0));
 		deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		deleteButton.setText("delete");
 		deleteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -156,15 +170,35 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	private void copyButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code
+		Object oSelected = characterClassList.getSelectedValue();
+		if (oSelected != null && oSelected instanceof CharacterClass) {
+			CharacterClass o = (CharacterClass) oSelected;
+			CharacterClass oNew = o.cloneMe();
+			String newClassName = SimpleDialog.showQuestion(parent,
+					"Copied class Name?", "Copy Class", o.getName() + "(copy)");
+			oNew.setName(newClassName);
+			ost.characterClassList.add(oNew);
+
+			// update list with new 
+			updateList();
+			// set selected on new 
+			characterClassList.setSelectedValue(oNew, true);
+
+			characterClassList.repaint();
+		}
+	}
+
 	private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
-//		Object oSelected = characterClassList.getSelectedValue();
-//		if (oSelected != null) {
-//			CharacterClass o = (CharacterClass) oSelected;
-//			if (SimpleDialog.AskYN(this, "Delete " + o.getName() + "?")) {
-//				ost.characterClassList.getContent().remove(o);
-//				listModel.removeElement(o);
-//			}
-//		}
+		//		Object oSelected = characterClassList.getSelectedValue();
+		//		if (oSelected != null) {
+		//			CharacterClass o = (CharacterClass) oSelected;
+		//			if (SimpleDialog.AskYN(this, "Delete " + o.getName() + "?")) {
+		//				ost.characterClassList.getContent().remove(o);
+		//				listModel.removeElement(o);
+		//			}
+		//		}
 		List oSelect = characterClassList.getSelectedValuesList();
 		boolean bDelete = false;
 		if (!oSelect.isEmpty()) {
@@ -180,7 +214,7 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 						listModel.removeElement(o);
 					}
 				}
-		}	
+		}
 
 	}
 
@@ -204,11 +238,11 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 	private void createButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		CharacterClass oNew = new CharacterClass("newClass",
-				"Enter Description of this new class.","New");
+				"Enter Description of this new class.", "New");
 		ost.characterClassList.add(oNew);
 
-		Option_AskFor_CharacterClass dDialog = new Option_AskFor_CharacterClass(ost.mainFrame,
-				true, ost, oNew);
+		Option_AskFor_CharacterClass dDialog = new Option_AskFor_CharacterClass(
+				ost.mainFrame, true, ost, oNew);
 
 		dDialog.setVisible(true);
 
@@ -234,6 +268,7 @@ public class Option_List_CharacterClasses extends javax.swing.JDialog {
 	// Variables declaration - do not modify
 	private javax.swing.JPanel buttonsPanel;
 	private javax.swing.JList characterClassList;
+	private javax.swing.JButton copyButton;
 	private javax.swing.JButton createButton;
 	private javax.swing.JButton deleteButton;
 	private javax.swing.JButton doneButton;

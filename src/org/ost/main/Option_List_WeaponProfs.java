@@ -60,7 +60,7 @@ public class Option_List_WeaponProfs extends javax.swing.JDialog {
 		listModel.removeAllElements();
 		Collections.sort(ost.nonWeaponProfList.getContent());
 		for (WeaponProfClass o : ost.WeaponProfList.getContent()) {
-			ost.dprint("Added weapon prof>" + o.getName()+"\n");
+			ost.dprint("Added weapon prof>" + o.getName() + "\n");
 			listModel.addElement(o);
 		}
 		if (oSelected != null)
@@ -131,6 +131,7 @@ public class Option_List_WeaponProfs extends javax.swing.JDialog {
 		});
 		buttonsPanel.add(editButton);
 
+		deleteButton.setBackground(new java.awt.Color(204, 0, 0));
 		deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		deleteButton.setText("delete");
 		deleteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -199,8 +200,8 @@ public class Option_List_WeaponProfs extends javax.swing.JDialog {
 				"Enter Description of this new weapon prof.");
 		ost.WeaponProfList.add(oNew);
 
-		Option_AskFor_WeaponProf dDialog = new Option_AskFor_WeaponProf(
-				parent, true, ost, oNew);
+		Option_AskFor_WeaponProf dDialog = new Option_AskFor_WeaponProf(parent,
+				true, ost, oNew);
 
 		dDialog.setVisible(true);
 
