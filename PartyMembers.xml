@@ -187,11 +187,11 @@ character level up, new MaxHP:55 from 13
       <int>14</int>
     </mySaves>
     <mySaveAdjustments>
-      <int>2</int>
-      <int>2</int>
-      <int>2</int>
-      <int>2</int>
-      <int>2</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>
@@ -200,8 +200,8 @@ character level up, new MaxHP:55 from 13
     <name>Marry</name>
     <namePlayer>John Smith</namePlayer>
     <myID>62664602-b628-40fa-919b-936fa5f51c12</myID>
-    <hpMax>22</hpMax>
-    <hpCurrent>22</hpCurrent>
+    <hpMax>53</hpMax>
+    <hpCurrent>53</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -218,6 +218,16 @@ character level up, new MaxHP:55 from 13
     <notes></notes>
     <log>character experience modified :12000
 character level up, new MaxHP:22 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:2 from 0
+character experience modified :12000
+character level up, new MaxHP:15 from 2
+character level up, new MaxHP:16 from 0
+character experience modified :250000
+character level up, new MaxHP:41 from 16
+character level up, new MaxHP:33 from 0
+character level up, new MaxHP:54 from 0
+character level up, new MaxHP:53 from 0
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -227,15 +237,51 @@ character level up, new MaxHP:22 from 0
     <myClass>
       <PCClass>
         <name>Paladin</name>
-        <classID>d2b75b24-c89e-4428-8a3e-aee91a37752e</classID>
-        <experience>12000</experience>
-        <level>4</level>
+        <classID>6d0987a3-01d6-44c5-8ff9-74147abd1fe2</classID>
+        <experience>262000</experience>
+        <level>8</level>
         <primaryClass>false</primaryClass>
         <hdRolls>
-          <int>8</int>
+          <int>2</int>
+          <int>2</int>
+          <int>1</int>
+          <int>6</int>
+          <int>13</int>
+          <int>4</int>
+          <int>9</int>
+          <int>15</int>
+          <int>16</int>
+          <int>4</int>
+          <int>10</int>
+          <int>11</int>
+          <int>20</int>
+          <int>25</int>
+          <int>3</int>
+          <int>12</int>
           <int>13</int>
           <int>20</int>
+          <int>27</int>
+          <int>28</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>3</int>
+          <int>7</int>
+          <int>13</int>
           <int>22</int>
+          <int>28</int>
+          <int>37</int>
+          <int>43</int>
+          <int>47</int>
+          <int>54</int>
+          <int>3</int>
+          <int>12</int>
+          <int>21</int>
+          <int>22</int>
+          <int>32</int>
+          <int>42</int>
+          <int>46</int>
+          <int>53</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -269,7 +315,7 @@ character level up, new MaxHP:22 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>12</score>
+        <score>17</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -320,11 +366,11 @@ character level up, new MaxHP:22 from 0
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
+      <int>10</int>
+      <int>11</int>
+      <int>12</int>
+      <int>12</int>
       <int>13</int>
-      <int>14</int>
-      <int>15</int>
-      <int>16</int>
-      <int>16</int>
     </mySaves>
     <mySaveAdjustments>
       <int>2</int>

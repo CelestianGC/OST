@@ -30,6 +30,8 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 	private java.awt.Frame parent;
 	private ArrayList<JSpinner> abilityScores;
 	private ArrayList<JSpinner> abilityPercentile;
+	private ArrayList<JCheckBox> abilityExceptional;
+	private ArrayList<JCheckBox> abilityPrime;
 	private ArrayList<AbilityScoreClass> currentAbilities;
 	private boolean settingClass;
 
@@ -61,6 +63,8 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 
 		abilityScores = new ArrayList<JSpinner>();
 		abilityPercentile = new ArrayList<JSpinner>();
+		abilityExceptional = new ArrayList<JCheckBox>();
+		abilityPrime = new ArrayList<JCheckBox>();
 
 		updatePanel(cAbilities);
 
@@ -136,10 +140,16 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 		for (int i = 0; i < abilityScores.size(); i++) {
 			JSpinner score = abilityScores.get(i);
 			JSpinner percentile = abilityPercentile.get(i);
-
+			
 			AbilityScoreClass aC = currentAbilities.get(i);
 			aC.setScore((int) score.getValue());
 			aC.setPercentile((int) percentile.getValue());
+			if (settingClass) {
+				JCheckBox exceptional = abilityExceptional.get(i);
+				JCheckBox prime = abilityPrime.get(i);
+				aC.setAllowExceptional(exceptional.isSelected());
+				aC.setPrimeRequisite(prime.isSelected());
+			}
 		}
 		return (currentAbilities);
 	}
@@ -157,9 +167,11 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 		currentAbilities = abilities;
 
 		abilityScores.clear();
+		abilityPercentile.clear();
+		abilityExceptional.clear();
+		abilityPrime.clear();
+		
 		mainPanel.removeAll();
-
-		int i = 0;
 		for (AbilityScoreClass aS : abilities) {
 
 			JPanel pPanel = new JPanel(lFlow);
@@ -189,22 +201,25 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 			exceptional.setFont(fFont);
 			exceptional
 					.setToolTipText("Allow exceptional value. Note: Only useful for Strength at this time.");
-
+			exceptional.setSelected(aS.isAllowExceptional());
+			
 			JCheckBox primeReq = new JCheckBox("prime");
 			primeReq.setFont(fFont);
 			primeReq.setToolTipText("Prime requisite ability.");
+			primeReq.setSelected(aS.isPrimeRequisite());
 			
 			pPanel.add(score);
 			pPanel.add(new JLabel("/"));
 			pPanel.add(percentile);
 			pPanel.add(new JLabel("%"));
 			if (settingClass) {
+				abilityExceptional.add(exceptional);
+				abilityPrime.add(primeReq);
 				pPanel.add(exceptional);
 				pPanel.add(primeReq);
 			}
 
 			mainPanel.add(pPanel);
-			i++;
 		}
 
 	}

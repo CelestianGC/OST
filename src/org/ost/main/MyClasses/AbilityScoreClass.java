@@ -147,6 +147,8 @@ public class AbilityScoreClass {
 	public AbilityScoreClass cloneMe() {
 		AbilityScoreClass newMe = 
 				new AbilityScoreClass(score, percentile, name, abbrev, min, max);
+		newMe.setAllowExceptional(allowExceptional);
+		newMe.setPrimeRequisite(primeRequisite);
 		return newMe;
 	}
 	

@@ -1151,19 +1151,28 @@ public class CharacterClass implements Comparable{
 		public CharacterClass cloneMe() {
 			CharacterClass newMe = new 
 					CharacterClass(getName(), getDescription(), getAbbreviation(), 
-							getLevelMax(), isPercentileStrength(), getAbilityReqs(), 
-							getRaceReqs(), getAlignmentReq(), getAllowedArmor(), 
-							getAllowedWeapons(), getAllowedMajorSpheres(), 
-							getAllowedMinorSpheres(), isAllowAllMagicItems(), 
-							getAllowedMagic(), getLevelDetails());
-
+							getLevelMax(),false,
+							new ArrayList<AbilityScoreClass>(),
+							new ArrayList<String>(),
+							new boolean[MAX_ALIGNMENT],
+							new ArrayList<String>(),
+							new ArrayList<String>(),
+							new ArrayList<String>(),
+							new ArrayList<String>(),
+							true,
+							new ArrayList<String>(),
+							new ArrayList<LevelClass>());
+			
+			newMe.setNonProfPenalty(getNonProfPenalty());
+			
+			newMe.getAbilityReqs().clear();
 			for(int i = 0; i<getAbilityReqs().size();i++) {
 				AbilityScoreClass oB = getAbilityReqs().get(i);
-				newMe.getAbilityReqs().set(i, oB.cloneMe());
+				newMe.getAbilityReqs().add(oB.cloneMe());
 			}
 			for(int i = 0; i<getRaceReqs().size();i++) {
 				String oS = getRaceReqs().get(i);
-				newMe.getRaceReqs().set(i, oS);
+				newMe.getRaceReqs().add(oS);
 			}
 			for(int i = 0; i<getAlignmentReq().length;i++) {
 				boolean oS = getAlignmentReq()[i];
@@ -1192,9 +1201,9 @@ public class CharacterClass implements Comparable{
 			}
 			for(int i = 0; i<getLevelDetails().size();i++) {
 				LevelClass oB = getLevelDetails().get(i);
-				newMe.getLevelDetails().set(i, oB.cloneMe());
+				newMe.getLevelDetails().add(oB.cloneMe());
 			}
-
+			newMe.setPercentileStrength(isPercentileStrength());
 			return newMe;
 		}
 }
