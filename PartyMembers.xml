@@ -3,8 +3,8 @@
     <name>Lost Bob</name>
     <namePlayer>John Smith</namePlayer>
     <myID>b888a035-1707-4a4c-89ee-9d5f35d19c6e</myID>
-    <hpMax>55</hpMax>
-    <hpCurrent>55</hpCurrent>
+    <hpMax>23</hpMax>
+    <hpCurrent>23</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -48,6 +48,8 @@ character level up, new MaxHP:12 from 0
 character level up, new MaxHP:13 from 0
 character experience modified :70000
 character level up, new MaxHP:55 from 13
+character experience modified :5000
+character level up, new MaxHP:23 from 0
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -58,44 +60,13 @@ character level up, new MaxHP:55 from 13
       <PCClass>
         <name>Fighter</name>
         <classID>167fc092-1fa4-450f-9e44-b0baaab45aae</classID>
-        <experience>70000</experience>
-        <level>6</level>
+        <experience>5000</experience>
+        <level>3</level>
         <primaryClass>false</primaryClass>
         <hdRolls>
-          <int>7</int>
-          <int>5</int>
-          <int>3</int>
-          <int>2</int>
-          <int>3</int>
-          <int>8</int>
-          <int>12</int>
-          <int>8</int>
-          <int>12</int>
-          <int>20</int>
-          <int>28</int>
-          <int>40</int>
-          <int>52</int>
-          <int>5</int>
-          <int>9</int>
-          <int>22</int>
-          <int>35</int>
-          <int>39</int>
-          <int>49</int>
-          <int>62</int>
-          <int>71</int>
-          <int>83</int>
-          <int>89</int>
-          <int>95</int>
-          <int>13</int>
-          <int>10</int>
-          <int>10</int>
-          <int>12</int>
-          <int>13</int>
-          <int>10</int>
-          <int>17</int>
-          <int>22</int>
-          <int>35</int>
-          <int>42</int>
+          <int>6</int>
+          <int>19</int>
+          <int>23</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -180,11 +151,11 @@ character level up, new MaxHP:55 from 13
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>11</int>
-      <int>12</int>
-      <int>13</int>
       <int>13</int>
       <int>14</int>
+      <int>15</int>
+      <int>16</int>
+      <int>16</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>
@@ -200,8 +171,8 @@ character level up, new MaxHP:55 from 13
     <name>Marry</name>
     <namePlayer>John Smith</namePlayer>
     <myID>62664602-b628-40fa-919b-936fa5f51c12</myID>
-    <hpMax>53</hpMax>
-    <hpCurrent>53</hpCurrent>
+    <hpMax>62</hpMax>
+    <hpCurrent>62</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -228,6 +199,8 @@ character level up, new MaxHP:41 from 16
 character level up, new MaxHP:33 from 0
 character level up, new MaxHP:54 from 0
 character level up, new MaxHP:53 from 0
+character experience modified :500000
+character level up, new MaxHP:62 from 53
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -238,8 +211,8 @@ character level up, new MaxHP:53 from 0
       <PCClass>
         <name>Paladin</name>
         <classID>6d0987a3-01d6-44c5-8ff9-74147abd1fe2</classID>
-        <experience>262000</experience>
-        <level>8</level>
+        <experience>762000</experience>
+        <level>10</level>
         <primaryClass>false</primaryClass>
         <hdRolls>
           <int>2</int>
@@ -282,6 +255,8 @@ character level up, new MaxHP:53 from 0
           <int>42</int>
           <int>46</int>
           <int>53</int>
+          <int>6</int>
+          <int>9</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -366,11 +341,11 @@ character level up, new MaxHP:53 from 0
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
+      <int>8</int>
+      <int>9</int>
       <int>10</int>
+      <int>9</int>
       <int>11</int>
-      <int>12</int>
-      <int>12</int>
-      <int>13</int>
     </mySaves>
     <mySaveAdjustments>
       <int>2</int>
@@ -386,21 +361,56 @@ character level up, new MaxHP:53 from 0
     <name>Rupert</name>
     <namePlayer>John Smith</namePlayer>
     <myID>18bf93c3-e33d-40e1-99e7-2c1729ee93f6</myID>
-    <hpMax>10</hpMax>
-    <hpCurrent>10</hpCurrent>
+    <hpMax>19</hpMax>
+    <hpCurrent>19</hpCurrent>
     <armorRatings>
+      <string>10</string>
+      <string>10</string>
       <string>10</string>
     </armorRatings>
     <moveRate>12</moveRate>
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Neutral</alignment>
+    <alignment>Neutral Good</alignment>
     <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
-    <log></log>
+    <log>character level up, new MaxHP:2 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:4 from 0
+character experience modified :8012
+character level up, new MaxHP:4 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:4 from 0
+character experience modified :8000
+character level up, new MaxHP:1 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:4 from 0
+character experience modified :8000
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:3 from 0
+character level up, new MaxHP:9 from 0
+character level up, new MaxHP:7 from 0
+character level up, new MaxHP:10 from 0
+character experience modified :16000
+character level up, new MaxHP:14 from 10
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:11 from 0
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:9 from 0
+character experience modified :12000
+character level up, new MaxHP:15 from 0
+character experience modified :50000
+character level up, new MaxHP:17 from 15
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:19 from 0
+</log>
     <saveLast></saveLast>
     <tag></tag>
     <initRoll>0</initRoll>
@@ -408,25 +418,82 @@ character level up, new MaxHP:53 from 0
     <fightingList/>
     <myClass>
       <PCClass>
-        <name>NoClassYet</name>
-        <classID>NoClassSet</classID>
-        <experience>0</experience>
-        <level>0</level>
+        <name>Magic-User(v1)</name>
+        <classID>49af0d05-917a-47e6-b11e-4a2883ecd360</classID>
+        <experience>86000</experience>
+        <level>7</level>
         <primaryClass>false</primaryClass>
-        <hdRolls/>
+        <hdRolls>
+          <int>4</int>
+          <int>2</int>
+          <int>2</int>
+          <int>3</int>
+          <int>3</int>
+          <int>7</int>
+          <int>9</int>
+          <int>2</int>
+          <int>3</int>
+          <int>7</int>
+          <int>3</int>
+          <int>7</int>
+          <int>10</int>
+          <int>1</int>
+          <int>4</int>
+          <int>1</int>
+          <int>5</int>
+          <int>7</int>
+          <int>11</int>
+          <int>15</int>
+          <int>1</int>
+          <int>3</int>
+          <int>5</int>
+          <int>7</int>
+          <int>11</int>
+          <int>4</int>
+          <int>5</int>
+          <int>8</int>
+          <int>12</int>
+          <int>15</int>
+          <int>2</int>
+          <int>3</int>
+          <int>5</int>
+          <int>8</int>
+          <int>9</int>
+          <int>4</int>
+          <int>8</int>
+          <int>11</int>
+          <int>12</int>
+          <int>15</int>
+          <int>1</int>
+          <int>2</int>
+          <int>3</int>
+          <int>4</int>
+          <int>8</int>
+          <int>9</int>
+          <int>11</int>
+          <int>13</int>
+          <int>15</int>
+          <int>4</int>
+          <int>6</int>
+          <int>10</int>
+          <int>11</int>
+          <int>15</int>
+          <int>17</int>
+          <int>19</int>
+        </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
     </myClass>
     <myRace>
-      <name>NoRaceYet</name>
-      <raceID>NoRaceSET</raceID>
+      <name>Human</name>
+      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
       <outer-class reference="../.."/>
     </myRace>
     <myWeaponProfs/>
     <myNonWeaponProfs/>
     <myAbilityScores>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>8</score>
         <percentile>0</percentile>
         <name>Strength</name>
         <abbrev>STR</abbrev>
@@ -436,7 +503,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>18</score>
         <percentile>0</percentile>
         <name>Intelligence</name>
         <abbrev>INT</abbrev>
@@ -446,7 +513,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Wisdom</name>
         <abbrev>WIS</abbrev>
@@ -456,7 +523,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>17</score>
         <percentile>0</percentile>
         <name>Dexterity</name>
         <abbrev>DEX</abbrev>
@@ -466,7 +533,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>12</score>
         <percentile>0</percentile>
         <name>Constitution</name>
         <abbrev>CON</abbrev>
@@ -476,7 +543,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>14</score>
         <percentile>0</percentile>
         <name>Charisma</name>
         <abbrev>CHR</abbrev>
@@ -486,7 +553,7 @@ character level up, new MaxHP:53 from 0
         <allowExceptional>false</allowExceptional>
       </AbilityScoreClass>
       <AbilityScoreClass>
-        <score>0</score>
+        <score>11</score>
         <percentile>0</percentile>
         <name>Comeliness</name>
         <abbrev>COM</abbrev>
@@ -497,11 +564,11 @@ character level up, new MaxHP:53 from 0
       </AbilityScoreClass>
     </myAbilityScores>
     <mySaves>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
-      <int>20</int>
+      <int>13</int>
+      <int>11</int>
+      <int>9</int>
+      <int>13</int>
+      <int>10</int>
     </mySaves>
     <mySaveAdjustments>
       <int>0</int>
@@ -510,7 +577,7 @@ character level up, new MaxHP:53 from 0
       <int>0</int>
       <int>0</int>
     </mySaveAdjustments>
-    <myAlignmentType>0</myAlignmentType>
+    <myAlignmentType>3</myAlignmentType>
     <genderType>0</genderType>
   </PlayerClass>
   <PlayerClass>

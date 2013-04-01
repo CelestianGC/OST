@@ -158,15 +158,17 @@ public class Panel_Player extends javax.swing.JPanel {
 							abilityTotal));
 					//bonus arcane spells
 					String magicSpells = "";
-					if (pc.isCasterArcane(
-							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
-					for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
-						magicSpells = magicSpells
-								+ String.format("L%dX%d%s", ii + 1,
-										aStat.intelligence.bonusSpells[ii],
-										ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
-												: "");
-					}
+					if (pc.isCasterArcane(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+							magicSpells = magicSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.intelligence.bonusSpells[ii],
+											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
+													: "");
+						}
 					pcBonusArcaneSpellsLabel.setText(String.format("%s",
 							magicSpells));
 					pcKnowSpellLabel.setText(String.format("%d",
@@ -290,15 +292,17 @@ public class Panel_Player extends javax.swing.JPanel {
 					pcWisdomLabel.setText(String.format("%d", abilityTotal));
 					//divine spells
 					String clericSpells = "";
-					if (pc.isCasterDivine(
-							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
-					for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
-						clericSpells = clericSpells
-								+ String.format("L%dX%d%s", ii + 1,
-										aStat.wisdom.bonusSpells[ii],
-										ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
-												: "");
-					}
+					if (pc.isCasterDivine(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+							clericSpells = clericSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.wisdom.bonusSpells[ii],
+											ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
+													: "");
+						}
 					pcBonusSpellsDivineLabel.setText(String.format("%s",
 							clericSpells));
 					pcMagicalAdjLabel.setText(String.format("%d",
@@ -497,6 +501,7 @@ public class Panel_Player extends javax.swing.JPanel {
 	//GEN-BEGIN:initComponents
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
+		java.awt.GridBagConstraints gridBagConstraints;
 
 		detailsPanel = new javax.swing.JPanel();
 		jLabel3 = new javax.swing.JLabel();
@@ -610,6 +615,7 @@ public class Panel_Player extends javax.swing.JPanel {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
+		setLayout(new java.awt.GridBagLayout());
 
 		detailsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -663,181 +669,6 @@ public class Panel_Player extends javax.swing.JPanel {
 
 		pcExperienceTotalsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcExperienceTotalsLabel.setText("pcExperience");
-
-		javax.swing.GroupLayout detailsPanelLayout = new javax.swing.GroupLayout(
-				detailsPanel);
-		detailsPanel.setLayout(detailsPanelLayout);
-		detailsPanelLayout
-				.setHorizontalGroup(detailsPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								detailsPanelLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel3)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcCharacterNameLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel5)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcClassNameLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel11)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcAlignmentLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel6)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcExperienceTotalsLabel)))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel13)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcMoveBaseLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel9)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcRaceLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel7)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcClassLevelLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel1)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcPlayerNameLabel)))
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
-		detailsPanelLayout
-				.setVerticalGroup(detailsPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								detailsPanelLayout
-										.createSequentialGroup()
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																pcCharacterNameLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel3,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel1,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcPlayerNameLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																jLabel5,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcClassNameLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel7,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcClassLevelLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																jLabel6,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcExperienceTotalsLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcRaceLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel9,
-																javax.swing.GroupLayout.Alignment.TRAILING))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												detailsPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																jLabel11,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcAlignmentLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel13,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcMoveBaseLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
-										.addContainerGap(48, Short.MAX_VALUE)));
 
 		savesPAnel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -986,9 +817,205 @@ public class Panel_Player extends javax.swing.JPanel {
 														.addComponent(
 																pcSaveSpellsLabel)
 														.addComponent(jLabel43))
-										.addContainerGap(
+										.addContainerGap(17, Short.MAX_VALUE)));
+
+		javax.swing.GroupLayout detailsPanelLayout = new javax.swing.GroupLayout(
+				detailsPanel);
+		detailsPanel.setLayout(detailsPanelLayout);
+		detailsPanelLayout
+				.setHorizontalGroup(detailsPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								detailsPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel3)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcCharacterNameLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel5)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcClassNameLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel11)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcAlignmentLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel6)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcExperienceTotalsLabel)))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel13)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcMoveBaseLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel9)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcRaceLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel7)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcClassLevelLabel))
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jLabel1)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				pcPlayerNameLabel)))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+												116, Short.MAX_VALUE)
+										.addComponent(
+												savesPAnel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
+												javax.swing.GroupLayout.PREFERRED_SIZE)));
+		detailsPanelLayout
+				.setVerticalGroup(detailsPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								detailsPanelLayout
+										.createSequentialGroup()
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																detailsPanelLayout
+																		.createSequentialGroup()
+																		.addGroup(
+																				detailsPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								pcCharacterNameLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								jLabel3,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								jLabel1,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcPlayerNameLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING))
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addGroup(
+																				detailsPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								jLabel5,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcClassNameLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								jLabel7,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcClassLevelLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING))
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addGroup(
+																				detailsPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								jLabel6,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcExperienceTotalsLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcRaceLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								jLabel9,
+																								javax.swing.GroupLayout.Alignment.TRAILING))
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addGroup(
+																				detailsPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								jLabel11,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcAlignmentLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								jLabel13,
+																								javax.swing.GroupLayout.Alignment.TRAILING)
+																						.addComponent(
+																								pcMoveBaseLabel,
+																								javax.swing.GroupLayout.Alignment.TRAILING)))
+														.addComponent(
+																savesPAnel,
+																javax.swing.GroupLayout.Alignment.TRAILING,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																Short.MAX_VALUE))
+										.addContainerGap()));
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		add(detailsPanel, gridBagConstraints);
 
 		AbilitiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -1438,7 +1465,9 @@ public class Panel_Player extends javax.swing.JPanel {
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
 																												pcBonusSpellsDivineLabel)))))
-										.addContainerGap(29, Short.MAX_VALUE)));
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 		AbilitiesPanelLayout
 				.setVerticalGroup(AbilitiesPanelLayout
 						.createParallelGroup(
@@ -1569,6 +1598,13 @@ public class Panel_Player extends javax.swing.JPanel {
 										.addContainerGap(
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		add(AbilitiesPanel, gridBagConstraints);
 
 		combatPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -1708,7 +1744,7 @@ public class Panel_Player extends javax.swing.JPanel {
 																				pcMaxHPLabel)
 																		.addPreferredGap(
 																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																				438,
+																				423,
 																				Short.MAX_VALUE)
 																		.addComponent(
 																				jLabel47)
@@ -1719,7 +1755,7 @@ public class Panel_Player extends javax.swing.JPanel {
 										.addContainerGap())
 						.addComponent(jScrollPane1,
 								javax.swing.GroupLayout.Alignment.TRAILING,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 663,
+								javax.swing.GroupLayout.DEFAULT_SIZE, 648,
 								Short.MAX_VALUE));
 		combatPanelLayout
 				.setVerticalGroup(combatPanelLayout
@@ -1767,11 +1803,22 @@ public class Panel_Player extends javax.swing.JPanel {
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
 
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		add(combatPanel, gridBagConstraints);
+
 		skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Skills"));
 		skillsPanel
 				.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		add(skillsPanel, gridBagConstraints);
 
 		arcaneSpellsPanel
 				.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1779,6 +1826,12 @@ public class Panel_Player extends javax.swing.JPanel {
 								0, 0), 1, true), "Arcane Spells"));
 		arcaneSpellsPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.LEFT));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.ipadx = 1;
+		add(arcaneSpellsPanel, gridBagConstraints);
 
 		divineSpellsPanel
 				.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1786,121 +1839,11 @@ public class Panel_Player extends javax.swing.JPanel {
 								0, 0), 1, true), "Divine Spells"));
 		divineSpellsPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.LEFT));
-
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-		this.setLayout(layout);
-		layout.setHorizontalGroup(layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(
-						layout.createSequentialGroup()
-								.addContainerGap()
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING)
-												.addGroup(
-														layout.createSequentialGroup()
-																.addComponent(
-																		detailsPanel,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		Short.MAX_VALUE)
-																.addPreferredGap(
-																		javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																.addComponent(
-																		savesPAnel,
-																		javax.swing.GroupLayout.PREFERRED_SIZE,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)
-																.addGap(123,
-																		123,
-																		123))
-												.addGroup(
-														javax.swing.GroupLayout.Alignment.TRAILING,
-														layout.createSequentialGroup()
-																.addGroup(
-																		layout.createParallelGroup(
-																				javax.swing.GroupLayout.Alignment.TRAILING)
-																				.addComponent(
-																						skillsPanel,
-																						javax.swing.GroupLayout.Alignment.LEADING,
-																						javax.swing.GroupLayout.DEFAULT_SIZE,
-																						673,
-																						Short.MAX_VALUE)
-																				.addComponent(
-																						combatPanel,
-																						javax.swing.GroupLayout.Alignment.LEADING,
-																						javax.swing.GroupLayout.DEFAULT_SIZE,
-																						javax.swing.GroupLayout.DEFAULT_SIZE,
-																						Short.MAX_VALUE)
-																				.addComponent(
-																						AbilitiesPanel,
-																						javax.swing.GroupLayout.DEFAULT_SIZE,
-																						javax.swing.GroupLayout.DEFAULT_SIZE,
-																						Short.MAX_VALUE))
-																.addContainerGap())
-												.addGroup(
-														layout.createSequentialGroup()
-																.addComponent(
-																		arcaneSpellsPanel,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		673,
-																		Short.MAX_VALUE)
-																.addContainerGap())
-												.addGroup(
-														layout.createSequentialGroup()
-																.addComponent(
-																		divineSpellsPanel,
-																		javax.swing.GroupLayout.DEFAULT_SIZE,
-																		673,
-																		Short.MAX_VALUE)
-																.addContainerGap()))));
-		layout.setVerticalGroup(layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(
-						layout.createSequentialGroup()
-								.addGroup(
-										layout.createParallelGroup(
-												javax.swing.GroupLayout.Alignment.LEADING,
-												false)
-												.addComponent(
-														detailsPanel,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE)
-												.addComponent(
-														savesPAnel,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE,
-														Short.MAX_VALUE))
-								.addPreferredGap(
-										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								.addComponent(AbilitiesPanel,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addGap(5, 5, 5)
-								.addComponent(combatPanel,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addGap(5, 5, 5)
-								.addComponent(skillsPanel,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										67,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addPreferredGap(
-										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								.addComponent(arcaneSpellsPanel,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										67,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addPreferredGap(
-										javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-								.addComponent(divineSpellsPanel,
-										javax.swing.GroupLayout.PREFERRED_SIZE,
-										67,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addContainerGap(27, Short.MAX_VALUE)));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 5;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		add(divineSpellsPanel, gridBagConstraints);
 	}// </editor-fold>
 	//GEN-END:initComponents
 

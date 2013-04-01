@@ -718,8 +718,10 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 //						i + 1);
 				CharacterClass.LevelClass newLevel = null;
 				CharacterClass.LevelClass currentLevel = currentClass.getLevelDetails().get((i-1));
-				if (currentLevel != null)
+				if (currentLevel != null) {
 					newLevel = currentLevel.cloneMe();
+					newLevel.setLevel(i+1);
+				}
 				else
 					newLevel = currentClass.new LevelClass(i + 1);
 				

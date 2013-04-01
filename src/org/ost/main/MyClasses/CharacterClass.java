@@ -613,6 +613,7 @@ public class CharacterClass implements Comparable{
 					String oS = getExtraSpells().get(i);
 					newMe.getExtraSpells().add(oS);
 				}
+				newMe.level = (getLevel()+1);
 				return newMe;
 			}
 			

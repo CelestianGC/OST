@@ -241,6 +241,12 @@ public class PlayerClass implements Serializable, Comparable {
 					ost.dprint("new level "+(ii+1)+"\n");
 
 					LevelClass oL = cC.getLevelByLevel(ii);
+					ost.dprint(String.format("character level: %d\nLevel level:%d\n" +
+							"character exp: %d\nlevelEXPReq: %d\n",
+							getLevel(),
+							oL.getLevel(),
+							getExperience(),
+							oL.getExpReq()));
 					if (getLevel()< (oL.getLevel()) && 
 							getExperience() >= oL.getExpReq()) {
 						int nRollingHP = 0;

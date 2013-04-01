@@ -1196,28 +1196,28 @@ public class EncounterCreature extends javax.swing.JPanel {
 	private void saveSpellTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			doSaveRoll(Integer.parseInt(saveSpellTextField.getText()),
-					SAVES[SAVE_SPELL - 1]);
+					SAVES[SAVE_SPELL]);
 		}
 	}
 
 	private void saveBreathTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			doSaveRoll(Integer.parseInt(saveBreathTextField.getText()),
-					SAVES[SAVE_BREATH - 1]);
+					SAVES[SAVE_BREATH]);
 		}
 	}
 
 	private void saveRodTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			doSaveRoll(Integer.parseInt(saveRodTextField.getText()),
-					SAVES[SAVE_ROD - 1]);
+					SAVES[SAVE_ROD]);
 		}
 	}
 
 	private void savePolyTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			doSaveRoll(Integer.parseInt(savePolyTextField.getText()),
-					SAVES[SAVE_POLY - 1]);
+					SAVES[SAVE_POLY]);
 		}
 
 	}
@@ -1225,7 +1225,7 @@ public class EncounterCreature extends javax.swing.JPanel {
 	private void saveDeathTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			doSaveRoll(Integer.parseInt(saveDeathTextField.getText()),
-					SAVES[SAVE_DEATH - 1]);
+					SAVES[SAVE_DEATH]);
 		}
 	}
 
@@ -1290,25 +1290,25 @@ public class EncounterCreature extends javax.swing.JPanel {
 	private void setSavePanelDetails(CreatureClass oCreature) {
 		ArrayList<String> saveList = oCreature.getSaves(ost.chartList
 				.getContent());
-		saveDeathTextField.setText(saveList.get(SAVE_DEATH - 1));
-		saveDeathNameLabel.setToolTipText(SAVES[SAVE_DEATH - 1]);
-		saveDeathNameLabel.setText(SAVES_ABBREV[SAVE_DEATH - 1]);
+		saveDeathTextField.setText(saveList.get(SAVE_DEATH));
+		saveDeathNameLabel.setToolTipText(SAVES[SAVE_DEATH]);
+		saveDeathNameLabel.setText(SAVES_ABBREV[SAVE_DEATH]);
 
-		savePolyTextField.setText(saveList.get(SAVE_POLY - 1));
-		savePolyNameLabel.setToolTipText(SAVES[SAVE_POLY - 1]);
-		savePolyNameLabel.setText(SAVES_ABBREV[SAVE_POLY - 1]);
+		savePolyTextField.setText(saveList.get(SAVE_POLY));
+		savePolyNameLabel.setToolTipText(SAVES[SAVE_POLY]);
+		savePolyNameLabel.setText(SAVES_ABBREV[SAVE_POLY]);
 
-		saveRodTextField.setText(saveList.get(SAVE_ROD - 1));
-		saveRodNameLabel.setToolTipText(SAVES[SAVE_ROD - 1]);
-		saveRodNameLabel.setText(SAVES_ABBREV[SAVE_ROD - 1]);
+		saveRodTextField.setText(saveList.get(SAVE_ROD));
+		saveRodNameLabel.setToolTipText(SAVES[SAVE_ROD]);
+		saveRodNameLabel.setText(SAVES_ABBREV[SAVE_ROD]);
 
-		saveBreathTextField.setText(saveList.get(SAVE_BREATH - 1));
-		saveBreathNameLabel.setToolTipText(SAVES[SAVE_BREATH - 1]);
-		saveBreathNameLabel.setText(SAVES_ABBREV[SAVE_BREATH - 1]);
+		saveBreathTextField.setText(saveList.get(SAVE_BREATH));
+		saveBreathNameLabel.setToolTipText(SAVES[SAVE_BREATH]);
+		saveBreathNameLabel.setText(SAVES_ABBREV[SAVE_BREATH]);
 
-		saveSpellTextField.setText(saveList.get(SAVE_SPELL - 1));
-		saveSpellNameLabel.setToolTipText(SAVES[SAVE_SPELL - 1]);
-		saveSpellNameLabel.setText(SAVES_ABBREV[SAVE_SPELL - 1]);
+		saveSpellTextField.setText(saveList.get(SAVE_SPELL));
+		saveSpellNameLabel.setToolTipText(SAVES[SAVE_SPELL]);
+		saveSpellNameLabel.setText(SAVES_ABBREV[SAVE_SPELL]);
 	}
 
 	private void setAttackChartPanelDetails(CreatureClass oCreature) {
