@@ -248,11 +248,11 @@ character level up, new MaxHP:61 from 0
       <int>14</int>
     </mySaves>
     <mySaveAdjustments>
+      <int>5</int>
       <int>0</int>
+      <int>5</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>5</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>
@@ -663,7 +663,7 @@ character level up, new MaxHP:23 from 0
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Lawful Good</alignment>
+    <alignment>Neutral Good</alignment>
     <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
@@ -694,8 +694,8 @@ character level up, new MaxHP:30 from 0
       </PCClass>
     </myClass>
     <myRace>
-      <name>Human</name>
-      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
+      <name>Dwarf</name>
+      <raceID>e0b03f37-7d17-4e0b-8ff9-bd773bde9696</raceID>
       <outer-class reference="../.."/>
     </myRace>
     <myWeaponProfs/>
@@ -780,13 +780,13 @@ character level up, new MaxHP:30 from 0
       <int>14</int>
     </mySaves>
     <mySaveAdjustments>
+      <int>2</int>
       <int>0</int>
+      <int>2</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>2</int>
     </mySaveAdjustments>
-    <myAlignmentType>0</myAlignmentType>
+    <myAlignmentType>3</myAlignmentType>
     <genderType>0</genderType>
   </PlayerClass>
   <PlayerClass>

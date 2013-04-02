@@ -13,6 +13,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 
 import org.ost.main.MyClasses.MyCellRendererList;
+import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.RaceList;
 import org.ost.main.MyUtils.SimpleDialog;
@@ -26,11 +27,13 @@ public class Option_Set_Race extends javax.swing.JDialog {
 	private java.awt.Frame parent;
 	private ArrayList<RaceClass> eCurrent;
 	private RaceList eAbilities;
+	private PlayerClass pc;
 
 	/** Creates new form Option_Set_Race */
-	public Option_Set_Race(java.awt.Frame parent, boolean modal, MainClass ost,
+	public Option_Set_Race(PlayerClass pc, java.awt.Frame parent, boolean modal, MainClass ost,
 			ArrayList<RaceClass> setCurrent) {
 		super(parent, modal);
+		this.pc = pc;
 		this.parent = parent;
 		this.ost = ost;
 		this.eCurrent = setCurrent;
@@ -312,8 +315,12 @@ public class Option_Set_Race extends javax.swing.JDialog {
 		List oSelect = extraListList.getSelectedValuesList();
 		if (!oSelect.isEmpty()) {
 			for (Object oNew : oSelect)
-				//		Object oNew = extraListList.getSelectedValue();
 				if (oNew != null && !eCurrent.contains(oNew)) {
+					if (pc != null && !eCurrent.isEmpty() &&
+							SimpleDialog.AskYN(parent, "Replace current race choice?")) {
+						eCurrent.clear();
+						eCurrent.add((RaceClass) oNew);
+					} else 
 					eCurrent.add((RaceClass) oNew);
 				}
 			updateAllowed(extraAllowedList, eCurrent);

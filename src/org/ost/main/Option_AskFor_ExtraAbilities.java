@@ -99,6 +99,8 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		specializeCheckBox = new javax.swing.JCheckBox();
 		barbarianDexBonusCheckBox = new javax.swing.JCheckBox();
 		doubleSpecializeCheckBox = new javax.swing.JCheckBox();
+		constitutionIronCheckBox = new javax.swing.JCheckBox();
+		constitutionResistanceCheckBox = new javax.swing.JCheckBox();
 		profsPanel = new javax.swing.JPanel();
 		bonusWeaponProfLabel = new javax.swing.JLabel();
 		extraWeaponProfSpinner = new javax.swing.JSpinner();
@@ -361,7 +363,6 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		fighterConBonusCheckBox.setText("fighter consitution");
 		fighterConBonusCheckBox
 				.setToolTipText("Improved consitution bonuses for health.");
-		fighterConBonusCheckBox.setActionCommand("fighter consitution");
 		checkBoxPanel.add(fighterConBonusCheckBox);
 
 		weaponMasteryCheckBox.setBackground(new java.awt.Color(153, 153, 153));
@@ -400,6 +401,27 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		doubleSpecializeCheckBox
 				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 		checkBoxPanel.add(doubleSpecializeCheckBox);
+
+		constitutionIronCheckBox
+				.setBackground(new java.awt.Color(153, 153, 153));
+		constitutionIronCheckBox.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		constitutionIronCheckBox.setText("iron constutition");
+		constitutionIronCheckBox
+				.setToolTipText("+1 to poison saves for every 3.5 points of constitution");
+		constitutionIronCheckBox
+				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+		checkBoxPanel.add(constitutionIronCheckBox);
+
+		constitutionResistanceCheckBox.setBackground(new java.awt.Color(153,
+				153, 153));
+		constitutionResistanceCheckBox.setFont(new java.awt.Font("Segoe UI", 0,
+				10));
+		constitutionResistanceCheckBox.setText("highly resistant");
+		constitutionResistanceCheckBox
+				.setToolTipText("+1 to spells, rod/staff/wand saves for every 3.5 points of constitution");
+		constitutionResistanceCheckBox
+				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+		checkBoxPanel.add(constitutionResistanceCheckBox);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
@@ -462,7 +484,7 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		Option_AskFor_AbilityScores dDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Ability Score Adjustments",
-				currentExtraAbility.getAbilityScoreAdjustments(),false);
+				currentExtraAbility.getAbilityScoreAdjustments(), false);
 		dDialog.setVisible(true);
 	}
 
@@ -572,11 +594,19 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		currentExtraAbility
 				.setBonusNonWeaponProfs((int) extraNonWeaponProfSpinner
 						.getValue());
-		currentExtraAbility.setAllowedSpecialize(specializeCheckBox.isSelected());
-		currentExtraAbility.setAllowedDoubeSpecialize(doubleSpecializeCheckBox.isSelected());
-		currentExtraAbility.setBarbarianConBonus(barbarianConBonusCheckBox.isSelected());
-		currentExtraAbility.setBarbarianDexBonus(barbarianDexBonusCheckBox.isSelected());
-		currentExtraAbility.setFighterConBonus(fighterConBonusCheckBox.isSelected());
+		currentExtraAbility.setAllowedSpecialize(specializeCheckBox
+				.isSelected());
+		currentExtraAbility.setAllowedDoubeSpecialize(doubleSpecializeCheckBox
+				.isSelected());
+		currentExtraAbility.setBarbarianConBonus(barbarianConBonusCheckBox
+				.isSelected());
+		currentExtraAbility.setBarbarianDexBonus(barbarianDexBonusCheckBox
+				.isSelected());
+		currentExtraAbility.setFighterConBonus(fighterConBonusCheckBox
+				.isSelected());
+		currentExtraAbility.setAllowedIronCon(constitutionIronCheckBox.isSelected());
+		currentExtraAbility.setAllowedResistanceCon(constitutionResistanceCheckBox.isSelected());
+
 	}
 
 	public void updateExtraAbilityPanel(ExtraAbilitiesClass oE) {
@@ -586,15 +616,17 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 			extraNameTextField.setText(oE.getName());
 			extraWeaponProfSpinner.setValue(oE.getBonusWeaponProfs());
 			extraNonWeaponProfSpinner.setValue(oE.getBonusNonWeaponProfs());
-			
+
 			specializeCheckBox.setSelected(oE.isAllowedSpecialize());
 			doubleSpecializeCheckBox.setSelected(oE.isAllowedDoubeSpecialize());
 			barbarianConBonusCheckBox.setSelected(oE.isBarbarianConBonus());
 			barbarianDexBonusCheckBox.setSelected(oE.isBarbarianDexBonus());
 			fighterConBonusCheckBox.setSelected(oE.isFighterConBonus());
 			weaponMasteryCheckBox.setSelected(oE.allowedWeaponMastery);
-			
+			constitutionIronCheckBox.setSelected(oE.isAllowedIronCon());
+			constitutionResistanceCheckBox.setSelected(oE.isAllowedResistanceCon());
 			extraTypeComboBox.setSelectedIndex(oE.getType());
+			
 		}
 		mainPanel.validate();
 		mainPanel.repaint();
@@ -610,6 +642,8 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 	private javax.swing.JLabel bonusWeaponProfLabel;
 	private javax.swing.JPanel checkBoxPanel;
 	private javax.swing.ButtonGroup conBonusButtonGroup;
+	private javax.swing.JCheckBox constitutionIronCheckBox;
+	private javax.swing.JCheckBox constitutionResistanceCheckBox;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JCheckBox doubleSpecializeCheckBox;
 	private javax.swing.JPanel extraClericBasePanel;

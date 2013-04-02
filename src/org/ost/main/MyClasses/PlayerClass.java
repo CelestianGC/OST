@@ -1278,7 +1278,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<Integer> getAllSaveAdjustments(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
@@ -1311,6 +1311,21 @@ public class PlayerClass implements Serializable, Comparable {
 				if (eA.getSaveAdjustments().get(i)!= 0)
 					saves.set(i,saves.get(i)+eA.getSaveAdjustments().get(i));
 			}
+		
+		//TODO - racial con bonuses iron/Resistance
+		int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
+				cList, eList, rList, aList);
+		AbilityStatClass aStat = 
+				aList.getContent().get(nConScore);
+		int nIronConBonus = 0;
+		int nResistConBonus = 0;
+		if (hasIronCon(cList,eList, rList))
+			nIronConBonus = aStat.consitution.conIron;
+		if (hasResistCon(cList, eList, rList))
+			nResistConBonus = aStat.consitution.conResistance;
+		saves.set(SAVE_ROD,(saves.get(SAVE_ROD)+nResistConBonus));
+		saves.set(SAVE_SPELL,(saves.get(SAVE_SPELL)+nResistConBonus));
+		saves.set(SAVE_DEATH,(saves.get(SAVE_DEATH)+nIronConBonus));
 		
 		return(saves);
 	}
@@ -2039,6 +2054,51 @@ public class PlayerClass implements Serializable, Comparable {
 		return isTrue;	
 	}
 	
+	/**
+	 * have iron stomach resistance to poison bonus?
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasIronCon(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isSet = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isAllowedIronCon())
+				isSet = true;
+
+		return isSet;	
+	}
+	/**
+	 * have highly resistance to magic con bonus?
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean hasResistCon(CharacterClassList cList,
+			ExtraAbilitiesList eList, RaceList rList) {
+		boolean isSet = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isAllowedResistanceCon())
+				isSet = true;
+
+		return isSet;	
+	}
+
 	/**
 	 * returns true if character can cast arcane spells
 	 * 

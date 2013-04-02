@@ -76,7 +76,8 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		pc.setMySaves(bestSaves);
 
 		ArrayList<Integer> bestSaveAdj = pc.getAllSaveAdjustments(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
+				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
+				ost.abilityStatList);
 		pc.setMySaveAdjustments(bestSaveAdj);
 
 		for (int i = 0; i < pc.getMySaves().size(); i++) {

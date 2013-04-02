@@ -1,7 +1,7 @@
 <entries>
   <ExtraAbilitiesClass>
     <myID>8e600505-d489-4d72-a17d-f0276565000b</myID>
-    <name>extra-new</name>
+    <name>dwarf: poison and magic resistance</name>
     <description>Enter Description of this new ability.</description>
     <bonusWeaponProfs>0</bonusWeaponProfs>
     <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
@@ -263,13 +263,15 @@
       <int>0</int>
       <int>0</int>
     </clericSpellsBonus>
-    <type>0</type>
+    <type>1</type>
     <fighterConBonus>false</fighterConBonus>
     <barbarianConBonus>false</barbarianConBonus>
     <barbarianDexBonus>false</barbarianDexBonus>
     <allowedWeaponMastery>false</allowedWeaponMastery>
     <allowedSpecialize>false</allowedSpecialize>
     <allowedDoubeSpecialize>false</allowedDoubeSpecialize>
+    <allowedIronCon>true</allowedIronCon>
+    <allowedResistanceCon>true</allowedResistanceCon>
   </ExtraAbilitiesClass>
   <ExtraAbilitiesClass>
     <myID>c104f2ff-e619-44de-96ac-a5137655247b</myID>
@@ -542,5 +544,7 @@
     <allowedWeaponMastery>false</allowedWeaponMastery>
     <allowedSpecialize>false</allowedSpecialize>
     <allowedDoubeSpecialize>false</allowedDoubeSpecialize>
+    <allowedIronCon>false</allowedIronCon>
+    <allowedResistanceCon>false</allowedResistanceCon>
   </ExtraAbilitiesClass>
 </entries>

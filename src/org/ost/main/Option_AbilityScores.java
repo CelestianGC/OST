@@ -163,6 +163,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		jPanel10 = new javax.swing.JPanel();
 		constitutionHitPointAdjustmentBarbarianSpinner1 = new javax.swing.JSpinner();
 		constitutionHitpointAdjustmentBarbarianLabel = new javax.swing.JLabel();
+		constitutionIronSpinner = new javax.swing.JSpinner();
+		constitutionIronLabel = new javax.swing.JLabel();
+		constitutionResistanceSpinner = new javax.swing.JSpinner();
+		constitutionResistanceLabel = new javax.swing.JLabel();
 		charismaPanel = new javax.swing.JPanel();
 		charismaScoreLabel = new javax.swing.JLabel();
 		charismaScoreSpinner = new javax.swing.JSpinner();
@@ -1224,7 +1228,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		jPanel10.setBackground(new java.awt.Color(204, 204, 204));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 8;
 		gridBagConstraints.gridheight = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 10.0;
@@ -1252,6 +1256,46 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
 		constitutionPanel.add(constitutionHitpointAdjustmentBarbarianLabel,
 				gridBagConstraints);
+
+		constitutionIronSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
+				-99, 100, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 6;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+		constitutionPanel.add(constitutionIronSpinner, gridBagConstraints);
+
+		constitutionIronLabel.setText("iron constitution *+save vrs poison*");
+		constitutionIronLabel
+				.setToolTipText("Fighter type classes hitpoint adjustment.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+		constitutionPanel.add(constitutionIronLabel, gridBagConstraints);
+
+		constitutionResistanceSpinner
+				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 7;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+		constitutionPanel
+				.add(constitutionResistanceSpinner, gridBagConstraints);
+
+		constitutionResistanceLabel
+				.setText("resistance *spells, rod/staff/wand*");
+		constitutionResistanceLabel
+				.setToolTipText("Fighter type classes hitpoint adjustment.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 7;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
+		constitutionPanel.add(constitutionResistanceLabel, gridBagConstraints);
 
 		charismaPanel.setBackground(new java.awt.Color(204, 204, 204));
 		charismaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1580,7 +1624,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.setValue(oB.getConsitution().systemShock);
 			constitutionResurrectionSurvivelSpinner.setValue(oB
 					.getConsitution().resurrectionSurvival);
-
+			constitutionIronSpinner.setValue(oB.getConsitution().conIron);
+			constitutionResistanceSpinner.setValue(oB.getConsitution().conResistance);
 			nPreviousConstitution = nScore;
 		}
 	}
@@ -1604,6 +1649,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.getValue();
 			oA.getConsitution().resurrectionSurvival = (int) constitutionResurrectionSurvivelSpinner
 					.getValue();
+			oA.getConsitution().conIron = (int) constitutionIronSpinner.getValue();
+			oA.getConsitution().conResistance = (int) constitutionResistanceSpinner.getValue();
 		}
 	}
 
@@ -2109,8 +2156,12 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	private javax.swing.JSpinner constitutionHitPointAdjustmentSpinner;
 	private javax.swing.JLabel constitutionHitpointAdjustmentBarbarianLabel;
 	private javax.swing.JLabel constitutionHitpointAdjustmentFighterLabel;
+	private javax.swing.JLabel constitutionIronLabel;
+	private javax.swing.JSpinner constitutionIronSpinner;
 	private javax.swing.JPanel constitutionPanel;
 	private javax.swing.JRadioButton constitutionRadioButton;
+	private javax.swing.JLabel constitutionResistanceLabel;
+	private javax.swing.JSpinner constitutionResistanceSpinner;
 	private javax.swing.JLabel constitutionResurrectionSurvivelLabel;
 	private javax.swing.JSpinner constitutionResurrectionSurvivelSpinner;
 	private javax.swing.JLabel constitutionScoreLabel;

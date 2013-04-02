@@ -407,7 +407,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		ArrayList<RaceClass> aList = RaceClass.getAllowed(
 				currentClass.getRaceReqs(), ost.raceList);
-		Option_Set_Race dDialog = new Option_Set_Race(parent, true, ost, aList);
+		Option_Set_Race dDialog = new Option_Set_Race(null, parent, true, ost, aList);
 
 		dDialog.setVisible(true);
 

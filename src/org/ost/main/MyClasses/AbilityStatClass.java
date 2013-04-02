@@ -185,6 +185,8 @@ public class AbilityStatClass {
 		public int systemShock;
 		public int resurrectionSurvival;
 		public ArrayList<String> bonusAbilities;
+		public int conIron;
+		public int conResistance;
 		
 		public Consitution() {
 			this(0,"Consitution","Consitution",0,0,0,0,0,new ArrayList<String>());

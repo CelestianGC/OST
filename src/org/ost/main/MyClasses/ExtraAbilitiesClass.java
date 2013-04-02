@@ -39,6 +39,8 @@ public class ExtraAbilitiesClass implements Comparable{
 	public boolean allowedWeaponMastery;
 	public boolean allowedSpecialize;
 	public boolean allowedDoubeSpecialize;
+	public boolean allowedIronCon;
+	public boolean allowedResistanceCon;
 	
 	public ExtraAbilitiesClass(String name, String desc) {
 		this(name,desc,0,0,
@@ -50,7 +52,8 @@ public class ExtraAbilitiesClass implements Comparable{
 				new int[MAX_CLERIC_SPELL_LEVEL],
 				0,
 				new ArrayList<Integer>(),new ArrayList<Integer>(),
-				new ArrayList<AbilityScoreClass>());
+				new ArrayList<AbilityScoreClass>(),
+				false,false);
 	}
 	
 	
@@ -64,7 +67,8 @@ public class ExtraAbilitiesClass implements Comparable{
 			int[] clericSpellsBonus,
 			int extraType,
 			ArrayList<Integer> saves, ArrayList<Integer> saveAdjustments,
-			ArrayList<AbilityScoreClass> abilityScoreAdjustments) {
+			ArrayList<AbilityScoreClass> abilityScoreAdjustments,
+			boolean ironCon, boolean resistanceCon) {
 		
 		super();
 		this.name = name;
@@ -76,6 +80,8 @@ public class ExtraAbilitiesClass implements Comparable{
 		this.clericSpellsBase = clericSpellsBase;
 		this.clericSpellsBonus = clericSpellsBonus;
 		this.type = extraType;
+		this.allowedIronCon = ironCon;
+		this.allowedResistanceCon = resistanceCon;
 		
 		this.thiefSkillsBase = thiefSkillsBase;
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)
@@ -114,6 +120,38 @@ public class ExtraAbilitiesClass implements Comparable{
 		this.setMyID(UUID.randomUUID().toString());
 	}
 	
+
+	/**
+	 * @return the allowedIronCon
+	 */
+	public boolean isAllowedIronCon() {
+		return allowedIronCon;
+	}
+
+
+	/**
+	 * @param allowedIronCon the allowedIronCon to set
+	 */
+	public void setAllowedIronCon(boolean allowedIronCon) {
+		this.allowedIronCon = allowedIronCon;
+	}
+
+
+	/**
+	 * @return the allowedResistanceCon
+	 */
+	public boolean isAllowedResistanceCon() {
+		return allowedResistanceCon;
+	}
+
+
+	/**
+	 * @param allowedResistanceCon the allowedResistanceCon to set
+	 */
+	public void setAllowedResistanceCon(boolean allowedResistanceCon) {
+		this.allowedResistanceCon = allowedResistanceCon;
+	}
+
 
 	/**
 	 * @return the fighterConBonus

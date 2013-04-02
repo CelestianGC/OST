@@ -285,7 +285,9 @@
         <allowed>true</allowed>
       </org.ost.main.MyClasses.SkillsClass>
     </thiefAbiltyAdjustments>
-    <bonusAbilities/>
+    <bonusAbilities>
+      <string>8e600505-d489-4d72-a17d-f0276565000b</string>
+    </bonusAbilities>
     <allowedClasses/>
     <moveRate>6</moveRate>
     <naturalAC>10</naturalAC>
