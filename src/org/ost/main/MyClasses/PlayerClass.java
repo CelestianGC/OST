@@ -2135,5 +2135,24 @@ public class PlayerClass implements Serializable, Comparable {
 			}
 		return caster;
 	}
+
+	/**
+	 * return true if this person has any "base" skill value > 0
+	 * 
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @return
+	 */
+	public boolean isSkilled(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+		boolean skilled = false;
+		ArrayList<SkillsClass> base = getAllThiefSkillsBase(cList,eList,rList);
+		for(SkillsClass sC: base)
+			if (sC.getScore() > 0) {
+				skilled = true;
+				break;
+			}
+		return skilled;
+	}
 	
 }

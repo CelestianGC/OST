@@ -64,12 +64,9 @@ public class Panel_Player_ArcaneSpells extends javax.swing.JPanel {
 	}
 
 	public void updatePanel(PlayerClass oPlayer) {
-		// TODO Auto-generated method stub
 		// added this incase we updated panel
 		pc = oPlayer;
 
-		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
-		// portrait
 		// arcane spells
 		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(
 				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);

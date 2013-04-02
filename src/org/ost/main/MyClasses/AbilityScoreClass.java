@@ -2,6 +2,10 @@ package org.ost.main.MyClasses;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 
+import java.util.ArrayList;
+
+import org.ost.main.MainClass;
+
 public class AbilityScoreClass {
 	public int score;
 	public int percentile;
@@ -151,6 +155,5 @@ public class AbilityScoreClass {
 		newMe.setPrimeRequisite(primeRequisite);
 		return newMe;
 	}
-	
 	
 }

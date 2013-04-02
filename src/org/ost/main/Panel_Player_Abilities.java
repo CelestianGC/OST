@@ -72,8 +72,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		// portrait
 
 		// abilties
-		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
-				.getAllAbilityScoreAdjustments(ost.characterClassList,
+		ArrayList<AbilityScoreClass> abilityScoresAdj = 
+				pc.getAllAbilityScoreAdjustments(ost.characterClassList,
 						ost.extraAbilitiesList, ost.raceList);
 
 		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
@@ -83,8 +83,9 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 			int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
 
 			if (abilityTotal >= 0) {
-				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
-						abilityTotal);
+//				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
+//						abilityTotal);
+				AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
 				switch (i) {
 				case ABILITY_CHARISMA:
 					pcCharismaLabel.setText(String.format("%d", abilityTotal));

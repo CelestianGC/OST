@@ -923,19 +923,23 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 	private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		JDialog dDialog = new JDialog();
-		dDialog.add(new Panel_Player(ost, currentPlayer));
-
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension windowSize = ost.mainFrame.getSize();
-		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-		//		setLocation(windowX, windowY);
-		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
-		dDialog.setLocationRelativeTo(ost.mainFrame);
-		//dDialog.setSize(480, 360);
-
-		dDialog.setVisible(true);
+//		JDialog dDialog = new JDialog();
+//		dDialog.add(new Panel_Player(ost, currentPlayer));
+//
+//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//		Dimension windowSize = ost.mainFrame.getSize();
+//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+//		//		setLocation(windowX, windowY);
+//		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
+//		dDialog.setLocationRelativeTo(ost.mainFrame);
+//		//dDialog.setSize(480, 360);
+//
+//		dDialog.setVisible(true);
+		
+		Frame_Character_Sheet 
+			fSheet = new Frame_Character_Sheet(ost, currentPlayer);
+		fSheet.setVisible(true);
 	}
 
 	private void playerEditButtonActionPerformed(java.awt.event.ActionEvent evt) {

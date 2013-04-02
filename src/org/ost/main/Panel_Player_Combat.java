@@ -34,12 +34,17 @@ import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_76_90;
 import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_91_99;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 
 import org.ost.main.MyClasses.AbilityScoreClass;
 import org.ost.main.MyClasses.AbilityStatClass;
@@ -60,6 +65,29 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		this.ost = ost;
 		this.pc = oPlayer;
 		initComponents();
+
+		// for some reason cellrenderer makes the cells align left, default
+		// for int is right, so just cell render them all so they are all left
+		// TODO figure out why it does that.
+		// make that THACO cell red
+		for (int i = 0; i < pcCombatMatrixTable.getColumnCount(); i++) {
+			TableColumn thacoCol = pcCombatMatrixTable.getColumnModel()
+					.getColumn(i);
+			if (i == 10)
+				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
+						Color.black));
+			else
+				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
+						Color.black));
+		}
+		// this is to make the headers align left to match the numbers
+		TableCellRenderer rendererFromHeader = pcCombatMatrixTable
+				.getTableHeader().getDefaultRenderer();
+		JLabel headerLabel = (JLabel) rendererFromHeader;
+		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		//---
+
+		
 		updatePanel(oPlayer);
 	}
 
@@ -100,7 +128,7 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 				break;
 
 			default:
-				ost.dprint("Unknown AC type in Panel_Player updatePanel()\n");
+				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
 				break;
 			}
 		}
@@ -109,7 +137,8 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		pcCombatMatrixTable.getTableHeader().setFont(fFont);
 		pcCombatMatrixTable.getTableHeader().setBackground(Color.yellow);
 
-		int attackList[] = pc.getMatrix(ost.characterClassList,
+		int attackList[] = 
+				pc.getMatrix(ost.characterClassList,
 				ost.extraAbilitiesList, ost.raceList);
 
 		for (int i = 0; i < attackList.length; i++) {
@@ -347,6 +376,29 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	class ColorColumnRenderer extends DefaultTableCellRenderer {
+		Color bkgndColor, fgndColor;
+
+		public ColorColumnRenderer(Color bkgnd, Color foregnd) {
+			super();
+			bkgndColor = bkgnd;
+			fgndColor = foregnd;
+		}
+
+		public Component getTableCellRendererComponent(JTable table,
+				Object value, boolean isSelected, boolean hasFocus, int row,
+				int column) {
+			Component cell = super.getTableCellRendererComponent(table, value,
+					isSelected, hasFocus, row, column);
+
+			cell.setBackground(bkgndColor);
+			cell.setForeground(fgndColor);
+
+			return cell;
+		}
+	}
+
+	
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
 	private javax.swing.JPanel combatPanel;

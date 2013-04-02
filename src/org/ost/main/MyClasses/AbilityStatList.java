@@ -90,44 +90,61 @@ public class AbilityStatList {
 		}
 		
 	}
-	
 	/**
-	 * generate XML file from struct
+	 * return AbilityStatClass with ability nScore value
 	 * 
-	 * @param fileName
-	 * @param aList
-	 */
-	public void aserializeToXML(String fileName) {
-		XStream xs = new XStream();
-		xs.alias("entries", AbilityStatList.class);
-		xs.alias("AbilityStatClass", AbilityStatClass.class);
-		xs.addImplicitCollection(AbilityStatList.class, "entries");
-
-		try {
-			FileOutputStream fs = new FileOutputStream(fileName);
-			xs.toXML(this,fs);
-		} catch (Exception e) {
-			SimpleDialog.showError(e.getLocalizedMessage()+":error in serializeListToXML");
-		}
-	}
-
-	/**
-	 * return list of objects from XML
-	 * 
-	 * @param fileName
+	 * @param nScore
 	 * @return
 	 */
-	public void adeserializeFromXML(String fileName) {
-		XStream xs = new XStream(new DomDriver());
-		xs.alias("entries", AbilityStatList.class);
-		xs.alias("AbilityStatClass", AbilityStatClass.class);
-		xs.addImplicitCollection(AbilityStatList.class, "entries");
-		try {
-			FileInputStream fis = new FileInputStream(fileName);
-			xs.fromXML(fis, this);
-		} catch (Exception e) {
-			SimpleDialog.showError(e.getLocalizedMessage()+":error in deserializeFromXML");
+	public AbilityStatClass getStat(int nScore) {
+		AbilityStatClass oA = null;
+		for(AbilityStatClass aS : getContent()) {
+			if (aS.getStrength().score == nScore) {
+				oA = aS;
+				break;
+			}
 		}
+		return oA;
 	}
+	
+//	
+//	/**
+//	 * generate XML file from struct
+//	 * 
+//	 * @param fileName
+//	 * @param aList
+//	 */
+//	public void aserializeToXML(String fileName) {
+//		XStream xs = new XStream();
+//		xs.alias("entries", AbilityStatList.class);
+//		xs.alias("AbilityStatClass", AbilityStatClass.class);
+//		xs.addImplicitCollection(AbilityStatList.class, "entries");
+//
+//		try {
+//			FileOutputStream fs = new FileOutputStream(fileName);
+//			xs.toXML(this,fs);
+//		} catch (Exception e) {
+//			SimpleDialog.showError(e.getLocalizedMessage()+":error in serializeListToXML");
+//		}
+//	}
+//
+//	/**
+//	 * return list of objects from XML
+//	 * 
+//	 * @param fileName
+//	 * @return
+//	 */
+//	public void adeserializeFromXML(String fileName) {
+//		XStream xs = new XStream(new DomDriver());
+//		xs.alias("entries", AbilityStatList.class);
+//		xs.alias("AbilityStatClass", AbilityStatClass.class);
+//		xs.addImplicitCollection(AbilityStatList.class, "entries");
+//		try {
+//			FileInputStream fis = new FileInputStream(fileName);
+//			xs.fromXML(fis, this);
+//		} catch (Exception e) {
+//			SimpleDialog.showError(e.getLocalizedMessage()+":error in deserializeFromXML");
+//		}
+//	}
 
 }
