@@ -142,7 +142,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="pcMaxSpellsLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pcBonusArcaneLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="pcBonusArcaneSpellsLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -157,7 +157,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="pcSpellFailureLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pcBonusDivineLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="pcBonusSpellsDivineLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -198,7 +198,7 @@
                       <Component id="pcMinSpellsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcMaxSpellsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcBonusArcaneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcBonusArcaneSpellsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -209,7 +209,7 @@
                       <Component id="pcMagicalAdjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcSpellFailureLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcBonusDivineLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcBonusSpellsDivineLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -641,7 +641,7 @@
             <Property name="text" type="java.lang.String" value="999"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel44">
+        <Component class="javax.swing.JLabel" name="pcBonusArcaneLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="0"/>
@@ -697,7 +697,7 @@
             <Property name="text" type="java.lang.String" value="999"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel50">
+        <Component class="javax.swing.JLabel" name="pcBonusDivineLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="0"/>

@@ -121,7 +121,7 @@ public class PlayerClass implements Serializable, Comparable {
 		setMyAbilityScores(new ArrayList<AbilityScoreClass>());
 		for(int i=0;i<MAX_ABILITIES;i++)
 			getMyAbilityScores().add(
-					new AbilityScoreClass(0,0, ABILITIES[i],ABILITIES_ABBREV[i],0,25));
+					new AbilityScoreClass(9,0, ABILITIES[i],ABILITIES_ABBREV[i],0,25));
 
 		setMySaveAdjustments(new ArrayList<Integer>());
 		for(int i=0;i<MAX_SAVES;i++)
@@ -222,7 +222,7 @@ public class PlayerClass implements Serializable, Comparable {
 		 */
 		public void levelUP(CharacterClassList cList,
 				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
-			
+			if (getMyClass().size() > 0) {
 				// TODO
 				int nRaceStartBonus = 0;
 				boolean bRaceBonusUsed = false;
@@ -232,10 +232,10 @@ public class PlayerClass implements Serializable, Comparable {
 				int classCount = getMyClass().size();
 
 				CharacterClass cC = getClassByID(cList);
-				
+
 				if (getHdRolls() == null) // not sure I will ever use this
 					setHdRolls(new ArrayList<Integer>());
-				
+
 				for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
 
 					ost.dprint("new level "+(ii+1)+"\n");
@@ -295,7 +295,7 @@ public class PlayerClass implements Serializable, Comparable {
 					} else if (oL.getExpReq() > getExperience()) {
 						//to little exp or same level
 						//no need to go any further
-							break;
+						break;
 					}
 				}
 
@@ -304,7 +304,7 @@ public class PlayerClass implements Serializable, Comparable {
 				int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
 				int newHP = getHpMax()+nRolledHP;
 				int oldHP = getHpMax();
-				
+
 				ost.dprint(String.format("hpDIFF = %d\n"
 						+ "original = %d\n----------------\n", hpDiff, getHpMax()));
 
@@ -312,33 +312,35 @@ public class PlayerClass implements Serializable, Comparable {
 
 				setHpCurrent((getHpMax()+nRolledHP));
 				setHpMax((getHpMax()+nRolledHP));
-				
+
 				ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
 				ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
+			}
 		}
 		
 		public void deLevel(CharacterClassList cList,
 				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
 			
-			int classCount = getMyClass().size();
-			int nRolledHP = 0;
-			
+			if (getMyClass().size() > 0) {
+				int classCount = getMyClass().size();
+				int nRolledHP = 0;
+
 				CharacterClass cC = getClassByID(cList);
 
 				if (getHdRolls() == null)
 					setHdRolls(new ArrayList<Integer>());
-				
+
 				for (int ii = (getLevel()-1); ii >= 0; ii--) {
 					LevelClass oL = cC.getLevelByLevel(ii);
-					
+
 					ost.dprint("checking deLevel "+oL.getLevel()+"\n");
-					
+
 					if (getExperience() < oL.getExpReq()) {
 						int nRollingHP = 0;
 						int nDiceCount = 1;
 						int nDiceSize = 4;
 						int nClassHPBonus = 0;
-						
+
 						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
 								cList, eList, rList, aList);
 						AbilityStatClass aStat = 
@@ -365,31 +367,32 @@ public class PlayerClass implements Serializable, Comparable {
 								+ "plus ConBonus %d\n",
 								(ii + 1), nDiceCount, nDiceSize, nRollingHP,
 								nClassHPBonus, nConBonus));
-						
+
 						nRollingHP += nClassHPBonus;
 						nRollingHP += nConBonus; // update conBonus each level?
 						nRolledHP -= nRollingHP;
 						ost.dprint(String.format("nRollingHP = %d\n"
 								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
+						//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
 						setLevel((getLevel()-1)); // set level to new level
 					}
 				}
-			// multi-classed divide hp by number of classes
-			nRolledHP /= classCount;
-			int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
-			int newHP = getHpMax()-nRolledHP;
-			int oldHP = getHpMax();
-			ost.dprint(String.format("hpDIFF = %d\n"
-			+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+				// multi-classed divide hp by number of classes
+				nRolledHP /= classCount;
+				int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+				int newHP = getHpMax()-nRolledHP;
+				int oldHP = getHpMax();
+				ost.dprint(String.format("hpDIFF = %d\n"
+						+ "original = %d\n----------------\n", hpDiff, getHpMax()));
 
-			setLog(getLog()+"character de-level, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+				setLog(getLog()+"character de-level, new MaxHP:"+ newHP +" from "+oldHP+"\n");
 
-			setHpCurrent((getHpMax()+nRolledHP));
-			setHpMax((getHpMax()+nRolledHP));
+				setHpCurrent((getHpMax()+nRolledHP));
+				setHpMax((getHpMax()+nRolledHP));
 
-			ost.dprint("DeLevel MaxHP:"+ getHpMax()+"\n");
-			ost.dprint("DeLevel CurHP:"+ getHpCurrent()+"\n");
+				ost.dprint("DeLevel MaxHP:"+ getHpMax()+"\n");
+				ost.dprint("DeLevel CurHP:"+ getHpCurrent()+"\n");
+			}
 		}
 		
 		

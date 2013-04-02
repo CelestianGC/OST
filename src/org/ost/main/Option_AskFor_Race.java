@@ -9,7 +9,9 @@ package org.ost.main;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.Collections;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 
 import org.ost.main.MyClasses.CharacterClass;
@@ -24,6 +26,7 @@ import org.ost.main.MyClasses.RaceClass;
 public class Option_AskFor_Race extends javax.swing.JDialog {
 	private MainClass ost;
 	private java.awt.Frame parent;
+	private DefaultComboBoxModel modelBoxGameVersions;
 
 	/** Creates new form Option_AskFor_Race */
 	public Option_AskFor_Race(java.awt.Frame parent, boolean modal,
@@ -33,6 +36,14 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		this.ost = ost;
 		this.currentRace = oRace;
 		initComponents();
+
+		ArrayList<String> gameList = new ArrayList<>();
+		for (CharacterClass cC : ost.characterClassList.getContent())
+			if (!gameList.contains(cC.getGameVersion()))
+				gameList.add(cC.getGameVersion());
+		Collections.sort(gameList);
+		modelBoxGameVersions = new DefaultComboBoxModel<>(gameList.toArray());
+		gameVersionComboBox.setModel(modelBoxGameVersions);
 
 		updatePanels();
 
@@ -73,6 +84,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		naturalACSpinner = new javax.swing.JSpinner();
 		bonusHPLabel = new javax.swing.JLabel();
 		bonusStartHPSpinner = new javax.swing.JSpinner();
+		gameVersionLabel = new javax.swing.JLabel();
+		gameVersionComboBox = new javax.swing.JComboBox();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -155,7 +168,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(raceAbilitiesPanel, gridBagConstraints);
 
@@ -181,7 +194,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(raceThiefAbilitiesPanel, gridBagConstraints);
 
@@ -222,7 +235,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 6;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(raceExtraAbilitiesPanel, gridBagConstraints);
 
@@ -256,9 +269,27 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(moveACStartHPPanel, gridBagConstraints);
+
+		gameVersionLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gameVersionLabel.setText("game version");
+		gameVersionLabel
+				.setToolTipText("game version this class was modeled after.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionLabel, gridBagConstraints);
+
+		gameVersionComboBox.setEditable(true);
+		gameVersionComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionComboBox, gridBagConstraints);
 
 		jScrollPane1.setViewportView(mainPanel);
 
@@ -363,6 +394,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		currentRace.setMoveRate((int) moveRateSpinner.getValue());
 		currentRace.setNaturalAC((int) naturalACSpinner.getValue());
 		currentRace.setBonusStartHP((int) bonusStartHPSpinner.getValue());
+		currentRace.setGameVersion(
+				gameVersionComboBox.getSelectedItem().toString());
 	}
 
 	private void updatePanels() {
@@ -370,6 +403,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		moveRateSpinner.setValue(currentRace.getMoveRate());
 		naturalACSpinner.setValue(currentRace.getNaturalAC());
 		bonusStartHPSpinner.setValue(currentRace.getBonusStartHP());
+		gameVersionComboBox.getModel().setSelectedItem(
+				currentRace.getGameVersion());
 	}
 
 	//GEN-BEGIN:variables
@@ -378,6 +413,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 	private javax.swing.JSpinner bonusStartHPSpinner;
 	private javax.swing.JPanel buttonPanel;
 	private javax.swing.JButton doneButton;
+	private javax.swing.JComboBox gameVersionComboBox;
+	private javax.swing.JLabel gameVersionLabel;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel moveACStartHPPanel;

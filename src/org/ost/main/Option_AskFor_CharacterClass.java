@@ -7,6 +7,10 @@
 package org.ost.main;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import javax.swing.DefaultComboBoxModel;
+
 import static org.ost.main.MyClasses.MyStatics.*;
 
 import org.ost.main.MyClasses.CharacterClass;
@@ -19,6 +23,7 @@ import org.ost.main.MyClasses.RaceClass;
 public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 	private MainClass ost;
 	private java.awt.Frame parent;
+	private DefaultComboBoxModel modelBoxGameVersions;
 
 	/** Creates new form Option_AskFor_CharacterClass */
 	public Option_AskFor_CharacterClass(java.awt.Frame parent, boolean modal,
@@ -29,6 +34,14 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		this.currentClass = oClass;
 		initComponents();
 
+		ArrayList<String> gameList = new ArrayList<>();
+		for (CharacterClass cC : ost.characterClassList.getContent())
+			if (!gameList.contains(cC.getGameVersion()))
+				gameList.add(cC.getGameVersion());
+		Collections.sort(gameList);
+		modelBoxGameVersions = new DefaultComboBoxModel<>(gameList.toArray());
+		gameVersionComboBox.setModel(modelBoxGameVersions);
+
 		updatePanels();
 
 		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -38,7 +51,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		//		setLocation(windowX, windowY);
 		//		setSize(windowSize.width - 2, windowSize.height - 2);
 
-		setSize(360, 340);
+		//setSize(360, 340);
 		setLocationRelativeTo(parent);
 
 	}
@@ -73,6 +86,8 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		nonProfPenaltySpinner = new javax.swing.JSpinner();
 		allowDualClassing = new javax.swing.JCheckBox();
 		allowMultiClassing = new javax.swing.JCheckBox();
+		gameVersionLabel = new javax.swing.JLabel();
+		gameVersionComboBox = new javax.swing.JComboBox();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -185,7 +200,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 				.setToolTipText("Class allows percentile strength when at 18.");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.gridwidth = 2;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(percentileStrengthCheckBox, gridBagConstraints);
@@ -274,7 +289,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 				.setToolTipText("Allow male characters to be this class.");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 6;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(allowMaleCheckBox, gridBagConstraints);
 
@@ -285,7 +300,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 				.setToolTipText("Allow female characters to be this class.");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 6;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(allowFemaleCheckBox, gridBagConstraints);
 
@@ -314,7 +329,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		allowDualClassing.setEnabled(false);
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 7;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(allowDualClassing, gridBagConstraints);
 
@@ -325,9 +340,27 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		allowMultiClassing.setEnabled(false);
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 7;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(allowMultiClassing, gridBagConstraints);
+
+		gameVersionLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gameVersionLabel.setText("game version");
+		gameVersionLabel
+				.setToolTipText("game version this class was modeled after.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionLabel, gridBagConstraints);
+
+		gameVersionComboBox.setEditable(true);
+		gameVersionComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 4;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionComboBox, gridBagConstraints);
 
 		jScrollPane1.setViewportView(mainPanel);
 
@@ -365,7 +398,7 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		// TODO add your handling code here:
 		Option_AskFor_AbilityScores dDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Ability Requirements",
-				currentClass.getAbilityReqs(),true);
+				currentClass.getAbilityReqs(), true);
 
 		dDialog.setVisible(true);
 	}
@@ -428,6 +461,8 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		currentClass.setStartingGold(startingGoldDiceRollTextField.getText());
 
 		currentClass.setLevelMax((int) maxLevelSpinner.getValue());
+		currentClass.setGameVersion(gameVersionComboBox.getSelectedItem()
+				.toString());
 	}
 
 	private void updatePanels() {
@@ -440,6 +475,9 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		nonProfPenaltySpinner.setValue(currentClass.getNonProfPenalty());
 		startingGoldDiceRollTextField.setText(currentClass.getStartingGold());
 		maxLevelSpinner.setValue(currentClass.getLevelMax());
+
+		gameVersionComboBox.getModel().setSelectedItem(
+				currentClass.getGameVersion());
 	}
 
 	//GEN-BEGIN:variables
@@ -455,6 +493,8 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 	private javax.swing.JPanel buttonPanel;
 	private javax.swing.JButton descriptionButton;
 	private javax.swing.JButton doneButton;
+	private javax.swing.JComboBox gameVersionComboBox;
+	private javax.swing.JLabel gameVersionLabel;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel10;
 	private javax.swing.JLabel jLabel2;

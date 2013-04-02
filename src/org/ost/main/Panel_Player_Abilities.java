@@ -71,7 +71,6 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
 		// portrait
 
-
 		// abilties
 		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
 				.getAllAbilityScoreAdjustments(ost.characterClassList,
@@ -137,17 +136,24 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 							abilityTotal));
 					//bonus arcane spells
 					String magicSpells = "";
-					if (pc.isCasterArcane(
-							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
-					for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
-						magicSpells = magicSpells
-								+ String.format("L%dX%d%s", ii + 1,
-										aStat.intelligence.bonusSpells[ii],
-										ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
-												: "");
-					}
-					pcBonusArcaneSpellsLabel.setText(String.format("%s",
-							magicSpells));
+					if (pc.isCasterArcane(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+							magicSpells = magicSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.intelligence.bonusSpells[ii],
+											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
+													: "");
+						}
+					pcBonusArcaneSpellsLabel.setText(
+							String.format("%s",magicSpells));
+					if (magicSpells.length()<=0) 
+						pcBonusArcaneLabel.setText("");
+					else
+						pcBonusArcaneLabel.setText("Bonus");
+					
 					pcKnowSpellLabel.setText(String.format("%d",
 							aStat.intelligence.knowSpell));
 					pcLanguagesLabel.setText(String.format("%d",
@@ -269,17 +275,24 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					pcWisdomLabel.setText(String.format("%d", abilityTotal));
 					//divine spells
 					String clericSpells = "";
-					if (pc.isCasterDivine(
-							ost.characterClassList, ost.extraAbilitiesList, ost.raceList))
-					for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
-						clericSpells = clericSpells
-								+ String.format("L%dX%d%s", ii + 1,
-										aStat.wisdom.bonusSpells[ii],
-										ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
-												: "");
-					}
+					if (pc.isCasterDivine(ost.characterClassList,
+							ost.extraAbilitiesList, ost.raceList))
+						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+							clericSpells = clericSpells
+									+ String.format(
+											"L%dX%d%s",
+											ii + 1,
+											aStat.wisdom.bonusSpells[ii],
+											ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
+													: "");
+						}
 					pcBonusSpellsDivineLabel.setText(String.format("%s",
 							clericSpells));
+					if (clericSpells.length()<=0) 
+						pcBonusDivineLabel.setText("");
+					else
+						pcBonusDivineLabel.setText("Bonus");
+					
 					pcMagicalAdjLabel.setText(String.format("%d",
 							aStat.wisdom.magicalAdjustment));
 					pcSpellFailureLabel.setText(String.format("%d",
@@ -297,7 +310,6 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		repaint();
 	}
 
-	
 	/** This method is called from within the constructor to
 	 * initialize the form.
 	 * WARNING: Do NOT modify this code. The content of this method is
@@ -354,14 +366,14 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcMinSpellsLabel = new javax.swing.JLabel();
 		jLabel42 = new javax.swing.JLabel();
 		pcMaxSpellsLabel = new javax.swing.JLabel();
-		jLabel44 = new javax.swing.JLabel();
+		pcBonusArcaneLabel = new javax.swing.JLabel();
 		pcBonusArcaneSpellsLabel = new javax.swing.JLabel();
 		jLabel23 = new javax.swing.JLabel();
 		jLabel46 = new javax.swing.JLabel();
 		pcMagicalAdjLabel = new javax.swing.JLabel();
 		jLabel48 = new javax.swing.JLabel();
 		pcSpellFailureLabel = new javax.swing.JLabel();
-		jLabel50 = new javax.swing.JLabel();
+		pcBonusDivineLabel = new javax.swing.JLabel();
 		pcBonusSpellsDivineLabel = new javax.swing.JLabel();
 		jLabel49 = new javax.swing.JLabel();
 		pcWeightAllowanceLabel = new javax.swing.JLabel();
@@ -522,8 +534,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcMaxSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcMaxSpellsLabel.setText("999");
 
-		jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel44.setText("Bonus");
+		pcBonusArcaneLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		pcBonusArcaneLabel.setText("Bonus");
 
 		pcBonusArcaneSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
 		pcBonusArcaneSpellsLabel
@@ -544,8 +556,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcSpellFailureLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSpellFailureLabel.setText("999");
 
-		jLabel50.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel50.setText("Bonus");
+		pcBonusDivineLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		pcBonusDivineLabel.setText("Bonus");
 
 		pcBonusSpellsDivineLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
 		pcBonusSpellsDivineLabel.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0");
@@ -782,7 +794,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 																										.addPreferredGap(
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
-																												jLabel44)
+																												pcBonusArcaneLabel)
 																										.addPreferredGap(
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
@@ -811,7 +823,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 																										.addPreferredGap(
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
-																												jLabel50)
+																												pcBonusDivineLabel)
 																										.addPreferredGap(
 																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 																										.addComponent(
@@ -869,7 +881,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 														.addComponent(jLabel42)
 														.addComponent(
 																pcMaxSpellsLabel)
-														.addComponent(jLabel44)
+														.addComponent(
+																pcBonusArcaneLabel)
 														.addComponent(
 																pcBonusArcaneSpellsLabel))
 										.addPreferredGap(
@@ -887,7 +900,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 														.addComponent(jLabel48)
 														.addComponent(
 																pcSpellFailureLabel)
-														.addComponent(jLabel50)
+														.addComponent(
+																pcBonusDivineLabel)
 														.addComponent(
 																pcBonusSpellsDivineLabel))
 										.addPreferredGap(
@@ -967,11 +981,9 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel38;
 	private javax.swing.JLabel jLabel40;
 	private javax.swing.JLabel jLabel42;
-	private javax.swing.JLabel jLabel44;
 	private javax.swing.JLabel jLabel46;
 	private javax.swing.JLabel jLabel48;
 	private javax.swing.JLabel jLabel49;
-	private javax.swing.JLabel jLabel50;
 	private javax.swing.JLabel jLabel52;
 	private javax.swing.JLabel jLabel54;
 	private javax.swing.JLabel jLabel56;
@@ -982,7 +994,9 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel66;
 	private javax.swing.JLabel jLabel68;
 	private javax.swing.JLabel pcBendBarsLabel;
+	private javax.swing.JLabel pcBonusArcaneLabel;
 	private javax.swing.JLabel pcBonusArcaneSpellsLabel;
+	private javax.swing.JLabel pcBonusDivineLabel;
 	private javax.swing.JLabel pcBonusSpellsDivineLabel;
 	private javax.swing.JLabel pcCharismaLabel;
 	private javax.swing.JLabel pcConstitutionLabel;

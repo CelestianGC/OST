@@ -40,6 +40,8 @@ public class CharacterClass implements Comparable{
 		
 		public String startingGold; // dice roll string for starting gold (3d6*10)
 		
+		public String gameVersion; // version of the game this class is from
+		
 		public CharacterClass(String name, String description, String abbrev) {
 			this(name, description,abbrev,
 					99,false,
@@ -98,6 +100,7 @@ public class CharacterClass implements Comparable{
 				getAbilityReqs().add(
 						new AbilityScoreClass(1,0, ABILITIES[i],ABILITIES_ABBREV[i]));
 
+			this.setGameVersion("");
 			this.setMyID(UUID.randomUUID().toString());
 		}
 
@@ -620,6 +623,20 @@ public class CharacterClass implements Comparable{
 			
 			
 		}// end LevelClass
+
+		/**
+		 * @return the gameVersion
+		 */
+		public String getGameVersion() {
+			return gameVersion;
+		}
+
+		/**
+		 * @param gameVersion the gameVersion to set
+		 */
+		public void setGameVersion(String gameVersion) {
+			this.gameVersion = gameVersion;
+		}
 
 		public class AlignementReqs  {
 			public boolean alignmentRequired;

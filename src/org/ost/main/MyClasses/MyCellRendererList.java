@@ -36,7 +36,10 @@ public class MyCellRendererList extends DefaultListCellRenderer {
 		}
 			else if (value instanceof CharacterClass) {
 				CharacterClass oO = (CharacterClass) value;
-				setText(oO.getName());
+				String name = String.format("%s",oO.getName());
+				if (oO.getGameVersion()!= null && oO.getGameVersion().length() > 0)
+					name = String.format("%s[%s]", oO.getName(),oO.getGameVersion());
+				setText(name);
 			}
 			else if (value instanceof ExtraAbilitiesClass) {
 				ExtraAbilitiesClass oO = (ExtraAbilitiesClass) value;
@@ -54,7 +57,10 @@ public class MyCellRendererList extends DefaultListCellRenderer {
 			}
 			else if (value instanceof RaceClass) {
 				RaceClass oO = (RaceClass) value;
-			setText(oO.getName());
+				String name = String.format("%s",oO.getName());
+				if (oO.getGameVersion()!= null && oO.getGameVersion().length() > 0)
+					name = String.format("%s[%s]", oO.getName(),oO.getGameVersion());
+				setText(name);
 			}
 			
 			else if (value instanceof StatesClass) {

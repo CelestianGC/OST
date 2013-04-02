@@ -1,5 +1,298 @@
 <entries>
   <RaceClass>
+    <myID>e0b03f37-7d17-4e0b-8ff9-bd773bde9696</myID>
+    <name>Dwarf</name>
+    <description>Enter Description of this new race.</description>
+    <minAbility>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>8</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>3</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>3</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>3</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>3</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>1</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </minAbility>
+    <maxAbility>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>17</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>19</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>16</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </maxAbility>
+    <abilityAdjustment>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>1</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>-1</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </abilityAdjustment>
+    <thiefAbiltyAdjustments>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Pick Pockets</name>
+        <abbrev>PP</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Open Locks</name>
+        <abbrev>OL</abbrev>
+        <score>10</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Find/Remove Traps</name>
+        <abbrev>F/R</abbrev>
+        <score>15</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Move Silently</name>
+        <abbrev>MS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hide in Shadows</name>
+        <abbrev>HS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hear Noise</name>
+        <abbrev>HN</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Climb Walls</name>
+        <abbrev>CW</abbrev>
+        <score>-10</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Read Languages</name>
+        <abbrev>RL</abbrev>
+        <score>-5</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+    </thiefAbiltyAdjustments>
+    <bonusAbilities/>
+    <allowedClasses/>
+    <moveRate>6</moveRate>
+    <naturalAC>10</naturalAC>
+    <bonusStartHP>0</bonusStartHP>
+    <gameVersion>v1</gameVersion>
+  </RaceClass>
+  <RaceClass>
     <myID>1ced0a60-bbae-4956-b6d5-4a9f4bd6b5fe</myID>
     <name>Elf</name>
     <description>Enter Description of this new race.</description>
@@ -223,7 +516,7 @@
       <org.ost.main.MyClasses.SkillsClass>
         <name>Pick Pockets</name>
         <abbrev>PP</abbrev>
-        <score>0</score>
+        <score>5</score>
         <min>-200</min>
         <max>200</max>
         <allowed>true</allowed>
@@ -231,7 +524,7 @@
       <org.ost.main.MyClasses.SkillsClass>
         <name>Open Locks</name>
         <abbrev>OL</abbrev>
-        <score>0</score>
+        <score>-5</score>
         <min>-200</min>
         <max>200</max>
         <allowed>true</allowed>
@@ -247,7 +540,7 @@
       <org.ost.main.MyClasses.SkillsClass>
         <name>Move Silently</name>
         <abbrev>MS</abbrev>
-        <score>0</score>
+        <score>6</score>
         <min>-200</min>
         <max>200</max>
         <allowed>true</allowed>
@@ -255,7 +548,7 @@
       <org.ost.main.MyClasses.SkillsClass>
         <name>Hide in Shadows</name>
         <abbrev>HS</abbrev>
-        <score>0</score>
+        <score>10</score>
         <min>-200</min>
         <max>200</max>
         <allowed>true</allowed>
@@ -263,7 +556,7 @@
       <org.ost.main.MyClasses.SkillsClass>
         <name>Hear Noise</name>
         <abbrev>HN</abbrev>
-        <score>0</score>
+        <score>5</score>
         <min>-200</min>
         <max>200</max>
         <allowed>true</allowed>
@@ -290,6 +583,7 @@
     <moveRate>12</moveRate>
     <naturalAC>10</naturalAC>
     <bonusStartHP>0</bonusStartHP>
+    <gameVersion>v1</gameVersion>
   </RaceClass>
   <RaceClass>
     <myID>3ea47bf3-d59c-4874-aec0-5b73551307f1</myID>
@@ -582,5 +876,6 @@
     <moveRate>12</moveRate>
     <naturalAC>10</naturalAC>
     <bonusStartHP>0</bonusStartHP>
+    <gameVersion>v1</gameVersion>
   </RaceClass>
 </entries>

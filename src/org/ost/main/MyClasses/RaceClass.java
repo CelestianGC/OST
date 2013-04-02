@@ -24,6 +24,8 @@ public class RaceClass implements Comparable{
 	public int naturalAC;
 	public int bonusStartHP;
 	
+	public String gameVersion;
+	
 	public RaceClass() {
 		this("give-me-name","enter description");
 	}
@@ -74,11 +76,24 @@ public class RaceClass implements Comparable{
 		this.setMoveRate(12);
 		this.setNaturalAC(10);
 		this.setBonusStartHP(0);
+		this.setGameVersion("");
 		
 		this.setMyID(UUID.randomUUID().toString());
 	}
 	
 	
+	/**
+	 * @return the gameVersion
+	 */
+	public String getGameVersion() {
+		return gameVersion;
+	}
+	/**
+	 * @param gameVersion the gameVersion to set
+	 */
+	public void setGameVersion(String gameVersion) {
+		this.gameVersion = gameVersion;
+	}
 	/**
 	 * @return the moveRace
 	 */

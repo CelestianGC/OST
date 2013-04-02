@@ -455,7 +455,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			}
 		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
+		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 7;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(rollHDButton, gridBagConstraints);
@@ -469,7 +469,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			}
 		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 7;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(expAddButton, gridBagConstraints);
@@ -499,32 +499,33 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 	private void expAddButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		String addExp = SimpleDialog.showQuestion(this, "Enter value to add/remove.", "Modify Experince", "0");
+		String addExp = SimpleDialog.showQuestion(this,
+				"Enter value to add/remove.", "Modify Experince", "0");
 		int nEXP = 0;
 		try {
 			nEXP = Integer.parseInt(addExp);
 		} catch (Exception e) {
 			SimpleDialog.showError("Value must be a number.");
 		}
-		
-		updateLevelDifferential(nEXP,true);
+
+		updateLevelDifferential(nEXP, true);
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code he
+		if (currentCharacter.getMyClass().size() >0) {
+			for (PCClass pC : currentCharacter.getMyClass())
+				pC.setLevel(0);// set level to 0 so it re-levels character up
+			currentCharacter.setHpCurrent(0);
+			currentCharacter.setHpMax(0);
+			updateLevelDifferential(-1, false);
 
-		for(PCClass pC : currentCharacter.getMyClass())
-			pC.setLevel(0);// set level to 0 so it re-levels character up
-		currentCharacter.setHpCurrent(0);
-		currentCharacter.setHpMax(0);
-		updateLevelDifferential(-1,false);
-		
-		// set these on the dialog or we lose them if they changed
-		hpSpinner.setValue(currentCharacter.getHpMax());
-		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			// set these on the dialog or we lose them if they changed
+			hpSpinner.setValue(currentCharacter.getHpMax());
+			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+		}
 	}
 
 	/**
@@ -536,39 +537,40 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	 */
 	private void updateLevelDifferential(int nEXP, boolean addEXP) {
 		if (nEXP != 0 || !addEXP) {
-		int classCount = currentCharacter.getMyClass().size();
+			int classCount = currentCharacter.getMyClass().size();
 			nEXP /= classCount;
-			for(PCClass pC : currentCharacter.getMyClass()) {
+			for (PCClass pC : currentCharacter.getMyClass()) {
 				int nOldLevel = pC.getLevel();
 				if (addEXP)
 					pC.addExperience(nEXP);
 				int nNewLevel = pC.getLevelActual(ost.characterClassList);
-				int nDiffLevel = nNewLevel - nOldLevel; 
+				int nDiffLevel = nNewLevel - nOldLevel;
 				if (nDiffLevel != 0) { // re-roll health?
 					if (nDiffLevel > 0) {
 						// TODO levelup();
-						ost.dprint(pC.getName()+" is leveling up! "+nDiffLevel+"\n");
-						
-						pC.levelUP(ost.characterClassList, 
-								ost.extraAbilitiesList, ost.raceList, 
+						ost.dprint(pC.getName() + " is leveling up! "
+								+ nDiffLevel + "\n");
+
+						pC.levelUP(ost.characterClassList,
+								ost.extraAbilitiesList, ost.raceList,
 								ost.abilityStatList, ost);
-					}
-					else {
-						ost.dprint(pC.getName()+" De-Leveled! "+nDiffLevel+"\n");
+					} else {
+						ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
+								+ "\n");
 						// TODO delevel();
-						pC.deLevel(ost.characterClassList, 
-								ost.extraAbilitiesList, ost.raceList, 
+						pC.deLevel(ost.characterClassList,
+								ost.extraAbilitiesList, ost.raceList,
 								ost.abilityStatList, ost);
 					}
-					
+
 				}
 			}
-//			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-//			hpSpinner.setValue(currentCharacter.getHpMax());
-			}
-		
+			//			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			//			hpSpinner.setValue(currentCharacter.getHpMax());
+		}
+
 	}
-	
+
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		ArrayList<String> cList = new ArrayList<String>();
@@ -710,7 +712,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		RaceClass oR = RaceClass.getRaceFromMyID(currentCharacter.getMyRace()
 				.getRaceID(), ost.raceList);
 		raceLabel.setText(oR != null ? oR.getName() : "");
-
+		
+		levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
 	}
 
 	//GEN-BEGIN:variables
