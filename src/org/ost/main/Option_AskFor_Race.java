@@ -67,16 +67,14 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		jScrollPane1 = new javax.swing.JScrollPane();
 		mainPanel = new javax.swing.JPanel();
 		raceNameLabel = new javax.swing.JLabel();
+		raceDescriptionButton = new javax.swing.JButton();
+		gameVersionLabel = new javax.swing.JLabel();
+		gameVersionComboBox = new javax.swing.JComboBox();
 		raceNameTextField = new javax.swing.JTextField();
 		raceAbilitiesPanel = new javax.swing.JPanel();
 		raceMinAbilitiesButton = new javax.swing.JButton();
 		raceMaxAbilitiesButton = new javax.swing.JButton();
 		raceAdjustmentAbilitiesButton = new javax.swing.JButton();
-		raceThiefAbilitiesPanel = new javax.swing.JPanel();
-		raceThiefAbilitiesButton = new javax.swing.JButton();
-		raceDescriptionButton = new javax.swing.JButton();
-		raceExtraAbilitiesPanel = new javax.swing.JPanel();
-		raceExtraABilitiesButton = new javax.swing.JButton();
 		moveACStartHPPanel = new javax.swing.JPanel();
 		moveRateLabel = new javax.swing.JLabel();
 		moveRateSpinner = new javax.swing.JSpinner();
@@ -84,8 +82,11 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		naturalACSpinner = new javax.swing.JSpinner();
 		bonusHPLabel = new javax.swing.JLabel();
 		bonusStartHPSpinner = new javax.swing.JSpinner();
-		gameVersionLabel = new javax.swing.JLabel();
-		gameVersionComboBox = new javax.swing.JComboBox();
+		jPanel1 = new javax.swing.JPanel();
+		raceThiefAbilitiesPanel = new javax.swing.JPanel();
+		raceThiefAbilitiesButton = new javax.swing.JButton();
+		raceExtraAbilitiesPanel = new javax.swing.JPanel();
+		raceExtraABilitiesButton = new javax.swing.JButton();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -111,6 +112,39 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 2);
 		mainPanel.add(raceNameLabel, gridBagConstraints);
+
+		raceDescriptionButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		raceDescriptionButton.setText("set description");
+		raceDescriptionButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						raceDescriptionButtonActionPerformed(evt);
+					}
+				});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		mainPanel.add(raceDescriptionButton, gridBagConstraints);
+
+		gameVersionLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gameVersionLabel.setText("game version");
+		gameVersionLabel
+				.setToolTipText("game version this class was modeled after.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionLabel, gridBagConstraints);
+
+		gameVersionComboBox.setEditable(true);
+		gameVersionComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		mainPanel.add(gameVersionComboBox, gridBagConstraints);
 
 		raceNameTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -172,73 +206,6 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(raceAbilitiesPanel, gridBagConstraints);
 
-		raceThiefAbilitiesPanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true),
-						"Thief Ability Scores",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 12)));
-
-		raceThiefAbilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		raceThiefAbilitiesButton.setText("adjustments");
-		raceThiefAbilitiesButton
-				.setToolTipText("Thief skill adjustments applied because of this race.");
-		raceThiefAbilitiesButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						raceThiefAbilitiesButtonActionPerformed(evt);
-					}
-				});
-		raceThiefAbilitiesPanel.add(raceThiefAbilitiesButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(raceThiefAbilitiesPanel, gridBagConstraints);
-
-		raceDescriptionButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		raceDescriptionButton.setText("set description");
-		raceDescriptionButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						raceDescriptionButtonActionPerformed(evt);
-					}
-				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		mainPanel.add(raceDescriptionButton, gridBagConstraints);
-
-		raceExtraAbilitiesPanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true),
-						"Racial Features",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 12)));
-
-		raceExtraABilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		raceExtraABilitiesButton.setText("features");
-		raceExtraABilitiesButton
-				.setToolTipText("Racial features granted by the racial stock.");
-		raceExtraABilitiesButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						raceExtraABilitiesButtonActionPerformed(evt);
-					}
-				});
-		raceExtraAbilitiesPanel.add(raceExtraABilitiesButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(raceExtraAbilitiesPanel, gridBagConstraints);
-
 		moveACStartHPPanel.setBorder(javax.swing.BorderFactory
 				.createLineBorder(new java.awt.Color(0, 0, 0)));
 		moveACStartHPPanel.setLayout(new java.awt.GridLayout(0, 2));
@@ -273,23 +240,55 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(moveACStartHPPanel, gridBagConstraints);
 
-		gameVersionLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		gameVersionLabel.setText("game version");
-		gameVersionLabel
-				.setToolTipText("game version this class was modeled after.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(gameVersionLabel, gridBagConstraints);
+		jPanel1.setLayout(new java.awt.GridLayout());
 
-		gameVersionComboBox.setEditable(true);
-		gameVersionComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		raceThiefAbilitiesPanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Thief Skills",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 12)));
+
+		raceThiefAbilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		raceThiefAbilitiesButton.setText("adjustments");
+		raceThiefAbilitiesButton
+				.setToolTipText("Thief skill adjustments applied because of this race.");
+		raceThiefAbilitiesButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						raceThiefAbilitiesButtonActionPerformed(evt);
+					}
+				});
+		raceThiefAbilitiesPanel.add(raceThiefAbilitiesButton);
+
+		jPanel1.add(raceThiefAbilitiesPanel);
+
+		raceExtraAbilitiesPanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Features",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 12)));
+
+		raceExtraABilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		raceExtraABilitiesButton.setText("features");
+		raceExtraABilitiesButton
+				.setToolTipText("Racial features granted by the racial stock.");
+		raceExtraABilitiesButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						raceExtraABilitiesButtonActionPerformed(evt);
+					}
+				});
+		raceExtraAbilitiesPanel.add(raceExtraABilitiesButton);
+
+		jPanel1.add(raceExtraAbilitiesPanel);
+
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(gameVersionComboBox, gridBagConstraints);
+		mainPanel.add(jPanel1, gridBagConstraints);
 
 		jScrollPane1.setViewportView(mainPanel);
 
@@ -394,8 +393,8 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 		currentRace.setMoveRate((int) moveRateSpinner.getValue());
 		currentRace.setNaturalAC((int) naturalACSpinner.getValue());
 		currentRace.setBonusStartHP((int) bonusStartHPSpinner.getValue());
-		currentRace.setGameVersion(
-				gameVersionComboBox.getSelectedItem().toString());
+		currentRace.setGameVersion(gameVersionComboBox.getSelectedItem()
+				.toString());
 	}
 
 	private void updatePanels() {
@@ -415,6 +414,7 @@ public class Option_AskFor_Race extends javax.swing.JDialog {
 	private javax.swing.JButton doneButton;
 	private javax.swing.JComboBox gameVersionComboBox;
 	private javax.swing.JLabel gameVersionLabel;
+	private javax.swing.JPanel jPanel1;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel moveACStartHPPanel;

@@ -1,5 +1,7 @@
 package org.ost.main.MyUtils;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import static org.ost.main.MyClasses.MyStatics.*;
 import java.util.List;
@@ -867,4 +869,30 @@ MainClass.ddprint("---END parseTableReward---\n");
 		return(text);
 	}
 	
+	
+
+	/**
+	 * parse integers with commas 
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static int formattedIntegerParse(String str) {
+			int nParsed = 0;
+			NumberFormat nF = NumberFormat.getIntegerInstance(); 
+			Number n = null;
+			
+			try {
+				n = nF.parse(str);
+			} catch (ParseException e1) {
+				nParsed = 0;
+				//e1.printStackTrace();
+			}
+			
+			nParsed = n.intValue();
+
+			return nParsed;
+	}
+	
+
 } // end MyParse

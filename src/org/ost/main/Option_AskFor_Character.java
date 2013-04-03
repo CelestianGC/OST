@@ -289,6 +289,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 		jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel8.setText("magic-resistance");
+		jLabel8.setEnabled(false);
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 3;
@@ -297,6 +298,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		mainPanel.add(jLabel8, gridBagConstraints);
 
 		magicResistanceTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		magicResistanceTextField.setEnabled(false);
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 3;
@@ -324,7 +326,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		equipmentButton.setEnabled(false);
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 0;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(equipmentButton, gridBagConstraints);
 
@@ -338,7 +340,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		mainPanel.add(Labela12, gridBagConstraints);
 
 		levelLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		levelLabel.setText("setLevel");
+		levelLabel.setText("set class/exp");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 2;
@@ -398,7 +400,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(abilitiesButton, gridBagConstraints);
 
@@ -426,7 +428,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 				});
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		mainPanel.add(savesAdjustmentButton, gridBagConstraints);
 
@@ -512,11 +514,12 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-		levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
+		levelLabel.setText(currentCharacter
+				.getMyLevelName(ost.characterClassList));
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		if (currentCharacter.getMyClass().size() >0) {
+		if (currentCharacter.getMyClass().size() > 0) {
 			for (PCClass pC : currentCharacter.getMyClass())
 				pC.setLevel(0);// set level to 0 so it re-levels character up
 			currentCharacter.setHpCurrent(0);
@@ -526,7 +529,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-			levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
+			levelLabel.setText(currentCharacter
+					.getMyLevelName(ost.characterClassList));
 		}
 	}
 
@@ -611,8 +615,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		cList.add(currentCharacter.myRace.getRaceID());
 
 		ArrayList<RaceClass> aList = RaceClass.getAllowed(cList, ost.raceList);
-		Option_Set_Race dDialog = new 
-				Option_Set_Race(currentCharacter, parent, true, ost, aList);
+		Option_Set_Race dDialog = new Option_Set_Race(currentCharacter, parent,
+				true, ost, aList);
 
 		dDialog.setVisible(true);
 
@@ -718,9 +722,10 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		RaceClass oR = RaceClass.getRaceFromMyID(currentCharacter.getMyRace()
 				.getRaceID(), ost.raceList);
 		raceLabel.setText(oR != null ? oR.getName() : "");
-		
-		levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
-		
+
+		levelLabel.setText(currentCharacter
+				.getMyLevelName(ost.characterClassList));
+
 	}
 
 	//GEN-BEGIN:variables
