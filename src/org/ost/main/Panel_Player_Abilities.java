@@ -72,8 +72,8 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		// portrait
 
 		// abilties
-		ArrayList<AbilityScoreClass> abilityScoresAdj = 
-				pc.getAllAbilityScoreAdjustments(ost.characterClassList,
+		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
+				.getAllAbilityScoreAdjustments(ost.characterClassList,
 						ost.extraAbilitiesList, ost.raceList);
 
 		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
@@ -83,9 +83,10 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 			int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
 
 			if (abilityTotal >= 0) {
-//				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
-//						abilityTotal);
-				AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+				//				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
+				//						abilityTotal);
+				AbilityStatClass aStat = ost.abilityStatList
+						.getStat(abilityTotal);
 				switch (i) {
 				case ABILITY_CHARISMA:
 					pcCharismaLabel.setText(String.format("%d", abilityTotal));
@@ -148,13 +149,13 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
 													: "");
 						}
-					pcBonusArcaneSpellsLabel.setText(
-							String.format("%s",magicSpells));
-					if (magicSpells.length()<=0) 
+					pcBonusArcaneSpellsLabel.setText(String.format("%s",
+							magicSpells));
+					if (magicSpells.length() <= 0)
 						pcBonusArcaneLabel.setText("");
 					else
 						pcBonusArcaneLabel.setText("Bonus");
-					
+
 					pcKnowSpellLabel.setText(String.format("%d",
 							aStat.intelligence.knowSpell));
 					pcLanguagesLabel.setText(String.format("%d",
@@ -289,11 +290,11 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 						}
 					pcBonusSpellsDivineLabel.setText(String.format("%s",
 							clericSpells));
-					if (clericSpells.length()<=0) 
+					if (clericSpells.length() <= 0)
 						pcBonusDivineLabel.setText("");
 					else
 						pcBonusDivineLabel.setText("Bonus");
-					
+
 					pcMagicalAdjLabel.setText(String.format("%d",
 							aStat.wisdom.magicalAdjustment));
 					pcSpellFailureLabel.setText(String.format("%d",
@@ -319,10 +320,12 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	//GEN-BEGIN:initComponents
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
+		java.awt.GridBagConstraints gridBagConstraints;
 
 		AbilitiesPanel = new javax.swing.JPanel();
 		pcStrengthLabel = new javax.swing.JLabel();
-		jLabel21 = new javax.swing.JLabel();
+		strLabel = new javax.swing.JLabel();
+		strPanel = new javax.swing.JPanel();
 		pcPercentileStrLabel = new javax.swing.JLabel();
 		jLabel28 = new javax.swing.JLabel();
 		pcHitAdjLabel = new javax.swing.JLabel();
@@ -332,33 +335,11 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcOpenDoorLabel = new javax.swing.JLabel();
 		jLabel34 = new javax.swing.JLabel();
 		pcBendBarsLabel = new javax.swing.JLabel();
-		pcDexterityLabel = new javax.swing.JLabel();
-		jLabel24 = new javax.swing.JLabel();
-		jLabel52 = new javax.swing.JLabel();
-		pcReactionAdjLabel = new javax.swing.JLabel();
-		jLabel54 = new javax.swing.JLabel();
-		pcMissileAdjLabel = new javax.swing.JLabel();
-		jLabel56 = new javax.swing.JLabel();
-		pcDefenseAdjLabel = new javax.swing.JLabel();
-		pcConstitutionLabel = new javax.swing.JLabel();
-		jLabel25 = new javax.swing.JLabel();
-		jLabel58 = new javax.swing.JLabel();
-		pcHPAdjLabel = new javax.swing.JLabel();
-		jLabel60 = new javax.swing.JLabel();
-		pcSystemShockLabel = new javax.swing.JLabel();
-		jLabel62 = new javax.swing.JLabel();
-		pcResurrectionSurvivalLabel = new javax.swing.JLabel();
-		pcCharismaLabel = new javax.swing.JLabel();
-		jLabel26 = new javax.swing.JLabel();
-		jLabel64 = new javax.swing.JLabel();
-		pcMaxHenchmenLabel = new javax.swing.JLabel();
-		jLabel66 = new javax.swing.JLabel();
-		pcLoyaltyLabel = new javax.swing.JLabel();
-		jLabel68 = new javax.swing.JLabel();
-		pcReactionAdjCharismaLabel = new javax.swing.JLabel();
+		jLabel49 = new javax.swing.JLabel();
+		pcWeightAllowanceLabel = new javax.swing.JLabel();
 		pcIntelligenceLabel = new javax.swing.JLabel();
-		pcWisdomLabel = new javax.swing.JLabel();
-		jLabel22 = new javax.swing.JLabel();
+		intLabel = new javax.swing.JLabel();
+		intPanel = new javax.swing.JPanel();
 		jLabel36 = new javax.swing.JLabel();
 		pcLanguagesLabel = new javax.swing.JLabel();
 		jLabel38 = new javax.swing.JLabel();
@@ -369,597 +350,411 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcMaxSpellsLabel = new javax.swing.JLabel();
 		pcBonusArcaneLabel = new javax.swing.JLabel();
 		pcBonusArcaneSpellsLabel = new javax.swing.JLabel();
-		jLabel23 = new javax.swing.JLabel();
+		pcWisdomLabel = new javax.swing.JLabel();
+		wisLabel = new javax.swing.JLabel();
+		wisPanel = new javax.swing.JPanel();
 		jLabel46 = new javax.swing.JLabel();
 		pcMagicalAdjLabel = new javax.swing.JLabel();
 		jLabel48 = new javax.swing.JLabel();
 		pcSpellFailureLabel = new javax.swing.JLabel();
 		pcBonusDivineLabel = new javax.swing.JLabel();
 		pcBonusSpellsDivineLabel = new javax.swing.JLabel();
-		jLabel49 = new javax.swing.JLabel();
-		pcWeightAllowanceLabel = new javax.swing.JLabel();
+		pcDexterityLabel = new javax.swing.JLabel();
+		dexLabel = new javax.swing.JLabel();
+		dexPanel = new javax.swing.JPanel();
+		jLabel52 = new javax.swing.JLabel();
+		pcReactionAdjLabel = new javax.swing.JLabel();
+		jLabel54 = new javax.swing.JLabel();
+		pcMissileAdjLabel = new javax.swing.JLabel();
+		jLabel56 = new javax.swing.JLabel();
+		pcDefenseAdjLabel = new javax.swing.JLabel();
+		pcConstitutionLabel = new javax.swing.JLabel();
+		conLabel = new javax.swing.JLabel();
+		conPanel = new javax.swing.JPanel();
+		jLabel58 = new javax.swing.JLabel();
+		pcHPAdjLabel = new javax.swing.JLabel();
+		jLabel60 = new javax.swing.JLabel();
+		pcSystemShockLabel = new javax.swing.JLabel();
+		jLabel62 = new javax.swing.JLabel();
+		pcResurrectionSurvivalLabel = new javax.swing.JLabel();
+		pcCharismaLabel = new javax.swing.JLabel();
+		chrLabel = new javax.swing.JLabel();
+		chrPanel = new javax.swing.JPanel();
+		jLabel64 = new javax.swing.JLabel();
+		pcMaxHenchmenLabel = new javax.swing.JLabel();
+		jLabel66 = new javax.swing.JLabel();
+		pcLoyaltyLabel = new javax.swing.JLabel();
+		jLabel68 = new javax.swing.JLabel();
+		pcReactionAdjCharismaLabel = new javax.swing.JLabel();
+		jPanel1 = new javax.swing.JPanel();
 
 		setLayout(new java.awt.BorderLayout());
 
 		AbilitiesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Abilities"));
+		AbilitiesPanel.setLayout(new java.awt.GridBagLayout());
 
 		pcStrengthLabel.setBackground(new java.awt.Color(255, 255, 255));
 		pcStrengthLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcStrengthLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcStrengthLabel, gridBagConstraints);
 
-		jLabel21.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel21.setText("Str");
+		strLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		strLabel.setText("Str");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(strLabel, gridBagConstraints);
+
+		strPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		pcPercentileStrLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcPercentileStrLabel.setText("00%");
 		pcPercentileStrLabel.setToolTipText("Percentile strength.");
+		strPanel.add(pcPercentileStrLabel);
 
 		jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel28.setText("HitAdj");
+		strPanel.add(jLabel28);
 
 		pcHitAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcHitAdjLabel.setText("999");
+		strPanel.add(pcHitAdjLabel);
 
 		jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel30.setText("DmgAdj");
+		strPanel.add(jLabel30);
 
 		pcDmgAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcDmgAdjLabel.setText("999");
+		strPanel.add(pcDmgAdjLabel);
 
 		jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel32.setText("OD");
 		jLabel32.setToolTipText("Open doors");
+		strPanel.add(jLabel32);
 
 		pcOpenDoorLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcOpenDoorLabel.setText("1-3(1d6)");
+		strPanel.add(pcOpenDoorLabel);
 
 		jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel34.setText("BB");
 		jLabel34.setToolTipText("Bend Bars/Lift Gates");
+		strPanel.add(jLabel34);
 
 		pcBendBarsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcBendBarsLabel.setText("999");
-
-		pcDexterityLabel.setBackground(new java.awt.Color(255, 255, 255));
-		pcDexterityLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcDexterityLabel.setText("00");
-
-		jLabel24.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel24.setText("Dex");
-
-		jLabel52.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel52.setText("Reaction");
-
-		pcReactionAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcReactionAdjLabel.setText("99");
-
-		jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel54.setText("MissileAdj");
-
-		pcMissileAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMissileAdjLabel.setText("99");
-
-		jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel56.setText("DefAdj");
-
-		pcDefenseAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcDefenseAdjLabel.setText("99");
-
-		pcConstitutionLabel.setBackground(new java.awt.Color(255, 255, 255));
-		pcConstitutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcConstitutionLabel.setText("00");
-
-		jLabel25.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel25.setText("Con");
-
-		jLabel58.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel58.setText("HPAdj");
-
-		pcHPAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcHPAdjLabel.setText("999");
-
-		jLabel60.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel60.setText("SS");
-
-		pcSystemShockLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSystemShockLabel.setText("999");
-
-		jLabel62.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel62.setText("RS");
-
-		pcResurrectionSurvivalLabel
-				.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcResurrectionSurvivalLabel.setText("999");
-
-		pcCharismaLabel.setBackground(new java.awt.Color(255, 255, 255));
-		pcCharismaLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcCharismaLabel.setText("00");
-
-		jLabel26.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel26.setText("Chr");
-
-		jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel64.setText("Max");
-
-		pcMaxHenchmenLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMaxHenchmenLabel.setText("99");
-
-		jLabel66.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel66.setText("LoyaltyBase");
-
-		pcLoyaltyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcLoyaltyLabel.setText("999");
-
-		jLabel68.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel68.setText("Reaction Adj");
-
-		pcReactionAdjCharismaLabel
-				.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcReactionAdjCharismaLabel.setText("999");
-
-		pcIntelligenceLabel.setBackground(new java.awt.Color(255, 255, 255));
-		pcIntelligenceLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcIntelligenceLabel.setText("00");
-
-		pcWisdomLabel.setBackground(new java.awt.Color(255, 255, 255));
-		pcWisdomLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcWisdomLabel.setText("00");
-
-		jLabel22.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel22.setText("Int");
-
-		jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel36.setText("Lang.");
-
-		pcLanguagesLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcLanguagesLabel.setText("99");
-
-		jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel38.setText("% KS");
-		jLabel38.setToolTipText("Percent to know/learn spell.");
-
-		pcKnowSpellLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcKnowSpellLabel.setText("999");
-
-		jLabel40.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel40.setText("Min");
-
-		pcMinSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMinSpellsLabel.setText("999");
-
-		jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel42.setText("Max");
-
-		pcMaxSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMaxSpellsLabel.setText("999");
-
-		pcBonusArcaneLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		pcBonusArcaneLabel.setText("Bonus");
-
-		pcBonusArcaneSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
-		pcBonusArcaneSpellsLabel
-				.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0,L8x0,L9x0");
-
-		jLabel23.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		jLabel23.setText("Wis");
-
-		jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel46.setText("MagAdj");
-
-		pcMagicalAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMagicalAdjLabel.setText("99");
-
-		jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel48.setText("Failure");
-
-		pcSpellFailureLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcSpellFailureLabel.setText("999");
-
-		pcBonusDivineLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		pcBonusDivineLabel.setText("Bonus");
-
-		pcBonusSpellsDivineLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
-		pcBonusSpellsDivineLabel.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0");
+		strPanel.add(pcBendBarsLabel);
 
 		jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel49.setText("Weight");
 		jLabel49.setToolTipText("Bend Bars/Lift Gates");
+		strPanel.add(jLabel49);
 
 		pcWeightAllowanceLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcWeightAllowanceLabel.setText("999");
+		strPanel.add(pcWeightAllowanceLabel);
 
-		javax.swing.GroupLayout AbilitiesPanelLayout = new javax.swing.GroupLayout(
-				AbilitiesPanel);
-		AbilitiesPanel.setLayout(AbilitiesPanelLayout);
-		AbilitiesPanelLayout
-				.setHorizontalGroup(AbilitiesPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								AbilitiesPanelLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																AbilitiesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcStrengthLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel21)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcPercentileStrLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel28)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcHitAdjLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel30)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcDmgAdjLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel32)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcOpenDoorLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel34)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcBendBarsLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel49)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcWeightAllowanceLabel))
-														.addGroup(
-																AbilitiesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcDexterityLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel24)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel52)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcReactionAdjLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel54)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcMissileAdjLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel56)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcDefenseAdjLabel))
-														.addGroup(
-																AbilitiesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcConstitutionLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel25)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel58)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcHPAdjLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel60)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcSystemShockLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel62)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcResurrectionSurvivalLabel))
-														.addGroup(
-																AbilitiesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcCharismaLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel26)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel64)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcMaxHenchmenLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel66)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcLoyaltyLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel68)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcReactionAdjCharismaLabel))
-														.addGroup(
-																AbilitiesPanelLayout
-																		.createSequentialGroup()
-																		.addGroup(
-																				AbilitiesPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addComponent(
-																								pcIntelligenceLabel)
-																						.addComponent(
-																								pcWisdomLabel))
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addGroup(
-																				AbilitiesPanelLayout
-																						.createParallelGroup(
-																								javax.swing.GroupLayout.Alignment.LEADING)
-																						.addGroup(
-																								AbilitiesPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												jLabel22)
-																										.addGap(8,
-																												8,
-																												8)
-																										.addComponent(
-																												jLabel36)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcLanguagesLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												jLabel38)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcKnowSpellLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												jLabel40)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcMinSpellsLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												jLabel42)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcMaxSpellsLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcBonusArcaneLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcBonusArcaneSpellsLabel))
-																						.addGroup(
-																								AbilitiesPanelLayout
-																										.createSequentialGroup()
-																										.addComponent(
-																												jLabel23)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												jLabel46)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcMagicalAdjLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												jLabel48)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcSpellFailureLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcBonusDivineLabel)
-																										.addPreferredGap(
-																												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																										.addComponent(
-																												pcBonusSpellsDivineLabel)))))
-										.addContainerGap(22, Short.MAX_VALUE)));
-		AbilitiesPanelLayout
-				.setVerticalGroup(AbilitiesPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								AbilitiesPanelLayout
-										.createSequentialGroup()
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcStrengthLabel)
-														.addComponent(jLabel21)
-														.addComponent(
-																pcPercentileStrLabel)
-														.addComponent(jLabel28)
-														.addComponent(
-																pcHitAdjLabel)
-														.addComponent(jLabel30)
-														.addComponent(
-																pcDmgAdjLabel)
-														.addComponent(jLabel32)
-														.addComponent(
-																pcOpenDoorLabel)
-														.addComponent(jLabel34)
-														.addComponent(
-																pcBendBarsLabel)
-														.addComponent(jLabel49)
-														.addComponent(
-																pcWeightAllowanceLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcIntelligenceLabel)
-														.addComponent(jLabel22)
-														.addComponent(jLabel36)
-														.addComponent(
-																pcLanguagesLabel)
-														.addComponent(jLabel38)
-														.addComponent(
-																pcKnowSpellLabel)
-														.addComponent(jLabel40)
-														.addComponent(
-																pcMinSpellsLabel)
-														.addComponent(jLabel42)
-														.addComponent(
-																pcMaxSpellsLabel)
-														.addComponent(
-																pcBonusArcaneLabel)
-														.addComponent(
-																pcBonusArcaneSpellsLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcWisdomLabel)
-														.addComponent(jLabel23)
-														.addComponent(jLabel46)
-														.addComponent(
-																pcMagicalAdjLabel)
-														.addComponent(jLabel48)
-														.addComponent(
-																pcSpellFailureLabel)
-														.addComponent(
-																pcBonusDivineLabel)
-														.addComponent(
-																pcBonusSpellsDivineLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcDexterityLabel)
-														.addComponent(jLabel24)
-														.addComponent(jLabel52)
-														.addComponent(
-																pcReactionAdjLabel)
-														.addComponent(jLabel54)
-														.addComponent(
-																pcMissileAdjLabel)
-														.addComponent(jLabel56)
-														.addComponent(
-																pcDefenseAdjLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcConstitutionLabel)
-														.addComponent(jLabel25)
-														.addComponent(jLabel58)
-														.addComponent(
-																pcHPAdjLabel)
-														.addComponent(jLabel60)
-														.addComponent(
-																pcSystemShockLabel)
-														.addComponent(jLabel62)
-														.addComponent(
-																pcResurrectionSurvivalLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												AbilitiesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcCharismaLabel)
-														.addComponent(jLabel26)
-														.addComponent(jLabel64)
-														.addComponent(
-																pcMaxHenchmenLabel)
-														.addComponent(jLabel66)
-														.addComponent(
-																pcLoyaltyLabel)
-														.addComponent(jLabel68)
-														.addComponent(
-																pcReactionAdjCharismaLabel))
-										.addContainerGap(20, Short.MAX_VALUE)));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(strPanel, gridBagConstraints);
+
+		pcIntelligenceLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcIntelligenceLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcIntelligenceLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcIntelligenceLabel, gridBagConstraints);
+
+		intLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		intLabel.setText("Int");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(intLabel, gridBagConstraints);
+
+		intPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel36.setText("Lang.");
+		intPanel.add(jLabel36);
+
+		pcLanguagesLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcLanguagesLabel.setText("99");
+		intPanel.add(pcLanguagesLabel);
+
+		jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel38.setText("% KS");
+		jLabel38.setToolTipText("Percent to know/learn spell.");
+		intPanel.add(jLabel38);
+
+		pcKnowSpellLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcKnowSpellLabel.setText("999");
+		intPanel.add(pcKnowSpellLabel);
+
+		jLabel40.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel40.setText("Min");
+		intPanel.add(jLabel40);
+
+		pcMinSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMinSpellsLabel.setText("999");
+		intPanel.add(pcMinSpellsLabel);
+
+		jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel42.setText("Max");
+		intPanel.add(jLabel42);
+
+		pcMaxSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMaxSpellsLabel.setText("999");
+		intPanel.add(pcMaxSpellsLabel);
+
+		pcBonusArcaneLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		pcBonusArcaneLabel.setText("Bonus");
+		intPanel.add(pcBonusArcaneLabel);
+
+		pcBonusArcaneSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
+		pcBonusArcaneSpellsLabel
+				.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0,L8x0,L9x0");
+		intPanel.add(pcBonusArcaneSpellsLabel);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(intPanel, gridBagConstraints);
+
+		pcWisdomLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcWisdomLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcWisdomLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcWisdomLabel, gridBagConstraints);
+
+		wisLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		wisLabel.setText("Wis");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(wisLabel, gridBagConstraints);
+
+		wisPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel46.setText("MagAdj");
+		wisPanel.add(jLabel46);
+
+		pcMagicalAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMagicalAdjLabel.setText("99");
+		wisPanel.add(pcMagicalAdjLabel);
+
+		jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel48.setText("Failure");
+		wisPanel.add(jLabel48);
+
+		pcSpellFailureLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSpellFailureLabel.setText("999");
+		wisPanel.add(pcSpellFailureLabel);
+
+		pcBonusDivineLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		pcBonusDivineLabel.setText("Bonus");
+		wisPanel.add(pcBonusDivineLabel);
+
+		pcBonusSpellsDivineLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
+		pcBonusSpellsDivineLabel.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0");
+		wisPanel.add(pcBonusSpellsDivineLabel);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(wisPanel, gridBagConstraints);
+
+		pcDexterityLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcDexterityLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcDexterityLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcDexterityLabel, gridBagConstraints);
+
+		dexLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		dexLabel.setText("Dex");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(dexLabel, gridBagConstraints);
+
+		dexPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		jLabel52.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel52.setText("Reaction");
+		dexPanel.add(jLabel52);
+
+		pcReactionAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcReactionAdjLabel.setText("99");
+		dexPanel.add(pcReactionAdjLabel);
+
+		jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel54.setText("MissileAdj");
+		dexPanel.add(jLabel54);
+
+		pcMissileAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMissileAdjLabel.setText("99");
+		dexPanel.add(pcMissileAdjLabel);
+
+		jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel56.setText("DefAdj");
+		dexPanel.add(jLabel56);
+
+		pcDefenseAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcDefenseAdjLabel.setText("99");
+		dexPanel.add(pcDefenseAdjLabel);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(dexPanel, gridBagConstraints);
+
+		pcConstitutionLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcConstitutionLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcConstitutionLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcConstitutionLabel, gridBagConstraints);
+
+		conLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		conLabel.setText("Con");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(conLabel, gridBagConstraints);
+
+		conPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		jLabel58.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel58.setText("HPAdj");
+		conPanel.add(jLabel58);
+
+		pcHPAdjLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcHPAdjLabel.setText("999");
+		conPanel.add(pcHPAdjLabel);
+
+		jLabel60.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel60.setText("SS");
+		conPanel.add(jLabel60);
+
+		pcSystemShockLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSystemShockLabel.setText("999");
+		conPanel.add(pcSystemShockLabel);
+
+		jLabel62.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel62.setText("RS");
+		conPanel.add(jLabel62);
+
+		pcResurrectionSurvivalLabel
+				.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcResurrectionSurvivalLabel.setText("999");
+		conPanel.add(pcResurrectionSurvivalLabel);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(conPanel, gridBagConstraints);
+
+		pcCharismaLabel.setBackground(new java.awt.Color(255, 255, 255));
+		pcCharismaLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcCharismaLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 5;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(pcCharismaLabel, gridBagConstraints);
+
+		chrLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
+		chrLabel.setText("Chr");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 5;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		AbilitiesPanel.add(chrLabel, gridBagConstraints);
+
+		chrPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel64.setText("Max");
+		chrPanel.add(jLabel64);
+
+		pcMaxHenchmenLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMaxHenchmenLabel.setText("99");
+		chrPanel.add(pcMaxHenchmenLabel);
+
+		jLabel66.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel66.setText("LoyaltyBase");
+		chrPanel.add(jLabel66);
+
+		pcLoyaltyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcLoyaltyLabel.setText("999");
+		chrPanel.add(pcLoyaltyLabel);
+
+		jLabel68.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel68.setText("Reaction Adj");
+		chrPanel.add(jLabel68);
+
+		pcReactionAdjCharismaLabel
+				.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcReactionAdjCharismaLabel.setText("999");
+		chrPanel.add(pcReactionAdjCharismaLabel);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 5;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		AbilitiesPanel.add(chrPanel, gridBagConstraints);
+
+		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(
+				jPanel1);
+		jPanel1.setLayout(jPanel1Layout);
+		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0,
+				Short.MAX_VALUE));
+		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0,
+				Short.MAX_VALUE));
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 6;
+		gridBagConstraints.weightx = 5.0;
+		gridBagConstraints.weighty = 5.0;
+		AbilitiesPanel.add(jPanel1, gridBagConstraints);
 
 		add(AbilitiesPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
@@ -968,12 +763,14 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
 	private javax.swing.JPanel AbilitiesPanel;
-	private javax.swing.JLabel jLabel21;
-	private javax.swing.JLabel jLabel22;
-	private javax.swing.JLabel jLabel23;
-	private javax.swing.JLabel jLabel24;
-	private javax.swing.JLabel jLabel25;
-	private javax.swing.JLabel jLabel26;
+	private javax.swing.JLabel chrLabel;
+	private javax.swing.JPanel chrPanel;
+	private javax.swing.JLabel conLabel;
+	private javax.swing.JPanel conPanel;
+	private javax.swing.JLabel dexLabel;
+	private javax.swing.JPanel dexPanel;
+	private javax.swing.JLabel intLabel;
+	private javax.swing.JPanel intPanel;
 	private javax.swing.JLabel jLabel28;
 	private javax.swing.JLabel jLabel30;
 	private javax.swing.JLabel jLabel32;
@@ -994,6 +791,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel64;
 	private javax.swing.JLabel jLabel66;
 	private javax.swing.JLabel jLabel68;
+	private javax.swing.JPanel jPanel1;
 	private javax.swing.JLabel pcBendBarsLabel;
 	private javax.swing.JLabel pcBonusArcaneLabel;
 	private javax.swing.JLabel pcBonusArcaneSpellsLabel;
@@ -1025,6 +823,10 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 	private javax.swing.JLabel pcSystemShockLabel;
 	private javax.swing.JLabel pcWeightAllowanceLabel;
 	private javax.swing.JLabel pcWisdomLabel;
+	private javax.swing.JLabel strLabel;
+	private javax.swing.JPanel strPanel;
+	private javax.swing.JLabel wisLabel;
+	private javax.swing.JPanel wisPanel;
 	// End of variables declaration//GEN-END:variables
 
 }

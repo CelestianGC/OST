@@ -34,6 +34,7 @@ import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_76_90;
 import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_91_99;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -75,24 +76,84 @@ public class Panel_Player_ArcaneSpells extends javax.swing.JPanel {
 				ost.abilityStatList);
 
 		arcaneSpellsPanel.removeAll();
+
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+
+		Color aColor = new Color(255, 204, 105);
+		Color bColor = new Color(255, 153, 51);
+
+		boolean bFlip = false;
+
+		JLabel sLevel = new JLabel(String.format("Level"));
+		JPanel pLevel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pLevel.setBackground(new Color(204, 204, 204));
+		sLevel.setToolTipText("Spell Level");
+		sLevel.setFont(fFont);
+		pLevel.add(sLevel);
+		arcaneSpellsPanel.add(pLevel);
+
 		for (int i = 0; i < arcaneBase.length; i++) {
-			JPanel arcanePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+			int base = arcaneBase[i];
+			if (base != 0) {
+				JLabel n = new JLabel(String.format("Level %d", (i + 1)));
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+				n.setToolTipText("Spell Level " + (i + 1));
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				arcaneSpellsPanel.add(p);
+			}
+		}
+
+		bFlip = false;
+		JLabel sSpells = new JLabel(String.format("Count"));
+		JPanel pSpells = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pSpells.setBackground(new Color(204, 204, 204));
+		sSpells.setToolTipText("Number of Spells Slots");
+		sSpells.setFont(fFont);
+		pSpells.add(sSpells);
+		arcaneSpellsPanel.add(pSpells);
+
+		for (int i = 0; i < arcaneBase.length; i++) {
 			int base = arcaneBase[i];
 			int adj = arcaneAdj[i];
 			int finalSkill = base + adj;
 			if (base != 0) {
-				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
-				JLabel name = new JLabel("L" + (i + 1));
-				name.setToolTipText(tooltip);
-				JLabel value = new JLabel(String.format("%d", finalSkill));
-				value.setToolTipText(tooltip);
-
-				arcanePanel.add(name);
-				arcanePanel.add(value);
-				arcaneSpellsPanel.add(arcanePanel);
+				JLabel n = new JLabel(String.format("%d", finalSkill));
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+				n.setToolTipText("Level " + (i + 1) + ": " + base + "+" + adj);
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				arcaneSpellsPanel.add(p);
 			}
 		}
-		arcaneSpellsPanel.revalidate();
+
+		//		for (int i = 0; i < arcaneBase.length; i++) {
+		//			JPanel arcanePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+		//			arcanePanel.setBorder(new javax.swing.border.LineBorder(
+		//					new java.awt.Color(0, 0, 0), 1, true));
+		//			int base = arcaneBase[i];
+		//			int adj = arcaneAdj[i];
+		//			int finalSkill = base + adj;
+		//			if (base != 0) {
+		//				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
+		//				JLabel name = new JLabel("L" + (i + 1));
+		//				arcanePanel.setToolTipText(tooltip);
+		//				name.setToolTipText(tooltip);
+		//				JLabel value = new JLabel(String.format("%d", finalSkill));
+		//				value.setToolTipText(tooltip);
+		//
+		//				arcanePanel.add(name);
+		//				arcanePanel.add(value);
+		//				arcaneSpellsPanel.add(arcanePanel);
+		//			}
+		//		}
+		//		arcaneSpellsPanel.revalidate();
 
 		repaint();
 	}
@@ -114,9 +175,8 @@ public class Panel_Player_ArcaneSpells extends javax.swing.JPanel {
 				.setBorder(javax.swing.BorderFactory.createTitledBorder(
 						new javax.swing.border.LineBorder(new java.awt.Color(0,
 								0, 0), 1, true), "Arcane Spells"));
-		arcaneSpellsPanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT));
-		add(arcaneSpellsPanel, java.awt.BorderLayout.CENTER);
+		arcaneSpellsPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
+		add(arcaneSpellsPanel, java.awt.BorderLayout.WEST);
 	}// </editor-fold>
 	//GEN-END:initComponents
 

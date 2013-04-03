@@ -88,24 +88,29 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				pcSaveBreathLabel.setText(String.format("%d", (aB - aJ)));
 				pcSaveBreathLabel
 						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				spellsSaveLabel.setText(SAVES[i]);
 				break;
 			case SAVE_DEATH:
 				pcSavePoisonLabel.setText(String.format("%d", (aB - aJ)));
 				pcSavePoisonLabel
 						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				deathSaveLabel.setText(SAVES[i]);
 				break;
 			case SAVE_POLY:
 				pcSavePolyLabel.setText(String.format("%d", (aB - aJ)));
 				pcSavePolyLabel.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				polySaveLabel.setText(SAVES[i]);
 				break;
 			case SAVE_ROD:
 				pcSaveRodLabel.setText(String.format("%d", (aB - aJ)));
 				pcSaveRodLabel.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				rodSaveLabel.setText(SAVES[i]);
 				break;
 			case SAVE_SPELL:
 				pcSaveSpellsLabel.setText(String.format("%d", (aB - aJ)));
 				pcSaveSpellsLabel
 						.setToolTipText(SAVES[i] + ":" + aB + "+" + aJ);
+				spellsSaveLabel.setText(SAVES[i]);
 				break;
 
 			default:
@@ -114,7 +119,6 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 			}
 
 		}
-
 
 		repaint();
 	}
@@ -127,167 +131,127 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 	//GEN-BEGIN:initComponents
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
+		java.awt.GridBagConstraints gridBagConstraints;
 
 		savesPanel = new javax.swing.JPanel();
 		pcSavePoisonLabel = new javax.swing.JLabel();
-		jLabel27 = new javax.swing.JLabel();
+		deathSaveLabel = new javax.swing.JLabel();
 		pcSavePolyLabel = new javax.swing.JLabel();
 		pcSaveRodLabel = new javax.swing.JLabel();
 		pcSaveBreathLabel = new javax.swing.JLabel();
 		pcSaveSpellsLabel = new javax.swing.JLabel();
-		jLabel37 = new javax.swing.JLabel();
-		jLabel39 = new javax.swing.JLabel();
-		jLabel41 = new javax.swing.JLabel();
-		jLabel43 = new javax.swing.JLabel();
+		polySaveLabel = new javax.swing.JLabel();
+		rodSaveLabel = new javax.swing.JLabel();
+		breathSaveLabel = new javax.swing.JLabel();
+		spellsSaveLabel = new javax.swing.JLabel();
+		jPanel1 = new javax.swing.JPanel();
 
 		setLayout(new java.awt.BorderLayout());
 
 		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Saves"));
+		savesPanel.setLayout(new java.awt.GridBagLayout());
 
 		pcSavePoisonLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSavePoisonLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
+		savesPanel.add(pcSavePoisonLabel, gridBagConstraints);
 
-		jLabel27.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel27.setText("Poison/Paralyzation");
+		deathSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		deathSaveLabel.setText("Poison/Paralyzation");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		savesPanel.add(deathSaveLabel, gridBagConstraints);
 
 		pcSavePolyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSavePolyLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
+		savesPanel.add(pcSavePolyLabel, gridBagConstraints);
 
 		pcSaveRodLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSaveRodLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
+		savesPanel.add(pcSaveRodLabel, gridBagConstraints);
 
 		pcSaveBreathLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSaveBreathLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
+		savesPanel.add(pcSaveBreathLabel, gridBagConstraints);
 
 		pcSaveSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSaveSpellsLabel.setText("00");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
+		savesPanel.add(pcSaveSpellsLabel, gridBagConstraints);
 
-		jLabel37.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel37.setText("Petrify/Poly");
+		polySaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		polySaveLabel.setText("Petrify/Poly");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		savesPanel.add(polySaveLabel, gridBagConstraints);
 
-		jLabel39.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel39.setText("Rod/Staff/Wand");
+		rodSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		rodSaveLabel.setText("Rod/Staff/Wand");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		savesPanel.add(rodSaveLabel, gridBagConstraints);
 
-		jLabel41.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel41.setText("Breath");
+		breathSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		breathSaveLabel.setText("Breath");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		savesPanel.add(breathSaveLabel, gridBagConstraints);
 
-		jLabel43.setFont(new java.awt.Font("Segoe UI", 2, 12));
-		jLabel43.setText("Spells");
+		spellsSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 12));
+		spellsSaveLabel.setText("Spells");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		savesPanel.add(spellsSaveLabel, gridBagConstraints);
 
-		javax.swing.GroupLayout savesPanelLayout = new javax.swing.GroupLayout(
-				savesPanel);
-		savesPanel.setLayout(savesPanelLayout);
-		savesPanelLayout
-				.setHorizontalGroup(savesPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								savesPanelLayout
-										.createSequentialGroup()
-										.addContainerGap()
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																savesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSavePoisonLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel27))
-														.addGroup(
-																savesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSavePolyLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel37))
-														.addGroup(
-																savesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveRodLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel39))
-														.addGroup(
-																savesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveBreathLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel41))
-														.addGroup(
-																savesPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				pcSaveSpellsLabel)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				jLabel43)))
-										.addContainerGap(18, Short.MAX_VALUE)));
-		savesPanelLayout
-				.setVerticalGroup(savesPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								savesPanelLayout
-										.createSequentialGroup()
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSavePoisonLabel)
-														.addComponent(jLabel27))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSavePolyLabel)
-														.addComponent(jLabel37))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveRodLabel)
-														.addComponent(jLabel39))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveBreathLabel)
-														.addComponent(jLabel41))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addGroup(
-												savesPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(
-																pcSaveSpellsLabel)
-														.addComponent(jLabel43))
-										.addContainerGap(26, Short.MAX_VALUE)));
+		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(
+				jPanel1);
+		jPanel1.setLayout(jPanel1Layout);
+		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0,
+				Short.MAX_VALUE));
+		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0,
+				Short.MAX_VALUE));
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridheight = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+		gridBagConstraints.weightx = 5.0;
+		gridBagConstraints.weighty = 5.0;
+		savesPanel.add(jPanel1, gridBagConstraints);
 
 		add(savesPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
@@ -295,17 +259,18 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
-	private javax.swing.JLabel jLabel27;
-	private javax.swing.JLabel jLabel37;
-	private javax.swing.JLabel jLabel39;
-	private javax.swing.JLabel jLabel41;
-	private javax.swing.JLabel jLabel43;
+	private javax.swing.JLabel breathSaveLabel;
+	private javax.swing.JLabel deathSaveLabel;
+	private javax.swing.JPanel jPanel1;
 	private javax.swing.JLabel pcSaveBreathLabel;
 	private javax.swing.JLabel pcSavePoisonLabel;
 	private javax.swing.JLabel pcSavePolyLabel;
 	private javax.swing.JLabel pcSaveRodLabel;
 	private javax.swing.JLabel pcSaveSpellsLabel;
+	private javax.swing.JLabel polySaveLabel;
+	private javax.swing.JLabel rodSaveLabel;
 	private javax.swing.JPanel savesPanel;
+	private javax.swing.JLabel spellsSaveLabel;
 	// End of variables declaration//GEN-END:variables
 
 }

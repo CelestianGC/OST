@@ -49,8 +49,6 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		//		setSize(windowSize.width - 4, windowSize.height - 4);
 
 		setLocationRelativeTo(null);
-
-
 	}
 
 	public void updatePanel(PlayerClass oPlayer) {
@@ -206,7 +204,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 	private void printMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		try {
-			ComponentPrinter.printComponent(mainPanel, pc.getName());
+			ComponentPrinter.printComponent(mainPanel, String.format("OST [%s]",pc.getName()));
 		} catch (PrinterException e) {
 			SimpleDialog.showError(e.getLocalizedMessage());
 			//e.printStackTrace();

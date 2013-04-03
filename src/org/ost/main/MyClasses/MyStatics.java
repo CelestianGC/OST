@@ -122,4 +122,9 @@ public class MyStatics {
 	public static final String[] AC_ABBREV = 
 		{"N","NS","R"};
 
+	public static final int GENERATION_HP_MAX = 0;
+	public static final int GENERATION_HP_80 = 1;
+	public static final int GENERATION_HP_AVG = 2;
+	public static final int GENERATION_HP_NORMAL = 3;
+	
 }

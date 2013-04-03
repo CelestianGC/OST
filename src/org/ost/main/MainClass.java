@@ -21,6 +21,7 @@ import javax.swing.UIManager;
 import org.ost.main.MyClasses.*;
 import org.ost.main.MyUtils.*;
 import static org.ost.main.MyUtils.Utils.*;
+import static org.ost.main.MyClasses.MyStatics.*;
 
 
 /**
@@ -40,10 +41,11 @@ public class MainClass implements Serializable {
 	public boolean initGroup = false;
 	public int initDice = 10;
 	
-	public boolean creatureHPMax = false;
-	public boolean creatureHP80 = false;
-	public boolean creatureHPAvg = false;
-	public boolean creatureHPNormal = true;
+//	public boolean creatureHPMax = false;
+//	public boolean creatureHP80 = false;
+//	public boolean creatureHPAvg = false;
+//	public boolean creatureHPNormal = true;
+	public int creatureHPType = GENERATION_HP_NORMAL;
 	
 	public Properties settings = new Properties();
 	static String settings_file = ".ost";
@@ -375,29 +377,26 @@ public class MainClass implements Serializable {
 		    	mainFrame.initDiceFormattedTextField.setValue(initDice);
 		    }
 		    
-		    if (settings.getProperty("creatureHPMax")!= null) { 
-		    	if (settings.getProperty("creatureHPMax").equalsIgnoreCase("ENABLED")) {
-		    		creatureHPMax = true;
-		    		dmConfigTab.tabCreatureConfig.creatureHPGenMAXRadioButton.setSelected(true);
-		    	}
-		    }
-		    if (settings.getProperty("creatureHP80")!= null) { 
-		    	if (settings.getProperty("creatureHP80").equalsIgnoreCase("ENABLED")) {
-		    		creatureHP80 = true;
+		    if (settings.getProperty("creatureHPType")!= null) {
+		    	try {
+			    	creatureHPType = Integer.parseInt(settings.getProperty("creatureHPType"));
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+		    	switch (creatureHPType) {
+				case GENERATION_HP_80:
 		    		dmConfigTab.tabCreatureConfig.creatureHPGen80PercentRadioButton.setSelected(true);
-		    	}
-		    }
-		    if (settings.getProperty("creatureHPAvg")!= null) { 
-		    	if (settings.getProperty("creatureHPAvg").equalsIgnoreCase("ENABLED")) {
-		    		creatureHPAvg = true;
+					break;
+				case GENERATION_HP_AVG:
 		    		dmConfigTab.tabCreatureConfig.creatureHPGenAverageRadioButton.setSelected(true);
-		    	}
-		    }
-		    if (settings.getProperty("creatureHPNormal")!= null) { 
-		    	if (settings.getProperty("creatureHPNormal").equalsIgnoreCase("ENABLED")) {
-		    		creatureHPNormal = true;
+					break;
+				case GENERATION_HP_MAX:
+		    		dmConfigTab.tabCreatureConfig.creatureHPGenMAXRadioButton.setSelected(true);
+					break;
+				default:
 		    		dmConfigTab.tabCreatureConfig.creatureHPGenNormalRadioButton.setSelected(true);
-		    	}
+					break;
+				}
 		    }
 
 		    
@@ -446,27 +445,8 @@ public class MainClass implements Serializable {
 	 */
 	public void saveSettings() {
 		// save creature hp generation mode
-		if (creatureHPMax)
-			settings.setProperty("creatureHPMax","ENABLED");
-		else
-			settings.remove("creatureHPMax");
-
-		if (creatureHP80)
-			settings.setProperty("creatureHP80","ENABLED");
-		else
-			settings.remove("creatureHP80");
-
-
-		if (creatureHPAvg)
-			settings.setProperty("creatureHPAvg","ENABLED");
-		else
-			settings.remove("creatureHPAvg");
-
-		if (creatureHPNormal)
-			settings.setProperty("creatureHPNormal","ENABLED");
-		else
-			settings.remove("creatureHPNormal");
-
+		settings.setProperty("creatureHPType",
+					String.format("%d", creatureHPType));
 		
 		// save initiative mode
 		if (initAscending)

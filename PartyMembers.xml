@@ -1,5 +1,573 @@
 <entries>
   <PlayerClass>
+    <name>Elendria</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>2204ce9b-2ed9-4ee2-ae70-89ebd80b7cbf</myID>
+    <hpMax>50</hpMax>
+    <hpCurrent>50</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Chaotic Good</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :49500
+character level up, new MaxHP:20 from 10
+character experience modified :49500
+character level up, new MaxHP:27 from 20
+character level up, new MaxHP:14 from 0
+character level up, new MaxHP:19 from 14
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:23 from 15
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:23 from 15
+character level up, new MaxHP:17 from 0
+character level up, new MaxHP:23 from 17
+character level up, new MaxHP:16 from 0
+character level up, new MaxHP:24 from 16
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:17 from 12
+character level up, new MaxHP:15 from 0
+character level up, new MaxHP:24 from 15
+character level up, new MaxHP:14 from 0
+character level up, new MaxHP:21 from 14
+character level up, new MaxHP:18 from 0
+character level up, new MaxHP:23 from 18
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:21 from 12
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:20 from 12
+character level up, new MaxHP:14 from 0
+character level up, new MaxHP:23 from 14
+character level up, new MaxHP:11 from 0
+character level up, new MaxHP:17 from 11
+character level up, new MaxHP:13 from 0
+character level up, new MaxHP:22 from 13
+character experience modified :2500000
+character level up, new MaxHP:40 from 22
+character experience modified :2500000
+character level up, new MaxHP:49 from 40
+character level up, new MaxHP:37 from 0
+character level up, new MaxHP:52 from 37
+character level up, new MaxHP:35 from 0
+character level up, new MaxHP:50 from 35
+character level up, new MaxHP:28 from 0
+character level up, new MaxHP:49 from 28
+character level up, new MaxHP:26 from 0
+character level up, new MaxHP:38 from 26
+character level up, new MaxHP:32 from 0
+character level up, new MaxHP:50 from 32
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Cleric</name>
+        <classID>62f6dddd-d685-4295-9bb1-490e06ec42f4</classID>
+        <experience>2549500</experience>
+        <level>19</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>1</int>
+          <int>9</int>
+          <int>13</int>
+          <int>17</int>
+          <int>20</int>
+          <int>21</int>
+          <int>5</int>
+          <int>13</int>
+          <int>18</int>
+          <int>22</int>
+          <int>28</int>
+          <int>29</int>
+          <int>5</int>
+          <int>8</int>
+          <int>13</int>
+          <int>20</int>
+          <int>27</int>
+          <int>31</int>
+          <int>8</int>
+          <int>14</int>
+          <int>16</int>
+          <int>20</int>
+          <int>23</int>
+          <int>30</int>
+          <int>6</int>
+          <int>11</int>
+          <int>19</int>
+          <int>26</int>
+          <int>33</int>
+          <int>35</int>
+          <int>4</int>
+          <int>9</int>
+          <int>12</int>
+          <int>17</int>
+          <int>25</int>
+          <int>33</int>
+          <int>5</int>
+          <int>6</int>
+          <int>11</int>
+          <int>15</int>
+          <int>23</int>
+          <int>25</int>
+          <int>5</int>
+          <int>12</int>
+          <int>18</int>
+          <int>20</int>
+          <int>27</int>
+          <int>31</int>
+          <int>8</int>
+          <int>16</int>
+          <int>19</int>
+          <int>20</int>
+          <int>27</int>
+          <int>29</int>
+          <int>8</int>
+          <int>15</int>
+          <int>20</int>
+          <int>25</int>
+          <int>29</int>
+          <int>36</int>
+          <int>2</int>
+          <int>3</int>
+          <int>5</int>
+          <int>12</int>
+          <int>16</int>
+          <int>24</int>
+          <int>7</int>
+          <int>8</int>
+          <int>15</int>
+          <int>17</int>
+          <int>21</int>
+          <int>25</int>
+          <int>7</int>
+          <int>14</int>
+          <int>19</int>
+          <int>25</int>
+          <int>26</int>
+          <int>28</int>
+          <int>1</int>
+          <int>8</int>
+          <int>11</int>
+          <int>19</int>
+          <int>22</int>
+          <int>23</int>
+          <int>4</int>
+          <int>7</int>
+          <int>9</int>
+          <int>15</int>
+          <int>18</int>
+          <int>26</int>
+          <int>8</int>
+          <int>15</int>
+          <int>16</int>
+          <int>18</int>
+          <int>20</int>
+          <int>22</int>
+          <int>24</int>
+          <int>26</int>
+          <int>28</int>
+          <int>30</int>
+          <int>32</int>
+          <int>34</int>
+          <int>36</int>
+          <int>5</int>
+          <int>13</int>
+          <int>20</int>
+          <int>21</int>
+          <int>28</int>
+          <int>33</int>
+          <int>38</int>
+          <int>46</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>62</int>
+          <int>64</int>
+          <int>66</int>
+          <int>68</int>
+          <int>70</int>
+          <int>72</int>
+          <int>74</int>
+          <int>7</int>
+          <int>14</int>
+          <int>15</int>
+          <int>21</int>
+          <int>28</int>
+          <int>35</int>
+          <int>41</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>59</int>
+          <int>61</int>
+          <int>63</int>
+          <int>65</int>
+          <int>67</int>
+          <int>69</int>
+          <int>71</int>
+          <int>4</int>
+          <int>9</int>
+          <int>14</int>
+          <int>17</int>
+          <int>24</int>
+          <int>26</int>
+          <int>28</int>
+          <int>30</int>
+          <int>37</int>
+          <int>39</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>6</int>
+          <int>9</int>
+          <int>11</int>
+          <int>16</int>
+          <int>23</int>
+          <int>26</int>
+          <int>27</int>
+          <int>31</int>
+          <int>33</int>
+          <int>35</int>
+          <int>37</int>
+          <int>39</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>1</int>
+          <int>4</int>
+          <int>6</int>
+          <int>9</int>
+          <int>17</int>
+          <int>25</int>
+          <int>30</int>
+          <int>37</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>59</int>
+          <int>61</int>
+          <int>63</int>
+          <int>65</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Magic-User</name>
+        <classID>49af0d05-917a-47e6-b11e-4a2883ecd360</classID>
+        <experience>2549500</experience>
+        <level>16</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>1</int>
+          <int>3</int>
+          <int>4</int>
+          <int>7</int>
+          <int>11</int>
+          <int>15</int>
+          <int>1</int>
+          <int>2</int>
+          <int>4</int>
+          <int>6</int>
+          <int>7</int>
+          <int>11</int>
+          <int>4</int>
+          <int>8</int>
+          <int>9</int>
+          <int>13</int>
+          <int>15</int>
+          <int>16</int>
+          <int>1</int>
+          <int>5</int>
+          <int>8</int>
+          <int>10</int>
+          <int>13</int>
+          <int>17</int>
+          <int>1</int>
+          <int>4</int>
+          <int>7</int>
+          <int>8</int>
+          <int>10</int>
+          <int>13</int>
+          <int>1</int>
+          <int>5</int>
+          <int>9</int>
+          <int>11</int>
+          <int>15</int>
+          <int>16</int>
+          <int>1</int>
+          <int>3</int>
+          <int>5</int>
+          <int>6</int>
+          <int>7</int>
+          <int>10</int>
+          <int>4</int>
+          <int>8</int>
+          <int>9</int>
+          <int>13</int>
+          <int>16</int>
+          <int>19</int>
+          <int>3</int>
+          <int>6</int>
+          <int>8</int>
+          <int>11</int>
+          <int>14</int>
+          <int>15</int>
+          <int>1</int>
+          <int>3</int>
+          <int>5</int>
+          <int>7</int>
+          <int>8</int>
+          <int>10</int>
+          <int>2</int>
+          <int>5</int>
+          <int>9</int>
+          <int>13</int>
+          <int>16</int>
+          <int>19</int>
+          <int>1</int>
+          <int>5</int>
+          <int>9</int>
+          <int>12</int>
+          <int>16</int>
+          <int>17</int>
+          <int>3</int>
+          <int>6</int>
+          <int>9</int>
+          <int>12</int>
+          <int>15</int>
+          <int>19</int>
+          <int>1</int>
+          <int>2</int>
+          <int>5</int>
+          <int>8</int>
+          <int>9</int>
+          <int>12</int>
+          <int>2</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>18</int>
+          <int>4</int>
+          <int>6</int>
+          <int>8</int>
+          <int>9</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>18</int>
+          <int>2</int>
+          <int>5</int>
+          <int>6</int>
+          <int>7</int>
+          <int>11</int>
+          <int>15</int>
+          <int>16</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>2</int>
+          <int>3</int>
+          <int>6</int>
+          <int>7</int>
+          <int>11</int>
+          <int>15</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>3</int>
+          <int>7</int>
+          <int>9</int>
+          <int>13</int>
+          <int>16</int>
+          <int>20</int>
+          <int>24</int>
+          <int>27</int>
+          <int>31</int>
+          <int>34</int>
+          <int>38</int>
+          <int>39</int>
+          <int>40</int>
+          <int>41</int>
+          <int>42</int>
+          <int>43</int>
+          <int>3</int>
+          <int>4</int>
+          <int>6</int>
+          <int>7</int>
+          <int>9</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>16</int>
+          <int>18</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>1</int>
+          <int>2</int>
+          <int>4</int>
+          <int>6</int>
+          <int>10</int>
+          <int>14</int>
+          <int>17</int>
+          <int>21</int>
+          <int>23</int>
+          <int>27</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Elf</name>
+      <raceID>1ced0a60-bbae-4956-b6d5-4a9f4bd6b5fe</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>16</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>14</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>2</int>
+      <int>5</int>
+      <int>5</int>
+      <int>8</int>
+      <int>6</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>6</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
     <name>Granite</name>
     <namePlayer>John Smith</namePlayer>
     <myID>8ff21418-57de-4ff2-9942-0a69e949d23d</myID>
@@ -258,6 +826,182 @@ character level up, new MaxHP:61 from 0
     <genderType>0</genderType>
   </PlayerClass>
   <PlayerClass>
+    <name>Jack Spring</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>0c6f6076-514b-4fd7-b1be-857b63d0f609</myID>
+    <hpMax>37</hpMax>
+    <hpCurrent>37</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Neutral Evil</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :44500
+character level up, new MaxHP:25 from 10
+character experience modified :44500
+character level up, new MaxHP:40 from 25
+character level up, new MaxHP:19 from 0
+character level up, new MaxHP:37 from 19
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Fighter</name>
+        <classID>167fc092-1fa4-450f-9e44-b0baaab45aae</classID>
+        <experience>44500</experience>
+        <level>6</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>9</int>
+          <int>12</int>
+          <int>14</int>
+          <int>20</int>
+          <int>22</int>
+          <int>31</int>
+          <int>8</int>
+          <int>13</int>
+          <int>19</int>
+          <int>25</int>
+          <int>31</int>
+          <int>39</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Thief</name>
+        <classID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</classID>
+        <experience>44500</experience>
+        <level>7</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>5</int>
+          <int>10</int>
+          <int>16</int>
+          <int>17</int>
+          <int>23</int>
+          <int>25</int>
+          <int>31</int>
+          <int>4</int>
+          <int>7</int>
+          <int>10</int>
+          <int>18</int>
+          <int>24</int>
+          <int>28</int>
+          <int>36</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Dwarf</name>
+      <raceID>e0b03f37-7d17-4e0b-8ff9-bd773bde9696</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>17</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>11</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>11</int>
+      <int>11</int>
+      <int>12</int>
+      <int>13</int>
+      <int>13</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>5</int>
+      <int>0</int>
+      <int>5</int>
+      <int>0</int>
+      <int>5</int>
+    </mySaveAdjustments>
+    <myAlignmentType>5</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
     <name>Marry</name>
     <namePlayer>John Smith</namePlayer>
     <myID>62664602-b628-40fa-919b-936fa5f51c12</myID>
@@ -443,6 +1187,253 @@ character level up, new MaxHP:62 from 53
       <int>2</int>
       <int>2</int>
       <int>2</int>
+    </mySaveAdjustments>
+    <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Morendo</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>8d325f6e-d595-44b6-b08f-f336d68491f3</myID>
+    <hpMax>40</hpMax>
+    <hpCurrent>40</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Lawful Good</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :166666
+character level up, new MaxHP:18 from 10
+character experience modified :166666
+character level up, new MaxHP:23 from 18
+character experience modified :166666
+character level up, new MaxHP:32 from 23
+character level up, new MaxHP:20 from 0
+character level up, new MaxHP:25 from 20
+character level up, new MaxHP:39 from 25
+character level up, new MaxHP:18 from 0
+character level up, new MaxHP:25 from 18
+character level up, new MaxHP:40 from 25
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Fighter</name>
+        <classID>167fc092-1fa4-450f-9e44-b0baaab45aae</classID>
+        <experience>166666</experience>
+        <level>8</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>4</int>
+          <int>8</int>
+          <int>15</int>
+          <int>17</int>
+          <int>21</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>4</int>
+          <int>13</int>
+          <int>22</int>
+          <int>26</int>
+          <int>33</int>
+          <int>42</int>
+          <int>52</int>
+          <int>61</int>
+          <int>6</int>
+          <int>15</int>
+          <int>25</int>
+          <int>28</int>
+          <int>29</int>
+          <int>36</int>
+          <int>46</int>
+          <int>55</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Magic-User</name>
+        <classID>49af0d05-917a-47e6-b11e-4a2883ecd360</classID>
+        <experience>166666</experience>
+        <level>9</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>1</int>
+          <int>4</int>
+          <int>5</int>
+          <int>9</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>16</int>
+          <int>17</int>
+          <int>1</int>
+          <int>2</int>
+          <int>5</int>
+          <int>6</int>
+          <int>8</int>
+          <int>12</int>
+          <int>15</int>
+          <int>16</int>
+          <int>17</int>
+          <int>2</int>
+          <int>4</int>
+          <int>5</int>
+          <int>9</int>
+          <int>12</int>
+          <int>15</int>
+          <int>17</int>
+          <int>19</int>
+          <int>22</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Thief</name>
+        <classID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</classID>
+        <experience>166666</experience>
+        <level>10</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>1</int>
+          <int>7</int>
+          <int>9</int>
+          <int>10</int>
+          <int>16</int>
+          <int>17</int>
+          <int>22</int>
+          <int>24</int>
+          <int>26</int>
+          <int>29</int>
+          <int>6</int>
+          <int>9</int>
+          <int>15</int>
+          <int>17</int>
+          <int>22</int>
+          <int>27</int>
+          <int>31</int>
+          <int>35</int>
+          <int>39</int>
+          <int>43</int>
+          <int>5</int>
+          <int>9</int>
+          <int>15</int>
+          <int>18</int>
+          <int>22</int>
+          <int>27</int>
+          <int>33</int>
+          <int>36</int>
+          <int>40</int>
+          <int>46</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Elf</name>
+      <raceID>1ced0a60-bbae-4956-b6d5-4a9f4bd6b5fe</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>14</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>16</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>10</int>
+      <int>10</int>
+      <int>9</int>
+      <int>12</int>
+      <int>10</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>
@@ -929,6 +1920,464 @@ character level up, new MaxHP:23 from 7
       <int>0</int>
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Weasle Gummitch</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>60741f75-79f8-4627-a81c-0c6d4a697e53</myID>
+    <hpMax>33</hpMax>
+    <hpCurrent>33</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Neutral Good</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :27777
+character level up, new MaxHP:16 from 10
+character experience modified :27777
+character level up, new MaxHP:28 from 16
+character level up, new MaxHP:7 from 0
+character level up, new MaxHP:16 from 7
+character level up, new MaxHP:2 from 0
+character level up, new MaxHP:4 from 2
+character level up, new MaxHP:4 from 0
+character level up, new MaxHP:5 from 4
+character experience modified :13888
+character level up, new MaxHP:10 from 5
+character experience modified :13888
+character level up, new MaxHP:13 from 10
+character level up, new MaxHP:11 from 0
+character level up, new MaxHP:18 from 11
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:18 from 12
+character experience modified :13888
+character level up, new MaxHP:20 from 18
+character experience modified :13888
+character level up, new MaxHP:20 from 20
+character level up, new MaxHP:14 from 0
+character level up, new MaxHP:21 from 14
+character level up, new MaxHP:11 from 0
+character level up, new MaxHP:17 from 11
+character level up, new MaxHP:12 from 0
+character level up, new MaxHP:18 from 12
+character level up, new MaxHP:16 from 0
+character level up, new MaxHP:20 from 16
+character experience modified :171717
+character level up, new MaxHP:29 from 20
+character experience modified :171717
+character level up, new MaxHP:33 from 29
+character level up, new MaxHP:18 from 0
+character level up, new MaxHP:28 from 18
+character level up, new MaxHP:21 from 0
+character level up, new MaxHP:33 from 21
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Fighter</name>
+        <classID>167fc092-1fa4-450f-9e44-b0baaab45aae</classID>
+        <experience>199493</experience>
+        <level>8</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>4</int>
+          <int>9</int>
+          <int>2</int>
+          <int>6</int>
+          <int>10</int>
+          <int>4</int>
+          <int>13</int>
+          <int>18</int>
+          <int>23</int>
+          <int>4</int>
+          <int>13</int>
+          <int>16</int>
+          <int>25</int>
+          <int>4</int>
+          <int>2</int>
+          <int>8</int>
+          <int>15</int>
+          <int>19</int>
+          <int>28</int>
+          <int>1</int>
+          <int>11</int>
+          <int>19</int>
+          <int>21</int>
+          <int>22</int>
+          <int>7</int>
+          <int>11</int>
+          <int>15</int>
+          <int>22</int>
+          <int>25</int>
+          <int>7</int>
+          <int>9</int>
+          <int>17</int>
+          <int>25</int>
+          <int>32</int>
+          <int>10</int>
+          <int>14</int>
+          <int>19</int>
+          <int>3</int>
+          <int>11</int>
+          <int>12</int>
+          <int>16</int>
+          <int>19</int>
+          <int>27</int>
+          <int>29</int>
+          <int>36</int>
+          <int>5</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>22</int>
+          <int>23</int>
+          <int>33</int>
+          <int>43</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Magic-User</name>
+        <classID>49af0d05-917a-47e6-b11e-4a2883ecd360</classID>
+        <experience>199493</experience>
+        <level>9</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>4</int>
+          <int>3</int>
+          <int>2</int>
+          <int>3</int>
+          <int>6</int>
+          <int>3</int>
+          <int>7</int>
+          <int>10</int>
+          <int>14</int>
+          <int>3</int>
+          <int>5</int>
+          <int>9</int>
+          <int>13</int>
+          <int>1</int>
+          <int>3</int>
+          <int>6</int>
+          <int>10</int>
+          <int>13</int>
+          <int>15</int>
+          <int>3</int>
+          <int>5</int>
+          <int>8</int>
+          <int>9</int>
+          <int>13</int>
+          <int>3</int>
+          <int>7</int>
+          <int>9</int>
+          <int>12</int>
+          <int>13</int>
+          <int>1</int>
+          <int>2</int>
+          <int>6</int>
+          <int>7</int>
+          <int>8</int>
+          <int>1</int>
+          <int>5</int>
+          <int>6</int>
+          <int>8</int>
+          <int>2</int>
+          <int>5</int>
+          <int>7</int>
+          <int>10</int>
+          <int>14</int>
+          <int>16</int>
+          <int>18</int>
+          <int>20</int>
+          <int>21</int>
+          <int>3</int>
+          <int>7</int>
+          <int>11</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>18</int>
+          <int>21</int>
+          <int>24</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Elf</name>
+      <raceID>1ced0a60-bbae-4956-b6d5-4a9f4bd6b5fe</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>14</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>16</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>11</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>10</int>
+      <int>11</int>
+      <int>9</int>
+      <int>12</int>
+      <int>10</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>3</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
+    <name>Whilm Worn</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>a0867ca9-0962-4bc0-8654-4ea7e1f9146f</myID>
+    <hpMax>30</hpMax>
+    <hpCurrent>30</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Chaotic Good</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :9800
+character level up, new MaxHP:21 from 10
+character experience modified :5000
+character level up, new MaxHP:25 from 21
+character level up, new MaxHP:18 from 0
+character level up, new MaxHP:18 from 0
+character level up, new MaxHP:27 from 0
+character level up, new MaxHP:30 from 0
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Thief</name>
+        <classID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</classID>
+        <experience>14800</experience>
+        <level>5</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>2</int>
+          <int>7</int>
+          <int>8</int>
+          <int>11</int>
+          <int>4</int>
+          <int>5</int>
+          <int>11</int>
+          <int>15</int>
+          <int>16</int>
+          <int>18</int>
+          <int>6</int>
+          <int>7</int>
+          <int>10</int>
+          <int>15</int>
+          <int>18</int>
+          <int>6</int>
+          <int>11</int>
+          <int>17</int>
+          <int>21</int>
+          <int>27</int>
+          <int>7</int>
+          <int>14</int>
+          <int>22</int>
+          <int>26</int>
+          <int>30</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Human</name>
+      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>11</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>16</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>11</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>12</int>
+      <int>11</int>
+      <int>12</int>
+      <int>15</int>
+      <int>13</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>6</myAlignmentType>
     <genderType>0</genderType>
   </PlayerClass>
 </entries>

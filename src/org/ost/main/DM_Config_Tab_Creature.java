@@ -1090,10 +1090,14 @@ public class DM_Config_Tab_Creature extends javax.swing.JPanel {
 	 * set system vars for generating health, saves in settings file
 	 */
 	private void setHitpointGenerationVars() {
-		ost.creatureHPMax = creatureHPGenMAXRadioButton.isSelected();
-		ost.creatureHP80 = creatureHPGen80PercentRadioButton.isSelected();
-		ost.creatureHPAvg = creatureHPGenAverageRadioButton.isSelected();
-		ost.creatureHPNormal = creatureHPGenNormalRadioButton.isSelected();
+		if (creatureHPGenMAXRadioButton.isSelected())
+			ost.creatureHPType = GENERATION_HP_MAX;
+		else if (creatureHPGen80PercentRadioButton.isSelected())
+			ost.creatureHPType = GENERATION_HP_80;
+		else if (creatureHPGenAverageRadioButton.isSelected())
+			ost.creatureHPType = GENERATION_HP_AVG;
+		else
+			ost.creatureHPType = GENERATION_HP_NORMAL;
 	}
 
 	private void creatureSearchTextFieldKeyReleased(java.awt.event.KeyEvent evt) {

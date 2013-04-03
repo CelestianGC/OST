@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.5" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="pcCombatMatrixTable">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="cc" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="10" style="0"/>
+            </Property>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="21" rowCount="1">
+                <Column editable="false" title="AC10" type="java.lang.Integer"/>
+                <Column editable="false" title="AC9" type="java.lang.Integer"/>
+                <Column editable="false" title="AC8" type="java.lang.Integer"/>
+                <Column editable="false" title="AC7" type="java.lang.Integer"/>
+                <Column editable="false" title="AC6" type="java.lang.Integer"/>
+                <Column editable="false" title="AC5" type="java.lang.Integer"/>
+                <Column editable="false" title="AC4" type="java.lang.Integer"/>
+                <Column editable="false" title="AC3" type="java.lang.Integer"/>
+                <Column editable="false" title="AC2" type="java.lang.Integer"/>
+                <Column editable="false" title="AC1" type="java.lang.Integer"/>
+                <Column editable="false" title="AC0" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-1" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-2" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-3" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-4" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-5" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-6" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-7" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-8" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-9" type="java.lang.Integer"/>
+                <Column editable="false" title="AC-10" type="java.lang.Integer"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
@@ -9,7 +55,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,0,-84,0,0,2,-41"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,0,-104,0,0,2,-8"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -28,46 +74,40 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-          <BorderConstraints direction="Center"/>
+          <BorderConstraints direction="Before"/>
         </Constraint>
       </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcArmorClassLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcArmorClassShieldlessLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcArmorClassRearLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcCurrentHPLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcMaxHPLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="492" max="32767" attributes="0"/>
-                          <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pcTHACOLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="pcMaxHPLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pcCurrentHPLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pcArmorClassLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pcArmorClassShieldlessLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pcArmorClassRearLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="213" max="32767" attributes="0"/>
+                  <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pcTHACOLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <Component id="jScrollPane1" alignment="1" pref="717" max="32767" attributes="0"/>
+              <Component id="attackMatrixPanel" alignment="0" pref="750" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -80,19 +120,16 @@
                       <Component id="pcArmorClassShieldlessLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcArmorClassRearLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcCurrentHPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcMaxHPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcCurrentHPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcTHACOLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="62" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="attackMatrixPanel" min="-2" pref="42" max="-2" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -157,7 +194,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel45">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Max"/>
+            <Property name="text" type="java.lang.String" value="MaxHP"/>
             <Property name="toolTipText" type="java.lang.String" value="Maximum hitpoints."/>
           </Properties>
         </Component>
@@ -183,49 +220,19 @@
             <Property name="toolTipText" type="java.lang.String" value="To hit armor class 0 value."/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
+        <Container class="javax.swing.JPanel" name="attackMatrixPanel">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+          </Properties>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JTable" name="pcCombatMatrixTable">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="66" green="cc" red="ff" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="10" style="0"/>
-                </Property>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="21" rowCount="1">
-                    <Column editable="false" title="AC10" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC9" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC8" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC7" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC6" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC5" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC4" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC3" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC2" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC1" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC0" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-1" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-2" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-3" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-4" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-5" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-6" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-7" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-8" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-9" type="java.lang.Integer"/>
-                    <Column editable="false" title="AC-10" type="java.lang.Integer"/>
-                  </Table>
-                </Property>
-              </Properties>
-            </Component>
-          </SubComponents>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="0"/>
+            <Property name="horizontalGap" type="int" value="1"/>
+            <Property name="rows" type="int" value="2"/>
+            <Property name="verticalGap" type="int" value="1"/>
+          </Layout>
         </Container>
       </SubComponents>
     </Container>

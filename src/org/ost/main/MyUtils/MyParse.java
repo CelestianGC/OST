@@ -1,6 +1,7 @@
 package org.ost.main.MyUtils;
 
 import java.util.ArrayList;
+import static org.ost.main.MyClasses.MyStatics.*;
 import java.util.List;
 import java.util.regex.*;
 
@@ -159,19 +160,38 @@ public class MyParse {
 			maxHP = numHitpoints;
 		} else {
 			// roll health, max, 80%, average or normally
-			if (ost.creatureHPMax)
-				maxHP = numDice*numFaces;
-			else if (ost.creatureHP80)
+			switch (ost.creatureHPType) {
+			case GENERATION_HP_80:
 				maxHP = (int) (numDice*numFaces*0.8);
-			else if (ost.creatureHPAvg) {	// figure out average, 4.5 but calc 
+				break;
+			case GENERATION_HP_AVG: {	// figure out average, 4.5 but calc 
 				int nData = 0;				// incase we allow hd size change later
 				for(int i=1;i<=numFaces;i++)
 					nData += i;
 				int nAverage = nData/numFaces;
 				maxHP = nAverage*numDice;
-			} else {
-				maxHP = MyRandomClass.rollDice(numDice, numFaces);
+			} break;
+			case GENERATION_HP_MAX:
+				maxHP = numDice*numFaces;
+				break;
+			default:
+				maxHP = MyRandomClass.rollDice(numDice, numFaces);				
+				break;
 			}
+//			if (ost.creatureHPMax)
+//				maxHP = numDice*numFaces;
+//			else if (ost.creatureHP80)
+//				maxHP = (int) (numDice*numFaces*0.8);
+//			else if (ost.creatureHPAvg) {	// figure out average, 4.5 but calc 
+//				int nData = 0;				// incase we allow hd size change later
+//				for(int i=1;i<=numFaces;i++)
+//					nData += i;
+//				int nAverage = nData/numFaces;
+//				maxHP = nAverage*numDice;
+//			} else {
+//				maxHP = MyRandomClass.rollDice(numDice, numFaces);
+//			}
+			
 //			// if use max just calc max health otherwise roll
 //			maxHP = useMax?numDice*numFaces : MyRandomClass.rollDice(numDice, numFaces);
 			

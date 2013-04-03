@@ -6,7 +6,11 @@
 
 package org.ost.main;
 
-import java.awt.GridLayout;
+import static org.ost.main.MyClasses.MyStatics.DEFAULT_FONT;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -42,24 +46,84 @@ public class Panel_Player_DivineSpells extends javax.swing.JPanel {
 				ost.abilityStatList);
 
 		divineSpellsPanel.removeAll();
+
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+
+		Color aColor = new Color(255, 204, 105);
+		Color bColor = new Color(255, 153, 51);
+
+		boolean bFlip = false;
+
+		JLabel sLevel = new JLabel(String.format("Level"));
+		JPanel pLevel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pLevel.setBackground(new Color(204, 204, 204));
+		sLevel.setToolTipText("Spell Level");
+		sLevel.setFont(fFont);
+		pLevel.add(sLevel);
+		divineSpellsPanel.add(pLevel);
+
 		for (int i = 0; i < divineBase.length; i++) {
-			JPanel divinePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+			int base = divineBase[i];
+			if (base != 0) {
+				JLabel n = new JLabel(String.format("Level %d", (i + 1)));
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+				n.setToolTipText("Spell Level " + (i + 1));
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				divineSpellsPanel.add(p);
+			}
+		}
+
+		bFlip = false;
+		JLabel sSpells = new JLabel(String.format("Count"));
+		JPanel pSpells = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pSpells.setBackground(new Color(204, 204, 204));
+		sSpells.setToolTipText("Number of Spells Slots");
+		sSpells.setFont(fFont);
+		pSpells.add(sSpells);
+		divineSpellsPanel.add(pSpells);
+
+		for (int i = 0; i < divineBase.length; i++) {
 			int base = divineBase[i];
 			int adj = divineAdj[i];
 			int finalSkill = base + adj;
 			if (base != 0) {
-				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
-				JLabel name = new JLabel("L" + (i + 1));
-				name.setToolTipText(tooltip);
-				JLabel value = new JLabel(String.format("%d", finalSkill));
-				value.setToolTipText(tooltip);
-
-				divinePanel.add(name);
-				divinePanel.add(value);
-				divineSpellsPanel.add(divinePanel);
+				JLabel n = new JLabel(String.format("%d", finalSkill));
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+				n.setToolTipText("Level " + (i + 1) + ": " + base + "+" + adj);
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				divineSpellsPanel.add(p);
 			}
 		}
-		divineSpellsPanel.revalidate();
+
+		//		for (int i = 0; i < divineBase.length; i++) {
+		//			JPanel divinePanel = new JPanel(new GridLayout(2, 0, 1, 1));
+		//			divinePanel.setBorder(new javax.swing.border.LineBorder(
+		//					new java.awt.Color(0, 0, 0), 1, true));
+		//			int base = divineBase[i];
+		//			int adj = divineAdj[i];
+		//			int finalSkill = base + adj;
+		//			if (base != 0) {
+		//				String tooltip = "Level " + (i + 1) + ": " + base + "+" + adj;
+		//				divinePanel.setToolTipText(tooltip);
+		//				JLabel name = new JLabel("L" + (i + 1));
+		//				name.setToolTipText(tooltip);
+		//				JLabel value = new JLabel(String.format("%d", finalSkill));
+		//				value.setToolTipText(tooltip);
+		//
+		//				divinePanel.add(name);
+		//				divinePanel.add(value);
+		//				divineSpellsPanel.add(divinePanel);
+		//			}
+		//		}
+		//		divineSpellsPanel.revalidate();
 
 		repaint();
 	}
@@ -81,9 +145,8 @@ public class Panel_Player_DivineSpells extends javax.swing.JPanel {
 				.setBorder(javax.swing.BorderFactory.createTitledBorder(
 						new javax.swing.border.LineBorder(new java.awt.Color(0,
 								0, 0), 1, true), "Divine Spells"));
-		divineSpellsPanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT));
-		add(divineSpellsPanel, java.awt.BorderLayout.CENTER);
+		divineSpellsPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
+		add(divineSpellsPanel, java.awt.BorderLayout.WEST);
 	}// </editor-fold>
 	//GEN-END:initComponents
 

@@ -19,6 +19,7 @@ import static org.ost.main.MyClasses.MyStatics.*;
 import java.awt.Component;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
@@ -658,8 +659,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 										.createSequentialGroup()
 										.addGap(14, 14, 14)
 										.addComponent(playerEditButton)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(testButton)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
@@ -674,6 +674,10 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 								javax.swing.GroupLayout.Alignment.TRAILING,
 								javax.swing.GroupLayout.DEFAULT_SIZE, 483,
 								Short.MAX_VALUE));
+
+		mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { playerEditButton, testButton });
+
 		mainPanelLayout
 				.setVerticalGroup(mainPanelLayout
 						.createParallelGroup(
@@ -923,33 +927,42 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 	private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-//		JDialog dDialog = new JDialog();
-//		dDialog.add(new Panel_Player(ost, currentPlayer));
-//
-//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-//		Dimension windowSize = ost.mainFrame.getSize();
-//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-//		//		setLocation(windowX, windowY);
-//		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
-//		dDialog.setLocationRelativeTo(ost.mainFrame);
-//		//dDialog.setSize(480, 360);
-//
-//		dDialog.setVisible(true);
-		
-		Frame_Character_Sheet 
-			fSheet = new Frame_Character_Sheet(ost, currentPlayer);
-		fSheet.setVisible(true);
+		PlayerClass oP = (PlayerClass) playerList.getSelectedValue();
+		if (oP != null) {
+			currentPlayer = oP;
+
+			//		JDialog dDialog = new JDialog();
+			//		dDialog.add(new Panel_Player(ost, currentPlayer));
+			//
+			//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+			//		Dimension windowSize = ost.mainFrame.getSize();
+			//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+			//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+			//		//		setLocation(windowX, windowY);
+			//		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
+			//		dDialog.setLocationRelativeTo(ost.mainFrame);
+			//		//dDialog.setSize(480, 360);
+			//
+			//		dDialog.setVisible(true);
+
+			Frame_Character_Sheet fSheet = new Frame_Character_Sheet(ost,
+					currentPlayer);
+			fSheet.setVisible(true);
+		}
 	}
 
 	private void playerEditButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		Option_AskFor_Character dDialog = new Option_AskFor_Character(
-				ost.mainFrame, true, ost, currentPlayer);
-		dDialog.setVisible(true);
+		PlayerClass oP = (PlayerClass) playerList.getSelectedValue();
+		if (oP != null) {
+			currentPlayer = oP;
+			Option_AskFor_Character dDialog = new Option_AskFor_Character(
+					ost.mainFrame, true, ost, currentPlayer);
+			dDialog.setVisible(true);
 
-		// when edit done reload character to panel to update w/changes
-		updatePlayerPanel();
+			// when edit done reload character to panel to update w/changes
+			updatePlayerPanel();
+		}
 	}
 
 	private void gearRemoveItButtonActionPerformed(
@@ -1331,12 +1344,13 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	}
 
 	private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		Object[] oList = playerList.getSelectedValues();
-		if (oList.length > 0) {
-			PlayerClass oC = (PlayerClass) oList[0];
+		//Object[] oList = playerList.getSelectedValues();
+		List aList = playerList.getSelectedValuesList();
+		if (aList.size() > 0) {
+			PlayerClass oC = (PlayerClass) aList.get(0);
 			boolean bDelete = false;
 
-			if (oList.length > 1)
+			if (aList.size() > 1)
 				bDelete = SimpleDialog.AskYN(deleteButton,
 						"Delete ALL selected players?");
 			else
@@ -1344,8 +1358,9 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 						"Are you sure you want to delete " + oC.getName());
 
 			if (bDelete) {
-				for (int i = 0; i < oList.length; i++) {
-					PlayerClass oP = (PlayerClass) oList[i];
+				for (Object oO : aList) {
+					//for (int i = 0; i < oList.length; i++) {
+					PlayerClass oP = (PlayerClass) oO;
 					ost.playerList.getContent().remove(oP);
 					if (ost.fightingPlayerList.contains(oP)) {
 						ost.fightingPlayerList.remove(oP);
@@ -1525,7 +1540,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	 */
 	private void updatePlayerPanel() {
 		// string fields
-		
+
 		if (currentPlayer != null && currentPlayer.getName() != null) {
 
 			if (playerDetailsPanel == null) {
@@ -1536,8 +1551,8 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				gridBagConstraints.gridx = 0;
 				gridBagConstraints.gridy = 1;
 				gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-				
-				playerTabPanel.add(playerDetailsPanel,gridBagConstraints);
+
+				playerTabPanel.add(playerDetailsPanel, gridBagConstraints);
 				playerTabPanel.validate();
 			} else
 				playerDetailsPanel.updatePanel(currentPlayer);
@@ -1549,7 +1564,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				gridBagConstraints.gridx = 0;
 				gridBagConstraints.gridy = 2;
 				gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-				playerTabPanel.add(playerSavesPanel,gridBagConstraints);
+				playerTabPanel.add(playerSavesPanel, gridBagConstraints);
 				playerTabPanel.validate();
 			} else
 				playerSavesPanel.updatePanel(currentPlayer);
@@ -1562,7 +1577,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 				gridBagConstraints.gridx = 0;
 				gridBagConstraints.gridy = 3;
 				gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-				playerTabPanel.add(playerAbilitiesPanel,gridBagConstraints);
+				playerTabPanel.add(playerAbilitiesPanel, gridBagConstraints);
 				playerTabPanel.validate();
 			} else
 				playerAbilitiesPanel.updatePanel(currentPlayer);
@@ -1585,6 +1600,8 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			//			playerStatsPanel.revalidate();
 			//			playerStatsPanel.repaint();
 		}
+
+		playerList.repaint();
 	}// end updatePlayerPanel
 
 	/**

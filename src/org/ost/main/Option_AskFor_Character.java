@@ -512,6 +512,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+		levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -525,6 +526,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
 		}
 	}
 
@@ -596,12 +598,15 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		currentCharacter.setHpCurrent(0);
 		currentCharacter.setHpMax(0);
 
+		updateFromCurrentValues();
 		//TODO update panels
 		updatePanels();
 	}
 
 	private void raceButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
+		updateFromCurrentValues();
+
 		ArrayList<String> cList = new ArrayList<String>();
 		cList.add(currentCharacter.myRace.getRaceID());
 
@@ -715,6 +720,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		raceLabel.setText(oR != null ? oR.getName() : "");
 		
 		levelLabel.setText(currentCharacter.getMyLevelName(ost.characterClassList));
+		
 	}
 
 	//GEN-BEGIN:variables
