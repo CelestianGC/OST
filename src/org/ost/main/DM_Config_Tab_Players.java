@@ -628,6 +628,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		buttonsPanel.add(addEncounterButton, gridBagConstraints);
 
+		playerEditButton.setBackground(new java.awt.Color(204, 204, 204));
 		playerEditButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		playerEditButton.setText("edit");
 		playerEditButton.setToolTipText("Edit character.");
@@ -637,6 +638,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			}
 		});
 
+		testButton.setBackground(new java.awt.Color(204, 204, 204));
 		testButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		testButton.setText("sheet");
 		testButton.setToolTipText("View a character sheet. *test*");

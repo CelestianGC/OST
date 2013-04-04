@@ -463,6 +463,15 @@ public class Option_AskFor_CharacterClass extends javax.swing.JDialog {
 		currentClass.setLevelMax((int) maxLevelSpinner.getValue());
 		currentClass.setGameVersion(gameVersionComboBox.getSelectedItem()
 				.toString());
+
+		// if more levels than max we trim them off
+		if (currentClass.getLevelDetails().size() 
+				> currentClass.getLevelMax()) {
+			for(int i = currentClass.getLevelMax();i<currentClass.getLevelDetails().size();i++)
+				currentClass.getLevelDetails().remove(currentClass.getLevelDetails().size()-1);
+			
+		}
+
 	}
 
 	private void updatePanels() {

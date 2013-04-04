@@ -52,6 +52,8 @@ public class Option_Set_Race extends javax.swing.JDialog {
 		updateList(extraListList, eAbilities);
 
 		setLocationRelativeTo(parent);
+		
+		pack();
 	}
 
 	private void updateList(JList list, RaceList aList) {

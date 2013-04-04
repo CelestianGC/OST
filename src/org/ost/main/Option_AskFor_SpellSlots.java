@@ -8,6 +8,7 @@ package org.ost.main;
 
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
@@ -23,7 +24,8 @@ public class Option_AskFor_SpellSlots extends javax.swing.JDialog {
 
 	/** Creates new form Option_AskFor_AbilityScores */
 	public Option_AskFor_SpellSlots(java.awt.Frame parent, boolean modal,
-			MainClass ost, String sTitle, int[] spellPerLevel, String[] spellNames, String[] spellNameAbbrev) {
+			MainClass ost, String sTitle, int[] spellPerLevel,
+			String[] spellNames, String[] spellNameAbbrev) {
 		super(parent, modal);
 		this.ost = ost;
 		initComponents();
@@ -39,10 +41,11 @@ public class Option_AskFor_SpellSlots extends javax.swing.JDialog {
 		spellsSpinner = new ArrayList<JSpinner>();
 
 		updatePanel(spellPerLevel, spellNames, spellNameAbbrev);
-		
+
 		setLocationRelativeTo(parent);
-		setSize(400, 300);
-		
+		//setSize(400, 300);
+		pack();
+
 	}
 
 	/** This method is called from within the constructor to
@@ -71,6 +74,7 @@ public class Option_AskFor_SpellSlots extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
+		mainPanel.setLayout(new java.awt.GridLayout(0, 1));
 		getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
 		buttonsPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -119,7 +123,8 @@ public class Option_AskFor_SpellSlots extends javax.swing.JDialog {
 	void updatePanel(int[] spells, String[] spellNames, String[] spellNameAbbrev) {
 		//		int i = MAX_ABILITIES;
 		Font fFont = new Font("Segoe UI", 0, 12);
-		FlowLayout lFlow = new FlowLayout(FlowLayout.LEFT, 0, 1);
+		FlowLayout lFlow = new FlowLayout(FlowLayout.CENTER, 0, 1);
+		GridLayout lGrid = new GridLayout(1, 2);
 
 		currentSpells = spells;
 
@@ -131,7 +136,7 @@ public class Option_AskFor_SpellSlots extends javax.swing.JDialog {
 			pPanel.setToolTipText(spellNames[i]);
 			pPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 					new javax.swing.border.LineBorder(new java.awt.Color(0, 0,
-							0), 1, true), spellNameAbbrev[i],
+							0), 1, true), spellNames[i],
 					javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 					javax.swing.border.TitledBorder.ABOVE_BOTTOM, fFont));
 			JSpinner oJ = new JSpinner();

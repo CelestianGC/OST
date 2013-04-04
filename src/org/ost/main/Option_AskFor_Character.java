@@ -43,9 +43,11 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		modelBoxGender = new DefaultComboBoxModel<>(GENDERS);
 		genderComboBox.setModel(modelBoxGender);
 
-		updatePanels();
-		setSize(580, 410);
 		setLocationRelativeTo(parent);
+
+		updatePanels();
+		//setSize(580, 410);
+		pack();
 	}
 
 	//GEN-BEGIN:initComponents

@@ -69,7 +69,9 @@ public class Option_AskFor_AbilityScores extends javax.swing.JDialog {
 		updatePanel(cAbilities);
 
 		setLocationRelativeTo(parent);
-		setSize(300, 520);
+		
+		pack();
+		//setSize(300, 520);
 
 	}
 

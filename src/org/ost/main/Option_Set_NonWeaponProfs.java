@@ -51,6 +51,8 @@ public class Option_Set_NonWeaponProfs extends javax.swing.JDialog {
 		updateList(extraListList, eList);
 
 		setLocationRelativeTo(parent);
+		
+		pack();
 	}
 
 	private void updateList(JList list, NonWeaponProfList aList) {

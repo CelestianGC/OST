@@ -52,7 +52,8 @@ public class Option_AskFor_Alignment extends javax.swing.JDialog {
 		updatePanel(currentAlignment);
 
 		setLocationRelativeTo(parent);
-		setSize(400, 220);
+		//setSize(400, 220);
+		pack();
 	}
 
 	/** This method is called from within the constructor to

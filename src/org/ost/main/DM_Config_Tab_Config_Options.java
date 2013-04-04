@@ -425,15 +425,6 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 	private void abilityScoresButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension windowSize = mainPanel.getSize();
-
-		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-		optionAbilityScores.setLocation(windowX, windowY);
-		optionAbilityScores
-				.setSize(windowSize.width - 4, windowSize.height - 4);
-		//optionAbilityScores.setLocationRelativeTo(null);
 		optionAbilityScores.setVisible(true);
 	}
 

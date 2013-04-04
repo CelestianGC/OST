@@ -11,6 +11,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 	private CharacterClass.LevelClass currentLevel;
 	private java.awt.Frame parent;
 	private VerifyIntegerPositive verifier;
+	private int previousLevel;
 
 	/** Creates new form Option_AskFor_ClassLevels */
 	public Option_AskFor_ClassLevels(java.awt.Frame parent, boolean modal,
@@ -121,10 +123,11 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		jLabel10 = new javax.swing.JLabel();
 		atkPerRound2Spinner = new javax.swing.JSpinner();
 		matrixPanel = new javax.swing.JPanel();
-		jLabel14 = new javax.swing.JLabel();
+		thacoTextLabel = new javax.swing.JLabel();
 		jScrollPane3 = new javax.swing.JScrollPane();
 		attackMatrixTable = new javax.swing.JTable();
 		thacoField = new javax.swing.JFormattedTextField();
+		autoMatrixLabel = new javax.swing.JLabel();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -370,10 +373,8 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 
 		jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel3.setText("base");
-		jLabel3.setEnabled(false);
 		armorClassPanel.add(jLabel3);
 
-		acBaseField.setEnabled(false);
 		acBaseField.setPreferredSize(new java.awt.Dimension(25, 22));
 		armorClassPanel.add(acBaseField);
 
@@ -608,9 +609,10 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
 
-		jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel14.setText("THACO");
-		jLabel14.setToolTipText("To-hit armor rating 0 if using the THACO mode.\n");
+		thacoTextLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		thacoTextLabel.setText("THACO");
+		thacoTextLabel
+				.setToolTipText("To-hit armor rating 0 if using the THACO mode.\n");
 
 		attackMatrixTable.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		attackMatrixTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -637,7 +639,24 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		jScrollPane3.setViewportView(attackMatrixTable);
 
 		thacoField.setText("20");
-		thacoField.setPreferredSize(new java.awt.Dimension(25, 22));
+
+		autoMatrixLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		autoMatrixLabel.setText("auto");
+		autoMatrixLabel
+				.setToolTipText("Generate table based on THACO value for auto fill.");
+		autoMatrixLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				autoMatrixLabelMouseClicked(evt);
+			}
+
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				autoMatrixLabelMouseEntered(evt);
+			}
+
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				autoMatrixLabelMouseExited(evt);
+			}
+		});
 
 		javax.swing.GroupLayout matrixPanelLayout = new javax.swing.GroupLayout(
 				matrixPanel);
@@ -649,18 +668,42 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 						.addGroup(
 								matrixPanelLayout
 										.createSequentialGroup()
-										.addComponent(jLabel14)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(
-												thacoField,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addGap(31, 31, 31))
-						.addComponent(jScrollPane3,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 103,
-								Short.MAX_VALUE));
+										.addContainerGap()
+										.addGroup(
+												matrixPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																javax.swing.GroupLayout.Alignment.TRAILING,
+																matrixPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				thacoTextLabel)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				thacoField,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				6,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(6,
+																				6,
+																				6)
+																		.addComponent(
+																				autoMatrixLabel))
+														.addGroup(
+																matrixPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jScrollPane3,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				97,
+																				Short.MAX_VALUE)
+																		.addContainerGap()))));
+
+		matrixPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { thacoField, thacoTextLabel });
+
 		matrixPanelLayout
 				.setVerticalGroup(matrixPanelLayout
 						.createParallelGroup(
@@ -672,20 +715,21 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 												matrixPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel14)
 														.addComponent(
 																thacoField,
 																javax.swing.GroupLayout.PREFERRED_SIZE,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE))
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																autoMatrixLabel)
+														.addComponent(
+																thacoTextLabel))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addComponent(
 												jScrollPane3,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												374,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addContainerGap()));
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												392, Short.MAX_VALUE)));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
@@ -716,7 +760,27 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 
 		pack();
 	}// </editor-fold>
-	//GEN-END:initComponents
+		//GEN-END:initComponents
+
+	private void autoMatrixLabelMouseClicked(java.awt.event.MouseEvent evt) {
+		// TODO add your handling code here:
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			int nThaco = MyParse.formattedIntegerParse(thacoField.getText());
+			int nStart = nThaco - 10;
+			for (int i = 0;i<MAX_MATRIX;i++) 
+				attackMatrixTable.setValueAt(nStart+i, i, 1);
+		}
+	}
+
+	private void autoMatrixLabelMouseExited(java.awt.event.MouseEvent evt) {
+		// TODO add your handling code here:
+		autoMatrixLabel.setForeground(Color.black);
+	}
+
+	private void autoMatrixLabelMouseEntered(java.awt.event.MouseEvent evt) {
+		// TODO add your handling code here:
+		autoMatrixLabel.setForeground(Color.green);
+	}
 
 	private void abilityScoreAdjustmentButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
@@ -925,20 +989,29 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 			attackMatrixTable.setValueAt(atkRollNeeded, i, 1);
 		}
 
+		previousLevel = nLevel;
 	}
 
 	private void getCurrentValues() {
 
 		try {
+			currentLevel.setLevel(previousLevel);
+
 			currentLevel.setExpReq(MyParse.formattedIntegerParse(expReqField
 					.getText()));
 
-			currentLevel.setThaco((int) thacoField.getValue());
-			currentLevel.setAc((int) acAdjustmentField.getValue());
-			currentLevel.setAcBase((int) acBaseField.getValue());
-			currentLevel.setHitDiceNumber((int) hdNumberField.getValue());
-			currentLevel.setHitDiceSize((int) hdSizeField.getValue());
-			currentLevel.setHitPointBonus((int) hdBonusField.getValue());
+			currentLevel.setThaco(MyParse.formattedIntegerParse(thacoField
+					.getText()));
+			currentLevel.setAc(MyParse.formattedIntegerParse(acAdjustmentField
+					.getText()));
+			currentLevel.setAcBase(MyParse.formattedIntegerParse(acBaseField
+					.getText()));
+			currentLevel.setHitDiceNumber(MyParse
+					.formattedIntegerParse(hdNumberField.getText()));
+			currentLevel.setHitDiceSize(MyParse
+					.formattedIntegerParse(hdSizeField.getText()));
+			currentLevel.setHitPointBonus(MyParse
+					.formattedIntegerParse(hdBonusField.getText()));
 			currentLevel.setWeaponProfAdditional((int) weaponProfsSpinner
 					.getValue());
 			currentLevel.setNonWeaponProfAdditional((int) nonWeaponProfSpinner
@@ -1034,6 +1107,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 	private javax.swing.JSpinner atkPerRound2Spinner;
 	private javax.swing.JTable attackMatrixTable;
 	private javax.swing.JPanel attacksPanel;
+	private javax.swing.JLabel autoMatrixLabel;
 	private javax.swing.JPanel buttonPanel;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JFormattedTextField expReqField;
@@ -1048,7 +1122,6 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 	private javax.swing.JLabel jLabel11;
 	private javax.swing.JLabel jLabel12;
 	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel14;
 	private javax.swing.JLabel jLabel2;
 	private javax.swing.JLabel jLabel3;
 	private javax.swing.JLabel jLabel4;
@@ -1080,6 +1153,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 	private javax.swing.JButton spellsDivineButton;
 	private javax.swing.JPanel spellsPerLevelPanel;
 	private javax.swing.JFormattedTextField thacoField;
+	private javax.swing.JLabel thacoTextLabel;
 	private javax.swing.JButton thiefSkillAdjustmentButton;
 	private javax.swing.JButton thiefSkillsButton;
 	private javax.swing.JSpinner weaponProfsSpinner;

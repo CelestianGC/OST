@@ -50,7 +50,8 @@ public class Option_AskFor_Saves extends javax.swing.JDialog {
 		updatePanel(saves, savesUsed);
 
 		setLocationRelativeTo(parent);
-		setSize(400, 300);
+		//setSize(400, 300);
+		pack();
 	}
 
 	/** This method is called from within the constructor to

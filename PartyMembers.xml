@@ -1439,6 +1439,176 @@ character level up, new MaxHP:40 from 25
     <genderType>0</genderType>
   </PlayerClass>
   <PlayerClass>
+    <name>Pow Pung</name>
+    <namePlayer>John Smith</namePlayer>
+    <myID>c5e3cbff-33ed-4b5e-8ee8-c5ba0daa2eef</myID>
+    <hpMax>24</hpMax>
+    <hpCurrent>24</hpCurrent>
+    <armorRatings>
+      <string>10</string>
+      <string>10</string>
+      <string>10</string>
+    </armorRatings>
+    <moveRate>12</moveRate>
+    <magicResistance>None</magicResistance>
+    <specialDefense></specialDefense>
+    <specialAttacks></specialAttacks>
+    <alignment>Lawful Neutral</alignment>
+    <gear/>
+    <pcClass>Fighter</pcClass>
+    <pcLevel>1</pcLevel>
+    <notes></notes>
+    <log>character experience modified :67000
+character level up, new MaxHP:28 from 10
+character level up, new MaxHP:14 from 0
+character level up, new MaxHP:20 from 0
+character level up, new MaxHP:22 from 0
+character level up, new MaxHP:24 from 0
+</log>
+    <saveLast></saveLast>
+    <tag></tag>
+    <initRoll>0</initRoll>
+    <states/>
+    <fightingList/>
+    <myClass>
+      <PCClass>
+        <name>Monk</name>
+        <classID>eee8f26c-45f9-498a-8f5b-f9db894e3563</classID>
+        <experience>67000</experience>
+        <level>6</level>
+        <primaryClass>false</primaryClass>
+        <hdRolls>
+          <int>5</int>
+          <int>9</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>18</int>
+          <int>3</int>
+          <int>5</int>
+          <int>6</int>
+          <int>10</int>
+          <int>13</int>
+          <int>14</int>
+          <int>7</int>
+          <int>8</int>
+          <int>12</int>
+          <int>14</int>
+          <int>18</int>
+          <int>20</int>
+          <int>7</int>
+          <int>10</int>
+          <int>13</int>
+          <int>15</int>
+          <int>17</int>
+          <int>22</int>
+          <int>6</int>
+          <int>10</int>
+          <int>13</int>
+          <int>18</int>
+          <int>20</int>
+          <int>24</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+    </myClass>
+    <myRace>
+      <name>Human</name>
+      <raceID>3ea47bf3-d59c-4874-aec0-5b73551307f1</raceID>
+      <outer-class reference="../.."/>
+    </myRace>
+    <myWeaponProfs/>
+    <myNonWeaponProfs/>
+    <myAbilityScores>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>9</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>18</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>15</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>12</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+      <AbilityScoreClass>
+        <score>11</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>0</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </AbilityScoreClass>
+    </myAbilityScores>
+    <mySaves>
+      <int>12</int>
+      <int>11</int>
+      <int>12</int>
+      <int>15</int>
+      <int>13</int>
+    </mySaves>
+    <mySaveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mySaveAdjustments>
+    <myAlignmentType>1</myAlignmentType>
+    <genderType>0</genderType>
+  </PlayerClass>
+  <PlayerClass>
     <name>Rupert</name>
     <namePlayer>John Smith</namePlayer>
     <myID>18bf93c3-e33d-40e1-99e7-2c1729ee93f6</myID>

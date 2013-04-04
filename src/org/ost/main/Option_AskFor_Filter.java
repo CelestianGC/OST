@@ -45,6 +45,8 @@ public class Option_AskFor_Filter extends javax.swing.JDialog {
 		//setSize(400, 300);
 
 		updatePanel(types);
+		
+		pack();
 	}
 
 	/** This method is called from within the constructor to

@@ -37,9 +37,11 @@ public class Option_AskFor_Description extends javax.swing.JDialog {
 				new java.awt.Font("Segoe UI", 0, 12)));
 
 		setLocationRelativeTo(parent);
-		setSize(400, 300);
+		//setSize(400, 300);
 
 		updatePanel(newDescription);
+		
+		pack();
 	}
 
 	/** This method is called from within the constructor to

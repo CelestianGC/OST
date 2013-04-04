@@ -8,6 +8,9 @@ package org.ost.main;
 
 import static org.ost.main.MyClasses.MyStatics.*;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 import javax.swing.ButtonModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
@@ -31,19 +34,33 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		this.ost = ost;
 		initComponents();
 
+		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//		Dimension windowSize = mainPanel.getSize();
+		//
+		//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//		setLocation(windowX, windowY);
+		//		setSize(windowSize.width - 4, windowSize.height - 4);
+		//optionAbilityScores.setLocationRelativeTo(null);
+
+		setLocationRelativeTo(parent);
+
 		strengthPercentComboBox.setModel(new DefaultComboBoxModel<>(
 				STRENGTH_PERCENTILE));
 
 		buildAbilityTables();
 		// force first time to load things up
 		strengthRadioButtonActionPerformed(null);
-	}
+
+		pack();
+}
 
 	//GEN-BEGIN:initComponents
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 		java.awt.GridBagConstraints gridBagConstraints;
 
+		abilitySelectbuttonGroup = new javax.swing.ButtonGroup();
 		strengthPanel = new javax.swing.JPanel();
 		strengthScoreSpinner = new javax.swing.JSpinner();
 		strengthHitBonusLabel = new javax.swing.JLabel();
@@ -57,7 +74,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		strengthBendBarsLabel = new javax.swing.JLabel();
 		strengthBendBarsSpinner = new javax.swing.JSpinner();
 		strengthNumDiceOpenLabelSpinner = new javax.swing.JSpinner();
-		jPanel1 = new javax.swing.JPanel();
 		jPanel3 = new javax.swing.JPanel();
 		strengthSizeDiceOpenSpinner = new javax.swing.JSpinner();
 		strengthSizeDiceOpenLabel = new javax.swing.JLabel();
@@ -65,7 +81,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		jPanel4 = new javax.swing.JPanel();
 		strengthScoreLabel = new javax.swing.JLabel();
 		strengthPercentComboBox = new javax.swing.JComboBox();
-		abilitySelectbuttonGroup = new javax.swing.ButtonGroup();
 		intelligencePanel = new javax.swing.JPanel();
 		intelligenceScoreLabel = new javax.swing.JLabel();
 		intelligenceScoreSpinner = new javax.swing.JSpinner();
@@ -77,7 +92,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		intelligenceMaxSpellsSpinner1 = new javax.swing.JSpinner();
 		intelligenceLanguagesLabel1 = new javax.swing.JLabel();
 		intelligenceLanguagesSpinner = new javax.swing.JSpinner();
-		jPanel2 = new javax.swing.JPanel();
 		jPanel5 = new javax.swing.JPanel();
 		intSpellBonus1Panel = new javax.swing.JPanel();
 		intSpellBonusLevel1Spinner = new javax.swing.JSpinner();
@@ -104,7 +118,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		wisdomMagicAdjustSpinner = new javax.swing.JSpinner();
 		wisdomSpellFailureLabel = new javax.swing.JLabel();
 		wisdomSpellFailureSpinner = new javax.swing.JSpinner();
-		jPanel6 = new javax.swing.JPanel();
 		jPanel7 = new javax.swing.JPanel();
 		intSpellBonus1Panel9 = new javax.swing.JPanel();
 		wisSpellBonusLevel1Spinner1 = new javax.swing.JSpinner();
@@ -129,7 +142,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		dexterityDefensiveAdjustmentSpinner = new javax.swing.JSpinner();
 		dexterityReactionAdjustmentLabel = new javax.swing.JLabel();
 		dexterityreactionAdjustmentSpinner = new javax.swing.JSpinner();
-		jPanel8 = new javax.swing.JPanel();
 		jPanel9 = new javax.swing.JPanel();
 		dexPP1Panel16 = new javax.swing.JPanel();
 		dexPPSpinner = new javax.swing.JSpinner();
@@ -160,7 +172,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		constitutionSystemShockSpinner = new javax.swing.JSpinner();
 		constitutionResurrectionSurvivelLabel = new javax.swing.JLabel();
 		constitutionResurrectionSurvivelSpinner = new javax.swing.JSpinner();
-		jPanel10 = new javax.swing.JPanel();
 		constitutionHitPointAdjustmentBarbarianSpinner1 = new javax.swing.JSpinner();
 		constitutionHitpointAdjustmentBarbarianLabel = new javax.swing.JLabel();
 		constitutionIronSpinner = new javax.swing.JSpinner();
@@ -176,7 +187,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		charismaLoyaltyBaseSpinner = new javax.swing.JSpinner();
 		charismaReactionAdjLabel = new javax.swing.JLabel();
 		charismaReactionAdjSpinner = new javax.swing.JSpinner();
-		jPanel11 = new javax.swing.JPanel();
 		mainPanel = new javax.swing.JPanel();
 		selectPanel = new javax.swing.JPanel();
 		strengthRadioButton = new javax.swing.JRadioButton();
@@ -196,126 +206,49 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
-		strengthPanel.setLayout(new java.awt.GridBagLayout());
 
 		strengthScoreSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0,
 				25, 1));
+		strengthScoreSpinner.setPreferredSize(new java.awt.Dimension(56, 22));
 		strengthScoreSpinner
 				.addChangeListener(new javax.swing.event.ChangeListener() {
 					public void stateChanged(javax.swing.event.ChangeEvent evt) {
 						strengthScoreSpinnerStateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthScoreSpinner, gridBagConstraints);
 
 		strengthHitBonusLabel.setText("to-hit adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		strengthPanel.add(strengthHitBonusLabel, gridBagConstraints);
 
 		strengthHitBonusSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				-99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthHitBonusSpinner, gridBagConstraints);
 
 		strengthDamageAdjLabel.setText("damage adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		strengthPanel.add(strengthDamageAdjLabel, gridBagConstraints);
 
 		strengthDamageAdjSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				-99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthDamageAdjSpinner, gridBagConstraints);
 
 		strengthWeightAllowanceLabel.setText("weight allowance");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		strengthPanel.add(strengthWeightAllowanceLabel, gridBagConstraints);
 
 		strengthWeightAllowanceSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 99000, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthWeightAllowanceSpinner, gridBagConstraints);
+		strengthWeightAllowanceSpinner.setPreferredSize(new java.awt.Dimension(
+				56, 22));
 
 		strengthMinOpenDoorLabel.setText("open door");
 		strengthMinOpenDoorLabel.setToolTipText("Minimum roll to open a door.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		strengthPanel.add(strengthMinOpenDoorLabel, gridBagConstraints);
 
 		strengthMinOpenDoor.setModel(new javax.swing.SpinnerNumberModel(0, 0,
 				100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthMinOpenDoor, gridBagConstraints);
 
 		strengthBendBarsLabel.setText("bend bars");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		strengthPanel.add(strengthBendBarsLabel, gridBagConstraints);
 
 		strengthBendBarsSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		strengthPanel.add(strengthBendBarsSpinner, gridBagConstraints);
 
 		strengthNumDiceOpenLabelSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 25, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHEAST;
-		strengthPanel.add(strengthNumDiceOpenLabelSpinner, gridBagConstraints);
-
-		jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel1.setLayout(new java.awt.GridBagLayout());
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 11;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		strengthPanel.add(jPanel1, gridBagConstraints);
+		strengthNumDiceOpenLabelSpinner
+				.setPreferredSize(new java.awt.Dimension(56, 22));
 
 		jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 		jPanel3.setLayout(new java.awt.GridBagLayout());
@@ -338,7 +271,7 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		strengthNumDiceOpenLabel
 				.setBackground(new java.awt.Color(153, 153, 153));
-		strengthNumDiceOpenLabel.setText("open door dice roll");
+		strengthNumDiceOpenLabel.setText("open door roll");
 		strengthNumDiceOpenLabel
 				.setToolTipText("Open door dice roll number and size of dice.");
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -346,11 +279,6 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		gridBagConstraints.gridy = 6;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		jPanel3.add(strengthNumDiceOpenLabel, gridBagConstraints);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		strengthPanel.add(jPanel3, gridBagConstraints);
 
 		jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 		jPanel4.setLayout(new java.awt.GridBagLayout());
@@ -381,11 +309,218 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		jPanel4.add(strengthPercentComboBox, gridBagConstraints);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		strengthPanel.add(jPanel4, gridBagConstraints);
+		javax.swing.GroupLayout strengthPanelLayout = new javax.swing.GroupLayout(
+				strengthPanel);
+		strengthPanel.setLayout(strengthPanelLayout);
+		strengthPanelLayout
+				.setHorizontalGroup(strengthPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								strengthPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthScoreSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				jPanel4,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthHitBonusSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				strengthHitBonusLabel))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthDamageAdjSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				strengthDamageAdjLabel))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthBendBarsSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				strengthBendBarsLabel))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthWeightAllowanceSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				strengthWeightAllowanceLabel))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthMinOpenDoor,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				strengthMinOpenDoorLabel))
+														.addGroup(
+																strengthPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				strengthNumDiceOpenLabelSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				jPanel3,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)))
+										.addContainerGap(155, Short.MAX_VALUE)));
+
+		strengthPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { strengthBendBarsSpinner,
+						strengthDamageAdjSpinner, strengthHitBonusSpinner,
+						strengthMinOpenDoor, strengthNumDiceOpenLabelSpinner,
+						strengthScoreSpinner, strengthWeightAllowanceSpinner });
+
+		strengthPanelLayout
+				.setVerticalGroup(strengthPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								strengthPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																jPanel4,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthHitBonusSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																strengthHitBonusLabel))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthDamageAdjSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																strengthDamageAdjLabel))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthBendBarsSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																strengthBendBarsLabel))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthWeightAllowanceSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																strengthWeightAllowanceLabel))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthMinOpenDoor,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																strengthMinOpenDoorLabel))
+										.addGroup(
+												strengthPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																strengthNumDiceOpenLabelSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																jPanel3,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addContainerGap(103, Short.MAX_VALUE)));
+
+		strengthPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,
+				new java.awt.Component[] { strengthBendBarsSpinner,
+						strengthDamageAdjSpinner, strengthHitBonusSpinner,
+						strengthMinOpenDoor, strengthNumDiceOpenLabelSpinner,
+						strengthScoreSpinner, strengthWeightAllowanceSpinner });
 
 		intelligencePanel.setBackground(new java.awt.Color(204, 204, 204));
 		intelligencePanel.setBorder(javax.swing.BorderFactory
@@ -394,16 +529,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 						javax.swing.border.TitledBorder.DEFAULT_POSITION,
 						new java.awt.Font("Segoe UI", 0, 12)));
-		intelligencePanel.setLayout(new java.awt.GridBagLayout());
 
 		intelligenceScoreLabel.setText("ability score");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		intelligencePanel.add(intelligenceScoreLabel, gridBagConstraints);
 
 		intelligenceScoreSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				0, 25, 1));
@@ -413,94 +540,28 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						intelligenceScoreSpinnerStateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		intelligencePanel.add(intelligenceScoreSpinner, gridBagConstraints);
 
 		intelligenceKnowSpellLabel.setText("know spell");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		intelligencePanel.add(intelligenceKnowSpellLabel, gridBagConstraints);
 
 		intelligenceKnowSpellSpinner1
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		intelligencePanel
-				.add(intelligenceKnowSpellSpinner1, gridBagConstraints);
 
 		intelligenceMinSpellsLabel1.setText("minimum spells");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		intelligencePanel.add(intelligenceMinSpellsLabel1, gridBagConstraints);
 
 		intelligenceMinSpellsSpinner1
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		intelligencePanel
-				.add(intelligenceMinSpellsSpinner1, gridBagConstraints);
 
 		intelligenceMaxSpellsLabel1.setText("maximum spells");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		intelligencePanel.add(intelligenceMaxSpellsLabel1, gridBagConstraints);
 
 		intelligenceMaxSpellsSpinner1
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		intelligencePanel
-				.add(intelligenceMaxSpellsSpinner1, gridBagConstraints);
 
 		intelligenceLanguagesLabel1.setText("number of languages");
 		intelligenceLanguagesLabel1
 				.setToolTipText("Minimum roll to open a door.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		intelligencePanel.add(intelligenceLanguagesLabel1, gridBagConstraints);
 
 		intelligenceLanguagesSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		intelligencePanel.add(intelligenceLanguagesSpinner, gridBagConstraints);
-
-		jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 15;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		intelligencePanel.add(jPanel2, gridBagConstraints);
 
 		jPanel5.setBackground(new java.awt.Color(204, 204, 204));
 		jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -646,12 +707,191 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		jPanel5.add(intSpellBonus1Panel8);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		intelligencePanel.add(jPanel5, gridBagConstraints);
+		javax.swing.GroupLayout intelligencePanelLayout = new javax.swing.GroupLayout(
+				intelligencePanel);
+		intelligencePanel.setLayout(intelligencePanelLayout);
+		intelligencePanelLayout
+				.setHorizontalGroup(intelligencePanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								intelligencePanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																intelligencePanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				intelligenceKnowSpellSpinner1,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				intelligenceKnowSpellLabel))
+														.addGroup(
+																intelligencePanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				intelligenceScoreSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				56,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				intelligenceScoreLabel))
+														.addGroup(
+																intelligencePanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				intelligenceLanguagesSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				intelligenceLanguagesLabel1))
+														.addGroup(
+																intelligencePanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				intelligenceMaxSpellsSpinner1,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				56,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				intelligenceMaxSpellsLabel1))
+														.addGroup(
+																intelligencePanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				intelligenceMinSpellsSpinner1,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				intelligenceMinSpellsLabel1)))
+										.addContainerGap(174, Short.MAX_VALUE))
+						.addGroup(
+								javax.swing.GroupLayout.Alignment.TRAILING,
+								intelligencePanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addComponent(
+												jPanel5,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												390,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		intelligencePanelLayout
+				.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+						new java.awt.Component[] {
+								intelligenceKnowSpellSpinner1,
+								intelligenceLanguagesSpinner,
+								intelligenceMaxSpellsSpinner1,
+								intelligenceMinSpellsSpinner1,
+								intelligenceScoreSpinner });
+
+		intelligencePanelLayout
+				.setVerticalGroup(intelligencePanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								intelligencePanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																intelligenceScoreLabel)
+														.addComponent(
+																intelligenceScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																intelligenceLanguagesSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																intelligenceLanguagesLabel1))
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																intelligenceKnowSpellSpinner1,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																intelligenceKnowSpellLabel))
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																intelligenceMinSpellsSpinner1,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																intelligenceMinSpellsLabel1))
+										.addGroup(
+												intelligencePanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																intelligenceMaxSpellsLabel1)
+														.addComponent(
+																intelligenceMaxSpellsSpinner1,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addComponent(
+												jPanel5,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap()));
+
+		intelligencePanelLayout
+				.linkSize(javax.swing.SwingConstants.VERTICAL,
+						new java.awt.Component[] {
+								intelligenceKnowSpellSpinner1,
+								intelligenceLanguagesSpinner,
+								intelligenceMaxSpellsSpinner1,
+								intelligenceMinSpellsSpinner1,
+								intelligenceScoreSpinner });
 
 		wisdomPanel.setBackground(new java.awt.Color(204, 204, 204));
 		wisdomPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -660,16 +900,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
-		wisdomPanel.setLayout(new java.awt.GridBagLayout());
 
 		wisdomScoreLabel1.setText("ability score");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		wisdomPanel.add(wisdomScoreLabel1, gridBagConstraints);
 
 		wisdomScoreSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0,
 				25, 1));
@@ -679,55 +911,16 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						wisdomScoreSpinner1StateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		wisdomPanel.add(wisdomScoreSpinner1, gridBagConstraints);
 
 		wisdomMagicAdjLabel.setText("magical adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		wisdomPanel.add(wisdomMagicAdjLabel, gridBagConstraints);
 
 		wisdomMagicAdjustSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				-99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		wisdomPanel.add(wisdomMagicAdjustSpinner, gridBagConstraints);
 
 		wisdomSpellFailureLabel.setText("spell failure");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		wisdomPanel.add(wisdomSpellFailureLabel, gridBagConstraints);
 
 		wisdomSpellFailureSpinner.setModel(new javax.swing.SpinnerNumberModel(
 				0, 0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		wisdomPanel.add(wisdomSpellFailureSpinner, gridBagConstraints);
-
-		jPanel6.setBackground(new java.awt.Color(204, 204, 204));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 15;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		wisdomPanel.add(jPanel6, gridBagConstraints);
 
 		jPanel7.setBackground(new java.awt.Color(204, 204, 204));
 		jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -843,12 +1036,127 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		jPanel7.add(intSpellBonus1Panel15);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		wisdomPanel.add(jPanel7, gridBagConstraints);
+		javax.swing.GroupLayout wisdomPanelLayout = new javax.swing.GroupLayout(
+				wisdomPanel);
+		wisdomPanel.setLayout(wisdomPanelLayout);
+		wisdomPanelLayout
+				.setHorizontalGroup(wisdomPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								wisdomPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												wisdomPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																wisdomPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				wisdomMagicAdjustSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				wisdomMagicAdjLabel))
+														.addGroup(
+																wisdomPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				wisdomSpellFailureSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				wisdomSpellFailureLabel))
+														.addComponent(
+																jPanel7,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																390,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addGroup(
+																wisdomPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				wisdomScoreSpinner1,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				wisdomScoreLabel1)))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		wisdomPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { wisdomMagicAdjustSpinner,
+						wisdomScoreSpinner1, wisdomSpellFailureSpinner });
+
+		wisdomPanelLayout
+				.setVerticalGroup(wisdomPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								wisdomPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												wisdomPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																wisdomScoreSpinner1,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																wisdomScoreLabel1))
+										.addGap(0, 0, 0)
+										.addGroup(
+												wisdomPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																wisdomMagicAdjustSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																wisdomMagicAdjLabel))
+										.addGroup(
+												wisdomPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																wisdomSpellFailureSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																wisdomSpellFailureLabel))
+										.addComponent(
+												jPanel7,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		wisdomPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,
+				new java.awt.Component[] { wisdomMagicAdjustSpinner,
+						wisdomScoreSpinner1, wisdomSpellFailureSpinner });
 
 		dexterityPanel.setBackground(new java.awt.Color(204, 204, 204));
 		dexterityPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -857,16 +1165,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
-		dexterityPanel.setLayout(new java.awt.GridBagLayout());
 
 		dexterityScoreLabel.setText("ability score");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		dexterityPanel.add(dexterityScoreLabel, gridBagConstraints);
 
 		dexterityScoreSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0,
 				25, 1));
@@ -876,79 +1176,23 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						dexterityScoreSpinnerStateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		dexterityPanel.add(dexterityScoreSpinner, gridBagConstraints);
 
 		dexterityAttackAdjustmenLabel.setText("attack adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		dexterityPanel.add(dexterityAttackAdjustmenLabel, gridBagConstraints);
 
 		dexterityAttackAdjustmentSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		dexterityPanel
-				.add(dexterityAttackAdjustmentSpinner, gridBagConstraints);
 
 		dexterityDefensiveAdjustmentLabel.setText("defensive adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		dexterityPanel.add(dexterityDefensiveAdjustmentLabel,
-				gridBagConstraints);
 
 		dexterityDefensiveAdjustmentSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		dexterityPanel.add(dexterityDefensiveAdjustmentSpinner,
-				gridBagConstraints);
 
 		dexterityReactionAdjustmentLabel.setText("reaction adjustment");
 		dexterityReactionAdjustmentLabel
 				.setToolTipText("Minimum roll to open a door.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		dexterityPanel
-				.add(dexterityReactionAdjustmentLabel, gridBagConstraints);
 
 		dexterityreactionAdjustmentSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		dexterityPanel.add(dexterityreactionAdjustmentSpinner,
-				gridBagConstraints);
-
-		jPanel8.setBackground(new java.awt.Color(204, 204, 204));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 15;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		dexterityPanel.add(jPanel8, gridBagConstraints);
 
 		jPanel9.setBackground(new java.awt.Color(204, 204, 204));
 		jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1087,31 +1331,198 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 
 		jPanel9.add(dexRLPanel23);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		dexterityPanel.add(jPanel9, gridBagConstraints);
-
 		dexterityDefAdjBarbSpinner.setModel(new javax.swing.SpinnerNumberModel(
 				0, -99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		dexterityPanel.add(dexterityDefAdjBarbSpinner, gridBagConstraints);
 
 		dexterityDefAdjBarbLabel.setText("defensive adjustment for barbarian");
 		dexterityDefAdjBarbLabel
 				.setToolTipText("Barbarian style defense adjustment while in light armor.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		dexterityPanel.add(dexterityDefAdjBarbLabel, gridBagConstraints);
+
+		javax.swing.GroupLayout dexterityPanelLayout = new javax.swing.GroupLayout(
+				dexterityPanel);
+		dexterityPanel.setLayout(dexterityPanelLayout);
+		dexterityPanelLayout
+				.setHorizontalGroup(dexterityPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								dexterityPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																dexterityPanelLayout
+																		.createSequentialGroup()
+																		.addGroup(
+																				dexterityPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								dexterityDefAdjBarbSpinner,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								dexterityDefensiveAdjustmentSpinner,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								dexterityAttackAdjustmentSpinner,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								dexterityreactionAdjustmentSpinner,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								dexterityScoreSpinner,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE))
+																		.addGroup(
+																				dexterityPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addGroup(
+																								dexterityPanelLayout
+																										.createSequentialGroup()
+																										.addGap(16,
+																												16,
+																												16)
+																										.addComponent(
+																												dexterityScoreLabel))
+																						.addGroup(
+																								dexterityPanelLayout
+																										.createSequentialGroup()
+																										.addGap(5,
+																												5,
+																												5)
+																										.addComponent(
+																												dexterityReactionAdjustmentLabel))
+																						.addGroup(
+																								dexterityPanelLayout
+																										.createSequentialGroup()
+																										.addGap(5,
+																												5,
+																												5)
+																										.addComponent(
+																												dexterityAttackAdjustmenLabel))
+																						.addGroup(
+																								dexterityPanelLayout
+																										.createSequentialGroup()
+																										.addGap(5,
+																												5,
+																												5)
+																										.addComponent(
+																												dexterityDefensiveAdjustmentLabel))
+																						.addGroup(
+																								dexterityPanelLayout
+																										.createSequentialGroup()
+																										.addGap(5,
+																												5,
+																												5)
+																										.addComponent(
+																												dexterityDefAdjBarbLabel))))
+														.addComponent(
+																jPanel9,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																390,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addContainerGap(18, Short.MAX_VALUE)));
+
+		dexterityPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { dexterityAttackAdjustmentSpinner,
+						dexterityDefAdjBarbSpinner,
+						dexterityDefensiveAdjustmentSpinner,
+						dexterityScoreSpinner,
+						dexterityreactionAdjustmentSpinner });
+
+		dexterityPanelLayout
+				.setVerticalGroup(dexterityPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								dexterityPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																dexterityScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																dexterityScoreLabel))
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																dexterityreactionAdjustmentSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																dexterityReactionAdjustmentLabel))
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																dexterityAttackAdjustmentSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																dexterityAttackAdjustmenLabel))
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																dexterityDefensiveAdjustmentSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																dexterityDefensiveAdjustmentLabel))
+										.addGroup(
+												dexterityPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																dexterityDefAdjBarbSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																dexterityDefAdjBarbLabel))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addComponent(
+												jPanel9,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		dexterityPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,
+				new java.awt.Component[] { dexterityAttackAdjustmentSpinner,
+						dexterityDefAdjBarbSpinner,
+						dexterityDefensiveAdjustmentSpinner,
+						dexterityScoreSpinner,
+						dexterityreactionAdjustmentSpinner });
 
 		constitutionPanel.setBackground(new java.awt.Color(204, 204, 204));
 		constitutionPanel.setBorder(javax.swing.BorderFactory
@@ -1120,16 +1531,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 						javax.swing.border.TitledBorder.DEFAULT_POSITION,
 						new java.awt.Font("Segoe UI", 0, 12)));
-		constitutionPanel.setLayout(new java.awt.GridBagLayout());
 
 		constitutionScoreLabel.setText("ability score");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionScoreLabel, gridBagConstraints);
 
 		constitutionScoreSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				0, 25, 1));
@@ -1139,163 +1542,299 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						constitutionScoreSpinnerStateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionScoreSpinner, gridBagConstraints);
 
 		constitutionHitpointAdjustmentFighterLabel
 				.setText("hitpoint adjustment *fighters*");
 		constitutionHitpointAdjustmentFighterLabel
 				.setToolTipText("Fighter type classes hitpoint adjustment.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionHitpointAdjustmentFighterLabel,
-				gridBagConstraints);
 
 		constitutionHitPointAdjustmentFighterSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionHitPointAdjustmentFighterSpinner,
-				gridBagConstraints);
 
 		constitutionHitPointAdjustmentLabel.setText("hitpoint adjustment");
 		constitutionHitPointAdjustmentLabel
 				.setToolTipText("Non-fighter hitpoint adjustments.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionHitPointAdjustmentLabel,
-				gridBagConstraints);
 
 		constitutionHitPointAdjustmentSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 99, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionHitPointAdjustmentSpinner,
-				gridBagConstraints);
 
 		constitutionSystemShockLabel.setText("system shock");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionSystemShockLabel, gridBagConstraints);
 
 		constitutionSystemShockSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionSystemShockSpinner,
-				gridBagConstraints);
 
 		constitutionResurrectionSurvivelLabel.setText("resurrection survival");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionResurrectionSurvivelLabel,
-				gridBagConstraints);
 
 		constitutionResurrectionSurvivelSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionResurrectionSurvivelSpinner,
-				gridBagConstraints);
-
-		jPanel10.setBackground(new java.awt.Color(204, 204, 204));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 8;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		constitutionPanel.add(jPanel10, gridBagConstraints);
 
 		constitutionHitPointAdjustmentBarbarianSpinner1
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionHitPointAdjustmentBarbarianSpinner1,
-				gridBagConstraints);
 
 		constitutionHitpointAdjustmentBarbarianLabel
 				.setText("hitpoint adjustment *barbarians*");
 		constitutionHitpointAdjustmentBarbarianLabel
 				.setToolTipText("Fighter type classes hitpoint adjustment.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionHitpointAdjustmentBarbarianLabel,
-				gridBagConstraints);
 
 		constitutionIronSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				-99, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel.add(constitutionIronSpinner, gridBagConstraints);
 
 		constitutionIronLabel.setText("iron constitution *+save vrs poison*");
 		constitutionIronLabel
 				.setToolTipText("Fighter type classes hitpoint adjustment.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionIronLabel, gridBagConstraints);
 
 		constitutionResistanceSpinner
 				.setModel(new javax.swing.SpinnerNumberModel(0, -99, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		constitutionPanel
-				.add(constitutionResistanceSpinner, gridBagConstraints);
 
 		constitutionResistanceLabel
 				.setText("resistance *spells, rod/staff/wand*");
 		constitutionResistanceLabel
 				.setToolTipText("Fighter type classes hitpoint adjustment.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		constitutionPanel.add(constitutionResistanceLabel, gridBagConstraints);
+
+		javax.swing.GroupLayout constitutionPanelLayout = new javax.swing.GroupLayout(
+				constitutionPanel);
+		constitutionPanel.setLayout(constitutionPanelLayout);
+		constitutionPanelLayout
+				.setHorizontalGroup(constitutionPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								constitutionPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionHitPointAdjustmentFighterSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionHitpointAdjustmentFighterLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionHitPointAdjustmentBarbarianSpinner1,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionHitpointAdjustmentBarbarianLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionSystemShockSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionSystemShockLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionResistanceSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionResistanceLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionResurrectionSurvivelSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				56,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionResurrectionSurvivelLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionIronSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionIronLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionScoreSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				56,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionScoreLabel))
+														.addGroup(
+																constitutionPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				constitutionHitPointAdjustmentSpinner,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				constitutionHitPointAdjustmentLabel)))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		constitutionPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] {
+						constitutionHitPointAdjustmentBarbarianSpinner1,
+						constitutionHitPointAdjustmentFighterSpinner,
+						constitutionHitPointAdjustmentSpinner,
+						constitutionIronSpinner, constitutionResistanceSpinner,
+						constitutionResurrectionSurvivelSpinner,
+						constitutionScoreSpinner,
+						constitutionSystemShockSpinner });
+
+		constitutionPanelLayout
+				.setVerticalGroup(constitutionPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								constitutionPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionScoreLabel)
+														.addComponent(
+																constitutionScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionHitPointAdjustmentSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionHitPointAdjustmentLabel))
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionHitPointAdjustmentFighterSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionHitpointAdjustmentFighterLabel))
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionHitPointAdjustmentBarbarianSpinner1,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionHitpointAdjustmentBarbarianLabel))
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionSystemShockSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionSystemShockLabel))
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionResurrectionSurvivelLabel)
+														.addComponent(
+																constitutionResurrectionSurvivelSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionIronSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionIronLabel))
+										.addGroup(
+												constitutionPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																constitutionResistanceSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																constitutionResistanceLabel))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		constitutionPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,
+				new java.awt.Component[] {
+						constitutionHitPointAdjustmentBarbarianSpinner1,
+						constitutionHitPointAdjustmentFighterSpinner,
+						constitutionHitPointAdjustmentSpinner,
+						constitutionIronSpinner, constitutionResistanceSpinner,
+						constitutionResurrectionSurvivelSpinner,
+						constitutionScoreSpinner,
+						constitutionSystemShockSpinner });
 
 		charismaPanel.setBackground(new java.awt.Color(204, 204, 204));
 		charismaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -1304,16 +1843,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
-		charismaPanel.setLayout(new java.awt.GridBagLayout());
 
 		charismaScoreLabel.setText("ability score");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		charismaPanel.add(charismaScoreLabel, gridBagConstraints);
 
 		charismaScoreSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0,
 				25, 1));
@@ -1323,72 +1854,164 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 						charismaScoreSpinnerStateChanged(evt);
 					}
 				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		charismaPanel.add(charismaScoreSpinner, gridBagConstraints);
 
 		charismaMaxHenchLabel.setText("maximum henchmen");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		charismaPanel.add(charismaMaxHenchLabel, gridBagConstraints);
 
 		charismaMaxHenchSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				0, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		charismaPanel.add(charismaMaxHenchSpinner, gridBagConstraints);
 
 		charismaLoyaltyBaseLabel.setText("loyalty base");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		charismaPanel.add(charismaLoyaltyBaseLabel, gridBagConstraints);
 
 		charismaLoyaltyBaseSpinner.setModel(new javax.swing.SpinnerNumberModel(
 				0, -100, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		charismaPanel.add(charismaLoyaltyBaseSpinner, gridBagConstraints);
 
 		charismaReactionAdjLabel.setText("reaction adjustment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 5, 0, 5);
-		charismaPanel.add(charismaReactionAdjLabel, gridBagConstraints);
 
 		charismaReactionAdjSpinner.setModel(new javax.swing.SpinnerNumberModel(
 				0, -100, 100, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		charismaPanel.add(charismaReactionAdjSpinner, gridBagConstraints);
 
-		jPanel11.setBackground(new java.awt.Color(204, 204, 204));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.gridheight = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.weightx = 10.0;
-		gridBagConstraints.weighty = 10.0;
-		charismaPanel.add(jPanel11, gridBagConstraints);
+		javax.swing.GroupLayout charismaPanelLayout = new javax.swing.GroupLayout(
+				charismaPanel);
+		charismaPanel.setLayout(charismaPanelLayout);
+		charismaPanelLayout
+				.setHorizontalGroup(charismaPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								charismaPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																charismaScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																56,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																charismaMaxHenchSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																charismaLoyaltyBaseSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																53,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																charismaReactionAdjSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																53,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																charismaPanelLayout
+																		.createSequentialGroup()
+																		.addGap(8,
+																				8,
+																				8)
+																		.addComponent(
+																				charismaLoyaltyBaseLabel))
+														.addGroup(
+																charismaPanelLayout
+																		.createSequentialGroup()
+																		.addGap(8,
+																				8,
+																				8)
+																		.addComponent(
+																				charismaReactionAdjLabel))
+														.addGroup(
+																charismaPanelLayout
+																		.createSequentialGroup()
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				charismaScoreLabel))
+														.addGroup(
+																charismaPanelLayout
+																		.createSequentialGroup()
+																		.addGap(5,
+																				5,
+																				5)
+																		.addComponent(
+																				charismaMaxHenchLabel)))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		charismaPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
+				new java.awt.Component[] { charismaLoyaltyBaseSpinner,
+						charismaMaxHenchSpinner, charismaReactionAdjSpinner,
+						charismaScoreSpinner });
+
+		charismaPanelLayout
+				.setVerticalGroup(charismaPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								charismaPanelLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																charismaScoreLabel)
+														.addComponent(
+																charismaScoreSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																charismaMaxHenchSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																charismaMaxHenchLabel))
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																charismaLoyaltyBaseLabel)
+														.addComponent(
+																charismaLoyaltyBaseSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)
+										.addGroup(
+												charismaPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																charismaReactionAdjLabel)
+														.addComponent(
+																charismaReactionAdjSpinner,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+
+		charismaPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL,
+				new java.awt.Component[] { charismaLoyaltyBaseSpinner,
+						charismaMaxHenchSpinner, charismaReactionAdjSpinner,
+						charismaScoreSpinner });
 
 		setTitle("Ability Scores");
 		addWindowListener(new java.awt.event.WindowAdapter() {
@@ -1625,7 +2248,8 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 			constitutionResurrectionSurvivelSpinner.setValue(oB
 					.getConsitution().resurrectionSurvival);
 			constitutionIronSpinner.setValue(oB.getConsitution().conIron);
-			constitutionResistanceSpinner.setValue(oB.getConsitution().conResistance);
+			constitutionResistanceSpinner
+					.setValue(oB.getConsitution().conResistance);
 			nPreviousConstitution = nScore;
 		}
 	}
@@ -1649,8 +2273,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 					.getValue();
 			oA.getConsitution().resurrectionSurvival = (int) constitutionResurrectionSurvivelSpinner
 					.getValue();
-			oA.getConsitution().conIron = (int) constitutionIronSpinner.getValue();
-			oA.getConsitution().conResistance = (int) constitutionResistanceSpinner.getValue();
+			oA.getConsitution().conIron = (int) constitutionIronSpinner
+					.getValue();
+			oA.getConsitution().conResistance = (int) constitutionResistanceSpinner
+					.getValue();
 		}
 	}
 
@@ -2234,16 +2860,10 @@ public class Option_AbilityScores extends javax.swing.JDialog {
 	private javax.swing.JRadioButton intelligenceRadioButton;
 	private javax.swing.JLabel intelligenceScoreLabel;
 	private javax.swing.JSpinner intelligenceScoreSpinner;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JPanel jPanel10;
-	private javax.swing.JPanel jPanel11;
-	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanel3;
 	private javax.swing.JPanel jPanel4;
 	private javax.swing.JPanel jPanel5;
-	private javax.swing.JPanel jPanel6;
 	private javax.swing.JPanel jPanel7;
-	private javax.swing.JPanel jPanel8;
 	private javax.swing.JPanel jPanel9;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel selectPanel;
