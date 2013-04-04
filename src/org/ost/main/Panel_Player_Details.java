@@ -52,8 +52,8 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcPlayerNameLabel.setText(pc.getNamePlayer());
 		pcAlignmentLabel.setText(ALIGNMENTS[pc.getMyAlignmentType()]);
 		pcRaceLabel.setText(pc.getMyRaceName(ost.raceList));
-		pcClassNameLabel.setText(pc.getMyClassName(ost.characterClassList));
-		pcClassLevelLabel.setText(pc.getMyLevelName(ost.characterClassList));
+		pcClassNameLabel.setText(pc.getMyClassName(ost));
+		pcClassLevelLabel.setText(pc.getMyLevelName(ost));
 		pcExperienceTotalsLabel.setText(pc
 				.getMyExperienceName(ost.characterClassList));
 		pcMoveBaseLabel.setText(pc.getMoveRate());

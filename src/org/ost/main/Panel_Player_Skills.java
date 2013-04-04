@@ -70,11 +70,8 @@ public class Panel_Player_Skills extends javax.swing.JPanel {
 		// portrait
 
 		// skills?
-		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
-				ost.abilityStatList);
+		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(ost);
+		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(ost);
 
 		skillsPanel.removeAll();
 		for (int i = 0; i < skillsBase.size(); i++) {

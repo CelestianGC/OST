@@ -69,11 +69,8 @@ public class Panel_Player_ArcaneSpells extends javax.swing.JPanel {
 		pc = oPlayer;
 
 		// arcane spells
-		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-		int arcaneAdj[] = pc.getAllArcaneBonusSpellsPerLevel(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
-				ost.abilityStatList);
+		int arcaneBase[] = pc.getAllArcaneSpellsPerLevel(ost);
+		int arcaneAdj[] = pc.getAllArcaneBonusSpellsPerLevel(ost);
 
 		arcaneSpellsPanel.removeAll();
 

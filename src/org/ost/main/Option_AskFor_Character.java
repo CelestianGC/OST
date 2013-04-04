@@ -517,7 +517,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
 		levelLabel.setText(currentCharacter
-				.getMyLevelName(ost.characterClassList));
+				.getMyLevelName(ost));
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -532,7 +532,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
 			levelLabel.setText(currentCharacter
-					.getMyLevelName(ost.characterClassList));
+					.getMyLevelName(ost));
 		}
 	}
 
@@ -551,7 +551,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 				int nOldLevel = pC.getLevel();
 				if (addEXP)
 					pC.addExperience(nEXP);
-				int nNewLevel = pC.getLevelActual(ost.characterClassList);
+				int nNewLevel = pC.getLevelActual(ost);
 				int nDiffLevel = nNewLevel - nOldLevel;
 				if (nDiffLevel != 0) { // re-roll health?
 					if (nDiffLevel > 0) {
@@ -559,9 +559,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 						ost.dprint(pC.getName() + " is leveling up! "
 								+ nDiffLevel + "\n");
 
-						pC.levelUP(ost.characterClassList,
-								ost.extraAbilitiesList, ost.raceList,
-								ost.abilityStatList, ost);
+						pC.levelUP(ost);
 					} else {
 						ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
 								+ "\n");
@@ -726,7 +724,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		raceLabel.setText(oR != null ? oR.getName() : "");
 
 		levelLabel.setText(currentCharacter
-				.getMyLevelName(ost.characterClassList));
+				.getMyLevelName(ost));
 
 	}
 

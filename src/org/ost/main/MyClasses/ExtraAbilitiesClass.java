@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.ost.main.MainClass;
 import org.ost.main.MyClasses.PlayerClass.PCClass;
 
 import static org.ost.main.MyClasses.MyStatics.*;
@@ -549,8 +550,7 @@ public class ExtraAbilitiesClass implements Comparable{
 	 * @return
 	 */
 	public static ArrayList<ExtraAbilitiesClass> getAllExtraAbilities(
-			PlayerClass pc, CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+			PlayerClass pc, MainClass ost) {
 
 		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
 
@@ -558,7 +558,7 @@ public class ExtraAbilitiesClass implements Comparable{
 			// iterate over all classes pc might have
 			for (PCClass pC: pc.getMyClass()) {
 				// get CharacterClass object
-				CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+				CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 				if (oC!= null) // if no class is set == null
 					for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 						// get saves from level settings
@@ -566,7 +566,7 @@ public class ExtraAbilitiesClass implements Comparable{
 							// now get from extra-abilities in level
 							// and store in extraList
 							ArrayList<ExtraAbilitiesClass> extraLevelList =
-									ExtraAbilitiesClass.getAllowed(lE.getBonusAbilities(), eList);
+									ExtraAbilitiesClass.getAllowed(lE.getBonusAbilities(), ost.extraAbilitiesList);
 							for (ExtraAbilitiesClass eC: extraLevelList) {
 								if (!extraList.contains(eC)) 
 									extraList.add(eC);
@@ -577,10 +577,10 @@ public class ExtraAbilitiesClass implements Comparable{
 			}
 			// add race extra-abilities to the running total of
 			// extra-abilities then test for saves
-			RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(),rList);
+			RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(),ost.raceList);
 			if (myRace != null) {
 				ArrayList<ExtraAbilitiesClass> extraLevelList =
-						ExtraAbilitiesClass.getAllowed(myRace.getBonusAbilities(), eList);
+						ExtraAbilitiesClass.getAllowed(myRace.getBonusAbilities(), ost.extraAbilitiesList);
 				for (ExtraAbilitiesClass eC: extraLevelList) 
 					if (!extraList.contains(eC)) 
 						extraList.add(eC);

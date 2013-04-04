@@ -37,6 +37,8 @@ public class MainClass implements Serializable {
 	public String aboutURL = "https://sourceforge.net/projects/oldschooltool/";
 	public String aboutEmail = "uce_mike@yahoo.com";
 
+	public String log;
+	
 	public boolean initAscending = true;
 	public boolean initGroup = false;
 	public int initDice = 10;

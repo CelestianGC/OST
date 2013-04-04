@@ -220,18 +220,17 @@ public class PlayerClass implements Serializable, Comparable {
 		 * @param rList
 		 * @param aList
 		 */
-		public void levelUP(CharacterClassList cList,
-				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
+		public void levelUP(MainClass ost) {
 			if (getMyClass().size() > 0) {
 				// TODO
 				int nRaceStartBonus = 0;
 				boolean bRaceBonusUsed = false;
-				RaceClass oR = getMyRace().getRaceByID(rList);
+				RaceClass oR = getMyRace().getRaceByID(ost.raceList);
 				nRaceStartBonus = oR.getBonusStartHP();
 				int nRolledHP = 0;
 				int classCount = getMyClass().size();
 
-				CharacterClass cC = getClassByID(cList);
+				CharacterClass cC = getClassByID(ost.characterClassList);
 
 				if (getHdRolls() == null) // not sure I will ever use this
 					setHdRolls(new ArrayList<Integer>());
@@ -254,14 +253,13 @@ public class PlayerClass implements Serializable, Comparable {
 						int nDiceSize = 4;
 						int nClassHPBonus = 0;
 
-						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
-								cList, eList, rList, aList);
+						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
 						AbilityStatClass aStat = 
-								aList.getContent().get(nConScore);
+								ost.abilityStatList.getContent().get(nConScore);
 						int nConBonus = aStat.consitution.hitpointAdjustment;
-						if (hasBarbarianCon(cList,eList, rList))
+						if (hasBarbarianCon(ost))
 							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-						if (hasFighterCon(cList, eList, rList))
+						if (hasFighterCon(ost))
 							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
 						nConBonus /= classCount;
 
@@ -341,14 +339,13 @@ public class PlayerClass implements Serializable, Comparable {
 						int nDiceSize = 4;
 						int nClassHPBonus = 0;
 
-						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
-								cList, eList, rList, aList);
+						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
 						AbilityStatClass aStat = 
 								aList.getContent().get(nConScore);
 						int nConBonus = aStat.consitution.hitpointAdjustment;
-						if (hasBarbarianCon(cList,eList, rList))
+						if (hasBarbarianCon(ost))
 							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-						if (hasFighterCon(cList, eList, rList))
+						if (hasFighterCon(ost))
 							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
 						nConBonus /= classCount;
 
@@ -475,8 +472,8 @@ public class PlayerClass implements Serializable, Comparable {
 		/**
 		 * @return the actual level of classlevel
 		 */
-		public int getLevelActual(CharacterClassList cList) {
-			return getCurrentLevel(cList);
+		public int getLevelActual(MainClass ost) {
+			return getCurrentLevel(ost);
 		}
 		
 		/**
@@ -510,9 +507,9 @@ public class PlayerClass implements Serializable, Comparable {
 		 * @param cList
 		 * @return
 		 */
-		public int getCurrentLevel(CharacterClassList cList) {
+		public int getCurrentLevel(MainClass ost) {
 			int maxLevel = 0;
-			CharacterClass oC = CharacterClass.getClassByMyID(getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(getClassID(), ost);
 			if (oC != null) {
 			for (int i=0;i<oC.getLevelDetails().size();i++) {
 				CharacterClass.LevelClass lC = oC.getLevelDetails().get(i);
@@ -539,10 +536,10 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param cList
 	 * @return
 	 */
-	public String getMyClassName(CharacterClassList cList) {
+	public String getMyClassName(MainClass ost) {
 		String classNames = "";
 		for (PCClass aClass : myClass) {
-			CharacterClass oC = CharacterClass.getClassByMyID(aClass.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(aClass.getClassID(), ost);
 			if (oC != null) {
 				if (classNames.length()<1) {
 					classNames = oC.getName();
@@ -560,10 +557,10 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param cList
 	 * @return
 	 */
-	public String getMyLevelName(CharacterClassList cList) {
+	public String getMyLevelName(MainClass ost) {
 		String level = "";
 		for (PCClass aClass : myClass) {
-			int cLevel = aClass.getCurrentLevel(cList);
+			int cLevel = aClass.getCurrentLevel(ost);
 			level = level+String.format("%d%s", cLevel,
 					myClass.get(myClass.size()-1).equals(aClass)?"":"/");
 		}
@@ -1225,12 +1222,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<Integer> getAllSaves(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public ArrayList<Integer> getAllSaves(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
 		ArrayList<Integer> saves = new ArrayList<>();
 		for(int i=0;i<MAX_SAVES;i++)
@@ -1239,7 +1235,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1277,12 +1273,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<Integer> getAllSaveAdjustments(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+	public ArrayList<Integer> getAllSaveAdjustments(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		ArrayList<Integer> saves = new ArrayList<>();
 		for(int i=0;i<MAX_SAVES;i++)
@@ -1291,7 +1286,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1313,15 +1308,14 @@ public class PlayerClass implements Serializable, Comparable {
 			}
 		
 		//TODO - racial con bonuses iron/Resistance
-		int nConScore = getAbilityScore(ABILITY_CONSTITUTION,
-				cList, eList, rList, aList);
+		int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
 		AbilityStatClass aStat = 
-				aList.getContent().get(nConScore);
+				ost.abilityStatList.getContent().get(nConScore);
 		int nIronConBonus = 0;
 		int nResistConBonus = 0;
-		if (hasIronCon(cList,eList, rList))
+		if (hasIronCon(ost))
 			nIronConBonus = aStat.consitution.conIron;
-		if (hasResistCon(cList, eList, rList))
+		if (hasResistCon(ost))
 			nResistConBonus = aStat.consitution.conResistance;
 		saves.set(SAVE_ROD,(saves.get(SAVE_ROD)+nResistConBonus));
 		saves.set(SAVE_SPELL,(saves.get(SAVE_SPELL)+nResistConBonus));
@@ -1338,8 +1332,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<AbilityScoreClass> getAllAbilityScores(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public ArrayList<AbilityScoreClass> getAllAbilityScores(MainClass ost) {
 		return null;
 	}
 	
@@ -1351,12 +1344,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<AbilityScoreClass> getAllAbilityScoreAdjustments(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public ArrayList<AbilityScoreClass> getAllAbilityScoreAdjustments(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this,ost);
 		
 		ArrayList<AbilityScoreClass> aScores = new ArrayList<>();
 		for(int i=0;i<MAX_ABILITIES;i++)
@@ -1366,7 +1358,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1382,7 +1374,7 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 
 		// get racial adjustments
-		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),ost.raceList);
 		if (myRace != null) {
 			for (int i=0;i<myRace.getAbilityAdjustment().size();i++) {
 				AbilityScoreClass oS = myRace.getAbilityAdjustment().get(i);
@@ -1411,13 +1403,12 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param aList
 	 * @return
 	 */
-	public int getAbilityScore(int findMe, CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+	public int getAbilityScore(int findMe, MainClass ost) {
 		
 		int theStat = 0;
 		
 		ArrayList<AbilityScoreClass> abilityScoresAdj = 
-				getAllAbilityScoreAdjustments(cList,eList, rList);
+				getAllAbilityScoreAdjustments(ost);
 
 		AbilityScoreClass aJ = abilityScoresAdj.get(findMe);
 		AbilityScoreClass aS = getMyAbilityScores().get(findMe);
@@ -1461,12 +1452,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<SkillsClass> getAllThiefSkillsBase(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public ArrayList<SkillsClass> getAllThiefSkillsBase(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
 		ArrayList<SkillsClass> aScores = new ArrayList<>();
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)
@@ -1476,7 +1466,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1533,12 +1523,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public ArrayList<SkillsClass> getAllThiefSkillAdjustments(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+	public ArrayList<SkillsClass> getAllThiefSkillAdjustments(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
 		ArrayList<SkillsClass> aScores = new ArrayList<>();
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)
@@ -1548,7 +1537,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1564,7 +1553,7 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 
 		// get racial adjustments
-		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
+		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),ost.raceList);
 		if (myRace != null) {
 			for (int i=0;i<myRace.getThiefAbiltyAdjustments().size();i++) {
 				SkillsClass oS = myRace.getThiefAbiltyAdjustments().get(i);
@@ -1583,11 +1572,11 @@ public class PlayerClass implements Serializable, Comparable {
 
 		// now check dex ability score
 		int abilityTotal = 
-				getAbilityScore(ABILITY_DEXTERITY, cList, eList, rList, aList);
+				getAbilityScore(ABILITY_DEXTERITY, ost);
 
 		if (abilityTotal >= 0) {
 			AbilityStatClass aStat = 
-					aList.getContent().get(abilityTotal);
+					ost.abilityStatList.getContent().get(abilityTotal);
 			for(int i=0;i<aStat.dexterity.skillsAdjustments.size();i++) {
 				SkillsClass oS = aStat.dexterity.skillsAdjustments.get(i);
 				SkillsClass aS = aScores.get(i);
@@ -1618,12 +1607,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public int[] getAllArcaneSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public int[] getAllArcaneSpellsPerLevel(MainClass ost) {
 
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		int aScores[] = new int[MAX_MAGE_SPELL_LEVEL];
 
@@ -1631,7 +1619,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
@@ -1665,12 +1653,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public int[] getAllDivineSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public int[] getAllDivineSpellsPerLevel(MainClass ost) {
 
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		int aScores[] = new int[MAX_CLERIC_SPELL_LEVEL];
 
@@ -1678,7 +1665,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
@@ -1713,12 +1700,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param aList
 	 * @return
 	 */
-	public int[] getAllArcaneBonusSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+	public int[] getAllArcaneBonusSpellsPerLevel(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		int aScores[] = new int[MAX_MAGE_SPELL_LEVEL];
 
@@ -1730,11 +1716,11 @@ public class PlayerClass implements Serializable, Comparable {
 			}
 		//get spells from ability scores (wisdom/int)
 		int abilityTotal = 
-				getAbilityScore(ABILITY_INTELLIGENCE, cList, eList, rList, aList);
+				getAbilityScore(ABILITY_INTELLIGENCE, ost);
 
 		if (abilityTotal >= 0) {
 			AbilityStatClass aStat = 
-					aList.getContent().get(abilityTotal);
+					ost.abilityStatList.getContent().get(abilityTotal);
 			for(int i=0;i<aStat.intelligence.bonusSpells.length;i++)
 				aScores[i] += aStat.intelligence.bonusSpells[i];
 		}
@@ -1751,12 +1737,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param aList
 	 * @return
 	 */
-	public int[] getAllDivineBonusSpellsPerLevel(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList) {
+	public int[] getAllDivineBonusSpellsPerLevel(MainClass ost) {
 
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		int aScores[] = new int[MAX_CLERIC_SPELL_LEVEL];
 
@@ -1769,11 +1754,11 @@ public class PlayerClass implements Serializable, Comparable {
 		
 		//get spells from ability scores (wisdom/int)	
 		int abilityTotal = 
-				getAbilityScore(ABILITY_WISDOM, cList, eList, rList, aList);
+				getAbilityScore(ABILITY_WISDOM, ost);
 
 		if (abilityTotal >= 0) {
 			AbilityStatClass aStat = 
-					aList.getContent().get(abilityTotal);
+					ost.abilityStatList.getContent().get(abilityTotal);
 			for(int i=0;i<aStat.wisdom.bonusSpells.length;i++)
 				aScores[i] += aStat.wisdom.bonusSpells[i];
 		}
@@ -1782,19 +1767,18 @@ public class PlayerClass implements Serializable, Comparable {
 	}
 
 	
-	public int getTHACO(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public int getTHACO(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
 		int bestTHACO = 20;
 		
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1827,12 +1811,11 @@ public class PlayerClass implements Serializable, Comparable {
 		return(bestTHACO);
 	}
 
-	public int[] getMatrix(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public int[] getMatrix(MainClass ost) {
 		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
 		int aMatrix[] = new int[MAX_MATRIX];
 		for(int i=0;i<aMatrix.length;i++)
@@ -1841,7 +1824,7 @@ public class PlayerClass implements Serializable, Comparable {
 		// iterate over all classes pc might have
 		for (PCClass pC: getMyClass()) {
 			// get CharacterClass object
-			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
@@ -1902,13 +1885,12 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasBarbarianDex(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasBarbarianDex(MainClass ost) {
 
 		boolean isBarb = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1926,12 +1908,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasBarbarianCon(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasBarbarianCon(MainClass ost) {
 		boolean isBarb = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1949,12 +1930,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasFighterCon(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasFighterCon(MainClass ost) {
 		boolean isFighter = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1972,12 +1952,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasWeaponMastery(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasWeaponMastery(MainClass ost) {
 		boolean isTrue = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1994,12 +1973,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasDoubleSpecialization(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasDoubleSpecialization(MainClass ost) {
 		boolean isTrue = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -2016,12 +1994,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasSpecialization(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasSpecialization(MainClass ost) {
 		boolean isTrue = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -2039,12 +2016,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasPercentileStrength(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasPercentileStrength(MainClass ost) {
 		boolean isTrue = false;
 
 		for(PCClass cC: getMyClass()) {
-			CharacterClass oC = CharacterClass.getClassByMyID(cC.getClassID(), cList);
+			CharacterClass oC = CharacterClass.getClassByMyID(cC.getClassID(), ost);
 			if (oC != null) {
 				if (oC.percentileStrength)
 					isTrue = true;
@@ -2062,12 +2038,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasIronCon(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasIronCon(MainClass ost) {
 		boolean isSet = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -2084,12 +2059,11 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean hasResistCon(CharacterClassList cList,
-			ExtraAbilitiesList eList, RaceList rList) {
+	public boolean hasResistCon(MainClass ost) {
 		boolean isSet = false;
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
-				ExtraAbilitiesClass.getAllExtraAbilities(this, cList, eList, rList);
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -2107,9 +2081,9 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean isCasterArcane(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+	public boolean isCasterArcane(MainClass ost) {
 		boolean caster = false;
-		int base[] = getAllArcaneSpellsPerLevel(cList,eList,rList);
+		int base[] = getAllArcaneSpellsPerLevel(ost);
 		for(Integer i: base)
 			if (i > 0) {
 				caster = true;
@@ -2125,9 +2099,9 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean isCasterDivine(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+	public boolean isCasterDivine(MainClass ost) {
 		boolean caster = false;
-		int base[] = getAllDivineSpellsPerLevel(cList,eList,rList);
+		int base[] = getAllDivineSpellsPerLevel(ost);
 		for(Integer i: base)
 			if (i > 0) {
 				caster = true;
@@ -2144,9 +2118,9 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param rList
 	 * @return
 	 */
-	public boolean isSkilled(CharacterClassList cList, ExtraAbilitiesList eList, RaceList rList) {
+	public boolean isSkilled(MainClass ost) {
 		boolean skilled = false;
-		ArrayList<SkillsClass> base = getAllThiefSkillsBase(cList,eList,rList);
+		ArrayList<SkillsClass> base = getAllThiefSkillsBase(ost);
 		for(SkillsClass sC: base)
 			if (sC.getScore() > 0) {
 				skilled = true;
@@ -2155,4 +2129,91 @@ public class PlayerClass implements Serializable, Comparable {
 		return skilled;
 	}
 	
+	/**
+	 * return AC value of specific type AC_NORMAL/etc
+	 * 
+	 * @param acType
+	 * @param cList
+	 * @param eList
+	 * @param rList
+	 * @param aList
+	 * @return
+	 */
+	public int getArmorClassByType(int acType, MainClass ost) {
+		
+		ost.log = "";
+		
+		int shieldAC = 0; //TODO need to get shield AC from shield
+		
+		int abilityACAdjust = 0;
+		
+		int baseAC = 10; //TODO need to get base AC from armor
+		
+		
+		//get spells from ability scores (wisdom/int)	
+		int abilityTotal = 
+				getAbilityScore(ABILITY_DEXTERITY, ost);
+
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = 
+					ost.abilityStatList.getContent().get(abilityTotal);
+			int acNormal = aStat.dexterity.defensiveAdjustment;
+			int acBarb = aStat.dexterity.defensiveAdjustmentBarbarian;
+			abilityACAdjust = hasBarbarianDex(ost)?acBarb:acNormal;
+		}
+		
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
+
+		// iterate over all classes pc might have
+		int classACAdj = 0;
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
+			if (oC!= null) // if no class is set == null
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						int curBaseAC = lE.getAcBase();
+						int curACAdj = lE.getAc();
+						if (curBaseAC < baseAC)
+							baseAC = curBaseAC;
+						if (curACAdj < classACAdj)
+							classACAdj = curACAdj;
+					} else
+						break;
+				} // was high enough level/exp
+		}
+
+		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),ost.raceList);
+		if (myRace != null){
+			if (myRace.getNaturalAC() < baseAC)
+				baseAC = myRace.getNaturalAC();
+		}
+		
+		int acResult = 0;
+		int setAC = Integer.parseInt(getArmorRatings().get(AC_NORMAL));
+		int setACRear = Integer.parseInt(getArmorRatings().get(AC_REAR));
+		int setACShieldless = Integer.parseInt(getArmorRatings().get(AC_SHIELDLESS));
+		
+		switch (acType) {
+		case AC_REAR: {
+			acResult = setACRear==10?(baseAC - classACAdj):setACRear;
+			ost.log = String.format("AC:%d, %d(base) - %d(classAdj)",acResult,baseAC,classACAdj);
+		}break;
+		case AC_SHIELDLESS:{
+			acResult = setACShieldless==10?baseAC + (abilityACAdjust + classACAdj):setACShieldless;
+			ost.log = String.format("AC:%d, %d(base) + (%d(abilityScore) + %d(classAdj))",
+					acResult,baseAC,abilityACAdjust,classACAdj);
+		}break;
+
+		default:{
+			acResult = setAC==10?baseAC + (abilityACAdjust + classACAdj - shieldAC):setAC;
+			ost.log = String.format("AC:%d, %d(base) + (%d(abilityScore) + %d(classAdj) - %d(shield))",
+					acResult,baseAC,abilityACAdjust,classACAdj,shieldAC);
+		}break;
+		}
+
+		return (acResult);
+	}
 }

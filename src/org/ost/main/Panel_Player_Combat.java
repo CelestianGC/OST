@@ -103,29 +103,29 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 
 		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
 		pcMaxHPLabel.setText(String.format("%d", pc.getHpMax()));
-		int iTHACO = pc.getTHACO(ost.characterClassList,
-				ost.extraAbilitiesList, ost.raceList);
+		int iTHACO = pc.getTHACO(ost);
 		pcTHACOLabel.setText(String.format("%d", iTHACO));
 		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
 				+ iTHACO);
 
+
 		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
 			switch (i) {
-			case AC_NORMAL:
-				pcArmorClassLabel.setText(String.format("%s", pc
-						.getArmorRatings().get(i)));
-				pcArmorClassLabel.setToolTipText(AC_NAMES[i]);
-				break;
-			case AC_REAR:
-				pcArmorClassRearLabel.setText(String.format("%s", pc
-						.getArmorRatings().get(i)));
-				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i]);
-				break;
-			case AC_SHIELDLESS:
-				pcArmorClassShieldlessLabel.setText(String.format("%s", pc
-						.getArmorRatings().get(i)));
-				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i]);
-				break;
+			case AC_NORMAL: {
+				int setAC = pc.getArmorClassByType(AC_NORMAL,ost);
+				pcArmorClassLabel.setText(String.format("%d",setAC));
+				pcArmorClassLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
+			}break;
+			case AC_REAR:{
+				int setACRear = pc.getArmorClassByType(AC_REAR,ost);
+				pcArmorClassRearLabel.setText(String.format("%d",setACRear));
+				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
+			}break;
+			case AC_SHIELDLESS:{
+				int setACShieldless = pc.getArmorClassByType(AC_SHIELDLESS,ost);
+				pcArmorClassShieldlessLabel.setText(String.format("%d",setACShieldless));
+			}pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
+			break;
 
 			default:
 				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
@@ -137,8 +137,7 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		//		pcCombatMatrixTable.getTableHeader().setFont(fFont);
 		//		pcCombatMatrixTable.getTableHeader().setBackground(Color.yellow);
 		//
-		int attackList[] = pc.getMatrix(ost.characterClassList,
-				ost.extraAbilitiesList, ost.raceList);
+		int attackList[] = pc.getMatrix(ost);
 		//
 		//		for (int i = 0; i < attackList.length; i++) {
 		//			//			int acNumber = (10 - i);
@@ -151,7 +150,7 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 
 		boolean bFlip = false;
 
-		JLabel target = new JLabel(String.format("Target"));
+		JLabel target = new JLabel(String.format("AC"));
 		JPanel pTarget = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		pTarget.setBackground(new Color(204, 204, 204));
 		target.setToolTipText("Target Armor Class");

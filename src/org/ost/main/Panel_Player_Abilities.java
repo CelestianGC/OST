@@ -73,8 +73,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		// abilties
 		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
-				.getAllAbilityScoreAdjustments(ost.characterClassList,
-						ost.extraAbilitiesList, ost.raceList);
+				.getAllAbilityScoreAdjustments(ost);
 
 		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
 			AbilityScoreClass aJ = abilityScoresAdj.get(i);
@@ -106,11 +105,9 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 					//test for fighter/barb features in class and show just that
 					int nConBonus = aStat.consitution.hitpointAdjustment;
-					if (pc.hasBarbarianCon(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList))
+					if (pc.hasBarbarianCon(ost))
 						nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-					if (pc.hasFighterCon(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList))
+					if (pc.hasFighterCon(ost))
 						nConBonus = aStat.consitution.hitpointAdjustmentFighter;
 					pcHPAdjLabel.setText(String.format("%d", nConBonus));
 
@@ -127,8 +124,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 							aStat.dexterity.reactionAdjustment));
 					//sort out if they get barb bonuses
 					int nDexBonus = aStat.dexterity.defensiveAdjustment;
-					if (pc.hasBarbarianDex(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList))
+					if (pc.hasBarbarianDex(ost))
 						nDexBonus = aStat.dexterity.defensiveAdjustmentBarbarian;
 					pcDefenseAdjLabel.setText(String.format("%d", nDexBonus));
 
@@ -138,8 +134,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 							abilityTotal));
 					//bonus arcane spells
 					String magicSpells = "";
-					if (pc.isCasterArcane(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList))
+					if (pc.isCasterArcane(ost))
 						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
 							magicSpells = magicSpells
 									+ String.format(
@@ -167,9 +162,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					break;
 				case ABILITY_STRENGTH: {
 					pcStrengthLabel.setText(String.format("%d", abilityTotal));
-					boolean hasPercentileStrength = pc.hasPercentileStrength(
-							ost.characterClassList, ost.extraAbilitiesList,
-							ost.raceList);
+					boolean hasPercentileStrength = pc.hasPercentileStrength(ost);
 					int nBBars, nHit, nDmg, nOpen, nNumDice, nSizeDice, nWeight = 0;
 					nBBars = aStat.strength.bendBars;
 					nHit = aStat.strength.hitProbability;
@@ -277,8 +270,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					pcWisdomLabel.setText(String.format("%d", abilityTotal));
 					//divine spells
 					String clericSpells = "";
-					if (pc.isCasterDivine(ost.characterClassList,
-							ost.extraAbilitiesList, ost.raceList))
+					if (pc.isCasterDivine(ost))
 						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
 							clericSpells = clericSpells
 									+ String.format(

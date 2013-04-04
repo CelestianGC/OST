@@ -39,11 +39,8 @@ public class Panel_Player_DivineSpells extends javax.swing.JPanel {
 		pc = oPlayer;
 
 		// divine spells
-		int divineBase[] = pc.getAllDivineSpellsPerLevel(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList);
-		int divineAdj[] = pc.getAllDivineBonusSpellsPerLevel(
-				ost.characterClassList, ost.extraAbilitiesList, ost.raceList,
-				ost.abilityStatList);
+		int divineBase[] = pc.getAllDivineSpellsPerLevel(ost);
+		int divineAdj[] = pc.getAllDivineBonusSpellsPerLevel(ost);
 
 		divineSpellsPanel.removeAll();
 

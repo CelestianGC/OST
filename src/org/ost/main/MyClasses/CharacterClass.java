@@ -1136,9 +1136,9 @@ public class CharacterClass implements Comparable{
 		 * @param cList
 		 * @return
 		 */
-		public static CharacterClass getClassByMyID(String myID, CharacterClassList cList) {
+		public static CharacterClass getClassByMyID(String myID, MainClass ost) {
 			CharacterClass oFound = null;
-			for (CharacterClass oC: cList.getContent()) 
+			for (CharacterClass oC: ost.characterClassList.getContent()) 
 				if (oC.getMyID().equalsIgnoreCase(myID)) {
 					oFound = oC;
 					break;

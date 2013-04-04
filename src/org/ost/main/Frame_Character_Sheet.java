@@ -97,8 +97,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		mainPanel.add(playerCombatPanel, gbCombat);
 
 		// skills?
-		if (pc.isSkilled(ost.characterClassList, ost.extraAbilitiesList,
-				ost.raceList)) {
+		if (pc.isSkilled(ost)) {
 			Panel_Player_Skills playerSkillsPanel = new Panel_Player_Skills(
 					ost, pc);
 			GridBagConstraints gbSkills = new java.awt.GridBagConstraints();
@@ -110,8 +109,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		}
 
 		// arcane spells
-		if (pc.isCasterArcane(ost.characterClassList, ost.extraAbilitiesList,
-				ost.raceList)) {
+		if (pc.isCasterArcane(ost)) {
 			Panel_Player_ArcaneSpells playerArcaneSpellsPanel = new Panel_Player_ArcaneSpells(
 					ost, pc);
 			GridBagConstraints gbArcane = new java.awt.GridBagConstraints();
@@ -123,8 +121,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		}
 
 		// divine spells
-		if (pc.isCasterDivine(ost.characterClassList, ost.extraAbilitiesList,
-				ost.raceList)) {
+		if (pc.isCasterDivine(ost)) {
 			Panel_Player_DivineSpells playerDivineSpellsPanel = new Panel_Player_DivineSpells(
 					ost, pc);
 			GridBagConstraints gbDivine = new java.awt.GridBagConstraints();
