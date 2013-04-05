@@ -1,8 +1,282 @@
 <entries>
   <ExtraAbilitiesClass>
+    <myID>124ea5de-8d64-4e99-b86b-2768d604d020</myID>
+    <name>dwarf: infravision</name>
+    <description>can see in the infrared spectrum up to 60ft in the dark.</description>
+    <bonusWeaponProfs>0</bonusWeaponProfs>
+    <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
+    <thiefSkillsBase>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Pick Pockets</name>
+        <abbrev>PP</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Open Locks</name>
+        <abbrev>OL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Find/Remove Traps</name>
+        <abbrev>F/R</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Move Silently</name>
+        <abbrev>MS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hide in Shadows</name>
+        <abbrev>HS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hear Noise</name>
+        <abbrev>HN</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Climb Walls</name>
+        <abbrev>CW</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Read Languages</name>
+        <abbrev>RL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+    </thiefSkillsBase>
+    <thiefSkillsBonus>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Pick Pockets</name>
+        <abbrev>PP</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Open Locks</name>
+        <abbrev>OL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Find/Remove Traps</name>
+        <abbrev>F/R</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Move Silently</name>
+        <abbrev>MS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hide in Shadows</name>
+        <abbrev>HS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hear Noise</name>
+        <abbrev>HN</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Climb Walls</name>
+        <abbrev>CW</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Read Languages</name>
+        <abbrev>RL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+    </thiefSkillsBonus>
+    <saves>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+    </saves>
+    <saveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </saveAdjustments>
+    <abilityScoreAdjustments>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </abilityScoreAdjustments>
+    <mageSpellsBase>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mageSpellsBase>
+    <mageSpellsBonus>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mageSpellsBonus>
+    <clericSpellsBase>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </clericSpellsBase>
+    <clericSpellsBonus>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </clericSpellsBonus>
+    <type>1</type>
+    <fighterConBonus>false</fighterConBonus>
+    <barbarianConBonus>false</barbarianConBonus>
+    <barbarianDexBonus>false</barbarianDexBonus>
+    <allowedWeaponMastery>false</allowedWeaponMastery>
+    <allowedSpecialize>false</allowedSpecialize>
+    <allowedDoubeSpecialize>false</allowedDoubeSpecialize>
+    <allowedIronCon>false</allowedIronCon>
+    <allowedResistanceCon>false</allowedResistanceCon>
+  </ExtraAbilitiesClass>
+  <ExtraAbilitiesClass>
     <myID>8e600505-d489-4d72-a17d-f0276565000b</myID>
     <name>dwarf: poison and magic resistance</name>
-    <description>Enter Description of this new ability.</description>
+    <description>bonus to poison, rod/staff/wand and spell saves. +1 for every 3.5 constitution.</description>
     <bonusWeaponProfs>0</bonusWeaponProfs>
     <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
     <thiefSkillsBase>
@@ -274,9 +548,284 @@
     <allowedResistanceCon>true</allowedResistanceCon>
   </ExtraAbilitiesClass>
   <ExtraAbilitiesClass>
+    <myID>a877bfcf-a6a6-474a-8368-af63d0b32618</myID>
+    <name>dwarf: sliding shifting passages</name>
+    <description>Detect grade or slope in passage, upwards or downwards 75%. Detect new construction 75%. Detect sliding or shifting walls or rooms 66%. Detect traps involving pits, falling blocks and other stonework 50%. Determine approximote depth underground 50%.
+</description>
+    <bonusWeaponProfs>0</bonusWeaponProfs>
+    <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
+    <thiefSkillsBase>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Pick Pockets</name>
+        <abbrev>PP</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Open Locks</name>
+        <abbrev>OL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Find/Remove Traps</name>
+        <abbrev>F/R</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Move Silently</name>
+        <abbrev>MS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hide in Shadows</name>
+        <abbrev>HS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hear Noise</name>
+        <abbrev>HN</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Climb Walls</name>
+        <abbrev>CW</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Read Languages</name>
+        <abbrev>RL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+    </thiefSkillsBase>
+    <thiefSkillsBonus>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Pick Pockets</name>
+        <abbrev>PP</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Open Locks</name>
+        <abbrev>OL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Find/Remove Traps</name>
+        <abbrev>F/R</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Move Silently</name>
+        <abbrev>MS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hide in Shadows</name>
+        <abbrev>HS</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Hear Noise</name>
+        <abbrev>HN</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Climb Walls</name>
+        <abbrev>CW</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+      <org.ost.main.MyClasses.SkillsClass>
+        <name>Read Languages</name>
+        <abbrev>RL</abbrev>
+        <score>0</score>
+        <min>-200</min>
+        <max>200</max>
+        <allowed>true</allowed>
+      </org.ost.main.MyClasses.SkillsClass>
+    </thiefSkillsBonus>
+    <saves>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+    </saves>
+    <saveAdjustments>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </saveAdjustments>
+    <abilityScoreAdjustments>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Strength</name>
+        <abbrev>STR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Intelligence</name>
+        <abbrev>INT</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Wisdom</name>
+        <abbrev>WIS</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Dexterity</name>
+        <abbrev>DEX</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Constitution</name>
+        <abbrev>CON</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Charisma</name>
+        <abbrev>CHR</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+      <org.ost.main.MyClasses.AbilityScoreClass>
+        <score>0</score>
+        <percentile>0</percentile>
+        <name>Comeliness</name>
+        <abbrev>COM</abbrev>
+        <min>-25</min>
+        <max>25</max>
+        <primeRequisite>false</primeRequisite>
+        <allowExceptional>false</allowExceptional>
+      </org.ost.main.MyClasses.AbilityScoreClass>
+    </abilityScoreAdjustments>
+    <mageSpellsBase>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mageSpellsBase>
+    <mageSpellsBonus>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </mageSpellsBonus>
+    <clericSpellsBase>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </clericSpellsBase>
+    <clericSpellsBonus>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </clericSpellsBonus>
+    <type>1</type>
+    <fighterConBonus>false</fighterConBonus>
+    <barbarianConBonus>false</barbarianConBonus>
+    <barbarianDexBonus>false</barbarianDexBonus>
+    <allowedWeaponMastery>false</allowedWeaponMastery>
+    <allowedSpecialize>false</allowedSpecialize>
+    <allowedDoubeSpecialize>false</allowedDoubeSpecialize>
+    <allowedIronCon>false</allowedIronCon>
+    <allowedResistanceCon>false</allowedResistanceCon>
+  </ExtraAbilitiesClass>
+  <ExtraAbilitiesClass>
     <myID>c104f2ff-e619-44de-96ac-a5137655247b</myID>
     <name>fighter: con bonus</name>
-    <description>x-ability description</description>
+    <description>extra hitpoint bonus for high constitution.</description>
     <bonusWeaponProfs>0</bonusWeaponProfs>
     <bonusNonWeaponProfs>0</bonusNonWeaponProfs>
     <thiefSkillsBase>

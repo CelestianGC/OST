@@ -552,6 +552,67 @@ public class ExtraAbilitiesClass implements Comparable{
 	public static ArrayList<ExtraAbilitiesClass> getAllExtraAbilities(
 			PlayerClass pc, MainClass ost) {
 
+		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<ExtraAbilitiesClass>();
+
+		ArrayList<ExtraAbilitiesClass> extraList1 = getRaceExtraAbilities(pc, ost);
+		ArrayList<ExtraAbilitiesClass> extraList2 = getClassExtraAbilities(pc, ost);
+
+		// check that we do not have duplicates and place into array
+		for(ExtraAbilitiesClass oE: extraList1) 
+			if (!extraList2.contains(oE))
+				extraList.add(oE);
+		for(ExtraAbilitiesClass oE: extraList2) 
+			if (!extraList1.contains(oE))
+				extraList.add(oE);
+		
+//
+//		if (pc != null) {
+//			// iterate over all classes pc might have
+//			for (PCClass pC: pc.getMyClass()) {
+//				// get CharacterClass object
+//				CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
+//				if (oC!= null) // if no class is set == null
+//					for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+//						// get saves from level settings
+//						if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+//							// now get from extra-abilities in level
+//							// and store in extraList
+//							ArrayList<ExtraAbilitiesClass> extraLevelList =
+//									ExtraAbilitiesClass.getAllowed(lE.getBonusAbilities(), ost.extraAbilitiesList);
+//							for (ExtraAbilitiesClass eC: extraLevelList) {
+//								if (!extraList.contains(eC)) 
+//									extraList.add(eC);
+//							}
+//						} // was high enough level/exp
+//
+//					}
+//			}
+//			// add race extra-abilities to the running total of
+//			// extra-abilities then test for saves
+//			RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(),ost.raceList);
+//			if (myRace != null) {
+//				ArrayList<ExtraAbilitiesClass> extraLevelList =
+//						ExtraAbilitiesClass.getAllowed(myRace.getBonusAbilities(), ost.extraAbilitiesList);
+//				for (ExtraAbilitiesClass eC: extraLevelList) 
+//					if (!extraList.contains(eC)) 
+//						extraList.add(eC);
+//
+//			}
+//		}
+
+		return(extraList);
+	}
+
+	/**
+	 * return arraylist of extra abilities granted by Class/Levels
+	 * 
+	 * @param pc
+	 * @param ost
+	 * @return
+	 */
+	public static ArrayList<ExtraAbilitiesClass> getClassExtraAbilities(
+			PlayerClass pc, MainClass ost) {
+
 		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
 
 		if (pc != null) {
@@ -575,6 +636,23 @@ public class ExtraAbilitiesClass implements Comparable{
 
 					}
 			}
+		}
+		return(extraList);
+	}
+
+	/**
+	 * return array of extra abilities granted by race
+	 * 
+	 * @param pc
+	 * @param ost
+	 * @return
+	 */
+	public static ArrayList<ExtraAbilitiesClass> getRaceExtraAbilities(
+			PlayerClass pc, MainClass ost) {
+
+		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
+
+		if (pc != null) {
 			// add race extra-abilities to the running total of
 			// extra-abilities then test for saves
 			RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(),ost.raceList);

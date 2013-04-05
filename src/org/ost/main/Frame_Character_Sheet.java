@@ -132,6 +132,16 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 			mainPanel.add(playerDivineSpellsPanel, gbDivine);
 		}
 
+		// features/extra abilities
+		Panel_Player_Features playerFeatures = 
+				new Panel_Player_Features(ost, pc);
+		GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
+		gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gbFeatures.gridx = 0;
+		gbFeatures.gridy = 8;
+		gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
+		mainPanel.add(playerFeatures, gbFeatures);
+
 		mainPanel.repaint();
 		pack();
 	}

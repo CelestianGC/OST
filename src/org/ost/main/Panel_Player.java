@@ -139,6 +139,16 @@ public class Panel_Player extends javax.swing.JPanel {
 			add(playerDivineSpellsPanel, gbDivine);
 		}
 
+		// features/extra abilities
+			Panel_Player_Features playerFeatures = 
+					new Panel_Player_Features(ost, pc);
+			GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
+			gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
+			gbFeatures.gridx = 0;
+			gbFeatures.gridy = 8;
+			gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
+			add(playerFeatures, gbFeatures);
+
 		repaint();
 	}
 
