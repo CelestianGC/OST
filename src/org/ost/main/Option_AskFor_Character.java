@@ -512,6 +512,9 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			SimpleDialog.showError("Value must be a number.");
 		}
 
+		currentCharacter.setTotalExperience(
+				currentCharacter.getTotalExperience()+nEXP);
+		
 		updateLevelDifferential(nEXP, true);
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
@@ -544,7 +547,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	 * @param addEXP
 	 */
 	private void updateLevelDifferential(int nEXP, boolean addEXP) {
-		if (nEXP != 0 || !addEXP) {
+		if (nEXP != 0 || !addEXP) { // either we have exp to adjust or we want to force re-roll
 			int classCount = currentCharacter.getMyClass().size();
 			nEXP /= classCount;
 			for (PCClass pC : currentCharacter.getMyClass()) {
@@ -564,9 +567,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 						ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
 								+ "\n");
 						// TODO delevel();
-						pC.deLevel(ost.characterClassList,
-								ost.extraAbilitiesList, ost.raceList,
-								ost.abilityStatList, ost);
+						pC.deLevel(ost);
 					}
 
 				}
@@ -597,11 +598,21 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					o.getMyID(), 0, false, null);
 			currentCharacter.getMyClass().add(e);
 		}
+		
 		// we reset classes so reset hp and they are rerolled
-		// when character levels up
-		currentCharacter.setHpCurrent(0);
-		currentCharacter.setHpMax(0);
+		if (currentCharacter.getMyClass().size() > 0) {
+			for (PCClass pC : currentCharacter.getMyClass())
+				pC.setLevel(0);// set level to 0 so it re-levels character up
+			currentCharacter.setHpCurrent(0);
+			currentCharacter.setHpMax(0);
 
+			updateLevelDifferential(currentCharacter.getTotalExperience(), true);
+			// set these on the dialog or we lose them if they changed
+			hpSpinner.setValue(currentCharacter.getHpMax());
+			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			levelLabel.setText(currentCharacter
+					.getMyLevelName(ost));
+		}
 		updateFromCurrentValues();
 		//TODO update panels
 		updatePanels();

@@ -137,7 +137,7 @@ public class CharacterClass implements Comparable{
 			
 			public LevelClass(int level) {
 				this(level,0,20,0,
-						0,1,6,
+						10,1,6,
 						0,0,
 						0,new int[2],
 						new int[2],	new int[MAX_MATRIX],new ArrayList<Integer>(),new ArrayList<Integer>(),

@@ -74,6 +74,8 @@ public class PlayerClass implements Serializable, Comparable {
 	
 	public int genderType;
 	
+	public int totalExperience;
+	
 	/**
 	 * 
 	 */
@@ -132,6 +134,8 @@ public class PlayerClass implements Serializable, Comparable {
 			getMySaves().add(0);
 						
 		setMyAlignmentType(0);
+		
+		setTotalExperience(0);
 		
 		setMyID(UUID.randomUUID().toString());
 	}
@@ -316,14 +320,13 @@ public class PlayerClass implements Serializable, Comparable {
 			}
 		}
 		
-		public void deLevel(CharacterClassList cList,
-				ExtraAbilitiesList eList, RaceList rList, AbilityStatList aList, MainClass ost) {
+		public void deLevel(MainClass ost) {
 			
 			if (getMyClass().size() > 0) {
 				int classCount = getMyClass().size();
 				int nRolledHP = 0;
 
-				CharacterClass cC = getClassByID(cList);
+				CharacterClass cC = getClassByID(ost.characterClassList);
 
 				if (getHdRolls() == null)
 					setHdRolls(new ArrayList<Integer>());
@@ -341,7 +344,7 @@ public class PlayerClass implements Serializable, Comparable {
 
 						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
 						AbilityStatClass aStat = 
-								aList.getContent().get(nConScore);
+								ost.abilityStatList.getContent().get(nConScore);
 						int nConBonus = aStat.consitution.hitpointAdjustment;
 						if (hasBarbarianCon(ost))
 							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
@@ -1211,6 +1214,19 @@ public class PlayerClass implements Serializable, Comparable {
 	 */
 	public void setGenderType(int genderType) {
 		this.genderType = genderType;
+	}
+	
+	/**
+	 * @return the totalExperience
+	 */
+	public int getTotalExperience() {
+		return totalExperience;
+	}
+	/**
+	 * @param totalExperience the totalExperience to set
+	 */
+	public void setTotalExperience(int totalExperience) {
+		this.totalExperience = totalExperience;
 	}
 	//--------------------------------------------------------------
 	//TODO finish these functions

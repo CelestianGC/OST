@@ -43,10 +43,6 @@ public class MainClass implements Serializable {
 	public boolean initGroup = false;
 	public int initDice = 10;
 	
-//	public boolean creatureHPMax = false;
-//	public boolean creatureHP80 = false;
-//	public boolean creatureHPAvg = false;
-//	public boolean creatureHPNormal = true;
 	public int creatureHPType = GENERATION_HP_NORMAL;
 	
 	public Properties settings = new Properties();
