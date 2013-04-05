@@ -2,7 +2,7 @@
   <RaceClass>
     <myID>e0b03f37-7d17-4e0b-8ff9-bd773bde9696</myID>
     <name>Dwarf</name>
-    <description>Enter Description of this new race.</description>
+    <description>Constitution + 1; Charisma -1, Languages: dwarven, gnome, goblin, kobold, orcish and common, 60&apos; infravision in the dark, +1 to hit against half-orcs, goblins, hobgoblins, or orcs. -4 to AC for the dwarf against ogres, trolls, ogre magi, giants, and/or titans, Detect grade or slope in passage, upwards or downwards 75%. Detect new construction 75%. Detect sliding or shifting walls or rooms 66%. Detect traps involving pits, falling blocks and other stonework 50%. Determine approximate depth underground 50%.</description>
     <minAbility>
       <org.ost.main.MyClasses.AbilityScoreClass>
         <score>8</score>
@@ -286,9 +286,7 @@
       </org.ost.main.MyClasses.SkillsClass>
     </thiefAbiltyAdjustments>
     <bonusAbilities>
-      <string>124ea5de-8d64-4e99-b86b-2768d604d020</string>
       <string>8e600505-d489-4d72-a17d-f0276565000b</string>
-      <string>a877bfcf-a6a6-474a-8368-af63d0b32618</string>
     </bonusAbilities>
     <allowedClasses/>
     <moveRate>6</moveRate>
@@ -299,7 +297,7 @@
   <RaceClass>
     <myID>1ced0a60-bbae-4956-b6d5-4a9f4bd6b5fe</myID>
     <name>Elf</name>
-    <description>Enter Description of this new race.</description>
+    <description>Dexterity + 1; Constitution -1, Languages: elvish, gnome, holfling, goblin, hobgoblin, orcish, gnoll and common, 90% resistonce to sleep and charm spells, +1 to hit with all bows except crossbows, +1 to hit with short and longswords, 60&apos; infravision in the dark, 10&apos; of concealed door discovered 1 in 6, searching for secret doors 2 in 6 and concealed 3 in 6, If alone or 90&apos; distant and not in metal armor moves so silently that he will surprise monsters 66% (d6, 1-4) of the time unless a door must be opened reducing the chance to 33% (d6, 1-2).</description>
     <minAbility>
       <org.ost.main.MyClasses.AbilityScoreClass>
         <score>1</score>

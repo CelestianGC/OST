@@ -177,7 +177,7 @@ public class Option_List_ExtraAbilities extends javax.swing.JDialog {
 					if (bDelete
 							|| SimpleDialog.AskYN(this, "Remove " + sRem + "?")) {
 						bDelete = true;
-						ost.raceList.getContent().remove(o);
+						ost.extraAbilitiesList.getContent().remove(o);
 						extraListModel.removeElement(o);
 					}
 				}

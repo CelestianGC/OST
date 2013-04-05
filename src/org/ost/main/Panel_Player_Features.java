@@ -43,10 +43,12 @@ import javax.swing.JPanel;
 
 import org.ost.main.MyClasses.AbilityScoreClass;
 import org.ost.main.MyClasses.AbilityStatClass;
+import org.ost.main.MyClasses.CharacterClass;
 import org.ost.main.MyClasses.ExtraAbilitiesClass;
 import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.SkillsClass;
+import org.ost.main.MyClasses.PlayerClass.PCClass;
 
 /**
  *
@@ -75,6 +77,18 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 
 		String text = "* Class: ";
 		featuresTextArea.append(text);
+		for(PCClass cC: pc.getMyClass()) {
+			CharacterClass oC = cC.getClassByID(ost.characterClassList);
+			if (oC != null) {
+				featuresTextArea.append(oC.getDescription());
+				if (pc.getMyClass().get(pc.getMyClass().size() - 1) != cC)//not last object
+					text = ", ";
+				else if (abilitiesClass.size() > 0) // has abilities to add
+					text = ", ";
+				else text = "\n"; // nothing else
+				featuresTextArea.append(text);
+			}
+		}
 		if (abilitiesClass.size() > 0) {
 			for (ExtraAbilitiesClass oE : abilitiesClass) {
 				text = String.format("%s", oE.getDescription());
@@ -87,25 +101,34 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 				featuresTextArea.append(text);
 			}
 		} else {
-			featuresTextArea.append("None\n");
+//			featuresTextArea.append("None\n");
+			featuresTextArea.append("\n");
 		}
 
 		// race based
+		RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(), ost.raceList);
+		
 		ArrayList<ExtraAbilitiesClass> abilitiesRace = ExtraAbilitiesClass
 				.getRaceExtraAbilities(pc, ost);
 		text = "* Race: ";
-		featuresTextArea.append(text);
-		if (abilitiesRace.size() > 0) {
-			for (ExtraAbilitiesClass oE : abilitiesRace) {
-				text = String.format("%s", oE.getDescription());
-				if (abilitiesRace.get(abilitiesRace.size() - 1) != oE)//not last object
-					text += ", ";
-				featuresTextArea.append(text);
+		if (myRace != null) {
+			featuresTextArea.append(text);
+			if (myRace.getDescription().length() > 0)
+				featuresTextArea.append(myRace.getDescription()+
+						(abilitiesRace.size()>0?", ":""));
+			if (abilitiesRace.size() > 0) {
+				for (ExtraAbilitiesClass oE : abilitiesRace) {
+					text = String.format("%s", oE.getDescription());
+					if (abilitiesRace.get(abilitiesRace.size() - 1) != oE)//not last object
+						text += ", ";
+					featuresTextArea.append(text);
+				}
+			} else {
+				if (myRace.getDescription().length() <= 0) 
+					featuresTextArea.append("None\n");
 			}
-		} else {
-			featuresTextArea.append("None\n");
 		}
-
+		
 		featuresTextArea.revalidate();
 		featuresPanel.revalidate();
 		repaint();

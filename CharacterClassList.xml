@@ -2,7 +2,7 @@
   <CharacterClass>
     <myID>62f6dddd-d685-4295-9bb1-490e06ec42f4</myID>
     <name>Cleric</name>
-    <description>Enter Description of this new class.</description>
+    <description>Cleric: Turn undead, cast divine spells</description>
     <abbreviation>C</abbreviation>
     <levelMax>20</levelMax>
     <percentileStrength>false</percentileStrength>
@@ -5831,7 +5831,7 @@
   <CharacterClass>
     <myID>167fc092-1fa4-450f-9e44-b0baaab45aae</myID>
     <name>Fighter</name>
-    <description>Enter Description of this new class.</description>
+    <description>Fighter: percentile strength, heavy armor, any weapon, lots of health</description>
     <abbreviation>F</abbreviation>
     <levelMax>20</levelMax>
     <percentileStrength>true</percentileStrength>
@@ -11662,7 +11662,7 @@
   <CharacterClass>
     <myID>49af0d05-917a-47e6-b11e-4a2883ecd360</myID>
     <name>Magic-User</name>
-    <description>Enter Description of this new class.</description>
+    <description>Magic-User: Cast arcane spells</description>
     <abbreviation>M</abbreviation>
     <levelMax>20</levelMax>
     <percentileStrength>false</percentileStrength>
@@ -17494,7 +17494,7 @@
   <CharacterClass>
     <myID>eee8f26c-45f9-498a-8f5b-f9db894e3563</myID>
     <name>Monk</name>
-    <description>Enter Description of this new class.</description>
+    <description>Monk: Good with hand to hand combat</description>
     <abbreviation>MO</abbreviation>
     <levelMax>17</levelMax>
     <percentileStrength>false</percentileStrength>
@@ -22467,7 +22467,7 @@
   <CharacterClass>
     <myID>6d0987a3-01d6-44c5-8ff9-74147abd1fe2</myID>
     <name>Paladin</name>
-    <description>Enter Description of this new class.</description>
+    <description>Paladin: protection from evil 10&apos;, immune to disease, cure disease once a week, lay on hands to heal 2*Level health once per day</description>
     <abbreviation>P</abbreviation>
     <levelMax>20</levelMax>
     <percentileStrength>true</percentileStrength>
@@ -28300,7 +28300,7 @@
   <CharacterClass>
     <myID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</myID>
     <name>Thief</name>
-    <description>Enter Description of this new class.</description>
+    <description>Thief: Thievery skills, backstab</description>
     <abbreviation>T</abbreviation>
     <levelMax>20</levelMax>
     <percentileStrength>false</percentileStrength>
