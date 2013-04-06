@@ -44,9 +44,6 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		// added this incase we updated panel
 		pc = oPlayer;
 
-		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
-		// portrait
-
 		// details
 		pcCharacterNameLabel.setText(pc.getName());
 		pcPlayerNameLabel.setText(pc.getNamePlayer());
@@ -57,8 +54,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcExperienceTotalsLabel.setText(pc
 				.getMyExperienceName(ost.characterClassList));
 		pcMoveBaseLabel.setText(pc.getMoveRate());
-		if (race != null)
-			pcMoveBaseLabel.setText(String.format("%d", race.getMoveRate()));
+		pcMoveBaseLabel.setText(String.format("%d", pc.getModifiedMoveRate(ost)));
 
 		repaint();
 	}

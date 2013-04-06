@@ -100,6 +100,8 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		acBaseField = new javax.swing.JFormattedTextField();
 		jLabel2 = new javax.swing.JLabel();
 		acAdjustmentField = new javax.swing.JFormattedTextField();
+		moveLabel14 = new javax.swing.JLabel();
+		moveRateField = new javax.swing.JFormattedTextField();
 		levelPanel1 = new javax.swing.JPanel();
 		jLabel13 = new javax.swing.JLabel();
 		expReqField = new javax.swing.JFormattedTextField();
@@ -364,7 +366,7 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		armorClassPanel.setBackground(new java.awt.Color(153, 153, 153));
 		armorClassPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Armor Class",
+						1, true), "Armor Class & Move Rate",
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
@@ -379,11 +381,25 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		armorClassPanel.add(acBaseField);
 
 		jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel2.setText("adjustment");
+		jLabel2.setText("+/-");
+		jLabel2.setToolTipText("Armor adjustment (minus is lower AC)");
 		armorClassPanel.add(jLabel2);
 
 		acAdjustmentField.setPreferredSize(new java.awt.Dimension(25, 22));
 		armorClassPanel.add(acAdjustmentField);
+
+		moveLabel14.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		moveLabel14.setText("move");
+		moveLabel14.setToolTipText("Armor adjustment (minus is lower AC)");
+		armorClassPanel.add(moveLabel14);
+
+		moveRateField
+				.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(
+						new javax.swing.text.NumberFormatter(
+								java.text.NumberFormat.getIntegerInstance())));
+		moveRateField.setInputVerifier(verifier);
+		moveRateField.setPreferredSize(new java.awt.Dimension(25, 22));
+		armorClassPanel.add(moveRateField);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
@@ -760,15 +776,15 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 
 		pack();
 	}// </editor-fold>
-		//GEN-END:initComponents
+	//GEN-END:initComponents
 
 	private void autoMatrixLabelMouseClicked(java.awt.event.MouseEvent evt) {
 		// TODO add your handling code here:
 		if (evt.getButton() == MouseEvent.BUTTON1) {
 			int nThaco = MyParse.formattedIntegerParse(thacoField.getText());
 			int nStart = nThaco - 10;
-			for (int i = 0;i<MAX_MATRIX;i++) 
-				attackMatrixTable.setValueAt(nStart+i, i, 1);
+			for (int i = 0; i < MAX_MATRIX; i++)
+				attackMatrixTable.setValueAt(nStart + i, i, 1);
 		}
 	}
 
@@ -965,6 +981,8 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 		thacoField.setValue(currentLevel.getThaco());
 		acAdjustmentField.setValue(currentLevel.getAc());
 		acBaseField.setValue(currentLevel.getAcBase());
+		moveRateField.setValue(currentLevel.getMoveBase());
+		
 		hdNumberField.setValue(currentLevel.getHitDiceNumber());
 		hdSizeField.setValue(currentLevel.getHitDiceSize());
 		hdBonusField.setValue(currentLevel.getHitPointBonus());
@@ -1006,12 +1024,16 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 					.getText()));
 			currentLevel.setAcBase(MyParse.formattedIntegerParse(acBaseField
 					.getText()));
+			currentLevel.setMoveBase(MyParse.formattedIntegerParse(moveRateField
+					.getText()));
+
 			currentLevel.setHitDiceNumber(MyParse
 					.formattedIntegerParse(hdNumberField.getText()));
 			currentLevel.setHitDiceSize(MyParse
 					.formattedIntegerParse(hdSizeField.getText()));
 			currentLevel.setHitPointBonus(MyParse
 					.formattedIntegerParse(hdBonusField.getText()));
+			
 			currentLevel.setWeaponProfAdditional((int) weaponProfsSpinner
 					.getValue());
 			currentLevel.setNonWeaponProfAdditional((int) nonWeaponProfSpinner
@@ -1140,6 +1162,8 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 	private javax.swing.JPanel matrixPanel;
 	private javax.swing.JSpinner maxAtkPerRound1Spinner;
 	private javax.swing.JSpinner maxAtkPerRound2Spinner;
+	private javax.swing.JLabel moveLabel14;
+	private javax.swing.JFormattedTextField moveRateField;
 	private javax.swing.JLabel nameLabel;
 	private javax.swing.JSpinner nonWeaponProfSpinner;
 	private javax.swing.JButton nonweaponBonusButton;

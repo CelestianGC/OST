@@ -166,11 +166,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.setLayout(new java.awt.GridBagLayout());
 
 		jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2,
+				javax.swing.BoxLayout.LINE_AXIS));
 
 		pcSavePoisonLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSavePoisonLabel
+				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		pcSavePoisonLabel.setText("00");
+		pcSavePoisonLabel
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		jPanel2.add(pcSavePoisonLabel);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -196,12 +200,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.add(jPanel3, gridBagConstraints);
 
 		jPanel4.setBackground(new java.awt.Color(153, 153, 153));
-		jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel4.setLayout(new java.awt.BorderLayout());
 
 		pcSavePolyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSavePolyLabel
+				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		pcSavePolyLabel.setText("00");
-		jPanel4.add(pcSavePolyLabel);
+		pcSavePolyLabel
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		jPanel4.add(pcSavePolyLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -226,12 +233,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.add(jPanel5, gridBagConstraints);
 
 		jPanel6.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel6.setLayout(new java.awt.BorderLayout());
 
 		pcSaveRodLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveRodLabel
+				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		pcSaveRodLabel.setText("00");
-		jPanel6.add(pcSaveRodLabel);
+		pcSaveRodLabel
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		jPanel6.add(pcSaveRodLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -241,12 +251,11 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.add(jPanel6, gridBagConstraints);
 
 		jPanel7.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel7.setLayout(new java.awt.BorderLayout());
 
 		rodSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		rodSaveLabel.setText("Rod/Staff/Wand");
-		jPanel7.add(rodSaveLabel);
+		jPanel7.add(rodSaveLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
@@ -256,12 +265,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.add(jPanel7, gridBagConstraints);
 
 		jPanel8.setBackground(new java.awt.Color(153, 153, 153));
-		jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel8.setLayout(new java.awt.BorderLayout());
 
 		pcSaveBreathLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveBreathLabel
+				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		pcSaveBreathLabel.setText("00");
-		jPanel8.add(pcSaveBreathLabel);
+		pcSaveBreathLabel
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		jPanel8.add(pcSaveBreathLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -286,12 +298,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		savesPanel.add(jPanel9, gridBagConstraints);
 
 		jPanel10.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel10.setLayout(new java.awt.BorderLayout());
 
 		pcSaveSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcSaveSpellsLabel
+				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		pcSaveSpellsLabel.setText("00");
-		jPanel10.add(pcSaveSpellsLabel);
+		pcSaveSpellsLabel
+				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		jPanel10.add(pcSaveSpellsLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -321,7 +336,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel1);
 		jPanel1.setLayout(jPanel1Layout);
 		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 77,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
 				Short.MAX_VALUE));
 		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
@@ -342,7 +357,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel12);
 		jPanel12.setLayout(jPanel12Layout);
 		jPanel12Layout.setHorizontalGroup(jPanel12Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 77,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
 				Short.MAX_VALUE));
 		jPanel12Layout.setVerticalGroup(jPanel12Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
@@ -363,7 +378,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel13);
 		jPanel13.setLayout(jPanel13Layout);
 		jPanel13Layout.setHorizontalGroup(jPanel13Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 77,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
 				Short.MAX_VALUE));
 		jPanel13Layout.setVerticalGroup(jPanel13Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
@@ -384,7 +399,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel14);
 		jPanel14.setLayout(jPanel14Layout);
 		jPanel14Layout.setHorizontalGroup(jPanel14Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 77,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
 				Short.MAX_VALUE));
 		jPanel14Layout.setVerticalGroup(jPanel14Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
@@ -405,7 +420,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel15);
 		jPanel15.setLayout(jPanel15Layout);
 		jPanel15Layout.setHorizontalGroup(jPanel15Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 77,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
 				Short.MAX_VALUE));
 		jPanel15Layout.setVerticalGroup(jPanel15Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
@@ -426,7 +441,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 				jPanel16);
 		jPanel16.setLayout(jPanel16Layout);
 		jPanel16Layout.setHorizontalGroup(jPanel16Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 230,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 475,
 				Short.MAX_VALUE));
 		jPanel16Layout.setVerticalGroup(jPanel16Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 125,

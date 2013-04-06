@@ -2232,4 +2232,59 @@ public class PlayerClass implements Serializable, Comparable {
 
 		return (acResult);
 	}
+	
+	/**
+	 * return the best move rate granted by classes
+	 * 
+	 * @param ost
+	 * @return
+	 */
+	public int getMoveRateFromClass(MainClass ost) {
+		int moveRate = 0;
+		for (PCClass pC: getMyClass()) {
+			// get CharacterClass object
+			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
+			if (oC!= null) // if no class is set == null
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (lE.getMoveBase() > moveRate)
+							moveRate = lE.getMoveBase();
+					} else
+						break;
+				} // was high enough level/exp
+		}
+
+		return moveRate;
+	}
+	/**
+	 * get move rate from race
+	 * 
+	 * @param raceList
+	 * @return
+	 */
+	public int getMoveRateFromRace(RaceList raceList) {
+		int moveRate = 12;
+		RaceClass race = getMyRace().getRaceByID(raceList);
+		if (race != null)
+			moveRate = race.getMoveRate();
+		
+		return moveRate;
+	}
+	/**
+	 * return move rate checking race/class (eventually checking encumbrance)
+	 * 
+	 * @param ost
+	 * @return
+	 */
+	public int getModifiedMoveRate(MainClass ost) {
+		
+		int moveBase = getMoveRateFromRace(ost.raceList);
+		int nClassMoveBase = getMoveRateFromClass(ost);
+		if (nClassMoveBase > moveBase)
+			moveBase = nClassMoveBase;
+		
+		//TODO need to adjust for encumbrance/armor worn/etc
+		
+		return moveBase;
+	}
 }

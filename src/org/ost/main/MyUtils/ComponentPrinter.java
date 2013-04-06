@@ -71,9 +71,10 @@ implements Printable
 		printJob.setPageable(book);
 		//printJob.setPrintable(this);
 		
-		if(printJob.printDialog()) {
-			printJob.print();
-		}
+		if(printJob.pageDialog(format) != null)
+			if(printJob.printDialog()) {
+				printJob.print();
+			}
 	}
 
 	public int print(Graphics gc, PageFormat pageFormat, int pageIndex) {
@@ -90,9 +91,9 @@ implements Printable
 		g2d.scale(factor,factor);
 		
 		g2d.translate(pageFormat.getImageableX(),pageFormat.getImageableY());
-		mgr.setDoubleBufferingEnabled(false);                                       // only for swing components
+		mgr.setDoubleBufferingEnabled(false);  // only for swing components
 		component.paint(g2d);
-		mgr.setDoubleBufferingEnabled(true);                                        // only for swing components
+		mgr.setDoubleBufferingEnabled(true);  // only for swing components
 		return PAGE_EXISTS;
 	}
 

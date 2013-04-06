@@ -135,6 +135,8 @@ public class CharacterClass implements Comparable{
 			
 			public ArrayList<Integer> turnMatrix; // for turn undead matrix later on
 			
+			public int moveBase; // movebase
+			
 			public LevelClass(int level) {
 				this(level,0,20,0,
 						10,1,6,
@@ -181,6 +183,7 @@ public class CharacterClass implements Comparable{
 
 				this.skillsPoints = 0;
 				this.turnMatrix = new ArrayList<Integer>();
+				this.setMoveBase(0);
 				
 				this.abilityAdjustment = abilityAdjustment;
 				if (abilityAdjustment.size()<=0)
@@ -209,6 +212,38 @@ public class CharacterClass implements Comparable{
 					for(int i=0;i<MAX_THIEF_SKILLS;i++)
 						getThiefSkillAdjustments().add(new 
 								SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
+			}
+
+
+			/**
+			 * @return the turnMatrix
+			 */
+			public ArrayList<Integer> getTurnMatrix() {
+				return turnMatrix;
+			}
+
+
+			/**
+			 * @param turnMatrix the turnMatrix to set
+			 */
+			public void setTurnMatrix(ArrayList<Integer> turnMatrix) {
+				this.turnMatrix = turnMatrix;
+			}
+
+
+			/**
+			 * @return the moveBase
+			 */
+			public int getMoveBase() {
+				return moveBase;
+			}
+
+
+			/**
+			 * @param moveBase the moveBase to set
+			 */
+			public void setMoveBase(int moveBase) {
+				this.moveBase = moveBase;
 			}
 
 
