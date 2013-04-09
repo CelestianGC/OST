@@ -109,6 +109,7 @@ public class Panel_Player_Skills extends javax.swing.JPanel {
 
 		setLayout(new java.awt.BorderLayout());
 
+		skillsPanel.setBackground(new java.awt.Color(255, 255, 255));
 		skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Skills"));

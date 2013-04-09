@@ -77,7 +77,7 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 
 		String text = "* Class: ";
 		featuresTextArea.append(text);
-		for(PCClass cC: pc.getMyClass()) {
+		for (PCClass cC : pc.getMyClass()) {
 			CharacterClass oC = cC.getClassByID(ost.characterClassList);
 			if (oC != null) {
 				featuresTextArea.append(oC.getDescription());
@@ -85,7 +85,8 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 					text = ", ";
 				else if (abilitiesClass.size() > 0) // has abilities to add
 					text = ", ";
-				else text = "\n"; // nothing else
+				else
+					text = "\n"; // nothing else
 				featuresTextArea.append(text);
 			}
 		}
@@ -101,21 +102,22 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 				featuresTextArea.append(text);
 			}
 		} else {
-//			featuresTextArea.append("None\n");
+			//			featuresTextArea.append("None\n");
 			featuresTextArea.append("\n");
 		}
 
 		// race based
-		RaceClass myRace = RaceClass.getRaceFromMyID(pc.getMyRace().getRaceID(), ost.raceList);
-		
+		RaceClass myRace = RaceClass.getRaceFromMyID(
+				pc.getMyRace().getRaceID(), ost.raceList);
+
 		ArrayList<ExtraAbilitiesClass> abilitiesRace = ExtraAbilitiesClass
 				.getRaceExtraAbilities(pc, ost);
 		text = "* Race: ";
 		if (myRace != null) {
 			featuresTextArea.append(text);
 			if (myRace.getDescription().length() > 0)
-				featuresTextArea.append(myRace.getDescription()+
-						(abilitiesRace.size()>0?", ":""));
+				featuresTextArea.append(myRace.getDescription()
+						+ (abilitiesRace.size() > 0 ? ", " : ""));
 			if (abilitiesRace.size() > 0) {
 				for (ExtraAbilitiesClass oE : abilitiesRace) {
 					text = String.format("%s", oE.getDescription());
@@ -124,11 +126,11 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 					featuresTextArea.append(text);
 				}
 			} else {
-				if (myRace.getDescription().length() <= 0) 
+				if (myRace.getDescription().length() <= 0)
 					featuresTextArea.append("None\n");
 			}
 		}
-		
+
 		featuresTextArea.revalidate();
 		featuresPanel.revalidate();
 		repaint();
@@ -149,12 +151,12 @@ public class Panel_Player_Features extends javax.swing.JPanel {
 
 		setLayout(new java.awt.BorderLayout());
 
+		featuresPanel.setBackground(new java.awt.Color(255, 255, 255));
 		featuresPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Features"));
 		featuresPanel.setLayout(new java.awt.BorderLayout());
 
-		featuresTextArea.setBackground(new java.awt.Color(240, 240, 240));
 		featuresTextArea.setColumns(20);
 		featuresTextArea.setEditable(false);
 		featuresTextArea.setFont(new java.awt.Font("Segoe UI", 0, 12));

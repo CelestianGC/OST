@@ -140,14 +140,14 @@ public class Panel_Player extends javax.swing.JPanel {
 		}
 
 		// features/extra abilities
-			Panel_Player_Features playerFeatures = 
-					new Panel_Player_Features(ost, pc);
-			GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
-			gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
-			gbFeatures.gridx = 0;
-			gbFeatures.gridy = 8;
-			gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
-			add(playerFeatures, gbFeatures);
+		Panel_Player_Features playerFeatures = new Panel_Player_Features(ost,
+				pc);
+		GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
+		gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gbFeatures.gridx = 0;
+		gbFeatures.gridy = 8;
+		gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
+		add(playerFeatures, gbFeatures);
 
 		repaint();
 	}
@@ -156,7 +156,7 @@ public class Panel_Player extends javax.swing.JPanel {
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 
-		setBackground(new java.awt.Color(255, 204, 153));
+		setBackground(new java.awt.Color(255, 255, 255));
 		setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Character Sheet",

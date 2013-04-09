@@ -32,7 +32,7 @@ import static org.ost.main.MyClasses.MyStatics.*;
 
 public class MainClass implements Serializable {
 	private static final long serialVersionUID = 1L;
-	public String version = "13.04.05";
+	public String version = "13.04.09(alpha)";
 	public String dateName = "by Mike Wilson";
 	public String aboutURL = "https://sourceforge.net/projects/oldschooltool/";
 	public String aboutEmail = "uce_mike@yahoo.com";
@@ -350,7 +350,8 @@ public class MainClass implements Serializable {
 		// files/tables/panels first then update the combo
 		ost.dmConfigTab.tabConfiguration.tabOptions.tablesConfig.updateAllGeneratorTableListComboBoxes();
 
-		ost.mainFrame.setSize(960, 700);
+		ost.mainFrame.pack();
+		//ost.mainFrame.setSize(960, 740);
 		ost.mainFrame.setVisible(true);
 		ost.dmScreen.setVisible(true);
 		ost.mainFrame.mainTabbedPane.setVisible(true);

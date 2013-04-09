@@ -106,7 +106,6 @@ public class MainWindow extends javax.swing.JFrame {
 		settingsMenuItem = new javax.swing.JMenuItem();
 		exitMenuItem = new javax.swing.JMenuItem();
 		jSeparator1 = new javax.swing.JSeparator();
-		testMenuItem = new javax.swing.JMenuItem();
 		optionsMenu = new javax.swing.JMenu();
 		mainShowEncounterMenuItem = new javax.swing.JMenuItem();
 		mainShowDMScreenMenuItem = new javax.swing.JMenuItem();
@@ -736,14 +735,6 @@ public class MainWindow extends javax.swing.JFrame {
 		fileMenu.add(exitMenuItem);
 		fileMenu.add(jSeparator1);
 
-		testMenuItem.setText("Test");
-		testMenuItem.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				testMenuItemActionPerformed(evt);
-			}
-		});
-		fileMenu.add(testMenuItem);
-
 		mainMenuBar.add(fileMenu);
 
 		optionsMenu.setText("Windows");
@@ -794,41 +785,6 @@ public class MainWindow extends javax.swing.JFrame {
 		pack();
 	}// </editor-fold>
 	//GEN-END:initComponents
-
-	private void testMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code h
-		for (AbilityStatClass oA : ost.abilityStatList.getContent()) {
-			//			AbilityStatClass oA = (AbilityStatClass) oO;
-			ost.dprint(oA.strength.name + " " + oA.strength.score + "\n");
-			ost.dprint(oA.strength.name + " " + oA.strength.numDiceOpenDoor
-					+ "\n");
-			ost.dprint(oA.strength.name + " " + oA.strength.sizeDiceOpenDoor
-					+ "\n");
-
-			ost.dprint(oA.charisma.name + " " + oA.charisma.score + "\n");
-			ost.dprint(oA.consitution.name + " " + oA.consitution.score + "\n");
-			ost.dprint(oA.dexterity.name + " " + oA.dexterity.score + "\n");
-			ost.dprint(oA.intelligence.name + " " + oA.intelligence.score
-					+ "\n");
-			ost.dprint(oA.wisdom.name + " " + oA.wisdom.score + "\n");
-		}
-
-		//		for (AlignmentClass oA: ost.alignments) {
-		//			ost.dprint("Alignment:"+oA.getName()+"["+oA.getAbbreviation()+"]\n");
-		//		}
-
-		for (EquipmentClass oE : ost.equipmentList.getContent()) {
-			ost.dprint("Gear:" + oE.getName() + "\n");
-		}
-
-		for (NonWeaponProfClass oN : ost.nonWeaponProfList.getContent()) {
-			ost.dprint("NWP:" + oN.getName() + "\n");
-		}
-
-		String sTest = ost.creatureList.xm.getSerialXML(ost.creatureList
-				.getContent().get(1));
-		ost.dprint("Creature 1, XML:" + sTest + "\n");
-	}
 
 	private void stateNameTextFieldKeyReleased(java.awt.event.KeyEvent evt) {
 		updateCurrentStateFields();
@@ -1068,10 +1024,10 @@ public class MainWindow extends javax.swing.JFrame {
 						+ "\nI've enjoyed all my years playing RPGs. "
 						+ "Thank you Gary, Dave and everyone who throughout "
 						+ "the years made the game what it is and those like "
-						+ "" + "OSRIC who have reinvigorated it."
-						+ "\n\nDungeons & Dragons TM, Advanced Dungeons & Dragons TM, D&D TM and AD&D TM are owned by Wizards of the Coast and their use here is not intended as a challenge to their ownership of that copyright.\n", 
-						ost.version,
-						ost.dateName);
+						+ ""
+						+ "OSRIC who have reinvigorated it."
+						+ "\n\nDungeons & Dragons TM, Advanced Dungeons & Dragons TM, D&D TM and AD&D TM are owned by Wizards of the Coast and their use here is not intended as a challenge to their ownership of that copyright.\n",
+						ost.version, ost.dateName);
 		aboutTextArea.setText(sAbout);
 
 		JOptionPane.showMessageDialog(null, aboutPanel, "About - OST",
@@ -1155,7 +1111,6 @@ public class MainWindow extends javax.swing.JFrame {
 	public javax.swing.JDialog statesAddDialog;
 	private javax.swing.JTextArea statesDescriptionTextArea;
 	public javax.swing.JList statesJList;
-	private javax.swing.JMenuItem testMenuItem;
 	private javax.swing.JLabel thacoModeLabel;
 	public javax.swing.JRadioButton thacoModeRadioButton;
 	// End of variables declaration//GEN-END:variables

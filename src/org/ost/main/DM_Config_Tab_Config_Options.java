@@ -7,6 +7,8 @@
 package org.ost.main;
 
 import static org.ost.main.MyClasses.MyStatics.*;
+
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.util.ArrayList;
@@ -32,8 +34,11 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		tablesConfig = new DM_Config_Tab_Tables(ost);
 		chartsConfig = new DM_Config_Tab_Charts(ost);
 
-		tableMainPanel.add(tablesConfig);
-		chartMainPanel.add(chartsConfig);
+		//tableMainPanel.add(tablesConfig, BorderLayout.CENTER);
+		//chartMainPanel.add(chartsConfig, BorderLayout.CENTER);
+
+		chartDialogScrollPane.setViewportView(chartsConfig);
+		tableDialogScrollPane.setViewportView(tablesConfig);
 	}
 
 	//GEN-BEGIN:initComponents
@@ -41,13 +46,11 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 	private void initComponents() {
 
 		tableDialog = new javax.swing.JDialog();
-		jScrollPane1 = new javax.swing.JScrollPane();
-		tableMainPanel = new javax.swing.JPanel();
+		tableDialogScrollPane = new javax.swing.JScrollPane();
 		tableButtonPanel = new javax.swing.JPanel();
 		chartDoneButton = new javax.swing.JButton();
 		chartDialog = new javax.swing.JDialog();
-		jScrollPane2 = new javax.swing.JScrollPane();
-		chartMainPanel = new javax.swing.JPanel();
+		chartDialogScrollPane = new javax.swing.JScrollPane();
 		chartButtonPanel = new javax.swing.JPanel();
 		tableDoneButton1 = new javax.swing.JButton();
 		mainPanel = new javax.swing.JPanel();
@@ -62,12 +65,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		nonWeaponProfsButton1 = new javax.swing.JButton();
 
 		tableDialog.setTitle("Tables");
-
-		tableMainPanel.setBackground(new java.awt.Color(153, 153, 153));
-		tableMainPanel.setLayout(new java.awt.BorderLayout());
-		jScrollPane1.setViewportView(tableMainPanel);
-
-		tableDialog.getContentPane().add(jScrollPane1,
+		tableDialog.getContentPane().add(tableDialogScrollPane,
 				java.awt.BorderLayout.CENTER);
 
 		tableButtonPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -87,12 +85,7 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 				java.awt.BorderLayout.PAGE_END);
 
 		chartDialog.setTitle("Charts");
-
-		chartMainPanel.setBackground(new java.awt.Color(153, 153, 153));
-		chartMainPanel.setLayout(new java.awt.BorderLayout());
-		jScrollPane2.setViewportView(chartMainPanel);
-
-		chartDialog.getContentPane().add(jScrollPane2,
+		chartDialog.getContentPane().add(chartDialogScrollPane,
 				java.awt.BorderLayout.CENTER);
 
 		chartButtonPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -388,15 +381,16 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 
 	private void chartsButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension windowSize = mainPanel.getSize();
+		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//		Dimension windowSize = mainPanel.getSize();
+		//
+		//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//		chartDialog.setLocation(windowX, windowY);
+		//		chartDialog.setSize(windowSize.width - 4, windowSize.height - 4);
 
-		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-		chartDialog.setLocation(windowX, windowY);
-		chartDialog.setSize(windowSize.width - 4, windowSize.height - 4);
-
-		chartDialog.setLocationRelativeTo(null);
+		chartDialog.setLocationRelativeTo(this);
+		chartDialog.pack();
 		chartDialog.setVisible(true);
 	}
 
@@ -410,21 +404,23 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 
 	private void tablesButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension windowSize = mainPanel.getSize();
-
-		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-		tableDialog.setLocation(windowX, windowY);
-		tableDialog.setSize(windowSize.width - 4, windowSize.height - 4);
-
-		tableDialog.setLocationRelativeTo(null);
+		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//		Dimension windowSize = mainPanel.getSize();
+		//
+		//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//		tableDialog.setLocation(windowX, windowY);
+		//		tableDialog.setSize(windowSize.width - 4, windowSize.height - 4);
+		//
+		tableDialog.setLocationRelativeTo(this);
+		tableDialog.pack();
 		tableDialog.setVisible(true);
 	}
 
 	private void abilityScoresButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
+		optionAbilityScores.setLocationRelativeTo(this);
 		optionAbilityScores.setVisible(true);
 	}
 
@@ -437,22 +433,20 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 	private javax.swing.JButton abilityScoresButton;
 	private javax.swing.JPanel chartButtonPanel;
 	private javax.swing.JDialog chartDialog;
+	private javax.swing.JScrollPane chartDialogScrollPane;
 	private javax.swing.JButton chartDoneButton;
-	private javax.swing.JPanel chartMainPanel;
 	private javax.swing.JButton chartsButton;
 	private javax.swing.JButton classButton;
 	private javax.swing.JButton extraAbilitiesButton;
 	private javax.swing.JButton itemButton;
-	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JScrollPane jScrollPane2;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JButton nonWeaponProfsButton;
 	private javax.swing.JButton nonWeaponProfsButton1;
 	private javax.swing.JButton raceButton;
 	private javax.swing.JPanel tableButtonPanel;
 	private javax.swing.JDialog tableDialog;
+	private javax.swing.JScrollPane tableDialogScrollPane;
 	private javax.swing.JButton tableDoneButton1;
-	private javax.swing.JPanel tableMainPanel;
 	private javax.swing.JButton tablesButton;
 	// End of variables declaration//GEN-END:variables
 	public Option_AbilityScores optionAbilityScores;

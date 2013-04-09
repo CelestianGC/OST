@@ -166,12 +166,13 @@ public class Panel_Player_ArcaneSpells extends javax.swing.JPanel {
 
 		arcaneSpellsPanel = new javax.swing.JPanel();
 
+		setBackground(new java.awt.Color(255, 255, 255));
 		setLayout(new java.awt.BorderLayout());
 
-		arcaneSpellsPanel
-				.setBorder(javax.swing.BorderFactory.createTitledBorder(
-						new javax.swing.border.LineBorder(new java.awt.Color(0,
-								0, 0), 1, true), "Arcane Spells"));
+		arcaneSpellsPanel.setBackground(new java.awt.Color(255, 255, 255));
+		arcaneSpellsPanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Arcane"));
 		arcaneSpellsPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
 		add(arcaneSpellsPanel, java.awt.BorderLayout.WEST);
 	}// </editor-fold>

@@ -73,11 +73,22 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		conBonusButtonGroup = new javax.swing.ButtonGroup();
 		jScrollPane2 = new javax.swing.JScrollPane();
 		mainPanel = new javax.swing.JPanel();
-		extraNameLabel = new javax.swing.JLabel();
-		extraNameTextField = new javax.swing.JTextField();
-		extraDescriptionButton = new javax.swing.JButton();
-		jLabel1 = new javax.swing.JLabel();
-		extraTypeComboBox = new javax.swing.JComboBox();
+		checkBoxPanel = new javax.swing.JPanel();
+		fighterConBonusCheckBox = new javax.swing.JCheckBox();
+		weaponMasteryCheckBox = new javax.swing.JCheckBox();
+		barbarianConBonusCheckBox = new javax.swing.JCheckBox();
+		specializeCheckBox = new javax.swing.JCheckBox();
+		barbarianDexBonusCheckBox = new javax.swing.JCheckBox();
+		doubleSpecializeCheckBox = new javax.swing.JCheckBox();
+		constitutionIronCheckBox = new javax.swing.JCheckBox();
+		constitutionResistanceCheckBox = new javax.swing.JCheckBox();
+		restrictedFromDexACCheckBox = new javax.swing.JCheckBox();
+		profsPanel = new javax.swing.JPanel();
+		bonusWeaponProfLabel = new javax.swing.JLabel();
+		extraWeaponProfSpinner = new javax.swing.JSpinner();
+		bonusNonWeaponProfLabel = new javax.swing.JLabel();
+		extraNonWeaponProfSpinner = new javax.swing.JSpinner();
+		jPanel2 = new javax.swing.JPanel();
 		savesPanel = new javax.swing.JPanel();
 		savesButton = new javax.swing.JButton();
 		saveAdjustmentsButton = new javax.swing.JButton();
@@ -92,20 +103,12 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		extraMageBasePanel = new javax.swing.JPanel();
 		extraMageSlotsBaseButton = new javax.swing.JButton();
 		extraMageSlotsAdjustmentButton = new javax.swing.JButton();
-		checkBoxPanel = new javax.swing.JPanel();
-		fighterConBonusCheckBox = new javax.swing.JCheckBox();
-		weaponMasteryCheckBox = new javax.swing.JCheckBox();
-		barbarianConBonusCheckBox = new javax.swing.JCheckBox();
-		specializeCheckBox = new javax.swing.JCheckBox();
-		barbarianDexBonusCheckBox = new javax.swing.JCheckBox();
-		doubleSpecializeCheckBox = new javax.swing.JCheckBox();
-		constitutionIronCheckBox = new javax.swing.JCheckBox();
-		constitutionResistanceCheckBox = new javax.swing.JCheckBox();
-		profsPanel = new javax.swing.JPanel();
-		bonusWeaponProfLabel = new javax.swing.JLabel();
-		extraWeaponProfSpinner = new javax.swing.JSpinner();
-		bonusNonWeaponProfLabel = new javax.swing.JLabel();
-		extraNonWeaponProfSpinner = new javax.swing.JSpinner();
+		jPanel3 = new javax.swing.JPanel();
+		extraNameLabel = new javax.swing.JLabel();
+		extraNameTextField = new javax.swing.JTextField();
+		extraDescriptionButton = new javax.swing.JButton();
+		jLabel1 = new javax.swing.JLabel();
+		extraTypeComboBox = new javax.swing.JComboBox();
 		jPanel1 = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -124,236 +127,8 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
-		mainPanel.setLayout(new java.awt.GridBagLayout());
 
-		extraNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		extraNameLabel.setText("Name");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
-		mainPanel.add(extraNameLabel, gridBagConstraints);
-
-		extraNameTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraNameTextField.setText("extra-ability-name-here");
-		extraNameTextField.setPreferredSize(new java.awt.Dimension(150, 22));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		mainPanel.add(extraNameTextField, gridBagConstraints);
-
-		extraDescriptionButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraDescriptionButton.setText("set description");
-		extraDescriptionButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraDescriptionButtonActionPerformed(evt);
-					}
-				});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		mainPanel.add(extraDescriptionButton, gridBagConstraints);
-
-		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		jLabel1.setText("Type");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
-		mainPanel.add(jLabel1, gridBagConstraints);
-
-		extraTypeComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(
-				new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(extraTypeComboBox, gridBagConstraints);
-
-		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
-				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Saves",
-				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-				javax.swing.border.TitledBorder.DEFAULT_POSITION,
-				new java.awt.Font("Segoe UI", 0, 10)));
-
-		savesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		savesButton.setText("base");
-		savesButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				savesButtonActionPerformed(evt);
-			}
-		});
-		savesPanel.add(savesButton);
-
-		saveAdjustmentsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		saveAdjustmentsButton.setText("adjustment");
-		saveAdjustmentsButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						saveAdjustmentsButtonActionPerformed(evt);
-					}
-				});
-		savesPanel.add(saveAdjustmentsButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(savesPanel, gridBagConstraints);
-
-		abilityScoresPanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true),
-						"Ability Scores",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 10)));
-
-		abilityScoreAdjustmentsButton.setFont(new java.awt.Font("Segoe UI", 0,
-				12));
-		abilityScoreAdjustmentsButton.setText("adjustment");
-		abilityScoreAdjustmentsButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						abilityScoreAdjustmentsButtonActionPerformed(evt);
-					}
-				});
-		abilityScoresPanel.add(abilityScoreAdjustmentsButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(abilityScoresPanel, gridBagConstraints);
-
-		extraThiefBasePanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true), "Thief Skills",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 10)));
-		extraThiefBasePanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT, 0, 0));
-
-		extraThiefSkillsBaseButton
-				.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraThiefSkillsBaseButton.setText("base");
-		extraThiefSkillsBaseButton
-				.setToolTipText("Set base thief skills to this.  Only useful if thief skills are not granted by ANYTHING else.");
-		extraThiefSkillsBaseButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraThiefSkillsBaseButtonActionPerformed(evt);
-					}
-				});
-		extraThiefBasePanel.add(extraThiefSkillsBaseButton);
-
-		extraThiefSkillsAdjustmentButton.setFont(new java.awt.Font("Segoe UI",
-				0, 12));
-		extraThiefSkillsAdjustmentButton.setText("adjustment");
-		extraThiefSkillsAdjustmentButton
-				.setToolTipText("Bonus or penalties applied to thief skills.");
-		extraThiefSkillsAdjustmentButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraThiefSkillsAdjustmentButtonActionPerformed(evt);
-					}
-				});
-		extraThiefBasePanel.add(extraThiefSkillsAdjustmentButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(extraThiefBasePanel, gridBagConstraints);
-
-		extraClericBasePanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true), "Cleric Spells",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 10)));
-		extraClericBasePanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT, 0, 0));
-
-		extraClericSlotsBaseButton
-				.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraClericSlotsBaseButton.setText("base");
-		extraClericSlotsBaseButton
-				.setToolTipText("Set base cleric spells per level to this.  Only useful if cleric spells are not granted by ANYTHING else.");
-		extraClericSlotsBaseButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraClericSlotsBaseButtonActionPerformed(evt);
-					}
-				});
-		extraClericBasePanel.add(extraClericSlotsBaseButton);
-
-		extraClericSlotsAdjustmentButton.setFont(new java.awt.Font("Segoe UI",
-				0, 12));
-		extraClericSlotsAdjustmentButton.setText("adjustment");
-		extraClericSlotsAdjustmentButton
-				.setToolTipText("Bonus or penalty spells per level applied.");
-		extraClericSlotsAdjustmentButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraClericSlotsAdjustmentButtonActionPerformed(evt);
-					}
-				});
-		extraClericBasePanel.add(extraClericSlotsAdjustmentButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(extraClericBasePanel, gridBagConstraints);
-
-		extraMageBasePanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true),
-						"Magic-User Spells",
-						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-						javax.swing.border.TitledBorder.DEFAULT_POSITION,
-						new java.awt.Font("Segoe UI", 0, 10)));
-		extraMageBasePanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT, 0, 0));
-
-		extraMageSlotsBaseButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		extraMageSlotsBaseButton.setText("base");
-		extraMageSlotsBaseButton
-				.setToolTipText("Set base magic-user spells per level to this.  Only useful if magic-user spells are not granted by ANYTHING else");
-		extraMageSlotsBaseButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraMageSlotsBaseButtonActionPerformed(evt);
-					}
-				});
-		extraMageBasePanel.add(extraMageSlotsBaseButton);
-
-		extraMageSlotsAdjustmentButton.setFont(new java.awt.Font("Segoe UI", 0,
-				12));
-		extraMageSlotsAdjustmentButton.setText("adjustment");
-		extraMageSlotsAdjustmentButton
-				.setToolTipText("Bonus or penalty spells per level applied.");
-		extraMageSlotsAdjustmentButton
-				.addActionListener(new java.awt.event.ActionListener() {
-					public void actionPerformed(java.awt.event.ActionEvent evt) {
-						extraMageSlotsAdjustmentButtonActionPerformed(evt);
-					}
-				});
-		extraMageBasePanel.add(extraMageSlotsAdjustmentButton);
-
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(extraMageBasePanel, gridBagConstraints);
-
+		checkBoxPanel.setBackground(new java.awt.Color(153, 153, 153));
 		checkBoxPanel.setLayout(new java.awt.GridLayout(0, 2));
 
 		fighterConBonusCheckBox
@@ -384,6 +159,7 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 		specializeCheckBox.setBackground(new java.awt.Color(153, 153, 153));
 		specializeCheckBox.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		specializeCheckBox.setText("can specialize");
+		specializeCheckBox.setEnabled(false);
 		checkBoxPanel.add(specializeCheckBox);
 
 		barbarianDexBonusCheckBox.setBackground(new java.awt.Color(153, 153,
@@ -398,6 +174,7 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 				.setBackground(new java.awt.Color(153, 153, 153));
 		doubleSpecializeCheckBox.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		doubleSpecializeCheckBox.setText("can double specialize");
+		doubleSpecializeCheckBox.setEnabled(false);
 		doubleSpecializeCheckBox
 				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 		checkBoxPanel.add(doubleSpecializeCheckBox);
@@ -423,11 +200,16 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 		checkBoxPanel.add(constitutionResistanceCheckBox);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(checkBoxPanel, gridBagConstraints);
+		restrictedFromDexACCheckBox.setBackground(new java.awt.Color(153, 153,
+				153));
+		restrictedFromDexACCheckBox
+				.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		restrictedFromDexACCheckBox.setText("no dexterity AC");
+		restrictedFromDexACCheckBox
+				.setToolTipText("Does not get the benefit of armor ratings from dexterity scores. (old school monks)");
+		restrictedFromDexACCheckBox
+				.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+		checkBoxPanel.add(restrictedFromDexACCheckBox);
 
 		profsPanel.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -438,6 +220,7 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 
 		extraWeaponProfSpinner.setModel(new javax.swing.SpinnerNumberModel(0,
 				0, 99, 1));
+		extraWeaponProfSpinner.setEnabled(false);
 		profsPanel.add(extraWeaponProfSpinner);
 
 		bonusNonWeaponProfLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -448,13 +231,317 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 
 		extraNonWeaponProfSpinner.setModel(new javax.swing.SpinnerNumberModel(
 				0, 0, 99, 1));
+		extraNonWeaponProfSpinner.setEnabled(false);
 		profsPanel.add(extraNonWeaponProfSpinner);
 
+		jPanel2.setLayout(new java.awt.GridLayout(0, 1));
+
+		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Saves",
+				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+				javax.swing.border.TitledBorder.DEFAULT_POSITION,
+				new java.awt.Font("Segoe UI", 0, 10)));
+		savesPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		savesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		savesButton.setText("base");
+		savesButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				savesButtonActionPerformed(evt);
+			}
+		});
+		savesPanel.add(savesButton);
+
+		saveAdjustmentsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		saveAdjustmentsButton.setText("adjustment");
+		saveAdjustmentsButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						saveAdjustmentsButtonActionPerformed(evt);
+					}
+				});
+		savesPanel.add(saveAdjustmentsButton);
+
+		jPanel2.add(savesPanel);
+
+		abilityScoresPanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true),
+						"Ability Scores",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 10)));
+		abilityScoresPanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
+		abilityScoreAdjustmentsButton.setFont(new java.awt.Font("Segoe UI", 0,
+				12));
+		abilityScoreAdjustmentsButton.setText("adjustment");
+		abilityScoreAdjustmentsButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						abilityScoreAdjustmentsButtonActionPerformed(evt);
+					}
+				});
+		abilityScoresPanel.add(abilityScoreAdjustmentsButton);
+
+		jPanel2.add(abilityScoresPanel);
+
+		extraThiefBasePanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Thief Skills",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 10)));
+		extraThiefBasePanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
+		extraThiefSkillsBaseButton
+				.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraThiefSkillsBaseButton.setText("base");
+		extraThiefSkillsBaseButton
+				.setToolTipText("Set base thief skills to this.  Only useful if thief skills are not granted by ANYTHING else.");
+		extraThiefSkillsBaseButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraThiefSkillsBaseButtonActionPerformed(evt);
+					}
+				});
+		extraThiefBasePanel.add(extraThiefSkillsBaseButton);
+
+		extraThiefSkillsAdjustmentButton.setFont(new java.awt.Font("Segoe UI",
+				0, 12));
+		extraThiefSkillsAdjustmentButton.setText("adjustment");
+		extraThiefSkillsAdjustmentButton
+				.setToolTipText("Bonus or penalties applied to thief skills.");
+		extraThiefSkillsAdjustmentButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraThiefSkillsAdjustmentButtonActionPerformed(evt);
+					}
+				});
+		extraThiefBasePanel.add(extraThiefSkillsAdjustmentButton);
+
+		jPanel2.add(extraThiefBasePanel);
+
+		extraClericBasePanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Cleric Spells",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 10)));
+		extraClericBasePanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
+		extraClericSlotsBaseButton
+				.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraClericSlotsBaseButton.setText("base");
+		extraClericSlotsBaseButton
+				.setToolTipText("Set base cleric spells per level to this.  Only useful if cleric spells are not granted by ANYTHING else.");
+		extraClericSlotsBaseButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraClericSlotsBaseButtonActionPerformed(evt);
+					}
+				});
+		extraClericBasePanel.add(extraClericSlotsBaseButton);
+
+		extraClericSlotsAdjustmentButton.setFont(new java.awt.Font("Segoe UI",
+				0, 12));
+		extraClericSlotsAdjustmentButton.setText("adjustment");
+		extraClericSlotsAdjustmentButton
+				.setToolTipText("Bonus or penalty spells per level applied.");
+		extraClericSlotsAdjustmentButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraClericSlotsAdjustmentButtonActionPerformed(evt);
+					}
+				});
+		extraClericBasePanel.add(extraClericSlotsAdjustmentButton);
+
+		jPanel2.add(extraClericBasePanel);
+
+		extraMageBasePanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true),
+						"Magic-User Spells",
+						javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+						javax.swing.border.TitledBorder.DEFAULT_POSITION,
+						new java.awt.Font("Segoe UI", 0, 10)));
+		extraMageBasePanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT));
+
+		extraMageSlotsBaseButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraMageSlotsBaseButton.setText("base");
+		extraMageSlotsBaseButton
+				.setToolTipText("Set base magic-user spells per level to this.  Only useful if magic-user spells are not granted by ANYTHING else");
+		extraMageSlotsBaseButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraMageSlotsBaseButtonActionPerformed(evt);
+					}
+				});
+		extraMageBasePanel.add(extraMageSlotsBaseButton);
+
+		extraMageSlotsAdjustmentButton.setFont(new java.awt.Font("Segoe UI", 0,
+				12));
+		extraMageSlotsAdjustmentButton.setText("adjustment");
+		extraMageSlotsAdjustmentButton
+				.setToolTipText("Bonus or penalty spells per level applied.");
+		extraMageSlotsAdjustmentButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraMageSlotsAdjustmentButtonActionPerformed(evt);
+					}
+				});
+		extraMageBasePanel.add(extraMageSlotsAdjustmentButton);
+
+		jPanel2.add(extraMageBasePanel);
+
+		jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+		jPanel3.setLayout(new java.awt.GridBagLayout());
+
+		extraNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		extraNameLabel.setText("Name");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		jPanel3.add(extraNameLabel, gridBagConstraints);
+
+		extraNameTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraNameTextField.setText("extra-ability-name-here");
+		extraNameTextField.setPreferredSize(new java.awt.Dimension(150, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		jPanel3.add(extraNameTextField, gridBagConstraints);
+
+		extraDescriptionButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraDescriptionButton.setText("set description");
+		extraDescriptionButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						extraDescriptionButtonActionPerformed(evt);
+					}
+				});
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		mainPanel.add(profsPanel, gridBagConstraints);
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		jPanel3.add(extraDescriptionButton, gridBagConstraints);
+
+		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		jLabel1.setText("Type");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		jPanel3.add(jLabel1, gridBagConstraints);
+
+		extraTypeComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		extraTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(
+				new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		jPanel3.add(extraTypeComboBox, gridBagConstraints);
+
+		javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(
+				mainPanel);
+		mainPanel.setLayout(mainPanelLayout);
+		mainPanelLayout
+				.setHorizontalGroup(mainPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								mainPanelLayout
+										.createSequentialGroup()
+										.addGroup(
+												mainPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING,
+																false)
+														.addGroup(
+																mainPanelLayout
+																		.createSequentialGroup()
+																		.addGroup(
+																				mainPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								profsPanel,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								checkBoxPanel,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								262,
+																								javax.swing.GroupLayout.PREFERRED_SIZE))
+																		.addGap(8,
+																				8,
+																				8))
+														.addGroup(
+																mainPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jPanel3,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				Short.MAX_VALUE)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+										.addComponent(
+												jPanel2,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap()));
+		mainPanelLayout
+				.setVerticalGroup(mainPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								mainPanelLayout
+										.createSequentialGroup()
+										.addGroup(
+												mainPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addGroup(
+																mainPanelLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				jPanel3,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				profsPanel,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				49,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																		.addComponent(
+																				checkBoxPanel,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE))
+														.addComponent(
+																jPanel2,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 
 		jScrollPane2.setViewportView(mainPanel);
 
@@ -604,8 +691,14 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 				.isSelected());
 		currentExtraAbility.setFighterConBonus(fighterConBonusCheckBox
 				.isSelected());
-		currentExtraAbility.setAllowedIronCon(constitutionIronCheckBox.isSelected());
-		currentExtraAbility.setAllowedResistanceCon(constitutionResistanceCheckBox.isSelected());
+		currentExtraAbility.setAllowedIronCon(constitutionIronCheckBox
+				.isSelected());
+		currentExtraAbility
+				.setAllowedResistanceCon(constitutionResistanceCheckBox
+						.isSelected());
+
+		currentExtraAbility.setRestrictedFromDexAC(restrictedFromDexACCheckBox
+				.isSelected());
 
 	}
 
@@ -624,9 +717,11 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 			fighterConBonusCheckBox.setSelected(oE.isFighterConBonus());
 			weaponMasteryCheckBox.setSelected(oE.allowedWeaponMastery);
 			constitutionIronCheckBox.setSelected(oE.isAllowedIronCon());
-			constitutionResistanceCheckBox.setSelected(oE.isAllowedResistanceCon());
+			constitutionResistanceCheckBox.setSelected(oE
+					.isAllowedResistanceCon());
+			restrictedFromDexACCheckBox.setSelected(oE.isRestrictedFromDexAC());
 			extraTypeComboBox.setSelectedIndex(oE.getType());
-			
+
 		}
 		mainPanel.validate();
 		mainPanel.repaint();
@@ -664,9 +759,12 @@ public class Option_AskFor_ExtraAbilities extends javax.swing.JDialog {
 	private javax.swing.JCheckBox fighterConBonusCheckBox;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JPanel jPanel1;
+	private javax.swing.JPanel jPanel2;
+	private javax.swing.JPanel jPanel3;
 	private javax.swing.JScrollPane jScrollPane2;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel profsPanel;
+	private javax.swing.JCheckBox restrictedFromDexACCheckBox;
 	private javax.swing.JButton saveAdjustmentsButton;
 	private javax.swing.JButton savesButton;
 	private javax.swing.JPanel savesPanel;

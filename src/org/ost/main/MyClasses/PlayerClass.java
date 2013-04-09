@@ -2170,7 +2170,7 @@ public class PlayerClass implements Serializable, Comparable {
 		int abilityTotal = 
 				getAbilityScore(ABILITY_DEXTERITY, ost);
 
-		if (abilityTotal >= 0) {
+		if (abilityTotal >= 0 && !isRestrictedFromDexAC(ost)) {
 			AbilityStatClass aStat = 
 					ost.abilityStatList.getContent().get(abilityTotal);
 			int acNormal = aStat.dexterity.defensiveAdjustment;
@@ -2287,4 +2287,25 @@ public class PlayerClass implements Serializable, Comparable {
 		
 		return moveBase;
 	}
+	
+	/**
+	 * return true if restricted from dex AC bonus is set
+	 * 
+	 * @param ost
+	 * @return
+	 */
+	public boolean isRestrictedFromDexAC(MainClass ost) {
+		boolean isSet = false;
+		// get all the extras
+		ArrayList<ExtraAbilitiesClass> extras = 
+				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
+
+		// now flip through all extraAbilities
+		for (ExtraAbilitiesClass eA : extras)
+			if (eA.isRestrictedFromDexAC())
+				isSet = true;
+
+		return isSet;	
+	}
+
 }

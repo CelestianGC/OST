@@ -71,22 +71,22 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		// for int is right, so just cell render them all so they are all left
 		// TODO figure out why it does that.
 		// make that THACO cell red
-//		for (int i = 0; i < pcCombatMatrixTable.getColumnCount(); i++) {
-//			TableColumn thacoCol = pcCombatMatrixTable.getColumnModel()
-//					.getColumn(i);
-//			if (i == 10)
-//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
-//						Color.black));
-//			else
-//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
-//						Color.black));
-//		}
-//		// this is to make the headers align left to match the numbers
-//		TableCellRenderer rendererFromHeader = pcCombatMatrixTable
-//				.getTableHeader().getDefaultRenderer();
-//		JLabel headerLabel = (JLabel) rendererFromHeader;
-//		headerLabel.setHorizontalAlignment(JLabel.LEFT);
-//		//---
+		//		for (int i = 0; i < pcCombatMatrixTable.getColumnCount(); i++) {
+		//			TableColumn thacoCol = pcCombatMatrixTable.getColumnModel()
+		//					.getColumn(i);
+		//			if (i == 10)
+		//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
+		//						Color.black));
+		//			else
+		//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
+		//						Color.black));
+		//		}
+		//		// this is to make the headers align left to match the numbers
+		//		TableCellRenderer rendererFromHeader = pcCombatMatrixTable
+		//				.getTableHeader().getDefaultRenderer();
+		//		JLabel headerLabel = (JLabel) rendererFromHeader;
+		//		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		//		//---
 
 		updatePanel(oPlayer);
 	}
@@ -108,24 +108,30 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
 				+ iTHACO);
 
-
 		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
 			switch (i) {
 			case AC_NORMAL: {
-				int setAC = pc.getArmorClassByType(AC_NORMAL,ost);
-				pcArmorClassLabel.setText(String.format("%d",setAC));
-				pcArmorClassLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
-			}break;
-			case AC_REAR:{
-				int setACRear = pc.getArmorClassByType(AC_REAR,ost);
-				pcArmorClassRearLabel.setText(String.format("%d",setACRear));
-				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
-			}break;
-			case AC_SHIELDLESS:{
-				int setACShieldless = pc.getArmorClassByType(AC_SHIELDLESS,ost);
-				pcArmorClassShieldlessLabel.setText(String.format("%d",setACShieldless));
-			}pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i]+","+ost.log);
-			break;
+				int setAC = pc.getArmorClassByType(AC_NORMAL, ost);
+				pcArmorClassLabel.setText(String.format("%d", setAC));
+				pcArmorClassLabel.setToolTipText(AC_NAMES[i] + "," + ost.log);
+			}
+				break;
+			case AC_REAR: {
+				int setACRear = pc.getArmorClassByType(AC_REAR, ost);
+				pcArmorClassRearLabel.setText(String.format("%d", setACRear));
+				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i] + ","
+						+ ost.log);
+			}
+				break;
+			case AC_SHIELDLESS: {
+				int setACShieldless = pc
+						.getArmorClassByType(AC_SHIELDLESS, ost);
+				pcArmorClassShieldlessLabel.setText(String.format("%d",
+						setACShieldless));
+			}
+				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i] + ","
+						+ ost.log);
+				break;
 
 			default:
 				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
@@ -267,6 +273,7 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 
 		setLayout(new java.awt.BorderLayout());
 
+		combatPanel.setBackground(new java.awt.Color(255, 255, 255));
 		combatPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Combat"));

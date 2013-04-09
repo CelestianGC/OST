@@ -136,12 +136,13 @@ public class Panel_Player_DivineSpells extends javax.swing.JPanel {
 
 		divineSpellsPanel = new javax.swing.JPanel();
 
+		setBackground(new java.awt.Color(255, 255, 255));
 		setLayout(new java.awt.BorderLayout());
 
-		divineSpellsPanel
-				.setBorder(javax.swing.BorderFactory.createTitledBorder(
-						new javax.swing.border.LineBorder(new java.awt.Color(0,
-								0, 0), 1, true), "Divine Spells"));
+		divineSpellsPanel.setBackground(new java.awt.Color(255, 255, 255));
+		divineSpellsPanel.setBorder(javax.swing.BorderFactory
+				.createTitledBorder(new javax.swing.border.LineBorder(
+						new java.awt.Color(0, 0, 0), 1, true), "Divine"));
 		divineSpellsPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
 		add(divineSpellsPanel, java.awt.BorderLayout.WEST);
 	}// </editor-fold>

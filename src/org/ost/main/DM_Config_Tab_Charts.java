@@ -437,7 +437,7 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 																				javax.swing.GroupLayout.PREFERRED_SIZE,
 																				564,
 																				javax.swing.GroupLayout.PREFERRED_SIZE)))
-										.addContainerGap(22, Short.MAX_VALUE)));
+										.addContainerGap(73, Short.MAX_VALUE)));
 		jPanel2Layout
 				.setVerticalGroup(jPanel2Layout
 						.createParallelGroup(
@@ -631,7 +631,7 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 		layout.setHorizontalGroup(layout
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE,
-						710, Short.MAX_VALUE)
+						761, Short.MAX_VALUE)
 				.addGroup(
 						layout.createSequentialGroup()
 								.addGroup(
@@ -641,17 +641,17 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 														jPanel2,
 														javax.swing.GroupLayout.Alignment.LEADING,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
-														638, Short.MAX_VALUE)
+														689, Short.MAX_VALUE)
 												.addComponent(
 														jPanel3,
 														javax.swing.GroupLayout.Alignment.LEADING,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
-														638, Short.MAX_VALUE)
+														689, Short.MAX_VALUE)
 												.addComponent(
 														jPanel1,
 														javax.swing.GroupLayout.Alignment.LEADING,
-														javax.swing.GroupLayout.PREFERRED_SIZE,
-														638, Short.MAX_VALUE))
+														javax.swing.GroupLayout.DEFAULT_SIZE,
+														689, Short.MAX_VALUE))
 								.addGap(72, 72, 72)));
 		layout.setVerticalGroup(layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
@@ -671,8 +671,8 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(0, 0, 0)
 						.addComponent(jPanel4,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 382,
-								Short.MAX_VALUE).addGap(47, 47, 47)));
+								javax.swing.GroupLayout.DEFAULT_SIZE, 352,
+								Short.MAX_VALUE).addContainerGap()));
 	}// </editor-fold>
 	//GEN-END:initComponents
 
@@ -873,7 +873,8 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 		while (checkLineMatcher.find()) {
 			int colCount = 0;
 			thisLine = checkLineMatcher.group();
-			ost.dprint("importButtonTXT()-line-(" + Pattern.quote(thisLine) + ")---\n");
+			ost.dprint("importButtonTXT()-line-(" + Pattern.quote(thisLine)
+					+ ")---\n");
 			checkMatcher = checkPattern.matcher(thisLine);
 			while (checkMatcher.find()) {
 				ost.dprint("importButtonTXT()-parseLine-("
@@ -887,12 +888,13 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 				if (sG1.isEmpty())
 					continue;
 				if (newValidLine) {
-ost.dprint("rcount++\n");
+					ost.dprint("rcount++\n");
 					rCount++; // we don't inc rCount unless we get matches
 					newValidLine = false;
 				}
-				ost.dprint(String.format("importButtonTXT() row[%d]=(%s) col(%d)\n",
-						rCount, Pattern.quote(sG1),colCount));
+				ost.dprint(String.format(
+						"importButtonTXT() row[%d]=(%s) col(%d)\n", rCount,
+						Pattern.quote(sG1), colCount));
 				// first time through we set the values as headers
 				if (rCount == 1) {
 					if (colCount == 0) // only ask once
@@ -950,90 +952,90 @@ ost.dprint("rcount++\n");
 	 * @param dmScreen
 	 * @param oC
 	 */
-//	public void addChartToDMScreen(DM_Screen dmScreen, ChartClass oC,
-//			boolean showScreen) {
-//
-//		JTabbedPane tabParentPane = dmScreen.dmScreenChartsTabbedPane;
-//		JTabbedPane tabPane = null;
-//		// we want to create "type" tabs in the parent panel and then
-//		// add the actual chart tab to those. Search for matching tab
-//		// and if not one add it otherwise use it.
-//		int tabCount = tabParentPane.getTabCount();
-//		for (int i = 0; i < tabCount; i++) {
-//			if (tabParentPane.getTitleAt(i).equalsIgnoreCase(oC.getType())) {
-//				tabPane = (JTabbedPane) tabParentPane.getComponentAt(i);
-//				break;
-//				//				ost.ddprint(String.format(
-//				//						"addChartToDMScreen() adding chart to tab [%s]\n",
-//				//						tabParentPane.getTitleAt(i)));
-//			}
-//		}
-//		if (tabPane == null) {
-//			tabPane = new JTabbedPane();
-//			tabPane.setBackground(new Color(153, 153, 153));
-//			tabPane.setForeground(new Color(0, 0, 0));
-//			tabParentPane.addTab(oC.getType(), null, tabPane, "");
-//			//			ost.ddprint(String.format(
-//			//					"addChartToDMScreen() creating tab [%s] for charts.\n",
-//			//					oC.getType()));
-//		}
-//
-//		//		ost.dmScreen.dmScreenTabbedPane.addTab(
-//		//				currentChart.getName(), null, cPanel, currentChart.getName());
-//		Chart_Panel cPanel = new Chart_Panel(oC);
-//		tabPane.add(oC.getName(), cPanel);
-//		tabPane.setTabComponentAt((tabPane.getTabCount() - 1),
-//				cPanel.new ButtonTabComponent(tabPane));
-//
-//		// make this table so that nothing can be edited and has
-//		// rotating colours on rows
-//		JTable newChartTable = new JTable(new DefaultTableModel()) {
-//			//
-//
-//			public boolean isCellEditable(int rowIndex, int mColIndex) {
-//				return false;
-//			}
-//		};
-//		JTableHeader newChartHeader = newChartTable.getTableHeader();
-//		newChartHeader.setDefaultRenderer(new MyHeaderRenderer());
-//		newChartHeader.setPreferredSize(new Dimension(10, 60));
-//		newChartTable.setRowHeight(30);
-//
-//		cPanel.chartLayoutPanel.add(newChartTable);
-//		cPanel.chartLayoutPanel.setViewportView(newChartTable);
-//		//newChartTable.setShowVerticalLines(false);
-//		newChartTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-//		newChartTable.getTableHeader().setReorderingAllowed(false);
-//		DefaultTableModel newChartTableModel = (DefaultTableModel) newChartTable
-//				.getModel();
-//
-//		// add the columns
-//		for (ChartColumn cC : oC.getColumn())
-//			newChartTableModel.addColumn(cC.getName(), cC.getRow().toArray());
-//
-//		// then set prefered width, can't do it while adding columns
-//		int i = 0;
-//		for (ChartColumn cC : oC.getColumn()) {
-//			TableColumn col = (TableColumn) newChartTable.getColumnModel()
-//					.getColumn(i);
-//			// for some reason first row is double high, this fixes.
-//			if (i == 0)
-//				newChartTable.setRowHeight(
-//						i,
-//						(newChartTable.getRowHeight() / 2)
-//								+ (newChartTable.getRowMargin() * 2));
-//
-//			col.setCellRenderer(new TextAreaRenderer());
-//			col.setCellEditor(new TextAreaEditor());
-//
-//			col.setPreferredWidth(cC.getWidth());
-//			i++;
-//		} // end getColumn for
-//
-//		//		cPanel.chartLayoutPanel.add(newChartTable, java.awt.BorderLayout.CENTER);
-//		if (!dmScreen.isVisible() && showScreen)
-//			dmScreen.setVisible(true);
-//	}
+	//	public void addChartToDMScreen(DM_Screen dmScreen, ChartClass oC,
+	//			boolean showScreen) {
+	//
+	//		JTabbedPane tabParentPane = dmScreen.dmScreenChartsTabbedPane;
+	//		JTabbedPane tabPane = null;
+	//		// we want to create "type" tabs in the parent panel and then
+	//		// add the actual chart tab to those. Search for matching tab
+	//		// and if not one add it otherwise use it.
+	//		int tabCount = tabParentPane.getTabCount();
+	//		for (int i = 0; i < tabCount; i++) {
+	//			if (tabParentPane.getTitleAt(i).equalsIgnoreCase(oC.getType())) {
+	//				tabPane = (JTabbedPane) tabParentPane.getComponentAt(i);
+	//				break;
+	//				//				ost.ddprint(String.format(
+	//				//						"addChartToDMScreen() adding chart to tab [%s]\n",
+	//				//						tabParentPane.getTitleAt(i)));
+	//			}
+	//		}
+	//		if (tabPane == null) {
+	//			tabPane = new JTabbedPane();
+	//			tabPane.setBackground(new Color(153, 153, 153));
+	//			tabPane.setForeground(new Color(0, 0, 0));
+	//			tabParentPane.addTab(oC.getType(), null, tabPane, "");
+	//			//			ost.ddprint(String.format(
+	//			//					"addChartToDMScreen() creating tab [%s] for charts.\n",
+	//			//					oC.getType()));
+	//		}
+	//
+	//		//		ost.dmScreen.dmScreenTabbedPane.addTab(
+	//		//				currentChart.getName(), null, cPanel, currentChart.getName());
+	//		Chart_Panel cPanel = new Chart_Panel(oC);
+	//		tabPane.add(oC.getName(), cPanel);
+	//		tabPane.setTabComponentAt((tabPane.getTabCount() - 1),
+	//				cPanel.new ButtonTabComponent(tabPane));
+	//
+	//		// make this table so that nothing can be edited and has
+	//		// rotating colours on rows
+	//		JTable newChartTable = new JTable(new DefaultTableModel()) {
+	//			//
+	//
+	//			public boolean isCellEditable(int rowIndex, int mColIndex) {
+	//				return false;
+	//			}
+	//		};
+	//		JTableHeader newChartHeader = newChartTable.getTableHeader();
+	//		newChartHeader.setDefaultRenderer(new MyHeaderRenderer());
+	//		newChartHeader.setPreferredSize(new Dimension(10, 60));
+	//		newChartTable.setRowHeight(30);
+	//
+	//		cPanel.chartLayoutPanel.add(newChartTable);
+	//		cPanel.chartLayoutPanel.setViewportView(newChartTable);
+	//		//newChartTable.setShowVerticalLines(false);
+	//		newChartTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+	//		newChartTable.getTableHeader().setReorderingAllowed(false);
+	//		DefaultTableModel newChartTableModel = (DefaultTableModel) newChartTable
+	//				.getModel();
+	//
+	//		// add the columns
+	//		for (ChartColumn cC : oC.getColumn())
+	//			newChartTableModel.addColumn(cC.getName(), cC.getRow().toArray());
+	//
+	//		// then set prefered width, can't do it while adding columns
+	//		int i = 0;
+	//		for (ChartColumn cC : oC.getColumn()) {
+	//			TableColumn col = (TableColumn) newChartTable.getColumnModel()
+	//					.getColumn(i);
+	//			// for some reason first row is double high, this fixes.
+	//			if (i == 0)
+	//				newChartTable.setRowHeight(
+	//						i,
+	//						(newChartTable.getRowHeight() / 2)
+	//								+ (newChartTable.getRowMargin() * 2));
+	//
+	//			col.setCellRenderer(new TextAreaRenderer());
+	//			col.setCellEditor(new TextAreaEditor());
+	//
+	//			col.setPreferredWidth(cC.getWidth());
+	//			i++;
+	//		} // end getColumn for
+	//
+	//		//		cPanel.chartLayoutPanel.add(newChartTable, java.awt.BorderLayout.CENTER);
+	//		if (!dmScreen.isVisible() && showScreen)
+	//			dmScreen.setVisible(true);
+	//	}
 
 	private void chartNewButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		addNewChart();
@@ -1111,9 +1113,9 @@ ost.dprint("rcount++\n");
 
 	private void chartSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		currentChart = getCurrentChart(currentChart);
-//		Document doc = ChartClass.xmlBuildDocFromList(ost.chartList,
-//				"ChartList");
-//		XMLControl.saveDoc(doc, ost.sChartFile);
+		//		Document doc = ChartClass.xmlBuildDocFromList(ost.chartList,
+		//				"ChartList");
+		//		XMLControl.saveDoc(doc, ost.sChartFile);
 		ost.chartList.xm.serializeToXMLFile();
 		SimpleDialog.showDone("Saved charts to file.");
 	}

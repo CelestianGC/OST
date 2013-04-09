@@ -42,7 +42,24 @@ public class ExtraAbilitiesClass implements Comparable{
 	public boolean allowedDoubeSpecialize;
 	public boolean allowedIronCon;
 	public boolean allowedResistanceCon;
+	public boolean restrictedFromDexAC;
 	
+	/**
+	 * @return the restrictedFromDexAC
+	 */
+	public boolean isRestrictedFromDexAC() {
+		return restrictedFromDexAC;
+	}
+
+
+	/**
+	 * @param restrictedFromDexAC the restrictedFromDexAC to set
+	 */
+	public void setRestrictedFromDexAC(boolean restrictedFromDexAC) {
+		this.restrictedFromDexAC = restrictedFromDexAC;
+	}
+
+
 	public ExtraAbilitiesClass(String name, String desc) {
 		this(name,desc,0,0,
 				new ArrayList<SkillsClass>(),
@@ -83,6 +100,8 @@ public class ExtraAbilitiesClass implements Comparable{
 		this.type = extraType;
 		this.allowedIronCon = ironCon;
 		this.allowedResistanceCon = resistanceCon;
+		
+		setRestrictedFromDexAC(false);
 		
 		this.thiefSkillsBase = thiefSkillsBase;
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)

@@ -156,18 +156,18 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		jPanel13 = new javax.swing.JPanel();
 		jPanel14 = new javax.swing.JPanel();
 		jPanel15 = new javax.swing.JPanel();
-		jPanel16 = new javax.swing.JPanel();
+		blackBackPanel = new javax.swing.JPanel();
 
 		setLayout(new java.awt.BorderLayout());
 
+		savesPanel.setBackground(new java.awt.Color(255, 255, 255));
 		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Saves"));
 		savesPanel.setLayout(new java.awt.GridBagLayout());
 
-		jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2,
-				javax.swing.BoxLayout.LINE_AXIS));
+		jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel2.setLayout(new java.awt.BorderLayout());
 
 		pcSavePoisonLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcSavePoisonLabel
@@ -175,7 +175,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		pcSavePoisonLabel.setText("00");
 		pcSavePoisonLabel
 				.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		jPanel2.add(pcSavePoisonLabel);
+		jPanel2.add(pcSavePoisonLabel, java.awt.BorderLayout.CENTER);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -184,9 +184,8 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		savesPanel.add(jPanel2, gridBagConstraints);
 
-		jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		deathSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		deathSaveLabel.setText("Poison/Paralyzation");
@@ -199,7 +198,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel3, gridBagConstraints);
 
-		jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+		jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 		jPanel4.setLayout(new java.awt.BorderLayout());
 
 		pcSavePolyLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -217,9 +216,8 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		savesPanel.add(jPanel4, gridBagConstraints);
 
-		jPanel5.setBackground(new java.awt.Color(153, 153, 153));
-		jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		polySaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		polySaveLabel.setText("Petrify/Poly");
@@ -232,7 +230,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel5, gridBagConstraints);
 
-		jPanel6.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 		jPanel6.setLayout(new java.awt.BorderLayout());
 
 		pcSaveRodLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -250,12 +248,12 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		savesPanel.add(jPanel6, gridBagConstraints);
 
-		jPanel7.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel7.setLayout(new java.awt.BorderLayout());
+		jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		rodSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		rodSaveLabel.setText("Rod/Staff/Wand");
-		jPanel7.add(rodSaveLabel, java.awt.BorderLayout.CENTER);
+		jPanel7.add(rodSaveLabel);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
@@ -264,7 +262,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel7, gridBagConstraints);
 
-		jPanel8.setBackground(new java.awt.Color(153, 153, 153));
+		jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 		jPanel8.setLayout(new java.awt.BorderLayout());
 
 		pcSaveBreathLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -282,9 +280,8 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		savesPanel.add(jPanel8, gridBagConstraints);
 
-		jPanel9.setBackground(new java.awt.Color(153, 153, 153));
-		jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		breathSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		breathSaveLabel.setText("Breath");
@@ -297,7 +294,7 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel9, gridBagConstraints);
 
-		jPanel10.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel10.setBackground(new java.awt.Color(255, 255, 255));
 		jPanel10.setLayout(new java.awt.BorderLayout());
 
 		pcSaveSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -312,12 +309,12 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
+		gridBagConstraints.ipadx = 10;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 1);
 		savesPanel.add(jPanel10, gridBagConstraints);
 
-		jPanel11.setBackground(new java.awt.Color(204, 204, 204));
-		jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 1,
-				1));
+		jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+		jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		spellsSaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
 		spellsSaveLabel.setText("Spells");
@@ -327,19 +324,18 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel11, gridBagConstraints);
 
-		jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
 		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(
 				jPanel1);
 		jPanel1.setLayout(jPanel1Layout);
 		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 269,
 				Short.MAX_VALUE));
 		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 31,
 				Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -348,19 +344,18 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.weightx = 5.0;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel1, gridBagConstraints);
 
-		jPanel12.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel12.setBackground(new java.awt.Color(255, 255, 255));
 
 		javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(
 				jPanel12);
 		jPanel12.setLayout(jPanel12Layout);
 		jPanel12Layout.setHorizontalGroup(jPanel12Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 269,
 				Short.MAX_VALUE));
 		jPanel12Layout.setVerticalGroup(jPanel12Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 31,
 				Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -372,16 +367,16 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel12, gridBagConstraints);
 
-		jPanel13.setBackground(new java.awt.Color(153, 153, 153));
+		jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
 		javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(
 				jPanel13);
 		jPanel13.setLayout(jPanel13Layout);
 		jPanel13Layout.setHorizontalGroup(jPanel13Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 269,
 				Short.MAX_VALUE));
 		jPanel13Layout.setVerticalGroup(jPanel13Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 31,
 				Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -393,16 +388,16 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel13, gridBagConstraints);
 
-		jPanel14.setBackground(new java.awt.Color(153, 153, 153));
+		jPanel14.setBackground(new java.awt.Color(255, 255, 255));
 
 		javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(
 				jPanel14);
 		jPanel14.setLayout(jPanel14Layout);
 		jPanel14Layout.setHorizontalGroup(jPanel14Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 269,
 				Short.MAX_VALUE));
 		jPanel14Layout.setVerticalGroup(jPanel14Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 31,
 				Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -414,16 +409,16 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel14, gridBagConstraints);
 
-		jPanel15.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel15.setBackground(new java.awt.Color(255, 255, 255));
 
 		javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(
 				jPanel15);
 		jPanel15.setLayout(jPanel15Layout);
 		jPanel15Layout.setHorizontalGroup(jPanel15Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 324,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 269,
 				Short.MAX_VALUE));
 		jPanel15Layout.setVerticalGroup(jPanel15Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 24,
+				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 31,
 				Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
@@ -435,17 +430,17 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
 		savesPanel.add(jPanel15, gridBagConstraints);
 
-		jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+		blackBackPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-		javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(
-				jPanel16);
-		jPanel16.setLayout(jPanel16Layout);
-		jPanel16Layout.setHorizontalGroup(jPanel16Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 475,
-				Short.MAX_VALUE));
-		jPanel16Layout.setVerticalGroup(jPanel16Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 125,
-				Short.MAX_VALUE));
+		javax.swing.GroupLayout blackBackPanelLayout = new javax.swing.GroupLayout(
+				blackBackPanel);
+		blackBackPanel.setLayout(blackBackPanelLayout);
+		blackBackPanelLayout.setHorizontalGroup(blackBackPanelLayout
+				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 438, Short.MAX_VALUE));
+		blackBackPanelLayout.setVerticalGroup(blackBackPanelLayout
+				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 159, Short.MAX_VALUE));
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -453,14 +448,15 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.gridheight = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-		savesPanel.add(jPanel16, gridBagConstraints);
+		savesPanel.add(blackBackPanel, gridBagConstraints);
 
-		add(savesPanel, java.awt.BorderLayout.PAGE_START);
+		add(savesPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
 	//GEN-END:initComponents
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
+	private javax.swing.JPanel blackBackPanel;
 	private javax.swing.JLabel breathSaveLabel;
 	private javax.swing.JLabel deathSaveLabel;
 	private javax.swing.JPanel jPanel1;
@@ -470,7 +466,6 @@ public class Panel_Player_Saves extends javax.swing.JPanel {
 	private javax.swing.JPanel jPanel13;
 	private javax.swing.JPanel jPanel14;
 	private javax.swing.JPanel jPanel15;
-	private javax.swing.JPanel jPanel16;
 	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanel3;
 	private javax.swing.JPanel jPanel4;

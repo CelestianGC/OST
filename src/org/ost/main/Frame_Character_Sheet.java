@@ -52,6 +52,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 	}
 
 	public void updatePanel(PlayerClass oPlayer) {
+		int gridY = 1;
 		mainPanel.removeAll();
 
 		pc = oPlayer;
@@ -62,7 +63,8 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		GridBagConstraints gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridy = gridY;
+		gridY++;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		Panel_Player_Details playerDetailsPanel = new Panel_Player_Details(ost,
 				pc);
@@ -73,7 +75,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		GridBagConstraints gbSaves = new java.awt.GridBagConstraints();
 		gbSaves.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gbSaves.gridx = 0;
-		gbSaves.gridy = 2;
+		gbSaves.gridy =  gridY;	gridY++;
 		gbSaves.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(playerSavesPanel, gbSaves);
 
@@ -83,7 +85,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		GridBagConstraints gbAbilities = new java.awt.GridBagConstraints();
 		gbAbilities.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gbAbilities.gridx = 0;
-		gbAbilities.gridy = 3;
+		gbAbilities.gridy = gridY;	gridY++;
 		gbAbilities.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(playerAbilitiesPanel, gbAbilities);
 
@@ -92,7 +94,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		GridBagConstraints gbCombat = new java.awt.GridBagConstraints();
 		gbCombat.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gbCombat.gridx = 0;
-		gbCombat.gridy = 4;
+		gbCombat.gridy = gridY;	gridY++;
 		gbCombat.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(playerCombatPanel, gbCombat);
 
@@ -103,46 +105,57 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 			GridBagConstraints gbSkills = new java.awt.GridBagConstraints();
 			gbSkills.fill = java.awt.GridBagConstraints.HORIZONTAL;
 			gbSkills.gridx = 0;
-			gbSkills.gridy = 5;
+			gbSkills.gridy = gridY;	gridY++;
 			gbSkills.anchor = java.awt.GridBagConstraints.WEST;
 			mainPanel.add(playerSkillsPanel, gbSkills);
 		}
 
-		// arcane spells
-		if (pc.isCasterArcane(ost)) {
-			Panel_Player_ArcaneSpells playerArcaneSpellsPanel = new Panel_Player_ArcaneSpells(
-					ost, pc);
-			GridBagConstraints gbArcane = new java.awt.GridBagConstraints();
-			gbArcane.fill = java.awt.GridBagConstraints.HORIZONTAL;
-			gbArcane.gridx = 0;
-			gbArcane.gridy = 6;
-			gbArcane.anchor = java.awt.GridBagConstraints.WEST;
-			mainPanel.add(playerArcaneSpellsPanel, gbArcane);
-		}
+//		// arcane spells
+//		if (pc.isCasterArcane(ost)) {
+//			Panel_Player_ArcaneSpells playerArcaneSpellsPanel = new Panel_Player_ArcaneSpells(
+//					ost, pc);
+//			GridBagConstraints gbArcane = new java.awt.GridBagConstraints();
+//			gbArcane.fill = java.awt.GridBagConstraints.HORIZONTAL;
+//			gbArcane.gridx = 0;
+//			gbArcane.gridy = gridY;	gridY++;
+//			gbArcane.anchor = java.awt.GridBagConstraints.WEST;
+//			mainPanel.add(playerArcaneSpellsPanel, gbArcane);
+//		}
+//
+//		// divine spells
+//		if (pc.isCasterDivine(ost)) {
+//			Panel_Player_DivineSpells playerDivineSpellsPanel = new Panel_Player_DivineSpells(
+//					ost, pc);
+//			GridBagConstraints gbDivine = new java.awt.GridBagConstraints();
+//			gbDivine.fill = java.awt.GridBagConstraints.HORIZONTAL;
+//			gbDivine.gridx = 0;
+//			gbDivine.gridy = gridY;	gridY++;
+//			gbDivine.anchor = java.awt.GridBagConstraints.WEST;
+//			mainPanel.add(playerDivineSpellsPanel, gbDivine);
+//		}
 
-		// divine spells
-		if (pc.isCasterDivine(ost)) {
-			Panel_Player_DivineSpells playerDivineSpellsPanel = new Panel_Player_DivineSpells(
-					ost, pc);
-			GridBagConstraints gbDivine = new java.awt.GridBagConstraints();
-			gbDivine.fill = java.awt.GridBagConstraints.HORIZONTAL;
-			gbDivine.gridx = 0;
-			gbDivine.gridy = 7;
-			gbDivine.anchor = java.awt.GridBagConstraints.WEST;
-			mainPanel.add(playerDivineSpellsPanel, gbDivine);
+		if (pc.isCasterArcane(ost) || pc.isCasterDivine(ost)) {
+			Panel_Player_Spells_All playerAllSpells = 
+					new Panel_Player_Spells_All(ost, pc);
+			GridBagConstraints gbAllSpells = new java.awt.GridBagConstraints();
+			gbAllSpells.fill = java.awt.GridBagConstraints.HORIZONTAL;
+			gbAllSpells.gridx = 0;
+			gbAllSpells.gridy = gridY;	gridY++;
+			gbAllSpells.anchor = java.awt.GridBagConstraints.WEST;
+			mainPanel.add(playerAllSpells, gbAllSpells);
 		}
-
+		
 		// features/extra abilities
-		Panel_Player_Features playerFeatures = 
-				new Panel_Player_Features(ost, pc);
+		Panel_Player_Features playerFeatures = new Panel_Player_Features(ost,
+				pc);
 		GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
 		gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gbFeatures.gridx = 0;
-		gbFeatures.gridy = 8;
+		gbFeatures.gridy = gridY;	gridY++;
 		gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
 		mainPanel.add(playerFeatures, gbFeatures);
 
-		mainPanel.repaint();
+		//mainPanel.repaint();
 		pack();
 	}
 
@@ -171,7 +184,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 			}
 		});
 
-		mainPanel.setBackground(new java.awt.Color(255, 204, 102));
+		mainPanel.setBackground(new java.awt.Color(255, 255, 255));
 		mainPanel.setLayout(new java.awt.GridBagLayout());
 
 		jLabel1.setText("jLabel1");
@@ -211,7 +224,8 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 	private void printMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		try {
-			ComponentPrinter.printComponent(mainPanel, String.format("OST [%s]",pc.getName()));
+			ComponentPrinter.printComponent(mainPanel,
+					String.format("OST [%s]", pc.getName()));
 		} catch (PrinterException e) {
 			SimpleDialog.showError(e.getLocalizedMessage());
 			//e.printStackTrace();

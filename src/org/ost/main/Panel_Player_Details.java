@@ -35,7 +35,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		this.ost = ost;
 		this.pc = oPlayer;
 		initComponents();
-		
+
 		updatePanel(oPlayer);
 	}
 
@@ -54,7 +54,8 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcExperienceTotalsLabel.setText(pc
 				.getMyExperienceName(ost.characterClassList));
 		pcMoveBaseLabel.setText(pc.getMoveRate());
-		pcMoveBaseLabel.setText(String.format("%d", pc.getModifiedMoveRate(ost)));
+		pcMoveBaseLabel
+				.setText(String.format("%d", pc.getModifiedMoveRate(ost)));
 
 		repaint();
 	}
@@ -88,6 +89,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 
 		setLayout(new java.awt.BorderLayout());
 
+		detailsPanel.setBackground(new java.awt.Color(255, 255, 255));
 		detailsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Details"));
@@ -312,7 +314,9 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 														.addComponent(
 																pcMoveBaseLabel,
 																javax.swing.GroupLayout.Alignment.TRAILING))
-										.addContainerGap(26, Short.MAX_VALUE)));
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 
 		add(detailsPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
