@@ -1,6 +1,11 @@
 package org.ost.main.MyUtils;
 
+import static org.ost.main.MyClasses.MyStatics.DEFAULT_FONT;
+
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
@@ -13,14 +18,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTree;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
+import org.ost.main.MainClass;
 import org.ost.main.MyClasses.ChartClass;
 import org.ost.main.MyClasses.ChartColumn;
 import org.ost.main.MyClasses.CreatureClass;
@@ -284,6 +295,137 @@ public class Utils {
 	}
 	
 	
+	public static void updateMatrixPanelPC(JPanel attackMatrixPanel, 
+											PlayerClass pc,
+											MainClass ost) {
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		int attackList[] = pc.getMatrix(ost);
+		Color aColor = new Color(255, 204, 105);
+		Color bColor = new Color(255, 153, 51);
+		Color thacoColor = new Color(255, 102, 102);
+
+		boolean bFlip = false;
+
+		JLabel target = new JLabel(String.format("AC"));
+		JPanel pTarget = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pTarget.setBackground(new Color(204, 204, 204));
+		target.setToolTipText("Target Armor Class");
+		target.setFont(fFont);
+		pTarget.add(target);
+		attackMatrixPanel.add(pTarget);
+
+		for (int i = 0; i < attackList.length; i++) {
+			int acNumber = (10 - i);
+			JLabel n = new JLabel(String.format("AC%d", (acNumber)));
+			n.setFont(fFont);
+			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+			if (i == 10)
+				p.setBackground(thacoColor);
+			else {
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+			}
+			n.setToolTipText("Armor Class " + acNumber);
+			p.setToolTipText(n.getToolTipText());
+			p.add(n);
+			attackMatrixPanel.add(p);
+		}
+
+		bFlip = false;
+		JLabel roll = new JLabel(String.format("Roll"));
+		JPanel pRoll = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pRoll.setBackground(new Color(204, 204, 204));
+		roll.setToolTipText("Attack Roll Made");
+		roll.setFont(fFont);
+		pRoll.add(roll);
+		attackMatrixPanel.add(pRoll);
+
+		for (int i = 0; i < attackList.length; i++) {
+			JLabel n = new JLabel(String.format("%d", attackList[i]));
+			n.setFont(fFont);
+			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+			if (i == 10)
+				p.setBackground(thacoColor);
+			else {
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+			}
+			n.setToolTipText("Attack roll needed " + attackList[i]);
+			p.setToolTipText(n.getToolTipText());
+			p.add(n);
+			attackMatrixPanel.add(p);
+		}
+		
+	}
+	
+	public static JTable getMatrixTable(int attackList[]) {
+		JTable attackChartTable;
+		Object[][] rowData = new Object[1][attackList.length];
+		Object[] columnNames = new Object[attackList.length];
+		
+		for (int i = 0; i < attackList.length; i++) {
+			int acNumber = (10 - i);
+			//String.format("AC%d", (acNumber));
+			//attackChartTable.setValueAt(String.format("AC%d", (acNumber)), 0, i);
+			int atkRollNeeded = attackList[i];
+			columnNames[i] = String.format("AC%d", (acNumber));
+			rowData[0][i] = atkRollNeeded;
+			//attackChartTable.setValueAt(atkRollNeeded, 0, i);
+		}
+		
+		attackChartTable = new JTable(rowData,columnNames);
+		Utils util = new Utils();
+		
+		for (int i = 0; i < attackChartTable.getColumnCount(); i++) {
+			TableColumn thacoCol = attackChartTable.getColumnModel().getColumn(
+					i);
+			if (i == 10)
+				thacoCol.setCellRenderer(util.new ColorColumnRenderer(Color.red,
+						Color.black));
+			else
+				thacoCol.setCellRenderer(util.new ColorColumnRenderer(Color.ORANGE,
+						Color.black));
+		}
+
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		attackChartTable.getTableHeader().setFont(fFont);
+		attackChartTable.getTableHeader().setBackground(Color.yellow);
+
+		// this is to make the headers align left to match the numbers
+		TableCellRenderer rendererFromHeader = attackChartTable
+				.getTableHeader().getDefaultRenderer();
+		JLabel headerLabel = (JLabel) rendererFromHeader;
+		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		
+		return attackChartTable;
+	}
+	/**
+	 * color class for JTable
+	 * 
+	 * @author Celestian
+	 *
+	 */
+	public class ColorColumnRenderer extends DefaultTableCellRenderer {
+		Color bkgndColor, fgndColor;
+
+		public ColorColumnRenderer(Color bkgnd, Color foregnd) {
+			super();
+			bkgndColor = bkgnd;
+			fgndColor = foregnd;
+		}
+
+		public Component getTableCellRendererComponent(JTable table,
+				Object value, boolean isSelected, boolean hasFocus, int row,
+				int column) {
+			Component cell = super.getTableCellRendererComponent(table, value,
+					isSelected, hasFocus, row, column);
+
+			cell.setBackground(bkgndColor);
+			cell.setForeground(fgndColor);
+
+			return cell;
+		}
+	}
 	
 	
 } // end Utils

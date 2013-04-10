@@ -7,6 +7,8 @@
 package org.ost.main;
 
 import static org.ost.main.MyClasses.MyStatics.*;
+
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -92,20 +94,20 @@ public class EncounterCreature extends javax.swing.JPanel {
 		setSavePanelDetails(oC);
 
 		setAttackChartPanelDetails(oC);
-		// for some reason cellrenderer makes the cells align left, default
-		// for int is right, so just cell render them all so they are all left
-		// TODO figure out why it does that.
-		// make that THACO cell red
-		for (int i = 0; i < attackChartTable.getColumnCount(); i++) {
-			TableColumn thacoCol = attackChartTable.getColumnModel().getColumn(
-					i);
-			if (i == 10)
-				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
-						Color.black));
-			else
-				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
-						Color.black));
-		}
+		//		// for some reason cellrenderer makes the cells align left, default
+		//		// for int is right, so just cell render them all so they are all left
+		//		// TODO figure out why it does that.
+		//		// make that THACO cell red
+		//		for (int i = 0; i < attackChartTable.getColumnCount(); i++) {
+		//			TableColumn thacoCol = attackChartTable.getColumnModel().getColumn(
+		//					i);
+		//			if (i == 10)
+		//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.red,
+		//						Color.black));
+		//			else
+		//				thacoCol.setCellRenderer(new ColorColumnRenderer(Color.ORANGE,
+		//						Color.black));
+		//		}
 
 		// build attack panels now for each attack
 		for (CreatureAttackClass oA : oC.getAttackList())
@@ -206,8 +208,6 @@ public class EncounterCreature extends javax.swing.JPanel {
 		healthBarPanel = new javax.swing.JPanel();
 		hitpointSlider = new javax.swing.JSlider();
 		attackChartPanel = new javax.swing.JPanel();
-		jScrollPane1 = new javax.swing.JScrollPane();
-		attackChartTable = new javax.swing.JTable();
 		attacksPanel = new javax.swing.JPanel();
 		notesPanel = new javax.swing.JPanel();
 		jScrollPane3 = new javax.swing.JScrollPane();
@@ -497,14 +497,14 @@ public class EncounterCreature extends javax.swing.JPanel {
 				helpIconMousePressed(evt);
 			}
 		});
-		helpIcon.setBounds(0, 0, 20, 16);
+		helpIcon.setBounds(0, 0, 20, -1);
 		jLayeredPane1.add(helpIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		armorClassLabel
 				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		armorClassLabel.setText("10");
-		armorClassLabel.setBounds(0, 10, 60, 21);
+		armorClassLabel.setBounds(0, 10, 60, -1);
 		jLayeredPane1.add(armorClassLabel,
 				javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -519,7 +519,7 @@ public class EncounterCreature extends javax.swing.JPanel {
 				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		hitpointChangeLabel.setText("(0)");
 		hitpointChangeLabel.setToolTipText("Health adjustment.");
-		hitpointChangeLabel.setBounds(90, 40, 30, 21);
+		hitpointChangeLabel.setBounds(90, 40, 30, -1);
 		jLayeredPane1.add(hitpointChangeLabel,
 				javax.swing.JLayeredPane.DEFAULT_LAYER);
 		hitpointChangeLabel.setText("");
@@ -535,7 +535,7 @@ public class EncounterCreature extends javax.swing.JPanel {
 				hitpointIconMousePressed(evt);
 			}
 		});
-		hitpointIcon.setBounds(50, -10, 64, 64);
+		hitpointIcon.setBounds(50, -10, -1, -1);
 		jLayeredPane1.add(hitpointIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassIcon
@@ -1067,45 +1067,6 @@ public class EncounterCreature extends javax.swing.JPanel {
 						new java.awt.Font("Segoe UI", 0, 10)));
 		attackChartPanel.setLayout(new java.awt.BorderLayout());
 
-		jScrollPane1.setBackground(new java.awt.Color(153, 153, 153));
-
-		attackChartTable.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		attackChartTable.setModel(new javax.swing.table.DefaultTableModel(
-				new Object[][] { { null, null, null, null, null, null, null,
-						null, null, null, null, null, null, null, null, null,
-						null, null, null, null, null } }, new String[] {
-						"AC 10", "AC 9", "AC 8", "AC 7", "AC 6", "AC 5",
-						"AC 4", "AC 3", "AC 2", "AC 1", "AC 0", "AC -1",
-						"AC -2", "AC -3", "AC -4", "AC -5", "AC -6", "AC -7",
-						"AC -8", "AC -9", "AC -10" }) {
-			Class[] types = new Class[] { java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class,
-					java.lang.Integer.class, java.lang.Integer.class };
-			boolean[] canEdit = new boolean[] { false, false, false, false,
-					false, false, false, false, false, false, false, false,
-					false, false, false, false, false, false, false, false,
-					false };
-
-			public Class getColumnClass(int columnIndex) {
-				return types[columnIndex];
-			}
-
-			public boolean isCellEditable(int rowIndex, int columnIndex) {
-				return canEdit[columnIndex];
-			}
-		});
-		jScrollPane1.setViewportView(attackChartTable);
-
-		attackChartPanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
 		attacksPanel.setBackground(new java.awt.Color(153, 153, 153));
 		attacksPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
@@ -1314,23 +1275,34 @@ public class EncounterCreature extends javax.swing.JPanel {
 	private void setAttackChartPanelDetails(CreatureClass oCreature) {
 		ArrayList<String> attackList = oCreature.getMatrix(ost.chartList
 				.getContent());
+		// table stored backwards and as String, lets flip it and 
+		// convert to integer
+		int[] atkList = new int[attackList.size()];
 
-		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
-		attackChartTable.getTableHeader().setFont(fFont);
-		attackChartTable.getTableHeader().setBackground(Color.yellow);
+		for (int i = attackList.size(); i > 0; i--)
+			atkList[MAX_MATRIX - i] = Integer.parseInt(attackList.get(i - 1));
 
-		// this is to make the headers align left to match the numbers
-		TableCellRenderer rendererFromHeader = attackChartTable
-				.getTableHeader().getDefaultRenderer();
-		JLabel headerLabel = (JLabel) rendererFromHeader;
-		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		attackChartPanel.removeAll();
+		JTable matrix = Utils.getMatrixTable(atkList);
+		attackChartPanel.add(matrix.getTableHeader(), BorderLayout.PAGE_START);
+		attackChartPanel.add(matrix, BorderLayout.CENTER);
 
-		for (int i = 0; i < attackList.size(); i++) {
-			//			int acNumber = (10 - i);
-			int atkRollNeeded = Integer.parseInt(attackList.get(attackList
-					.size() - (i + 1)));
-			attackChartTable.setValueAt(atkRollNeeded, 0, i);
-		}
+		//		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		//		attackChartTable.getTableHeader().setFont(fFont);
+		//		attackChartTable.getTableHeader().setBackground(Color.yellow);
+		//
+		//		// this is to make the headers align left to match the numbers
+		//		TableCellRenderer rendererFromHeader = attackChartTable
+		//				.getTableHeader().getDefaultRenderer();
+		//		JLabel headerLabel = (JLabel) rendererFromHeader;
+		//		headerLabel.setHorizontalAlignment(JLabel.LEFT);
+		//
+		//		for (int i = 0; i < attackList.size(); i++) {
+		//			//			int acNumber = (10 - i);
+		//			int atkRollNeeded = Integer.parseInt(attackList.get(attackList
+		//					.size() - (i + 1)));
+		//			attackChartTable.setValueAt(atkRollNeeded, 0, i);
+		//		}
 	}
 
 	/**
@@ -1738,7 +1710,6 @@ public class EncounterCreature extends javax.swing.JPanel {
 	javax.swing.JMenuItem attackAddMenuItem;
 	javax.swing.JMenuItem attackCancelMenuItem;
 	javax.swing.JPanel attackChartPanel;
-	javax.swing.JTable attackChartTable;
 	javax.swing.JLabel attackCountLabel;
 	javax.swing.JPopupMenu attackPopupMenu;
 	javax.swing.JPanel attacksPanel;
@@ -1771,7 +1742,6 @@ public class EncounterCreature extends javax.swing.JPanel {
 	javax.swing.JLabel intelligenceLabel;
 	javax.swing.JLayeredPane jLayeredPane1;
 	javax.swing.JPanel jPanel3;
-	javax.swing.JScrollPane jScrollPane1;
 	javax.swing.JScrollPane jScrollPane2;
 	javax.swing.JScrollPane jScrollPane3;
 	javax.swing.JSeparator jSeparator1;

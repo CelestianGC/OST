@@ -1483,10 +1483,11 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 
 	private void addEncounterButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		Object[] pList = playerList.getSelectedValues();
-		if (pList.length > 0)
-			for (int i = 0; i < pList.length; i++) {
-				PlayerClass oC = (PlayerClass) pList[i];
+//		Object[] pList = playerList.getSelectedValues();
+		List pList = playerList.getSelectedValuesList();
+		if (pList.size() > 0)
+			for (int i = 0; i < pList.size(); i++) {
+				PlayerClass oC = (PlayerClass) pList.get(i);
 				oC.setEncountered(new EncounterPlayer(ost, oC));
 
 				ost.fightingPlayerList.add(oC);
@@ -1496,6 +1497,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			} // end for
 
 		if (!ost.encounterFrame.isVisible()) {
+			ost.encounterFrame.pack();
 			ost.encounterFrame.setVisible(true);
 		} else {
 			ost.encounterFrame.validate();

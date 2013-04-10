@@ -6,21 +6,33 @@
 
 package org.ost.main;
 
+import static org.ost.main.MyClasses.MyStatics.*;
+
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
 import java.awt.MouseInfo;
 import java.awt.event.MouseEvent;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JLabel;
+import javax.swing.JTable;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.StatesClass;
 import org.ost.main.MyUtils.MyParse;
+import org.ost.main.MyUtils.MyRandomClass;
 import org.ost.main.MyUtils.SimpleDialog;
 import org.ost.main.MyUtils.Utils;
+import org.ost.main.MyUtils.Utils.ColorColumnRenderer;
 
 /**
  *
@@ -35,6 +47,15 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		this.oP = oP;
 		initComponents();
 
+		updatePanel(oP);
+	}
+
+	/**
+	 * update bars/panels/values for this user
+	 * 
+	 * @param oP
+	 */
+	private void updatePanel(PlayerClass oP) {
 		hpBarLast = oP.getHpCurrent();
 		hitpointSlider.setMaximum(oP.getHpMax());
 		hitpointSlider.setValue(oP.getHpCurrent());
@@ -56,6 +77,55 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		specialDefenseLabel.setText("SD: " + oP.getSpecialDefense());
 		magicResistanceLabel.setText("MR: " + oP.getMagicResistance());
 		moveLabel.setText("Move: " + oP.getMoveRate());
+
+		// matrix bar
+		//Utils.updateMatrixPanelPC(matrixPanel, oP, ost);
+		JTable matrix = Utils.getMatrixTable(oP.getMatrix(ost));
+		matrixPanel.add(matrix.getTableHeader(), BorderLayout.PAGE_START);
+		matrixPanel.add(matrix, BorderLayout.CENTER);
+		
+		// saves
+		for (int i = 0; i < oP.getMySaves().size(); i++) {
+			int aB = oP.getMySaves().get(i);
+			int aJ = oP.getMySaveAdjustments().get(i);
+			switch (i) {
+			case SAVE_BREATH:
+				saveBreathNameLabel.setText(SAVES_ABBREV[i]);
+				saveBreathNameLabel.setToolTipText(String.format("%s, %d - %d",
+						SAVES[i], aB, aJ));
+				saveBreathTextField.setText(String.format("%d", (aB - aJ)));
+				break;
+			case SAVE_DEATH:
+				saveDeathNameLabel.setText(SAVES_ABBREV[i]);
+				saveDeathNameLabel.setToolTipText(String.format("%s, %d - %d",
+						SAVES[i], aB, aJ));
+				saveDeathTextField.setText(String.format("%d", (aB - aJ)));
+				break;
+			case SAVE_POLY:
+				savePolyNameLabel.setText(SAVES_ABBREV[i]);
+				savePolyNameLabel.setToolTipText(String.format("%s, %d - %d",
+						SAVES[i], aB, aJ));
+				savePolyTextField.setText(String.format("%d", (aB - aJ)));
+				break;
+			case SAVE_ROD:
+				saveRodNameLabel.setText(SAVES_ABBREV[i]);
+				saveRodNameLabel.setToolTipText(String.format("%s, %d - %d",
+						SAVES[i], aB, aJ));
+				saveRodTextField.setText(String.format("%d", (aB - aJ)));
+				break;
+			case SAVE_SPELL:
+				saveSpellNameLabel.setText(SAVES_ABBREV[i]);
+				saveSpellNameLabel.setToolTipText(String.format("%s, %d - %d",
+						SAVES[i], aB, aJ));
+				saveSpellTextField.setText(String.format("%d", (aB - aJ)));
+				break;
+
+			default:
+				ost.dprint("Unknown save type in EncounterPlayer updatePanel()\n");
+				break;
+			}
+
+		}
 
 	}
 
@@ -108,7 +178,6 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		hitpointChangeLabel = new javax.swing.JLabel();
 		hitpointIcon = new javax.swing.JLabel();
 		armorClassIcon = new javax.swing.JLabel();
-		creatureSaveIcon = new javax.swing.JLabel();
 		jPanel3 = new javax.swing.JPanel();
 		jPanel4 = new javax.swing.JPanel();
 		pcCharacterNameLabel = new javax.swing.JLabel();
@@ -125,9 +194,21 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		statesEffectList
 				.setCellRenderer(new EncounterCreature.StatesCellRendererList());
 		statesAddLabel = new javax.swing.JLabel();
+		savesPanel = new javax.swing.JPanel();
+		saveDeathNameLabel = new javax.swing.JLabel();
+		saveDeathTextField = new javax.swing.JTextField();
+		savePolyNameLabel = new javax.swing.JLabel();
+		savePolyTextField = new javax.swing.JTextField();
+		saveRodNameLabel = new javax.swing.JLabel();
+		saveRodTextField = new javax.swing.JTextField();
+		saveBreathNameLabel = new javax.swing.JLabel();
+		saveBreathTextField = new javax.swing.JTextField();
+		saveSpellNameLabel = new javax.swing.JLabel();
+		saveSpellTextField = new javax.swing.JTextField();
 		healthBarPanel = new javax.swing.JPanel();
 		hitpointSlider = new javax.swing.JSlider();
-		jPanel6 = new javax.swing.JPanel();
+		matrixPanel = new javax.swing.JPanel();
+		logTabbedPane = new javax.swing.JTabbedPane();
 		jScrollPane3 = new javax.swing.JScrollPane();
 		notesTextArea = new javax.swing.JTextArea();
 		jScrollPane4 = new javax.swing.JScrollPane();
@@ -396,37 +477,15 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		jLayeredPane1.add(armorClassIcon,
 				javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-		creatureSaveIcon.setFont(new java.awt.Font("Segoe UI", 1, 10));
-		creatureSaveIcon
-				.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-		creatureSaveIcon.setIcon(new javax.swing.ImageIcon(getClass()
-				.getResource("/images/32-Fire-Dragon-Breath-icon.png"))); // NOI18N
-		creatureSaveIcon.setText("Save!");
-		creatureSaveIcon.setToolTipText("Roll save for this creature.");
-		creatureSaveIcon.setEnabled(false);
-		creatureSaveIcon.setIconTextGap(1);
-		creatureSaveIcon
-				.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-		creatureSaveIcon.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseEntered(java.awt.event.MouseEvent evt) {
-				creatureSaveIconMouseEntered(evt);
-			}
-
-			public void mouseExited(java.awt.event.MouseEvent evt) {
-				creatureSaveIconMouseExited(evt);
-			}
-
-			public void mousePressed(java.awt.event.MouseEvent evt) {
-				creatureSaveIconMousePressed(evt);
-			}
-		});
-		creatureSaveIcon.setBounds(40, 40, 60, 50);
-		jLayeredPane1.add(creatureSaveIcon,
-				javax.swing.JLayeredPane.DEFAULT_LAYER);
-
 		jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
 		jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+		jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Details",
+				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+				javax.swing.border.TitledBorder.DEFAULT_POSITION,
+				new java.awt.Font("Segoe UI", 0, 10)));
 		jPanel4.setLayout(new java.awt.GridBagLayout());
 
 		pcCharacterNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -518,13 +577,22 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				jPanel3);
 		jPanel3.setLayout(jPanel3Layout);
 		jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-				jPanel4, javax.swing.GroupLayout.Alignment.TRAILING,
-				javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE));
+				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+				jPanel3Layout
+						.createSequentialGroup()
+						.addComponent(jPanel4,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 269,
+								javax.swing.GroupLayout.PREFERRED_SIZE)
+						.addContainerGap(62, Short.MAX_VALUE)));
 		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-				jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 80,
-				Short.MAX_VALUE));
+				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+				jPanel3Layout
+						.createSequentialGroup()
+						.addComponent(jPanel4,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 86,
+								javax.swing.GroupLayout.PREFERRED_SIZE)
+						.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+								Short.MAX_VALUE)));
 
 		jScrollPane2.setBackground(new java.awt.Color(204, 204, 204));
 		jScrollPane2
@@ -567,6 +635,161 @@ public class EncounterPlayer extends javax.swing.JPanel {
 			}
 		});
 
+		savesPanel.setBackground(new java.awt.Color(204, 204, 204));
+		savesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Saves",
+				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+				javax.swing.border.TitledBorder.TOP, new java.awt.Font(
+						"Segoe UI", 0, 8)));
+		savesPanel.setToolTipText("Left click on save value to roll save.");
+		savesPanel.setLayout(new java.awt.GridBagLayout());
+
+		saveDeathNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveDeathNameLabel.setText("Save1");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.weightx = 1.0;
+		savesPanel.add(saveDeathNameLabel, gridBagConstraints);
+
+		saveDeathTextField.setBackground(new java.awt.Color(204, 255, 204));
+		saveDeathTextField.setEditable(false);
+		saveDeathTextField.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveDeathTextField.setText("  ");
+		saveDeathTextField
+				.setToolTipText("Left click on save value to roll save.");
+		saveDeathTextField.setPreferredSize(new java.awt.Dimension(15, 13));
+		saveDeathTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				saveDeathTextFieldMouseClicked(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		savesPanel.add(saveDeathTextField, gridBagConstraints);
+
+		savePolyNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		savePolyNameLabel.setText("Save1");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.weightx = 1.0;
+		savesPanel.add(savePolyNameLabel, gridBagConstraints);
+
+		savePolyTextField.setBackground(new java.awt.Color(204, 255, 204));
+		savePolyTextField.setEditable(false);
+		savePolyTextField.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		savePolyTextField.setText("  ");
+		savePolyTextField
+				.setToolTipText("Left click on save value to roll save.");
+		savePolyTextField.setPreferredSize(new java.awt.Dimension(15, 13));
+		savePolyTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				savePolyTextFieldMouseClicked(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		savesPanel.add(savePolyTextField, gridBagConstraints);
+
+		saveRodNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveRodNameLabel.setText("Save1");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.weightx = 1.0;
+		savesPanel.add(saveRodNameLabel, gridBagConstraints);
+
+		saveRodTextField.setBackground(new java.awt.Color(204, 255, 204));
+		saveRodTextField.setEditable(false);
+		saveRodTextField.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveRodTextField.setText("  ");
+		saveRodTextField
+				.setToolTipText("Left click on save value to roll save.");
+		saveRodTextField.setPreferredSize(new java.awt.Dimension(15, 13));
+		saveRodTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				saveRodTextFieldMouseClicked(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		savesPanel.add(saveRodTextField, gridBagConstraints);
+
+		saveBreathNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveBreathNameLabel.setText("Save1");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.weightx = 1.0;
+		savesPanel.add(saveBreathNameLabel, gridBagConstraints);
+
+		saveBreathTextField.setBackground(new java.awt.Color(204, 255, 204));
+		saveBreathTextField.setEditable(false);
+		saveBreathTextField.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveBreathTextField.setText("  ");
+		saveBreathTextField
+				.setToolTipText("Left click on save value to roll save.");
+		saveBreathTextField.setPreferredSize(new java.awt.Dimension(15, 13));
+		saveBreathTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				saveBreathTextFieldMouseClicked(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		savesPanel.add(saveBreathTextField, gridBagConstraints);
+
+		saveSpellNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveSpellNameLabel.setText("Save1");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.weightx = 1.0;
+		savesPanel.add(saveSpellNameLabel, gridBagConstraints);
+
+		saveSpellTextField.setBackground(new java.awt.Color(204, 255, 204));
+		saveSpellTextField.setEditable(false);
+		saveSpellTextField.setFont(new java.awt.Font("Segoe UI", 0, 8));
+		saveSpellTextField.setText("  ");
+		saveSpellTextField
+				.setToolTipText("Left click on save value to roll save.");
+		saveSpellTextField.setPreferredSize(new java.awt.Dimension(15, 13));
+		saveSpellTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+				saveSpellTextFieldMouseClicked(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		savesPanel.add(saveSpellTextField, gridBagConstraints);
+
 		javax.swing.GroupLayout statsSubPanel1Layout = new javax.swing.GroupLayout(
 				statsSubPanel1);
 		statsSubPanel1.setLayout(statsSubPanel1Layout);
@@ -602,13 +825,19 @@ public class EncounterPlayer extends javax.swing.JPanel {
 																javax.swing.GroupLayout.PREFERRED_SIZE,
 																73,
 																javax.swing.GroupLayout.PREFERRED_SIZE))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(
-												jPanel3,
+												savesPanel,
 												javax.swing.GroupLayout.PREFERRED_SIZE,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
-												javax.swing.GroupLayout.PREFERRED_SIZE)));
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addGap(0, 0, 0)
+										.addComponent(
+												jPanel3,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)
+										.addGap(36, 36, 36)));
 		statsSubPanel1Layout
 				.setVerticalGroup(statsSubPanel1Layout
 						.createParallelGroup(
@@ -621,14 +850,9 @@ public class EncounterPlayer extends javax.swing.JPanel {
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
 														.addComponent(
-																jPanel3,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE)
-														.addComponent(
 																jLayeredPane1,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
-																80,
+																103,
 																Short.MAX_VALUE)
 														.addGroup(
 																statsSubPanel1Layout
@@ -642,8 +866,18 @@ public class EncounterPlayer extends javax.swing.JPanel {
 																				2,
 																				2)
 																		.addComponent(
-																				statesAddLabel)))
-										.addContainerGap()));
+																				statesAddLabel))
+														.addComponent(
+																savesPanel,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																jPanel3,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addGap(0, 0, 0)));
 
 		healthBarPanel.setBackground(new java.awt.Color(204, 204, 204));
 		healthBarPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -689,13 +923,22 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				});
 		healthBarPanel.add(hitpointSlider, java.awt.BorderLayout.CENTER);
 
+		matrixPanel.setBackground(new java.awt.Color(255, 204, 0));
+		matrixPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
+						1, true), "Matrix",
+				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+				javax.swing.border.TitledBorder.DEFAULT_POSITION,
+				new java.awt.Font("Segoe UI", 0, 10)));
+		matrixPanel.setLayout(new java.awt.BorderLayout());
+
 		jScrollPane3.setBackground(new java.awt.Color(204, 204, 204));
 		jScrollPane3.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Notes",
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
-				new java.awt.Font("Segoe UI", 0, 14)));
+				new java.awt.Font("Segoe UI", 0, 10)));
 
 		notesTextArea.setColumns(20);
 		notesTextArea.setFont(new java.awt.Font("Segoe UI", 0, 12));
@@ -704,10 +947,15 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		notesTextArea.setWrapStyleWord(true);
 		jScrollPane3.setViewportView(notesTextArea);
 
+		logTabbedPane.addTab("Notes", jScrollPane3);
+
 		jScrollPane4.setBackground(new java.awt.Color(153, 153, 153));
 		jScrollPane4.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Log"));
+						1, true), "Log",
+				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
+				javax.swing.border.TitledBorder.DEFAULT_POSITION,
+				new java.awt.Font("Segoe UI", 0, 10)));
 
 		logTextArea.setBackground(new java.awt.Color(153, 153, 153));
 		logTextArea.setColumns(20);
@@ -716,46 +964,29 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		logTextArea.setRows(5);
 		jScrollPane4.setViewportView(logTextArea);
 
-		javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(
-				jPanel6);
-		jPanel6.setLayout(jPanel6Layout);
-		jPanel6Layout.setHorizontalGroup(jPanel6Layout
-				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addComponent(jScrollPane3,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 549,
-						Short.MAX_VALUE)
-				.addComponent(jScrollPane4,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 549,
-						Short.MAX_VALUE));
-		jPanel6Layout.setVerticalGroup(jPanel6Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-				jPanel6Layout
-						.createSequentialGroup()
-						.addComponent(jScrollPane3,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 197,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addGap(0, 0, 0)
-						.addComponent(jScrollPane4,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 193,
-								Short.MAX_VALUE).addGap(0, 0, 0)));
+		logTabbedPane.addTab("Log", jScrollPane4);
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
 		this.setLayout(layout);
 		layout.setHorizontalGroup(layout
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addComponent(statsSubPanel1,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 549,
-						Short.MAX_VALUE)
 				.addComponent(healthBarPanel,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 549,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
 						Short.MAX_VALUE)
-				.addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE,
-						javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+				.addComponent(logTabbedPane,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
+						Short.MAX_VALUE)
+				.addComponent(statsSubPanel1,
+						javax.swing.GroupLayout.DEFAULT_SIZE,
+						javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+				.addComponent(matrixPanel,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
+						Short.MAX_VALUE));
 		layout.setVerticalGroup(layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
 				layout.createSequentialGroup()
 						.addComponent(statsSubPanel1,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 112,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 126,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(0, 0, 0)
 						.addComponent(healthBarPanel,
@@ -763,12 +994,75 @@ public class EncounterPlayer extends javax.swing.JPanel {
 								javax.swing.GroupLayout.DEFAULT_SIZE,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(0, 0, 0)
-						.addComponent(jPanel6,
-								javax.swing.GroupLayout.DEFAULT_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE,
-								Short.MAX_VALUE).addContainerGap()));
+						.addComponent(matrixPanel,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 61,
+								javax.swing.GroupLayout.PREFERRED_SIZE)
+						.addGap(0, 0, 0)
+						.addComponent(logTabbedPane,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 283,
+								javax.swing.GroupLayout.PREFERRED_SIZE)
+						.addContainerGap()));
 	}// </editor-fold>
 	//GEN-END:initComponents
+
+	private void saveSpellTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			doSaveRoll(Integer.parseInt(saveSpellTextField.getText()),
+					SAVES[SAVE_SPELL]);
+		}
+	}
+
+	private void saveBreathTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			doSaveRoll(Integer.parseInt(saveBreathTextField.getText()),
+					SAVES[SAVE_BREATH]);
+		}
+	}
+
+	private void saveRodTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			doSaveRoll(Integer.parseInt(saveRodTextField.getText()),
+					SAVES[SAVE_ROD]);
+		}
+	}
+
+	private void savePolyTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			doSaveRoll(Integer.parseInt(savePolyTextField.getText()),
+					SAVES[SAVE_POLY]);
+		}
+	}
+
+	private void saveDeathTextFieldMouseClicked(java.awt.event.MouseEvent evt) {
+		if (evt.getButton() == MouseEvent.BUTTON1) {
+			doSaveRoll(Integer.parseInt(saveDeathTextField.getText()),
+					SAVES[SAVE_DEATH]);
+		}
+	}
+
+	/**
+	 * pop up effects of rolled save
+	 * 
+	 * @param mySave
+	 * @param saveName
+	 */
+	private void doSaveRoll(int mySave, String saveName) {
+		int d20 = MyRandomClass.rollDice(1, 20);
+		String saveResult = "";
+		if (d20 >= mySave) {
+			//Saved!
+			saveResult = String.format("Saved versus %s. Rolled %d, needed %d",
+					saveName, d20, mySave);
+			SimpleDialog.showDone(saveResult);
+		} else {
+			//FAILED!
+			saveResult = String.format(
+					"FAILED versus %s. Rolled %d, needed %d", saveName, d20,
+					mySave);
+			SimpleDialog.showError(saveResult);
+		}
+		ost.dprint(oP.getName() + ":" + saveResult + "\n");
+	}
 
 	private void formMousePressed(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON3) { // right click
@@ -784,25 +1078,26 @@ public class EncounterPlayer extends javax.swing.JPanel {
 
 	private void saveSpellsMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		//TODO pcs saves
+		saveSpellTextFieldMouseClicked(null);
 	}
 
 	private void saveBreathMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
+		saveBreathTextFieldMouseClicked(null);
 	}
 
 	private void saveRodStaffWandMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		//TODO pcs saves
+		saveRodTextFieldMouseClicked(null);
 	}
 
 	private void savePolymorphMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		//TODO pcs saves
+		savePolyTextFieldMouseClicked(null);
 	}
 
 	private void saveDeathMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-		//TODO pcs saves
+		saveDeathTextFieldMouseClicked(null);
 	}
 
 	public void hpEditMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
@@ -886,10 +1181,11 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		//TODO allow multiple ACs
 		String sAC = SimpleDialog.showQuestion(acPopupMenu, "New Armor Class",
 				"New AC", oP.getArmorRatings().get(0));
-		oP.getArmorRatings().clear();
-		oP.getArmorRatings().add(sAC);
+		//oP.getArmorRatings().clear();
+		oP.getArmorRatings().set(0, sAC);
 		armorClassLabel.setText(MyParse.displayArmorClass(
 				ost.mainFrame.d20ModeRadioButton.isSelected(), sAC));
+
 	}
 
 	private void stateCancelMenuItemActionPerformed(
@@ -940,20 +1236,6 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		ost.mainFrame.statesAddDialog.setVisible(true);
 	}
 
-	private void creatureSaveIconMousePressed(java.awt.event.MouseEvent evt) {
-		//TODO add saves for players
-		if (evt.getButton() == MouseEvent.BUTTON1) {
-		}
-	}
-
-	private void creatureSaveIconMouseExited(java.awt.event.MouseEvent evt) {
-		creatureSaveIcon.setForeground(Color.BLACK);
-	}
-
-	private void creatureSaveIconMouseEntered(java.awt.event.MouseEvent evt) {
-		creatureSaveIcon.setForeground(Color.red);
-	}
-
 	private void armorClassIconMousePressed(java.awt.event.MouseEvent evt) {
 		//TODO add support for multiple ACs
 		if (evt.getButton() == MouseEvent.BUTTON3) {
@@ -972,7 +1254,8 @@ public class EncounterPlayer extends javax.swing.JPanel {
 
 	private void helpIconMousePressed(java.awt.event.MouseEvent evt) {
 		if (evt.getButton() == MouseEvent.BUTTON1) {
-			//TODO pcs character sheet
+			Frame_Character_Sheet fSheet = new Frame_Character_Sheet(ost, oP);
+			fSheet.setVisible(true);
 		}
 	}
 
@@ -1008,9 +1291,8 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		hitpointChangeLabel.setForeground(Color.black);
 
 		// update the nodes in PC since someone took damage and might be "down"
-		ost.encounterFrame.encountersTreeModel.nodeChanged(
-				Utils.getMyNodeByObject(
-						ost.encounterFrame.encountersTreeModel, 
+		ost.encounterFrame.encountersTreeModel.nodeChanged(Utils
+				.getMyNodeByObject(ost.encounterFrame.encountersTreeModel,
 						ost.encounterFrame.nodePC, oP));
 	}
 
@@ -1023,7 +1305,6 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JLabel armorClassIcon;
 	private javax.swing.JLabel armorClassLabel;
 	private javax.swing.JLabel classLabel;
-	private javax.swing.JLabel creatureSaveIcon;
 	private javax.swing.JPanel healthBarPanel;
 	private javax.swing.JLabel helpIcon;
 	private javax.swing.JLabel hitpointChangeLabel;
@@ -1038,7 +1319,6 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JPanel jPanel3;
 	private javax.swing.JPanel jPanel4;
 	private javax.swing.JPanel jPanel5;
-	private javax.swing.JPanel jPanel6;
 	private javax.swing.JScrollPane jScrollPane2;
 	private javax.swing.JScrollPane jScrollPane3;
 	private javax.swing.JScrollPane jScrollPane4;
@@ -1051,20 +1331,33 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JSeparator jSeparator7;
 	private javax.swing.JSeparator jSeparator8;
 	private javax.swing.JLabel levelLabel;
+	private javax.swing.JTabbedPane logTabbedPane;
 	private javax.swing.JTextArea logTextArea;
 	private javax.swing.JLabel magicResistanceLabel;
+	private javax.swing.JPanel matrixPanel;
 	private javax.swing.JLabel moveLabel;
 	public javax.swing.JMenuItem nameEditMenuItem;
 	public javax.swing.JTextArea notesTextArea;
 	private javax.swing.JLabel pcCharacterNameLabel;
 	private javax.swing.JLabel pcNameLabel;
 	private javax.swing.JMenuItem saveBreathMenuItem;
+	private javax.swing.JLabel saveBreathNameLabel;
+	private javax.swing.JTextField saveBreathTextField;
 	private javax.swing.JMenuItem saveCancelMenuItem;
 	private javax.swing.JMenuItem saveDeathMenuItem;
+	private javax.swing.JLabel saveDeathNameLabel;
+	private javax.swing.JTextField saveDeathTextField;
+	private javax.swing.JLabel savePolyNameLabel;
+	private javax.swing.JTextField savePolyTextField;
 	private javax.swing.JMenuItem savePolymorphMenuItem;
 	private javax.swing.JPopupMenu savePopupMenu;
+	private javax.swing.JLabel saveRodNameLabel;
 	private javax.swing.JMenuItem saveRodStaffWandMenuItem;
+	private javax.swing.JTextField saveRodTextField;
+	private javax.swing.JLabel saveSpellNameLabel;
+	private javax.swing.JTextField saveSpellTextField;
 	private javax.swing.JMenuItem saveSpellsMenuItem;
+	private javax.swing.JPanel savesPanel;
 	private javax.swing.JLabel specialAttackLabel;
 	private javax.swing.JLabel specialDefenseLabel;
 	private javax.swing.JMenuItem stateCancelMenuItem;

@@ -419,7 +419,6 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 
 	private void abilityScoresButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		optionAbilityScores.setLocationRelativeTo(this);
 		optionAbilityScores.setVisible(true);
 	}

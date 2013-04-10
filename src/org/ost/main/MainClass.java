@@ -342,7 +342,6 @@ public class MainClass implements Serializable {
 		ost.mainFrame.mainTabbedPane.addTab("Dungeon Mastering", null, ost.dmConfigTab,"DM configuration options");
 		ost.encounterFrame.encountersTabbedPane.addTab("Dice Bag", null, ost.diceTab,"Roll dem Bones");
 		ost.tabTreasure = new DM_Config_Tab_TreasureChest(ost);
-		
 		ost.showProgress(ost.mainFrame, "Loading charts and tables onto DM screen...");
 		ost.dmScreen = new DM_Screen(ost);
 
