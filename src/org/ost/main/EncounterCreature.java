@@ -497,14 +497,14 @@ public class EncounterCreature extends javax.swing.JPanel {
 				helpIconMousePressed(evt);
 			}
 		});
-		helpIcon.setBounds(0, 0, 20, -1);
+		helpIcon.setBounds(0, 0, 20, 16);
 		jLayeredPane1.add(helpIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		armorClassLabel
 				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		armorClassLabel.setText("10");
-		armorClassLabel.setBounds(0, 10, 60, -1);
+		armorClassLabel.setBounds(0, 10, 60, 21);
 		jLayeredPane1.add(armorClassLabel,
 				javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -519,7 +519,7 @@ public class EncounterCreature extends javax.swing.JPanel {
 				.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		hitpointChangeLabel.setText("(0)");
 		hitpointChangeLabel.setToolTipText("Health adjustment.");
-		hitpointChangeLabel.setBounds(90, 40, 30, -1);
+		hitpointChangeLabel.setBounds(90, 40, 30, 21);
 		jLayeredPane1.add(hitpointChangeLabel,
 				javax.swing.JLayeredPane.DEFAULT_LAYER);
 		hitpointChangeLabel.setText("");
@@ -535,7 +535,7 @@ public class EncounterCreature extends javax.swing.JPanel {
 				hitpointIconMousePressed(evt);
 			}
 		});
-		hitpointIcon.setBounds(50, -10, -1, -1);
+		hitpointIcon.setBounds(50, -10, 64, 64);
 		jLayeredPane1.add(hitpointIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassIcon

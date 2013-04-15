@@ -69,21 +69,27 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		playerTitleBorder = (TitledBorder) this.getBorder();
 		playerTitleBorder.setTitle(String.format("%s", oP.getName()));
 
-		pcNameLabel.setText("Name: " + oP.getName());
-		pcCharacterNameLabel.setText("Player: " + oP.getNamePlayer());
-		levelLabel.setText("Level: " + oP.getPcLevel());
-		classLabel.setText("Class: " + oP.getPcClass());
+		pcNameLabel.setText("Name: " + oP.getNamePlayer());
+		pcCharacterNameLabel.setText("Player: " + oP.getName());
+		levelLabel.setText("Level: " + oP.getMyLevelName(ost));
+		classLabel.setText("Class: " + oP.getMyClassName(ost));
+		moveLabel.setText("Move: " + oP.getModifiedMoveRate(ost));
+
+		detailsACLabel.setText(String.format("AC:%d, Rear:%d, No Shield:%d",
+				oP.getArmorClassByType(AC_NORMAL, ost),
+				oP.getArmorClassByType(AC_REAR, ost),
+				oP.getArmorClassByType(AC_SHIELDLESS, ost)));
+
 		specialAttackLabel.setText("SA: " + oP.getSpecialAttacks());
 		specialDefenseLabel.setText("SD: " + oP.getSpecialDefense());
 		magicResistanceLabel.setText("MR: " + oP.getMagicResistance());
-		moveLabel.setText("Move: " + oP.getMoveRate());
 
 		// matrix bar
 		//Utils.updateMatrixPanelPC(matrixPanel, oP, ost);
 		JTable matrix = Utils.getMatrixTable(oP.getMatrix(ost));
 		matrixPanel.add(matrix.getTableHeader(), BorderLayout.PAGE_START);
 		matrixPanel.add(matrix, BorderLayout.CENTER);
-		
+
 		// saves
 		for (int i = 0; i < oP.getMySaves().size(); i++) {
 			int aB = oP.getMySaves().get(i);
@@ -188,6 +194,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		magicResistanceLabel = new javax.swing.JLabel();
 		levelLabel = new javax.swing.JLabel();
 		classLabel = new javax.swing.JLabel();
+		detailsACLabel = new javax.swing.JLabel();
 		jScrollPane2 = new javax.swing.JScrollPane();
 		modelStatesListForCombatPanel = new DefaultListModel();
 		statesEffectList = new javax.swing.JList(modelStatesListForCombatPanel);
@@ -422,7 +429,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				helpIconMousePressed(evt);
 			}
 		});
-		helpIcon.setBounds(0, 0, 20, 16);
+		helpIcon.setBounds(0, 0, 20, 20);
 		jLayeredPane1.add(helpIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -459,7 +466,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				hitpointIconMousePressed(evt);
 			}
 		});
-		hitpointIcon.setBounds(50, -10, 64, 64);
+		hitpointIcon.setBounds(50, -10, 64, 60);
 		jLayeredPane1.add(hitpointIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
 		armorClassIcon
@@ -503,6 +510,8 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		pcNameLabel.setText("Player:");
 		pcNameLabel.setToolTipText("Damage that the creature can do.");
 		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.weightx = 3.0;
@@ -514,7 +523,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		moveLabel.setPreferredSize(new java.awt.Dimension(13, 14));
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.ipadx = 10;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
@@ -561,6 +570,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		jPanel4.add(levelLabel, gridBagConstraints);
 
@@ -570,8 +580,19 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		jPanel4.add(classLabel, gridBagConstraints);
+
+		detailsACLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		detailsACLabel.setText("AC: 10, 10, 10");
+		detailsACLabel
+				.setToolTipText("AC:Normal, Rear: From behind, No Shield: Without a shield.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		jPanel4.add(detailsACLabel, gridBagConstraints);
 
 		javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(
 				jPanel3);
@@ -581,9 +602,10 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				jPanel3Layout
 						.createSequentialGroup()
 						.addComponent(jPanel4,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 269,
+								javax.swing.GroupLayout.PREFERRED_SIZE, 318,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addContainerGap(62, Short.MAX_VALUE)));
+						.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+								Short.MAX_VALUE)));
 		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
 				jPanel3Layout
@@ -837,7 +859,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)
-										.addGap(36, 36, 36)));
+										.addGap(98, 98, 98)));
 		statsSubPanel1Layout
 				.setVerticalGroup(statsSubPanel1Layout
 						.createParallelGroup(
@@ -971,16 +993,16 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		layout.setHorizontalGroup(layout
 				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addComponent(healthBarPanel,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 685,
 						Short.MAX_VALUE)
 				.addComponent(logTabbedPane,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 685,
 						Short.MAX_VALUE)
 				.addComponent(statsSubPanel1,
 						javax.swing.GroupLayout.DEFAULT_SIZE,
 						javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 				.addComponent(matrixPanel,
-						javax.swing.GroupLayout.DEFAULT_SIZE, 600,
+						javax.swing.GroupLayout.DEFAULT_SIZE, 685,
 						Short.MAX_VALUE));
 		layout.setVerticalGroup(layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
@@ -1305,6 +1327,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JLabel armorClassIcon;
 	private javax.swing.JLabel armorClassLabel;
 	private javax.swing.JLabel classLabel;
+	private javax.swing.JLabel detailsACLabel;
 	private javax.swing.JPanel healthBarPanel;
 	private javax.swing.JLabel helpIcon;
 	private javax.swing.JLabel hitpointChangeLabel;

@@ -96,7 +96,7 @@ character level up, new MaxHP:53 from 34
 </log>
     <saveLast></saveLast>
     <tag></tag>
-    <initRoll>0</initRoll>
+    <initRoll>9</initRoll>
     <states/>
     <fightingList/>
     <myClass>
@@ -1168,7 +1168,7 @@ character level up, new MaxHP:17 from 13
 </log>
     <saveLast></saveLast>
     <tag></tag>
-    <initRoll>0</initRoll>
+    <initRoll>9</initRoll>
     <states/>
     <fightingList/>
     <myClass>
@@ -2210,7 +2210,7 @@ character level up, new MaxHP:27 from 16
     <namePlayer>John Smith</namePlayer>
     <myID>a0867ca9-0962-4bc0-8654-4ea7e1f9146f</myID>
     <hpMax>30</hpMax>
-    <hpCurrent>30</hpCurrent>
+    <hpCurrent>20</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -2237,6 +2237,8 @@ character experience modified :16000
 character level up, new MaxHP:33 from 30
 character experience modified :16000
 character level up, new MaxHP:30 from 0
+health adjusted (-12)
+health adjusted (+2)
 </log>
     <saveLast></saveLast>
     <tag></tag>
