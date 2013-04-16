@@ -1,16 +1,27 @@
 <entries>
   <EquipmentClass>
-    <myID>a8f6a971-ba4b-44a1-bf93-ae79c55e8c6c</myID>
+    <myID>ce615886-ad02-4f15-aaaf-fbec7ca353a6</myID>
     <name>wineskin</name>
     <description>Carries 1 day supply of water or other substances.</description>
     <count>1</count>
-    <type>1</type>
+    <type>0</type>
     <magic>false</magic>
     <charges>0</charges>
     <chargesMax>0</chargesMax>
     <equipped>false</equipped>
     <weight>0.5</weight>
     <weaponType>0</weaponType>
+    <weaponUseType/>
+    <weaponGroupType/>
+    <weaponTightGroupType/>
+    <damageSmall>1d4</damageSmall>
+    <damageMedium>1d4</damageMedium>
+    <damageLarge>1d4</damageLarge>
+    <armorType/>
     <armorBulkType>0</armorBulkType>
+    <ac>0</ac>
+    <acBase>10</acBase>
+    <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+    <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
   </EquipmentClass>
 </entries>

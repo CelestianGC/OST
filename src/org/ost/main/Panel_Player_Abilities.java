@@ -89,11 +89,11 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 				switch (i) {
 				case ABILITY_CHARISMA:
 					pcCharismaLabel.setText(String.format("%d", abilityTotal));
-					pcLoyaltyLabel.setText(String.format("%d",
+					pcLoyaltyLabel.setText(String.format("%d%%",
 							aStat.charisma.loyaltyBase));
 					pcMaxHenchmenLabel.setText(String.format("%d",
 							aStat.charisma.maxNumberHenchmen));
-					pcReactionAdjCharismaLabel.setText(String.format("%d",
+					pcReactionAdjCharismaLabel.setText(String.format("%d%%",
 							aStat.charisma.reactionAdjustment));
 					break;
 				case ABILITY_COMELINESS:
@@ -111,9 +111,9 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 						nConBonus = aStat.consitution.hitpointAdjustmentFighter;
 					pcHPAdjLabel.setText(String.format("%d", nConBonus));
 
-					pcResurrectionSurvivalLabel.setText(String.format("%d",
+					pcResurrectionSurvivalLabel.setText(String.format("%d%%",
 							aStat.consitution.resurrectionSurvival));
-					pcSystemShockLabel.setText(String.format("%d",
+					pcSystemShockLabel.setText(String.format("%d%%",
 							aStat.consitution.systemShock));
 					break;
 				case ABILITY_DEXTERITY:
@@ -136,22 +136,25 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					String magicSpells = "";
 					if (pc.isCasterArcane(ost))
 						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
-							magicSpells = magicSpells
-									+ String.format(
-											"L%dX%d%s",
-											ii + 1,
-											aStat.intelligence.bonusSpells[ii],
-											ii + 1 < MAX_MAGE_SPELL_LEVEL ? ", "
-													: "");
+							if (aStat.intelligence.bonusSpells[ii] > 0) {
+								magicSpells = magicSpells
+										+ String.format(
+												"%sL%dX%d",
+												magicSpells.length() > 0 ? ", ": "",
+												ii + 1,
+												aStat.intelligence.bonusSpells[ii]);
+							}
 						}
 					pcBonusArcaneSpellsLabel.setText(String.format("%s",
 							magicSpells));
+					pcBonusArcaneSpellsLabel.setToolTipText(
+							pcBonusArcaneLabel.getToolTipText());
 					if (magicSpells.length() <= 0)
 						pcBonusArcaneLabel.setText("");
 					else
 						pcBonusArcaneLabel.setText("Bonus");
 
-					pcKnowSpellLabel.setText(String.format("%d",
+					pcKnowSpellLabel.setText(String.format("%d%%",
 							aStat.intelligence.knowSpell));
 					pcLanguagesLabel.setText(String.format("%d",
 							aStat.intelligence.languages));
@@ -276,16 +279,19 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 					String clericSpells = "";
 					if (pc.isCasterDivine(ost))
 						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+							if (aStat.wisdom.bonusSpells[ii] > 0) {
 							clericSpells = clericSpells
 									+ String.format(
-											"L%dX%d%s",
+											"%sL%dX%d",
+											clericSpells.length() > 0 ? ", ": "",
 											ii + 1,
-											aStat.wisdom.bonusSpells[ii],
-											ii + 1 < MAX_CLERIC_SPELL_LEVEL ? ", "
-													: "");
+											aStat.wisdom.bonusSpells[ii]);
+							}
 						}
 					pcBonusSpellsDivineLabel.setText(String.format("%s",
 							clericSpells));
+					pcBonusSpellsDivineLabel.setToolTipText(
+							pcBonusDivineLabel.getToolTipText());
 					if (clericSpells.length() <= 0)
 						pcBonusDivineLabel.setText("");
 					else
@@ -293,7 +299,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 					pcMagicalAdjLabel.setText(String.format("%d",
 							aStat.wisdom.magicalAdjustment));
-					pcSpellFailureLabel.setText(String.format("%d",
+					pcSpellFailureLabel.setText(String.format("%d%%",
 							aStat.wisdom.spellFailure));
 					break;
 
@@ -531,7 +537,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -583,11 +589,12 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		pcBonusArcaneSpellsLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
 		pcBonusArcaneSpellsLabel
 				.setText("L1x0,L2x0,L3x0,L4x0,L5x0,L6x0,L7x0,L8x0,L9x0");
+		pcBonusArcaneSpellsLabel.setToolTipText("Bonus Arcane spells.");
 		intPanel.add(pcBonusArcaneSpellsLabel);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 1;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -623,7 +630,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -658,7 +665,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -694,7 +701,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -704,7 +711,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		chrPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel64.setText("Maximum Henchmen");
+		jLabel64.setText("Max. Henchmen");
 		chrPanel.add(jLabel64);
 
 		pcMaxHenchmenLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
@@ -731,7 +738,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 2;
-		gridBagConstraints.gridy = 7;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		AbilitiesPanel.add(chrPanel, gridBagConstraints);
@@ -748,7 +755,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel2, gridBagConstraints);
@@ -763,7 +770,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel3, gridBagConstraints);
@@ -780,7 +787,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 1;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel4, gridBagConstraints);
@@ -796,7 +803,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 1;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel5, gridBagConstraints);
@@ -812,7 +819,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel6, gridBagConstraints);
@@ -827,7 +834,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel7, gridBagConstraints);
@@ -844,7 +851,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel8, gridBagConstraints);
@@ -859,7 +866,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel9, gridBagConstraints);
@@ -876,7 +883,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel10, gridBagConstraints);
@@ -891,7 +898,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 1);
 		AbilitiesPanel.add(jPanel11, gridBagConstraints);
@@ -908,7 +915,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.ipadx = 10;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 1);
@@ -924,7 +931,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 7;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.ipadx = 10;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 1);
@@ -944,7 +951,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 1;
+		gridBagConstraints.gridy = 0;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -964,7 +971,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 3;
+		gridBagConstraints.gridy = 1;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -984,7 +991,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 4;
+		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -1004,7 +1011,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 5;
+		gridBagConstraints.gridy = 3;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -1024,7 +1031,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 6;
+		gridBagConstraints.gridy = 4;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
@@ -1044,7 +1051,7 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 7;
+		gridBagConstraints.gridy = 5;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
 		gridBagConstraints.weightx = 1.0;
 		AbilitiesPanel.add(jPanel18, gridBagConstraints);

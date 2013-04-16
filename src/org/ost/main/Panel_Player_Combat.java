@@ -141,73 +141,73 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		}
 
 		Utils.updateMatrixPanelPC(attackMatrixPanel, pc, ost);
-		
-//		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
-//		//		pcCombatMatrixTable.getTableHeader().setFont(fFont);
-//		//		pcCombatMatrixTable.getTableHeader().setBackground(Color.yellow);
-//		//
-//		int attackList[] = pc.getMatrix(ost);
-//		//
-//		//		for (int i = 0; i < attackList.length; i++) {
-//		//			//			int acNumber = (10 - i);
-//		//			pcCombatMatrixTable.setValueAt(attackList[i], 0, i);
-//		//		}
-//		//
-//		Color aColor = new Color(255, 204, 105);
-//		Color bColor = new Color(255, 153, 51);
-//		Color thacoColor = new Color(255, 102, 102);
-//
-//		boolean bFlip = false;
-//
-//		JLabel target = new JLabel(String.format("AC"));
-//		JPanel pTarget = new JPanel(new FlowLayout(FlowLayout.LEFT));
-//		pTarget.setBackground(new Color(204, 204, 204));
-//		target.setToolTipText("Target Armor Class");
-//		target.setFont(fFont);
-//		pTarget.add(target);
-//		attackMatrixPanel.add(pTarget);
-//
-//		for (int i = 0; i < attackList.length; i++) {
-//			int acNumber = (10 - i);
-//			JLabel n = new JLabel(String.format("AC%d", (acNumber)));
-//			n.setFont(fFont);
-//			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
-//			if (i == 10)
-//				p.setBackground(thacoColor);
-//			else {
-//				p.setBackground(bFlip ? bColor : aColor);
-//				bFlip = !bFlip;
-//			}
-//			n.setToolTipText("Armor Class " + acNumber);
-//			p.setToolTipText(n.getToolTipText());
-//			p.add(n);
-//			attackMatrixPanel.add(p);
-//		}
-//
-//		bFlip = false;
-//		JLabel roll = new JLabel(String.format("Roll"));
-//		JPanel pRoll = new JPanel(new FlowLayout(FlowLayout.LEFT));
-//		pRoll.setBackground(new Color(204, 204, 204));
-//		roll.setToolTipText("Attack Roll Made");
-//		roll.setFont(fFont);
-//		pRoll.add(roll);
-//		attackMatrixPanel.add(pRoll);
-//
-//		for (int i = 0; i < attackList.length; i++) {
-//			JLabel n = new JLabel(String.format("%d", attackList[i]));
-//			n.setFont(fFont);
-//			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
-//			if (i == 10)
-//				p.setBackground(thacoColor);
-//			else {
-//				p.setBackground(bFlip ? bColor : aColor);
-//				bFlip = !bFlip;
-//			}
-//			n.setToolTipText("Attack roll needed " + attackList[i]);
-//			p.setToolTipText(n.getToolTipText());
-//			p.add(n);
-//			attackMatrixPanel.add(p);
-//		}
+
+		//		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		//		//		pcCombatMatrixTable.getTableHeader().setFont(fFont);
+		//		//		pcCombatMatrixTable.getTableHeader().setBackground(Color.yellow);
+		//		//
+		//		int attackList[] = pc.getMatrix(ost);
+		//		//
+		//		//		for (int i = 0; i < attackList.length; i++) {
+		//		//			//			int acNumber = (10 - i);
+		//		//			pcCombatMatrixTable.setValueAt(attackList[i], 0, i);
+		//		//		}
+		//		//
+		//		Color aColor = new Color(255, 204, 105);
+		//		Color bColor = new Color(255, 153, 51);
+		//		Color thacoColor = new Color(255, 102, 102);
+		//
+		//		boolean bFlip = false;
+		//
+		//		JLabel target = new JLabel(String.format("AC"));
+		//		JPanel pTarget = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//		pTarget.setBackground(new Color(204, 204, 204));
+		//		target.setToolTipText("Target Armor Class");
+		//		target.setFont(fFont);
+		//		pTarget.add(target);
+		//		attackMatrixPanel.add(pTarget);
+		//
+		//		for (int i = 0; i < attackList.length; i++) {
+		//			int acNumber = (10 - i);
+		//			JLabel n = new JLabel(String.format("AC%d", (acNumber)));
+		//			n.setFont(fFont);
+		//			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//			if (i == 10)
+		//				p.setBackground(thacoColor);
+		//			else {
+		//				p.setBackground(bFlip ? bColor : aColor);
+		//				bFlip = !bFlip;
+		//			}
+		//			n.setToolTipText("Armor Class " + acNumber);
+		//			p.setToolTipText(n.getToolTipText());
+		//			p.add(n);
+		//			attackMatrixPanel.add(p);
+		//		}
+		//
+		//		bFlip = false;
+		//		JLabel roll = new JLabel(String.format("Roll"));
+		//		JPanel pRoll = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//		pRoll.setBackground(new Color(204, 204, 204));
+		//		roll.setToolTipText("Attack Roll Made");
+		//		roll.setFont(fFont);
+		//		pRoll.add(roll);
+		//		attackMatrixPanel.add(pRoll);
+		//
+		//		for (int i = 0; i < attackList.length; i++) {
+		//			JLabel n = new JLabel(String.format("%d", attackList[i]));
+		//			n.setFont(fFont);
+		//			JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//			if (i == 10)
+		//				p.setBackground(thacoColor);
+		//			else {
+		//				p.setBackground(bFlip ? bColor : aColor);
+		//				bFlip = !bFlip;
+		//			}
+		//			n.setToolTipText("Attack roll needed " + attackList[i]);
+		//			p.setToolTipText(n.getToolTipText());
+		//			p.add(n);
+		//			attackMatrixPanel.add(p);
+		//		}
 
 		repaint();
 	}
@@ -348,22 +348,18 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addComponent(pcArmorClassLabel)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(jLabel31)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(
 												pcArmorClassShieldlessLabel)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(jLabel33)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(0, 0, 0)
 										.addComponent(pcArmorClassRearLabel)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-												213, Short.MAX_VALUE)
+												245, Short.MAX_VALUE)
 										.addComponent(jLabel47)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)

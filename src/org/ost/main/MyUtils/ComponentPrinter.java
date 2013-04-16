@@ -1,6 +1,8 @@
 package org.ost.main.MyUtils;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.awt.print.*;
 import javax.swing.*;
 
@@ -90,7 +92,13 @@ implements Printable
 		double factor = Math.min( factorX, factorY );
 		g2d.scale(factor,factor);
 		
-		g2d.translate(pageFormat.getImageableX(),pageFormat.getImageableY());
+		// rescale to page size
+//		double scale = 
+//				pageFormat.getImageableWidth()/ component.getMinimumSize().getWidth(); 
+//		g2d.scale(scale,scale);
+		
+		//g2d.translate(pageFormat.getImageableX(),pageFormat.getImageableY());
+		
 		mgr.setDoubleBufferingEnabled(false);  // only for swing components
 		component.paint(g2d);
 		mgr.setDoubleBufferingEnabled(true);  // only for swing components

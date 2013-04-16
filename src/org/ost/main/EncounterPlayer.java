@@ -598,14 +598,9 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				jPanel3);
 		jPanel3.setLayout(jPanel3Layout);
 		jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-				jPanel3Layout
-						.createSequentialGroup()
-						.addComponent(jPanel4,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 318,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
-								Short.MAX_VALUE)));
+				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
+				jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 422,
+				Short.MAX_VALUE));
 		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addGroup(
 				jPanel3Layout
@@ -853,13 +848,14 @@ public class EncounterPlayer extends javax.swing.JPanel {
 												javax.swing.GroupLayout.PREFERRED_SIZE,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addGap(0, 0, 0)
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addComponent(
 												jPanel3,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)
-										.addGap(98, 98, 98)));
+										.addGap(0, 0, 0)));
 		statsSubPanel1Layout
 				.setVerticalGroup(statsSubPanel1Layout
 						.createParallelGroup(
@@ -874,7 +870,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 														.addComponent(
 																jLayeredPane1,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
-																103,
+																120,
 																Short.MAX_VALUE)
 														.addGroup(
 																statsSubPanel1Layout
@@ -893,13 +889,17 @@ public class EncounterPlayer extends javax.swing.JPanel {
 																savesPanel,
 																javax.swing.GroupLayout.PREFERRED_SIZE,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE)
-														.addComponent(
-																jPanel3,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
 																javax.swing.GroupLayout.PREFERRED_SIZE))
-										.addGap(0, 0, 0)));
+										.addGap(0, 0, 0))
+						.addGroup(
+								statsSubPanel1Layout
+										.createSequentialGroup()
+										.addComponent(
+												jPanel3,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap()));
 
 		healthBarPanel.setBackground(new java.awt.Color(204, 204, 204));
 		healthBarPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
@@ -945,7 +945,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 				});
 		healthBarPanel.add(hitpointSlider, java.awt.BorderLayout.CENTER);
 
-		matrixPanel.setBackground(new java.awt.Color(255, 204, 0));
+		matrixPanel.setBackground(new java.awt.Color(153, 153, 153));
 		matrixPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Matrix",

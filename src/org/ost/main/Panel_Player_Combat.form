@@ -94,17 +94,17 @@
                   <Component id="pcCurrentHPLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
                   <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="pcArmorClassLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="pcArmorClassShieldlessLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                   <Component id="pcArmorClassRearLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="213" max="32767" attributes="0"/>
+                  <EmptySpace pref="245" max="32767" attributes="0"/>
                   <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="pcTHACOLabel" min="-2" max="-2" attributes="0"/>
@@ -130,7 +130,7 @@
                       <Component id="pcTHACOLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="attackMatrixPanel" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>

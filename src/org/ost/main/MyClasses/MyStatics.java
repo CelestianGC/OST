@@ -81,6 +81,7 @@ public class MyStatics {
 	public static final int WEAPON_TYPE_BLUDGEON = 3;
 	public static final int WEAPON_TYPE_OTHER = 4;
 
+	public static final int ARMOR_TYPE_NONE = 0;
 	public static final int ARMOR_TYPE_NONBULKY = 1;
 	public static final int ARMOR_TYPE_FAIRLYBULKY = 2;
 	public static final int ARMOR_TYPE_BULKY = 3;

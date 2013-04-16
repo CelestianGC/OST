@@ -28,34 +28,75 @@ public class EquipmentClass {
 	public ArrayList<EquipmentClass> contains;
 	public float weight;
 	
-	//TODO ---------- move to WeaponClass
+	//TODO ---------- Weapons
 	// weapon specific
 	public int weaponType; //slash, pierce, bludgeon, other
 	//what base weapon type this object is, i.e. what a prof a person needs to use it
 	public ArrayList<String> weaponUseType; //longsword, shortsword, longbow, dagger
 	public ArrayList<String> weaponGroupType; // blades, clubs, 
 	public ArrayList<String> weaponTightGroupType; // longblade, shortblade, longbows, shortbows
-		
-	//TODO ------------ move to ArmorClass
+	public String damageSmall; // 1d6+1
+	public String damageMedium;
+	public String damageLarge;
+	
+	//TODO ------------ Armors/shield
 	// armor specific
 	public ArrayList<String> armorType; //leather, chainmail, platemail, fieldplate
-	public int armorBulkType; // non-bulky, fairly-bulky, bulky/etc
+	public int armorBulkType; // none, non-bulky, fairly-bulky, bulky/etc
+	public int ac;
+	public int acBase;
+	
+	// magic
+	public int magicAdjustmentPrimary;
+	public int magicAdjustmentSecondary;
 	
 	public EquipmentClass() {
-		this("name","description",1,1,false,0,0,0,false);
+		this("name","description",0);
 	}
 
 	public EquipmentClass(String newName, String newDescription) {
-		this(newName,newDescription,1,1,false,0,0,0,false);
+		this(newName,newDescription,0);
 	}
 
 	public EquipmentClass(String newName, String newDescription, int newCount) {
-		this(newName,newDescription,newCount,1,false,0,0,0,false);
+		this(newName, newDescription,newCount,0,
+				false,0,0,false,
+				new ArrayList<EquipmentClass>(),0,0,
+				new ArrayList<String>(),new ArrayList<String>(),
+				new ArrayList<String>(),"1d4",
+				"1d4","1d4",
+				new ArrayList<String>(),0,0,10,
+				0,0);
 	}
 	
+	
+//	public EquipmentClass(String name, String description, int count, int type,
+//			boolean magic, int charges, int weaponType, int armorType,
+//			boolean equipped) {
+//		super();
+//		this.name = name;
+//		this.description = description;
+//		this.count = count;
+//		this.type = type;
+//		this.magic = magic;
+//		this.charges = charges;
+//		this.chargesMax = 0;
+//		this.weaponType = weaponType;
+//		this.equipped = equipped;
+//		this.setContains(new ArrayList<EquipmentClass>());
+//		this.weight = 0;
+//		this.setMyID(UUID.randomUUID().toString());
+//	}
+
+
 	public EquipmentClass(String name, String description, int count, int type,
-			boolean magic, int charges, int weaponType, int armorType,
-			boolean equipped) {
+			boolean magic, int charges, int chargesMax, boolean equipped,
+			ArrayList<EquipmentClass> contains, float weight, int weaponType,
+			ArrayList<String> weaponUseType, ArrayList<String> weaponGroupType,
+			ArrayList<String> weaponTightGroupType, String damageSmall,
+			String damageMedium, String damageLarge,
+			ArrayList<String> armorType, int armorBulkType, int ac, int acBase,
+			int magicAdjustmentPrimary, int magicAdjustmentSecondary) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -63,14 +104,193 @@ public class EquipmentClass {
 		this.type = type;
 		this.magic = magic;
 		this.charges = charges;
-		this.chargesMax = 0;
-		this.weaponType = weaponType;
+		this.chargesMax = chargesMax;
 		this.equipped = equipped;
-		this.setContains(new ArrayList<EquipmentClass>());
-		this.weight = 0;
+		this.contains = contains;
+		this.weight = weight;
+		this.weaponType = weaponType;
+		this.weaponUseType = weaponUseType;
+		this.weaponGroupType = weaponGroupType;
+		this.weaponTightGroupType = weaponTightGroupType;
+		this.damageSmall = damageSmall;
+		this.damageMedium = damageMedium;
+		this.damageLarge = damageLarge;
+		this.armorType = armorType;
+		this.armorBulkType = armorBulkType;
+		this.ac = ac;
+		this.acBase = acBase;
+		this.magicAdjustmentPrimary = magicAdjustmentPrimary;
+		this.magicAdjustmentSecondary = magicAdjustmentSecondary;
 		this.setMyID(UUID.randomUUID().toString());
 	}
 
+	/**
+	 * @return the weaponUseType
+	 */
+	public ArrayList<String> getWeaponUseType() {
+		return weaponUseType;
+	}
+
+	/**
+	 * @param weaponUseType the weaponUseType to set
+	 */
+	public void setWeaponUseType(ArrayList<String> weaponUseType) {
+		this.weaponUseType = weaponUseType;
+	}
+
+	/**
+	 * @return the weaponGroupType
+	 */
+	public ArrayList<String> getWeaponGroupType() {
+		return weaponGroupType;
+	}
+
+	/**
+	 * @param weaponGroupType the weaponGroupType to set
+	 */
+	public void setWeaponGroupType(ArrayList<String> weaponGroupType) {
+		this.weaponGroupType = weaponGroupType;
+	}
+
+	/**
+	 * @return the weaponTightGroupType
+	 */
+	public ArrayList<String> getWeaponTightGroupType() {
+		return weaponTightGroupType;
+	}
+
+	/**
+	 * @param weaponTightGroupType the weaponTightGroupType to set
+	 */
+	public void setWeaponTightGroupType(ArrayList<String> weaponTightGroupType) {
+		this.weaponTightGroupType = weaponTightGroupType;
+	}
+
+	/**
+	 * @return the damageSmall
+	 */
+	public String getDamageSmall() {
+		return damageSmall;
+	}
+
+	/**
+	 * @param damageSmall the damageSmall to set
+	 */
+	public void setDamageSmall(String damageSmall) {
+		this.damageSmall = damageSmall;
+	}
+
+	/**
+	 * @return the damageMedium
+	 */
+	public String getDamageMedium() {
+		return damageMedium;
+	}
+
+	/**
+	 * @param damageMedium the damageMedium to set
+	 */
+	public void setDamageMedium(String damageMedium) {
+		this.damageMedium = damageMedium;
+	}
+
+	/**
+	 * @return the damageLarge
+	 */
+	public String getDamageLarge() {
+		return damageLarge;
+	}
+
+	/**
+	 * @param damageLarge the damageLarge to set
+	 */
+	public void setDamageLarge(String damageLarge) {
+		this.damageLarge = damageLarge;
+	}
+
+	/**
+	 * @return the armorType
+	 */
+	public ArrayList<String> getArmorType() {
+		return armorType;
+	}
+
+	/**
+	 * @param armorType the armorType to set
+	 */
+	public void setArmorType(ArrayList<String> armorType) {
+		this.armorType = armorType;
+	}
+
+	/**
+	 * @return the armorBulkType
+	 */
+	public int getArmorBulkType() {
+		return armorBulkType;
+	}
+
+	/**
+	 * @param armorBulkType the armorBulkType to set
+	 */
+	public void setArmorBulkType(int armorBulkType) {
+		this.armorBulkType = armorBulkType;
+	}
+
+	/**
+	 * @return the ac
+	 */
+	public int getAc() {
+		return ac;
+	}
+
+	/**
+	 * @param ac the ac to set
+	 */
+	public void setAc(int ac) {
+		this.ac = ac;
+	}
+
+	/**
+	 * @return the acBase
+	 */
+	public int getAcBase() {
+		return acBase;
+	}
+
+	/**
+	 * @param acBase the acBase to set
+	 */
+	public void setAcBase(int acBase) {
+		this.acBase = acBase;
+	}
+
+	/**
+	 * @return the magicAdjustmentPrimary
+	 */
+	public int getMagicAdjustmentPrimary() {
+		return magicAdjustmentPrimary;
+	}
+
+	/**
+	 * @param magicAdjustmentPrimary the magicAdjustmentPrimary to set
+	 */
+	public void setMagicAdjustmentPrimary(int magicAdjustmentPrimary) {
+		this.magicAdjustmentPrimary = magicAdjustmentPrimary;
+	}
+
+	/**
+	 * @return the magicAdjustmentSecondary
+	 */
+	public int getMagicAdjustmentSecondary() {
+		return magicAdjustmentSecondary;
+	}
+
+	/**
+	 * @param magicAdjustmentSecondary the magicAdjustmentSecondary to set
+	 */
+	public void setMagicAdjustmentSecondary(int magicAdjustmentSecondary) {
+		this.magicAdjustmentSecondary = magicAdjustmentSecondary;
+	}
 
 	/**
 	 * @return the myID

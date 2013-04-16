@@ -46,6 +46,7 @@ import org.ost.main.MyClasses.AbilityStatClass;
 import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.SkillsClass;
+import org.ost.main.MyUtils.Utils;
 
 /**
  *
@@ -67,31 +68,29 @@ public class Panel_Player_Skills extends javax.swing.JPanel {
 		// added this incase we updated panel
 		pc = oPlayer;
 
-		// portrait
-
-		// skills?
-		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(ost);
-		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(ost);
+		//		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(ost);
+		//		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(ost);
 
 		skillsPanel.removeAll();
-		for (int i = 0; i < skillsBase.size(); i++) {
-			JPanel skills = new JPanel(new GridLayout(2, 0, 1, 1));
-			SkillsClass tJ = skillsAdj.get(i);
-			SkillsClass tS = skillsBase.get(i);
-			int finalSkill = tS.getScore() + tJ.getScore();
-			if (tS.getScore() != 0) {
-				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
-						+ tJ.getScore();
-				JLabel name = new JLabel(tS.getAbbrev());
-				name.setToolTipText(tooltip);
-				JLabel value = new JLabel(String.format("%d%%", finalSkill));
-				value.setToolTipText(tooltip);
-
-				skills.add(name);
-				skills.add(value);
-				skillsPanel.add(skills);
-			}
-		}
+		//		for (int i = 0; i < skillsBase.size(); i++) {
+		//			JPanel skills = new JPanel(new GridLayout(2, 0, 1, 1));
+		//			SkillsClass tJ = skillsAdj.get(i);
+		//			SkillsClass tS = skillsBase.get(i);
+		//			int finalSkill = tS.getScore() + tJ.getScore();
+		//			if (tS.getScore() != 0) {
+		//				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
+		//						+ tJ.getScore();
+		//				JLabel name = new JLabel(tS.getAbbrev());
+		//				name.setToolTipText(tooltip);
+		//				JLabel value = new JLabel(String.format("%d%%", finalSkill));
+		//				value.setToolTipText(tooltip);
+		//
+		//				skills.add(name);
+		//				skills.add(value);
+		//				skillsPanel.add(skills);
+		//			}
+		//		}
+		Utils.updateSkillsPanelPC(skillsPanel, oPlayer, ost);
 		skillsPanel.revalidate();
 		repaint();
 	}
@@ -107,15 +106,15 @@ public class Panel_Player_Skills extends javax.swing.JPanel {
 
 		skillsPanel = new javax.swing.JPanel();
 
-		setLayout(new java.awt.BorderLayout());
-
-		skillsPanel.setBackground(new java.awt.Color(255, 255, 255));
-		skillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
+		setBackground(new java.awt.Color(255, 255, 255));
+		setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Skills"));
-		skillsPanel
-				.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-		add(skillsPanel, java.awt.BorderLayout.CENTER);
+		setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+		skillsPanel.setBackground(new java.awt.Color(255, 255, 255));
+		skillsPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
+		add(skillsPanel);
 	}// </editor-fold>
 	//GEN-END:initComponents
 

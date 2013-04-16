@@ -57,6 +57,44 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcMoveBaseLabel
 				.setText(String.format("%d", pc.getModifiedMoveRate(ost)));
 
+		//		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
+		pcMaxHPLabel.setText(String.format("%d", pc.getHpMax()));
+		int iTHACO = pc.getTHACO(ost);
+		pcTHACOLabel.setText(String.format("%d", iTHACO));
+		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
+				+ iTHACO);
+
+		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
+			switch (i) {
+			case AC_NORMAL: {
+				int setAC = pc.getArmorClassByType(AC_NORMAL, ost);
+				pcArmorClassLabel.setText(String.format("%d", setAC));
+				pcArmorClassLabel.setToolTipText(AC_NAMES[i] + "," + ost.log);
+			}
+				break;
+			case AC_REAR: {
+				int setACRear = pc.getArmorClassByType(AC_REAR, ost);
+				pcArmorClassRearLabel.setText(String.format("%d", setACRear));
+				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i] + ","
+						+ ost.log);
+			}
+				break;
+			case AC_SHIELDLESS: {
+				int setACShieldless = pc
+						.getArmorClassByType(AC_SHIELDLESS, ost);
+				pcArmorClassShieldlessLabel.setText(String.format("%d",
+						setACShieldless));
+			}
+				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i] + ","
+						+ ost.log);
+				break;
+
+			default:
+				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
+				break;
+			}
+		}
+
 		repaint();
 	}
 
@@ -86,6 +124,16 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcMoveBaseLabel = new javax.swing.JLabel();
 		jLabel6 = new javax.swing.JLabel();
 		pcExperienceTotalsLabel = new javax.swing.JLabel();
+		jLabel45 = new javax.swing.JLabel();
+		pcMaxHPLabel = new javax.swing.JLabel();
+		jLabel29 = new javax.swing.JLabel();
+		pcArmorClassLabel = new javax.swing.JLabel();
+		jLabel31 = new javax.swing.JLabel();
+		pcArmorClassShieldlessLabel = new javax.swing.JLabel();
+		jLabel33 = new javax.swing.JLabel();
+		pcArmorClassRearLabel = new javax.swing.JLabel();
+		jLabel47 = new javax.swing.JLabel();
+		pcTHACOLabel = new javax.swing.JLabel();
 
 		setLayout(new java.awt.BorderLayout());
 
@@ -98,13 +146,13 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		jLabel3.setText("Name");
 
 		pcCharacterNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcCharacterNameLabel.setText("pcCharacterName");
+		pcCharacterNameLabel.setText("name");
 
 		jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel5.setText("Class");
 
 		pcClassNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcClassNameLabel.setText("pcClass");
+		pcClassNameLabel.setText("class");
 
 		jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel9.setText("Race");
@@ -116,7 +164,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		jLabel11.setText("Alignment");
 
 		pcAlignmentLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcAlignmentLabel.setText("pcAlignment");
+		pcAlignmentLabel.setText("align");
 
 		jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel7.setText("Level");
@@ -125,16 +173,16 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 		pcClassLevelLabel.setText("pcClassLevel");
 
 		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel1.setText("Player Name");
+		jLabel1.setText("Player");
 
 		pcPlayerNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcPlayerNameLabel.setText("pcPlayerName");
+		pcPlayerNameLabel.setText("pcName");
 
 		jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel13.setText("Move-base");
+		jLabel13.setText("Move");
 
 		pcMoveBaseLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcMoveBaseLabel.setText("pcMoveBase");
+		pcMoveBaseLabel.setText("move");
 
 		jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel6.setText("EXP");
@@ -142,6 +190,42 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 
 		pcExperienceTotalsLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
 		pcExperienceTotalsLabel.setText("pcExperience");
+
+		jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel45.setText("HP   ");
+		jLabel45.setToolTipText("Maximum hitpoints.");
+
+		pcMaxHPLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcMaxHPLabel.setText("999");
+
+		jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel29.setText("AC");
+		jLabel29.setToolTipText("Armor Class");
+
+		pcArmorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcArmorClassLabel.setText("-10");
+		pcArmorClassLabel.setToolTipText("Normal Armor Class.");
+
+		jLabel31.setText("/");
+
+		pcArmorClassShieldlessLabel
+				.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcArmorClassShieldlessLabel.setText("-10");
+		pcArmorClassShieldlessLabel
+				.setToolTipText("Armor class without shield");
+
+		jLabel33.setText("/");
+
+		pcArmorClassRearLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcArmorClassRearLabel.setText("-10");
+		pcArmorClassRearLabel.setToolTipText("Armor class from rear.");
+
+		jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel47.setText("THACO");
+		jLabel47.setToolTipText("To hit armor class 0 value.");
+
+		pcTHACOLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
+		pcTHACOLabel.setText("00");
 
 		javax.swing.GroupLayout detailsPanelLayout = new javax.swing.GroupLayout(
 				detailsPanel);
@@ -158,42 +242,33 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 												detailsPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel3)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcCharacterNameLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel5)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcClassNameLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel11)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcAlignmentLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel6)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcExperienceTotalsLabel)))
+														.addComponent(jLabel3)
+														.addComponent(jLabel5)
+														.addComponent(jLabel13)
+														.addComponent(jLabel45))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																pcCharacterNameLabel)
+														.addComponent(
+																pcClassNameLabel)
+														.addComponent(
+																pcMoveBaseLabel)
+														.addComponent(
+																pcMaxHPLabel))
+										.addGap(21, 21, 21)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(jLabel29)
+														.addComponent(jLabel9)
+														.addComponent(jLabel7)
+														.addComponent(jLabel1))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
@@ -204,39 +279,55 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 																detailsPanelLayout
 																		.createSequentialGroup()
 																		.addComponent(
-																				jLabel13)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																				pcArmorClassLabel)
+																		.addGap(0,
+																				0,
+																				0)
 																		.addComponent(
-																				pcMoveBaseLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
+																				jLabel31)
+																		.addGap(0,
+																				0,
+																				0)
 																		.addComponent(
-																				jLabel9)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																				pcArmorClassShieldlessLabel)
+																		.addGap(0,
+																				0,
+																				0)
 																		.addComponent(
-																				pcRaceLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
+																				jLabel33)
+																		.addGap(0,
+																				0,
+																				0)
 																		.addComponent(
-																				jLabel7)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcClassLevelLabel))
-														.addGroup(
-																detailsPanelLayout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jLabel1)
-																		.addPreferredGap(
-																				javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																		.addComponent(
-																				pcPlayerNameLabel)))
-										.addContainerGap(27, Short.MAX_VALUE)));
+																				pcArmorClassRearLabel))
+														.addComponent(
+																pcClassLevelLabel)
+														.addComponent(
+																pcPlayerNameLabel)
+														.addComponent(
+																pcRaceLabel))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(jLabel47)
+														.addComponent(jLabel11)
+														.addComponent(jLabel6))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												detailsPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																pcExperienceTotalsLabel)
+														.addComponent(
+																pcAlignmentLabel)
+														.addComponent(
+																pcTHACOLabel))
+										.addContainerGap(83, Short.MAX_VALUE)));
 		detailsPanelLayout
 				.setVerticalGroup(detailsPanelLayout
 						.createParallelGroup(
@@ -247,73 +338,69 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																pcCharacterNameLabel,
 																javax.swing.GroupLayout.Alignment.TRAILING)
 														.addComponent(
-																jLabel3,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcCharacterNameLabel)
+														.addComponent(jLabel3)
+														.addComponent(jLabel1)
 														.addComponent(
-																jLabel1,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcPlayerNameLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
+																pcPlayerNameLabel))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																jLabel5,
 																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(jLabel5)
 														.addComponent(
-																pcClassNameLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																jLabel7,
-																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcClassLevelLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
+																pcClassNameLabel)
+														.addComponent(jLabel7)
+														.addGroup(
+																detailsPanelLayout
+																		.createParallelGroup(
+																				javax.swing.GroupLayout.Alignment.BASELINE)
+																		.addComponent(
+																				pcClassLevelLabel)
+																		.addComponent(
+																				jLabel6)
+																		.addComponent(
+																				pcExperienceTotalsLabel)))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(
-																jLabel6,
 																javax.swing.GroupLayout.Alignment.TRAILING)
+														.addComponent(jLabel13)
 														.addComponent(
-																pcExperienceTotalsLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcMoveBaseLabel)
 														.addComponent(
-																pcRaceLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcRaceLabel)
+														.addComponent(jLabel9)
+														.addComponent(jLabel11)
 														.addComponent(
-																jLabel9,
-																javax.swing.GroupLayout.Alignment.TRAILING))
+																pcAlignmentLabel))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.LEADING)
+																javax.swing.GroupLayout.Alignment.BASELINE)
+														.addComponent(jLabel45)
 														.addComponent(
-																jLabel11,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcMaxHPLabel)
+														.addComponent(jLabel29)
 														.addComponent(
-																pcAlignmentLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcArmorClassLabel)
+														.addComponent(jLabel31)
 														.addComponent(
-																jLabel13,
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																pcArmorClassShieldlessLabel)
+														.addComponent(jLabel33)
 														.addComponent(
-																pcMoveBaseLabel,
-																javax.swing.GroupLayout.Alignment.TRAILING))
+																pcArmorClassRearLabel)
+														.addComponent(
+																pcTHACOLabel)
+														.addComponent(jLabel47))
 										.addContainerGap(
 												javax.swing.GroupLayout.DEFAULT_SIZE,
 												Short.MAX_VALUE)));
@@ -328,19 +415,29 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel11;
 	private javax.swing.JLabel jLabel13;
+	private javax.swing.JLabel jLabel29;
 	private javax.swing.JLabel jLabel3;
+	private javax.swing.JLabel jLabel31;
+	private javax.swing.JLabel jLabel33;
+	private javax.swing.JLabel jLabel45;
+	private javax.swing.JLabel jLabel47;
 	private javax.swing.JLabel jLabel5;
 	private javax.swing.JLabel jLabel6;
 	private javax.swing.JLabel jLabel7;
 	private javax.swing.JLabel jLabel9;
 	private javax.swing.JLabel pcAlignmentLabel;
+	private javax.swing.JLabel pcArmorClassLabel;
+	private javax.swing.JLabel pcArmorClassRearLabel;
+	private javax.swing.JLabel pcArmorClassShieldlessLabel;
 	private javax.swing.JLabel pcCharacterNameLabel;
 	private javax.swing.JLabel pcClassLevelLabel;
 	private javax.swing.JLabel pcClassNameLabel;
 	private javax.swing.JLabel pcExperienceTotalsLabel;
+	private javax.swing.JLabel pcMaxHPLabel;
 	private javax.swing.JLabel pcMoveBaseLabel;
 	private javax.swing.JLabel pcPlayerNameLabel;
 	private javax.swing.JLabel pcRaceLabel;
+	private javax.swing.JLabel pcTHACOLabel;
 	// End of variables declaration//GEN-END:variables
 
 }

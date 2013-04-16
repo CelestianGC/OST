@@ -64,7 +64,7 @@ public class Panel_Player_Spells_All extends javax.swing.JPanel {
 						1, true), "Spells"));
 		allSpellsPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.LEFT));
-		add(allSpellsPanel, java.awt.BorderLayout.WEST);
+		add(allSpellsPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>
 	//GEN-END:initComponents
 

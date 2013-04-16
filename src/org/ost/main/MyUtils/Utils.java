@@ -38,6 +38,7 @@ import org.ost.main.MyClasses.CreatureClass;
 import org.ost.main.MyClasses.DungeonRoom;
 import org.ost.main.MyClasses.EquipmentClass;
 import org.ost.main.MyClasses.PlayerClass;
+import org.ost.main.MyClasses.SkillsClass;
 
 public class Utils {
 
@@ -426,6 +427,87 @@ public class Utils {
 			return cell;
 		}
 	}
+	
+	
+	
+	public static void updateSkillsPanelPC(JPanel skillsPanel, 
+											PlayerClass pc,
+											MainClass ost) {
+		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
+		//int attackList[] = pc.getMatrix(ost);
+		Color aColor = new Color(255, 204, 105);
+		Color bColor = new Color(255, 153, 51);
+		Color thacoColor = new Color(255, 102, 102);
+
+		ArrayList<SkillsClass> skillsBase = pc.getAllThiefSkillsBase(ost);
+		ArrayList<SkillsClass> skillsAdj = pc.getAllThiefSkillAdjustments(ost);
+
+		boolean bFlip = false;
+
+		JLabel target = new JLabel(String.format("Skill"));
+		JPanel pTarget = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pTarget.setBackground(new Color(204, 204, 204));
+		target.setToolTipText("Skill Name");
+		target.setFont(fFont);
+		pTarget.add(target);
+		skillsPanel.add(pTarget);
+
+		for (int i = 0; i < skillsBase.size(); i++) {
+			SkillsClass tJ = skillsAdj.get(i);
+			SkillsClass tS = skillsBase.get(i);
+			//int finalSkill = tS.getScore() + tJ.getScore();
+			if (tS.getScore() != 0) {
+				String tooltip = tS.getName() + ": " + tS.getScore() + "+"
+						+ tJ.getScore();
+
+				JLabel n = new JLabel(tS.getAbbrev());
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				if (i == 10)
+					p.setBackground(thacoColor);
+				else {
+					p.setBackground(bFlip ? bColor : aColor);
+					bFlip = !bFlip;
+				}
+				n.setToolTipText(tooltip);
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				skillsPanel.add(p);
+			}
+		}
+
+		bFlip = false;
+		JLabel roll = new JLabel(String.format("Check"));
+		JPanel pRoll = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		pRoll.setBackground(new Color(204, 204, 204));
+		roll.setToolTipText("Skill Check");
+		roll.setFont(fFont);
+		pRoll.add(roll);
+		skillsPanel.add(pRoll);
+
+		for (int i = 0; i < skillsBase.size(); i++) {
+			SkillsClass tJ = skillsAdj.get(i);
+			SkillsClass tS = skillsBase.get(i);
+			int finalSkill = tS.getScore() + tJ.getScore();
+			if (tS.getScore() != 0) {
+				String tooltip = tS.getName() + 
+						": " + tS.getScore() + 
+						"+"	+ tJ.getScore();
+
+				JLabel n = new JLabel(String.format("%d", finalSkill));
+				n.setFont(fFont);
+				JPanel p = new JPanel(new FlowLayout(FlowLayout.LEFT));
+				p.setBackground(bFlip ? bColor : aColor);
+				bFlip = !bFlip;
+				n.setToolTipText(tooltip);
+				p.setToolTipText(n.getToolTipText());
+				p.add(n);
+				skillsPanel.add(p);
+			}
+		}
+		
+	}
+	
 	
 	
 } // end Utils
