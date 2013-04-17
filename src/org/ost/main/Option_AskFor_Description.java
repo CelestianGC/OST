@@ -40,7 +40,7 @@ public class Option_AskFor_Description extends javax.swing.JDialog {
 		//setSize(400, 300);
 
 		updatePanel(newDescription);
-		
+
 		pack();
 	}
 
@@ -68,6 +68,7 @@ public class Option_AskFor_Description extends javax.swing.JDialog {
 			}
 		});
 
+		mainPanel.setBackground(new java.awt.Color(153, 153, 153));
 		mainPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "TitleGoesHere",

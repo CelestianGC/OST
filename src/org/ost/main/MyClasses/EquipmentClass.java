@@ -68,26 +68,6 @@ public class EquipmentClass {
 				new ArrayList<String>(),0,0,10,
 				0,0);
 	}
-	
-	
-//	public EquipmentClass(String name, String description, int count, int type,
-//			boolean magic, int charges, int weaponType, int armorType,
-//			boolean equipped) {
-//		super();
-//		this.name = name;
-//		this.description = description;
-//		this.count = count;
-//		this.type = type;
-//		this.magic = magic;
-//		this.charges = charges;
-//		this.chargesMax = 0;
-//		this.weaponType = weaponType;
-//		this.equipped = equipped;
-//		this.setContains(new ArrayList<EquipmentClass>());
-//		this.weight = 0;
-//		this.setMyID(UUID.randomUUID().toString());
-//	}
-
 
 	public EquipmentClass(String name, String description, int count, int type,
 			boolean magic, int charges, int chargesMax, boolean equipped,
@@ -324,6 +304,7 @@ public class EquipmentClass {
 		oNew.equipped = equipped;
 		oNew.weight = weight;
 		oNew.setContains(new ArrayList<EquipmentClass>());
+		if (getContains()!= null)
 		for (EquipmentClass oS: getContains())
 			oNew.getContains().add(oS.getCopy());
 		

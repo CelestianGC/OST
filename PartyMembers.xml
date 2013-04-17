@@ -15,7 +15,34 @@
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
     <alignment>Chaotic Good</alignment>
-    <gear/>
+    <gear>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>f011e6e7-6624-4caa-956c-a851b2361981</myID>
+        <name>wineskin</name>
+        <description>Carries 1 day supply of water or other substances.</description>
+        <count>4</count>
+        <type>0</type>
+        <magic>false</magic>
+        <charges>0</charges>
+        <chargesMax>0</chargesMax>
+        <equipped>false</equipped>
+        <contains/>
+        <weight>0.5</weight>
+        <weaponType>0</weaponType>
+        <weaponUseType/>
+        <weaponGroupType/>
+        <weaponTightGroupType/>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType/>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+      </org.ost.main.MyClasses.EquipmentClass>
+    </gear>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>

@@ -325,7 +325,11 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 		equipmentButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		equipmentButton.setText("equipment");
-		equipmentButton.setEnabled(false);
+		equipmentButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				equipmentButtonActionPerformed(evt);
+			}
+		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 5;
 		gridBagConstraints.gridy = 5;
@@ -501,6 +505,13 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	private void equipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code here:
+		Option_AskFor_Gear dDialog = 
+				new Option_AskFor_Gear(parent, true, ost, currentCharacter);
+		dDialog.setVisible(true);
+	}
+
 	private void expAddButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		String addExp = SimpleDialog.showQuestion(this,
@@ -512,15 +523,14 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			SimpleDialog.showError("Value must be a number.");
 		}
 
-		currentCharacter.setTotalExperience(
-				currentCharacter.getTotalExperience()+nEXP);
-		
+		currentCharacter.setTotalExperience(currentCharacter
+				.getTotalExperience() + nEXP);
+
 		updateLevelDifferential(nEXP, true);
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-		levelLabel.setText(currentCharacter
-				.getMyLevelName(ost));
+		levelLabel.setText(currentCharacter.getMyLevelName(ost));
 	}
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -534,8 +544,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-			levelLabel.setText(currentCharacter
-					.getMyLevelName(ost));
+			levelLabel.setText(currentCharacter.getMyLevelName(ost));
 		}
 	}
 
@@ -598,7 +607,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					o.getMyID(), 0, false, null);
 			currentCharacter.getMyClass().add(e);
 		}
-		
+
 		// we reset classes so reset hp and they are rerolled
 		if (currentCharacter.getMyClass().size() > 0) {
 			for (PCClass pC : currentCharacter.getMyClass())
@@ -610,8 +619,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-			levelLabel.setText(currentCharacter
-					.getMyLevelName(ost));
+			levelLabel.setText(currentCharacter.getMyLevelName(ost));
 		}
 		updateFromCurrentValues();
 		//TODO update panels
@@ -619,7 +627,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void raceButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		updateFromCurrentValues();
 
 		ArrayList<String> cList = new ArrayList<String>();
@@ -734,8 +741,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 				.getRaceID(), ost.raceList);
 		raceLabel.setText(oR != null ? oR.getName() : "");
 
-		levelLabel.setText(currentCharacter
-				.getMyLevelName(ost));
+		levelLabel.setText(currentCharacter.getMyLevelName(ost));
 
 	}
 
