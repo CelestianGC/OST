@@ -76,10 +76,13 @@ public class MyStatics {
 	public static final String[] GEAR_NAMES = 
 		{"Equipment","Weapon","Armor","Treasure","Container"};
 
-	public static final int WEAPON_TYPE_SLASH = 1;
-	public static final int WEAPON_TYPE_PIERCE = 2;
-	public static final int WEAPON_TYPE_BLUDGEON = 3;
-	public static final int WEAPON_TYPE_OTHER = 4;
+	public static final int WEAPON_TYPE_SLASH = 0;
+	public static final int WEAPON_TYPE_PIERCE = 1;
+	public static final int WEAPON_TYPE_BLUDGEON = 2;
+	public static final int WEAPON_TYPE_OTHER = 3;
+	public static final int MAX_WEAPON_TYPE = 4;
+	public static final String[] WEAPON_NAMES = 
+		{"Slash","Pierce","Bludgeon","Other"};
 
 	public static final int ARMOR_TYPE_NONE = 0;
 	public static final int ARMOR_TYPE_NONBULKY = 1;
@@ -87,6 +90,8 @@ public class MyStatics {
 	public static final int ARMOR_TYPE_BULKY = 3;
 	public static final int ARMOR_TYPE_VERYBULKY = 4;
 	public static final int ARMOR_TYPE_MASSIVEBULK = 5;
+	public static final String[] ARMOR_TYPE_NAMES = 
+		{"None","non-bulky","fairly-bulky","bulky","very-bulky","mssive-bulk"};
 
 	public static final int EXTRA_ABILITY_TYPE_GENERAL = 0;
 	public static final int EXTRA_ABILITY_TYPE_RACE = 1;
@@ -127,5 +132,17 @@ public class MyStatics {
 	public static final int GENERATION_HP_80 = 1;
 	public static final int GENERATION_HP_AVG = 2;
 	public static final int GENERATION_HP_NORMAL = 3;
+	
+	public static final int COIN_CP = 0;
+	public static final int COIN_SP = 1;
+	public static final int COIN_EP = 2;
+	public static final int COIN_GP = 3;
+	public static final int COIN_PP = 4;
+	public static final int MAX_COIN = 5;
+	public static final String[] COIN_NAMES = 
+		{"Copper","Silver","Electrum","Gold","Platinum"};
+	public static final String[] COIN_ABBREV = 
+		{"CP","SP","EP","GP","PP"};
+	
 	
 }

@@ -17,6 +17,7 @@ import java.awt.Toolkit;
 import static org.ost.main.MyClasses.MyStatics.*;
 
 import java.awt.Component;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -104,7 +105,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 		buttonsPanel = new javax.swing.JPanel();
 		addEncounterButton = new javax.swing.JButton();
 		playerEditButton = new javax.swing.JButton();
-		testButton = new javax.swing.JButton();
+		characterSheetsButton = new javax.swing.JButton();
 		listPlayerPanel = new javax.swing.JPanel();
 		jPanel10 = new javax.swing.JPanel();
 		jPanel9 = new javax.swing.JPanel();
@@ -356,15 +357,16 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 			}
 		});
 
-		testButton.setBackground(new java.awt.Color(204, 204, 204));
-		testButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		testButton.setText("sheet");
-		testButton.setToolTipText("View a character sheet. *test*");
-		testButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				testButtonActionPerformed(evt);
-			}
-		});
+		characterSheetsButton.setBackground(new java.awt.Color(204, 204, 204));
+		characterSheetsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		characterSheetsButton.setText("sheet");
+		characterSheetsButton.setToolTipText("View a character sheet. *test*");
+		characterSheetsButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						characterSheetsButtonActionPerformed(evt);
+					}
+				});
 
 		javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(
 				mainPanel);
@@ -380,7 +382,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 										.addGap(14, 14, 14)
 										.addComponent(playerEditButton)
 										.addGap(0, 0, 0)
-										.addComponent(testButton)
+										.addComponent(characterSheetsButton)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
 												242, Short.MAX_VALUE)
@@ -396,7 +398,8 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 								Short.MAX_VALUE));
 
 		mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL,
-				new java.awt.Component[] { playerEditButton, testButton });
+				new java.awt.Component[] { characterSheetsButton,
+						playerEditButton });
 
 		mainPanelLayout
 				.setVerticalGroup(mainPanelLayout
@@ -428,7 +431,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 																		.addComponent(
 																				playerEditButton)
 																		.addComponent(
-																				testButton)))
+																				characterSheetsButton)))
 										.addContainerGap()));
 
 		playerSplitPane.setRightComponent(mainPanel);
@@ -645,31 +648,26 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
-	private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
+	protected void characterSheetsButtonActionPerformed(ActionEvent evt) {
 		PlayerClass oP = (PlayerClass) playerList.getSelectedValue();
 		if (oP != null) {
 			currentPlayer = oP;
-
-			//		JDialog dDialog = new JDialog();
-			//		dDialog.add(new Panel_Player(ost, currentPlayer));
-			//
-			//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-			//		Dimension windowSize = ost.mainFrame.getSize();
-			//		int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
-			//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
-			//		//		setLocation(windowX, windowY);
-			//		dDialog.setSize(windowSize.width - 2, windowSize.height - 2);
-			//		dDialog.setLocationRelativeTo(ost.mainFrame);
-			//		//dDialog.setSize(480, 360);
-			//
-			//		dDialog.setVisible(true);
-
 			Frame_Character_Sheet fSheet = new Frame_Character_Sheet(ost,
 					currentPlayer);
 			fSheet.setVisible(true);
 		}
 	}
+
+//	private void testButtonActionPerformed(java.awt.event.ActionEvent evt) {
+//		// TODO add your handling code here:
+//		PlayerClass oP = (PlayerClass) playerList.getSelectedValue();
+//		if (oP != null) {
+//			currentPlayer = oP;
+//			Frame_Character_Sheet fSheet = new Frame_Character_Sheet(ost,
+//					currentPlayer);
+//			fSheet.setVisible(true);
+//		}
+//	}
 
 	private void playerEditButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
@@ -1482,6 +1480,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	// Variables declaration - do not modify
 	private javax.swing.JButton addEncounterButton;
 	private javax.swing.JPanel buttonsPanel;
+	private javax.swing.JButton characterSheetsButton;
 	private javax.swing.JButton copyButton;
 	private javax.swing.JButton deleteButton;
 	private javax.swing.JButton exportButton;
@@ -1529,7 +1528,6 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private javax.swing.JPanel playerTabPanel;
 	private javax.swing.JTabbedPane playerTabbedPane;
 	private javax.swing.JButton saveButton;
-	private javax.swing.JButton testButton;
 	// End of variables declaration//GEN-END:variables
 	private PlayerClass currentPlayer;
 	private DefaultListModel playerListModel;

@@ -1,27 +1,104 @@
 <entries>
   <EquipmentClass>
-    <myID>ce615886-ad02-4f15-aaaf-fbec7ca353a6</myID>
+    <myID>a557d2c1-7249-46ee-abf4-e0df5218ee4d</myID>
     <name>wineskin</name>
     <description>Carries 1 day supply of water or other substances.</description>
     <count>1</count>
-    <type>0</type>
+    <type>-1</type>
     <magic>false</magic>
-    <charges>0</charges>
-    <chargesMax>0</chargesMax>
+    <charges>-1</charges>
+    <chargesMax>-1</chargesMax>
     <equipped>false</equipped>
     <weight>0.5</weight>
     <weaponType>0</weaponType>
-    <weaponUseType/>
-    <weaponGroupType/>
-    <weaponTightGroupType/>
+    <weaponProfType></weaponProfType>
+    <weaponGroupType></weaponGroupType>
+    <weaponTightGroupType></weaponTightGroupType>
     <damageSmall>1d4</damageSmall>
     <damageMedium>1d4</damageMedium>
     <damageLarge>1d4</damageLarge>
-    <armorType/>
+    <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
     <acBase>10</acBase>
     <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
     <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+    <features/>
+    <value>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </value>
+    <experience>0</experience>
+  </EquipmentClass>
+  <EquipmentClass>
+    <myID>77dc6290-ad61-461d-8cba-0173e5eb1e13</myID>
+    <name>leather armor</name>
+    <description>New item description.</description>
+    <count>-1</count>
+    <type>2</type>
+    <magic>false</magic>
+    <charges>-1</charges>
+    <chargesMax>-1</chargesMax>
+    <equipped>false</equipped>
+    <weight>20.0</weight>
+    <weaponType>0</weaponType>
+    <weaponProfType></weaponProfType>
+    <weaponGroupType></weaponGroupType>
+    <weaponTightGroupType></weaponTightGroupType>
+    <damageSmall>1d4</damageSmall>
+    <damageMedium>1d4</damageMedium>
+    <damageLarge>1d4</damageLarge>
+    <armorType>leather</armorType>
+    <armorBulkType>1</armorBulkType>
+    <ac>0</ac>
+    <acBase>8</acBase>
+    <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+    <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+    <features/>
+    <value>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </value>
+    <experience>0</experience>
+  </EquipmentClass>
+  <EquipmentClass>
+    <myID>5a9cd92b-915a-4b15-86b7-9ed7cf7a0799</myID>
+    <name>longsword</name>
+    <description>New item description.</description>
+    <count>-1</count>
+    <type>1</type>
+    <magic>false</magic>
+    <charges>-1</charges>
+    <chargesMax>-1</chargesMax>
+    <equipped>false</equipped>
+    <weight>0.0</weight>
+    <weaponType>0</weaponType>
+    <weaponProfType>longsword</weaponProfType>
+    <weaponGroupType>blade</weaponGroupType>
+    <weaponTightGroupType>long blade</weaponTightGroupType>
+    <damageSmall>1d8</damageSmall>
+    <damageMedium>1d8</damageMedium>
+    <damageLarge>1d12</damageLarge>
+    <armorType></armorType>
+    <armorBulkType>0</armorBulkType>
+    <ac>0</ac>
+    <acBase>10</acBase>
+    <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+    <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+    <features/>
+    <value>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>15</int>
+      <int>0</int>
+    </value>
+    <experience>0</experience>
   </EquipmentClass>
 </entries>

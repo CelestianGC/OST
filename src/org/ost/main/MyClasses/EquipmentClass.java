@@ -12,6 +12,7 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.ost.main.MyUtils.SimpleDialog;
 import org.ost.main.MyUtils.XMLControl;
+import static org.ost.main.MyClasses.MyStatics.*;
 
 public class EquipmentClass {
 	public String myID;
@@ -32,16 +33,16 @@ public class EquipmentClass {
 	// weapon specific
 	public int weaponType; //slash, pierce, bludgeon, other
 	//what base weapon type this object is, i.e. what a prof a person needs to use it
-	public ArrayList<String> weaponUseType; //longsword, shortsword, longbow, dagger
-	public ArrayList<String> weaponGroupType; // blades, clubs, 
-	public ArrayList<String> weaponTightGroupType; // longblade, shortblade, longbows, shortbows
+	public String weaponProfType; //longsword, shortsword, longbow, dagger
+	public String weaponGroupType; // blades, clubs, 
+	public String weaponTightGroupType; // longblade, shortblade, longbows, shortbows
 	public String damageSmall; // 1d6+1
 	public String damageMedium;
 	public String damageLarge;
 	
 	//TODO ------------ Armors/shield
 	// armor specific
-	public ArrayList<String> armorType; //leather, chainmail, platemail, fieldplate
+	public String armorType; //leather, chainmail, platemail, fieldplate
 	public int armorBulkType; // none, non-bulky, fairly-bulky, bulky/etc
 	public int ac;
 	public int acBase;
@@ -50,33 +51,43 @@ public class EquipmentClass {
 	public int magicAdjustmentPrimary;
 	public int magicAdjustmentSecondary;
 	
+	public ArrayList<String> features; //uuid of the feature
+	
+	public int[] value; 
+	
+	public int experience;
+	//-------------------------------------------------------------
+	
+	
 	public EquipmentClass() {
 		this("name","description",0);
 	}
 
 	public EquipmentClass(String newName, String newDescription) {
-		this(newName,newDescription,0);
+		this(newName,newDescription,-1);
 	}
 
 	public EquipmentClass(String newName, String newDescription, int newCount) {
-		this(newName, newDescription,newCount,0,
-				false,0,0,false,
+		this(newName, newDescription,newCount,-1,
+				false,-1,-1,false,
 				new ArrayList<EquipmentClass>(),0,0,
-				new ArrayList<String>(),new ArrayList<String>(),
-				new ArrayList<String>(),"1d4",
+				"","",
+				"","1d4",
 				"1d4","1d4",
-				new ArrayList<String>(),0,0,10,
-				0,0);
+				"",0,0,10,
+				0,0,
+				new ArrayList<String>(), new int[MAX_COIN],0);
 	}
 
 	public EquipmentClass(String name, String description, int count, int type,
 			boolean magic, int charges, int chargesMax, boolean equipped,
 			ArrayList<EquipmentClass> contains, float weight, int weaponType,
-			ArrayList<String> weaponUseType, ArrayList<String> weaponGroupType,
-			ArrayList<String> weaponTightGroupType, String damageSmall,
+			String weaponProfType, String weaponGroupType,
+			String weaponTightGroupType, String damageSmall,
 			String damageMedium, String damageLarge,
-			ArrayList<String> armorType, int armorBulkType, int ac, int acBase,
-			int magicAdjustmentPrimary, int magicAdjustmentSecondary) {
+			String armorType, int armorBulkType, int ac, int acBase,
+			int magicAdjustmentPrimary, int magicAdjustmentSecondary,
+			ArrayList<String> features, int[] value, int exp) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -89,7 +100,7 @@ public class EquipmentClass {
 		this.contains = contains;
 		this.weight = weight;
 		this.weaponType = weaponType;
-		this.weaponUseType = weaponUseType;
+		this.weaponProfType = weaponProfType;
 		this.weaponGroupType = weaponGroupType;
 		this.weaponTightGroupType = weaponTightGroupType;
 		this.damageSmall = damageSmall;
@@ -101,50 +112,112 @@ public class EquipmentClass {
 		this.acBase = acBase;
 		this.magicAdjustmentPrimary = magicAdjustmentPrimary;
 		this.magicAdjustmentSecondary = magicAdjustmentSecondary;
+		this.features = features;
+		this.value = value;
+		this.experience = exp;
+		
 		this.setMyID(UUID.randomUUID().toString());
 	}
 
+
 	/**
-	 * @return the weaponUseType
+	 * @return the armorType
 	 */
-	public ArrayList<String> getWeaponUseType() {
-		return weaponUseType;
+	public String getArmorType() {
+		return armorType;
 	}
 
 	/**
-	 * @param weaponUseType the weaponUseType to set
+	 * @param armorType the armorType to set
 	 */
-	public void setWeaponUseType(ArrayList<String> weaponUseType) {
-		this.weaponUseType = weaponUseType;
+	public void setArmorType(String armorType) {
+		this.armorType = armorType;
+	}
+
+	/**
+	 * @return the weaponProfType
+	 */
+	public String getWeaponProfType() {
+		return weaponProfType;
+	}
+
+	/**
+	 * @param weaponProfType the weaponProfType to set
+	 */
+	public void setWeaponProfType(String weaponProfType) {
+		this.weaponProfType = weaponProfType;
 	}
 
 	/**
 	 * @return the weaponGroupType
 	 */
-	public ArrayList<String> getWeaponGroupType() {
+	public String getWeaponGroupType() {
 		return weaponGroupType;
 	}
 
 	/**
 	 * @param weaponGroupType the weaponGroupType to set
 	 */
-	public void setWeaponGroupType(ArrayList<String> weaponGroupType) {
+	public void setWeaponGroupType(String weaponGroupType) {
 		this.weaponGroupType = weaponGroupType;
 	}
 
 	/**
 	 * @return the weaponTightGroupType
 	 */
-	public ArrayList<String> getWeaponTightGroupType() {
+	public String getWeaponTightGroupType() {
 		return weaponTightGroupType;
 	}
 
 	/**
 	 * @param weaponTightGroupType the weaponTightGroupType to set
 	 */
-	public void setWeaponTightGroupType(ArrayList<String> weaponTightGroupType) {
+	public void setWeaponTightGroupType(String weaponTightGroupType) {
 		this.weaponTightGroupType = weaponTightGroupType;
 	}
+
+	/**
+	 * @return the experience
+	 */
+	public int getExperience() {
+		return experience;
+	}
+
+	/**
+	 * @param experience the experience to set
+	 */
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	/**
+	 * @return the value
+	 */
+	public int[] getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(int[] value) {
+		this.value = value;
+	}
+
+	/**
+	 * @return the features
+	 */
+	public ArrayList<String> getFeatures() {
+		return features;
+	}
+
+	/**
+	 * @param features the features to set
+	 */
+	public void setFeatures(ArrayList<String> features) {
+		this.features = features;
+	}
+
 
 	/**
 	 * @return the damageSmall
@@ -186,20 +259,6 @@ public class EquipmentClass {
 	 */
 	public void setDamageLarge(String damageLarge) {
 		this.damageLarge = damageLarge;
-	}
-
-	/**
-	 * @return the armorType
-	 */
-	public ArrayList<String> getArmorType() {
-		return armorType;
-	}
-
-	/**
-	 * @param armorType the armorType to set
-	 */
-	public void setArmorType(ArrayList<String> armorType) {
-		this.armorType = armorType;
 	}
 
 	/**
@@ -292,6 +351,7 @@ public class EquipmentClass {
 	 */
 	public EquipmentClass getCopy() {
 		EquipmentClass oNew = new EquipmentClass();
+
 		oNew.name = name;
 		oNew.description = description;
 		oNew.count = count;
@@ -299,11 +359,31 @@ public class EquipmentClass {
 		oNew.magic = magic;
 		oNew.charges = charges;
 		oNew.chargesMax = chargesMax;
-		oNew.weaponType = weaponType;
-		oNew.armorType = armorType;
 		oNew.equipped = equipped;
+		oNew.contains = contains;
 		oNew.weight = weight;
-		oNew.setContains(new ArrayList<EquipmentClass>());
+		oNew.weaponType = weaponType;
+		oNew.weaponGroupType = weaponGroupType;
+		oNew.weaponTightGroupType = weaponTightGroupType;
+		oNew.weaponProfType = weaponProfType;
+		oNew.damageSmall = damageSmall;
+		oNew.damageMedium = damageMedium;
+		oNew.damageLarge = damageLarge;
+		oNew.armorType = armorType;
+		oNew.armorBulkType = armorBulkType;
+		oNew.ac = ac;
+		oNew.acBase = acBase;
+		oNew.magicAdjustmentPrimary = magicAdjustmentPrimary;
+		oNew.magicAdjustmentSecondary = magicAdjustmentSecondary;
+
+		for(int i=0;i<MAX_COIN;i++)
+			oNew.getValue()[i] = getValue()[i];
+		
+		
+		for(String sType : getFeatures())
+			oNew.getFeatures().add(sType);
+		
+		//oNew.setContains(new ArrayList<EquipmentClass>());
 		if (getContains()!= null)
 		for (EquipmentClass oS: getContains())
 			oNew.getContains().add(oS.getCopy());

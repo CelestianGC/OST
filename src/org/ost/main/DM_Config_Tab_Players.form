@@ -373,7 +373,7 @@
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="playerEditButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                      <Component id="testButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="characterSheetsButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="242" max="32767" attributes="0"/>
                       <Component id="buttonsPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -390,7 +390,7 @@
                           <Component id="buttonsPanel" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="playerEditButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="testButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="characterSheetsButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -510,7 +510,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="playerEditButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="testButton">
+            <Component class="javax.swing.JButton" name="characterSheetsButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -522,7 +522,7 @@
                 <Property name="toolTipText" type="java.lang.String" value="View a character sheet. *test*"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="characterSheetsButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

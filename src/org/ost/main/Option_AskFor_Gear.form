@@ -351,6 +351,24 @@
                                 <Property name="text" type="java.lang.String" value="new"/>
                                 <Property name="toolTipText" type="java.lang.String" value="Create new item for equipment list."/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="newGearBuyButtonActionPerformed"/>
+                              </Events>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="editBuyGearButton">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="10" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="edit"/>
+                                <Property name="toolTipText" type="java.lang.String" value="Select a piece of equipment and click here to make changes to it."/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editBuyGearButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="deleteBuyGearButton">
                               <Properties>
@@ -366,18 +384,6 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteBuyGearButtonActionPerformed"/>
                               </Events>
-                            </Component>
-                            <Component class="javax.swing.JButton" name="editBuyGearButton">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="10" style="0"/>
-                                </Property>
-                                <Property name="text" type="java.lang.String" value="edit"/>
-                                <Property name="toolTipText" type="java.lang.String" value="Select a piece of equipment and click here to make changes to it."/>
-                              </Properties>
                             </Component>
                           </SubComponents>
                         </Container>

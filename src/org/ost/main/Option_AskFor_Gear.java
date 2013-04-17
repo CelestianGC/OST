@@ -42,7 +42,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private DefaultMutableTreeNode nodeBuyArmor;
 	private DefaultMutableTreeNode nodeBuyWeapons;
 	private DefaultTreeModel gearBuyTreeModel;
-	private EquipmentClass gearNewCurrent;
+	private EquipmentClass currentGearNew;
 	private DefaultMutableTreeNode gearNewCurrentNode;
 
 	/** Creates new form Option_AskFor_Gear */
@@ -103,8 +103,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		gearButtonPanel = new javax.swing.JPanel();
 		jPanel2 = new javax.swing.JPanel();
 		newGearBuyButton = new javax.swing.JButton();
-		deleteBuyGearButton = new javax.swing.JButton();
 		editBuyGearButton = new javax.swing.JButton();
+		deleteBuyGearButton = new javax.swing.JButton();
 		gearBuyScrollPane = new javax.swing.JScrollPane();
 		gearBuyTree = new javax.swing.JTree();
 		gearBuyTree.setCellRenderer(new gearBuyTreeCellRenderer());
@@ -294,7 +294,25 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		newGearBuyButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		newGearBuyButton.setText("new");
 		newGearBuyButton.setToolTipText("Create new item for equipment list.");
+		newGearBuyButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				newGearBuyButtonActionPerformed(evt);
+			}
+		});
 		jPanel2.add(newGearBuyButton);
+
+		editBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
+		editBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		editBuyGearButton.setText("edit");
+		editBuyGearButton
+				.setToolTipText("Select a piece of equipment and click here to make changes to it.");
+		editBuyGearButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						editBuyGearButtonActionPerformed(evt);
+					}
+				});
+		jPanel2.add(editBuyGearButton);
 
 		deleteBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
 		deleteBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -308,13 +326,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 					}
 				});
 		jPanel2.add(deleteBuyGearButton);
-
-		editBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
-		editBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		editBuyGearButton.setText("edit");
-		editBuyGearButton
-				.setToolTipText("Select a piece of equipment and click here to make changes to it.");
-		jPanel2.add(editBuyGearButton);
 
 		gearButtonPanel.add(jPanel2, java.awt.BorderLayout.EAST);
 
@@ -369,44 +380,42 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
-	//		private void editBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
-	//			// TODO add your handling code here:
-	//			if (gearNewCurrent != null) {
-	//				gearNewNameTextField.setText(gearNewCurrent.getName());
-	//				gearNewDescriptionTextField
-	//						.setText(gearNewCurrent.getDescription());
-	//				switch (gearNewCurrent.getType()) {
-	//				case GEAR_TYPE_ARMOR:
-	//					gearNewArmorRadioButton.setSelected(true);
-	//					break;
-	//				case GEAR_TYPE_CONTAINER:
-	//					gearNewContainerRadioButton.setSelected(true);
-	//					break;
-	//				case GEAR_TYPE_TREASURE:
-	//					gearNewTreasureRadioButton.setSelected(true);
-	//					break;
-	//				case GEAR_TYPE_WEAPON:
-	//					gearNewWeaponRadioButton.setSelected(true);
-	//					break;
-	//	
-	//				default:
-	//					gearNewEquipmentRadioButton.setSelected(true);
-	//					break;
-	//				}
-	//				gearNewMagicCheckBox.setSelected(gearNewCurrent.isMagic());
-	//				gearNewChargedCheckBox
-	//						.setSelected(gearNewCurrent.getCharges() > -1);
-	//				gearNewStackableCheckBox
-	//						.setSelected(gearNewCurrent.getCount() > -1);
-	//				gearNewChargesMaxSpinner.setValue(gearNewCurrent.getChargesMax());
-	//				gearNewWeightSpinner.setValue(new Float(0.0));
-	//	
-	//				gearNewDoneButton.setText("save-edit"); // 
-	//				//		display dialog at current mouse
-	//				gearNewDialog.setLocationRelativeTo(null); // mid-screen
-	//				gearNewDialog.setVisible(true);
-	//			}
-	//		}
+	private void editBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO add your handling code here:
+		if (currentGearNew != null) {
+			Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(parent,
+					true, ost, currentGearNew);
+			dDialog.setVisible(true);
+			gearBuyTreeModel.nodeChanged(gearNewCurrentNode);
+			gearBuyTree.repaint();
+		}
+	}
+
+	private void newGearBuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		EquipmentClass oNew = new EquipmentClass("NewItem",
+				"New item description.");
+
+		Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(parent,
+				true, ost, oNew);
+		dDialog.setVisible(true);
+
+		//TODO do something with this later
+		//deal with armor/weapons eventually
+		//		if (!editMode) {
+		ost.equipmentList.add(oNew);
+		DefaultMutableTreeNode oNewNode = new DefaultMutableTreeNode(oNew);
+		DefaultMutableTreeNode oMyNode = getNodeHomeByGearType(oNew);
+		gearBuyTreeModel.insertNodeInto(oNewNode, oMyNode,
+				oMyNode.getChildCount());
+		Utils.expandPathOnNode(gearBuyTree, oMyNode);
+		gearBuyTree.repaint();
+		//		} else {
+		//			gearBuyTreeModel.nodeChanged(gearNewCurrentNode);
+		//			gearBuyTree.repaint();
+		//		}
+
+	}
+
 
 	//	private void deleteBuyGearButtonActionPerformed(
 	//			java.awt.event.ActionEvent evt) {
@@ -638,8 +647,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	 * clear out the tree and load up the equipmentList
 	 */
 	private void updateGearBuyTree() {
-		//TODO finish this
-
 		nodeBuyArmor.removeAllChildren();
 		nodeBuyContainers.removeAllChildren();
 		nodeBuyEquipment.removeAllChildren();
@@ -675,57 +682,12 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 			gearNewCurrentNode = oNode;
 			if (Utils.isEquipment(oNode.getUserObject())) {
 				EquipmentClass oE = (EquipmentClass) oNode.getUserObject();
-				gearNewCurrent = oE;
+				currentGearNew = oE;
 			}
 		}
 
 	}
 
-	//	private void gearNewChargedCheckBoxActionPerformed(
-	//			java.awt.event.ActionEvent evt) {
-	//		boolean isCharged = gearNewChargedCheckBox.isSelected();
-	//		gearNewChargesMaxLabel.setEnabled(isCharged);
-	//		gearNewChargesMaxSpinner.setEnabled(isCharged);
-	//	}
-	//
-	//	private void editBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
-	//		// TODO add your handling code here:
-	//		if (gearNewCurrent != null) {
-	//			gearNewNameTextField.setText(gearNewCurrent.getName());
-	//			gearNewDescriptionTextField
-	//					.setText(gearNewCurrent.getDescription());
-	//			switch (gearNewCurrent.getType()) {
-	//			case GEAR_TYPE_ARMOR:
-	//				gearNewArmorRadioButton.setSelected(true);
-	//				break;
-	//			case GEAR_TYPE_CONTAINER:
-	//				gearNewContainerRadioButton.setSelected(true);
-	//				break;
-	//			case GEAR_TYPE_TREASURE:
-	//				gearNewTreasureRadioButton.setSelected(true);
-	//				break;
-	//			case GEAR_TYPE_WEAPON:
-	//				gearNewWeaponRadioButton.setSelected(true);
-	//				break;
-	//
-	//			default:
-	//				gearNewEquipmentRadioButton.setSelected(true);
-	//				break;
-	//			}
-	//			gearNewMagicCheckBox.setSelected(gearNewCurrent.isMagic());
-	//			gearNewChargedCheckBox
-	//					.setSelected(gearNewCurrent.getCharges() > -1);
-	//			gearNewStackableCheckBox
-	//					.setSelected(gearNewCurrent.getCount() > -1);
-	//			gearNewChargesMaxSpinner.setValue(gearNewCurrent.getChargesMax());
-	//			gearNewWeightSpinner.setValue(new Float(0.0));
-	//
-	//			gearNewDoneButton.setText("save-edit"); // 
-	//			//		display dialog at current mouse
-	//			gearNewDialog.setLocationRelativeTo(null); // mid-screen
-	//			gearNewDialog.setVisible(true);
-	//		}
-	//	}
 
 	/**
 	 * returns the node that we place this type of gear into on the
@@ -781,72 +743,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		return (myRootNode);
 	}
 
-//		private void gearNewDoneButtonActionPerformed(java.awt.event.ActionEvent evt) {
-//			boolean editMode = gearNewDoneButton.getText().equalsIgnoreCase(
-//					"save-edit");
-//			EquipmentClass oNew = null;
-//	
-//			if (editMode) {
-//				oNew = gearNewCurrent;
-//				oNew.setName(gearNewNameTextField.getText());
-//				oNew.setDescription(gearNewDescriptionTextField.getText());
-//			} else
-//				oNew = new EquipmentClass(gearNewNameTextField.getText(),
-//						gearNewDescriptionTextField.getText());
-//	
-//			int nType = GEAR_TYPE_EQUIPMENT;
-//			if (gearNewArmorRadioButton.isSelected())
-//				nType = GEAR_TYPE_ARMOR;
-//			else if (gearNewContainerRadioButton.isSelected())
-//				nType = GEAR_TYPE_CONTAINER;
-//			else if (gearNewEquipmentRadioButton.isSelected())
-//				nType = GEAR_TYPE_EQUIPMENT;
-//			else if (gearNewTreasureRadioButton.isSelected())
-//				nType = GEAR_TYPE_TREASURE;
-//			else if (gearNewWeaponRadioButton.isSelected())
-//				nType = GEAR_TYPE_WEAPON;
-//	
-//			oNew.setType(nType);
-//			float fWeight = Float.parseFloat(gearNewWeightSpinner.getValue()
-//					.toString());
-//			oNew.setWeight(fWeight);
-//	
-//			int maxCharges = Integer.parseInt(gearNewChargesMaxSpinner.getValue()
-//					.toString());
-//			oNew.setMagic(gearNewMagicCheckBox.isSelected());
-//	
-//			// if count > 0 then we call it a stackable item
-//			oNew.setCount(gearNewStackableCheckBox.isSelected() ? 1 : -1);
-//			// if charges > 0 then we call it chargable item
-//			oNew.setCharges(gearNewChargedCheckBox.isSelected() ? 1 : -1);
-//			oNew.setChargesMax(maxCharges);
-//	
-//			//TODO do something with this later
-//			//deal with armor/weapons eventually
-//	
-//			if (!editMode) {
-//				ost.equipmentList.add(oNew);
-//				DefaultMutableTreeNode oNewNode = new DefaultMutableTreeNode(oNew);
-//				DefaultMutableTreeNode oMyNode = getNodeHomeByGearType(oNew);
-//				gearBuyTreeModel.insertNodeInto(oNewNode, oMyNode,
-//						oMyNode.getChildCount());
-//				Utils.expandPathOnNode(gearBuyTree, oMyNode);
-//				gearBuyTree.repaint();
-//			} else {
-//				gearBuyTreeModel.nodeChanged(gearNewCurrentNode);
-//				gearBuyTree.repaint();
-//			}
-//			gearNewDialog.setVisible(false);
-//		}
-//	
-//		private void gearNewCancelButtonActionPerformed(
-//				java.awt.event.ActionEvent evt) {
-//			gearNewDialog.setVisible(false);
-//		}
-
 	private void deleteBuyGearButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		TreePath[] paths = gearBuyTree.getSelectionPaths();
 		if (paths != null) {
 			if ((paths.length > 1 && SimpleDialog.AskYN(deleteBuyGearButton,
@@ -868,23 +766,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 			}
 		}
 	}
-
-	//	private void newGearBuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
-	//		// set default values
-	//		gearNewNameTextField.setText("Name");
-	//		gearNewDescriptionTextField.setText("Enter description");
-	//		gearNewEquipmentRadioButton.setSelected(true);
-	//		gearNewMagicCheckBox.setSelected(false);
-	//		gearNewChargedCheckBox.setSelected(false);
-	//		gearNewChargesMaxSpinner.setValue(new Integer(0));
-	//		gearNewStackableCheckBox.setSelected(false);
-	//		gearNewWeightSpinner.setValue(new Float(0.0));
-	//
-	//		gearNewDoneButton.setText("done"); // 
-	//		//		display dialog at current mouse
-	//		gearNewDialog.setLocationRelativeTo(null); // mid-screen
-	//		gearNewDialog.setVisible(true);
-	//	}
 
 	public class gearTreeCellRenderer extends DefaultTreeCellRenderer {
 
