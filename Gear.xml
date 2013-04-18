@@ -216,7 +216,7 @@
     <name>shield</name>
     <description>New item description.</description>
     <count>-1</count>
-    <type>2</type>
+    <type>5</type>
     <magic>false</magic>
     <charges>-1</charges>
     <chargesMax>-1</chargesMax>

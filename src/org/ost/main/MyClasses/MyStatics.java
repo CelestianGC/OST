@@ -72,9 +72,10 @@ public class MyStatics {
 	public static final int GEAR_TYPE_ARMOR = 2;
 	public static final int GEAR_TYPE_TREASURE = 3;
 	public static final int GEAR_TYPE_CONTAINER = 4;
-	public static final int MAX_GEAR_TYPE = 5;
+	public static final int GEAR_TYPE_SHIELD = 5;
+	public static final int MAX_GEAR_TYPE = 6;
 	public static final String[] GEAR_NAMES = 
-		{"Equipment","Weapon","Armor","Treasure","Container"};
+		{"Equipment","Weapon","Armor","Treasure","Container","Shield"};
 
 	public static final int WEAPON_TYPE_SLASH = 0;
 	public static final int WEAPON_TYPE_PIERCE = 1;

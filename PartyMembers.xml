@@ -1137,7 +1137,78 @@ character level up, new MaxHP:54 from 0
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
     <alignment>Lawful Good</alignment>
-    <gear/>
+    <gear>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>e678b59a-8e88-407a-afea-d1e95cff7107</myID>
+        <name>chainmail</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>2</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>false</equipped>
+        <weight>350.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>chainmail</armorType>
+        <armorBulkType>2</armorBulkType>
+        <ac>0</ac>
+        <acBase>5</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>75</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>01f9d322-6690-4015-a0dd-46ccefec18cf</myID>
+        <name>shield</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>5</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>false</equipped>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>shield</armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>-1</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+    </gear>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>

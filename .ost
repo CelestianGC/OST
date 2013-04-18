@@ -1,8 +1,8 @@
-#Wed Apr 17 22:54:46 CDT 2013
+#Thu Apr 18 01:15:21 CDT 2013
 d20Mode=DISABLED
 initAscend=ENABLED
 dir_dungeon=C\:\\Program Files (x86)\\OST\\dungeons\\Whiteplume Mountain
-thacoMode=DISABLED
 creatureHPType=0
+thacoMode=DISABLED
 initGroup=ENABLED
 initDice=10

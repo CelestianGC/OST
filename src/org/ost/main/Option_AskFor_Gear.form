@@ -112,7 +112,7 @@
                             <EventHandler event="valueChanged" listener="javax.swing.event.TreeSelectionListener" parameters="javax.swing.event.TreeSelectionEvent" handler="gearTreeValueChanged"/>
                           </Events>
                           <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="gearTree.setCellRenderer(new gearTreeCellRenderer());&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;nodeRoot = new DefaultMutableTreeNode(&quot;Gear&quot;);&#xd;&#xa;nodeEquipment = new DefaultMutableTreeNode(&quot;Equipment&quot;);&#xd;&#xa;nodeTreasure = new DefaultMutableTreeNode(&quot;Treasure&quot;);&#xd;&#xa;gearTreeModel = new DefaultTreeModel(nodeRoot);&#xd;&#xa;nodeRoot.add(nodeEquipment);&#xd;&#xa;nodeRoot.add(nodeTreasure);&#xd;&#xa;&#xd;&#xa;"/>
+                            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="gearTree.setCellRenderer(new gearTreeCellRenderer());&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;nodeRoot = new DefaultMutableTreeNode(&quot;Gear&quot;);&#xd;&#xa;nodeEquipment = new DefaultMutableTreeNode(&quot;Equipment&quot;);&#xd;&#xa;nodeWorn = new DefaultMutableTreeNode(&quot;Equipped&quot;);&#xd;&#xa;nodeTreasure = new DefaultMutableTreeNode(&quot;Treasure&quot;);&#xd;&#xa;gearTreeModel = new DefaultTreeModel(nodeRoot);&#xd;&#xa;nodeRoot.add(nodeEquipment);&#xd;&#xa;nodeRoot.add(nodeWorn);&#xd;&#xa;nodeRoot.add(nodeTreasure);&#xd;&#xa;&#xd;&#xa;"/>
                           </AuxValues>
                         </Component>
                       </SubComponents>

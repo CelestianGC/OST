@@ -33,6 +33,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private PlayerClass pc;
 	private DefaultMutableTreeNode nodeRoot;
 	private DefaultMutableTreeNode nodeEquipment;
+	private DefaultMutableTreeNode nodeWorn;
 	private DefaultMutableTreeNode nodeTreasure;
 	private DefaultTreeModel gearTreeModel;
 	private DefaultMutableTreeNode nodeBuyRoot;
@@ -93,9 +94,11 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		nodeRoot = new DefaultMutableTreeNode("Gear");
 		nodeEquipment = new DefaultMutableTreeNode("Equipment");
+		nodeWorn = new DefaultMutableTreeNode("Equipped");
 		nodeTreasure = new DefaultMutableTreeNode("Treasure");
 		gearTreeModel = new DefaultTreeModel(nodeRoot);
 		nodeRoot.add(nodeEquipment);
+		nodeRoot.add(nodeWorn);
 		nodeRoot.add(nodeTreasure);
 
 		adjustButtonPanel = new javax.swing.JPanel();
@@ -629,6 +632,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		//GEAR
 		nodeEquipment.removeAllChildren();
 		gearTreeModel.reload(nodeEquipment);
+		nodeWorn.removeAllChildren();
+		gearTreeModel.reload(nodeWorn);
 		nodeTreasure.removeAllChildren();
 		gearTreeModel.reload(nodeTreasure);
 		for (EquipmentClass eQ : pc.getGear()) {
@@ -699,6 +704,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		switch (oE.getType()) {
 		case GEAR_TYPE_ARMOR:
+		case GEAR_TYPE_SHIELD:
 			myRootNode = nodeBuyArmor;
 			break;
 		case GEAR_TYPE_CONTAINER:
@@ -738,6 +744,9 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 			break;
 		}
 
+		if (oE.isEquipped())
+			myRootNode = nodeWorn;
+		
 		return (myRootNode);
 	}
 

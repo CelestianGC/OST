@@ -253,28 +253,33 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
 														.addComponent(
-																pcCharacterNameLabel)
-														.addComponent(
-																pcClassNameLabel)
+																pcMaxHPLabel)
 														.addComponent(
 																pcMoveBaseLabel)
 														.addComponent(
-																pcMaxHPLabel))
-										.addGap(21, 21, 21)
+																pcClassNameLabel)
+														.addComponent(
+																pcCharacterNameLabel))
+										.addGap(20, 20, 20)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(jLabel29)
-														.addComponent(jLabel9)
+														.addComponent(jLabel1)
 														.addComponent(jLabel7)
-														.addComponent(jLabel1))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+														.addComponent(jLabel9)
+														.addComponent(jLabel29))
+										.addGap(8, 8, 8)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																pcClassLevelLabel)
+														.addComponent(
+																pcPlayerNameLabel)
+														.addComponent(
+																pcRaceLabel)
 														.addGroup(
 																detailsPanelLayout
 																		.createSequentialGroup()
@@ -299,15 +304,8 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 																				0,
 																				0)
 																		.addComponent(
-																				pcArmorClassRearLabel))
-														.addComponent(
-																pcClassLevelLabel)
-														.addComponent(
-																pcPlayerNameLabel)
-														.addComponent(
-																pcRaceLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																				pcArmorClassRearLabel)))
+										.addGap(20, 20, 20)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
@@ -315,8 +313,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 														.addComponent(jLabel47)
 														.addComponent(jLabel11)
 														.addComponent(jLabel6))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(8, 8, 8)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
@@ -327,7 +324,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 																pcAlignmentLabel)
 														.addComponent(
 																pcTHACOLabel))
-										.addContainerGap(83, Short.MAX_VALUE)));
+										.addContainerGap(154, Short.MAX_VALUE)));
 		detailsPanelLayout
 				.setVerticalGroup(detailsPanelLayout
 						.createParallelGroup(
@@ -339,14 +336,13 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 												detailsPanelLayout
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.TRAILING)
-														.addComponent(
-																pcCharacterNameLabel)
-														.addComponent(jLabel3)
 														.addComponent(jLabel1)
 														.addComponent(
-																pcPlayerNameLabel))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+																pcPlayerNameLabel)
+														.addComponent(
+																pcCharacterNameLabel)
+														.addComponent(jLabel3))
+										.addGap(2, 2, 2)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
@@ -365,8 +361,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 																				jLabel6)
 																		.addComponent(
 																				pcExperienceTotalsLabel)))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGap(2, 2, 2)
 										.addGroup(
 												detailsPanelLayout
 														.createParallelGroup(
@@ -401,9 +396,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 														.addComponent(
 																pcTHACOLabel)
 														.addComponent(jLabel47))
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
+										.addContainerGap(34, Short.MAX_VALUE)));
 
 		add(detailsPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>

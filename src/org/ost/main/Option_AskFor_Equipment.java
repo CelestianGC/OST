@@ -103,6 +103,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		gearPanel = new javax.swing.JPanel();
 		typePanel = new javax.swing.JPanel();
 		gearNewArmorRadioButton = new javax.swing.JRadioButton();
+		gearNewShieldRadioButton = new javax.swing.JRadioButton();
 		gearNewContainerRadioButton = new javax.swing.JRadioButton();
 		gearNewEquipmentRadioButton = new javax.swing.JRadioButton();
 		gearNewWeaponRadioButton = new javax.swing.JRadioButton();
@@ -196,6 +197,17 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 					}
 				});
 		typePanel.add(gearNewArmorRadioButton);
+
+		gearNewButtonGroup.add(gearNewShieldRadioButton);
+		gearNewShieldRadioButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gearNewShieldRadioButton.setText("Shield");
+		gearNewShieldRadioButton
+				.addItemListener(new java.awt.event.ItemListener() {
+					public void itemStateChanged(java.awt.event.ItemEvent evt) {
+						gearNewShieldRadioButtonItemStateChanged(evt);
+					}
+				});
+		typePanel.add(gearNewShieldRadioButton);
 
 		gearNewButtonGroup.add(gearNewContainerRadioButton);
 		gearNewContainerRadioButton
@@ -571,6 +583,16 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	private void gearNewShieldRadioButtonItemStateChanged(
+			java.awt.event.ItemEvent evt) {
+		boolean isSet = gearNewShieldRadioButton.isSelected();
+		acAdjustmentSpinner.setEnabled(isSet);
+		acBaseSpinner.setEnabled(isSet);
+		armorBulkTypeComboBox.setEnabled(isSet);
+		armorTypeComboBox.setEnabled(isSet);
+		
+	}
+
 	private void featuresButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		ArrayList<ExtraAbilitiesClass> aList = ExtraAbilitiesClass.getAllowed(
 				oE.getFeatures(), ost.extraAbilitiesList);
@@ -655,6 +677,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 			nType = GEAR_TYPE_TREASURE;
 		else if (gearNewWeaponRadioButton.isSelected())
 			nType = GEAR_TYPE_WEAPON;
+		else if (gearNewShieldRadioButton.isSelected())
+			nType = GEAR_TYPE_SHIELD;
 
 		oE.setType(nType);
 		float fWeight = Float.parseFloat(gearNewWeightSpinner.getValue()
@@ -710,6 +734,9 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 			switch (oE.getType()) {
 			case GEAR_TYPE_ARMOR:
 				gearNewArmorRadioButton.setSelected(true);
+				break;
+			case GEAR_TYPE_SHIELD:
+				gearNewShieldRadioButton.setSelected(true);
 				break;
 			case GEAR_TYPE_CONTAINER:
 				gearNewContainerRadioButton.setSelected(true);
@@ -788,6 +815,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JCheckBox gearNewMagicCheckBox;
 	private javax.swing.JLabel gearNewNameLabel;
 	private javax.swing.JTextField gearNewNameTextField;
+	private javax.swing.JRadioButton gearNewShieldRadioButton;
 	private javax.swing.JCheckBox gearNewStackableCheckBox;
 	private javax.swing.JRadioButton gearNewTreasureRadioButton;
 	private javax.swing.JRadioButton gearNewWeaponRadioButton;

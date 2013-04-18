@@ -2159,12 +2159,10 @@ public class PlayerClass implements Serializable, Comparable {
 		
 		ost.log = "";
 		
-		int shieldAC = 0; //TODO need to get shield AC from shield
-		
+		int shieldAC = getShieldAdjustments();
+		int baseAC = getArmorBase();
+		int acAdjustments = getArmorAdjustments();
 		int abilityACAdjust = 0;
-		
-		int baseAC = 10; //TODO need to get base AC from armor
-		
 		
 		//get spells from ability scores (wisdom/int)	
 		int abilityTotal = 
@@ -2212,21 +2210,26 @@ public class PlayerClass implements Serializable, Comparable {
 		int setACRear = Integer.parseInt(getArmorRatings().get(AC_REAR));
 		int setACShieldless = Integer.parseInt(getArmorRatings().get(AC_SHIELDLESS));
 		
+		// if they have set their ac manually use that, if not figure it out
 		switch (acType) {
 		case AC_REAR: {
-			acResult = setACRear==10?(baseAC - classACAdj):setACRear;
-			ost.log = String.format("AC:%d, %d(base) - %d(classAdj)",acResult,baseAC,classACAdj);
+			acResult = setACRear==10?((baseAC + (classACAdj+acAdjustments))):setACRear;
+			ost.log = String.format(
+					"AC:%d, ((%d(base) + (%d(classAdj) + %d(acAdjustments)))",
+					acResult,baseAC,classACAdj,acAdjustments);
 		}break;
 		case AC_SHIELDLESS:{
-			acResult = setACShieldless==10?baseAC + (abilityACAdjust + classACAdj):setACShieldless;
-			ost.log = String.format("AC:%d, %d(base) + (%d(abilityScore) + %d(classAdj))",
-					acResult,baseAC,abilityACAdjust,classACAdj);
+			acResult = setACShieldless==10?baseAC + (abilityACAdjust + classACAdj + acAdjustments):setACShieldless;
+			ost.log = String.format(
+					"AC:%d, (%d(base) + (%d(abilityScore) + %d(classAdj) + %d(acAdjustments))",
+					acResult,baseAC,abilityACAdjust,classACAdj,acAdjustments);
 		}break;
 
 		default:{
-			acResult = setAC==10?baseAC + (abilityACAdjust + classACAdj - shieldAC):setAC;
-			ost.log = String.format("AC:%d, %d(base) + (%d(abilityScore) + %d(classAdj) - %d(shield))",
-					acResult,baseAC,abilityACAdjust,classACAdj,shieldAC);
+			acResult = setAC==10?baseAC + (abilityACAdjust + classACAdj + acAdjustments + shieldAC):setAC;
+			ost.log = String.format(
+					"AC:%d, %d(base) + (%d(abilityScore) + %d(classAdj) + %d(acAdjustments) +%d(shield))",
+					acResult,baseAC,abilityACAdjust,classACAdj,acAdjustments,shieldAC);
 		}break;
 		}
 
@@ -2306,6 +2309,62 @@ public class PlayerClass implements Serializable, Comparable {
 				isSet = true;
 
 		return isSet;	
+	}
+
+	/**
+	 * get best base armor from equipment worn
+	 *  
+	 * @return
+	 */
+	public int getArmorBase() {
+		int acBase = 10;
+
+		for(EquipmentClass oE: getGear()) {
+			if (oE.isEquipped())
+				if (oE.getType() == GEAR_TYPE_ARMOR) {
+					if (oE.getAcBase()<acBase)
+						acBase = oE.getAcBase();
+				}
+		}
+		return acBase;
+	}
+
+	/**
+	 * get adjustments for rings, cloaks, armor
+	 * 
+	 * @return
+	 */
+	public int getArmorAdjustments() {
+		int ac = 0;
+
+		for(EquipmentClass oE: getGear()) {
+			if (oE.isEquipped())
+				if (oE.getType() == GEAR_TYPE_ARMOR) {
+				ac += oE.getAc();
+				if (oE.isMagic())
+					ac -= oE.getMagicAdjustmentPrimary(); // assume good is + so remove
+			}
+		}
+		return ac;
+	}
+
+	/**
+	 * return shield ac adjustments
+	 * 
+	 * @return
+	 */
+	public int getShieldAdjustments() {
+		int ac = 0;
+
+		for(EquipmentClass oE: getGear()) {
+			if (oE.isEquipped())
+				if (oE.getType() == GEAR_TYPE_SHIELD) {
+				ac += oE.getAc();
+				if (oE.isMagic())
+					ac -= oE.getMagicAdjustmentPrimary(); // assume good is + so remove
+			}
+		}
+		return ac;
 	}
 
 }

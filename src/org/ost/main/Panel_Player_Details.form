@@ -38,30 +38,33 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="pcCharacterNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcClassNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcMoveBaseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="pcMaxHPLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcMoveBaseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcClassNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcCharacterNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="pcClassLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcPlayerNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcRaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="pcArmorClassLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
@@ -73,23 +76,20 @@
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="pcArmorClassRearLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="pcClassLevelLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcPlayerNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcRaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel47" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="pcExperienceTotalsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="pcAlignmentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="pcTHACOLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcTHACOLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="83" max="32767" attributes="0"/>
+                  <EmptySpace pref="154" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -97,12 +97,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="pcCharacterNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="pcPlayerNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="pcCharacterNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="pcClassNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -113,7 +113,7 @@
                           <Component id="pcExperienceTotalsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="pcMoveBaseLabel" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -122,7 +122,7 @@
                       <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="pcAlignmentLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="pcMaxHPLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -135,7 +135,7 @@
                       <Component id="pcTHACOLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
