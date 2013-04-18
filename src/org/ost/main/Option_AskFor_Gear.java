@@ -54,7 +54,15 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		this.pc = oP;
 		initComponents();
 
-		updatePanels();
+		if (pc == null) {
+			gearScrollPane.setEnabled(false);
+			gearTree.setEnabled(false);
+			gearNewAddButton.setEnabled(false);
+			gearRemoveItButton.setEnabled(false);
+			gearBuyTree.setDragEnabled(false);
+		} else {
+			updatePanels();
+		}
 		updateGearBuyTree();
 
 		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -92,8 +100,10 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		adjustButtonPanel = new javax.swing.JPanel();
 		chargesAdjustPanel = new javax.swing.JPanel();
+		chargesLabel = new javax.swing.JLabel();
 		chargesAdjustSpinner = new javax.swing.JSpinner();
 		stacksAdjustPanel = new javax.swing.JPanel();
+		stacksLabel = new javax.swing.JLabel();
 		stacksAdjustSpinner = new javax.swing.JSpinner();
 		jPanel3 = new javax.swing.JPanel();
 		jPanel5 = new javax.swing.JPanel();
@@ -101,7 +111,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		gearRemoveItButton = new javax.swing.JButton();
 		gearBuyPanel = new javax.swing.JPanel();
 		gearButtonPanel = new javax.swing.JPanel();
-		jPanel2 = new javax.swing.JPanel();
 		newGearBuyButton = new javax.swing.JButton();
 		editBuyGearButton = new javax.swing.JButton();
 		deleteBuyGearButton = new javax.swing.JButton();
@@ -168,16 +177,17 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		adjustButtonPanel.setBorder(javax.swing.BorderFactory
 				.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-		adjustButtonPanel.setLayout(new java.awt.GridBagLayout());
+		adjustButtonPanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.LEFT, 1, 1));
 
-		chargesAdjustPanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true), "charges",
-						javax.swing.border.TitledBorder.CENTER,
-						javax.swing.border.TitledBorder.ABOVE_BOTTOM,
-						new java.awt.Font("Segoe UI", 0, 10)));
+		chargesAdjustPanel.setBorder(new javax.swing.border.LineBorder(
+				new java.awt.Color(0, 0, 0), 1, true));
 		chargesAdjustPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.CENTER, 0, 0));
+
+		chargesLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		chargesLabel.setText("charges");
+		chargesAdjustPanel.add(chargesLabel);
 
 		chargesAdjustSpinner.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		chargesAdjustSpinner
@@ -192,18 +202,16 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 				});
 		chargesAdjustPanel.add(chargesAdjustSpinner);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		adjustButtonPanel.add(chargesAdjustPanel, gridBagConstraints);
+		adjustButtonPanel.add(chargesAdjustPanel);
 
-		stacksAdjustPanel.setBorder(javax.swing.BorderFactory
-				.createTitledBorder(new javax.swing.border.LineBorder(
-						new java.awt.Color(0, 0, 0), 1, true), "stacks",
-						javax.swing.border.TitledBorder.CENTER,
-						javax.swing.border.TitledBorder.ABOVE_BOTTOM,
-						new java.awt.Font("Segoe UI", 0, 10)));
+		stacksAdjustPanel.setBorder(new javax.swing.border.LineBorder(
+				new java.awt.Color(0, 0, 0), 1, true));
 		stacksAdjustPanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.CENTER, 0, 0));
+
+		stacksLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		stacksLabel.setText("stacks");
+		stacksAdjustPanel.add(stacksLabel);
 
 		stacksAdjustSpinner.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		stacksAdjustSpinner
@@ -218,13 +226,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 				});
 		stacksAdjustPanel.add(stacksAdjustSpinner);
 
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		adjustButtonPanel.add(stacksAdjustPanel, gridBagConstraints);
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-		gridBagConstraints.weightx = 1.0;
-		adjustButtonPanel.add(jPanel3, gridBagConstraints);
+		adjustButtonPanel.add(stacksAdjustPanel);
+		adjustButtonPanel.add(jPanel3);
 
 		gearPanel.add(adjustButtonPanel, java.awt.BorderLayout.PAGE_END);
 
@@ -286,9 +289,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		gearButtonPanel.setBorder(javax.swing.BorderFactory
 				.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-		gearButtonPanel.setLayout(new java.awt.BorderLayout());
-
-		jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+		gearButtonPanel.setLayout(new java.awt.FlowLayout(
+				java.awt.FlowLayout.RIGHT, 1, 1));
 
 		newGearBuyButton.setBackground(new java.awt.Color(204, 204, 204));
 		newGearBuyButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -299,7 +301,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 				newGearBuyButtonActionPerformed(evt);
 			}
 		});
-		jPanel2.add(newGearBuyButton);
+		gearButtonPanel.add(newGearBuyButton);
 
 		editBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
 		editBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -312,7 +314,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 						editBuyGearButtonActionPerformed(evt);
 					}
 				});
-		jPanel2.add(editBuyGearButton);
+		gearButtonPanel.add(editBuyGearButton);
 
 		deleteBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
 		deleteBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -325,9 +327,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 						deleteBuyGearButtonActionPerformed(evt);
 					}
 				});
-		jPanel2.add(deleteBuyGearButton);
-
-		gearButtonPanel.add(jPanel2, java.awt.BorderLayout.EAST);
+		gearButtonPanel.add(deleteBuyGearButton);
 
 		gearBuyPanel.add(gearButtonPanel, java.awt.BorderLayout.PAGE_END);
 
@@ -383,8 +383,8 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private void editBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
 		if (currentGearNew != null) {
-			Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(parent,
-					true, ost, currentGearNew);
+			Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(
+					parent, true, ost, currentGearNew);
 			dDialog.setVisible(true);
 			gearBuyTreeModel.nodeChanged(gearNewCurrentNode);
 			gearBuyTree.repaint();
@@ -415,7 +415,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		//		}
 
 	}
-
 
 	//	private void deleteBuyGearButtonActionPerformed(
 	//			java.awt.event.ActionEvent evt) {
@@ -688,7 +687,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 	}
 
-
 	/**
 	 * returns the node that we place this type of gear into on the
 	 * store tree
@@ -863,6 +861,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private javax.swing.JPanel buttonPanel;
 	private javax.swing.JPanel chargesAdjustPanel;
 	private javax.swing.JSpinner chargesAdjustSpinner;
+	private javax.swing.JLabel chargesLabel;
 	private javax.swing.JButton deleteBuyGearButton;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JButton editBuyGearButton;
@@ -876,7 +875,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private javax.swing.JScrollPane gearScrollPane;
 	private javax.swing.JPanel gearTabPanel;
 	private javax.swing.JTree gearTree;
-	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanel3;
 	private javax.swing.JPanel jPanel5;
 	private javax.swing.JScrollPane jScrollPane1;
@@ -884,5 +882,6 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private javax.swing.JButton newGearBuyButton;
 	private javax.swing.JPanel stacksAdjustPanel;
 	private javax.swing.JSpinner stacksAdjustSpinner;
+	private javax.swing.JLabel stacksLabel;
 	// End of variables declaration//GEN-END:variables
 }

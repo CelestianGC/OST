@@ -56,8 +56,8 @@ public class EquipmentClass {
 	public int[] value; 
 	
 	public int experience;
+	public int speedFactor;
 	//-------------------------------------------------------------
-	
 	
 	public EquipmentClass() {
 		this("name","description",0);
@@ -76,7 +76,7 @@ public class EquipmentClass {
 				"1d4","1d4",
 				"",0,0,10,
 				0,0,
-				new ArrayList<String>(), new int[MAX_COIN],0);
+				new ArrayList<String>(), new int[MAX_COIN],0,0);
 	}
 
 	public EquipmentClass(String name, String description, int count, int type,
@@ -87,7 +87,7 @@ public class EquipmentClass {
 			String damageMedium, String damageLarge,
 			String armorType, int armorBulkType, int ac, int acBase,
 			int magicAdjustmentPrimary, int magicAdjustmentSecondary,
-			ArrayList<String> features, int[] value, int exp) {
+			ArrayList<String> features, int[] value, int exp, int speedFactor) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -115,8 +115,24 @@ public class EquipmentClass {
 		this.features = features;
 		this.value = value;
 		this.experience = exp;
+		this.speedFactor = speedFactor;
 		
 		this.setMyID(UUID.randomUUID().toString());
+	}
+
+	
+	/**
+	 * @return the speedFactor
+	 */
+	public int getSpeedFactor() {
+		return speedFactor;
+	}
+
+	/**
+	 * @param speedFactor the speedFactor to set
+	 */
+	public void setSpeedFactor(int speedFactor) {
+		this.speedFactor = speedFactor;
 	}
 
 

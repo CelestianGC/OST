@@ -176,7 +176,6 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 				"/images/treasure-chest-open-icon-24.png"))); // NOI18N
 		itemButton.setText("item");
 		itemButton.setToolTipText("Create and modify items.");
-		itemButton.setEnabled(false);
 		itemButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				itemButtonActionPerformed(evt);
@@ -362,9 +361,9 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 	}
 
 	private void itemButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
-		SimpleDialog.showError("Under construction.");
-
+		Option_AskFor_Gear dDialog = 
+				new Option_AskFor_Gear(ost.mainFrame, true, ost, null);
+		dDialog.setVisible(true);
 	}
 
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {

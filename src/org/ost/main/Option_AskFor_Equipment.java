@@ -73,19 +73,16 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 				weaponGroupTight.add(cC.getWeaponTightGroupType());
 		}
 		Collections.sort(weaponGroup);
-		DefaultComboBoxModel modelWeaponGroup = new DefaultComboBoxModel<>(
-				weaponProfList.toArray());
-		weaponTypeGroupComboBox.setModel(modelWeaponGroup);
+		weaponTypeGroupComboBox.setModel(new DefaultComboBoxModel<>(weaponGroup
+				.toArray()));
 
 		Collections.sort(weaponGroupTight);
-		DefaultComboBoxModel modelWeaponGroupTight = new DefaultComboBoxModel<>(
-				weaponProfList.toArray());
-		weaponTypeGroupTightComboBox.setModel(modelWeaponGroupTight);
+		weaponTypeGroupTightComboBox.setModel(new DefaultComboBoxModel<>(
+				weaponGroupTight.toArray()));
 
 		Collections.sort(weaponProfList);
-		DefaultComboBoxModel modelWeaponProf = new DefaultComboBoxModel<>(
-				weaponProfList.toArray());
-		weaponTypeProfComboBox.setModel(modelWeaponProf);
+		weaponTypeProfComboBox.setModel(new DefaultComboBoxModel<>(
+				weaponProfList.toArray()));
 
 		updatePanels();
 
@@ -134,6 +131,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		gearNewStackableCheckBox = new javax.swing.JCheckBox();
 		weaponPanel = new javax.swing.JPanel();
 		damageDicePanel = new javax.swing.JPanel();
+		jLabel9 = new javax.swing.JLabel();
+		speedFactorSpinner = new javax.swing.JSpinner();
 		jLabel1 = new javax.swing.JLabel();
 		damageSmallTextField = new javax.swing.JTextField();
 		jLabel3 = new javax.swing.JLabel();
@@ -414,6 +413,15 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageDicePanel.setLayout(new java.awt.FlowLayout(
 				java.awt.FlowLayout.LEFT));
 
+		jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel9.setText("speed");
+		damageDicePanel.add(jLabel9);
+
+		speedFactorSpinner.setModel(new javax.swing.SpinnerNumberModel());
+		speedFactorSpinner.setEnabled(false);
+		speedFactorSpinner.setPreferredSize(new java.awt.Dimension(40, 22));
+		damageDicePanel.add(speedFactorSpinner);
+
 		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel1.setText("damage S");
 		damageDicePanel.add(jLabel1);
@@ -509,6 +517,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		armorPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
 		armorBulkTypeComboBox.setEnabled(false);
+		armorBulkTypeComboBox.setPreferredSize(new java.awt.Dimension(150, 27));
 		armorPanel.add(armorBulkTypeComboBox);
 
 		armorTypeComboBox.setEditable(true);
@@ -610,6 +619,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageLargeTextField.setEnabled(isSet);
 		damageMediumTextField.setEnabled(isSet);
 		damageSmallTextField.setEnabled(isSet);
+		speedFactorSpinner.setEnabled(isSet);
 	}
 
 	private void gearNewDescriptionButtonActionPerformed(
@@ -686,6 +696,11 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		oE.setAcBase((int) acBaseSpinner.getValue());
 		oE.setAc((int) acAdjustmentSpinner.getValue());
 
+		oE.setSpeedFactor((int) speedFactorSpinner.getValue());
+
+		oE.setMagicAdjustmentPrimary((int) magicBonus1Spinner.getValue());
+		oE.setMagicAdjustmentSecondary((int) magicBonus2Spinner.getValue());
+
 	}
 
 	private void updatePanels() {
@@ -738,6 +753,11 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 			armorTypeComboBox.setSelectedItem(oE.getArmorType());
 			acBaseSpinner.setValue(oE.getAcBase());
 			acAdjustmentSpinner.setValue(oE.getAc());
+
+			speedFactorSpinner.setValue(oE.getSpeedFactor());
+
+			magicBonus1Spinner.setValue(oE.getMagicAdjustmentPrimary());
+			magicBonus2Spinner.setValue(oE.getMagicAdjustmentSecondary());
 		}
 
 	}
@@ -782,6 +802,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JLabel jLabel6;
 	private javax.swing.JLabel jLabel7;
 	private javax.swing.JLabel jLabel8;
+	private javax.swing.JLabel jLabel9;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JScrollPane jScrollPane2;
 	private javax.swing.JSpinner magicBonus1Spinner;
@@ -791,6 +812,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JPanel magicPanel;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel namePanel;
+	private javax.swing.JSpinner speedFactorSpinner;
 	private javax.swing.JPanel typePanel;
 	private javax.swing.JPanel valuePanel;
 	private javax.swing.JTable valueTable;
