@@ -6,8 +6,10 @@
 
 package org.ost.main;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
@@ -36,12 +38,18 @@ public class Option_AskFor_Description extends javax.swing.JDialog {
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
 
-		setLocationRelativeTo(parent);
 		//setSize(400, 300);
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		//Dimension windowSize = mainPanel.getSize();
+		//int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
+		//int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
+		//setLocation(windowX, windowY);
+		setSize(screenSize.width/2, screenSize.height /2);
+		setLocationRelativeTo(parent);
 
 		updatePanel(newDescription);
 
-		pack();
+		//pack();
 	}
 
 	/** This method is called from within the constructor to

@@ -85,6 +85,15 @@ public class MyStatics {
 	public static final String[] WEAPON_NAMES = 
 		{"Slash","Pierce","Bludgeon","Other"};
 
+	public static final int WEAPON_SIZE_SMALL = 0;
+	public static final int WEAPON_SIZE_MEDIUM = 1;
+	public static final int WEAPON_SIZE_LARGE = 2;
+	public static final int WEAPON_SIZE_OTHER = 3;
+	public static final String[] WEAPON_SIZE_NAMES = 
+		{"Small","Medium","Large","Other"};
+	public static final String[] WEAPON_SIZE_ABBREV = 
+		{"S","M","L","O"};
+
 	public static final int ARMOR_TYPE_NONE = 0;
 	public static final int ARMOR_TYPE_NONBULKY = 1;
 	public static final int ARMOR_TYPE_FAIRLYBULKY = 2;

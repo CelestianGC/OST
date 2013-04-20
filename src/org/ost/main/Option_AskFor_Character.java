@@ -57,44 +57,48 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 		jScrollPane1 = new javax.swing.JScrollPane();
 		mainPanel = new javax.swing.JPanel();
+		detailsPanel = new javax.swing.JPanel();
+		genderLabel = new javax.swing.JLabel();
+		Labela12 = new javax.swing.JLabel();
 		nameLabel = new javax.swing.JLabel();
 		nameTextField = new javax.swing.JTextField();
-		classLabel = new javax.swing.JLabel();
-		classButton = new javax.swing.JButton();
-		raceLabel = new javax.swing.JLabel();
-		raceButton = new javax.swing.JButton();
+		levelLabel = new javax.swing.JLabel();
+		genderComboBox = new javax.swing.JComboBox();
 		jLabel1 = new javax.swing.JLabel();
+		raceLabel = new javax.swing.JLabel();
+		jLabel9 = new javax.swing.JLabel();
+		classLabel = new javax.swing.JLabel();
 		playerTextField = new javax.swing.JTextField();
+		alignmentComboBox = new javax.swing.JComboBox();
+		raceLabel1 = new javax.swing.JLabel();
+		classLabel1 = new javax.swing.JLabel();
+		hitpointsPanel = new javax.swing.JPanel();
 		jLabel2 = new javax.swing.JLabel();
 		hpSpinner = new javax.swing.JSpinner();
 		jLabel3 = new javax.swing.JLabel();
 		currentHPSpinner = new javax.swing.JSpinner();
+		jLabel7 = new javax.swing.JLabel();
+		moveTextField = new javax.swing.JTextField();
+		acDetailsPanel = new javax.swing.JPanel();
 		jLabel4 = new javax.swing.JLabel();
 		acSpinner = new javax.swing.JSpinner();
 		jLabel5 = new javax.swing.JLabel();
 		acRearSpinner = new javax.swing.JSpinner();
 		jLabel6 = new javax.swing.JLabel();
 		acShieldlessSpinner = new javax.swing.JSpinner();
-		jLabel7 = new javax.swing.JLabel();
-		moveTextField = new javax.swing.JTextField();
-		jLabel8 = new javax.swing.JLabel();
-		magicResistanceTextField = new javax.swing.JTextField();
-		jLabel9 = new javax.swing.JLabel();
-		alignmentComboBox = new javax.swing.JComboBox();
+		buttonsPanel = new javax.swing.JPanel();
+		savesAdjustmentButton = new javax.swing.JButton();
+		abilitiesButton = new javax.swing.JButton();
 		equipmentButton = new javax.swing.JButton();
-		Labela12 = new javax.swing.JLabel();
-		levelLabel = new javax.swing.JLabel();
-		notesButton = new javax.swing.JButton();
-		logsButton = new javax.swing.JButton();
+		expAddButton = new javax.swing.JButton();
+		savesButton = new javax.swing.JButton();
 		weaponProfsButton = new javax.swing.JButton();
 		nonWeaponProfsButton = new javax.swing.JButton();
-		abilitiesButton = new javax.swing.JButton();
-		savesButton = new javax.swing.JButton();
-		savesAdjustmentButton = new javax.swing.JButton();
-		genderComboBox = new javax.swing.JComboBox();
-		genderLabel = new javax.swing.JLabel();
+		raceButton = new javax.swing.JButton();
+		classButton = new javax.swing.JButton();
 		rollHDButton = new javax.swing.JButton();
-		expAddButton = new javax.swing.JButton();
+		notesButton = new javax.swing.JButton();
+		logsButton = new javax.swing.JButton();
 		buttonPanel = new javax.swing.JPanel();
 		doneButton = new javax.swing.JButton();
 
@@ -109,320 +113,229 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		mainPanel.setBackground(new java.awt.Color(153, 153, 153));
 		mainPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
-						1, true), "Character",
-				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-				javax.swing.border.TitledBorder.DEFAULT_POSITION,
-				new java.awt.Font("Segoe UI", 0, 12)));
-		mainPanel.setLayout(new java.awt.GridBagLayout());
+						1, true), "Character"));
 
-		nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		nameLabel.setText("name");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(nameLabel, gridBagConstraints);
+		detailsPanel.setBackground(new java.awt.Color(153, 153, 153));
+		detailsPanel.setLayout(new java.awt.GridBagLayout());
 
-		nameTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		genderLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		genderLabel.setText("Gender");
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-		mainPanel.add(nameTextField, gridBagConstraints);
-
-		classLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		classLabel.setText("set class");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(classLabel, gridBagConstraints);
-
-		classButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		classButton.setText("pick class");
-		classButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				classButtonActionPerformed(evt);
-			}
-		});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(classButton, gridBagConstraints);
-
-		raceLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		raceLabel.setText("set race");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(raceLabel, gridBagConstraints);
-
-		raceButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		raceButton.setText("pick race");
-		raceButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				raceButtonActionPerformed(evt);
-			}
-		});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(raceButton, gridBagConstraints);
-
-		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel1.setText("Player");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridx = 2;
 		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(jLabel1, gridBagConstraints);
-
-		playerTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(playerTextField, gridBagConstraints);
-
-		jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel2.setText("hitpoints");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(jLabel2, gridBagConstraints);
-
-		hpSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 0, 999, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(hpSpinner, gridBagConstraints);
-
-		jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel3.setText("current hp");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(jLabel3, gridBagConstraints);
-
-		currentHPSpinner.setModel(new javax.swing.SpinnerNumberModel(1, -10,
-				999, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(currentHPSpinner, gridBagConstraints);
-
-		jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel4.setText("AC");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(jLabel4, gridBagConstraints);
-
-		acSpinner.setModel(new javax.swing.SpinnerNumberModel(10, -10, 10, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 0;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(acSpinner, gridBagConstraints);
-
-		jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel5.setText("AC, Rear");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(jLabel5, gridBagConstraints);
-
-		acRearSpinner.setModel(new javax.swing.SpinnerNumberModel(10, -10, 10,
-				1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(acRearSpinner, gridBagConstraints);
-
-		jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel6.setText("AC, Shieldless");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(jLabel6, gridBagConstraints);
-
-		acShieldlessSpinner.setModel(new javax.swing.SpinnerNumberModel(10,
-				-10, 10, 1));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(acShieldlessSpinner, gridBagConstraints);
-
-		jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel7.setText("move");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(jLabel7, gridBagConstraints);
-
-		moveTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(moveTextField, gridBagConstraints);
-
-		jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel8.setText("magic-resistance");
-		jLabel8.setEnabled(false);
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(jLabel8, gridBagConstraints);
-
-		magicResistanceTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		magicResistanceTextField.setEnabled(false);
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(magicResistanceTextField, gridBagConstraints);
-
-		jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		jLabel9.setText("alignment");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(jLabel9, gridBagConstraints);
-
-		alignmentComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(alignmentComboBox, gridBagConstraints);
-
-		equipmentButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		equipmentButton.setText("equipment");
-		equipmentButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				equipmentButtonActionPerformed(evt);
-			}
-		});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 5;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(equipmentButton, gridBagConstraints);
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		detailsPanel.add(genderLabel, gridBagConstraints);
 
 		Labela12.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		Labela12.setText("Level");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
-		mainPanel.add(Labela12, gridBagConstraints);
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		detailsPanel.add(Labela12, gridBagConstraints);
 
-		levelLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		nameLabel.setText("Name");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		detailsPanel.add(nameLabel, gridBagConstraints);
+
+		nameTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		nameTextField.setPreferredSize(new java.awt.Dimension(100, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
+		detailsPanel.add(nameTextField, gridBagConstraints);
+
+		levelLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
 		levelLabel.setText("set class/exp");
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(levelLabel, gridBagConstraints);
-
-		notesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		notesButton.setText("notes");
-		notesButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				notesButtonActionPerformed(evt);
-			}
-		});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
 		gridBagConstraints.gridy = 1;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(notesButton, gridBagConstraints);
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
+		detailsPanel.add(levelLabel, gridBagConstraints);
 
-		logsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		logsButton.setText("logs");
-		logsButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				logsButtonActionPerformed(evt);
-			}
-		});
+		genderComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 2;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(logsButton, gridBagConstraints);
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		detailsPanel.add(genderComboBox, gridBagConstraints);
 
-		weaponProfsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		weaponProfsButton.setText("weapon profs");
-		weaponProfsButton.setEnabled(false);
+		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel1.setText("Player");
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 6;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(weaponProfsButton, gridBagConstraints);
-
-		nonWeaponProfsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		nonWeaponProfsButton.setText("nonweapon profs");
-		nonWeaponProfsButton.setEnabled(false);
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(nonWeaponProfsButton, gridBagConstraints);
-
-		abilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		abilitiesButton.setText("ability scores");
-		abilitiesButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				abilitiesButtonActionPerformed(evt);
-			}
-		});
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
+		gridBagConstraints.gridx = 2;
 		gridBagConstraints.gridy = 0;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(abilitiesButton, gridBagConstraints);
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		detailsPanel.add(jLabel1, gridBagConstraints);
 
-		savesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		savesButton.setText("saves");
-		savesButton.setEnabled(false);
-		savesButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				savesButtonActionPerformed(evt);
-			}
-		});
+		raceLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
+		raceLabel.setText("set race");
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(savesButton, gridBagConstraints);
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
+		detailsPanel.add(raceLabel, gridBagConstraints);
+
+		jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel9.setText("Alignment");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		detailsPanel.add(jLabel9, gridBagConstraints);
+
+		classLabel.setFont(new java.awt.Font("Segoe UI", 1, 12));
+		classLabel.setText("set class");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
+		detailsPanel.add(classLabel, gridBagConstraints);
+
+		playerTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		playerTextField.setPreferredSize(new java.awt.Dimension(150, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		detailsPanel.add(playerTextField, gridBagConstraints);
+
+		alignmentComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 3;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+		detailsPanel.add(alignmentComboBox, gridBagConstraints);
+
+		raceLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		raceLabel1.setText("Race");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		detailsPanel.add(raceLabel1, gridBagConstraints);
+
+		classLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		classLabel1.setText("Class");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		detailsPanel.add(classLabel1, gridBagConstraints);
+
+		hitpointsPanel.setBackground(new java.awt.Color(153, 153, 153));
+		hitpointsPanel.setLayout(new java.awt.GridBagLayout());
+
+		jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel2.setText("Hitpoints");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(jLabel2, gridBagConstraints);
+
+		hpSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 0, 999, 1));
+		hpSpinner.setPreferredSize(new java.awt.Dimension(45, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(hpSpinner, gridBagConstraints);
+
+		jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel3.setText("Current hp");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(jLabel3, gridBagConstraints);
+
+		currentHPSpinner.setModel(new javax.swing.SpinnerNumberModel(1, -10,
+				999, 1));
+		currentHPSpinner.setPreferredSize(new java.awt.Dimension(45, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(currentHPSpinner, gridBagConstraints);
+
+		jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel7.setText("Move");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(jLabel7, gridBagConstraints);
+
+		moveTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		moveTextField.setPreferredSize(new java.awt.Dimension(40, 22));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		hitpointsPanel.add(moveTextField, gridBagConstraints);
+
+		acDetailsPanel.setBackground(new java.awt.Color(153, 153, 153));
+		acDetailsPanel.setLayout(new java.awt.GridBagLayout());
+
+		jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel4.setText("AC");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		acDetailsPanel.add(jLabel4, gridBagConstraints);
+
+		acSpinner.setModel(new javax.swing.SpinnerNumberModel(10, -10, 10, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		acDetailsPanel.add(acSpinner, gridBagConstraints);
+
+		jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel5.setText("AC, Rear");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		acDetailsPanel.add(jLabel5, gridBagConstraints);
+
+		acRearSpinner.setModel(new javax.swing.SpinnerNumberModel(10, -10, 10,
+				1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		acDetailsPanel.add(acRearSpinner, gridBagConstraints);
+
+		jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel6.setText("AC, Shieldless");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+		acDetailsPanel.add(jLabel6, gridBagConstraints);
+
+		acShieldlessSpinner.setModel(new javax.swing.SpinnerNumberModel(10,
+				-10, 10, 1));
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		gridBagConstraints.weightx = 0.5;
+		acDetailsPanel.add(acShieldlessSpinner, gridBagConstraints);
+
+		buttonsPanel.setBackground(new java.awt.Color(153, 153, 153));
+		buttonsPanel.setLayout(new java.awt.GridBagLayout());
 
 		savesAdjustmentButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		savesAdjustmentButton.setText("save adjustments");
@@ -433,40 +346,36 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					}
 				});
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 5;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(savesAdjustmentButton, gridBagConstraints);
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(savesAdjustmentButton, gridBagConstraints);
 
-		genderComboBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 4;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(genderComboBox, gridBagConstraints);
-
-		genderLabel.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		genderLabel.setText("gender");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 3;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
-		mainPanel.add(genderLabel, gridBagConstraints);
-
-		rollHDButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
-		rollHDButton.setText("re-roll HP");
-		rollHDButton.setToolTipText("Re-roll Hitpoints.");
-		rollHDButton.addActionListener(new java.awt.event.ActionListener() {
+		abilitiesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		abilitiesButton.setText("ability scores");
+		abilitiesButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				rollHDButtonActionPerformed(evt);
+				abilitiesButtonActionPerformed(evt);
 			}
 		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(rollHDButton, gridBagConstraints);
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(abilitiesButton, gridBagConstraints);
+
+		equipmentButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		equipmentButton.setText("equipment");
+		equipmentButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				equipmentButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 0;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(equipmentButton, gridBagConstraints);
 
 		expAddButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		expAddButton.setText("experience");
@@ -478,9 +387,195 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		});
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 7;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		mainPanel.add(expAddButton, gridBagConstraints);
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(expAddButton, gridBagConstraints);
+
+		savesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		savesButton.setText("saves");
+		savesButton.setEnabled(false);
+		savesButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				savesButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(savesButton, gridBagConstraints);
+
+		weaponProfsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		weaponProfsButton.setText("weapon profs");
+		weaponProfsButton.setEnabled(false);
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(weaponProfsButton, gridBagConstraints);
+
+		nonWeaponProfsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		nonWeaponProfsButton.setText("nonweapon profs");
+		nonWeaponProfsButton.setEnabled(false);
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 1;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(nonWeaponProfsButton, gridBagConstraints);
+
+		raceButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		raceButton.setText("set race");
+		raceButton.setPreferredSize(new java.awt.Dimension(123, 25));
+		raceButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				raceButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(raceButton, gridBagConstraints);
+
+		classButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		classButton.setText("set class");
+		classButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				classButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 1;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(classButton, gridBagConstraints);
+
+		rollHDButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		rollHDButton.setText("re-roll HP");
+		rollHDButton.setToolTipText("Re-roll Hitpoints.");
+		rollHDButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				rollHDButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(rollHDButton, gridBagConstraints);
+
+		notesButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		notesButton.setText("notes");
+		notesButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				notesButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(notesButton, gridBagConstraints);
+
+		logsButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		logsButton.setText("logs");
+		logsButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				logsButtonActionPerformed(evt);
+			}
+		});
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 2;
+		gridBagConstraints.gridy = 4;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		buttonsPanel.add(logsButton, gridBagConstraints);
+
+		javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(
+				mainPanel);
+		mainPanel.setLayout(mainPanelLayout);
+		mainPanelLayout
+				.setHorizontalGroup(mainPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								mainPanelLayout
+										.createSequentialGroup()
+										.addGroup(
+												mainPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING,
+																false)
+														.addGroup(
+																mainPanelLayout
+																		.createSequentialGroup()
+																		.addContainerGap()
+																		.addComponent(
+																				hitpointsPanel,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				javax.swing.GroupLayout.DEFAULT_SIZE,
+																				javax.swing.GroupLayout.PREFERRED_SIZE)
+																		.addPreferredGap(
+																				javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+																				14,
+																				Short.MAX_VALUE)
+																		.addComponent(
+																				acDetailsPanel,
+																				javax.swing.GroupLayout.PREFERRED_SIZE,
+																				148,
+																				javax.swing.GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																mainPanelLayout
+																		.createSequentialGroup()
+																		.addGap(0,
+																				0,
+																				0)
+																		.addGroup(
+																				mainPanelLayout
+																						.createParallelGroup(
+																								javax.swing.GroupLayout.Alignment.LEADING)
+																						.addComponent(
+																								detailsPanel,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								372,
+																								javax.swing.GroupLayout.PREFERRED_SIZE)
+																						.addComponent(
+																								buttonsPanel,
+																								javax.swing.GroupLayout.PREFERRED_SIZE,
+																								javax.swing.GroupLayout.DEFAULT_SIZE,
+																								javax.swing.GroupLayout.PREFERRED_SIZE))))
+										.addContainerGap()));
+		mainPanelLayout
+				.setVerticalGroup(mainPanelLayout
+						.createParallelGroup(
+								javax.swing.GroupLayout.Alignment.LEADING)
+						.addGroup(
+								javax.swing.GroupLayout.Alignment.TRAILING,
+								mainPanelLayout
+										.createSequentialGroup()
+										.addComponent(
+												detailsPanel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												114, Short.MAX_VALUE)
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addGroup(
+												mainPanelLayout
+														.createParallelGroup(
+																javax.swing.GroupLayout.Alignment.LEADING)
+														.addComponent(
+																hitpointsPanel,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																acDetailsPanel,
+																javax.swing.GroupLayout.PREFERRED_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+										.addComponent(
+												buttonsPanel,
+												javax.swing.GroupLayout.PREFERRED_SIZE,
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addContainerGap()));
 
 		jScrollPane1.setViewportView(mainPanel);
 
@@ -507,8 +602,8 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 	private void equipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		Option_AskFor_Gear dDialog = 
-				new Option_AskFor_Gear(parent, true, ost, currentCharacter);
+		Option_AskFor_Gear dDialog = new Option_AskFor_Gear(parent, true, ost,
+				currentCharacter);
 		dDialog.setVisible(true);
 	}
 
@@ -714,7 +809,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 				String.format("%d", acShieldlessSpinner.getValue()));
 
 		currentCharacter.setMoveRate(moveTextField.getText());
-		currentCharacter.setMagicResistance(magicResistanceTextField.getText());
+		//		currentCharacter.setMagicResistance(magicResistanceTextField.getText());
 		currentCharacter.setMyAlignmentType(alignmentComboBox
 				.getSelectedIndex());
 		currentCharacter.setGenderType(genderComboBox.getSelectedIndex());
@@ -733,7 +828,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		acSpinner.setValue(Integer.parseInt(currentCharacter.getArmorRatings()
 				.get(0)));
 		moveTextField.setText(currentCharacter.getMoveRate());
-		magicResistanceTextField.setText(currentCharacter.getMagicResistance());
+		//		magicResistanceTextField.setText(currentCharacter.getMagicResistance());
 		alignmentComboBox.setSelectedIndex(currentCharacter
 				.getMyAlignmentType());
 		genderComboBox.setSelectedIndex(currentCharacter.getGenderType());
@@ -743,25 +838,31 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 		levelLabel.setText(currentCharacter.getMyLevelName(ost));
 
+		classLabel.setText(currentCharacter.getMyClassName(ost));
 	}
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify
 	private javax.swing.JLabel Labela12;
 	private javax.swing.JButton abilitiesButton;
+	private javax.swing.JPanel acDetailsPanel;
 	private javax.swing.JSpinner acRearSpinner;
 	private javax.swing.JSpinner acShieldlessSpinner;
 	private javax.swing.JSpinner acSpinner;
 	private javax.swing.JComboBox alignmentComboBox;
 	private javax.swing.JPanel buttonPanel;
+	private javax.swing.JPanel buttonsPanel;
 	private javax.swing.JButton classButton;
 	private javax.swing.JLabel classLabel;
+	private javax.swing.JLabel classLabel1;
 	private javax.swing.JSpinner currentHPSpinner;
+	private javax.swing.JPanel detailsPanel;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JButton equipmentButton;
 	private javax.swing.JButton expAddButton;
 	private javax.swing.JComboBox genderComboBox;
 	private javax.swing.JLabel genderLabel;
+	private javax.swing.JPanel hitpointsPanel;
 	private javax.swing.JSpinner hpSpinner;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel2;
@@ -770,12 +871,10 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	private javax.swing.JLabel jLabel5;
 	private javax.swing.JLabel jLabel6;
 	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel8;
 	private javax.swing.JLabel jLabel9;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JLabel levelLabel;
 	private javax.swing.JButton logsButton;
-	private javax.swing.JTextField magicResistanceTextField;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JTextField moveTextField;
 	private javax.swing.JLabel nameLabel;
@@ -785,6 +884,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	private javax.swing.JTextField playerTextField;
 	private javax.swing.JButton raceButton;
 	private javax.swing.JLabel raceLabel;
+	private javax.swing.JLabel raceLabel1;
 	private javax.swing.JButton rollHDButton;
 	private javax.swing.JButton savesAdjustmentButton;
 	private javax.swing.JButton savesButton;

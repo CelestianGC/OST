@@ -15,7 +15,79 @@
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
     <alignment>Chaotic Good</alignment>
-    <gear/>
+    <gear>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>5c988632-06f3-40c9-b092-a50c31fcb505</myID>
+        <name>platemail</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>2</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <contains/>
+        <weight>120.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>platemail</armorType>
+        <armorBulkType>3</armorBulkType>
+        <ac>0</ac>
+        <acBase>3</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>400</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>38b525ca-964d-40b4-ba82-a6706e95d126</myID>
+        <name>shield</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>5</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>shield</armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>-1</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+    </gear>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
@@ -93,6 +165,22 @@ character level up, new MaxHP:22 from 0
 character level up, new MaxHP:41 from 22
 character level up, new MaxHP:34 from 0
 character level up, new MaxHP:53 from 34
+character experience modified :3750000
+character level up, new MaxHP:33 from 0
+character experience modified :3750000
+character level up, new MaxHP:50 from 33
+character experience modified :3750000
+character level up, new MaxHP:27 from 0
+character experience modified :3750000
+character level up, new MaxHP:43 from 27
+character experience modified :3750000
+character level up, new MaxHP:28 from 0
+character experience modified :3750000
+character level up, new MaxHP:43 from 28
+character experience modified :3750000
+character level up, new MaxHP:34 from 0
+character experience modified :3750000
+character level up, new MaxHP:53 from 34
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -107,90 +195,26 @@ character level up, new MaxHP:53 from 34
         <level>20</level>
         <primaryClass>false</primaryClass>
         <hdRolls>
-          <int>7</int>
-          <int>12</int>
-          <int>20</int>
-          <int>27</int>
-          <int>29</int>
-          <int>36</int>
-          <int>42</int>
-          <int>50</int>
-          <int>55</int>
-          <int>2</int>
-          <int>4</int>
-          <int>6</int>
-          <int>1</int>
-          <int>9</int>
-          <int>11</int>
-          <int>17</int>
-          <int>19</int>
-          <int>26</int>
-          <int>33</int>
-          <int>37</int>
-          <int>40</int>
-          <int>42</int>
-          <int>44</int>
-          <int>46</int>
-          <int>4</int>
-          <int>11</int>
-          <int>18</int>
-          <int>24</int>
-          <int>28</int>
-          <int>30</int>
-          <int>33</int>
-          <int>36</int>
-          <int>44</int>
-          <int>46</int>
-          <int>48</int>
-          <int>50</int>
-          <int>2</int>
-          <int>2</int>
-          <int>4</int>
-          <int>6</int>
-          <int>8</int>
+          <int>5</int>
           <int>10</int>
-          <int>12</int>
-          <int>14</int>
-          <int>1</int>
-          <int>3</int>
-          <int>10</int>
-          <int>11</int>
-          <int>12</int>
-          <int>13</int>
-          <int>14</int>
+          <int>15</int>
           <int>21</int>
-          <int>22</int>
-          <int>24</int>
-          <int>26</int>
-          <int>28</int>
-          <int>30</int>
-          <int>32</int>
-          <int>34</int>
-          <int>36</int>
-          <int>38</int>
-          <int>40</int>
-          <int>42</int>
-          <int>44</int>
-          <int>3</int>
-          <int>9</int>
-          <int>16</int>
-          <int>21</int>
+          <int>25</int>
           <int>29</int>
-          <int>35</int>
+          <int>31</int>
           <int>39</int>
-          <int>42</int>
-          <int>46</int>
-          <int>48</int>
-          <int>50</int>
-          <int>52</int>
-          <int>54</int>
-          <int>56</int>
-          <int>58</int>
-          <int>60</int>
-          <int>62</int>
-          <int>64</int>
-          <int>66</int>
-          <int>68</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>59</int>
+          <int>61</int>
+          <int>63</int>
+          <int>65</int>
+          <int>67</int>
+          <int>69</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -201,59 +225,17 @@ character level up, new MaxHP:53 from 34
         <level>19</level>
         <primaryClass>false</primaryClass>
         <hdRolls>
-          <int>1</int>
-          <int>4</int>
+          <int>2</int>
           <int>6</int>
-          <int>8</int>
+          <int>10</int>
           <int>11</int>
           <int>12</int>
           <int>14</int>
           <int>17</int>
           <int>20</int>
-          <int>2</int>
-          <int>3</int>
-          <int>4</int>
-          <int>3</int>
-          <int>4</int>
-          <int>7</int>
-          <int>9</int>
-          <int>11</int>
-          <int>12</int>
-          <int>16</int>
-          <int>18</int>
-          <int>20</int>
-          <int>22</int>
-          <int>24</int>
-          <int>25</int>
-          <int>2</int>
-          <int>6</int>
-          <int>9</int>
-          <int>13</int>
-          <int>16</int>
-          <int>20</int>
-          <int>23</int>
           <int>24</int>
           <int>26</int>
-          <int>28</int>
-          <int>29</int>
           <int>30</int>
-          <int>1</int>
-          <int>1</int>
-          <int>2</int>
-          <int>3</int>
-          <int>4</int>
-          <int>5</int>
-          <int>6</int>
-          <int>4</int>
-          <int>7</int>
-          <int>10</int>
-          <int>11</int>
-          <int>14</int>
-          <int>16</int>
-          <int>19</int>
-          <int>23</int>
-          <int>24</int>
-          <int>28</int>
           <int>31</int>
           <int>32</int>
           <int>33</int>
@@ -262,26 +244,6 @@ character level up, new MaxHP:53 from 34
           <int>36</int>
           <int>37</int>
           <int>38</int>
-          <int>39</int>
-          <int>3</int>
-          <int>7</int>
-          <int>11</int>
-          <int>14</int>
-          <int>15</int>
-          <int>16</int>
-          <int>20</int>
-          <int>22</int>
-          <int>26</int>
-          <int>27</int>
-          <int>31</int>
-          <int>32</int>
-          <int>33</int>
-          <int>34</int>
-          <int>35</int>
-          <int>36</int>
-          <int>37</int>
-          <int>38</int>
-          <int>39</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -1132,47 +1094,12 @@ character level up, new MaxHP:54 from 0
       <string>10</string>
       <string>10</string>
     </armorRatings>
-    <moveRate>12</moveRate>
+    <moveRate>11</moveRate>
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Lawful Good</alignment>
+    <alignment>Chaotic Good</alignment>
     <gear>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>e678b59a-8e88-407a-afea-d1e95cff7107</myID>
-        <name>chainmail</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>2</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>false</equipped>
-        <weight>350.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType></weaponProfType>
-        <weaponGroupType></weaponGroupType>
-        <weaponTightGroupType></weaponTightGroupType>
-        <damageSmall>1d4</damageSmall>
-        <damageMedium>1d4</damageMedium>
-        <damageLarge>1d4</damageLarge>
-        <armorType>chainmail</armorType>
-        <armorBulkType>2</armorBulkType>
-        <ac>0</ac>
-        <acBase>5</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>75</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-        <speedFactor>0</speedFactor>
-      </org.ost.main.MyClasses.EquipmentClass>
       <org.ost.main.MyClasses.EquipmentClass>
         <myID>01f9d322-6690-4015-a0dd-46ccefec18cf</myID>
         <name>shield</name>
@@ -1182,7 +1109,7 @@ character level up, new MaxHP:54 from 0
         <magic>false</magic>
         <charges>-1</charges>
         <chargesMax>-1</chargesMax>
-        <equipped>false</equipped>
+        <equipped>true</equipped>
         <weight>0.0</weight>
         <weaponType>0</weaponType>
         <weaponProfType></weaponProfType>
@@ -1203,6 +1130,150 @@ character level up, new MaxHP:54 from 0
           <int>0</int>
           <int>0</int>
           <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>a23689cd-cb9f-44eb-9649-eacb5bc2d751</myID>
+        <name>longsword +1</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>1</type>
+        <magic>true</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType>longsword</weaponProfType>
+        <weaponGroupType>blade</weaponGroupType>
+        <weaponTightGroupType>long blade</weaponTightGroupType>
+        <damageSmall>1d8</damageSmall>
+        <damageMedium>1d8</damageMedium>
+        <damageLarge>1d12</damageLarge>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features>
+          <string>b9c543de-5848-4b1e-a141-cd40a07c23a6</string>
+        </features>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>5481d778-4a25-4607-ac3a-3f191dcabb2b</myID>
+        <name>potion of healing</name>
+        <description>heals 2d4 hitpoints damage</description>
+        <count>-1</count>
+        <type>0</type>
+        <magic>true</magic>
+        <charges>1</charges>
+        <chargesMax>1</chargesMax>
+        <equipped>false</equipped>
+        <contains/>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>bccc1cc6-b606-43f3-8799-2692509e7135</myID>
+        <name>arrow</name>
+        <description>New item description.</description>
+        <count>40</count>
+        <type>0</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>false</equipped>
+        <contains/>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>5</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>24a377a8-11ed-44f0-842b-177eaef0fca1</myID>
+        <name>elven chainmail</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>2</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>150.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>chainmail</armorType>
+        <armorBulkType>1</armorBulkType>
+        <ac>0</ac>
+        <acBase>5</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>75</int>
           <int>0</int>
         </value>
         <experience>0</experience>
@@ -1389,7 +1460,7 @@ character level up, new MaxHP:17 from 13
       <int>0</int>
       <int>0</int>
     </mySaveAdjustments>
-    <myAlignmentType>0</myAlignmentType>
+    <myAlignmentType>6</myAlignmentType>
     <genderType>0</genderType>
     <totalExperience>30000</totalExperience>
   </PlayerClass>
@@ -1940,8 +2011,44 @@ character level up, new MaxHP:30 from 0
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Lawful Good</alignment>
-    <gear/>
+    <alignment>Neutral Evil</alignment>
+    <gear>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>166f0a31-bd65-4bc5-8ed7-ef50d6d2cc9a</myID>
+        <name>leather +2</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>2</type>
+        <magic>true</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>150.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <armorType>leather</armorType>
+        <armorBulkType>1</armorBulkType>
+        <ac>0</ac>
+        <acBase>8</acBase>
+        <magicAdjustmentPrimary>2</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>5</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <speedFactor>0</speedFactor>
+      </org.ost.main.MyClasses.EquipmentClass>
+    </gear>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
@@ -2064,7 +2171,7 @@ character level up, new MaxHP:23 from 7
       <int>0</int>
       <int>0</int>
     </mySaveAdjustments>
-    <myAlignmentType>0</myAlignmentType>
+    <myAlignmentType>5</myAlignmentType>
     <genderType>0</genderType>
     <totalExperience>0</totalExperience>
   </PlayerClass>

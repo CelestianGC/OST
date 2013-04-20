@@ -366,7 +366,7 @@ public class EquipmentClass {
 	 * returns a brand new copy of itself
 	 * @return
 	 */
-	public EquipmentClass getCopy() {
+	public EquipmentClass clone() {
 		EquipmentClass oNew = new EquipmentClass();
 
 		oNew.name = name;
@@ -392,10 +392,11 @@ public class EquipmentClass {
 		oNew.acBase = acBase;
 		oNew.magicAdjustmentPrimary = magicAdjustmentPrimary;
 		oNew.magicAdjustmentSecondary = magicAdjustmentSecondary;
+		oNew.experience = experience;
+		oNew.speedFactor = speedFactor;
 
 		for(int i=0;i<MAX_COIN;i++)
 			oNew.getValue()[i] = getValue()[i];
-		
 		
 		for(String sType : getFeatures())
 			oNew.getFeatures().add(sType);
@@ -403,7 +404,7 @@ public class EquipmentClass {
 		//oNew.setContains(new ArrayList<EquipmentClass>());
 		if (getContains()!= null)
 		for (EquipmentClass oS: getContains())
-			oNew.getContains().add(oS.getCopy());
+			oNew.getContains().add(oS.clone());
 		
 		return(oNew);
 	}

@@ -8,6 +8,7 @@ package org.ost.main;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 import javax.swing.DefaultComboBoxModel;
@@ -56,6 +57,10 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		initComponents();
 
 		if (pc == null) {
+			gearTabPanel.remove(gearPanel);
+			gearTabPanel.remove(splitBarPanel);
+
+			// these not needed I imagine
 			gearScrollPane.setEnabled(false);
 			gearTree.setEnabled(false);
 			gearNewAddButton.setEnabled(false);
@@ -72,10 +77,11 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		//		int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
 		//		setLocation(windowX, windowY);
 		//		setSize(windowSize.width - 2, windowSize.height - 2);
-
 		//		setSize(370,275);
-		pack();
+		//pack();
+
 		setLocationRelativeTo(parent);
+		setSize(720, 480);
 
 	}
 
@@ -108,13 +114,15 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		stacksAdjustPanel = new javax.swing.JPanel();
 		stacksLabel = new javax.swing.JLabel();
 		stacksAdjustSpinner = new javax.swing.JSpinner();
-		jPanel3 = new javax.swing.JPanel();
-		jPanel5 = new javax.swing.JPanel();
+		equipGearButton = new javax.swing.JButton();
+		removeGearButton = new javax.swing.JButton();
+		splitBarPanel = new javax.swing.JPanel();
 		gearNewAddButton = new javax.swing.JButton();
 		gearRemoveItButton = new javax.swing.JButton();
 		gearBuyPanel = new javax.swing.JPanel();
 		gearButtonPanel = new javax.swing.JPanel();
 		newGearBuyButton = new javax.swing.JButton();
+		copyBuyGearButton = new javax.swing.JButton();
 		editBuyGearButton = new javax.swing.JButton();
 		deleteBuyGearButton = new javax.swing.JButton();
 		gearBuyScrollPane = new javax.swing.JScrollPane();
@@ -141,7 +149,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		doneButton = new javax.swing.JButton();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-		setTitle("Class");
+		setTitle("Gear");
 		addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosed(java.awt.event.WindowEvent evt) {
 				formWindowClosed(evt);
@@ -181,7 +189,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		adjustButtonPanel.setBorder(javax.swing.BorderFactory
 				.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 		adjustButtonPanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.LEFT, 1, 1));
+				java.awt.FlowLayout.LEFT, 0, 0));
 
 		chargesAdjustPanel.setBorder(new javax.swing.border.LineBorder(
 				new java.awt.Color(0, 0, 0), 1, true));
@@ -230,7 +238,26 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		stacksAdjustPanel.add(stacksAdjustSpinner);
 
 		adjustButtonPanel.add(stacksAdjustPanel);
-		adjustButtonPanel.add(jPanel3);
+
+		equipGearButton.setBackground(new java.awt.Color(204, 204, 204));
+		equipGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		equipGearButton.setText("equip");
+		equipGearButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				equipGearButtonActionPerformed(evt);
+			}
+		});
+		adjustButtonPanel.add(equipGearButton);
+
+		removeGearButton.setBackground(new java.awt.Color(204, 204, 204));
+		removeGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		removeGearButton.setText("remove");
+		removeGearButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				removeGearButtonActionPerformed(evt);
+			}
+		});
+		adjustButtonPanel.add(removeGearButton);
 
 		gearPanel.add(adjustButtonPanel, java.awt.BorderLayout.PAGE_END);
 
@@ -242,10 +269,10 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		gridBagConstraints.weighty = 1.0;
 		gearTabPanel.add(gearPanel, gridBagConstraints);
 
-		jPanel5.setBackground(new java.awt.Color(153, 153, 153));
-		jPanel5.setBorder(javax.swing.BorderFactory
+		splitBarPanel.setBackground(new java.awt.Color(153, 153, 153));
+		splitBarPanel.setBorder(javax.swing.BorderFactory
 				.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-		jPanel5.setLayout(new java.awt.GridBagLayout());
+		splitBarPanel.setLayout(new java.awt.GridBagLayout());
 
 		gearNewAddButton.setBackground(new java.awt.Color(204, 204, 204));
 		gearNewAddButton.setFont(new java.awt.Font("Segoe UI", 0, 12));
@@ -262,7 +289,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 				gearNewAddButtonActionPerformed(evt);
 			}
 		});
-		jPanel5.add(gearNewAddButton, new java.awt.GridBagConstraints());
+		splitBarPanel.add(gearNewAddButton, new java.awt.GridBagConstraints());
 
 		gearRemoveItButton.setBackground(new java.awt.Color(204, 204, 204));
 		gearRemoveItButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -281,19 +308,19 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 1;
-		jPanel5.add(gearRemoveItButton, gridBagConstraints);
+		splitBarPanel.add(gearRemoveItButton, gridBagConstraints);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridheight = java.awt.GridBagConstraints.REMAINDER;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-		gearTabPanel.add(jPanel5, gridBagConstraints);
+		gearTabPanel.add(splitBarPanel, gridBagConstraints);
 
 		gearBuyPanel.setLayout(new java.awt.BorderLayout());
 
 		gearButtonPanel.setBorder(javax.swing.BorderFactory
 				.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 		gearButtonPanel.setLayout(new java.awt.FlowLayout(
-				java.awt.FlowLayout.RIGHT, 1, 1));
+				java.awt.FlowLayout.RIGHT, 0, 0));
 
 		newGearBuyButton.setBackground(new java.awt.Color(204, 204, 204));
 		newGearBuyButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -305,6 +332,19 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 			}
 		});
 		gearButtonPanel.add(newGearBuyButton);
+
+		copyBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
+		copyBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		copyBuyGearButton.setText("copy");
+		copyBuyGearButton
+				.setToolTipText("Select a piece of equipment and click here to make changes to it.");
+		copyBuyGearButton
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						copyBuyGearButtonActionPerformed(evt);
+					}
+				});
+		gearButtonPanel.add(copyBuyGearButton);
 
 		editBuyGearButton.setBackground(new java.awt.Color(204, 204, 204));
 		editBuyGearButton.setFont(new java.awt.Font("Segoe UI", 0, 10));
@@ -383,8 +423,50 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	}// </editor-fold>
 	//GEN-END:initComponents
 
+	private void copyBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		if (currentGearNew != null)
+			doNewItem(currentGearNew.clone());
+
+	}
+
+	private void equipGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		TreePath[] paths = gearTree.getSelectionPaths();
+		if (paths != null) {
+			if ((paths.length > 1 && SimpleDialog.AskYN(gearTree,
+					"Are you sure you want to equip ALL selected?"))
+					|| (paths.length == 1)) {
+				for (int i = 0; i < paths.length; i++) {
+					DefaultMutableTreeNode oNode = (DefaultMutableTreeNode) paths[i]
+							.getLastPathComponent();
+					if (oNode != null
+							&& Utils.isEquipment(oNode.getUserObject())) {
+						EquipmentClass oE = (EquipmentClass) oNode
+								.getUserObject();
+						if (oE != null && !oE.isEquipped()) {
+							oE.setEquipped(true);
+							ost.encounterFrame.removeNode(gearTree,
+									(DefaultMutableTreeNode) oNode.getParent(),
+									oNode);
+							DefaultMutableTreeNode oNewNode = new DefaultMutableTreeNode(
+									oE);
+							DefaultMutableTreeNode oMyNode = getNodeByGearType(oE);
+							gearTreeModel.insertNodeInto(oNewNode, oMyNode,
+									oMyNode.getChildCount());
+							Utils.expandPathOnNode(gearTree, oMyNode);
+							gearTree.repaint();
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	private void removeGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		gearRemoveItButtonActionPerformed(null);
+	}
+
 	private void editBuyGearButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		if (currentGearNew != null) {
 			Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(
 					parent, true, ost, currentGearNew);
@@ -397,14 +479,18 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private void newGearBuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		EquipmentClass oNew = new EquipmentClass("NewItem",
 				"New item description.");
+		doNewItem(oNew);
+	}
 
+	/**
+	 * show edit menu for new or copied item.
+	 * @param oNew
+	 */
+	private void doNewItem(EquipmentClass oNew) {
 		Option_AskFor_Equipment dDialog = new Option_AskFor_Equipment(parent,
 				true, ost, oNew);
 		dDialog.setVisible(true);
 
-		//TODO do something with this later
-		//deal with armor/weapons eventually
-		//		if (!editMode) {
 		ost.equipmentList.add(oNew);
 		DefaultMutableTreeNode oNewNode = new DefaultMutableTreeNode(oNew);
 		DefaultMutableTreeNode oMyNode = getNodeHomeByGearType(oNew);
@@ -412,58 +498,10 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 				oMyNode.getChildCount());
 		Utils.expandPathOnNode(gearBuyTree, oMyNode);
 		gearBuyTree.repaint();
-		//		} else {
-		//			gearBuyTreeModel.nodeChanged(gearNewCurrentNode);
-		//			gearBuyTree.repaint();
-		//		}
-
 	}
 
-	//	private void deleteBuyGearButtonActionPerformed(
-	//			java.awt.event.ActionEvent evt) {
-	//		// TODO add your handling code here:
-	//		TreePath[] paths = gearBuyTree.getSelectionPaths();
-	//		if (paths != null) {
-	//			if ((paths.length > 1 && SimpleDialog.AskYN(deleteBuyGearButton,
-	//					"Are you sure you want to delete ALL selected?"))
-	//					|| (paths.length == 1)) {
-	//				for (int i = 0; i < paths.length; i++) {
-	//					DefaultMutableTreeNode oNode = (DefaultMutableTreeNode) paths[i]
-	//							.getLastPathComponent();
-	//					if (oNode != null
-	//							&& Utils.isEquipment(oNode.getUserObject())) {
-	//						EquipmentClass oE = (EquipmentClass) oNode
-	//								.getUserObject();
-	//						ost.equipmentList.getContent().remove(oE);
-	//						ost.encounterFrame.removeNode(gearBuyTree,
-	//								(DefaultMutableTreeNode) oNode.getParent(),
-	//								oNode);
-	//					}
-	//				}
-	//			}
-	//		}
-	//	}
-	//
-	//	private void newGearBuyButtonActionPerformed(java.awt.event.ActionEvent evt) {
-	//		// set default values
-	//		gearNewNameTextField.setText("Name");
-	//		gearNewDescriptionTextField.setText("Enter description");
-	//		gearNewEquipmentRadioButton.setSelected(true);
-	//		gearNewMagicCheckBox.setSelected(false);
-	//		gearNewChargedCheckBox.setSelected(false);
-	//		gearNewChargesMaxSpinner.setValue(new Integer(0));
-	//		gearNewStackableCheckBox.setSelected(false);
-	//		gearNewWeightSpinner.setValue(new Float(0.0));
-	//
-	//		gearNewDoneButton.setText("done"); // 
-	//		//		display dialog at current mouse
-	//		gearNewDialog.setLocationRelativeTo(null); // mid-screen
-	//		gearNewDialog.setVisible(true);
-	//	}
-	//
 	private void gearRemoveItButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		TreePath[] paths = gearTree.getSelectionPaths();
 		if (paths != null) {
 			if ((paths.length > 1 && SimpleDialog.AskYN(gearTree,
@@ -501,7 +539,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 							&& Utils.isEquipment(oNode.getUserObject())) {
 						EquipmentClass oE = (EquipmentClass) oNode
 								.getUserObject();
-						EquipmentClass oNew = oE.getCopy();
+						EquipmentClass oNew = oE.clone();
 						pc.getGear().add(oNew);
 						//ask for how many on stackable item
 						int nCount = -1;
@@ -746,7 +784,7 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 
 		if (oE.isEquipped())
 			myRootNode = nodeWorn;
-		
+
 		return (myRootNode);
 	}
 
@@ -871,9 +909,11 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private javax.swing.JPanel chargesAdjustPanel;
 	private javax.swing.JSpinner chargesAdjustSpinner;
 	private javax.swing.JLabel chargesLabel;
+	private javax.swing.JButton copyBuyGearButton;
 	private javax.swing.JButton deleteBuyGearButton;
 	private javax.swing.JButton doneButton;
 	private javax.swing.JButton editBuyGearButton;
+	private javax.swing.JButton equipGearButton;
 	private javax.swing.JPanel gearButtonPanel;
 	private javax.swing.JPanel gearBuyPanel;
 	private javax.swing.JScrollPane gearBuyScrollPane;
@@ -884,11 +924,11 @@ public class Option_AskFor_Gear extends javax.swing.JDialog {
 	private javax.swing.JScrollPane gearScrollPane;
 	private javax.swing.JPanel gearTabPanel;
 	private javax.swing.JTree gearTree;
-	private javax.swing.JPanel jPanel3;
-	private javax.swing.JPanel jPanel5;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JButton newGearBuyButton;
+	private javax.swing.JButton removeGearButton;
+	private javax.swing.JPanel splitBarPanel;
 	private javax.swing.JPanel stacksAdjustPanel;
 	private javax.swing.JSpinner stacksAdjustSpinner;
 	private javax.swing.JLabel stacksLabel;

@@ -1323,7 +1323,6 @@ public class PlayerClass implements Serializable, Comparable {
 					saves.set(i,saves.get(i)+eA.getSaveAdjustments().get(i));
 			}
 		
-		//TODO - racial con bonuses iron/Resistance
 		int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
 		AbilityStatClass aStat = 
 				ost.abilityStatList.getContent().get(nConScore);
@@ -2286,7 +2285,30 @@ public class PlayerClass implements Serializable, Comparable {
 		if (nClassMoveBase > moveBase)
 			moveBase = nClassMoveBase;
 		
-		//TODO need to adjust for encumbrance/armor worn/etc
+		int bulkType = getArmorBulkType();
+		
+		switch (bulkType) {
+		case ARMOR_TYPE_NONE:
+			break;
+			
+		case ARMOR_TYPE_NONBULKY:
+			break;
+			
+		case ARMOR_TYPE_FAIRLYBULKY:
+			moveBase -= (moveBase/4);
+			break;
+			
+		case ARMOR_TYPE_BULKY:
+			moveBase -= (moveBase/2);
+			break;
+			
+		case ARMOR_TYPE_VERYBULKY:
+			moveBase = (moveBase/4);
+			break;
+
+		default:
+			break;
+		}
 		
 		return moveBase;
 	}
@@ -2367,4 +2389,50 @@ public class PlayerClass implements Serializable, Comparable {
 		return ac;
 	}
 
-}
+	/**
+	 * return bulk type of most bulky item worn (armor)
+	 * 
+	 * @return
+	 */
+	public int getArmorBulkType() {
+		int bulk = 0;
+
+		for(EquipmentClass oE: getGear()) {
+			if (oE.isEquipped())
+				if (oE.getType() == GEAR_TYPE_ARMOR) {
+					if (oE.getArmorBulkType()>bulk)
+						bulk = oE.getArmorBulkType();
+				}
+		}
+		return bulk;
+	}
+
+	/**
+	 * return weapon struct in slot whichWeapon
+	 * 
+	 * @param whichWeapon
+	 * @return
+	 */
+	public EquipmentClass getWeapon(int whichWeapon) {
+		EquipmentClass oWeapon = null;
+		ArrayList<EquipmentClass> aList = getAllWeapons();
+		if ((whichWeapon) <= (aList.size()-1)) {
+			oWeapon =  aList.get(whichWeapon);
+		}
+		return oWeapon;
+	}
+	/**
+	 * return all equipped weapons in array
+	 * 
+	 * @return
+	 */
+	public ArrayList<EquipmentClass> getAllWeapons() {
+		ArrayList<EquipmentClass> aList = new ArrayList<>();
+		for(EquipmentClass oE: getGear()) {
+			if (oE.isEquipped() && 
+					oE.getType() == GEAR_TYPE_WEAPON)
+				aList.add(oE);
+		}
+		return(aList);
+	}
+} // end PlayerClass
