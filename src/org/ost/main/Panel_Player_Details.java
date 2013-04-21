@@ -324,7 +324,7 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 																pcAlignmentLabel)
 														.addComponent(
 																pcTHACOLabel))
-										.addContainerGap(154, Short.MAX_VALUE)));
+										.addContainerGap(144, Short.MAX_VALUE)));
 		detailsPanelLayout
 				.setVerticalGroup(detailsPanelLayout
 						.createParallelGroup(
@@ -396,7 +396,9 @@ public class Panel_Player_Details extends javax.swing.JPanel {
 														.addComponent(
 																pcTHACOLabel)
 														.addComponent(jLabel47))
-										.addContainerGap(34, Short.MAX_VALUE)));
+										.addContainerGap(
+												javax.swing.GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
 
 		add(detailsPanel, java.awt.BorderLayout.CENTER);
 	}// </editor-fold>

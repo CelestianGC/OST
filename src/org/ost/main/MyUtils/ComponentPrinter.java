@@ -4,6 +4,8 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 import java.awt.print.*;
+
+import javax.print.attribute.standard.JobName;
 import javax.swing.*;
 
 /**
@@ -35,8 +37,11 @@ implements Printable
 	// *****************************************************************************
 
 	private Component  component;                              // the component to print
-	private PageFormat format;
-	private String jobName;
+	public PageFormat format;
+	public String jobName;
+	public PrinterJob	printJob;
+	public Book book;
+	public Paper paper;
 	
 	// *****************************************************************************
 	// INSTANCE CREATE/DELETE
@@ -52,28 +57,29 @@ implements Printable
 	// *****************************************************************************
 
 	public void print() throws PrinterException {
-		PrinterJob	printJob=PrinterJob.getPrinterJob();
+		printJob=PrinterJob.getPrinterJob();
 
 		printJob.setJobName(jobName);
 
 		format = printJob.getPageFormat(null);
-		Paper paper = format.getPaper();
-//		paper.setImageableArea(0.0, 0.0, 
-//				format.getPaper().getWidth(), 
-//				format.getPaper().getHeight());
-//		paper.setImageableArea(0.0, 0.0, 
-//				(8)*72, 
-//				(11)*72);
+		paper = format.getPaper();
+
+//*		paper.setImageableArea(0.0, 0.0, 
+//*				format.getPaper().getWidth(), 
+//*				format.getPaper().getHeight());
+//*		paper.setImageableArea(0.0, 0.0, 
+//*				(8)*72, 
+//*				(11)*72);
 		paper.setSize(8.5 * 72, 11 * 72);
 		paper.setImageableArea(0.0 * 72, 0.0 * 72, 7.5 * 72, 10.5 * 72);	
 		format.setPaper(paper);
 		
-		Book book = new Book();//java.awt.print.Book
+		book = new Book();//java.awt.print.Book
 		book.append(this, format);
 		printJob.setPageable(book);
-		//printJob.setPrintable(this);
+		//*printJob.setPrintable(this);
 		
-		if(printJob.pageDialog(format) != null)
+		//if(printJob.pageDialog(format) != null)
 			if(printJob.printDialog()) {
 				printJob.print();
 			}
@@ -103,6 +109,10 @@ implements Printable
 		component.paint(g2d);
 		mgr.setDoubleBufferingEnabled(true);  // only for swing components
 		return PAGE_EXISTS;
+	}
+
+	public void printComponent() throws PrinterException {
+		new ComponentPrinter(component,jobName).print();
 	}
 
 	// *****************************************************************************

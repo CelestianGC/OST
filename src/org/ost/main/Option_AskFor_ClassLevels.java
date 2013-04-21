@@ -25,6 +25,7 @@ import static org.ost.main.MyClasses.MyStatics.*;
 import org.ost.main.MyClasses.CharacterClass;
 import org.ost.main.MyClasses.CharacterClass.LevelClass;
 import org.ost.main.MyClasses.ExtraAbilitiesClass;
+import org.ost.main.MyClasses.VerifyIntegerPositive;
 import org.ost.main.MyUtils.MyParse;
 import org.ost.main.MyUtils.SimpleDialog;
 
@@ -1068,55 +1069,6 @@ public class Option_AskFor_ClassLevels extends javax.swing.JDialog {
 
 	}
 
-	/**
-	 * 
-	 * @author Celestian
-	 *
-	 */
-	class VerifyIntegerPositive extends InputVerifier implements ActionListener {
-
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-			JComponent source = (JComponent) arg0.getSource();
-			shouldYieldFocus(source); //ignore return value
-		}
-
-		@Override
-		public boolean shouldYieldFocus(JComponent input) {
-			boolean inputOK = verify(input);
-			if (inputOK) {
-				return true;
-			} else {
-				Toolkit.getDefaultToolkit().beep();
-				return false;
-			}
-		}
-
-		@Override
-		public boolean verify(JComponent testThis) {
-			boolean verified = false;
-			JTextComponent textComponent = (JTextComponent) testThis;
-			NumberFormat nF = NumberFormat.getIntegerInstance();
-			Number n = null;
-
-			try {
-				n = nF.parse(textComponent.getText());
-			} catch (ParseException e1) {
-				verified = false;
-				//e1.printStackTrace();
-			}
-
-			try {
-				if (n.intValue() >= 0)
-					verified = true;
-			} catch (Exception e) {
-				verified = false;
-			}
-
-			return verified;
-		}
-
-	}
 
 	//GEN-BEGIN:variables
 	// Variables declaration - do not modify

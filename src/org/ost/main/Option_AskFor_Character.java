@@ -601,14 +601,12 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	//GEN-END:initComponents
 
 	private void equipmentButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		Option_AskFor_Gear dDialog = new Option_AskFor_Gear(parent, true, ost,
 				currentCharacter);
 		dDialog.setVisible(true);
 	}
 
 	private void expAddButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		String addExp = SimpleDialog.showQuestion(this,
 				"Enter value to add/remove.", "Modify Experince", "0");
 		int nEXP = 0;
@@ -662,7 +660,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 				int nDiffLevel = nNewLevel - nOldLevel;
 				if (nDiffLevel != 0) { // re-roll health?
 					if (nDiffLevel > 0) {
-						// TODO levelup();
 						ost.dprint(pC.getName() + " is leveling up! "
 								+ nDiffLevel + "\n");
 
@@ -670,7 +667,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 					} else {
 						ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
 								+ "\n");
-						// TODO delevel();
 						pC.deLevel(ost);
 					}
 
@@ -683,7 +679,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		ArrayList<String> cList = new ArrayList<String>();
 		for (PlayerClass.PCClass pc : currentCharacter.getMyClass())
 			cList.add(pc.getClassID());
@@ -717,7 +712,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			levelLabel.setText(currentCharacter.getMyLevelName(ost));
 		}
 		updateFromCurrentValues();
-		//TODO update panels
 		updatePanels();
 	}
 
@@ -736,13 +730,11 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		currentCharacter.getMyRace().setRaceID(aList.get(0).getMyID());
 		currentCharacter.getMyRace().setName(aList.get(0).getName());
 
-		//TODO update panels
 		updatePanels();
 	}
 
 	private void savesAdjustmentButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		Option_AskFor_Saves dDialog = new Option_AskFor_Saves(parent, true,
 				ost, "Save Adjustments",
 				currentCharacter.getMySaveAdjustments(), null, SAVES,
@@ -751,7 +743,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void savesButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		Option_AskFor_Saves dDialog = new Option_AskFor_Saves(parent, true,
 				ost, "Saves", currentCharacter.getMySaves(), null, SAVES,
 				SAVES_ABBREV);
@@ -759,7 +750,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void abilitiesButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		Option_AskFor_AbilityScores dDialog = new Option_AskFor_AbilityScores(
 				parent, true, ost, "Ability Scores",
 				currentCharacter.getMyAbilityScores(), false);
@@ -789,17 +779,15 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void formWindowClosed(java.awt.event.WindowEvent evt) {
-		// TODO add your handling code here:
 		updateFromCurrentValues();
 	}
 
 	private void updateFromCurrentValues() {
-		//TODO
 		currentCharacter.setName(nameTextField.getText());
 		currentCharacter.setNamePlayer(playerTextField.getText());
 		currentCharacter.setHpMax((int) hpSpinner.getValue());
 		currentCharacter.setHpCurrent((int) currentHPSpinner.getValue());
-		//TODO need to configure this to cope with 3 types of ac
+
 		currentCharacter.getArmorRatings().clear();
 		currentCharacter.getArmorRatings().add(
 				String.format("%d", acSpinner.getValue()));
@@ -819,7 +807,6 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 	}
 
 	private void updatePanels() {
-		//TODO
 		nameTextField.setText(currentCharacter.getName());
 		playerTextField.setText(currentCharacter.getNamePlayer());
 		hpSpinner.setValue(currentCharacter.getHpMax());

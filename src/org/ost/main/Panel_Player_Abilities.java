@@ -6,32 +6,7 @@
 
 package org.ost.main;
 
-import static org.ost.main.MyClasses.MyStatics.ABILITY_CHARISMA;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_COMELINESS;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_CONSTITUTION;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_DEXTERITY;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_INTELLIGENCE;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_STRENGTH;
-import static org.ost.main.MyClasses.MyStatics.ABILITY_WISDOM;
-import static org.ost.main.MyClasses.MyStatics.AC_NAMES;
-import static org.ost.main.MyClasses.MyStatics.AC_NORMAL;
-import static org.ost.main.MyClasses.MyStatics.AC_REAR;
-import static org.ost.main.MyClasses.MyStatics.AC_SHIELDLESS;
-import static org.ost.main.MyClasses.MyStatics.ALIGNMENTS;
-import static org.ost.main.MyClasses.MyStatics.DEFAULT_FONT;
-import static org.ost.main.MyClasses.MyStatics.MAX_CLERIC_SPELL_LEVEL;
-import static org.ost.main.MyClasses.MyStatics.MAX_MAGE_SPELL_LEVEL;
-import static org.ost.main.MyClasses.MyStatics.SAVES;
-import static org.ost.main.MyClasses.MyStatics.SAVE_BREATH;
-import static org.ost.main.MyClasses.MyStatics.SAVE_DEATH;
-import static org.ost.main.MyClasses.MyStatics.SAVE_POLY;
-import static org.ost.main.MyClasses.MyStatics.SAVE_ROD;
-import static org.ost.main.MyClasses.MyStatics.SAVE_SPELL;
-import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_100;
-import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_1_50;
-import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_51_75;
-import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_76_90;
-import static org.ost.main.MyClasses.MyStatics.STRENGTH_PERCENT_91_99;
+import static org.ost.main.MyClasses.MyStatics.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -43,6 +18,12 @@ import javax.swing.JPanel;
 
 import org.ost.main.MyClasses.AbilityScoreClass;
 import org.ost.main.MyClasses.AbilityStatClass;
+import org.ost.main.MyClasses.AbilityStatClass.Charisma;
+import org.ost.main.MyClasses.AbilityStatClass.Consitution;
+import org.ost.main.MyClasses.AbilityStatClass.Dexterity;
+import org.ost.main.MyClasses.AbilityStatClass.Intelligence;
+import org.ost.main.MyClasses.AbilityStatClass.Strength;
+import org.ost.main.MyClasses.AbilityStatClass.Wisdom;
 import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.SkillsClass;
@@ -68,249 +49,403 @@ public class Panel_Player_Abilities extends javax.swing.JPanel {
 		// added this incase we updated panel
 		pc = oPlayer;
 
-		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
+//		RaceClass race = oPlayer.getMyRace().getRaceByID(ost.raceList);
 		// portrait
 
-		// abilties
-		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
-				.getAllAbilityScoreAdjustments(ost);
+		//CHARISMA
+		Charisma oCharisma = pc.getCharisma(ost);
+		pcCharismaLabel.setText(
+				String.format("%d", pc.getAbilityScore(ABILITY_CHARISMA, ost)));
+		pcLoyaltyLabel.setText(String.format("%d%%",
+				oCharisma.loyaltyBase));
+		pcMaxHenchmenLabel.setText(String.format("%d",
+				oCharisma.maxNumberHenchmen));
+		pcReactionAdjCharismaLabel.setText(String.format("%d%%",
+				oCharisma.reactionAdjustment));
 
-		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
-			AbilityScoreClass aJ = abilityScoresAdj.get(i);
-			AbilityScoreClass aS = pc.getMyAbilityScores().get(i);
-			int abilityTotal = aS.getScore() + aJ.getScore();
-			int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
-
-			if (abilityTotal >= 0) {
-				//				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
-				//						abilityTotal);
-				AbilityStatClass aStat = ost.abilityStatList
-						.getStat(abilityTotal);
-				switch (i) {
-				case ABILITY_CHARISMA:
-					pcCharismaLabel.setText(String.format("%d", abilityTotal));
-					pcLoyaltyLabel.setText(String.format("%d%%",
-							aStat.charisma.loyaltyBase));
-					pcMaxHenchmenLabel.setText(String.format("%d",
-							aStat.charisma.maxNumberHenchmen));
-					pcReactionAdjCharismaLabel.setText(String.format("%d%%",
-							aStat.charisma.reactionAdjustment));
-					break;
-				case ABILITY_COMELINESS:
-
-					break;
-				case ABILITY_CONSTITUTION:
-					pcConstitutionLabel.setText(String.format("%d",
-							abilityTotal));
-
-					//test for fighter/barb features in class and show just that
-					int nConBonus = aStat.consitution.hitpointAdjustment;
-					if (pc.hasBarbarianCon(ost))
-						nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-					if (pc.hasFighterCon(ost))
-						nConBonus = aStat.consitution.hitpointAdjustmentFighter;
-					pcHPAdjLabel.setText(String.format("%d", nConBonus));
-
-					pcResurrectionSurvivalLabel.setText(String.format("%d%%",
-							aStat.consitution.resurrectionSurvival));
-					pcSystemShockLabel.setText(String.format("%d%%",
-							aStat.consitution.systemShock));
-					break;
-				case ABILITY_DEXTERITY:
-					pcDexterityLabel.setText(String.format("%d", abilityTotal));
-					pcMissileAdjLabel.setText(String.format("%d",
-							aStat.dexterity.attackAdjustment));
-					pcReactionAdjLabel.setText(String.format("%d",
-							aStat.dexterity.reactionAdjustment));
-					//sort out if they get barb bonuses
-					int nDexBonus = aStat.dexterity.defensiveAdjustment;
-					if (pc.hasBarbarianDex(ost))
-						nDexBonus = aStat.dexterity.defensiveAdjustmentBarbarian;
-					pcDefenseAdjLabel.setText(String.format("%d", nDexBonus));
-
-					break;
-				case ABILITY_INTELLIGENCE:
-					pcIntelligenceLabel.setText(String.format("%d",
-							abilityTotal));
-					//bonus arcane spells
-					String magicSpells = "";
-					if (pc.isCasterArcane(ost))
-						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
-							if (aStat.intelligence.bonusSpells[ii] > 0) {
-								magicSpells = magicSpells
-										+ String.format(
-												"%sL%dX%d",
-												magicSpells.length() > 0 ? ", "
-														: "",
-												ii + 1,
-												aStat.intelligence.bonusSpells[ii]);
-							}
-						}
-					pcBonusArcaneSpellsLabel.setText(String.format("%s",
-							magicSpells));
-					pcBonusArcaneSpellsLabel.setToolTipText(pcBonusArcaneLabel
-							.getToolTipText());
-					if (magicSpells.length() <= 0)
-						pcBonusArcaneLabel.setText("");
-					else
-						pcBonusArcaneLabel.setText("Bonus");
-
-					pcKnowSpellLabel.setText(String.format("%d%%",
-							aStat.intelligence.knowSpell));
-					pcLanguagesLabel.setText(String.format("%d",
-							aStat.intelligence.languages));
-					pcMaxSpellsLabel.setText(String.format("%d",
-							aStat.intelligence.maxSpells));
-					pcMinSpellsLabel.setText(String.format("%d",
-							aStat.intelligence.minSpells));
-					break;
-				case ABILITY_STRENGTH: {
-					pcStrengthLabel.setText(String.format("%d", abilityTotal));
-					boolean hasPercentileStrength = pc
-							.hasPercentileStrength(ost);
-					int nBBars, nHit, nDmg, nOpen, nNumDice, nSizeDice, nWeight = 0;
-					nBBars = aStat.strength.bendBars;
-					nHit = aStat.strength.hitProbability;
-					nDmg = aStat.strength.damageAdjustment;
-					nOpen = aStat.strength.minOpenDoor;
-					nNumDice = aStat.strength.numDiceOpenDoor;
-					nSizeDice = aStat.strength.sizeDiceOpenDoor;
-					nWeight = aStat.strength.weightAllowance;
-
-					pcPercentileStrLabel.setText("");
-
-					//sort out percentile strength if can have
-					if (hasPercentileStrength) {
-						if (abilityPercentTotal > 0 && abilityTotal == 18)
-							pcPercentileStrLabel.setText(String.format("%d%%",
-									abilityPercentTotal));
-						else
-							pcPercentileStrLabel.setText("");
-						if (abilityPercentTotal <= 0) {
-							// 18/0 is 18 so do not need to assign here
-						} else if (abilityPercentTotal <= 50) {
-							nBBars = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).bendBars;
-							nHit = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).hitProbability;
-							nDmg = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).damageAdjustment;
-							nOpen = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).minOpenDoor;
-							nNumDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).numDiceOpenDoor;
-							nSizeDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).sizeDiceOpenDoor;
-							nWeight = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_1_50).weightAllowance;
-						} else if (abilityPercentTotal <= 75) {
-							nBBars = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).bendBars;
-							nHit = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).hitProbability;
-							nDmg = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).damageAdjustment;
-							nOpen = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).minOpenDoor;
-							nNumDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).numDiceOpenDoor;
-							nSizeDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).sizeDiceOpenDoor;
-							nWeight = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_51_75).weightAllowance;
-						} else if (abilityPercentTotal <= 90) {
-							nBBars = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).bendBars;
-							nHit = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).hitProbability;
-							nDmg = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).damageAdjustment;
-							nOpen = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).minOpenDoor;
-							nNumDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).numDiceOpenDoor;
-							nSizeDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).sizeDiceOpenDoor;
-							nWeight = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_76_90).weightAllowance;
-						} else if (abilityPercentTotal <= 99) {
-							nBBars = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).bendBars;
-							nHit = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).hitProbability;
-							nDmg = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).damageAdjustment;
-							nOpen = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).minOpenDoor;
-							nNumDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).numDiceOpenDoor;
-							nSizeDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).sizeDiceOpenDoor;
-							nWeight = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_91_99).weightAllowance;
-						} else if (abilityPercentTotal >= 100) {
-							nBBars = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).bendBars;
-							nHit = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).hitProbability;
-							nDmg = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).damageAdjustment;
-							nOpen = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).minOpenDoor;
-							nNumDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).numDiceOpenDoor;
-							nSizeDice = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).sizeDiceOpenDoor;
-							nWeight = aStat.strength.percentile
-									.get(STRENGTH_PERCENT_100).weightAllowance;
-						}
-					}
-					pcBendBarsLabel.setText(String.format("%d%%", nBBars));
-					pcHitAdjLabel.setText(String.format("%d", nHit));
-					pcDmgAdjLabel.setText(String.format("%d", nDmg));
-					pcOpenDoorLabel.setText(String.format("1-%d (%dD%d)",
-							nOpen, nNumDice, nSizeDice));
-					pcWeightAllowanceLabel
-							.setText(String.format("%d", nWeight));
+		//INTEL
+		Intelligence oIntelligence = pc.getIntelligence(ost);
+		pcIntelligenceLabel.setText(String.format("%d",
+				pc.getAbilityScore(ABILITY_INTELLIGENCE, ost)));
+		//bonus arcane spells
+		String magicSpells = "";
+		if (pc.isCasterArcane(ost))
+			for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+				if (oIntelligence.bonusSpells[ii] > 0) {
+					magicSpells = magicSpells
+							+ String.format(
+									"%sL%dX%d",
+									magicSpells.length() > 0 ? ", "
+											: "",
+									ii + 1,
+									oIntelligence.bonusSpells[ii]);
 				}
-					break;
-				case ABILITY_WISDOM:
-					pcWisdomLabel.setText(String.format("%d", abilityTotal));
-					//divine spells
-					String clericSpells = "";
-					if (pc.isCasterDivine(ost))
-						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
-							if (aStat.wisdom.bonusSpells[ii] > 0) {
-								clericSpells = clericSpells
-										+ String.format(
-												"%sL%dX%d",
-												clericSpells.length() > 0 ? ", "
-														: "", ii + 1,
-												aStat.wisdom.bonusSpells[ii]);
-							}
-						}
-					pcBonusSpellsDivineLabel.setText(String.format("%s",
-							clericSpells));
-					pcBonusSpellsDivineLabel.setToolTipText(pcBonusDivineLabel
-							.getToolTipText());
-					if (clericSpells.length() <= 0)
-						pcBonusDivineLabel.setText("");
-					else
-						pcBonusDivineLabel.setText("Bonus");
+			}
+		pcBonusArcaneSpellsLabel.setText(String.format("%s",
+				magicSpells));
+		pcBonusArcaneSpellsLabel.setToolTipText(pcBonusArcaneLabel
+				.getToolTipText());
+		if (magicSpells.length() <= 0)
+			pcBonusArcaneLabel.setText("");
+		else
+			pcBonusArcaneLabel.setText("Bonus");
 
-					pcMagicalAdjLabel.setText(String.format("%d",
-							aStat.wisdom.magicalAdjustment));
-					pcSpellFailureLabel.setText(String.format("%d%%",
-							aStat.wisdom.spellFailure));
-					break;
-
-				default:
-					// error
-					ost.dprint("Unknown ability type in Pnale_Player updatePanel()\n");
-					break;
+		pcKnowSpellLabel.setText(String.format("%d%%",
+				oIntelligence.knowSpell));
+		pcLanguagesLabel.setText(String.format("%d",
+				oIntelligence.languages));
+		pcMaxSpellsLabel.setText(String.format("%d",
+				oIntelligence.maxSpells));
+		pcMinSpellsLabel.setText(String.format("%d",
+				oIntelligence.minSpells));
+		
+		//WIS
+		Wisdom oWisdom = pc.getWisdom(ost);
+		pcWisdomLabel.setText(String.format("%d", pc.getAbilityScore(ABILITY_WISDOM, ost)));
+		//divine spells
+		String clericSpells = "";
+		if (pc.isCasterDivine(ost))
+			for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+				if (oWisdom.bonusSpells[ii] > 0) {
+					clericSpells = clericSpells
+							+ String.format(
+									"%sL%dX%d",
+									clericSpells.length() > 0 ? ", "
+											: "", ii + 1,
+											oWisdom.bonusSpells[ii]);
 				}
-			} // else abilityTotal was smaller than 0
-		}
+			}
+		pcBonusSpellsDivineLabel.setText(String.format("%s",
+				clericSpells));
+		pcBonusSpellsDivineLabel.setToolTipText(pcBonusDivineLabel
+				.getToolTipText());
+		if (clericSpells.length() <= 0)
+			pcBonusDivineLabel.setText("");
+		else
+			pcBonusDivineLabel.setText("Bonus");
+
+		pcMagicalAdjLabel.setText(String.format("%d",
+				oWisdom.magicalAdjustment));
+		pcSpellFailureLabel.setText(String.format("%d%%",
+				oWisdom.spellFailure));
+
+		//CON
+		Consitution oCon = pc.getConsitution(ost);
+		pcConstitutionLabel.setText(String.format("%d",
+				pc.getAbilityScore(ABILITY_CONSTITUTION, ost)));
+
+		//test for fighter/barb features in class and show just that
+		int nConBonus = oCon.hitpointAdjustment;
+		if (pc.hasBarbarianCon(ost))
+			nConBonus = oCon.hitpointAdjustmentBarbarian;
+		if (pc.hasFighterCon(ost))
+			nConBonus = oCon.hitpointAdjustmentFighter;
+		pcHPAdjLabel.setText(String.format("%d", nConBonus));
+
+		pcResurrectionSurvivalLabel.setText(String.format("%d%%",
+				oCon.resurrectionSurvival));
+		pcSystemShockLabel.setText(String.format("%d%%",
+				oCon.systemShock));
+		
+		//DEX
+		Dexterity oDex = pc.getDexterity(ost);
+		pcDexterityLabel.setText(String.format("%d", pc.getAbilityScore(ABILITY_DEXTERITY, ost)));
+		pcMissileAdjLabel.setText(String.format("%d",
+				oDex.attackAdjustment));
+		pcReactionAdjLabel.setText(String.format("%d",
+				oDex.reactionAdjustment));
+		//sort out if they get barb bonuses
+		int nDexBonus = oDex.defensiveAdjustment;
+		if (pc.hasBarbarianDex(ost))
+			nDexBonus = oDex.defensiveAdjustmentBarbarian;
+		pcDefenseAdjLabel.setText(String.format("%d", nDexBonus));
+
+		//STRENGTH
+		Strength oStrength = pc.getStrength(ost);
+		int abilityTotal = pc.getAbilityScore(ABILITY_STRENGTH, ost);
+		int abilityPercentTotal = pc.getAbilityPercentileScore(ABILITY_STRENGTH, ost);
+		
+		pc.getAbilityScore(ABILITY_STRENGTH, ost);
+		pcStrengthLabel.setText(String.format("%d", pc.getAbilityScore(ABILITY_STRENGTH, ost)));
+		int nBBars, nHit, nDmg, nOpen, nNumDice, nSizeDice, nWeight = 0;
+
+		nBBars = oStrength.bendBars;
+		nHit = oStrength.hitProbability;
+		nDmg = oStrength.damageAdjustment;
+		nOpen = oStrength.minOpenDoor;
+		nNumDice = oStrength.numDiceOpenDoor;
+		nSizeDice = oStrength.sizeDiceOpenDoor;
+		nWeight = oStrength.weightAllowance;
+
+		pcPercentileStrLabel.setText("");
+		if (pc.hasPercentileStrength(ost) &&
+				abilityPercentTotal > 0 && abilityTotal == 18)
+			pcPercentileStrLabel.setText(String.format("%d%%",
+					abilityPercentTotal));
+
+		pcBendBarsLabel.setText(String.format("%d%%", nBBars));
+		pcHitAdjLabel.setText(String.format("%d", nHit));
+		pcDmgAdjLabel.setText(String.format("%d", nDmg));
+		pcOpenDoorLabel.setText(String.format("1-%d (%dD%d)",
+				nOpen, nNumDice, nSizeDice));
+		pcWeightAllowanceLabel
+				.setText(String.format("%d", nWeight));
+		
+		
+//		// abilties
+//		ArrayList<AbilityScoreClass> abilityScoresAdj = pc
+//				.getAllAbilityScoreAdjustments(ost);
+//
+//		for (int i = 0; i < pc.getMyAbilityScores().size(); i++) {
+//			AbilityScoreClass aJ = abilityScoresAdj.get(i);
+//			AbilityScoreClass aS = pc.getMyAbilityScores().get(i);
+//			int abilityTotal = aS.getScore() + aJ.getScore();
+//			int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+//
+//			if (abilityTotal >= 0) {
+//				//				AbilityStatClass aStat = ost.abilityStatList.getContent().get(
+//				//						abilityTotal);
+//				AbilityStatClass aStat = ost.abilityStatList
+//						.getStat(abilityTotal);
+//				switch (i) {
+//				case ABILITY_CHARISMA:
+//					pcCharismaLabel.setText(String.format("%d", abilityTotal));
+//					pcLoyaltyLabel.setText(String.format("%d%%",
+//							aStat.charisma.loyaltyBase));
+//					pcMaxHenchmenLabel.setText(String.format("%d",
+//							aStat.charisma.maxNumberHenchmen));
+//					pcReactionAdjCharismaLabel.setText(String.format("%d%%",
+//							aStat.charisma.reactionAdjustment));
+//					break;
+//				case ABILITY_COMELINESS:
+//
+//					break;
+//				case ABILITY_CONSTITUTION:
+//					pcConstitutionLabel.setText(String.format("%d",
+//							abilityTotal));
+//
+//					//test for fighter/barb features in class and show just that
+//					int nConBonus = aStat.consitution.hitpointAdjustment;
+//					if (pc.hasBarbarianCon(ost))
+//						nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+//					if (pc.hasFighterCon(ost))
+//						nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+//					pcHPAdjLabel.setText(String.format("%d", nConBonus));
+//
+//					pcResurrectionSurvivalLabel.setText(String.format("%d%%",
+//							aStat.consitution.resurrectionSurvival));
+//					pcSystemShockLabel.setText(String.format("%d%%",
+//							aStat.consitution.systemShock));
+//					break;
+//				case ABILITY_DEXTERITY:
+//					pcDexterityLabel.setText(String.format("%d", abilityTotal));
+//					pcMissileAdjLabel.setText(String.format("%d",
+//							aStat.dexterity.attackAdjustment));
+//					pcReactionAdjLabel.setText(String.format("%d",
+//							aStat.dexterity.reactionAdjustment));
+//					//sort out if they get barb bonuses
+//					int nDexBonus = aStat.dexterity.defensiveAdjustment;
+//					if (pc.hasBarbarianDex(ost))
+//						nDexBonus = aStat.dexterity.defensiveAdjustmentBarbarian;
+//					pcDefenseAdjLabel.setText(String.format("%d", nDexBonus));
+//
+//					break;
+//				case ABILITY_INTELLIGENCE:
+//					pcIntelligenceLabel.setText(String.format("%d",
+//							abilityTotal));
+//					//bonus arcane spells
+//					String magicSpells = "";
+//					if (pc.isCasterArcane(ost))
+//						for (int ii = 0; ii < MAX_MAGE_SPELL_LEVEL; ii++) {
+//							if (aStat.intelligence.bonusSpells[ii] > 0) {
+//								magicSpells = magicSpells
+//										+ String.format(
+//												"%sL%dX%d",
+//												magicSpells.length() > 0 ? ", "
+//														: "",
+//												ii + 1,
+//												aStat.intelligence.bonusSpells[ii]);
+//							}
+//						}
+//					pcBonusArcaneSpellsLabel.setText(String.format("%s",
+//							magicSpells));
+//					pcBonusArcaneSpellsLabel.setToolTipText(pcBonusArcaneLabel
+//							.getToolTipText());
+//					if (magicSpells.length() <= 0)
+//						pcBonusArcaneLabel.setText("");
+//					else
+//						pcBonusArcaneLabel.setText("Bonus");
+//
+//					pcKnowSpellLabel.setText(String.format("%d%%",
+//							aStat.intelligence.knowSpell));
+//					pcLanguagesLabel.setText(String.format("%d",
+//							aStat.intelligence.languages));
+//					pcMaxSpellsLabel.setText(String.format("%d",
+//							aStat.intelligence.maxSpells));
+//					pcMinSpellsLabel.setText(String.format("%d",
+//							aStat.intelligence.minSpells));
+//					break;
+//				case ABILITY_STRENGTH: {
+//					Strength oStrength = pc.getStrength(ost);
+//					pcStrengthLabel.setText(String.format("%d", abilityTotal));
+////					boolean hasPercentileStrength = pc
+////							.hasPercentileStrength(ost);
+//					int nBBars, nHit, nDmg, nOpen, nNumDice, nSizeDice, nWeight = 0;
+////					nBBars = aStat.strength.bendBars;
+////					nHit = aStat.strength.hitProbability;
+////					nDmg = aStat.strength.damageAdjustment;
+////					nOpen = aStat.strength.minOpenDoor;
+////					nNumDice = aStat.strength.numDiceOpenDoor;
+////					nSizeDice = aStat.strength.sizeDiceOpenDoor;
+////					nWeight = aStat.strength.weightAllowance;
+//
+//					nBBars = oStrength.bendBars;
+//					nHit = oStrength.hitProbability;
+//					nDmg = oStrength.damageAdjustment;
+//					nOpen = oStrength.minOpenDoor;
+//					nNumDice = oStrength.numDiceOpenDoor;
+//					nSizeDice = oStrength.sizeDiceOpenDoor;
+//					nWeight = oStrength.weightAllowance;
+//
+//					pcPercentileStrLabel.setText("");
+//					if (pc.hasPercentileStrength(ost) &&
+//							abilityPercentTotal > 0 && abilityTotal == 18)
+//						pcPercentileStrLabel.setText(String.format("%d%%",
+//								abilityPercentTotal));
+//
+////					//sort out percentile strength if can have
+////					if (hasPercentileStrength) {
+////						if (abilityPercentTotal > 0 && abilityTotal == 18)
+////							pcPercentileStrLabel.setText(String.format("%d%%",
+////									abilityPercentTotal));
+////						else
+////							pcPercentileStrLabel.setText("");
+////						if (abilityPercentTotal <= 0) {
+////							// 18/0 is 18 so do not need to assign here
+////						} else if (abilityPercentTotal <= 50) {
+////							nBBars = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).bendBars;
+////							nHit = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).hitProbability;
+////							nDmg = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).damageAdjustment;
+////							nOpen = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).minOpenDoor;
+////							nNumDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).numDiceOpenDoor;
+////							nSizeDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).sizeDiceOpenDoor;
+////							nWeight = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_1_50).weightAllowance;
+////						} else if (abilityPercentTotal <= 75) {
+////							nBBars = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).bendBars;
+////							nHit = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).hitProbability;
+////							nDmg = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).damageAdjustment;
+////							nOpen = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).minOpenDoor;
+////							nNumDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).numDiceOpenDoor;
+////							nSizeDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).sizeDiceOpenDoor;
+////							nWeight = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_51_75).weightAllowance;
+////						} else if (abilityPercentTotal <= 90) {
+////							nBBars = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).bendBars;
+////							nHit = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).hitProbability;
+////							nDmg = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).damageAdjustment;
+////							nOpen = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).minOpenDoor;
+////							nNumDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).numDiceOpenDoor;
+////							nSizeDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).sizeDiceOpenDoor;
+////							nWeight = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_76_90).weightAllowance;
+////						} else if (abilityPercentTotal <= 99) {
+////							nBBars = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).bendBars;
+////							nHit = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).hitProbability;
+////							nDmg = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).damageAdjustment;
+////							nOpen = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).minOpenDoor;
+////							nNumDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).numDiceOpenDoor;
+////							nSizeDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).sizeDiceOpenDoor;
+////							nWeight = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_91_99).weightAllowance;
+////						} else if (abilityPercentTotal >= 100) {
+////							nBBars = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).bendBars;
+////							nHit = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).hitProbability;
+////							nDmg = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).damageAdjustment;
+////							nOpen = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).minOpenDoor;
+////							nNumDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).numDiceOpenDoor;
+////							nSizeDice = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).sizeDiceOpenDoor;
+////							nWeight = aStat.strength.percentile
+////									.get(STRENGTH_PERCENT_100).weightAllowance;
+////						}
+////					}
+//					
+//					pcBendBarsLabel.setText(String.format("%d%%", nBBars));
+//					pcHitAdjLabel.setText(String.format("%d", nHit));
+//					pcDmgAdjLabel.setText(String.format("%d", nDmg));
+//					pcOpenDoorLabel.setText(String.format("1-%d (%dD%d)",
+//							nOpen, nNumDice, nSizeDice));
+//					pcWeightAllowanceLabel
+//							.setText(String.format("%d", nWeight));
+//				}
+//					break;
+//				case ABILITY_WISDOM:
+//					pcWisdomLabel.setText(String.format("%d", abilityTotal));
+//					//divine spells
+//					String clericSpells = "";
+//					if (pc.isCasterDivine(ost))
+//						for (int ii = 0; ii < MAX_CLERIC_SPELL_LEVEL; ii++) {
+//							if (aStat.wisdom.bonusSpells[ii] > 0) {
+//								clericSpells = clericSpells
+//										+ String.format(
+//												"%sL%dX%d",
+//												clericSpells.length() > 0 ? ", "
+//														: "", ii + 1,
+//												aStat.wisdom.bonusSpells[ii]);
+//							}
+//						}
+//					pcBonusSpellsDivineLabel.setText(String.format("%s",
+//							clericSpells));
+//					pcBonusSpellsDivineLabel.setToolTipText(pcBonusDivineLabel
+//							.getToolTipText());
+//					if (clericSpells.length() <= 0)
+//						pcBonusDivineLabel.setText("");
+//					else
+//						pcBonusDivineLabel.setText("Bonus");
+//
+//					pcMagicalAdjLabel.setText(String.format("%d",
+//							aStat.wisdom.magicalAdjustment));
+//					pcSpellFailureLabel.setText(String.format("%d%%",
+//							aStat.wisdom.spellFailure));
+//					break;
+//
+//				default:
+//					// error
+//					ost.dprint("Unknown ability type in Pnale_Player updatePanel()\n");
+//					break;
+//				}
+//			} // else abilityTotal was smaller than 0
+//		}
 
 		repaint();
 	}

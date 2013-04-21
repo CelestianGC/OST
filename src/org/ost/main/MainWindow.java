@@ -7,6 +7,7 @@
 package org.ost.main;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,12 +18,15 @@ import javax.swing.JOptionPane;
 import org.jdom.Document;
 import org.ost.main.MyClasses.AbilityStatClass;
 import org.ost.main.MyClasses.AlignmentClass;
+import org.ost.main.MyClasses.CharacterClass;
+import org.ost.main.MyClasses.CharacterClassList;
 import org.ost.main.MyClasses.CreatureClass;
 import org.ost.main.MyClasses.EquipmentList;
 import org.ost.main.MyClasses.EquipmentClass;
 import org.ost.main.MyClasses.MyCellRendererList;
 import org.ost.main.MyClasses.NonWeaponProfClass;
 import org.ost.main.MyClasses.PlayerClass;
+import org.ost.main.MyClasses.PlayerList;
 import org.ost.main.MyClasses.StatesClass;
 import org.ost.main.MyUtils.SimpleDialog;
 import org.ost.main.MyUtils.Utils;
@@ -110,6 +114,10 @@ public class MainWindow extends javax.swing.JFrame {
 		mainShowEncounterMenuItem = new javax.swing.JMenuItem();
 		mainShowDMScreenMenuItem = new javax.swing.JMenuItem();
 		jSeparator2 = new javax.swing.JSeparator();
+		jMenu1 = new javax.swing.JMenu();
+		updatePlayersMenuItem = new javax.swing.JMenuItem();
+		updateCharacterClassesMenuItem = new javax.swing.JMenuItem();
+		equipmentUpdateMenuItem = new javax.swing.JMenuItem();
 		aboutMenu = new javax.swing.JMenu();
 		aboutMenuItem = new javax.swing.JMenuItem();
 
@@ -768,9 +776,44 @@ public class MainWindow extends javax.swing.JFrame {
 
 		mainMenuBar.add(optionsMenu);
 
+		jMenu1.setText("Update");
+		jMenu1.setToolTipText("Various tools to update data formats for various items.");
+
+		updatePlayersMenuItem.setText("Players");
+		updatePlayersMenuItem
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						updatePlayersMenuItemActionPerformed(evt);
+					}
+				});
+		jMenu1.add(updatePlayersMenuItem);
+
+		updateCharacterClassesMenuItem.setText("Classes");
+		updateCharacterClassesMenuItem
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						updateCharacterClassesMenuItemActionPerformed(evt);
+					}
+				});
+		jMenu1.add(updateCharacterClassesMenuItem);
+
+		equipmentUpdateMenuItem.setText("Equipment");
+		equipmentUpdateMenuItem
+				.setToolTipText("Update the items/equipment with new data.");
+		equipmentUpdateMenuItem
+				.addActionListener(new java.awt.event.ActionListener() {
+					public void actionPerformed(java.awt.event.ActionEvent evt) {
+						equipmentUpdateMenuItemActionPerformed(evt);
+					}
+				});
+		jMenu1.add(equipmentUpdateMenuItem);
+
+		mainMenuBar.add(jMenu1);
+
 		aboutMenu.setText("Help");
 
 		aboutMenuItem.setText("About");
+		aboutMenuItem.setToolTipText("About OST.");
 		aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				aboutMenuItemActionPerformed(evt);
@@ -785,6 +828,41 @@ public class MainWindow extends javax.swing.JFrame {
 		pack();
 	}// </editor-fold>
 	//GEN-END:initComponents
+
+	private void updatePlayersMenuItemActionPerformed(
+			java.awt.event.ActionEvent evt) {
+		updatePlayers(ost.playerList);
+	}
+
+	private void updateCharacterClassesMenuItemActionPerformed(
+			java.awt.event.ActionEvent evt) {
+		updateCharacterClasses(ost.characterClassList);
+	}
+
+	private void equipmentUpdateMenuItemActionPerformed(ActionEvent evt) {
+		updateEquipmentList(ost.equipmentList);
+
+	}
+
+	/**
+	 * update players to new data/struct format
+	 * 
+	 * @param pList
+	 */
+	public static void updatePlayers(PlayerList pList) {
+		for (PlayerClass oP : pList.getContent())
+			oP = oP.cloneMe();
+	}
+
+	/** 
+	 * update the character classes to new file/data format
+	 * 
+	 * @param cList
+	 */
+	public static void updateCharacterClasses(CharacterClassList cList) {
+		for (CharacterClass oC : cList.getContent())
+			oC = oC.cloneMe();
+	}
 
 	private void stateNameTextFieldKeyReleased(java.awt.event.KeyEvent evt) {
 		updateCurrentStateFields();
@@ -1040,6 +1118,17 @@ public class MainWindow extends javax.swing.JFrame {
 	}
 
 	/**
+	 * clone each equipment class object to make sure it contains all the proper
+	 * values. Typically needed when the class is updated.
+	 * 
+	 * @param eList
+	 */
+	public static void updateEquipmentList(EquipmentList eList) {
+		for (EquipmentClass oE : eList.getContent())
+			oE = oE.clone();
+	}
+
+	/**
 	 * sort StatesClass by name
 	 * 
 	 */
@@ -1067,6 +1156,7 @@ public class MainWindow extends javax.swing.JFrame {
 	private javax.swing.JButton deleteStatesButton;
 	private javax.swing.JPanel detailsPanel;
 	private javax.swing.JButton doneButton;
+	private javax.swing.JMenuItem equipmentUpdateMenuItem;
 	private javax.swing.JMenuItem exitMenuItem;
 	private javax.swing.JMenu fileMenu;
 	private javax.swing.JButton finishedStatesButton;
@@ -1082,6 +1172,7 @@ public class MainWindow extends javax.swing.JFrame {
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel3;
 	private javax.swing.JLabel jLabel4;
+	private javax.swing.JMenu jMenu1;
 	private javax.swing.JPanel jPanel1;
 	private javax.swing.JPanel jPanel10;
 	private javax.swing.JPanel jPanel5;
@@ -1113,6 +1204,8 @@ public class MainWindow extends javax.swing.JFrame {
 	public javax.swing.JList statesJList;
 	private javax.swing.JLabel thacoModeLabel;
 	public javax.swing.JRadioButton thacoModeRadioButton;
+	private javax.swing.JMenuItem updateCharacterClassesMenuItem;
+	private javax.swing.JMenuItem updatePlayersMenuItem;
 	// End of variables declaration//GEN-END:variables
 	private MainClass ost;
 	public DefaultListModel statesListModel;

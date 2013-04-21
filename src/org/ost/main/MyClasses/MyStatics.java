@@ -155,4 +155,15 @@ public class MyStatics {
 		{"CP","SP","EP","GP","PP"};
 	
 	
+	public static final int RANGE_SHORT = 0;
+	public static final int RANGE_MEDIUM = 1;
+	public static final int RANGE_LONG = 2;
+	public static final int RANGE_VERYLONG = 3;
+	public static final int RANGE_OTHER = 4;
+	public static final int MAX_RANGES = 5;
+	public static final String[] RANGE_NAMES = 
+		{"Short","Medium","Long","Very-Long","Other"};
+	public static final String[] RANGE_ABBREVS = 
+		{"S","M","L","VL","O"};
+	
 }

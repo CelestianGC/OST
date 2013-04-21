@@ -18,6 +18,7 @@ import org.ost.main.MyClasses.ExtraAbilitiesClass;
 import org.ost.main.MyClasses.NonWeaponProfClass;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.VerifyDiceText;
+import org.ost.main.MyClasses.VerifyIntegerPositive;
 import org.ost.main.MyClasses.WeaponProfClass;
 import org.ost.main.MyUtils.SimpleDialog;
 
@@ -130,6 +131,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		gearNewWeightLabel = new javax.swing.JLabel();
 		gearNewWeightSpinner = new javax.swing.JSpinner();
 		gearNewStackableCheckBox = new javax.swing.JCheckBox();
+		gearNewNameLabel1 = new javax.swing.JLabel();
+		sourceField = new javax.swing.JTextField();
 		weaponPanel = new javax.swing.JPanel();
 		damageDicePanel = new javax.swing.JPanel();
 		jLabel9 = new javax.swing.JLabel();
@@ -140,6 +143,12 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageMediumTextField = new javax.swing.JTextField();
 		jLabel4 = new javax.swing.JLabel();
 		damageLargeTextField = new javax.swing.JTextField();
+		jLabel10 = new javax.swing.JLabel();
+		rangeShortTextField = new javax.swing.JTextField();
+		jLabel12 = new javax.swing.JLabel();
+		rangeMediumTextField = new javax.swing.JTextField();
+		jLabel11 = new javax.swing.JLabel();
+		rangeLongTextField = new javax.swing.JTextField();
 		weaponTypePanel = new javax.swing.JPanel();
 		weaponTypeLabel = new javax.swing.JLabel();
 		weaponTypeComboBox = new javax.swing.JComboBox();
@@ -340,6 +349,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		gearNewChargedCheckBox.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		gearNewChargedCheckBox.setText("Charged");
 		gearNewChargedCheckBox
+				.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+		gearNewChargedCheckBox
 				.addItemListener(new java.awt.event.ItemListener() {
 					public void itemStateChanged(java.awt.event.ItemEvent evt) {
 						gearNewChargedCheckBoxItemStateChanged(evt);
@@ -402,7 +413,16 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		gearNewStackableCheckBox.setText("Stackable");
 		gearNewStackableCheckBox
 				.setToolTipText("Does this item stack? Arrows stack, iron rations stack.");
+		gearNewStackableCheckBox
+				.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 		weightPanel.add(gearNewStackableCheckBox);
+
+		gearNewNameLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		gearNewNameLabel1.setText("Source");
+		weightPanel.add(gearNewNameLabel1);
+
+		sourceField.setPreferredSize(new java.awt.Dimension(200, 27));
+		weightPanel.add(sourceField);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
@@ -436,18 +456,20 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 
 		jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel1.setText("damage S");
+		jLabel1.setToolTipText("Damage to small");
 		damageDicePanel.add(jLabel1);
 
 		damageSmallTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		damageSmallTextField.setText("jTextField1");
 		damageSmallTextField.setEnabled(false);
 		damageSmallTextField.setInputVerifier(new VerifyDiceText());
-		damageSmallTextField.setMinimumSize(new java.awt.Dimension(92, 22));
-		damageSmallTextField.setPreferredSize(new java.awt.Dimension(92, 22));
+		damageSmallTextField.setMinimumSize(new java.awt.Dimension(80, 22));
+		damageSmallTextField.setPreferredSize(new java.awt.Dimension(60, 22));
 		damageDicePanel.add(damageSmallTextField);
 
 		jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel3.setText("M");
+		jLabel3.setToolTipText("Damage to medium");
 		damageDicePanel.add(jLabel3);
 
 		damageMediumTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
@@ -455,11 +477,12 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageMediumTextField.setEnabled(false);
 		damageMediumTextField.setInputVerifier(new VerifyDiceText());
 		damageMediumTextField.setMinimumSize(new java.awt.Dimension(92, 22));
-		damageMediumTextField.setPreferredSize(new java.awt.Dimension(92, 22));
+		damageMediumTextField.setPreferredSize(new java.awt.Dimension(60, 22));
 		damageDicePanel.add(damageMediumTextField);
 
 		jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12));
 		jLabel4.setText("L");
+		jLabel4.setToolTipText("Damage to Large");
 		damageDicePanel.add(jLabel4);
 
 		damageLargeTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
@@ -467,8 +490,44 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageLargeTextField.setEnabled(false);
 		damageLargeTextField.setInputVerifier(new VerifyDiceText());
 		damageLargeTextField.setMinimumSize(new java.awt.Dimension(92, 22));
-		damageLargeTextField.setPreferredSize(new java.awt.Dimension(92, 22));
+		damageLargeTextField.setPreferredSize(new java.awt.Dimension(60, 22));
 		damageDicePanel.add(damageLargeTextField);
+
+		jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel10.setText("range S");
+		jLabel10.setToolTipText("Short Range");
+		damageDicePanel.add(jLabel10);
+
+		rangeShortTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		rangeShortTextField.setText("jTextField1");
+		rangeShortTextField.setEnabled(false);
+		rangeShortTextField.setInputVerifier(new VerifyIntegerPositive());
+		rangeShortTextField.setPreferredSize(new java.awt.Dimension(40, 22));
+		damageDicePanel.add(rangeShortTextField);
+
+		jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel12.setText("M");
+		jLabel12.setToolTipText("Medium Range");
+		damageDicePanel.add(jLabel12);
+
+		rangeMediumTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		rangeMediumTextField.setText("jTextField1");
+		rangeMediumTextField.setEnabled(false);
+		rangeMediumTextField.setInputVerifier(new VerifyIntegerPositive());
+		rangeMediumTextField.setPreferredSize(new java.awt.Dimension(40, 22));
+		damageDicePanel.add(rangeMediumTextField);
+
+		jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel11.setText("L");
+		jLabel11.setToolTipText("Long Range");
+		damageDicePanel.add(jLabel11);
+
+		rangeLongTextField.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		rangeLongTextField.setText("jTextField1");
+		rangeLongTextField.setEnabled(false);
+		rangeLongTextField.setInputVerifier(new VerifyIntegerPositive());
+		rangeLongTextField.setPreferredSize(new java.awt.Dimension(40, 22));
+		damageDicePanel.add(rangeLongTextField);
 
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
@@ -590,7 +649,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		acBaseSpinner.setEnabled(isSet);
 		armorBulkTypeComboBox.setEnabled(isSet);
 		armorTypeComboBox.setEnabled(isSet);
-		
+
 	}
 
 	private void featuresButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -642,6 +701,9 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		damageMediumTextField.setEnabled(isSet);
 		damageSmallTextField.setEnabled(isSet);
 		speedFactorSpinner.setEnabled(isSet);
+		rangeShortTextField.setEnabled(isSet);
+		rangeMediumTextField.setEnabled(isSet);
+		rangeLongTextField.setEnabled(isSet);
 	}
 
 	private void gearNewDescriptionButtonActionPerformed(
@@ -725,6 +787,14 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		oE.setMagicAdjustmentPrimary((int) magicBonus1Spinner.getValue());
 		oE.setMagicAdjustmentSecondary((int) magicBonus2Spinner.getValue());
 
+		oE.getRange()[RANGE_SHORT] = Integer.parseInt(rangeShortTextField
+				.getText());
+		oE.getRange()[RANGE_MEDIUM] = Integer.parseInt(rangeMediumTextField
+				.getText());
+		oE.getRange()[RANGE_LONG] = Integer.parseInt(rangeLongTextField
+				.getText());
+
+		oE.setSource(sourceField.getText());
 	}
 
 	private void updatePanels() {
@@ -785,6 +855,15 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 
 			magicBonus1Spinner.setValue(oE.getMagicAdjustmentPrimary());
 			magicBonus2Spinner.setValue(oE.getMagicAdjustmentSecondary());
+
+			rangeShortTextField.setText(String.format("%d",
+					oE.getRange()[RANGE_SHORT]));
+			rangeMediumTextField.setText(String.format("%d",
+					oE.getRange()[RANGE_MEDIUM]));
+			rangeLongTextField.setText(String.format("%d",
+					oE.getRange()[RANGE_LONG]));
+
+			sourceField.setText(oE.getSource());
 		}
 
 	}
@@ -814,6 +893,7 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JRadioButton gearNewEquipmentRadioButton;
 	private javax.swing.JCheckBox gearNewMagicCheckBox;
 	private javax.swing.JLabel gearNewNameLabel;
+	private javax.swing.JLabel gearNewNameLabel1;
 	private javax.swing.JTextField gearNewNameTextField;
 	private javax.swing.JRadioButton gearNewShieldRadioButton;
 	private javax.swing.JCheckBox gearNewStackableCheckBox;
@@ -823,6 +903,9 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JSpinner gearNewWeightSpinner;
 	private javax.swing.JPanel gearPanel;
 	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel10;
+	private javax.swing.JLabel jLabel11;
+	private javax.swing.JLabel jLabel12;
 	private javax.swing.JLabel jLabel2;
 	private javax.swing.JLabel jLabel3;
 	private javax.swing.JLabel jLabel4;
@@ -840,6 +923,10 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JPanel magicPanel;
 	private javax.swing.JPanel mainPanel;
 	private javax.swing.JPanel namePanel;
+	private javax.swing.JTextField rangeLongTextField;
+	private javax.swing.JTextField rangeMediumTextField;
+	private javax.swing.JTextField rangeShortTextField;
+	private javax.swing.JTextField sourceField;
 	private javax.swing.JSpinner speedFactorSpinner;
 	private javax.swing.JPanel typePanel;
 	private javax.swing.JPanel valuePanel;

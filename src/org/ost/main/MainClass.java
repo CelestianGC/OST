@@ -431,6 +431,15 @@ public class MainClass implements Serializable {
 		    	System.setProperty("dungeon.dir", settings.getProperty("dir_dungeon"));
 		    }
 		    
+		    if (settings.getProperty("VERSION") == null ||
+		    		!settings.getProperty("VERSION").equalsIgnoreCase(version)) {
+		    		SimpleDialog.showDone("Version difference. Attempting to update data.");
+		    		
+		    		//TODO update all serialized data stored/loaded
+		    		MainWindow.updatePlayers(playerList);
+		    		MainWindow.updateCharacterClasses(characterClassList);
+		    		MainWindow.updateEquipmentList(equipmentList);
+		    }
 		    
 		} catch (IOException e) {
 			//SimpleDialog.showError(e.getLocalizedMessage());
@@ -468,6 +477,9 @@ public class MainClass implements Serializable {
 		settings.setProperty("thacoMode",
 				mainFrame.thacoModeRadioButton.isSelected()?"ENABLED":"DISABLED");
 
+		// version to file for upgrade modes
+		settings.setProperty("VERSION",version);
+		
 		// save previous dungeon load/save directory
 		if (System.getProperty("dungeon.dir")!= null)
 			settings.setProperty("dir_dungeon",System.getProperty("dungeon.dir"));
@@ -475,7 +487,8 @@ public class MainClass implements Serializable {
 			settings.store(new FileOutputStream(settings_file), null);
 		} catch (IOException e) {
 			SimpleDialog.showError(e.getLocalizedMessage());
-		}		
+		}
+		
 	}
 	/**
 	 * 

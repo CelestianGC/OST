@@ -40,6 +40,8 @@ public class EquipmentClass {
 	public String damageSmall; // 1d6+1
 	public String damageMedium;
 	public String damageLarge;
+	public int[] range;
+	public int speedFactor;
 	
 	//TODO ------------ Armors/shield
 	// armor specific
@@ -57,7 +59,8 @@ public class EquipmentClass {
 	public int[] value; 
 	
 	public int experience;
-	public int speedFactor;
+	public String source;
+	
 	//-------------------------------------------------------------
 	
 	public EquipmentClass() {
@@ -77,7 +80,8 @@ public class EquipmentClass {
 				"1d4","1d4",
 				"",0,0,10,
 				0,0,
-				new ArrayList<String>(), new int[MAX_COIN],0,0);
+				new ArrayList<String>(), new int[MAX_COIN],0,0,
+				new int[MAX_RANGES],"");
 	}
 
 	public EquipmentClass(String name, String description, int count, int type,
@@ -88,7 +92,8 @@ public class EquipmentClass {
 			String damageMedium, String damageLarge,
 			String armorType, int armorBulkType, int ac, int acBase,
 			int magicAdjustmentPrimary, int magicAdjustmentSecondary,
-			ArrayList<String> features, int[] value, int exp, int speedFactor) {
+			ArrayList<String> features, int[] value, int exp, int speedFactor,
+			int[] range, String source) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -117,11 +122,41 @@ public class EquipmentClass {
 		this.value = value;
 		this.experience = exp;
 		this.speedFactor = speedFactor;
+		this.range = range;
+		this.source = source;
 		
 		this.setMyID(UUID.randomUUID().toString());
 	}
 
 	
+	/**
+	 * @return the source
+	 */
+	public String getSource() {
+		return source;
+	}
+
+	/**
+	 * @param source the source to set
+	 */
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	/**
+	 * @return the range
+	 */
+	public int[] getRange() {
+		return range;
+	}
+
+	/**
+	 * @param range the range to set
+	 */
+	public void setRange(int[] range) {
+		this.range = range;
+	}
+
 	/**
 	 * @return the speedFactor
 	 */
@@ -368,7 +403,8 @@ public class EquipmentClass {
 	 */
 	public EquipmentClass clone() {
 		EquipmentClass oNew = new EquipmentClass();
-
+		//TODO
+		
 		oNew.name = name;
 		oNew.description = description;
 		oNew.count = count;
@@ -398,6 +434,11 @@ public class EquipmentClass {
 		for(int i=0;i<MAX_COIN;i++)
 			oNew.getValue()[i] = getValue()[i];
 		
+		if (range == null)
+			range = new int[MAX_RANGES];
+		for(int i=0;i<MAX_RANGES;i++)
+			oNew.getRange()[i] = getRange()[i];
+
 		for(String sType : getFeatures())
 			oNew.getFeatures().add(sType);
 		
@@ -405,6 +446,8 @@ public class EquipmentClass {
 		if (getContains()!= null)
 		for (EquipmentClass oS: getContains())
 			oNew.getContains().add(oS.clone());
+		
+		oNew.source = source;
 		
 		return(oNew);
 	}
@@ -551,5 +594,21 @@ public class EquipmentClass {
 		this.weaponType = weaponType;
 	}
 	
+	/**
+	 * is weapon ranged?
+	 * 
+	 * @return
+	 */
+	public boolean isRangedWeapon() {
+		boolean isRanged = false;
+		if (getType() == GEAR_TYPE_WEAPON) {
+		for(Integer i: getRange())
+			if (i>0) {
+				isRanged = true;
+				break;
+			}
+		}
+		return isRanged;
+	}
 
 } // end EquipmentClass

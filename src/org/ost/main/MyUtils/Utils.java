@@ -366,12 +366,9 @@ public class Utils {
 		
 		for (int i = 0; i < attackList.length; i++) {
 			int acNumber = (10 - i);
-			//String.format("AC%d", (acNumber));
-			//attackChartTable.setValueAt(String.format("AC%d", (acNumber)), 0, i);
 			int atkRollNeeded = attackList[i];
 			columnNames[i] = String.format("AC%d", (acNumber));
 			rowData[0][i] = atkRollNeeded;
-			//attackChartTable.setValueAt(atkRollNeeded, 0, i);
 		}
 		
 		attackChartTable = new JTable(rowData,columnNames);

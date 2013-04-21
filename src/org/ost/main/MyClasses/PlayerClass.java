@@ -22,6 +22,12 @@ import org.jdom.Element;
 import org.ost.main.EncounterPlayer;
 import org.ost.main.MainClass;
 import org.ost.main.MainWindow;
+import org.ost.main.MyClasses.AbilityStatClass.Charisma;
+import org.ost.main.MyClasses.AbilityStatClass.Consitution;
+import org.ost.main.MyClasses.AbilityStatClass.Dexterity;
+import org.ost.main.MyClasses.AbilityStatClass.Intelligence;
+import org.ost.main.MyClasses.AbilityStatClass.Strength;
+import org.ost.main.MyClasses.AbilityStatClass.Wisdom;
 import org.ost.main.MyClasses.CharacterClass.LevelClass;
 import org.ost.main.MyUtils.MyRandomClass;
 import org.ost.main.MyUtils.SimpleDialog;
@@ -140,6 +146,84 @@ public class PlayerClass implements Serializable, Comparable {
 		setMyID(UUID.randomUUID().toString());
 	}
 
+	/**
+	 * create clone of this object
+	 * 
+	 * @return
+	 */
+	public PlayerClass cloneMe() {
+		//TODO finish
+		PlayerClass oNew = new PlayerClass();
+		
+		oNew.name = name;
+		oNew.namePlayer = namePlayer;
+		oNew.hpMax = hpMax;
+		oNew.hpCurrent = hpCurrent;
+
+		oNew.armorRatings.clear();
+		for(String s: armorRatings)
+			oNew.armorRatings.add(s);
+		
+		oNew.moveRate = moveRate;
+		oNew.magicResistance = magicResistance;
+		oNew.specialDefense = specialDefense;
+		oNew.specialAttacks = specialAttacks;
+		oNew.alignment = alignment;
+
+		oNew.gear.clear();
+		for(EquipmentClass oG: gear)
+			oNew.gear.add(oG.clone());
+		
+		oNew.pcClass = pcClass;
+		oNew.pcLevel = pcLevel;
+		oNew.notes = notes;
+		oNew.log = log;
+		oNew.saveLast = saveLast;
+		oNew.tag = tag;
+		oNew.initRoll = initRoll;
+		
+		//TODO this should be oNew.states.add(oS.clone()); 
+		oNew.states.clear();
+		for(StatesClass oS: states)
+			oNew.states.add(oS);
+		
+		oNew.fightingNode = fightingNode;
+		oNew.fightingList = fightingList;
+		
+		oNew.myClass.clear();
+		for(PCClass oC: myClass) 
+			oNew.myClass.add(oC.clone());
+		
+		oNew.myRace = myRace.clone();
+
+		oNew.myWeaponProfs.clear();
+		for(String s: myWeaponProfs)
+			oNew.myWeaponProfs.add(s);
+		
+		oNew.myNonWeaponProfs.clear();
+		for(String s: myNonWeaponProfs)
+			oNew.myNonWeaponProfs.add(s);
+		
+		oNew.myAbilityScores.clear();
+		for(AbilityScoreClass oA: myAbilityScores)
+			oNew.myAbilityScores.add(oA.cloneMe());
+		
+		oNew.mySaves.clear();
+		for(Integer i : mySaves)
+			oNew.mySaves.add(i);
+		
+		oNew.mySaveAdjustments.clear();
+		for(Integer i : mySaveAdjustments)
+			oNew.mySaveAdjustments.add(i);
+
+		oNew.myAlignmentType = myAlignmentType;
+		oNew.genderType = genderType;
+		oNew.totalExperience = totalExperience;
+		
+		return(oNew);
+	}
+
+
 	public class PCRace {
 		public String name; // just to have a copy of the race name
 		public String raceID; // myID for the class
@@ -193,6 +277,14 @@ public class PlayerClass implements Serializable, Comparable {
 			this.raceID = raceID;
 		}
 
+		public PCRace clone() {
+			PCRace oNew = new PCRace(getName(), getRaceID());
+			
+			oNew.name = name;
+			oNew.raceID = raceID;
+
+			return(oNew);
+		}
 	}
 
 	public class PCClass {
@@ -523,7 +615,16 @@ public class PlayerClass implements Serializable, Comparable {
 			return maxLevel;
 		}
 
-		
+		public PCClass clone() {
+			PCClass oNew = new PCClass(getName(), getClassID());
+			
+			oNew.classID = classID;
+			oNew.experience = experience;
+			oNew.level = level;
+			oNew.hdRolls.clear();
+			oNew.primaryClass = primaryClass;
+			return (oNew);
+		}
 		
 	}
 	
@@ -1428,13 +1529,45 @@ public class PlayerClass implements Serializable, Comparable {
 		AbilityScoreClass aJ = abilityScoresAdj.get(findMe);
 		AbilityScoreClass aS = getMyAbilityScores().get(findMe);
 		int abilityTotal = aS.getScore() + aJ.getScore();
-		//int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+		int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+		
+		if (abilityPercentTotal > 100) {
+			abilityTotal += 1;
+			abilityPercentTotal -= 100;
+		}
+		
+		if (abilityTotal > MAX_ABILITY_SCORE)
+			abilityTotal = MAX_ABILITY_SCORE;
+		//TODO this probably not going to work if we use comeliness
+		if (abilityTotal < 1)
+			abilityTotal = 1;
 		
 		theStat = abilityTotal;
 
 		return theStat;
 	}
-	
+
+	public int getAbilityPercentileScore(int findMe, MainClass ost) {
+		
+		int theStat = 0;
+		
+		ArrayList<AbilityScoreClass> abilityScoresAdj = 
+				getAllAbilityScoreAdjustments(ost);
+
+		AbilityScoreClass aJ = abilityScoresAdj.get(findMe);
+		AbilityScoreClass aS = getMyAbilityScores().get(findMe);
+		//int abilityTotal = aS.getScore() + aJ.getScore();
+		int abilityPercentTotal = aS.getPercentile() + aJ.getPercentile();
+
+		if (abilityPercentTotal > 100)
+			abilityPercentTotal -= 100;
+
+		theStat = abilityPercentTotal;
+
+		return theStat;
+	}
+
+
 	/**
 	 * add adjustment oS to aS, account for percentile > 100 and return updated aS
 	 * 
@@ -2435,4 +2568,87 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 		return(aList);
 	}
+	
+	public Strength getStrength(MainClass ost) {
+		Strength oStat = null;
+
+		int abilityTotal = 
+				getAbilityScore(ABILITY_STRENGTH, ost);
+		int abilityPercentTotal = 
+				getAbilityPercentileScore(ABILITY_STRENGTH, ost);
+
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.strength;
+
+			if (hasPercentileStrength(ost)) {
+				if (abilityPercentTotal <= 0) {
+					oStat = aStat.strength;
+				} else if (abilityPercentTotal <= 50) {
+					oStat = aStat.strength.percentile.get(STRENGTH_PERCENT_1_50);
+				} else if (abilityPercentTotal <= 75) {
+					oStat = aStat.strength.percentile.get(STRENGTH_PERCENT_51_75);
+				} else if (abilityPercentTotal <= 90) {
+					oStat = aStat.strength.percentile.get(STRENGTH_PERCENT_76_90);
+				} else if (abilityPercentTotal <= 99) {
+					oStat = aStat.strength.percentile.get(STRENGTH_PERCENT_91_99);
+				} else if (abilityPercentTotal >= 100) {
+					oStat = aStat.strength.percentile.get(STRENGTH_PERCENT_100);
+				}
+			}
+		}
+		return oStat;
+	}
+
+	public Dexterity getDexterity(MainClass ost) {
+		Dexterity oStat = null;
+		int abilityTotal = 
+				getAbilityScore(ABILITY_DEXTERITY, ost);
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.dexterity;
+		}
+		return oStat;
+	}
+	public Intelligence getIntelligence(MainClass ost) {
+		Intelligence oStat = null;
+		int abilityTotal = 
+				getAbilityScore(ABILITY_INTELLIGENCE, ost);
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.intelligence;
+		}
+		return oStat;
+	}
+	public Wisdom getWisdom(MainClass ost) {
+		Wisdom oStat = null;
+		int abilityTotal = 
+				getAbilityScore(ABILITY_WISDOM, ost);
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.wisdom;
+		}
+		return oStat;
+	}
+	public Charisma getCharisma(MainClass ost) {
+		Charisma oStat = null;
+		int abilityTotal = 
+				getAbilityScore(ABILITY_CHARISMA, ost);
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.charisma;
+		}
+		return oStat;
+	}
+	public Consitution getConsitution(MainClass ost) {
+		Consitution oStat = null;
+		int abilityTotal = 
+				getAbilityScore(ABILITY_CONSTITUTION, ost);
+		if (abilityTotal >= 0) {
+			AbilityStatClass aStat = ost.abilityStatList.getStat(abilityTotal);
+			oStat = aStat.consitution;
+		}
+		return oStat;
+	}
+
 } // end PlayerClass
