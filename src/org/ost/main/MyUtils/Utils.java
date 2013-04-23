@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
@@ -23,7 +24,9 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTree;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -505,6 +508,36 @@ public class Utils {
 		
 	}
 	
-	
+	/**
+	 * pack columns using margin 
+	 * 
+	 * @param table
+	 * @param margin
+	 */
+	public static void packColumns(JTable table, int margin) {
+		for (int c = 0; c < table.getColumnCount(); c++) {
+			packColumn(table, c, margin);
+		}
+	}
+
+	/**
+	 * set width of column to reasonable value
+	 * 
+	 * @param table
+	 * @param vColIndex
+	 * @param margin
+	 */
+	public static void packColumn(JTable table, int vColIndex, int margin) {
+		DefaultTableColumnModel colModel = (DefaultTableColumnModel) table
+				.getColumnModel();
+		TableColumn col = colModel.getColumn(vColIndex);
+
+		String hv = col.getHeaderValue().toString();
+		JTableHeader th = table.getTableHeader();
+		FontMetrics fm = th.getFontMetrics(th.getFont());
+		col.setPreferredWidth(fm.stringWidth(hv) + (margin * 4));
+	}
+
+
 	
 } // end Utils

@@ -3,6 +3,8 @@ package org.ost.main.MyClasses;
 public class MyStatics {
 	public static final String DEFAULT_FONT = "Segoe UI";
 	
+	public static final int CHART_MARGIN = 5;
+	
 	public static final int MAX_MATRIX = 21;
 	
 	public static final int SAVE_DEATH = 0;

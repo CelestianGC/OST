@@ -388,8 +388,8 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		//		chartDialog.setLocation(windowX, windowY);
 		//		chartDialog.setSize(windowSize.width - 4, windowSize.height - 4);
 
-		chartDialog.setLocationRelativeTo(this);
 		chartDialog.pack();
+		chartDialog.setLocationRelativeTo(this);
 		chartDialog.setVisible(true);
 	}
 
@@ -411,8 +411,8 @@ public class DM_Config_Tab_Config_Options extends javax.swing.JPanel {
 		//		tableDialog.setLocation(windowX, windowY);
 		//		tableDialog.setSize(windowSize.width - 4, windowSize.height - 4);
 		//
-		tableDialog.setLocationRelativeTo(this);
 		tableDialog.pack();
+		tableDialog.setLocationRelativeTo(this);
 		tableDialog.setVisible(true);
 	}
 

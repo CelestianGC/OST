@@ -1,4 +1,4 @@
-package org.ost.main.MyClasses;
+package org.ost.main.MyUtils;
 
 import java.awt.Component;
 import java.awt.Graphics;
@@ -26,9 +26,6 @@ public class PrintUtilities implements Printable{
 	public int print(Graphics graphics, PageFormat pageFormat, int pageIndex)
 			throws PrinterException {
 
-		if(pageIndex>0) {
-			return NO_SUCH_PAGE;
-		}
 		
 		if (scaleFactor==0.0) {
 			double scaleFactorX=0.0;
@@ -37,9 +34,18 @@ public class PrintUtilities implements Printable{
 			scaleFactorY=pageFormat.getImageableHeight()/comp.getHeight();
 			scaleFactor= (scaleFactorX < scaleFactorY) ? scaleFactorX : scaleFactorY;
 		}
+		//double scale = (double)Toolkit.getDefaultToolkit().getScreenResolution() / 72.0;
+		//((Graphics2D)graphics).getTransform();
+//		int totalNumPages = (int)Math.ceil(scale * comp.getHeight() / pageFormat.getImageableHeight());
+		//*if(pageIndex >= totalNumPages)
+		if(pageIndex<0) {
+			return NO_SUCH_PAGE;
+		}
+		
 		graphics.translate((int)pageFormat.getImageableX(),(int)pageFormat.getImageableY());
 		if (graphics instanceof Graphics2D) {
 			((Graphics2D)graphics).scale(scaleFactor,scaleFactor);
+			//((Graphics2D)graphics).scale(scale,scale);
 		}
 		comp.printAll(graphics);
 		return PAGE_EXISTS;

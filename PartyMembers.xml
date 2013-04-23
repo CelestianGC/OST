@@ -17,7 +17,7 @@
     <alignment>Chaotic Good</alignment>
     <gear>
       <org.ost.main.MyClasses.EquipmentClass>
-        <myID>5c988632-06f3-40c9-b092-a50c31fcb505</myID>
+        <myID>e772b412-33d4-4223-a165-6fe4ec2e8ceb</myID>
         <name>platemail</name>
         <description>New item description.</description>
         <count>-1</count>
@@ -25,9 +25,8 @@
         <magic>false</magic>
         <charges>-1</charges>
         <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <contains/>
-        <weight>120.0</weight>
+        <equipped>false</equipped>
+        <weight>1200.0</weight>
         <weaponType>0</weaponType>
         <weaponProfType></weaponProfType>
         <weaponGroupType></weaponGroupType>
@@ -35,7 +34,18 @@
         <damageSmall>1d4</damageSmall>
         <damageMedium>1d4</damageMedium>
         <damageLarge>1d4</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
         <speedFactor>0</speedFactor>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
         <armorType>platemail</armorType>
         <armorBulkType>3</armorBulkType>
         <ac>0</ac>
@@ -53,7 +63,7 @@
         <experience>0</experience>
       </org.ost.main.MyClasses.EquipmentClass>
       <org.ost.main.MyClasses.EquipmentClass>
-        <myID>38b525ca-964d-40b4-ba82-a6706e95d126</myID>
+        <myID>1970d48a-7ed1-4094-befa-2bd946f5f3fa</myID>
         <name>shield</name>
         <description>New item description.</description>
         <count>-1</count>
@@ -61,7 +71,7 @@
         <magic>false</magic>
         <charges>-1</charges>
         <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
+        <equipped>false</equipped>
         <weight>0.0</weight>
         <weaponType>0</weaponType>
         <weaponProfType></weaponProfType>
@@ -70,7 +80,18 @@
         <damageSmall>1d4</damageSmall>
         <damageMedium>1d4</damageMedium>
         <damageLarge>1d4</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
         <speedFactor>0</speedFactor>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
         <armorType>shield</armorType>
         <armorBulkType>0</armorBulkType>
         <ac>-1</ac>
@@ -363,50 +384,7 @@ character level up, new MaxHP:53 from 34
     <alignment>Lawful Good</alignment>
     <gear>
       <org.ost.main.MyClasses.EquipmentClass>
-        <myID>e1267cfe-2e26-4e7f-9e28-f5b9751f1b72</myID>
-        <name>longsword</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>1</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>60.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType>longsword</weaponProfType>
-        <weaponGroupType>blade</weaponGroupType>
-        <weaponTightGroupType>long blade</weaponTightGroupType>
-        <damageSmall>1d8</damageSmall>
-        <damageMedium>1d8</damageMedium>
-        <damageLarge>1d12</damageLarge>
-        <range>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </range>
-        <speedFactor>5</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>15</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-        <source></source>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>f8057d02-5678-4ef2-8ba0-6827c082919d</myID>
+        <myID>89be7607-7c26-439d-84c0-d4f83eb86ef7</myID>
         <name>longsword +1</name>
         <description>New item description.</description>
         <count>-1</count>
@@ -431,6 +409,10 @@ character level up, new MaxHP:53 from 34
           <int>0</int>
         </range>
         <speedFactor>5</speedFactor>
+        <attacksPerRound>
+          <int>1</int>
+          <int>1</int>
+        </attacksPerRound>
         <armorType></armorType>
         <armorBulkType>0</armorBulkType>
         <ac>0</ac>
@@ -451,35 +433,85 @@ character level up, new MaxHP:53 from 34
         <source></source>
       </org.ost.main.MyClasses.EquipmentClass>
       <org.ost.main.MyClasses.EquipmentClass>
-        <myID>f377e27c-bfcd-4932-bb34-51f3f4d6fbb9</myID>
-        <name>shortbow</name>
+        <myID>e772b412-33d4-4223-a165-6fe4ec2e8ceb</myID>
+        <name>platemail +1</name>
         <description>New item description.</description>
         <count>-1</count>
-        <type>1</type>
-        <magic>false</magic>
+        <type>2</type>
+        <magic>true</magic>
         <charges>-1</charges>
         <chargesMax>-1</chargesMax>
         <equipped>true</equipped>
-        <contains/>
-        <weight>0.0</weight>
-        <weaponType>1</weaponType>
-        <weaponProfType>shortbow</weaponProfType>
-        <weaponGroupType>bow</weaponGroupType>
-        <weaponTightGroupType>shortbow</weaponTightGroupType>
-        <damageSmall>1d6</damageSmall>
-        <damageMedium>1d6</damageMedium>
-        <damageLarge>1d6</damageLarge>
+        <weight>1200.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
         <range>
-          <int>5</int>
-          <int>10</int>
-          <int>15</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
           <int>0</int>
           <int>0</int>
         </range>
         <speedFactor>0</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <armorType>platemail</armorType>
+        <armorBulkType>3</armorBulkType>
         <ac>0</ac>
+        <acBase>3</acBase>
+        <magicAdjustmentPrimary>1</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>400</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <source></source>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>1970d48a-7ed1-4094-befa-2bd946f5f3fa</myID>
+        <name>shield</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>5</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>0</speedFactor>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <armorType>shield</armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>-1</ac>
         <acBase>10</acBase>
         <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
         <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
@@ -492,7 +524,6 @@ character level up, new MaxHP:53 from 34
           <int>0</int>
         </value>
         <experience>0</experience>
-        <source></source>
       </org.ost.main.MyClasses.EquipmentClass>
     </gear>
     <pcClass>Fighter</pcClass>
@@ -1232,325 +1263,7 @@ character level up, new MaxHP:54 from 0
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
     <alignment>Chaotic Good</alignment>
-    <gear>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>01f9d322-6690-4015-a0dd-46ccefec18cf</myID>
-        <name>shield</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>5</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>0.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType></weaponProfType>
-        <weaponGroupType></weaponGroupType>
-        <weaponTightGroupType></weaponTightGroupType>
-        <damageSmall>1d4</damageSmall>
-        <damageMedium>1d4</damageMedium>
-        <damageLarge>1d4</damageLarge>
-        <speedFactor>0</speedFactor>
-        <armorType>shield</armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>-1</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>5481d778-4a25-4607-ac3a-3f191dcabb2b</myID>
-        <name>potion of healing</name>
-        <description>heals 2d4 hitpoints damage</description>
-        <count>-1</count>
-        <type>0</type>
-        <magic>true</magic>
-        <charges>1</charges>
-        <chargesMax>1</chargesMax>
-        <equipped>false</equipped>
-        <contains/>
-        <weight>0.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType></weaponProfType>
-        <weaponGroupType></weaponGroupType>
-        <weaponTightGroupType></weaponTightGroupType>
-        <damageSmall>1d4</damageSmall>
-        <damageMedium>1d4</damageMedium>
-        <damageLarge>1d4</damageLarge>
-        <speedFactor>0</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>bccc1cc6-b606-43f3-8799-2692509e7135</myID>
-        <name>arrow</name>
-        <description>New item description.</description>
-        <count>40</count>
-        <type>0</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>false</equipped>
-        <contains/>
-        <weight>0.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType></weaponProfType>
-        <weaponGroupType></weaponGroupType>
-        <weaponTightGroupType></weaponTightGroupType>
-        <damageSmall>1d4</damageSmall>
-        <damageMedium>1d4</damageMedium>
-        <damageLarge>1d4</damageLarge>
-        <speedFactor>0</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>5</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>24a377a8-11ed-44f0-842b-177eaef0fca1</myID>
-        <name>elven chainmail</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>2</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>150.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType></weaponProfType>
-        <weaponGroupType></weaponGroupType>
-        <weaponTightGroupType></weaponTightGroupType>
-        <damageSmall>1d4</damageSmall>
-        <damageMedium>1d4</damageMedium>
-        <damageLarge>1d4</damageLarge>
-        <speedFactor>0</speedFactor>
-        <armorType>chainmail</armorType>
-        <armorBulkType>1</armorBulkType>
-        <ac>0</ac>
-        <acBase>5</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>75</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>58fe2cc6-6baa-4fe4-9923-41771fb892e5</myID>
-        <name>longsword</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>1</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>60.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType>longsword</weaponProfType>
-        <weaponGroupType>blade</weaponGroupType>
-        <weaponTightGroupType>long blade</weaponTightGroupType>
-        <damageSmall>1d8</damageSmall>
-        <damageMedium>1d8</damageMedium>
-        <damageLarge>1d12</damageLarge>
-        <range>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </range>
-        <speedFactor>5</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>15</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-        <source></source>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>c3edb607-d0d5-4a4b-ad34-ed947b662b06</myID>
-        <name>shortsword</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>1</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>35.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType>shortsword</weaponProfType>
-        <weaponGroupType>blade</weaponGroupType>
-        <weaponTightGroupType>short blade</weaponTightGroupType>
-        <damageSmall>1d6</damageSmall>
-        <damageMedium>1d6</damageMedium>
-        <damageLarge>1d8</damageLarge>
-        <range>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </range>
-        <speedFactor>3</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>8</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-        <source></source>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>d88d2a05-34e7-4d49-9f34-22d74fb4142d</myID>
-        <name>longsword +1</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>1</type>
-        <magic>true</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <weight>0.0</weight>
-        <weaponType>0</weaponType>
-        <weaponProfType>longsword</weaponProfType>
-        <weaponGroupType>blade</weaponGroupType>
-        <weaponTightGroupType>long blade</weaponTightGroupType>
-        <damageSmall>1d8</damageSmall>
-        <damageMedium>1d8</damageMedium>
-        <damageLarge>1d12</damageLarge>
-        <range>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </range>
-        <speedFactor>5</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>1</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>1</magicAdjustmentSecondary>
-        <features>
-          <string>b9c543de-5848-4b1e-a141-cd40a07c23a6</string>
-        </features>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-        </value>
-        <experience>1000</experience>
-        <source></source>
-      </org.ost.main.MyClasses.EquipmentClass>
-      <org.ost.main.MyClasses.EquipmentClass>
-        <myID>295a458c-3da1-4a16-8d64-2268955830a5</myID>
-        <name>shortbow</name>
-        <description>New item description.</description>
-        <count>-1</count>
-        <type>1</type>
-        <magic>false</magic>
-        <charges>-1</charges>
-        <chargesMax>-1</chargesMax>
-        <equipped>true</equipped>
-        <contains reference="../../../../PlayerClass[2]/gear/org.ost.main.MyClasses.EquipmentClass[3]/contains"/>
-        <weight>20.0</weight>
-        <weaponType>1</weaponType>
-        <weaponProfType>shortbow</weaponProfType>
-        <weaponGroupType>bow</weaponGroupType>
-        <weaponTightGroupType>shortbow</weaponTightGroupType>
-        <damageSmall>1d6</damageSmall>
-        <damageMedium>1d6</damageMedium>
-        <damageLarge>1d6</damageLarge>
-        <range>
-          <int>5</int>
-          <int>10</int>
-          <int>15</int>
-          <int>0</int>
-          <int>0</int>
-        </range>
-        <speedFactor>7</speedFactor>
-        <armorType></armorType>
-        <armorBulkType>0</armorBulkType>
-        <ac>0</ac>
-        <acBase>10</acBase>
-        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
-        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
-        <features/>
-        <value>
-          <int>0</int>
-          <int>0</int>
-          <int>0</int>
-          <int>30</int>
-          <int>0</int>
-        </value>
-        <experience>0</experience>
-        <source></source>
-      </org.ost.main.MyClasses.EquipmentClass>
-    </gear>
+    <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
     <notes></notes>
@@ -2285,7 +1998,7 @@ character level up, new MaxHP:30 from 0
     <alignment>Neutral Evil</alignment>
     <gear>
       <org.ost.main.MyClasses.EquipmentClass>
-        <myID>166f0a31-bd65-4bc5-8ed7-ef50d6d2cc9a</myID>
+        <myID>2a0478d1-8f10-43ce-9191-1dec47e78515</myID>
         <name>leather +2</name>
         <description>New item description.</description>
         <count>-1</count>
@@ -2302,7 +2015,18 @@ character level up, new MaxHP:30 from 0
         <damageSmall>1d4</damageSmall>
         <damageMedium>1d4</damageMedium>
         <damageLarge>1d4</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
         <speedFactor>0</speedFactor>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
         <armorType>leather</armorType>
         <armorBulkType>1</armorBulkType>
         <ac>0</ac>
@@ -2315,6 +2039,193 @@ character level up, new MaxHP:30 from 0
           <int>0</int>
           <int>0</int>
           <int>5</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>ea52cef0-dd17-4355-8689-4a73e8d63069</myID>
+        <name>shortsword</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>1</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>35.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType>shortsword</weaponProfType>
+        <weaponGroupType>blade</weaponGroupType>
+        <weaponTightGroupType>short blade</weaponTightGroupType>
+        <damageSmall>1d6</damageSmall>
+        <damageMedium>1d6</damageMedium>
+        <damageLarge>1d8</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>3</speedFactor>
+        <attacksPerRound>
+          <int>1</int>
+          <int>1</int>
+        </attacksPerRound>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>8</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <source></source>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>ea52cef0-dd17-4355-8689-4a73e8d63069</myID>
+        <name>shortsword</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>1</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>35.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType>shortsword</weaponProfType>
+        <weaponGroupType>blade</weaponGroupType>
+        <weaponTightGroupType>short blade</weaponTightGroupType>
+        <damageSmall>1d6</damageSmall>
+        <damageMedium>1d6</damageMedium>
+        <damageLarge>1d8</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>3</speedFactor>
+        <attacksPerRound>
+          <int>1</int>
+          <int>1</int>
+        </attacksPerRound>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>8</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <source></source>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>4330f856-598c-4ad9-96d7-3ad2ef88396b</myID>
+        <name>shortbow</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>1</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>20.0</weight>
+        <weaponType>1</weaponType>
+        <weaponProfType>shortbow</weaponProfType>
+        <weaponGroupType>bow</weaponGroupType>
+        <weaponTightGroupType>shortbow</weaponTightGroupType>
+        <damageSmall>1d6</damageSmall>
+        <damageMedium>1d6</damageMedium>
+        <damageLarge>1d6</damageLarge>
+        <range>
+          <int>5</int>
+          <int>10</int>
+          <int>15</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>7</speedFactor>
+        <attacksPerRound>
+          <int>2</int>
+          <int>1</int>
+        </attacksPerRound>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>30</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <source></source>
+      </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>163c532b-1bf8-4ea8-b538-b05a94985b1b</myID>
+        <name>arrow</name>
+        <description>New item description.</description>
+        <count>40</count>
+        <type>0</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>false</equipped>
+        <weight>0.0</weight>
+        <weaponType>0</weaponType>
+        <weaponProfType></weaponProfType>
+        <weaponGroupType></weaponGroupType>
+        <weaponTightGroupType></weaponTightGroupType>
+        <damageSmall>1d4</damageSmall>
+        <damageMedium>1d4</damageMedium>
+        <damageLarge>1d4</damageLarge>
+        <range>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>0</speedFactor>
+        <attacksPerRound>
+          <int>0</int>
+          <int>0</int>
+        </attacksPerRound>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>5</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
           <int>0</int>
         </value>
         <experience>0</experience>

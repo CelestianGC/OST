@@ -7,6 +7,7 @@
 package org.ost.main;
 
 import java.awt.Color;
+import static org.ost.main.MyClasses.MyStatics.*;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FontMetrics;
@@ -51,7 +52,6 @@ import org.ost.main.MyUtils.XMLControl;
  * @author  __USER__
  */
 public class DM_Config_Tab_Charts extends javax.swing.JPanel {
-	private final int CHART_MARGIN = 5;
 
 	/** Creates new form DM_Config_Tab_Charts */
 	public DM_Config_Tab_Charts(MainClass ost) {
@@ -685,7 +685,7 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 				int nDelete = chartTable.getSelectedColumn();
 				ost.dprint(String.format("Removing col (%d)\n", nDelete));
 				removeColumnAndData(chartTable, nDelete);
-				packColumns(chartTable, CHART_MARGIN);
+				Utils.packColumns(chartTable, CHART_MARGIN);
 			}
 		}
 
@@ -729,11 +729,10 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 
 	private void chartAutoSizeButtonActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		packColumns(chartTable, CHART_MARGIN);
+		Utils.packColumns(chartTable, CHART_MARGIN);
 	}
 
 	private void chartExportButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		//TODO testing new xml import/export
 		ChartClass oT = new ChartClass();
 		oT = getCurrentChart(oT);
 		ChartList aList = new ChartList(null);
@@ -1470,36 +1469,6 @@ public class DM_Config_Tab_Charts extends javax.swing.JPanel {
 
 			return area;
 		}
-	}
-
-	/**
-	 * pack columns using margin 
-	 * 
-	 * @param table
-	 * @param margin
-	 */
-	public void packColumns(JTable table, int margin) {
-		for (int c = 0; c < table.getColumnCount(); c++) {
-			packColumn(table, c, margin);
-		}
-	}
-
-	/**
-	 * set width of column to reasonable value
-	 * 
-	 * @param table
-	 * @param vColIndex
-	 * @param margin
-	 */
-	public void packColumn(JTable table, int vColIndex, int margin) {
-		DefaultTableColumnModel colModel = (DefaultTableColumnModel) table
-				.getColumnModel();
-		TableColumn col = colModel.getColumn(vColIndex);
-
-		String hv = col.getHeaderValue().toString();
-		JTableHeader th = table.getTableHeader();
-		FontMetrics fm = th.getFontMetrics(th.getFont());
-		col.setPreferredWidth(fm.stringWidth(hv) + (margin * 4));
 	}
 
 	//GEN-BEGIN:variables

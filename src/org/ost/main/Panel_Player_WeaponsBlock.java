@@ -65,6 +65,8 @@ public class Panel_Player_WeaponsBlock extends javax.swing.JPanel {
 
 		columnNames.add("thaco");
 
+		columnNames.add("RoF");
+
 		columnNames.add("speed");
 
 		columnNames.add("dmg S");
@@ -109,19 +111,21 @@ public class Panel_Player_WeaponsBlock extends javax.swing.JPanel {
 						(pc.getTHACO(ost) - meleeHit), idx, 2);
 			}
 
-			table.setValueAt(oE.getSpeedFactor(), idx, 3);
-			table.setValueAt(oE.getDamageSmall(), idx, 4);
-			table.setValueAt(oE.getDamageMedium(), idx, 5);
-			table.setValueAt(oE.getDamageLarge(), idx, 6);
-			table.setValueAt(oE.getRange()[RANGE_SHORT], idx, 7);
-			table.setValueAt(oE.getRange()[RANGE_MEDIUM], idx, 8);
-			table.setValueAt(oE.getRange()[RANGE_LONG], idx, 9);
+			table.setValueAt(oE.getRoF(), idx, 3);
+			table.setValueAt(oE.getSpeedFactor(), idx, 4);
+			table.setValueAt(oE.getDamageSmall(), idx, 5);
+			table.setValueAt(oE.getDamageMedium(), idx, 6);
+			table.setValueAt(oE.getDamageLarge(), idx, 7);
+			table.setValueAt(oE.getRange()[RANGE_SHORT], idx, 8);
+			table.setValueAt(oE.getRange()[RANGE_MEDIUM], idx, 9);
+			table.setValueAt(oE.getRange()[RANGE_LONG], idx, 10);
 		}
 
 		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
 		table.getTableHeader().setFont(fFont);
 		table.setFont(fFont);
 
+		//Utils.packColumns(table, CHART_MARGIN);
 		weaponsPanel.add(table.getTableHeader(), BorderLayout.PAGE_START);
 		weaponsPanel.add(table, BorderLayout.CENTER);
 

@@ -58,7 +58,6 @@ public class DM_Config_Tab_Tables extends javax.swing.JPanel {
 		this.ost = ost;
 		initComponents();
 		updateCurrentTable((TableClass) tablesListComboBox.getSelectedItem());
-		
 	}
 
 	/** This method is called from within the constructor to

@@ -17,10 +17,10 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 
 import org.ost.main.MyClasses.PlayerClass;
-import org.ost.main.MyClasses.PrintUtilities;
 import org.ost.main.MyClasses.RaceClass;
 import org.ost.main.MyClasses.VerticalLayout;
 import org.ost.main.MyUtils.ComponentPrinter;
+import org.ost.main.MyUtils.PrintUtilities;
 import org.ost.main.MyUtils.SimpleDialog;
 
 /**
@@ -60,110 +60,64 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		//		setLocation(windowX, windowY);
 		//		setSize(windowSize.width - 4, windowSize.height - 4);
 
+		pack();
+
 		setLocationRelativeTo(null);
+		//setSize((int) (8.5 * 72), (11 * 72));
 	}
 
 	public void updatePanel(PlayerClass oPlayer) {
-		int gridY = 1;
 		mainPanel.removeAll();
 		secondPanel.removeAll();
 
 		pc = oPlayer;
 
-		// portrait?
-
 		// details
-//		GridBagConstraints gridBagConstraints = new java.awt.GridBagConstraints();
-//		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//		gridBagConstraints.gridx = 0;
-//		gridBagConstraints.gridy = gridY;
-//		gridY++;
-//		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
 		Panel_Player_Details playerDetailsPanel = new Panel_Player_Details(ost,
 				pc);
-//		mainPanel.add(playerDetailsPanel, gridBagConstraints);
 		mainPanel.add(playerDetailsPanel);
 
 		// saves
 		Panel_Player_Saves playerSavesPanel = new Panel_Player_Saves(ost, pc);
-//		GridBagConstraints gbSaves = new java.awt.GridBagConstraints();
-//		gbSaves.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//		gbSaves.gridx = 0;
-//		gbSaves.gridy = gridY;
-//		gridY++;
-//		gbSaves.anchor = java.awt.GridBagConstraints.WEST;
-//		mainPanel.add(playerSavesPanel, gbSaves);
 		mainPanel.add(playerSavesPanel);
 
 		// abilities
 		Panel_Player_Abilities playerAbilitiesPanel = new Panel_Player_Abilities(
 				ost, pc);
-//		GridBagConstraints gbAbilities = new java.awt.GridBagConstraints();
-//		gbAbilities.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//		gbAbilities.gridx = 0;
-//		gbAbilities.gridy = gridY;
-//		gridY++;
-//		gbAbilities.anchor = java.awt.GridBagConstraints.WEST;
-//		mainPanel.add(playerAbilitiesPanel, gbAbilities);
 		mainPanel.add(playerAbilitiesPanel);
 
 		// combat
 		Panel_Player_Combat playerCombatPanel = new Panel_Player_Combat(ost, pc);
-//		GridBagConstraints gbCombat = new java.awt.GridBagConstraints();
-//		gbCombat.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//		gbCombat.gridx = 0;
-//		gbCombat.gridy = gridY;
-//		gridY++;
-//		gbCombat.anchor = java.awt.GridBagConstraints.WEST;
-//		mainPanel.add(playerCombatPanel, gbCombat);
 		mainPanel.add(playerCombatPanel);
 
 		// skills?
 		if (pc.isSkilled(ost)) {
 			Panel_Player_Skills playerSkillsPanel = new Panel_Player_Skills(
 					ost, pc);
-//			GridBagConstraints gbSkills = new java.awt.GridBagConstraints();
-//			gbSkills.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//			gbSkills.gridx = 0;
-//			gbSkills.gridy = gridY;
-//			gridY++;
-//			gbSkills.anchor = java.awt.GridBagConstraints.WEST;
-//			secondPanel.add(playerSkillsPanel, gbSkills);
 			secondPanel.add(playerSkillsPanel);
 		}
 
 		if (pc.isCasterArcane(ost) || pc.isCasterDivine(ost)) {
 			Panel_Player_Spells_All playerAllSpells = new Panel_Player_Spells_All(
 					ost, pc);
-//			GridBagConstraints gbAllSpells = new java.awt.GridBagConstraints();
-//			gbAllSpells.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//			gbAllSpells.gridx = 0;
-//			gbAllSpells.gridy = gridY;
-//			gridY++;
-//			gbAllSpells.anchor = java.awt.GridBagConstraints.WEST;
-//			secondPanel.add(playerAllSpells, gbAllSpells);
 			secondPanel.add(playerAllSpells);
 		}
 
 		// features/extra abilities
 		Panel_Player_Features playerFeatures = new Panel_Player_Features(ost,
 				pc);
-//		GridBagConstraints gbFeatures = new java.awt.GridBagConstraints();
-//		gbFeatures.fill = java.awt.GridBagConstraints.HORIZONTAL;
-//		gbFeatures.gridx = 0;
-//		gbFeatures.gridy = gridY;
-//		gridY++;
-//		gbFeatures.anchor = java.awt.GridBagConstraints.WEST;
-//		secondPanel.add(playerFeatures, gbFeatures);
 		secondPanel.add(playerFeatures);
 
+		if (pc.hasWeapons()) {
 		Panel_Player_WeaponsBlock playerWeapons = 
 				new Panel_Player_WeaponsBlock(ost,pc);
 		secondPanel.add(playerWeapons);
+		}
 		
-		secondPanel.repaint();
-		//mainPanel.repaint();
-		pack();
+		//TODO not sure why I have to do this but unless I do the second page
+		//does not show up in print, if they previewed it it would so...
+		nextPageMenuItemActionPerformed(null);
+		previousPageMenuItemActionPerformed(null);
 	}
 
 	//GEN-BEGIN:initComponents
@@ -259,7 +213,6 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 
 	private void previousPageMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		this.remove(secondPanel);
 		this.add(mainPanel, BorderLayout.CENTER);
 		revalidate();
@@ -268,7 +221,6 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 	}
 
 	private void nextPageMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		this.remove(mainPanel);
 		this.add(secondPanel, BorderLayout.CENTER);
 		revalidate();
@@ -278,6 +230,9 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 
 	private void printMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
+		// the printing is not pretty right now but it works... need to revisit this
+		// and figure out a more elegant way to do this.
+		
 		String printJobName = String.format("OST [%s]", pc.getName());
 
 		PrinterJob printJob = PrinterJob.getPrinterJob();
@@ -299,7 +254,6 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 				try {
 					printJob.print();
 				} catch (PrinterException e) {
-					// TODO Auto-generated catch block
 					SimpleDialog.showError(e.getLocalizedMessage());
 				}
 			}
@@ -319,12 +273,10 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 	}
 
 	private void closeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-		// TODO add your handling code here:
 		formWindowClosed(null);
 	}
 
 	private void formWindowClosed(java.awt.event.WindowEvent evt) {
-		// TODO add your handling code here:
 		dispose();
 	}
 

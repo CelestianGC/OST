@@ -831,7 +831,7 @@ public class MainWindow extends javax.swing.JFrame {
 
 	private void updatePlayersMenuItemActionPerformed(
 			java.awt.event.ActionEvent evt) {
-		updatePlayers(ost.playerList);
+		updatePlayers(ost);
 	}
 
 	private void updateCharacterClassesMenuItemActionPerformed(
@@ -849,9 +849,9 @@ public class MainWindow extends javax.swing.JFrame {
 	 * 
 	 * @param pList
 	 */
-	public static void updatePlayers(PlayerList pList) {
-		for (PlayerClass oP : pList.getContent())
-			oP = oP.cloneMe();
+	public static void updatePlayers(MainClass ost) {
+		for (PlayerClass oP : ost.playerList.getContent())
+			oP = oP.cloneMe(ost);
 	}
 
 	/** 

@@ -158,6 +158,11 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		weaponTypeGroupComboBox = new javax.swing.JComboBox();
 		jLabel8 = new javax.swing.JLabel();
 		weaponTypeGroupTightComboBox = new javax.swing.JComboBox();
+		rofPanel = new javax.swing.JPanel();
+		jLabel13 = new javax.swing.JLabel();
+		rof1Spinner = new javax.swing.JSpinner();
+		jLabel14 = new javax.swing.JLabel();
+		rof2Spinner = new javax.swing.JSpinner();
 		armorPanel = new javax.swing.JPanel();
 		armorBulkTypeComboBox = new javax.swing.JComboBox();
 		armorTypeComboBox = new javax.swing.JComboBox();
@@ -573,6 +578,30 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 
 		weaponPanel.add(weaponTypePanel, new java.awt.GridBagConstraints());
 
+		jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel13.setText("attacks per round");
+		rofPanel.add(jLabel13);
+
+		rof1Spinner.setModel(new javax.swing.SpinnerNumberModel());
+		rof1Spinner.setEnabled(false);
+		rof1Spinner.setPreferredSize(new java.awt.Dimension(40, 22));
+		rofPanel.add(rof1Spinner);
+
+		jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 12));
+		jLabel14.setText("/");
+		rofPanel.add(jLabel14);
+
+		rof2Spinner.setModel(new javax.swing.SpinnerNumberModel());
+		rof2Spinner.setEnabled(false);
+		rof2Spinner.setPreferredSize(new java.awt.Dimension(40, 22));
+		rofPanel.add(rof2Spinner);
+
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 2;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+		weaponPanel.add(rofPanel, gridBagConstraints);
+
 		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 0;
 		gridBagConstraints.gridy = 2;
@@ -704,6 +733,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 		rangeShortTextField.setEnabled(isSet);
 		rangeMediumTextField.setEnabled(isSet);
 		rangeLongTextField.setEnabled(isSet);
+		rof1Spinner.setEnabled(isSet);
+		rof2Spinner.setEnabled(isSet);
 	}
 
 	private void gearNewDescriptionButtonActionPerformed(
@@ -795,6 +826,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 				.getText());
 
 		oE.setSource(sourceField.getText());
+		oE.getAttacksPerRound()[0] = (int) rof1Spinner.getValue();
+		oE.getAttacksPerRound()[1] = (int) rof2Spinner.getValue();
 	}
 
 	private void updatePanels() {
@@ -864,6 +897,9 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 					oE.getRange()[RANGE_LONG]));
 
 			sourceField.setText(oE.getSource());
+			rof1Spinner.setValue(oE.getAttacksPerRound()[0]);
+			rof2Spinner.setValue(oE.getAttacksPerRound()[1]);
+			
 		}
 
 	}
@@ -906,6 +942,8 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JLabel jLabel10;
 	private javax.swing.JLabel jLabel11;
 	private javax.swing.JLabel jLabel12;
+	private javax.swing.JLabel jLabel13;
+	private javax.swing.JLabel jLabel14;
 	private javax.swing.JLabel jLabel2;
 	private javax.swing.JLabel jLabel3;
 	private javax.swing.JLabel jLabel4;
@@ -926,6 +964,9 @@ public class Option_AskFor_Equipment extends javax.swing.JDialog {
 	private javax.swing.JTextField rangeLongTextField;
 	private javax.swing.JTextField rangeMediumTextField;
 	private javax.swing.JTextField rangeShortTextField;
+	private javax.swing.JSpinner rof1Spinner;
+	private javax.swing.JSpinner rof2Spinner;
+	private javax.swing.JPanel rofPanel;
 	private javax.swing.JTextField sourceField;
 	private javax.swing.JSpinner speedFactorSpinner;
 	private javax.swing.JPanel typePanel;

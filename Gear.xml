@@ -25,6 +25,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -67,6 +71,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>leather</armorType>
     <armorBulkType>1</armorBulkType>
     <ac>0</ac>
@@ -109,6 +117,10 @@
       <int>0</int>
     </range>
     <speedFactor>5</speedFactor>
+    <attacksPerRound>
+      <int>1</int>
+      <int>1</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -152,6 +164,10 @@
       <int>0</int>
     </range>
     <speedFactor>3</speedFactor>
+    <attacksPerRound>
+      <int>1</int>
+      <int>1</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -195,6 +211,10 @@
       <int>0</int>
     </range>
     <speedFactor>5</speedFactor>
+    <attacksPerRound>
+      <int>1</int>
+      <int>1</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -240,6 +260,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>chainmail</armorType>
     <armorBulkType>2</armorBulkType>
     <ac>0</ac>
@@ -282,6 +306,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>shield</armorType>
     <armorBulkType>0</armorBulkType>
     <ac>-1</ac>
@@ -324,6 +352,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -344,7 +376,7 @@
     <myID>163c532b-1bf8-4ea8-b538-b05a94985b1b</myID>
     <name>arrow</name>
     <description>New item description.</description>
-    <count>1</count>
+    <count>40</count>
     <type>0</type>
     <magic>false</magic>
     <charges>-1</charges>
@@ -366,6 +398,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -408,6 +444,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>platemail</armorType>
     <armorBulkType>3</armorBulkType>
     <ac>0</ac>
@@ -450,6 +490,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>leather</armorType>
     <armorBulkType>1</armorBulkType>
     <ac>0</ac>
@@ -492,6 +536,10 @@
       <int>0</int>
     </range>
     <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
     <armorType>chainmail</armorType>
     <armorBulkType>1</armorBulkType>
     <ac>0</ac>
@@ -534,6 +582,10 @@
       <int>0</int>
     </range>
     <speedFactor>7</speedFactor>
+    <attacksPerRound>
+      <int>2</int>
+      <int>1</int>
+    </attacksPerRound>
     <armorType></armorType>
     <armorBulkType>0</armorBulkType>
     <ac>0</ac>
@@ -546,6 +598,53 @@
       <int>0</int>
       <int>0</int>
       <int>30</int>
+      <int>0</int>
+    </value>
+    <experience>0</experience>
+    <source></source>
+  </EquipmentClass>
+  <EquipmentClass>
+    <myID>e772b412-33d4-4223-a165-6fe4ec2e8ceb</myID>
+    <name>platemail +1</name>
+    <description>New item description.</description>
+    <count>-1</count>
+    <type>2</type>
+    <magic>true</magic>
+    <charges>-1</charges>
+    <chargesMax>-1</chargesMax>
+    <equipped>false</equipped>
+    <weight>1200.0</weight>
+    <weaponType>0</weaponType>
+    <weaponProfType></weaponProfType>
+    <weaponGroupType></weaponGroupType>
+    <weaponTightGroupType></weaponTightGroupType>
+    <damageSmall>1d4</damageSmall>
+    <damageMedium>1d4</damageMedium>
+    <damageLarge>1d4</damageLarge>
+    <range>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </range>
+    <speedFactor>0</speedFactor>
+    <attacksPerRound>
+      <int>0</int>
+      <int>0</int>
+    </attacksPerRound>
+    <armorType>platemail</armorType>
+    <armorBulkType>3</armorBulkType>
+    <ac>0</ac>
+    <acBase>3</acBase>
+    <magicAdjustmentPrimary>1</magicAdjustmentPrimary>
+    <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+    <features/>
+    <value>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>400</int>
       <int>0</int>
     </value>
     <experience>0</experience>

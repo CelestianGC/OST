@@ -42,6 +42,7 @@ public class EquipmentClass {
 	public String damageLarge;
 	public int[] range;
 	public int speedFactor;
+	public int[] attacksPerRound;
 	
 	//TODO ------------ Armors/shield
 	// armor specific
@@ -81,7 +82,7 @@ public class EquipmentClass {
 				"",0,0,10,
 				0,0,
 				new ArrayList<String>(), new int[MAX_COIN],0,0,
-				new int[MAX_RANGES],"");
+				new int[MAX_RANGES],"",new int[2]);
 	}
 
 	public EquipmentClass(String name, String description, int count, int type,
@@ -93,7 +94,7 @@ public class EquipmentClass {
 			String armorType, int armorBulkType, int ac, int acBase,
 			int magicAdjustmentPrimary, int magicAdjustmentSecondary,
 			ArrayList<String> features, int[] value, int exp, int speedFactor,
-			int[] range, String source) {
+			int[] range, String source, int[] attacksPerRound) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -124,11 +125,28 @@ public class EquipmentClass {
 		this.speedFactor = speedFactor;
 		this.range = range;
 		this.source = source;
+		this.attacksPerRound = attacksPerRound;
+		this.attacksPerRound[0] = 1;
+		this.attacksPerRound[1] = 1;
 		
 		this.setMyID(UUID.randomUUID().toString());
 	}
 
 	
+	/**
+	 * @return the attacksPerRound
+	 */
+	public int[] getAttacksPerRound() {
+		return attacksPerRound;
+	}
+
+	/**
+	 * @param attacksPerRound the attacksPerRound to set
+	 */
+	public void setAttacksPerRound(int[] attacksPerRound) {
+		this.attacksPerRound = attacksPerRound;
+	}
+
 	/**
 	 * @return the source
 	 */
@@ -447,8 +465,14 @@ public class EquipmentClass {
 		for (EquipmentClass oS: getContains())
 			oNew.getContains().add(oS.clone());
 		
+		if (attacksPerRound == null)
+			attacksPerRound = new int[2];
+		oNew.attacksPerRound[0] = getAttacksPerRound()[0];
+		oNew.attacksPerRound[1] = getAttacksPerRound()[1];
+		
 		oNew.source = source;
 		
+		oNew.setMyID(getMyID());
 		return(oNew);
 	}
 	
@@ -611,4 +635,45 @@ public class EquipmentClass {
 		return isRanged;
 	}
 
+	/** 
+	 * return attacks per round in String format for display
+	 * 
+	 * @return
+	 */
+	public String getRoF() {
+		int rof1 = getAttacksPerRound()[0];
+		int rof2 = getAttacksPerRound()[1];
+		if (rof2 <= 0)
+			rof2 = 1;
+		String sRoF = String.format("%d/%d", rof1,rof2);
+		float rof = rof1/rof2;
+		if (Math.rint(rof)== rof)
+			sRoF = String.format("%d",(int)rof);
+		
+		//TODO need to get attacks per round from class
+		//and/or specializations
+		//** class overrides weapon, specialization overrides class
+		
+		return sRoF;
+	}
+
+	/**
+	 * get EquipementClass object from ID
+	 * @param myID
+	 * @param eList
+	 * @return
+	 */
+	public static EquipmentClass getEquipmentByID(String myID,EquipmentList eList) {
+		EquipmentClass oFound = null;
+		
+		for(EquipmentClass o: eList.getContent()) 
+			if (o.getMyID().equalsIgnoreCase(myID)) {
+				oFound = o;
+				break;
+			}
+
+		return(oFound);
+	}
+
+	
 } // end EquipmentClass

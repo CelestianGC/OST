@@ -151,7 +151,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * 
 	 * @return
 	 */
-	public PlayerClass cloneMe() {
+	public PlayerClass cloneMe(MainClass ost) {
 		//TODO finish
 		PlayerClass oNew = new PlayerClass();
 		
@@ -171,8 +171,20 @@ public class PlayerClass implements Serializable, Comparable {
 		oNew.alignment = alignment;
 
 		oNew.gear.clear();
-		for(EquipmentClass oG: gear)
-			oNew.gear.add(oG.clone());
+		for(EquipmentClass oG: gear) {
+			try {
+				EquipmentClass oN = 
+						EquipmentClass.getEquipmentByID(oG.getMyID(), ost.equipmentList).clone();
+				// save charge and stack count
+				// allow max to be changed
+				oN.setCharges(oG.getCharges());
+				oN.setCount(oG.getCount());
+				oNew.gear.add(oN);
+			} catch (Exception e) {
+				ost.dprint("Player updates: "+getName()+">Unable to find gear object ID:"+
+							oG.getName()+"("+oG.getMyID()+")\n");
+			}
+		}
 		
 		oNew.pcClass = pcClass;
 		oNew.pcLevel = pcLevel;
@@ -220,6 +232,8 @@ public class PlayerClass implements Serializable, Comparable {
 		oNew.genderType = genderType;
 		oNew.totalExperience = totalExperience;
 		
+		oNew.setMyID(getMyID());
+
 		return(oNew);
 	}
 
@@ -2651,4 +2665,12 @@ public class PlayerClass implements Serializable, Comparable {
 		return oStat;
 	}
 
+	/**
+	 * does this player have any weapons equipped?
+	 * 
+	 * @return
+	 */
+	public boolean hasWeapons() {
+		return(getAllWeapons().size()>0);
+	}
 } // end PlayerClass

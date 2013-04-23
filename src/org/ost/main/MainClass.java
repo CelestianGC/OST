@@ -436,7 +436,7 @@ public class MainClass implements Serializable {
 		    		SimpleDialog.showDone("Version difference. Attempting to update data.");
 		    		
 		    		//TODO update all serialized data stored/loaded
-		    		MainWindow.updatePlayers(playerList);
+		    		MainWindow.updatePlayers(this);
 		    		MainWindow.updateCharacterClasses(characterClassList);
 		    		MainWindow.updateEquipmentList(equipmentList);
 		    }
