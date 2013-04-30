@@ -3,8 +3,8 @@
     <name>Elendria</name>
     <namePlayer>John Smith</namePlayer>
     <myID>2204ce9b-2ed9-4ee2-ae70-89ebd80b7cbf</myID>
-    <hpMax>50</hpMax>
-    <hpCurrent>50</hpCurrent>
+    <hpMax>54</hpMax>
+    <hpCurrent>54</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -208,6 +208,20 @@ character level up, new MaxHP:26 from 0
 character level up, new MaxHP:44 from 26
 character level up, new MaxHP:33 from 0
 character level up, new MaxHP:50 from 33
+character level up, new MaxHP:27 from 0
+character level up, new MaxHP:45 from 27
+character level up, new MaxHP:24 from 0
+character level up, new MaxHP:44 from 24
+character level up, new MaxHP:31 from 0
+character level up, new MaxHP:46 from 31
+character level up, new MaxHP:35 from 0
+character level up, new MaxHP:53 from 35
+character level up, new MaxHP:32 from 0
+character level up, new MaxHP:47 from 32
+character level up, new MaxHP:30 from 0
+character level up, new MaxHP:51 from 30
+character level up, new MaxHP:32 from 0
+character level up, new MaxHP:54 from 32
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -303,6 +317,146 @@ character level up, new MaxHP:50 from 33
           <int>62</int>
           <int>64</int>
           <int>66</int>
+          <int>5</int>
+          <int>7</int>
+          <int>8</int>
+          <int>9</int>
+          <int>15</int>
+          <int>21</int>
+          <int>29</int>
+          <int>31</int>
+          <int>33</int>
+          <int>35</int>
+          <int>37</int>
+          <int>39</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>3</int>
+          <int>10</int>
+          <int>17</int>
+          <int>20</int>
+          <int>21</int>
+          <int>22</int>
+          <int>24</int>
+          <int>26</int>
+          <int>27</int>
+          <int>29</int>
+          <int>31</int>
+          <int>33</int>
+          <int>35</int>
+          <int>37</int>
+          <int>39</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>2</int>
+          <int>4</int>
+          <int>9</int>
+          <int>11</int>
+          <int>18</int>
+          <int>25</int>
+          <int>31</int>
+          <int>33</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>59</int>
+          <int>61</int>
+          <int>63</int>
+          <int>5</int>
+          <int>12</int>
+          <int>15</int>
+          <int>22</int>
+          <int>26</int>
+          <int>30</int>
+          <int>37</int>
+          <int>45</int>
+          <int>48</int>
+          <int>50</int>
+          <int>52</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>62</int>
+          <int>64</int>
+          <int>66</int>
+          <int>68</int>
+          <int>70</int>
+          <int>6</int>
+          <int>12</int>
+          <int>19</int>
+          <int>20</int>
+          <int>27</int>
+          <int>32</int>
+          <int>38</int>
+          <int>39</int>
+          <int>42</int>
+          <int>44</int>
+          <int>46</int>
+          <int>48</int>
+          <int>50</int>
+          <int>52</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>62</int>
+          <int>64</int>
+          <int>6</int>
+          <int>14</int>
+          <int>16</int>
+          <int>21</int>
+          <int>26</int>
+          <int>29</int>
+          <int>35</int>
+          <int>36</int>
+          <int>38</int>
+          <int>40</int>
+          <int>42</int>
+          <int>44</int>
+          <int>46</int>
+          <int>48</int>
+          <int>50</int>
+          <int>52</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>8</int>
+          <int>15</int>
+          <int>17</int>
+          <int>22</int>
+          <int>28</int>
+          <int>33</int>
+          <int>38</int>
+          <int>39</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>55</int>
+          <int>57</int>
+          <int>59</int>
+          <int>61</int>
+          <int>63</int>
+          <int>65</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -390,6 +544,139 @@ character level up, new MaxHP:50 from 33
           <int>32</int>
           <int>33</int>
           <int>34</int>
+          <int>2</int>
+          <int>5</int>
+          <int>7</int>
+          <int>10</int>
+          <int>14</int>
+          <int>17</int>
+          <int>21</int>
+          <int>22</int>
+          <int>24</int>
+          <int>26</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+          <int>4</int>
+          <int>6</int>
+          <int>8</int>
+          <int>10</int>
+          <int>13</int>
+          <int>15</int>
+          <int>19</int>
+          <int>23</int>
+          <int>27</int>
+          <int>28</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+          <int>37</int>
+          <int>38</int>
+          <int>39</int>
+          <int>40</int>
+          <int>2</int>
+          <int>6</int>
+          <int>8</int>
+          <int>11</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>17</int>
+          <int>19</int>
+          <int>20</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>3</int>
+          <int>6</int>
+          <int>9</int>
+          <int>12</int>
+          <int>13</int>
+          <int>16</int>
+          <int>19</int>
+          <int>20</int>
+          <int>23</int>
+          <int>27</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+          <int>37</int>
+          <int>2</int>
+          <int>3</int>
+          <int>6</int>
+          <int>10</int>
+          <int>12</int>
+          <int>13</int>
+          <int>14</int>
+          <int>15</int>
+          <int>19</int>
+          <int>20</int>
+          <int>22</int>
+          <int>23</int>
+          <int>24</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>3</int>
+          <int>4</int>
+          <int>7</int>
+          <int>10</int>
+          <int>14</int>
+          <int>18</int>
+          <int>21</int>
+          <int>22</int>
+          <int>26</int>
+          <int>30</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+          <int>37</int>
+          <int>38</int>
+          <int>39</int>
+          <int>40</int>
+          <int>41</int>
+          <int>42</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>14</int>
+          <int>17</int>
+          <int>21</int>
+          <int>25</int>
+          <int>28</int>
+          <int>32</int>
+          <int>36</int>
+          <int>37</int>
+          <int>38</int>
+          <int>39</int>
+          <int>40</int>
+          <int>41</int>
+          <int>42</int>
+          <int>43</int>
+          <int>44</int>
+          <int>45</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -1058,8 +1345,8 @@ character level up, new MaxHP:39 from 22
     <name>Longwalk</name>
     <namePlayer>John Smith</namePlayer>
     <myID>38507bb4-dda3-47cf-a5cc-bee2c471ab46</myID>
-    <hpMax>108</hpMax>
-    <hpCurrent>108</hpCurrent>
+    <hpMax>120</hpMax>
+    <hpCurrent>120</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -1069,7 +1356,7 @@ character level up, new MaxHP:39 from 22
     <magicResistance>None</magicResistance>
     <specialDefense></specialDefense>
     <specialAttacks></specialAttacks>
-    <alignment>Lawful Good</alignment>
+    <alignment>Chaotic Good</alignment>
     <gear/>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
@@ -1091,6 +1378,76 @@ character de-level, new MaxHP:87 from 87
 character level up, new MaxHP:92 from 87
 character experience modified :5000
 character level up, new MaxHP:108 from 92
+character de-level, new MaxHP:108 from 108
+character level up, new MaxHP:123 from 108
+character de-level, new MaxHP:123 from 123
+character level up, new MaxHP:139 from 123
+character de-level, new MaxHP:139 from 139
+character level up, new MaxHP:156 from 139
+character de-level, new MaxHP:156 from 156
+character level up, new MaxHP:175 from 156
+character de-level, new MaxHP:175 from 175
+character level up, new MaxHP:193 from 175
+character de-level, new MaxHP:193 from 193
+character level up, new MaxHP:214 from 193
+character de-level, new MaxHP:100 from 100
+character level up, new MaxHP:111 from 100
+character de-level, new MaxHP:111 from 111
+character level up, new MaxHP:129 from 111
+character de-level, new MaxHP:129 from 129
+character level up, new MaxHP:146 from 129
+character de-level, new MaxHP:146 from 146
+character level up, new MaxHP:164 from 146
+character de-level, new MaxHP:164 from 164
+character level up, new MaxHP:183 from 164
+character de-level, new MaxHP:189 from 183
+character level up, new MaxHP:187 from 177
+character de-level, new MaxHP:201 from 187
+character level up, new MaxHP:181 from 173
+character de-level, new MaxHP:191 from 181
+character level up, new MaxHP:184 from 171
+character de-level, new MaxHP:114 from 100
+character level up, new MaxHP:100 from 86
+character de-level, new MaxHP:108 from 100
+character level up, new MaxHP:106 from 92
+character de-level, new MaxHP:125 from 106
+character level up, new MaxHP:106 from 87
+character de-level, new MaxHP:119 from 106
+character level up, new MaxHP:110 from 93
+character de-level, new MaxHP:127 from 110
+character level up, new MaxHP:104 from 93
+character de-level, new MaxHP:120 from 104
+character level up, new MaxHP:101 from 88
+character de-level, new MaxHP:118 from 101
+character level up, new MaxHP:84 from 84
+character de-level, new MaxHP:94 from 84
+character level up, new MaxHP:74 from 74
+character de-level, new MaxHP:88 from 74
+character level up, new MaxHP:60 from 60
+character de-level, new MaxHP:76 from 60
+character level up, new MaxHP:44 from 44
+character de-level, new MaxHP:80 from 80
+character level up, new MaxHP:80 from 80
+character experience modified :2000000
+character level up, new MaxHP:104 from 80
+character de-level, new MaxHP:104 from 104
+character level up, new MaxHP:128 from 104
+character de-level, new MaxHP:128 from 128
+character level up, new MaxHP:152 from 128
+character de-level, new MaxHP:152 from 152
+character level up, new MaxHP:172 from 152
+character de-level, new MaxHP:100 from 100
+character level up, new MaxHP:120 from 100
+character de-level, new MaxHP:120 from 120
+character level up, new MaxHP:140 from 120
+character de-level, new MaxHP:160 from 140
+character level up, new MaxHP:140 from 120
+character de-level, new MaxHP:160 from 140
+character level up, new MaxHP:140 from 120
+character de-level, new MaxHP:140 from 120
+character level up, new MaxHP:120 from 100
+character de-level, new MaxHP:140 from 120
+character level up, new MaxHP:120 from 100
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -1130,14 +1487,122 @@ character level up, new MaxHP:108 from 92
       <PCClass>
         <name>Thief</name>
         <classID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</classID>
-        <experience>5000</experience>
-        <level>3</level>
+        <experience>2005000</experience>
+        <level>19</level>
         <primaryClass>false</primaryClass>
         <lockedClass>false</lockedClass>
         <hdRolls>
           <int>5</int>
           <int>8</int>
           <int>16</int>
+          <int>3</int>
+          <int>9</int>
+          <int>15</int>
+          <int>4</int>
+          <int>12</int>
+          <int>16</int>
+          <int>8</int>
+          <int>11</int>
+          <int>17</int>
+          <int>4</int>
+          <int>12</int>
+          <int>19</int>
+          <int>6</int>
+          <int>10</int>
+          <int>18</int>
+          <int>7</int>
+          <int>13</int>
+          <int>21</int>
+          <int>4</int>
+          <int>8</int>
+          <int>11</int>
+          <int>4</int>
+          <int>12</int>
+          <int>18</int>
+          <int>7</int>
+          <int>14</int>
+          <int>17</int>
+          <int>7</int>
+          <int>15</int>
+          <int>18</int>
+          <int>7</int>
+          <int>14</int>
+          <int>19</int>
+          <int>4</int>
+          <int>10</int>
+          <int>3</int>
+          <int>8</int>
+          <int>7</int>
+          <int>13</int>
+          <int>7</int>
+          <int>14</int>
+          <int>6</int>
+          <int>14</int>
+          <int>8</int>
+          <int>12</int>
+          <int>19</int>
+          <int>7</int>
+          <int>11</int>
+          <int>17</int>
+          <int>4</int>
+          <int>7</int>
+          <int>11</int>
+          <int>3</int>
+          <int>8</int>
+          <int>13</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>24</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>24</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>24</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
+          <int>4</int>
+          <int>8</int>
+          <int>12</int>
+          <int>16</int>
+          <int>20</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -1235,9 +1700,9 @@ character level up, new MaxHP:108 from 92
       <int>0</int>
       <int>0</int>
     </mySaveAdjustments>
-    <myAlignmentType>0</myAlignmentType>
+    <myAlignmentType>6</myAlignmentType>
     <genderType>0</genderType>
-    <totalExperience>2005000</totalExperience>
+    <totalExperience>4005000</totalExperience>
   </PlayerClass>
   <PlayerClass>
     <name>Marry</name>

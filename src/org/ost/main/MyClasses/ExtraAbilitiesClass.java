@@ -610,6 +610,7 @@ public class ExtraAbilitiesClass implements Comparable{
 				// get CharacterClass object
 				CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 				if (oC!= null) // if no class is set == null
+					if (!pc.hasDualClass() || pc.getDualClassOK(pC))
 					for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 						// get saves from level settings
 						if (pC.getExperience()>= lE.getExpReq()) { // high enough exp

@@ -616,6 +616,9 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 			SimpleDialog.showError("Value must be a number.");
 		}
 
+		//TODO sort out adding/removing EXP for dual class character.
+		//**********************************************************
+		
 		currentCharacter.setTotalExperience(currentCharacter
 				.getTotalExperience() + nEXP);
 

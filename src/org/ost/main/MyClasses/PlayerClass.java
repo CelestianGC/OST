@@ -336,99 +336,104 @@ public class PlayerClass implements Serializable, Comparable {
 				// TODO
 				if (!hasDualClass() || 
 						(hasDualClass() && this == getPrimaryDualClass())) {
-					int nRaceStartBonus = 0;
-					boolean bRaceBonusUsed = false;
-					RaceClass oR = getMyRace().getRaceByID(ost.raceList);
-					nRaceStartBonus = oR.getBonusStartHP();
-					int nRolledHP = 0;
-					// if dual classing we only count 1 class
-					int classCount = hasDualClass()?1:getMyClass().size();
+						int nRaceStartBonus = 0;
+						boolean bRaceBonusUsed = false;
+						RaceClass oR = getMyRace().getRaceByID(ost.raceList);
+						nRaceStartBonus = oR.getBonusStartHP();
+						int nRolledHP = 0;
+						// if dual classing we only count 1 class
+						int classCount = hasDualClass()?1:getMyClass().size();
 
-					CharacterClass cC = getClassByID(ost.characterClassList);
+						CharacterClass cC = getClassByID(ost.characterClassList);
 
-					if (getHdRolls() == null) // not sure I will ever use this
-						setHdRolls(new ArrayList<Integer>());
+						if (getHdRolls() == null) // not sure I will ever use this
+							setHdRolls(new ArrayList<Integer>());
 
-					for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
+						for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
 
-						ost.dprint("new level "+(ii+1)+"\n");
+							ost.dprint("new level "+(ii+1)+"\n");
 
-						LevelClass oL = cC.getLevelByLevel(ii);
-						ost.dprint(String.format("character level: %d\nLevel level:%d\n" +
-								"character exp: %d\nlevelEXPReq: %d\n",
-								getLevel(),
-								oL.getLevel(),
-								getExperience(),
-								oL.getExpReq()));
-						if (getLevel()< (oL.getLevel()) && 
-								getExperience() >= oL.getExpReq()) {
-							int nRollingHP = 0;
-							int nDiceCount = 1;
-							int nDiceSize = 4;
-							int nClassHPBonus = 0;
+							LevelClass oL = cC.getLevelByLevel(ii);
+							ost.dprint(String.format("character level: %d\nLevel level:%d\n" +
+									"character exp: %d\nlevelEXPReq: %d\n",
+									getLevel(),
+									oL.getLevel(),
+									getExperience(),
+									oL.getExpReq()));
+							if (getLevel()< (oL.getLevel()) && 
+									getExperience() >= oL.getExpReq()) {
+								int nRollingHP = 0;
+								int nDiceCount = 1;
+								int nDiceSize = 4;
+								int nClassHPBonus = 0;
 
-							int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
-							AbilityStatClass aStat = 
-									ost.abilityStatList.getContent().get(nConScore);
-							int nConBonus = aStat.consitution.hitpointAdjustment;
-							if (hasBarbarianCon(ost))
-								nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-							if (hasFighterCon(ost))
-								nConBonus = aStat.consitution.hitpointAdjustmentFighter;
-							nConBonus /= classCount;
+								int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
+								AbilityStatClass aStat = 
+										ost.abilityStatList.getContent().get(nConScore);
+								int nConBonus = aStat.consitution.hitpointAdjustment;
+								if (hasBarbarianCon(ost))
+									nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+								if (hasFighterCon(ost))
+									nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+								nConBonus /= classCount;
 
-							nDiceCount = oL.getHitDiceNumber();
-							nDiceSize = oL.getHitDiceSize();
-							nClassHPBonus = oL.getHitPointBonus();
-							// some classes stop getting HD
-							// fighters at level 9 just get +3 hp
-							if (nDiceCount <= 0 || nDiceSize <= 0)
-								nRollingHP = 0; 
-							else
-								nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+								nDiceCount = oL.getHitDiceNumber();
+								nDiceSize = oL.getHitDiceSize();
+								nClassHPBonus = oL.getHitPointBonus();
+								// some classes stop getting HD
+								// fighters at level 9 just get +3 hp
+								if (nDiceCount <= 0 || nDiceSize <= 0)
+									nRollingHP = 0; 
+								else
+									nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
 
-							ost.dprint(String.format("Level %d\n"
-									+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
-									+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
-									(ii + 1), nDiceCount, nDiceSize, nRollingHP,
-									nClassHPBonus, nRaceStartBonus, nConBonus));
+								ost.dprint(String.format("Level %d\n"
+										+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+										+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
+										(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+										nClassHPBonus, nRaceStartBonus, nConBonus));
 
-							nRollingHP += nClassHPBonus;
-							nRollingHP += nConBonus; // update conBonus each level?
-							if (ii == 0 && !bRaceBonusUsed) {
-								nRollingHP += nRaceStartBonus;
-								bRaceBonusUsed = true;
+								nRollingHP += nClassHPBonus;
+								nRollingHP += nConBonus; // update conBonus each level?
+								if (ii == 0 && !bRaceBonusUsed) {
+									nRollingHP += nRaceStartBonus;
+									bRaceBonusUsed = true;
+								}
+								if  (hasDualClass() && 
+										getDualClassLevelHighest() > getPrimaryClassLevel()) {
+									// do not get hitpoints until primary >= previous classes
+									// when dual classing
+									ost.dprint("Level only, dual class, no HP for level "+(getLevel())+"\n");
+									nRolledHP = 0;
+								} else {
+									nRolledHP += nRollingHP;
+									ost.dprint(String.format("nRollingHP = %d\n"
+											+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+									getHdRolls().add(nRolledHP); // saved for de-level?
+								}
+								setLevel((getLevel()+1)); // set level to new level
+							} else if (oL.getExpReq() > getExperience()) {
+								//to little exp or same level
+								//no need to go any further
+								break;
 							}
-							nRolledHP += nRollingHP;
-							ost.dprint(String.format("nRollingHP = %d\n"
-									+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-							getHdRolls().add(nRolledHP); // saved for de-level?
-							setLevel((getLevel()+1)); // set level to new level
-						} else if (oL.getExpReq() > getExperience()) {
-							//to little exp or same level
-							//no need to go any further
-							break;
 						}
+
+						// multi-classed divide hp by number of classes
+						nRolledHP /= classCount;
+						int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+						int newHP = getHpMax()+nRolledHP;
+						int oldHP = getHpMax();
+
+						ost.dprint(String.format("hpDIFF = %d\n"
+								+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+						setLog(getLog()+"character level up, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+						setHpCurrent((getHpMax()+nRolledHP));
+						setHpMax((getHpMax()+nRolledHP));
+						ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
+						ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
 					}
-
-					// multi-classed divide hp by number of classes
-					nRolledHP /= classCount;
-					int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
-					int newHP = getHpMax()+nRolledHP;
-					int oldHP = getHpMax();
-
-					ost.dprint(String.format("hpDIFF = %d\n"
-							+ "original = %d\n----------------\n", hpDiff, getHpMax()));
-
-					setLog(getLog()+"character level up, new MaxHP:"+ newHP +" from "+oldHP+"\n");
-
-					setHpCurrent((getHpMax()+nRolledHP));
-					setHpMax((getHpMax()+nRolledHP));
-
-					ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
-					ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
 				}
-			}
 		}
 		
 		public void deLevel(MainClass ost) {
@@ -444,10 +449,10 @@ public class PlayerClass implements Serializable, Comparable {
 					if (getHdRolls() == null)
 						setHdRolls(new ArrayList<Integer>());
 
-					for (int ii = (getLevel()-1); ii >= 0; ii--) {
+					for (int ii = (getLevel()); ii >= 0; ii--) {
 						LevelClass oL = cC.getLevelByLevel(ii);
 
-						ost.dprint("checking deLevel "+oL.getLevel()+"\n");
+						ost.dprint("checking deLevel "+(oL.getLevel()-1)+"\n");
 
 						if (getExperience() < oL.getExpReq()) {
 							int nRollingHP = 0;
@@ -474,19 +479,25 @@ public class PlayerClass implements Serializable, Comparable {
 								nRollingHP = 0; 
 							else
 								nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+							if  (hasDualClass() && 
+									getDualClassLevelHighest() >= getPrimaryClassLevel()) {
+								// do not get hitpoints until primary >= previous classes
+								// when dual classing
+								ost.dprint("DE-Level only, dual class, no HP for level "+getLevel()+"\n");
+							} else {
+								ost.dprint(String.format("deLevel %d\n"
+										+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+										+ "plus ConBonus %d\n",
+										(ii), nDiceCount, nDiceSize, nRollingHP,
+										nClassHPBonus, nConBonus));
 
-							ost.dprint(String.format("deLevel %d\n"
-									+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
-									+ "plus ConBonus %d\n",
-									(ii + 1), nDiceCount, nDiceSize, nRollingHP,
-									nClassHPBonus, nConBonus));
-
-							nRollingHP += nClassHPBonus;
-							nRollingHP += nConBonus; // update conBonus each level?
-							nRolledHP -= nRollingHP;
-							ost.dprint(String.format("nRollingHP = %d\n"
-									+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-							//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
+								nRollingHP += nClassHPBonus;
+								nRollingHP += nConBonus; // update conBonus each level?
+								nRolledHP -= nRollingHP;
+								ost.dprint(String.format("nRollingHP = %d\n"
+										+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+								//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
+							}
 							setLevel((getLevel()-1)); // set level to new level
 						}
 					}
@@ -1376,7 +1387,6 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<Integer> getAllSaves(MainClass ost) {
-		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
@@ -1393,6 +1403,7 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+					if (!hasDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getSaves().size();i++) {
 						// if current save value greater than this 
 						// use new value
@@ -1427,7 +1438,6 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<Integer> getAllSaveAdjustments(MainClass ost) {
-		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
@@ -1441,17 +1451,19 @@ public class PlayerClass implements Serializable, Comparable {
 			// get CharacterClass object
 			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
-			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
-				// get saves from level settings
-				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					for (int i=0;i<lE.getSavesAdjustments().size();i++) {
-						// if current save value greater than this 
-						// use new value
-						if (lE.getSavesAdjustments().get(i)!= 0)
-							saves.set(i,saves.get(i)+lE.getSavesAdjustments().get(i));
-					}
-				} // was high enough level/exp
-			}
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					// get saves from level settings
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (!hasDualClass() || getDualClassOK(pC))
+							for (int i=0;i<lE.getSavesAdjustments().size();i++) {
+								// if current save value greater than this 
+								// use new value
+								if (lE.getSavesAdjustments().get(i)!= 0) {
+									saves.set(i,saves.get(i)+lE.getSavesAdjustments().get(i));
+								}
+							}
+					} // was high enough level/exp
+				}
 		}
 		// now flip through all extraAbilities
 		for (ExtraAbilitiesClass eA : extras)
@@ -1497,7 +1509,6 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<AbilityScoreClass> getAllAbilityScoreAdjustments(MainClass ost) {
-		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this,ost);
@@ -1512,17 +1523,18 @@ public class PlayerClass implements Serializable, Comparable {
 			// get CharacterClass object
 			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
-			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
-				// get saves from level settings
-				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					for (int i=0;i<lE.getAbilityAdjustment().size();i++) {
-						AbilityScoreClass oS = lE.getAbilityAdjustment().get(i);
-						AbilityScoreClass aS = aScores.get(i);
-						aS = abilityScoreAdjCompare(oS, aS);
-					}
-				} // was high enough level/exp
-				
-			}
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					// get saves from level settings
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (!hasDualClass() || getDualClassOK(pC))
+							for (int i=0;i<lE.getAbilityAdjustment().size();i++) {
+								AbilityScoreClass oS = lE.getAbilityAdjustment().get(i);
+								AbilityScoreClass aS = aScores.get(i);
+								aS = abilityScoreAdjCompare(oS, aS);
+							}
+					} // was high enough level/exp
+
+				}
 		}
 
 		// get racial adjustments
@@ -1655,7 +1667,8 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					for (int i=0;i<lE.getThiefSkills().size();i++) {
+					if (!hasDualClass() || getDualClassOK(pC))
+						for (int i=0;i<lE.getThiefSkills().size();i++) {
 						SkillsClass oS = lE.getThiefSkills().get(i);
 						SkillsClass aS = aScores.get(i);
 						aS = skillsCompare(oS, aS);
@@ -1726,6 +1739,7 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+					if (!hasDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getThiefSkillAdjustments().size();i++) {
 						SkillsClass oS = lE.getThiefSkillAdjustments().get(i);
 						SkillsClass aS = aScores.get(i);
@@ -1808,6 +1822,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (!hasDualClass() || getDualClassOK(pC))
 						for (int i=0;i<lE.getSpellsPerLevelArcane().length;i++) {
 							int iS = lE.getSpellsPerLevelArcane()[i];
 							if (iS > aScores[i])
@@ -1854,6 +1869,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (!hasDualClass() || getDualClassOK(pC))
 						for (int i=0;i<lE.getSpellsPerLevelDivine().length;i++) {
 							int iS = lE.getSpellsPerLevelDivine()[i];
 							if (iS > aScores[i])
@@ -1952,7 +1968,6 @@ public class PlayerClass implements Serializable, Comparable {
 
 	
 	public int getTHACO(MainClass ost) {
-		
 		// get all the extras
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
@@ -1964,15 +1979,15 @@ public class PlayerClass implements Serializable, Comparable {
 			// get CharacterClass object
 			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
-			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
-				// get saves from level settings
-				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					if (lE.getThaco() < bestTHACO)
-						bestTHACO = lE.getThaco();
-				} // was high enough level/exp
-				
-			}
-		}
+				if (!hasDualClass() || getDualClassOK(pC))
+				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
+					// get saves from level settings
+					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
+						if (lE.getThaco() < bestTHACO) 
+							bestTHACO = lE.getThaco();
+						} // was high enough level/exp
+					}
+				}
 
 //		// get racial adjustments
 //		RaceClass myRace = RaceClass.getRaceFromMyID(getMyRace().getRaceID(),rList);
@@ -2014,6 +2029,7 @@ public class PlayerClass implements Serializable, Comparable {
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
 					// get the lowest roll needed to hit
+					if (!hasDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getAttackMatrix().length;i++) {
 						int curTHAC = lE.getAttackMatrix()[i];
 						if (curTHAC < aMatrix[i])
@@ -2752,6 +2768,55 @@ public class PlayerClass implements Serializable, Comparable {
 	}
 
 	/**
+	 * return the highest level in dual class set other
+	 * than primary class
+	 * 
+	 * @return
+	 */
+	public int getDualClassLevelHighest() {
+		int nLevel = 0;
+		
+		for(PCClass cC : getMyClass())
+			if (cC.isLockedClass() && cC.getLevel()> nLevel)
+				nLevel = cC.getLevel();
+		
+		return nLevel;
+	}
+	/**
+	 * return level of the primary class for a dual class character
+	 * 
+	 * @return
+	 */
+	public int getPrimaryClassLevel() {
+		int nLevel = 0;
+		PCClass cC = getPrimaryDualClass();
+		if (cC != null)
+			nLevel = cC.getLevel();
+		return nLevel;
+	}
+	
+	/**
+	 * return if dual class requirements for access to class feature
+	 * save, thaco/etc is valid
+	 * 
+	 * @param cC
+	 * @return
+	 */
+	public boolean getDualClassOK(PCClass cC) {
+		boolean bOK = false;
+		boolean bDualClass = hasDualClass();
+		int nDualClassLevel = getDualClassLevelHighest();
+		int nPrimaryClassLevel = getPrimaryClassLevel();
+
+		if (bDualClass && nDualClassLevel <= nPrimaryClassLevel)
+			bOK = true;
+
+		if (cC !=null && cC == getPrimaryDualClass())
+			bOK = true;
+		
+		return bOK;
+	}
+	/**
 	 * add PCClass to player, set addDualClass true if it is dual class
 	 * 
 	 * @param o
@@ -2773,6 +2838,11 @@ public class PlayerClass implements Serializable, Comparable {
 		return(e);
 	}
 	
+	/**
+	 * remove PCClass w/matching myID from object
+	 *  
+	 * @param myID
+	 */
 	public void removePCClass(String myID) {
 		ArrayList<PCClass> pcList = new ArrayList<>();
 
@@ -2790,18 +2860,27 @@ public class PlayerClass implements Serializable, Comparable {
 		}
 	}
 	
+	/**
+	 * reset level to 0 and re-level up hit points
+	 * 
+	 * @param ost
+	 */
 	public void reRollHitPoints(MainClass ost) {
-		for (PCClass pC : getMyClass())
-			if (!pC.isLockedClass())
-				pC.setLevel(0);// set level to 0 so it re-levels character up
 		
 		if (!hasDualClass()) {
+			for (PCClass pC : getMyClass())
+				pC.setLevel(0);// set level to 0 so it re-levels character up
 			setHpCurrent(0);
 			setHpMax(0);
 		} else {
 			// delevel dualclass primary class to reduce
 			// hitpoints
-			getPrimaryDualClass().deLevel(ost);
+			PCClass pCC = getPrimaryDualClass();
+			int nSavedEXP = pCC.getExperience();
+			pCC.setExperience(0);
+			pCC.deLevel(ost);
+			pCC.setExperience(nSavedEXP);
+			
 		}
 		updateLevelDifferential(ost, -1, false);
 	}
