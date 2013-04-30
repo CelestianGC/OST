@@ -15,6 +15,7 @@ import javax.swing.JList;
 import org.ost.main.MyClasses.CharacterClass;
 import org.ost.main.MyClasses.CharacterClassList;
 import org.ost.main.MyClasses.MyCellRendererList;
+import org.ost.main.MyClasses.PlayerClass;
 import org.ost.main.MyUtils.SimpleDialog;
 
 /**
@@ -26,15 +27,29 @@ public class Option_Set_CharacterClass extends javax.swing.JDialog {
 	private java.awt.Frame parent;
 	private ArrayList<CharacterClass> eCurrent;
 	private CharacterClassList eList;
+	private PlayerClass pc;
+	public boolean classesChanged = false;
 
 	/** Creates new form Option_Set_Race */
 	public Option_Set_CharacterClass(java.awt.Frame parent, boolean modal,
-			MainClass ost, ArrayList<CharacterClass> setCurrent) {
+			MainClass ost, ArrayList<CharacterClass> setCurrent, PlayerClass oPlayer) {
 		super(parent, modal);
 		this.parent = parent;
 		this.ost = ost;
 		this.eCurrent = setCurrent;
 		this.eList = ost.characterClassList;
+		this.pc = oPlayer;
+		if (pc != null) {
+			ArrayList<String> cList = new ArrayList<String>();
+			for (PlayerClass.PCClass pCC : pc.getMyClass())
+				cList.add(pCC.getClassID());
+			this.eCurrent = 
+					CharacterClass.getAllowed(cList,ost.characterClassList);
+		}
+		if (pc == null && eCurrent == null) {
+			SimpleDialog.showError("pc == null, eCurrent == null in Option_Set_CharacterClass");
+		}
+		
 		initComponents();
 
 		extraAllowedModel = new DefaultListModel<>();
@@ -298,6 +313,10 @@ public class Option_Set_CharacterClass extends javax.swing.JDialog {
 					if (bDelete
 							|| SimpleDialog.AskYN(this, "Remove " + sRem + "?")) {
 						bDelete = true;
+						if (pc != null) {
+							pc.removePCClass(o.getMyID());
+							classesChanged = true;
+						}
 						eCurrent.remove(o);
 						extraAllowedModel.removeElement(o);
 					}
@@ -313,7 +332,33 @@ public class Option_Set_CharacterClass extends javax.swing.JDialog {
 		if (!oSelect.isEmpty()) {
 			for (Object oNew : oSelect)
 				if (oNew != null && !eCurrent.contains(oNew)) {
-					eCurrent.add((CharacterClass) oNew);
+					if (pc != null) {
+						if (eCurrent.size() > 0) {
+							//TODO test this
+							if (pc.hasDualClass() || SimpleDialog.AskYN(parent, "Apply as dual class?")) {
+								pc.addPCClass((CharacterClass) oNew, true);
+								eCurrent.add((CharacterClass) oNew);
+							} else if (SimpleDialog.AskYN(parent, "Apply as multi-class?")) {
+								pc.addPCClass((CharacterClass) oNew, false);
+								eCurrent.add((CharacterClass) oNew);
+							} else {
+								pc.getMyClass().clear();
+								pc.addPCClass((CharacterClass) oNew, false);
+								
+								eCurrent.clear();
+								eCurrent.add((CharacterClass) oNew);
+							}
+						} else {
+							//TODO add to player
+							pc.addPCClass((CharacterClass) oNew, false);
+							// no class set, add
+							eCurrent.add((CharacterClass) oNew);
+						}
+						classesChanged = true;
+					} else
+						eCurrent.add((CharacterClass) oNew);
+
+
 				}
 			updateAllowed(extraAllowedList, eCurrent);
 			updateList(extraListList, eList);

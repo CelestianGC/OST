@@ -102,43 +102,43 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 
 		// combat
 
-		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
-		pcMaxHPLabel.setText(String.format("%d", pc.getHpMax()));
-		int iTHACO = pc.getTHACO(ost);
-		pcTHACOLabel.setText(String.format("%d", iTHACO));
-		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
-				+ iTHACO);
-
-		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
-			switch (i) {
-			case AC_NORMAL: {
-				int setAC = pc.getArmorClassByType(AC_NORMAL, ost);
-				pcArmorClassLabel.setText(String.format("%d", setAC));
-				pcArmorClassLabel.setToolTipText(AC_NAMES[i] + "," + ost.log);
-			}
-				break;
-			case AC_REAR: {
-				int setACRear = pc.getArmorClassByType(AC_REAR, ost);
-				pcArmorClassRearLabel.setText(String.format("%d", setACRear));
-				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i] + ","
-						+ ost.log);
-			}
-				break;
-			case AC_SHIELDLESS: {
-				int setACShieldless = pc
-						.getArmorClassByType(AC_SHIELDLESS, ost);
-				pcArmorClassShieldlessLabel.setText(String.format("%d",
-						setACShieldless));
-			}
-				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i] + ","
-						+ ost.log);
-				break;
-
-			default:
-				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
-				break;
-			}
-		}
+//		pcCurrentHPLabel.setText(String.format("%d", pc.getHpCurrent()));
+//		pcMaxHPLabel.setText(String.format("%d", pc.getHpMax()));
+//		int iTHACO = pc.getTHACO(ost);
+//		pcTHACOLabel.setText(String.format("%d", iTHACO));
+//		pcTHACOLabel.setToolTipText("Roll needed to hit armor class 0 is "
+//				+ iTHACO);
+//
+//		for (int i = 0; i < pc.getArmorRatings().size(); i++) {
+//			switch (i) {
+//			case AC_NORMAL: {
+//				int setAC = pc.getArmorClassByType(AC_NORMAL, ost);
+//				pcArmorClassLabel.setText(String.format("%d", setAC));
+//				pcArmorClassLabel.setToolTipText(AC_NAMES[i] + "," + ost.log);
+//			}
+//				break;
+//			case AC_REAR: {
+//				int setACRear = pc.getArmorClassByType(AC_REAR, ost);
+//				pcArmorClassRearLabel.setText(String.format("%d", setACRear));
+//				pcArmorClassRearLabel.setToolTipText(AC_NAMES[i] + ","
+//						+ ost.log);
+//			}
+//				break;
+//			case AC_SHIELDLESS: {
+//				int setACShieldless = pc
+//						.getArmorClassByType(AC_SHIELDLESS, ost);
+//				pcArmorClassShieldlessLabel.setText(String.format("%d",
+//						setACShieldless));
+//			}
+//				pcArmorClassShieldlessLabel.setToolTipText(AC_NAMES[i] + ","
+//						+ ost.log);
+//				break;
+//
+//			default:
+//				ost.dprint("Unknown AC type in Panel_Player_Combat updatePanel()\n");
+//				break;
+//			}
+//		}
 
 		Utils.updateMatrixPanelPC(attackMatrixPanel, pc, ost);
 
@@ -224,18 +224,6 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		jScrollPane1 = new javax.swing.JScrollPane();
 		pcCombatMatrixTable = new javax.swing.JTable();
 		combatPanel = new javax.swing.JPanel();
-		jLabel29 = new javax.swing.JLabel();
-		pcArmorClassLabel = new javax.swing.JLabel();
-		jLabel31 = new javax.swing.JLabel();
-		pcArmorClassShieldlessLabel = new javax.swing.JLabel();
-		jLabel33 = new javax.swing.JLabel();
-		pcArmorClassRearLabel = new javax.swing.JLabel();
-		jLabel35 = new javax.swing.JLabel();
-		pcCurrentHPLabel = new javax.swing.JLabel();
-		jLabel45 = new javax.swing.JLabel();
-		pcMaxHPLabel = new javax.swing.JLabel();
-		pcTHACOLabel = new javax.swing.JLabel();
-		jLabel47 = new javax.swing.JLabel();
 		attackMatrixPanel = new javax.swing.JPanel();
 
 		pcCombatMatrixTable.setBackground(new java.awt.Color(255, 204, 102));
@@ -280,133 +268,11 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 		combatPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(
 				new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0),
 						1, true), "Combat"));
-
-		jLabel29.setText("AC");
-		jLabel29.setToolTipText("Armor Class");
-
-		pcArmorClassLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcArmorClassLabel.setText("-10");
-		pcArmorClassLabel.setToolTipText("Normal Armor Class.");
-
-		jLabel31.setText("/");
-
-		pcArmorClassShieldlessLabel
-				.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcArmorClassShieldlessLabel.setText("-10");
-		pcArmorClassShieldlessLabel
-				.setToolTipText("Armor class without shield");
-
-		jLabel33.setText("/");
-
-		pcArmorClassRearLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcArmorClassRearLabel.setText("-10");
-		pcArmorClassRearLabel.setToolTipText("Armor class from rear.");
-
-		jLabel35.setText("HP");
-		jLabel35.setToolTipText("Current hitpoint total.");
-
-		pcCurrentHPLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcCurrentHPLabel.setText("999");
-
-		jLabel45.setText("MaxHP");
-		jLabel45.setToolTipText("Maximum hitpoints.");
-
-		pcMaxHPLabel.setFont(new java.awt.Font("Segoe UI", 2, 15));
-		pcMaxHPLabel.setText("999");
-
-		pcTHACOLabel.setFont(new java.awt.Font("Segoe UI", 1, 15));
-		pcTHACOLabel.setText("00");
-
-		jLabel47.setText("THACO");
-		jLabel47.setToolTipText("To hit armor class 0 value.");
+		combatPanel.setLayout(new java.awt.BorderLayout());
 
 		attackMatrixPanel.setBackground(new java.awt.Color(0, 0, 0));
 		attackMatrixPanel.setLayout(new java.awt.GridLayout(2, 0, 1, 1));
-
-		javax.swing.GroupLayout combatPanelLayout = new javax.swing.GroupLayout(
-				combatPanel);
-		combatPanel.setLayout(combatPanelLayout);
-		combatPanelLayout
-				.setHorizontalGroup(combatPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								combatPanelLayout
-										.createSequentialGroup()
-										.addComponent(jLabel45)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(pcMaxHPLabel)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(jLabel35)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(pcCurrentHPLabel)
-										.addGap(164, 164, 164)
-										.addComponent(jLabel29)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(pcArmorClassLabel)
-										.addGap(0, 0, 0)
-										.addComponent(jLabel31)
-										.addGap(0, 0, 0)
-										.addComponent(
-												pcArmorClassShieldlessLabel)
-										.addGap(0, 0, 0)
-										.addComponent(jLabel33)
-										.addGap(0, 0, 0)
-										.addComponent(pcArmorClassRearLabel)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-												245, Short.MAX_VALUE)
-										.addComponent(jLabel47)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(pcTHACOLabel)
-										.addContainerGap())
-						.addComponent(attackMatrixPanel,
-								javax.swing.GroupLayout.DEFAULT_SIZE, 750,
-								Short.MAX_VALUE));
-		combatPanelLayout
-				.setVerticalGroup(combatPanelLayout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								combatPanelLayout
-										.createSequentialGroup()
-										.addGroup(
-												combatPanelLayout
-														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel29)
-														.addComponent(
-																pcArmorClassLabel)
-														.addComponent(jLabel31)
-														.addComponent(
-																pcArmorClassShieldlessLabel)
-														.addComponent(jLabel33)
-														.addComponent(
-																pcArmorClassRearLabel)
-														.addComponent(jLabel45)
-														.addComponent(
-																pcMaxHPLabel)
-														.addComponent(jLabel35)
-														.addComponent(
-																pcCurrentHPLabel)
-														.addComponent(
-																pcTHACOLabel)
-														.addComponent(jLabel47))
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(
-												attackMatrixPanel,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												42,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addContainerGap(
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												Short.MAX_VALUE)));
+		combatPanel.add(attackMatrixPanel, java.awt.BorderLayout.CENTER);
 
 		add(combatPanel, java.awt.BorderLayout.LINE_START);
 	}// </editor-fold>
@@ -438,20 +304,8 @@ public class Panel_Player_Combat extends javax.swing.JPanel {
 	// Variables declaration - do not modify
 	private javax.swing.JPanel attackMatrixPanel;
 	private javax.swing.JPanel combatPanel;
-	private javax.swing.JLabel jLabel29;
-	private javax.swing.JLabel jLabel31;
-	private javax.swing.JLabel jLabel33;
-	private javax.swing.JLabel jLabel35;
-	private javax.swing.JLabel jLabel45;
-	private javax.swing.JLabel jLabel47;
 	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JLabel pcArmorClassLabel;
-	private javax.swing.JLabel pcArmorClassRearLabel;
-	private javax.swing.JLabel pcArmorClassShieldlessLabel;
 	private javax.swing.JTable pcCombatMatrixTable;
-	private javax.swing.JLabel pcCurrentHPLabel;
-	private javax.swing.JLabel pcMaxHPLabel;
-	private javax.swing.JLabel pcTHACOLabel;
 	// End of variables declaration//GEN-END:variables
 
 }

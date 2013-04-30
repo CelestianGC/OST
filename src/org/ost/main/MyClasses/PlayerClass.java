@@ -306,7 +306,8 @@ public class PlayerClass implements Serializable, Comparable {
 		public String classID; // myID for the class
 		public int experience;
 		public int level;
-		public boolean primaryClass; //when dual classing we need to know current class
+		public boolean primaryClass; // not used at this time
+		public boolean lockedClass; // class exp/level locked, dual classed to something else.
 		public ArrayList<Integer> hdRolls; // list of health rolled per level
 
 		public PCClass(String name, String classID) {
@@ -333,171 +334,178 @@ public class PlayerClass implements Serializable, Comparable {
 		public void levelUP(MainClass ost) {
 			if (getMyClass().size() > 0) {
 				// TODO
-				int nRaceStartBonus = 0;
-				boolean bRaceBonusUsed = false;
-				RaceClass oR = getMyRace().getRaceByID(ost.raceList);
-				nRaceStartBonus = oR.getBonusStartHP();
-				int nRolledHP = 0;
-				int classCount = getMyClass().size();
+				if (!hasDualClass() || 
+						(hasDualClass() && this == getPrimaryDualClass())) {
+					int nRaceStartBonus = 0;
+					boolean bRaceBonusUsed = false;
+					RaceClass oR = getMyRace().getRaceByID(ost.raceList);
+					nRaceStartBonus = oR.getBonusStartHP();
+					int nRolledHP = 0;
+					// if dual classing we only count 1 class
+					int classCount = hasDualClass()?1:getMyClass().size();
 
-				CharacterClass cC = getClassByID(ost.characterClassList);
+					CharacterClass cC = getClassByID(ost.characterClassList);
 
-				if (getHdRolls() == null) // not sure I will ever use this
-					setHdRolls(new ArrayList<Integer>());
+					if (getHdRolls() == null) // not sure I will ever use this
+						setHdRolls(new ArrayList<Integer>());
 
-				for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
+					for (int ii = 0; ii < cC.getLevelDetails().size(); ii++) {
 
-					ost.dprint("new level "+(ii+1)+"\n");
+						ost.dprint("new level "+(ii+1)+"\n");
 
-					LevelClass oL = cC.getLevelByLevel(ii);
-					ost.dprint(String.format("character level: %d\nLevel level:%d\n" +
-							"character exp: %d\nlevelEXPReq: %d\n",
-							getLevel(),
-							oL.getLevel(),
-							getExperience(),
-							oL.getExpReq()));
-					if (getLevel()< (oL.getLevel()) && 
-							getExperience() >= oL.getExpReq()) {
-						int nRollingHP = 0;
-						int nDiceCount = 1;
-						int nDiceSize = 4;
-						int nClassHPBonus = 0;
+						LevelClass oL = cC.getLevelByLevel(ii);
+						ost.dprint(String.format("character level: %d\nLevel level:%d\n" +
+								"character exp: %d\nlevelEXPReq: %d\n",
+								getLevel(),
+								oL.getLevel(),
+								getExperience(),
+								oL.getExpReq()));
+						if (getLevel()< (oL.getLevel()) && 
+								getExperience() >= oL.getExpReq()) {
+							int nRollingHP = 0;
+							int nDiceCount = 1;
+							int nDiceSize = 4;
+							int nClassHPBonus = 0;
 
-						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
-						AbilityStatClass aStat = 
-								ost.abilityStatList.getContent().get(nConScore);
-						int nConBonus = aStat.consitution.hitpointAdjustment;
-						if (hasBarbarianCon(ost))
-							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-						if (hasFighterCon(ost))
-							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
-						nConBonus /= classCount;
+							int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
+							AbilityStatClass aStat = 
+									ost.abilityStatList.getContent().get(nConScore);
+							int nConBonus = aStat.consitution.hitpointAdjustment;
+							if (hasBarbarianCon(ost))
+								nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+							if (hasFighterCon(ost))
+								nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+							nConBonus /= classCount;
 
-						nDiceCount = oL.getHitDiceNumber();
-						nDiceSize = oL.getHitDiceSize();
-						nClassHPBonus = oL.getHitPointBonus();
-						// some classes stop getting HD
-						// fighters at level 9 just get +3 hp
-						if (nDiceCount <= 0 || nDiceSize <= 0)
-							nRollingHP = 0; 
-						else
-							nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+							nDiceCount = oL.getHitDiceNumber();
+							nDiceSize = oL.getHitDiceSize();
+							nClassHPBonus = oL.getHitPointBonus();
+							// some classes stop getting HD
+							// fighters at level 9 just get +3 hp
+							if (nDiceCount <= 0 || nDiceSize <= 0)
+								nRollingHP = 0; 
+							else
+								nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
 
-						ost.dprint(String.format("Level %d\n"
-								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
-								+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
-								(ii + 1), nDiceCount, nDiceSize, nRollingHP,
-								nClassHPBonus, nRaceStartBonus, nConBonus));
+							ost.dprint(String.format("Level %d\n"
+									+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+									+ "plus RaceStart %d\n" + "plus ConBonus %d\n",
+									(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+									nClassHPBonus, nRaceStartBonus, nConBonus));
 
-						nRollingHP += nClassHPBonus;
-						nRollingHP += nConBonus; // update conBonus each level?
-						if (ii == 0 && !bRaceBonusUsed) {
-							nRollingHP += nRaceStartBonus;
-							bRaceBonusUsed = true;
+							nRollingHP += nClassHPBonus;
+							nRollingHP += nConBonus; // update conBonus each level?
+							if (ii == 0 && !bRaceBonusUsed) {
+								nRollingHP += nRaceStartBonus;
+								bRaceBonusUsed = true;
+							}
+							nRolledHP += nRollingHP;
+							ost.dprint(String.format("nRollingHP = %d\n"
+									+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+							getHdRolls().add(nRolledHP); // saved for de-level?
+							setLevel((getLevel()+1)); // set level to new level
+						} else if (oL.getExpReq() > getExperience()) {
+							//to little exp or same level
+							//no need to go any further
+							break;
 						}
-						nRolledHP += nRollingHP;
-						ost.dprint(String.format("nRollingHP = %d\n"
-								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-						getHdRolls().add(nRolledHP); // saved for de-level?
-						setLevel((getLevel()+1)); // set level to new level
-					} else if (oL.getExpReq() > getExperience()) {
-						//to little exp or same level
-						//no need to go any further
-						break;
 					}
+
+					// multi-classed divide hp by number of classes
+					nRolledHP /= classCount;
+					int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+					int newHP = getHpMax()+nRolledHP;
+					int oldHP = getHpMax();
+
+					ost.dprint(String.format("hpDIFF = %d\n"
+							+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+
+					setLog(getLog()+"character level up, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+
+					setHpCurrent((getHpMax()+nRolledHP));
+					setHpMax((getHpMax()+nRolledHP));
+
+					ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
+					ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
 				}
-
-				// multi-classed divide hp by number of classes
-				nRolledHP /= classCount;
-				int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
-				int newHP = getHpMax()+nRolledHP;
-				int oldHP = getHpMax();
-
-				ost.dprint(String.format("hpDIFF = %d\n"
-						+ "original = %d\n----------------\n", hpDiff, getHpMax()));
-
-				setLog(getLog()+"character level up, new MaxHP:"+ newHP +" from "+oldHP+"\n");
-
-				setHpCurrent((getHpMax()+nRolledHP));
-				setHpMax((getHpMax()+nRolledHP));
-
-				ost.dprint("Level MaxHP:"+ getHpMax()+"\n");
-				ost.dprint("Level CurHP:"+ getHpCurrent()+"\n");
 			}
 		}
 		
 		public void deLevel(MainClass ost) {
-			
+
 			if (getMyClass().size() > 0) {
-				int classCount = getMyClass().size();
-				int nRolledHP = 0;
+				if (!hasDualClass() || 
+						(hasDualClass() && this == getPrimaryDualClass())) {
+					int classCount = hasDualClass()?1:getMyClass().size();
+					int nRolledHP = 0;
 
-				CharacterClass cC = getClassByID(ost.characterClassList);
+					CharacterClass cC = getClassByID(ost.characterClassList);
 
-				if (getHdRolls() == null)
-					setHdRolls(new ArrayList<Integer>());
+					if (getHdRolls() == null)
+						setHdRolls(new ArrayList<Integer>());
 
-				for (int ii = (getLevel()-1); ii >= 0; ii--) {
-					LevelClass oL = cC.getLevelByLevel(ii);
+					for (int ii = (getLevel()-1); ii >= 0; ii--) {
+						LevelClass oL = cC.getLevelByLevel(ii);
 
-					ost.dprint("checking deLevel "+oL.getLevel()+"\n");
+						ost.dprint("checking deLevel "+oL.getLevel()+"\n");
 
-					if (getExperience() < oL.getExpReq()) {
-						int nRollingHP = 0;
-						int nDiceCount = 1;
-						int nDiceSize = 4;
-						int nClassHPBonus = 0;
+						if (getExperience() < oL.getExpReq()) {
+							int nRollingHP = 0;
+							int nDiceCount = 1;
+							int nDiceSize = 4;
+							int nClassHPBonus = 0;
 
-						int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
-						AbilityStatClass aStat = 
-								ost.abilityStatList.getContent().get(nConScore);
-						int nConBonus = aStat.consitution.hitpointAdjustment;
-						if (hasBarbarianCon(ost))
-							nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
-						if (hasFighterCon(ost))
-							nConBonus = aStat.consitution.hitpointAdjustmentFighter;
-						nConBonus /= classCount;
+							int nConScore = getAbilityScore(ABILITY_CONSTITUTION,ost);
+							AbilityStatClass aStat = 
+									ost.abilityStatList.getContent().get(nConScore);
+							int nConBonus = aStat.consitution.hitpointAdjustment;
+							if (hasBarbarianCon(ost))
+								nConBonus = aStat.consitution.hitpointAdjustmentBarbarian;
+							if (hasFighterCon(ost))
+								nConBonus = aStat.consitution.hitpointAdjustmentFighter;
+							nConBonus /= classCount;
 
-						nDiceCount = oL.getHitDiceNumber();
-						nDiceSize = oL.getHitDiceSize();
-						nClassHPBonus = oL.getHitPointBonus();
-						// some classes stop getting HD
-						// fighters at level 9 just get +3 hp
-						if (nDiceCount <= 0 || nDiceSize <= 0)
-							nRollingHP = 0; 
-						else
-							nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
+							nDiceCount = oL.getHitDiceNumber();
+							nDiceSize = oL.getHitDiceSize();
+							nClassHPBonus = oL.getHitPointBonus();
+							// some classes stop getting HD
+							// fighters at level 9 just get +3 hp
+							if (nDiceCount <= 0 || nDiceSize <= 0)
+								nRollingHP = 0; 
+							else
+								nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
 
-						ost.dprint(String.format("deLevel %d\n"
-								+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
-								+ "plus ConBonus %d\n",
-								(ii + 1), nDiceCount, nDiceSize, nRollingHP,
-								nClassHPBonus, nConBonus));
+							ost.dprint(String.format("deLevel %d\n"
+									+ "rolling %dd%d (%d)\n" + "plus classHP %d\n"
+									+ "plus ConBonus %d\n",
+									(ii + 1), nDiceCount, nDiceSize, nRollingHP,
+									nClassHPBonus, nConBonus));
 
-						nRollingHP += nClassHPBonus;
-						nRollingHP += nConBonus; // update conBonus each level?
-						nRolledHP -= nRollingHP;
-						ost.dprint(String.format("nRollingHP = %d\n"
-								+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
-						//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
-						setLevel((getLevel()-1)); // set level to new level
+							nRollingHP += nClassHPBonus;
+							nRollingHP += nConBonus; // update conBonus each level?
+							nRolledHP -= nRollingHP;
+							ost.dprint(String.format("nRollingHP = %d\n"
+									+ "nRolledHP = %d\n", nRollingHP, nRolledHP));
+							//						pC.getHdRolls().add(nRolledHP); // saved for de-level?
+							setLevel((getLevel()-1)); // set level to new level
+						}
 					}
+					// multi-classed divide hp by number of classes
+					nRolledHP /= classCount;
+					int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
+					int newHP = getHpMax()-nRolledHP;
+					int oldHP = getHpMax();
+					ost.dprint(String.format("hpDIFF = %d\n"
+							+ "original = %d\n----------------\n", hpDiff, getHpMax()));
+
+					setLog(getLog()+"character de-level, new MaxHP:"+ newHP +" from "+oldHP+"\n");
+
+					setHpCurrent((getHpMax()+nRolledHP));
+					setHpMax((getHpMax()+nRolledHP));
+
+					ost.dprint("DeLevel MaxHP:"+ getHpMax()+"\n");
+					ost.dprint("DeLevel CurHP:"+ getHpCurrent()+"\n");
 				}
-				// multi-classed divide hp by number of classes
-				nRolledHP /= classCount;
-				int hpDiff = ((getHpMax()+nRolledHP)-getHpMax());
-				int newHP = getHpMax()-nRolledHP;
-				int oldHP = getHpMax();
-				ost.dprint(String.format("hpDIFF = %d\n"
-						+ "original = %d\n----------------\n", hpDiff, getHpMax()));
-
-				setLog(getLog()+"character de-level, new MaxHP:"+ newHP +" from "+oldHP+"\n");
-
-				setHpCurrent((getHpMax()+nRolledHP));
-				setHpMax((getHpMax()+nRolledHP));
-
-				ost.dprint("DeLevel MaxHP:"+ getHpMax()+"\n");
-				ost.dprint("DeLevel CurHP:"+ getHpCurrent()+"\n");
 			}
 		}
 		
@@ -517,6 +525,20 @@ public class PlayerClass implements Serializable, Comparable {
 			return oFound;
 		}
 		
+		/**
+		 * @return the lockedClass
+		 */
+		public boolean isLockedClass() {
+			return lockedClass;
+		}
+
+		/**
+		 * @param lockedClass the lockedClass to set
+		 */
+		public void setLockedClass(boolean lockedClass) {
+			this.lockedClass = lockedClass;
+		}
+
 		/**
 		 * @return the name
 		 */
@@ -2573,7 +2595,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * 
 	 * @return
 	 */
-	public ArrayList<EquipmentClass> getAllWeapons() {
+	public ArrayList<EquipmentClass> getAllEquippedWeapons() {
 		ArrayList<EquipmentClass> aList = new ArrayList<>();
 		for(EquipmentClass oE: getGear()) {
 			if (oE.isEquipped() && 
@@ -2583,6 +2605,19 @@ public class PlayerClass implements Serializable, Comparable {
 		return(aList);
 	}
 	
+	/**
+	 * return list of all weapons in inventory
+	 * @return
+	 */
+	public ArrayList<EquipmentClass> getAllWeapons() {
+		ArrayList<EquipmentClass> aList = new ArrayList<>();
+		for(EquipmentClass oE: getGear()) {
+			if (oE.getType() == GEAR_TYPE_WEAPON)
+				aList.add(oE);
+		}
+		return(aList);
+	}
+
 	public Strength getStrength(MainClass ost) {
 		Strength oStat = null;
 
@@ -2670,7 +2705,148 @@ public class PlayerClass implements Serializable, Comparable {
 	 * 
 	 * @return
 	 */
+	public boolean hasWeaponsEquipped() {
+		return(getAllEquippedWeapons().size()>0);
+	}
+
+	/**
+	 * have any weapons in inventory?
+	 * @return
+	 */
 	public boolean hasWeapons() {
 		return(getAllWeapons().size()>0);
 	}
+
+	/**
+	 * return true/false if the character has/is dual classing
+	 * 
+	 * @param ost
+	 * @return
+	 */
+	public boolean hasDualClass() {
+		boolean isSet = false;
+		for (PCClass pc : getMyClass()) {
+			if (pc.isLockedClass()) {
+				isSet = true;
+				break;
+			}
+		}
+		return(isSet);
+	}
+	/**
+	 * return primary PCClass if player is dualclassed
+	 * 
+	 * @return
+	 */
+	public PCClass getPrimaryDualClass() {
+		PCClass pClass = null;
+		if (hasDualClass()) {
+			for(PCClass pC: getMyClass())
+				// everything should be locked cept one class
+				if (!pC.isLockedClass()) {
+					pClass = pC;
+					break;
+				}
+		}
+		return pClass;
+	}
+
+	/**
+	 * add PCClass to player, set addDualClass true if it is dual class
+	 * 
+	 * @param o
+	 * @param addDualClass
+	 * @return
+	 */
+	public PCClass addPCClass(CharacterClass o, boolean addDualClass) {
+		
+		PCClass e = new PCClass(o.getName(),o.getMyID(), 0, false, null);
+		
+		// set all other classes LOCKED
+		if (addDualClass || hasDualClass()) {
+			for(PCClass pC: getMyClass())
+				pC.setLockedClass(true);
+		}
+
+		getMyClass().add(e);
+		
+		return(e);
+	}
+	
+	public void removePCClass(String myID) {
+		ArrayList<PCClass> pcList = new ArrayList<>();
+
+		for(PCClass pC: getMyClass())
+			if (pC.getClassID().equalsIgnoreCase(myID))
+				pcList.add(pC);
+
+		for(PCClass remove: pcList) 
+			getMyClass().remove(remove);
+
+		// if dual classed but has no primary class set last class as
+		// the primary class
+		if (hasDualClass() && getPrimaryDualClass() == null) {
+			getMyClass().get(getMyClass().size()-1).setLockedClass(false);
+		}
+	}
+	
+	public void reRollHitPoints(MainClass ost) {
+		for (PCClass pC : getMyClass())
+			if (!pC.isLockedClass())
+				pC.setLevel(0);// set level to 0 so it re-levels character up
+		
+		if (!hasDualClass()) {
+			setHpCurrent(0);
+			setHpMax(0);
+		} else {
+			// delevel dualclass primary class to reduce
+			// hitpoints
+			getPrimaryDualClass().deLevel(ost);
+		}
+		updateLevelDifferential(ost, -1, false);
+	}
+	
+	/**
+	 * update levels by either passing +EXP value and addEXP or -1 and false
+	 * to use current EXP values and re-roll
+	 * 
+	 * @param nEXP
+	 * @param addEXP
+	 */
+	public void updateLevelDifferential(MainClass ost, int nEXP, boolean addEXP) {
+		if (nEXP != 0 || !addEXP) { // either we have exp to adjust or we want to force re-roll
+			int classCount = 
+					hasDualClass()?1:getMyClass().size();
+				nEXP /= classCount;
+			for (PCClass pC : getMyClass()) {
+				if (!pC.isLockedClass()) {
+					int nOldLevel = pC.getLevel();
+					if (addEXP)
+						pC.addExperience(nEXP);
+					int nNewLevel = pC.getLevelActual(ost);
+					int nDiffLevel = nNewLevel - nOldLevel;
+					if (nDiffLevel != 0) { // re-roll health?
+						if (nDiffLevel > 0) {
+							ost.dprint(pC.getName() + " is leveling up! "
+									+ nDiffLevel + "\n");
+
+							pC.levelUP(ost);
+						} else {
+							ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
+									+ "\n");
+							pC.deLevel(ost);
+						}
+
+					}
+				} else {
+					// class was locked
+				}
+
+			}
+			//			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+			//			hpSpinner.setValue(currentCharacter.getHpMax());
+		}
+
+	}
+	
 } // end PlayerClass

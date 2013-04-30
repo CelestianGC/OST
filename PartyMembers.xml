@@ -3,8 +3,8 @@
     <name>Elendria</name>
     <namePlayer>John Smith</namePlayer>
     <myID>2204ce9b-2ed9-4ee2-ae70-89ebd80b7cbf</myID>
-    <hpMax>53</hpMax>
-    <hpCurrent>53</hpCurrent>
+    <hpMax>50</hpMax>
+    <hpCurrent>50</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -202,6 +202,12 @@ character experience modified :3750000
 character level up, new MaxHP:34 from 0
 character experience modified :3750000
 character level up, new MaxHP:53 from 34
+character level up, new MaxHP:32 from 0
+character level up, new MaxHP:48 from 32
+character level up, new MaxHP:26 from 0
+character level up, new MaxHP:44 from 26
+character level up, new MaxHP:33 from 0
+character level up, new MaxHP:50 from 33
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -215,6 +221,7 @@ character level up, new MaxHP:53 from 34
         <experience>3750000</experience>
         <level>20</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>5</int>
           <int>10</int>
@@ -236,6 +243,66 @@ character level up, new MaxHP:53 from 34
           <int>65</int>
           <int>67</int>
           <int>69</int>
+          <int>7</int>
+          <int>12</int>
+          <int>17</int>
+          <int>20</int>
+          <int>25</int>
+          <int>30</int>
+          <int>32</int>
+          <int>36</int>
+          <int>42</int>
+          <int>44</int>
+          <int>46</int>
+          <int>48</int>
+          <int>50</int>
+          <int>52</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>62</int>
+          <int>64</int>
+          <int>7</int>
+          <int>12</int>
+          <int>13</int>
+          <int>15</int>
+          <int>18</int>
+          <int>19</int>
+          <int>22</int>
+          <int>25</int>
+          <int>31</int>
+          <int>33</int>
+          <int>35</int>
+          <int>37</int>
+          <int>39</int>
+          <int>41</int>
+          <int>43</int>
+          <int>45</int>
+          <int>47</int>
+          <int>49</int>
+          <int>51</int>
+          <int>53</int>
+          <int>8</int>
+          <int>10</int>
+          <int>16</int>
+          <int>19</int>
+          <int>23</int>
+          <int>26</int>
+          <int>29</int>
+          <int>36</int>
+          <int>44</int>
+          <int>46</int>
+          <int>48</int>
+          <int>50</int>
+          <int>52</int>
+          <int>54</int>
+          <int>56</int>
+          <int>58</int>
+          <int>60</int>
+          <int>62</int>
+          <int>64</int>
+          <int>66</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -245,6 +312,7 @@ character level up, new MaxHP:53 from 34
         <experience>3750000</experience>
         <level>19</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>2</int>
           <int>6</int>
@@ -265,6 +333,63 @@ character level up, new MaxHP:53 from 34
           <int>36</int>
           <int>37</int>
           <int>38</int>
+          <int>1</int>
+          <int>4</int>
+          <int>7</int>
+          <int>8</int>
+          <int>11</int>
+          <int>15</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>22</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>4</int>
+          <int>6</int>
+          <int>10</int>
+          <int>13</int>
+          <int>17</int>
+          <int>18</int>
+          <int>19</int>
+          <int>23</int>
+          <int>24</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
+          <int>35</int>
+          <int>36</int>
+          <int>37</int>
+          <int>2</int>
+          <int>5</int>
+          <int>8</int>
+          <int>9</int>
+          <int>12</int>
+          <int>15</int>
+          <int>18</int>
+          <int>20</int>
+          <int>21</int>
+          <int>25</int>
+          <int>26</int>
+          <int>27</int>
+          <int>28</int>
+          <int>29</int>
+          <int>30</int>
+          <int>31</int>
+          <int>32</int>
+          <int>33</int>
+          <int>34</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -525,6 +650,53 @@ character level up, new MaxHP:53 from 34
         </value>
         <experience>0</experience>
       </org.ost.main.MyClasses.EquipmentClass>
+      <org.ost.main.MyClasses.EquipmentClass>
+        <myID>4330f856-598c-4ad9-96d7-3ad2ef88396b</myID>
+        <name>shortbow</name>
+        <description>New item description.</description>
+        <count>-1</count>
+        <type>1</type>
+        <magic>false</magic>
+        <charges>-1</charges>
+        <chargesMax>-1</chargesMax>
+        <equipped>true</equipped>
+        <weight>20.0</weight>
+        <weaponType>1</weaponType>
+        <weaponProfType>shortbow</weaponProfType>
+        <weaponGroupType>bow</weaponGroupType>
+        <weaponTightGroupType>shortbow</weaponTightGroupType>
+        <damageSmall>1d6</damageSmall>
+        <damageMedium>1d6</damageMedium>
+        <damageLarge>1d6</damageLarge>
+        <range>
+          <int>5</int>
+          <int>10</int>
+          <int>15</int>
+          <int>0</int>
+          <int>0</int>
+        </range>
+        <speedFactor>7</speedFactor>
+        <attacksPerRound>
+          <int>2</int>
+          <int>1</int>
+        </attacksPerRound>
+        <armorType></armorType>
+        <armorBulkType>0</armorBulkType>
+        <ac>0</ac>
+        <acBase>10</acBase>
+        <magicAdjustmentPrimary>0</magicAdjustmentPrimary>
+        <magicAdjustmentSecondary>0</magicAdjustmentSecondary>
+        <features/>
+        <value>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>30</int>
+          <int>0</int>
+        </value>
+        <experience>0</experience>
+        <source></source>
+      </org.ost.main.MyClasses.EquipmentClass>
     </gear>
     <pcClass>Fighter</pcClass>
     <pcLevel>1</pcLevel>
@@ -570,6 +742,7 @@ character level up, new MaxHP:55 from 0
         <experience>25000</experience>
         <level>5</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>10</int>
           <int>25</int>
@@ -741,6 +914,7 @@ character level up, new MaxHP:39 from 22
         <experience>50000</experience>
         <level>6</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>11</int>
           <int>17</int>
@@ -763,6 +937,7 @@ character level up, new MaxHP:39 from 22
         <experience>50000</experience>
         <level>7</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>5</int>
           <int>11</int>
@@ -883,8 +1058,8 @@ character level up, new MaxHP:39 from 22
     <name>Longwalk</name>
     <namePlayer>John Smith</namePlayer>
     <myID>38507bb4-dda3-47cf-a5cc-bee2c471ab46</myID>
-    <hpMax>87</hpMax>
-    <hpCurrent>87</hpCurrent>
+    <hpMax>108</hpMax>
+    <hpCurrent>108</hpCurrent>
     <armorRatings>
       <string>10</string>
       <string>10</string>
@@ -912,6 +1087,10 @@ character experience modified :500000
 character level up, new MaxHP:79 from 71
 character experience modified :500000
 character level up, new MaxHP:87 from 79
+character de-level, new MaxHP:87 from 87
+character level up, new MaxHP:92 from 87
+character experience modified :5000
+character level up, new MaxHP:108 from 92
 </log>
     <saveLast></saveLast>
     <tag></tag>
@@ -925,6 +1104,7 @@ character level up, new MaxHP:87 from 79
         <experience>2000000</experience>
         <level>14</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>true</lockedClass>
         <hdRolls>
           <int>2</int>
           <int>6</int>
@@ -944,6 +1124,20 @@ character level up, new MaxHP:87 from 79
           <int>8</int>
           <int>4</int>
           <int>8</int>
+        </hdRolls>
+        <outer-class reference="../../.."/>
+      </PCClass>
+      <PCClass>
+        <name>Thief</name>
+        <classID>450c12e8-8e7c-4478-9fd8-f7c0b21120da</classID>
+        <experience>5000</experience>
+        <level>3</level>
+        <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
+        <hdRolls>
+          <int>5</int>
+          <int>8</int>
+          <int>16</int>
         </hdRolls>
         <outer-class reference="../../.."/>
       </PCClass>
@@ -1043,7 +1237,7 @@ character level up, new MaxHP:87 from 79
     </mySaveAdjustments>
     <myAlignmentType>0</myAlignmentType>
     <genderType>0</genderType>
-    <totalExperience>2000000</totalExperience>
+    <totalExperience>2005000</totalExperience>
   </PlayerClass>
   <PlayerClass>
     <name>Marry</name>
@@ -1101,6 +1295,7 @@ character level up, new MaxHP:54 from 0
         <experience>1020000</experience>
         <level>10</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>3</int>
           <int>6</int>
@@ -1304,6 +1499,7 @@ character level up, new MaxHP:17 from 13
         <experience>10000</experience>
         <level>4</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>10</int>
           <int>20</int>
@@ -1322,6 +1518,7 @@ character level up, new MaxHP:17 from 13
         <experience>10000</experience>
         <level>3</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>3</int>
           <int>4</int>
@@ -1338,6 +1535,7 @@ character level up, new MaxHP:17 from 13
         <experience>10000</experience>
         <level>4</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>1</int>
           <int>5</int>
@@ -1490,6 +1688,7 @@ character level up, new MaxHP:38 from 0
         <experience>567000</experience>
         <level>10</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>5</int>
           <int>9</int>
@@ -1708,6 +1907,7 @@ character level up, new MaxHP:23 from 0
         <experience>87000</experience>
         <level>7</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>2</int>
           <int>4</int>
@@ -1873,6 +2073,7 @@ character level up, new MaxHP:30 from 0
         <experience>20000</experience>
         <level>5</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>7</int>
           <int>14</int>
@@ -2250,6 +2451,7 @@ character level up, new MaxHP:23 from 7
         <experience>12001</experience>
         <level>5</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>7</int>
           <int>5</int>
@@ -2436,6 +2638,7 @@ character level up, new MaxHP:27 from 16
         <experience>200000</experience>
         <level>8</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>4</int>
           <int>14</int>
@@ -2454,6 +2657,7 @@ character level up, new MaxHP:27 from 16
         <experience>200000</experience>
         <level>9</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>3</int>
           <int>6</int>
@@ -2612,6 +2816,7 @@ health adjusted (+2)
         <experience>16000</experience>
         <level>5</level>
         <primaryClass>false</primaryClass>
+        <lockedClass>false</lockedClass>
         <hdRolls>
           <int>6</int>
           <int>10</int>

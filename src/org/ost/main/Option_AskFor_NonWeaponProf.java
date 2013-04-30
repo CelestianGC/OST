@@ -254,7 +254,7 @@ public class Option_AskFor_NonWeaponProf extends javax.swing.JDialog {
 		ArrayList<CharacterClass> aList = CharacterClass.getAllowed(
 				currentProf.getAllowedClass(), ost.characterClassList);
 		Option_Set_CharacterClass dDialog = new 
-				Option_Set_CharacterClass(parent, true, ost, aList);
+				Option_Set_CharacterClass(parent, true, ost, aList,null);
 
 		dDialog.setVisible(true);
 

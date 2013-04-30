@@ -619,7 +619,7 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		currentCharacter.setTotalExperience(currentCharacter
 				.getTotalExperience() + nEXP);
 
-		updateLevelDifferential(nEXP, true);
+		currentCharacter.updateLevelDifferential(ost, nEXP, true);
 		// set these on the dialog or we lose them if they changed
 		hpSpinner.setValue(currentCharacter.getHpMax());
 		currentHPSpinner.setValue(currentCharacter.getHpCurrent());
@@ -628,11 +628,20 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 
 	private void rollHDButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		if (currentCharacter.getMyClass().size() > 0) {
-			for (PCClass pC : currentCharacter.getMyClass())
-				pC.setLevel(0);// set level to 0 so it re-levels character up
-			currentCharacter.setHpCurrent(0);
-			currentCharacter.setHpMax(0);
-			updateLevelDifferential(-1, false);
+			
+			currentCharacter.reRollHitPoints(ost);
+			
+//			for (PCClass pC : currentCharacter.getMyClass())
+//				if (!pC.isLockedClass())
+//					pC.setLevel(0);// set level to 0 so it re-levels character up
+//			
+//			if (!currentCharacter.hasDualClass()) {
+//				currentCharacter.setHpCurrent(0);
+//				currentCharacter.setHpMax(0);
+//			} else {
+//				currentCharacter.getPrimaryDualClass().deLevel(ost);
+//			}
+//			currentCharacter.updateLevelDifferential(-1, false);
 
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
@@ -641,71 +650,84 @@ public class Option_AskFor_Character extends javax.swing.JDialog {
 		}
 	}
 
-	/**
-	 * update levels by either passing +EXP value and addEXP or -1 and false
-	 * to use current EXP values and re-roll
-	 * 
-	 * @param nEXP
-	 * @param addEXP
-	 */
-	private void updateLevelDifferential(int nEXP, boolean addEXP) {
-		if (nEXP != 0 || !addEXP) { // either we have exp to adjust or we want to force re-roll
-			int classCount = currentCharacter.getMyClass().size();
-			nEXP /= classCount;
-			for (PCClass pC : currentCharacter.getMyClass()) {
-				int nOldLevel = pC.getLevel();
-				if (addEXP)
-					pC.addExperience(nEXP);
-				int nNewLevel = pC.getLevelActual(ost);
-				int nDiffLevel = nNewLevel - nOldLevel;
-				if (nDiffLevel != 0) { // re-roll health?
-					if (nDiffLevel > 0) {
-						ost.dprint(pC.getName() + " is leveling up! "
-								+ nDiffLevel + "\n");
-
-						pC.levelUP(ost);
-					} else {
-						ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
-								+ "\n");
-						pC.deLevel(ost);
-					}
-
-				}
-			}
-			//			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
-			//			hpSpinner.setValue(currentCharacter.getHpMax());
-		}
-
-	}
+//	/**
+//	 * update levels by either passing +EXP value and addEXP or -1 and false
+//	 * to use current EXP values and re-roll
+//	 * 
+//	 * @param nEXP
+//	 * @param addEXP
+//	 */
+//	private void updateLevelDifferential(int nEXP, boolean addEXP) {
+//		if (nEXP != 0 || !addEXP) { // either we have exp to adjust or we want to force re-roll
+//			int classCount = 
+//					currentCharacter.hasDualClass()?1:currentCharacter.getMyClass().size();
+//				nEXP /= classCount;
+//			for (PCClass pC : currentCharacter.getMyClass()) {
+//				if (!pC.isLockedClass()) {
+//					int nOldLevel = pC.getLevel();
+//					if (addEXP)
+//						pC.addExperience(nEXP);
+//					int nNewLevel = pC.getLevelActual(ost);
+//					int nDiffLevel = nNewLevel - nOldLevel;
+//					if (nDiffLevel != 0) { // re-roll health?
+//						if (nDiffLevel > 0) {
+//							ost.dprint(pC.getName() + " is leveling up! "
+//									+ nDiffLevel + "\n");
+//
+//							pC.levelUP(ost);
+//						} else {
+//							ost.dprint(pC.getName() + " De-Leveled! " + nDiffLevel
+//									+ "\n");
+//							pC.deLevel(ost);
+//						}
+//
+//					}
+//				} else {
+//					// class was locked
+//				}
+//
+//			}
+//			//			currentHPSpinner.setValue(currentCharacter.getHpCurrent());
+//			//			hpSpinner.setValue(currentCharacter.getHpMax());
+//		}
+//
+//	}
 
 	private void classButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		ArrayList<String> cList = new ArrayList<String>();
-		for (PlayerClass.PCClass pc : currentCharacter.getMyClass())
-			cList.add(pc.getClassID());
-
-		ArrayList<CharacterClass> aList = CharacterClass.getAllowed(cList,
-				ost.characterClassList);
+//		ArrayList<String> cList = new ArrayList<String>();
+//		for (PlayerClass.PCClass pc : currentCharacter.getMyClass())
+//			cList.add(pc.getClassID());
+//
+//		ArrayList<CharacterClass> aList = CharacterClass.getAllowed(cList,
+//				ost.characterClassList);
 		Option_Set_CharacterClass dDialog = new Option_Set_CharacterClass(
-				parent, true, ost, aList);
+				parent, true, ost, null,currentCharacter);
 
 		dDialog.setVisible(true);
 
-		currentCharacter.getMyClass().clear();
-		cList = CharacterClass.getAllowedAsString(aList);
-		for (CharacterClass o : aList) {
-			PlayerClass.PCClass e = currentCharacter.new PCClass(o.getName(),
-					o.getMyID(), 0, false, null);
-			currentCharacter.getMyClass().add(e);
-		}
-
+//		currentCharacter.getMyClass().clear();
+//		cList = CharacterClass.getAllowedAsString(aList);
+//		for (CharacterClass o : aList) {
+//			PlayerClass.PCClass e = currentCharacter.new PCClass(o.getName(),
+//					o.getMyID(), 0, false, null);
+//			currentCharacter.getMyClass().add(e);
+//		}
+//
 		// we reset classes so reset hp and they are rerolled
-		if (currentCharacter.getMyClass().size() > 0) {
-			for (PCClass pC : currentCharacter.getMyClass())
-				pC.setLevel(0);// set level to 0 so it re-levels character up
-			currentCharacter.setHpCurrent(0);
-			currentCharacter.setHpMax(0);
-
-			updateLevelDifferential(currentCharacter.getTotalExperience(), true);
+		if (dDialog.classesChanged && 
+				currentCharacter.getMyClass().size() > 0) {
+				currentCharacter.reRollHitPoints(ost);
+//			for (PCClass pC : currentCharacter.getMyClass())
+//				if (!pC.isLockedClass())
+//					pC.setLevel(0);// set level to 0 so it re-levels character up
+//
+//			if (!currentCharacter.hasDualClass()) {
+//				currentCharacter.setHpCurrent(0);
+//				currentCharacter.setHpMax(0);
+//			}
+//
+//			currentCharacter.updateLevelDifferential(ost, currentCharacter.getTotalExperience(), true);
+			
 			// set these on the dialog or we lose them if they changed
 			hpSpinner.setValue(currentCharacter.getHpMax());
 			currentHPSpinner.setValue(currentCharacter.getHpCurrent());

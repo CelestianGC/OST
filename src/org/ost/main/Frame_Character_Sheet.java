@@ -45,11 +45,11 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Segoe UI", 0, 12)));
 
-		mainPanel.setLayout(
-				new VerticalLayout(1, VerticalLayout.BOTH, VerticalLayout.TOP));
-		secondPanel.setLayout(
-				new VerticalLayout(1, VerticalLayout.BOTH, VerticalLayout.TOP));
-		
+		mainPanel.setLayout(new VerticalLayout(1, VerticalLayout.BOTH,
+				VerticalLayout.TOP));
+		secondPanel.setLayout(new VerticalLayout(1, VerticalLayout.BOTH,
+				VerticalLayout.TOP));
+
 		updatePanel(pc);
 
 		//		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -64,6 +64,12 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 
 		setLocationRelativeTo(null);
 		//setSize((int) (8.5 * 72), (11 * 72));
+
+		//TODO not sure why I have to do this but unless I do the second page
+		//does not show up in print, if they previewed it it would so...
+		nextPageMenuItemActionPerformed(null);
+		previousPageMenuItemActionPerformed(null);
+
 	}
 
 	public void updatePanel(PlayerClass oPlayer) {
@@ -90,6 +96,12 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		Panel_Player_Combat playerCombatPanel = new Panel_Player_Combat(ost, pc);
 		mainPanel.add(playerCombatPanel);
 
+		if (pc.hasWeapons()) {
+			Panel_Player_WeaponsBlock playerWeapons = new Panel_Player_WeaponsBlock(
+					ost, pc);
+			mainPanel.add(playerWeapons);
+		}
+
 		// skills?
 		if (pc.isSkilled(ost)) {
 			Panel_Player_Skills playerSkillsPanel = new Panel_Player_Skills(
@@ -108,16 +120,6 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 				pc);
 		secondPanel.add(playerFeatures);
 
-		if (pc.hasWeapons()) {
-		Panel_Player_WeaponsBlock playerWeapons = 
-				new Panel_Player_WeaponsBlock(ost,pc);
-		secondPanel.add(playerWeapons);
-		}
-		
-		//TODO not sure why I have to do this but unless I do the second page
-		//does not show up in print, if they previewed it it would so...
-		nextPageMenuItemActionPerformed(null);
-		previousPageMenuItemActionPerformed(null);
 	}
 
 	//GEN-BEGIN:initComponents
@@ -141,15 +143,16 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		javax.swing.GroupLayout secondPanelLayout = new javax.swing.GroupLayout(
 				secondPanel);
 		secondPanel.setLayout(secondPanelLayout);
-		secondPanelLayout
-				.setHorizontalGroup(secondPanelLayout
-						.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING));
-		secondPanelLayout
-				.setVerticalGroup(secondPanelLayout
-						.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING));
+		secondPanelLayout.setHorizontalGroup(secondPanelLayout
+				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 0, Short.MAX_VALUE));
+		secondPanelLayout.setVerticalGroup(secondPanelLayout
+				.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+				.addGap(0, 0, Short.MAX_VALUE));
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setTitle("Character Sheet");
+		setAlwaysOnTop(true);
 		addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosed(java.awt.event.WindowEvent evt) {
 				formWindowClosed(evt);
@@ -232,7 +235,7 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		// TODO add your handling code here:
 		// the printing is not pretty right now but it works... need to revisit this
 		// and figure out a more elegant way to do this.
-		
+
 		String printJobName = String.format("OST [%s]", pc.getName());
 
 		PrinterJob printJob = PrinterJob.getPrinterJob();
@@ -242,34 +245,34 @@ public class Frame_Character_Sheet extends javax.swing.JFrame {
 		PageFormat format = printJob.getPageFormat(null);
 		Paper paper = format.getPaper();
 		paper.setSize(8.5 * 72, 11 * 72);
-		paper.setImageableArea(0.0 * 72, 0.0 * 72, 7.5 * 72, 10.5 * 72);	
+		paper.setImageableArea(0.0 * 72, 0.0 * 72, 7.5 * 72, 10.5 * 72);
 		format.setPaper(paper);
 
 		Book book = new Book();
 		book.append(new PrintUtilities(mainPanel), format);
 		book.append(new PrintUtilities(secondPanel), format);
 		printJob.setPageable(book);
-		if(printJob.pageDialog(format) != null)
-			if(printJob.printDialog()) {
+		if (printJob.pageDialog(format) != null)
+			if (printJob.printDialog()) {
 				try {
 					printJob.print();
 				} catch (PrinterException e) {
 					SimpleDialog.showError(e.getLocalizedMessage());
 				}
 			}
-		
-//		try {
-//			ComponentPrinter.printComponent(mainPanel,printJobName);
-//			ComponentPrinter.printComponent(secondPanel,printJobName+"2");
-//		} catch (PrinterException e) {
-//			SimpleDialog.showError(e.getLocalizedMessage());
-//			//e.printStackTrace();
-//		}
 
-//		PrintUtilities printHelper = new PrintUtilities(mainPanel,printJobName);
-//		
-//		printHelper.print();
-		
+		//		try {
+		//			ComponentPrinter.printComponent(mainPanel,printJobName);
+		//			ComponentPrinter.printComponent(secondPanel,printJobName+"2");
+		//		} catch (PrinterException e) {
+		//			SimpleDialog.showError(e.getLocalizedMessage());
+		//			//e.printStackTrace();
+		//		}
+
+		//		PrintUtilities printHelper = new PrintUtilities(mainPanel,printJobName);
+		//		
+		//		printHelper.print();
+
 	}
 
 	private void closeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {

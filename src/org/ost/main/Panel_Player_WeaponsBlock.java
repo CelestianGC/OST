@@ -116,9 +116,9 @@ public class Panel_Player_WeaponsBlock extends javax.swing.JPanel {
 			table.setValueAt(oE.getDamageSmall(), idx, 5);
 			table.setValueAt(oE.getDamageMedium(), idx, 6);
 			table.setValueAt(oE.getDamageLarge(), idx, 7);
-			table.setValueAt(oE.getRange()[RANGE_SHORT], idx, 8);
-			table.setValueAt(oE.getRange()[RANGE_MEDIUM], idx, 9);
-			table.setValueAt(oE.getRange()[RANGE_LONG], idx, 10);
+			table.setValueAt(oE.isRangedWeapon()?oE.getRange()[RANGE_SHORT]:"na", idx, 8);
+			table.setValueAt(oE.isRangedWeapon()?oE.getRange()[RANGE_MEDIUM]:"na", idx, 9);
+			table.setValueAt(oE.isRangedWeapon()?oE.getRange()[RANGE_LONG]:"na", idx, 10);
 		}
 
 		Font fFont = new Font(DEFAULT_FONT, Font.PLAIN, 10);
