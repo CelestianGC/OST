@@ -1,0 +1,122 @@
+<entries>
+  <StatesClass>
+    <myID>47981e07-82ff-4ed8-a39e-00aba2a0e52a</myID>
+    <name>blind</name>
+    <description>In a blind state, -4 to hit and lose dex bonuses to AC.</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>a397d95c-bbc9-4d07-9ef7-3db30cfddac7</myID>
+    <name>blue</name>
+    <description>target is blue!</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>a1524280-2855-4fdd-bae2-5184b4d1f0d5</myID>
+    <name>floating</name>
+    <description>Floating above ground.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>4a0fad7e-4869-4fb5-a8cc-6dab13d9d8ae</myID>
+    <name>flying</name>
+    <description>Flying in the air.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>38f59dad-7c98-4066-96b6-c3361266ccc3</myID>
+    <name>gaseous</name>
+    <description>In gaseous form.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>64b23793-f164-4443-93da-2e0e2fdf45ae</myID>
+    <name>invisible</name>
+    <description>Target is unseen.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>4f830ce9-b428-4ee6-8fa5-7ed4340b76b2</myID>
+    <name>levitating</name>
+    <description>Levitating above ground.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>d6543d6d-6013-4d3b-a992-b503cb8bf8e0</myID>
+    <name>paralyzed</name>
+    <description>in a paralyzed state.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>ceea3ae2-4c42-4070-b5f0-5f9d5a9d42d2</myID>
+    <name>prone</name>
+    <description>In a prone state, +2 to be hit by melee, -2 to hit by ranged while prone and lose dex bonuses to ac.</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>ec7449b2-2037-4d0c-8e75-61d2a54916fc</myID>
+    <name>rooted</name>
+    <description>Cannot move, +2 to hit, lose dex modifiers to AC. Feet stuck in trap, or mud/etc.</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>d21735ab-bfd7-4792-90ec-89333f982a6c</myID>
+    <name>slept</name>
+    <description>In a sleep state. Attacks automatically hit.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>44c6a31e-928d-4687-9fbc-f7d6de361c36</myID>
+    <name>slowed</name>
+    <description>Attack rate reduced by 1/2.
+</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>c99dce18-4aa5-494b-9966-48c793d72199</myID>
+    <name>stunned</name>
+    <description>In a stunned state.</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>6870bc2d-aa17-4bc1-b44e-b15d424e2991</myID>
+    <name>w</name>
+    <description>Enter state description</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>646b7f75-4a29-4aa7-b36d-2c5505e6dde6</myID>
+    <name>webbed</name>
+    <description>creature stuck in web.</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+  <StatesClass>
+    <myID>c9595eff-2181-4efb-b3ea-1749f0dac759</myID>
+    <name>webbed </name>
+    <description>Enter state description</description>
+    <iD>-1</iD>
+    <counter>5</counter>
+  </StatesClass>
+</entries>

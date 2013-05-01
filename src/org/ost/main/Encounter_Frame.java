@@ -1561,6 +1561,12 @@ public class Encounter_Frame extends javax.swing.JFrame {
 					// copy/moved from Dungeon saved list...
 					if (oC.Encountered == null)
 						oC.setEncountered(new EncounterPlayer(ost, oC));
+					else  {
+						//TODO get previous values and save them
+						oC.setNotes(oC.getEncountered().notesTextArea.getText());
+						oC.setLog(oC.getEncountered().logTextArea.getText());
+						oC.getEncountered().updatePanel(oC);
+					}
 					creatureEncounterDisplayPanel.add(oC.Encountered);
 					oC.Encountered.repaint();
 					oC.Encountered.revalidate();

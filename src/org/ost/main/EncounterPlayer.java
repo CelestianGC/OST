@@ -55,13 +55,19 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	 * 
 	 * @param oP
 	 */
-	private void updatePanel(PlayerClass oP) {
+	public void updatePanel(PlayerClass oP) {
+		String sArmorClass = String.format("AC:%d, Rear:%d, No Shield:%d",
+				oP.getArmorClassByType(AC_NORMAL, ost),
+				oP.getArmorClassByType(AC_REAR, ost),
+				oP.getArmorClassByType(AC_SHIELDLESS, ost));
+
 		hpBarLast = oP.getHpCurrent();
 		hitpointSlider.setMaximum(oP.getHpMax());
 		hitpointSlider.setValue(oP.getHpCurrent());
 		armorClassLabel.setText(MyParse.displayArmorClass(
-				ost.mainFrame.d20ModeRadioButton.isSelected(), oP
-						.getArmorRatings().get(0)));
+				ost.mainFrame.d20ModeRadioButton.isSelected(),
+				String.format("%d", oP.getArmorClassByType(AC_NORMAL, ost))));
+		armorClassLabel.setToolTipText(sArmorClass);
 
 		notesTextArea.setText(oP.getNotes());
 		logTextArea.setText(oP.getLog());
@@ -75,17 +81,13 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		classLabel.setText("Class: " + oP.getMyClassName(ost));
 		moveLabel.setText("Move: " + oP.getModifiedMoveRate(ost));
 
-		detailsACLabel.setText(String.format("AC:%d, Rear:%d, No Shield:%d",
-				oP.getArmorClassByType(AC_NORMAL, ost),
-				oP.getArmorClassByType(AC_REAR, ost),
-				oP.getArmorClassByType(AC_SHIELDLESS, ost)));
+		detailsACLabel.setText(sArmorClass);
 
-		specialAttackLabel.setText("SA: " + oP.getSpecialAttacks());
-		specialDefenseLabel.setText("SD: " + oP.getSpecialDefense());
-		magicResistanceLabel.setText("MR: " + oP.getMagicResistance());
+		thacoLabel.setText("THACO: " + oP.getTHACO(ost));
 
 		// matrix bar
 		//Utils.updateMatrixPanelPC(matrixPanel, oP, ost);
+		matrixPanel.removeAll();
 		JTable matrix = Utils.getMatrixTable(oP.getMatrix(ost));
 		matrixPanel.add(matrix.getTableHeader(), BorderLayout.PAGE_START);
 		matrixPanel.add(matrix, BorderLayout.CENTER);
@@ -189,12 +191,10 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		pcCharacterNameLabel = new javax.swing.JLabel();
 		pcNameLabel = new javax.swing.JLabel();
 		moveLabel = new javax.swing.JLabel();
-		specialDefenseLabel = new javax.swing.JLabel();
-		specialAttackLabel = new javax.swing.JLabel();
-		magicResistanceLabel = new javax.swing.JLabel();
 		levelLabel = new javax.swing.JLabel();
 		classLabel = new javax.swing.JLabel();
 		detailsACLabel = new javax.swing.JLabel();
+		thacoLabel = new javax.swing.JLabel();
 		jScrollPane2 = new javax.swing.JScrollPane();
 		modelStatesListForCombatPanel = new DefaultListModel();
 		statesEffectList = new javax.swing.JList(modelStatesListForCombatPanel);
@@ -522,47 +522,11 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		moveLabel.setToolTipText("Move base of the creature.");
 		moveLabel.setPreferredSize(new java.awt.Dimension(13, 14));
 		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 0;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.ipadx = 10;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.weightx = 1.0;
-		jPanel4.add(moveLabel, gridBagConstraints);
-
-		specialDefenseLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		specialDefenseLabel.setText("SD:");
-		specialDefenseLabel.setToolTipText("Special defenses.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
 		gridBagConstraints.gridx = 1;
 		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.weightx = 3.0;
-		jPanel4.add(specialDefenseLabel, gridBagConstraints);
-
-		specialAttackLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		specialAttackLabel.setText("SA:");
-		specialAttackLabel.setToolTipText("Special attacks.");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 3;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.weightx = 3.0;
-		jPanel4.add(specialAttackLabel, gridBagConstraints);
-
-		magicResistanceLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
-		magicResistanceLabel.setText("MR:");
-		magicResistanceLabel.setToolTipText("Magic Resistances");
-		gridBagConstraints = new java.awt.GridBagConstraints();
-		gridBagConstraints.gridx = 1;
-		gridBagConstraints.gridy = 4;
-		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints.ipadx = 10;
-		gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints.weightx = 1.0;
-		jPanel4.add(magicResistanceLabel, gridBagConstraints);
+		jPanel4.add(moveLabel, gridBagConstraints);
 
 		levelLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
 		levelLabel.setText("Level");
@@ -593,6 +557,18 @@ public class EncounterPlayer extends javax.swing.JPanel {
 		gridBagConstraints.gridy = 2;
 		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		jPanel4.add(detailsACLabel, gridBagConstraints);
+
+		thacoLabel.setFont(new java.awt.Font("Segoe UI", 0, 10));
+		thacoLabel.setText("THACO:");
+		thacoLabel.setToolTipText("Special defenses.");
+		gridBagConstraints = new java.awt.GridBagConstraints();
+		gridBagConstraints.gridx = 0;
+		gridBagConstraints.gridy = 3;
+		gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+		gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+		gridBagConstraints.weightx = 1.0;
+		gridBagConstraints.weighty = 1.0;
+		jPanel4.add(thacoLabel, gridBagConstraints);
 
 		javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(
 				jPanel3);
@@ -1355,8 +1331,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JSeparator jSeparator8;
 	private javax.swing.JLabel levelLabel;
 	private javax.swing.JTabbedPane logTabbedPane;
-	private javax.swing.JTextArea logTextArea;
-	private javax.swing.JLabel magicResistanceLabel;
+	public javax.swing.JTextArea logTextArea;
 	private javax.swing.JPanel matrixPanel;
 	private javax.swing.JLabel moveLabel;
 	public javax.swing.JMenuItem nameEditMenuItem;
@@ -1381,8 +1356,6 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	private javax.swing.JTextField saveSpellTextField;
 	private javax.swing.JMenuItem saveSpellsMenuItem;
 	private javax.swing.JPanel savesPanel;
-	private javax.swing.JLabel specialAttackLabel;
-	private javax.swing.JLabel specialDefenseLabel;
 	private javax.swing.JMenuItem stateCancelMenuItem;
 	private javax.swing.JMenuItem stateDeleteMenuItem;
 	private javax.swing.JMenuItem stateEditMenuItem;
@@ -1397,6 +1370,7 @@ public class EncounterPlayer extends javax.swing.JPanel {
 	public javax.swing.JMenuItem tagEditMenuItem;
 	public javax.swing.JMenuItem tagNameMenuItem;
 	public javax.swing.JPopupMenu tagNamePopupMenu;
+	private javax.swing.JLabel thacoLabel;
 	// End of variables declaration//GEN-END:variables
 
 	public DefaultListModel modelStatesListForCombatPanel;

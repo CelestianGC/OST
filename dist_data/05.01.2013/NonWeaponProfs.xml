@@ -1,0 +1,13 @@
+<entries>
+  <NonWeaponProfClass>
+    <myID>867f6de1-3807-467b-828a-850b3dc9fb82</myID>
+    <name>swimming</name>
+    <description>You know more than the average person when it comes to swimming.</description>
+    <cost>1</cost>
+    <abilityBase>0</abilityBase>
+    <baseAdjustment>0</baseAdjustment>
+    <perAdjustment>1</perAdjustment>
+    <allowedClass/>
+    <allowedRace/>
+  </NonWeaponProfClass>
+</entries>

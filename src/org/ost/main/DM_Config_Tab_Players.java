@@ -1262,7 +1262,7 @@ public class DM_Config_Tab_Players extends javax.swing.JPanel {
 	private void updatePlayerPanel() {
 		// string fields
 
-		if (currentPlayer != null && currentPlayer.getName() != null) {
+		if (currentPlayer != null) {
 
 			if (playerDetailsPanel == null) {
 				playerDetailsPanel = new Panel_Player_Details(ost,

@@ -1,0 +1,15 @@
+<entries>
+  <WeaponProfClass>
+    <myID>cf77007a-b805-4fc8-be2a-62fd4766b89e</myID>
+    <name>long sword</name>
+    <description>Longword prof</description>
+    <cost>1</cost>
+    <allowedClass/>
+    <allowedRace/>
+    <allowedWeapons/>
+    <attackAdjustment>0</attackAdjustment>
+    <damageAdjustment>0</damageAdjustment>
+    <speedAdjustment>0</speedAdjustment>
+    <preReqWeaponProfs/>
+  </WeaponProfClass>
+</entries>
