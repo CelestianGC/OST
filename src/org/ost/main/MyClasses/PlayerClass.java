@@ -189,7 +189,11 @@ public class PlayerClass implements Serializable, Comparable {
 		oNew.pcClass = pcClass;
 		oNew.pcLevel = pcLevel;
 		oNew.notes = notes;
+		
+		if (log == null)
+			log = "";
 		oNew.log = log;
+		
 		oNew.saveLast = saveLast;
 		oNew.tag = tag;
 		oNew.initRoll = initRoll;
@@ -332,17 +336,17 @@ public class PlayerClass implements Serializable, Comparable {
 		 * @param aList
 		 */
 		public void levelUP(MainClass ost) {
-			if (getMyClass().size() > 0) {
+			if (getClassCount()>0) {
 				// TODO
-				if (!hasDualClass() || 
-						(hasDualClass() && this == getPrimaryDualClass())) {
+				if (!isDualClass() || 
+						(isDualClass() && this == getPrimaryDualClass())) {
 						int nRaceStartBonus = 0;
 						boolean bRaceBonusUsed = false;
 						RaceClass oR = getMyRace().getRaceByID(ost.raceList);
 						nRaceStartBonus = oR.getBonusStartHP();
 						int nRolledHP = 0;
 						// if dual classing we only count 1 class
-						int classCount = hasDualClass()?1:getMyClass().size();
+						int classCount = isDualClass()?1:getMyClass().size();
 
 						CharacterClass cC = getClassByID(ost.characterClassList);
 
@@ -399,7 +403,7 @@ public class PlayerClass implements Serializable, Comparable {
 									nRollingHP += nRaceStartBonus;
 									bRaceBonusUsed = true;
 								}
-								if  (hasDualClass() && 
+								if  (isDualClass() && 
 										getDualClassLevelHighest() > getPrimaryClassLevel()) {
 									// do not get hitpoints until primary >= previous classes
 									// when dual classing
@@ -439,9 +443,9 @@ public class PlayerClass implements Serializable, Comparable {
 		public void deLevel(MainClass ost) {
 
 			if (getMyClass().size() > 0) {
-				if (!hasDualClass() || 
-						(hasDualClass() && this == getPrimaryDualClass())) {
-					int classCount = hasDualClass()?1:getMyClass().size();
+				if (!isDualClass() || 
+						(isDualClass() && this == getPrimaryDualClass())) {
+					int classCount = isDualClass()?1:getMyClass().size();
 					int nRolledHP = 0;
 
 					CharacterClass cC = getClassByID(ost.characterClassList);
@@ -479,7 +483,7 @@ public class PlayerClass implements Serializable, Comparable {
 								nRollingHP = 0; 
 							else
 								nRollingHP = MyRandomClass.rollDice(nDiceCount, nDiceSize);
-							if  (hasDualClass() && 
+							if  (isDualClass() && 
 									getDualClassLevelHighest() >= getPrimaryClassLevel()) {
 								// do not get hitpoints until primary >= previous classes
 								// when dual classing
@@ -594,7 +598,7 @@ public class PlayerClass implements Serializable, Comparable {
 			this.experience += experience;
 			if (this.experience < 0)
 				this.experience = 0;
-			setLog(getLog()+"character experience modified :"+experience+"\n");
+			log += "character experience modified :"+experience+"\n";
 		}
 		
 		/**
@@ -1403,7 +1407,7 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					if (!hasDualClass() || getDualClassOK(pC))
+					if (!isDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getSaves().size();i++) {
 						// if current save value greater than this 
 						// use new value
@@ -1454,7 +1458,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-						if (!hasDualClass() || getDualClassOK(pC))
+						if (!isDualClass() || getDualClassOK(pC))
 							for (int i=0;i<lE.getSavesAdjustments().size();i++) {
 								// if current save value greater than this 
 								// use new value
@@ -1526,7 +1530,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-						if (!hasDualClass() || getDualClassOK(pC))
+						if (!isDualClass() || getDualClassOK(pC))
 							for (int i=0;i<lE.getAbilityAdjustment().size();i++) {
 								AbilityScoreClass oS = lE.getAbilityAdjustment().get(i);
 								AbilityScoreClass aS = aScores.get(i);
@@ -1667,7 +1671,7 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					if (!hasDualClass() || getDualClassOK(pC))
+					if (!isDualClass() || getDualClassOK(pC))
 						for (int i=0;i<lE.getThiefSkills().size();i++) {
 						SkillsClass oS = lE.getThiefSkills().get(i);
 						SkillsClass aS = aScores.get(i);
@@ -1739,7 +1743,7 @@ public class PlayerClass implements Serializable, Comparable {
 			for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-					if (!hasDualClass() || getDualClassOK(pC))
+					if (!isDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getThiefSkillAdjustments().size();i++) {
 						SkillsClass oS = lE.getThiefSkillAdjustments().get(i);
 						SkillsClass aS = aScores.get(i);
@@ -1822,7 +1826,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-						if (!hasDualClass() || getDualClassOK(pC))
+						if (!isDualClass() || getDualClassOK(pC))
 						for (int i=0;i<lE.getSpellsPerLevelArcane().length;i++) {
 							int iS = lE.getSpellsPerLevelArcane()[i];
 							if (iS > aScores[i])
@@ -1869,7 +1873,7 @@ public class PlayerClass implements Serializable, Comparable {
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
-						if (!hasDualClass() || getDualClassOK(pC))
+						if (!isDualClass() || getDualClassOK(pC))
 						for (int i=0;i<lE.getSpellsPerLevelDivine().length;i++) {
 							int iS = lE.getSpellsPerLevelDivine()[i];
 							if (iS > aScores[i])
@@ -1979,7 +1983,7 @@ public class PlayerClass implements Serializable, Comparable {
 			// get CharacterClass object
 			CharacterClass oC = CharacterClass.getClassByMyID(pC.getClassID(), ost);
 			if (oC!= null) // if no class is set == null
-				if (!hasDualClass() || getDualClassOK(pC))
+				if (!isDualClass() || getDualClassOK(pC))
 				for (CharacterClass.LevelClass lE: oC.getLevelDetails()) { // iterate over levels
 					// get saves from level settings
 					if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
@@ -2029,7 +2033,7 @@ public class PlayerClass implements Serializable, Comparable {
 				// get saves from level settings
 				if (pC.getExperience()>= lE.getExpReq()) { // high enough exp
 					// get the lowest roll needed to hit
-					if (!hasDualClass() || getDualClassOK(pC))
+					if (!isDualClass() || getDualClassOK(pC))
 					for (int i=0;i<lE.getAttackMatrix().length;i++) {
 						int curTHAC = lE.getAttackMatrix()[i];
 						if (curTHAC < aMatrix[i])
@@ -2739,7 +2743,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param ost
 	 * @return
 	 */
-	public boolean hasDualClass() {
+	public boolean isDualClass() {
 		boolean isSet = false;
 		for (PCClass pc : getMyClass()) {
 			if (pc.isLockedClass()) {
@@ -2756,7 +2760,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 */
 	public PCClass getPrimaryDualClass() {
 		PCClass pClass = null;
-		if (hasDualClass()) {
+		if (isDualClass()) {
 			for(PCClass pC: getMyClass())
 				// everything should be locked cept one class
 				if (!pC.isLockedClass()) {
@@ -2804,7 +2808,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 */
 	public boolean getDualClassOK(PCClass cC) {
 		boolean bOK = false;
-		boolean bDualClass = hasDualClass();
+		boolean bDualClass = isDualClass();
 		int nDualClassLevel = getDualClassLevelHighest();
 		int nPrimaryClassLevel = getPrimaryClassLevel();
 
@@ -2828,7 +2832,7 @@ public class PlayerClass implements Serializable, Comparable {
 		PCClass e = new PCClass(o.getName(),o.getMyID(), 0, false, null);
 		
 		// set all other classes LOCKED
-		if (addDualClass || hasDualClass()) {
+		if (addDualClass || isDualClass()) {
 			for(PCClass pC: getMyClass())
 				pC.setLockedClass(true);
 		}
@@ -2841,13 +2845,13 @@ public class PlayerClass implements Serializable, Comparable {
 	/**
 	 * remove PCClass w/matching myID from object
 	 *  
-	 * @param myID
+	 * @param thisID
 	 */
-	public void removePCClass(String myID) {
+	public void removePCClass(String thisID) {
 		ArrayList<PCClass> pcList = new ArrayList<>();
 
 		for(PCClass pC: getMyClass())
-			if (pC.getClassID().equalsIgnoreCase(myID))
+			if (pC.getClassID().equalsIgnoreCase(thisID))
 				pcList.add(pC);
 
 		for(PCClass remove: pcList) 
@@ -2855,9 +2859,10 @@ public class PlayerClass implements Serializable, Comparable {
 
 		// if dual classed but has no primary class set last class as
 		// the primary class
-		if (hasDualClass() && getPrimaryDualClass() == null) {
+		if (isDualClass() && getPrimaryDualClass() == null) {
 			getMyClass().get(getMyClass().size()-1).setLockedClass(false);
 		}
+		
 	}
 	
 	/**
@@ -2867,7 +2872,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 */
 	public void reRollHitPoints(MainClass ost) {
 		
-		if (!hasDualClass()) {
+		if (!isDualClass()) {
 			for (PCClass pC : getMyClass())
 				pC.setLevel(0);// set level to 0 so it re-levels character up
 			setHpCurrent(0);
@@ -2895,7 +2900,7 @@ public class PlayerClass implements Serializable, Comparable {
 	public void updateLevelDifferential(MainClass ost, int nEXP, boolean addEXP) {
 		if (nEXP != 0 || !addEXP) { // either we have exp to adjust or we want to force re-roll
 			int classCount = 
-					hasDualClass()?1:getMyClass().size();
+					isDualClass()?1:getMyClass().size();
 				nEXP /= classCount;
 			for (PCClass pC : getMyClass()) {
 				if (!pC.isLockedClass()) {
@@ -2928,4 +2933,54 @@ public class PlayerClass implements Serializable, Comparable {
 
 	}
 	
+	/**
+	 * reset all multiclass classes to 0 level/exp value
+	 *  
+	 */
+	public void multiclassUpdates() {
+		for(PCClass cC: getMyClass()) {
+			cC.setExperience(0);
+			cC.setLevel(0);
+		}
+	}
+	/**
+	 * return the number of classes this player has
+	 * 
+	 * @return
+	 */
+	public int getClassCount() {
+		return(getMyClass().size());
+	}
+	
+	/**
+	 * get PCClass at index
+	 * 
+	 * @param index
+	 * @return
+	 */
+	public PCClass getClassAt(int index) {
+		PCClass cC = null;
+		try {
+			cC = getMyClass().get(index);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return cC;
+	}
+	/**
+	 * is PC multi-classed?
+	 * 
+	 * @return
+	 */
+	public boolean isMultiClassed() {
+		return (getClassCount() > 1 && !isDualClass());
+	}
+	/**
+	 * is player single classed?
+	 * 
+	 * @return
+	 */
+	public boolean isSingleClassed() {
+		return(getClassCount()<=1);
+	}
 } // end PlayerClass

@@ -315,6 +315,12 @@ public class Option_Set_CharacterClass extends javax.swing.JDialog {
 						bDelete = true;
 						if (pc != null) {
 							pc.removePCClass(o.getMyID());
+							if (pc.isSingleClassed())
+								pc.getClassAt(0).setExperience(pc.getTotalExperience());
+							else if (pc.isMultiClassed())
+								pc.multiclassUpdates();
+							else if(pc.isDualClass()) {} // handled in removePCClass
+							
 							classesChanged = true;
 						}
 						eCurrent.remove(o);
@@ -334,24 +340,29 @@ public class Option_Set_CharacterClass extends javax.swing.JDialog {
 				if (oNew != null && !eCurrent.contains(oNew)) {
 					if (pc != null) {
 						if (eCurrent.size() > 0) {
-							//TODO test this
-							if (pc.hasDualClass() || SimpleDialog.AskYN(parent, "Apply as dual class?")) {
+							//dualclass
+							if (!pc.isMultiClassed() && 
+									(pc.isDualClass() || SimpleDialog.AskYN(parent, "Apply as dual class?"))) {
 								pc.addPCClass((CharacterClass) oNew, true);
 								eCurrent.add((CharacterClass) oNew);
-							} else if (SimpleDialog.AskYN(parent, "Apply as multi-class?")) {
+								// multi-class
+							} else if (pc.isMultiClassed() || SimpleDialog.AskYN(parent, "Apply as multi-class?")) {
+								pc.multiclassUpdates();
 								pc.addPCClass((CharacterClass) oNew, false);
 								eCurrent.add((CharacterClass) oNew);
 							} else {
 								pc.getMyClass().clear();
 								pc.addPCClass((CharacterClass) oNew, false);
-								
+								// set exp value to lifetime total, only class now
+								pc.getClassAt(0).setExperience(pc.getTotalExperience());
 								eCurrent.clear();
 								eCurrent.add((CharacterClass) oNew);
 							}
 						} else {
-							//TODO add to player
-							pc.addPCClass((CharacterClass) oNew, false);
 							// no class set, add
+							pc.addPCClass((CharacterClass) oNew, false);
+							// set exp value to lifetime total, only class now
+							pc.getClassAt(0).setExperience(pc.getTotalExperience());
 							eCurrent.add((CharacterClass) oNew);
 						}
 						classesChanged = true;
