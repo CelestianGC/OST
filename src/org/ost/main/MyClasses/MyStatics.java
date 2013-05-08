@@ -168,4 +168,6 @@ public class MyStatics {
 	public static final String[] RANGE_ABBREVS = 
 		{"S","M","L","VL","O"};
 	
+	public static String DEFAULT_CLASS_ID = "167fc092-1fa4-450f-9e44-b0baaab45aae";
+	
 }

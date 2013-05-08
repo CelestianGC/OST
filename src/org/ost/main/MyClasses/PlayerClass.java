@@ -100,7 +100,10 @@ public class PlayerClass implements Serializable, Comparable {
 		setHpCurrent(10);
 		setMoveRate("12");
 		setAlignment("Neutral");
+
 		setArmorRatings(new ArrayList<String>());
+		getArmorRatings().add("10");
+		getArmorRatings().add("10");
 		getArmorRatings().add("10");
 		
 		setGear(new ArrayList<EquipmentClass>());
@@ -122,7 +125,8 @@ public class PlayerClass implements Serializable, Comparable {
 		setTag("");
 
 		setMyClass(new ArrayList<PCClass>());
-		getMyClass().add(new PCClass("NoClassYet", "NoClassSet"));
+		getMyClass().add(new PCClass("Fighter", DEFAULT_CLASS_ID));
+		
 		setMyRace(new PCRace("NoRaceYet", "NoRaceSET")); // has to be set when pc selects race
 		setMyWeaponProfs(new ArrayList<String>());
 		setMyNonWeaponProfs(new ArrayList<String>());

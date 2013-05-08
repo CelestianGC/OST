@@ -579,13 +579,13 @@ public class ExtraAbilitiesClass implements Comparable{
 
 		// check that we do not have duplicates and place into array
 		for(ExtraAbilitiesClass oE: extraList1) 
-			if (!extraList2.contains(oE))
+			//if (!extraList2.contains(oE))
 				extraList.add(oE);
 		for(ExtraAbilitiesClass oE: extraList2) 
-			if (!extraList1.contains(oE))
+			//if (!extraList1.contains(oE))
 				extraList.add(oE);
 		for(ExtraAbilitiesClass oE: extraList3) 
-			if (!extraList1.contains(oE) && !extraList2.contains(oE))
+			//if (!extraList1.contains(oE) && !extraList2.contains(oE))
 				extraList.add(oE);
 		
 
@@ -619,7 +619,7 @@ public class ExtraAbilitiesClass implements Comparable{
 							ArrayList<ExtraAbilitiesClass> extraLevelList =
 									ExtraAbilitiesClass.getAllowed(lE.getBonusAbilities(), ost.extraAbilitiesList);
 							for (ExtraAbilitiesClass eC: extraLevelList) {
-								if (!extraList.contains(eC)) 
+								//if (!extraList.contains(eC)) 
 									extraList.add(eC);
 							}
 						} // was high enough level/exp
@@ -650,7 +650,7 @@ public class ExtraAbilitiesClass implements Comparable{
 				ArrayList<ExtraAbilitiesClass> extraLevelList =
 						ExtraAbilitiesClass.getAllowed(myRace.getBonusAbilities(), ost.extraAbilitiesList);
 				for (ExtraAbilitiesClass eC: extraLevelList) 
-					if (!extraList.contains(eC)) 
+					//if (!extraList.contains(eC)) 
 						extraList.add(eC);
 
 			}
@@ -669,8 +669,10 @@ public class ExtraAbilitiesClass implements Comparable{
 				if (oE.isEquipped()) {
 				ArrayList<ExtraAbilitiesClass> extraLevelList =
 						ExtraAbilitiesClass.getAllowed(oE.getFeatures(), ost.extraAbilitiesList);
-				for (ExtraAbilitiesClass eC: extraLevelList) 
-					if (!extraList.contains(eC)) 
+				for (ExtraAbilitiesClass eC: extraLevelList)
+					// actually we do not care if it exists, if there are 2 items with
+					// +1 to save then we need to get the feature twice
+					//if (!extraList.contains(eC)) 
 						extraList.add(eC);
 				}
 			}

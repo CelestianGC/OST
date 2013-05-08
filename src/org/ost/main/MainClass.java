@@ -32,7 +32,7 @@ import static org.ost.main.MyClasses.MyStatics.*;
 
 public class MainClass implements Serializable {
 	private static final long serialVersionUID = 1L;
-	public String version = "13.05.01(alpha)";
+	public String version = "13.05.05(alpha)";
 	public String dateName = "by Mike Wilson";
 	public String aboutURL = "https://sourceforge.net/projects/oldschooltool/";
 	public String aboutEmail = "uce_mike@yahoo.com";
@@ -289,7 +289,10 @@ public class MainClass implements Serializable {
 		ost.characterClassList.xm.deserializeFromXMLFile();
 		if (ost.characterClassList.getContent().isEmpty()) 
 			ost.characterClassList.generate();
-
+		//Set the default class to the first class, used when creating a new
+		//character, need to have something valid.
+		DEFAULT_CLASS_ID = ost.characterClassList.getContent().get(0).getMyID();
+		
 		ost.showProgress(ost.mainFrame, "Loading abilities...");
 		ost.extraAbilitiesList.xm.deserializeFromXMLFile();
 		if (ost.extraAbilitiesList.getContent().isEmpty()) 
