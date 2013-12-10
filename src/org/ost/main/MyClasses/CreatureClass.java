@@ -442,7 +442,7 @@ public class CreatureClass implements Serializable, Comparable{
 		// 20 is default, if it is a number and not 20 we use it, otherwise we figure it out
 		if (MyParse.isInteger(THACO) && Integer.parseInt(THACO)!=20)
 			myThaco = Integer.parseInt(THACO);
-		else {
+		else if (chartList != null){
 			// if level is not -1 or 1 then use it, otherwise use HD 
 			String myHD = Math.abs(getLevel())==1?getMatrixHD():String.format("%d", getLevel());
 

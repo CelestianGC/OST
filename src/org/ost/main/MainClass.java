@@ -32,7 +32,7 @@ import static org.ost.main.MyClasses.MyStatics.*;
 
 public class MainClass implements Serializable {
 	private static final long serialVersionUID = 1L;
-	public String version = "13.05.05(alpha)";
+	public String version = "13.12.10(alpha)";
 	public String dateName = "by Mike Wilson";
 	public String aboutURL = "https://sourceforge.net/projects/oldschooltool/";
 	public String aboutEmail = "uce_mike@yahoo.com";

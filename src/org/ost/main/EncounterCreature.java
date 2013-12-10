@@ -1279,9 +1279,18 @@ public class EncounterCreature extends javax.swing.JPanel {
 		// convert to integer
 		int[] atkList = new int[attackList.size()];
 
+		// if using 2e THACO mode, make a attach chart based on the THACO value
+		// from creature struct
+		if (ost.mainFrame.thacoModeRadioButton.isSelected()) {
+			int nThaco = oC.getTHACO(null);
+			for (int i = 0; i < MAX_MATRIX; i++)
+				atkList[i] = nThaco-(10-i);
+		} else
+			// otherwise we use HD, figure out thaco and build one (1e/basic style)
 		for (int i = attackList.size(); i > 0; i--)
 			atkList[MAX_MATRIX - i] = Integer.parseInt(attackList.get(i - 1));
 
+		
 		attackChartPanel.removeAll();
 		JTable matrix = Utils.getMatrixTable(atkList);
 		attackChartPanel.add(matrix.getTableHeader(), BorderLayout.PAGE_START);

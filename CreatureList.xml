@@ -90,46 +90,316 @@
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
-    <myID>0365c76f-6aa4-4081-bb74-14f5f323785f</myID>
-    <Name>Aasimon - Agathinon</Name>
-    <HD>7+7</HD>
+    <myID>4a25c9ed-1872-44d7-9f74-fdb3051387ba</myID>
+    <Name>Aasimon - Deva - Astral</Name>
+    <HD>12</HD>
     <Level>-1</Level>
     <Attacks>2</Attacks>
-    <Damage>By weapon</Damage>
-    <AC>0</AC>
+    <Damage>3-18(x2)</Damage>
+    <AC>-5</AC>
     <MaxHP>1</MaxHP>
     <HitPoints>1</HitPoints>
     <Description>A strange and wonderful creature.</Description>
     <Treasure>Nil</Treasure>
-    <Size>M-L</Size>
-    <SpecialDefense>Special</SpecialDefense>
-    <SpecialAttack>Special</SpecialAttack>
-    <EncounterSize>1</EncounterSize>
-    <Move>18</Move>
-    <MagicResistance>35%</MagicResistance>
-    <Intelligence>Very to Genius (11-18)</Intelligence>
-    <Alignment>NG</Alignment>
-    <BaseXP>1</BaseXP>
-    <XPperHP>2</XPperHP>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+2 to hit; Protection; Never surprised; Immunities</SpecialDefense>
+    <SpecialAttack>Disruption</SpecialAttack>
+    <EncounterSize>1 (1-3)</EncounterSize>
+    <Move>24, Fl 48 (B)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>60000</BaseXP>
+    <XPperHP>1</XPperHP>
     <Frequency>Very Rare</Frequency>
     <Atks>
       <string>1d4</string>
     </Atks>
     <Type>Outsider</Type>
-    <Climate>N/A</Climate>
-    <Terrain>N/A</Terrain>
-    <ActivityCycle>N/A</ActivityCycle>
-    <Diet>N/A</Diet>
-    <InLair>Nil</InLair>
-    <Morale>N/A</Morale>
-    <PsionicAbility>177</PsionicAbility>
-    <PsionicModes>All/All</PsionicModes>
-    <Source>MM2 (Monstrous Manual II, First Edition)</Source>
-    <THACO>20</THACO>
-    <Organization>N/A</Organization>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
-    <matrixHD>0</matrixHD>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>6bc40b78-567d-45fb-9789-e65924a05820</myID>
+    <Name>Aasimon - Deva - Monadic</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>11-20(x2) (1d10+10)</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Protection; Immunities</SpecialDefense>
+    <SpecialAttack>Smiting</SpecialAttack>
+    <EncounterSize>1 (1-3)</EncounterSize>
+    <Move>15, Fl 36 (B)</Move>
+    <MagicResistance>60%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>52500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e7ec1aaa-63ec-49c5-b935-f71069af70ef</myID>
+    <Name>Aasimon - Deva - Movanic</Name>
+    <HD>8</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Protection; Never surprised; Parry; Regeneration</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1 (1-3)</EncounterSize>
+    <Move>12, Fl 30 (B)</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>78500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>53d76930-444c-40f1-8f48-c99f405f4089</myID>
+    <Name>Aasimon - Light</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-12</Damage>
+    <AC>-10</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S</Size>
+    <SpecialDefense>+2 to hit; Never surprised; Spell Immunities</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>Fl 48 (A)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>35000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes or Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>92920bac-3dc2-49aa-a0d3-ecc72f46d719</myID>
+    <Name>Aasimon - Planetar</Name>
+    <HD>14</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>11-20 (1d10+10)</Damage>
+    <AC>-7</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+3 to hit; Never surprised; Regeneration</SpecialDefense>
+    <SpecialAttack>Vorpal weapon; Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 48 (B)</Move>
+    <MagicResistance>75%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>143500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Plains</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>f5545207-dc5c-4ea3-b191-f8fd45563937</myID>
+    <Name>Aasimon - Solar</Name>
+    <HD>22 (177 HP)</HD>
+    <Level>-1</Level>
+    <Attacks>4</Attacks>
+    <Damage>18-36 (2d20+16)</Damage>
+    <AC>-10</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (9&apos;)</Size>
+    <SpecialDefense>+4 to hit; Never surprised; Spell immunities; Protection</SpecialDefense>
+    <SpecialAttack>Vorpal weapon; Arrows of slaying</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>18, Fl 48 (B)</Move>
+    <MagicResistance>85%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>225000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Plains</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>fa823905-8137-4a6a-b639-c2083d8d21ae</myID>
+    <Name>Aasimon – Agathinon</Name>
+    <HD>8</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon or special</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Incidental</Treasure>
+    <Size>Special</Size>
+    <SpecialDefense>+1 to hit; Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1 (50-100)</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>20%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>NG</Alignment>
+    <BaseXP>30500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon (Upper) - Very Rare (Prime)</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes or Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Army (Upper) - Solitary (Prime)</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -170,7 +440,7 @@
     <PsionicAbility>250</PsionicAbility>
     <PsionicModes>CDE/GIJ</PsionicModes>
     <Source>MM2 (Monstrous Manual II, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -405,6 +675,51 @@
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>fb25b270-4206-4d14-b424-af24da799d11</myID>
+    <Name>Air Sentinel</Name>
+    <HD>5+1</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-6(x2)</Damage>
+    <AC>6</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Z</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>Missile deflection</SpecialDefense>
+    <SpecialAttack>Shocking hug</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>Fl 36 (A)</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>CG</Alignment>
+    <BaseXP>975</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Twin Paradises (Shurrock)</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Family</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>aa1308b6-58d5-4103-ad5e-6cf209f7209e</myID>
     <Name>Al-Mi&apos;raj</Name>
     <HD>1</HD>
@@ -535,6 +850,141 @@
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>bffecaa3-9254-4676-9b60-30172c557fd4</myID>
+    <Name>Animal Lord - Cat Lord</Name>
+    <HD>15 (122 HP)</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Special</Damage>
+    <AC>3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>Special</Size>
+    <SpecialDefense>Danger sense</SpecialDefense>
+    <SpecialAttack>Magic weapons; Rake; Darts</SpecialAttack>
+    <EncounterSize>Unique</EncounterSize>
+    <Move>21</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>N</Alignment>
+    <BaseXP>24000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Beastlands</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>885cb80a-2c89-4f7d-8bb7-9602cbe1c4fa</myID>
+    <Name>Animal Lord - Hawk Lord</Name>
+    <HD>15 (122 HP)</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Special</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>Special</Size>
+    <SpecialDefense>Danger sense; Weapon immunity</SpecialDefense>
+    <SpecialAttack>Dive</SpecialAttack>
+    <EncounterSize>Unique</EncounterSize>
+    <Move>12, Fl 24 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>N</Alignment>
+    <BaseXP>24000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Beastlands</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>ce577cb7-6202-48e7-8cf0-9ce621850992</myID>
+    <Name>Animal Lord - Wolf Lord</Name>
+    <HD>15 (122 HP)</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Special</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>Special</Size>
+    <SpecialDefense>+1 to hit; Danger sense</SpecialDefense>
+    <SpecialAttack>Poison</SpecialAttack>
+    <EncounterSize>Unique</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>N</Alignment>
+    <BaseXP>24000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Beastlands</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -892,6 +1342,231 @@
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>11</THACO>
     <Organization>Entourage</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>89e338a8-80fc-492e-8836-a0c558057a07</myID>
+    <Name>Archon - Hound</Name>
+    <HD>6</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-4(x2)/1-8 or by weapon</Damage>
+    <AC>1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>15000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>dc533745-1213-44fb-ae6c-1fc5d4b7d0ce</myID>
+    <Name>Archon - Lantern</Name>
+    <HD>1/2</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-6(x2)</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S (3&apos;)</Size>
+    <SpecialDefense>+1 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>3-18</EncounterSize>
+    <Move>Fl 24 (A)</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>5000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>90739b29-68c8-47c7-9903-c1b81d342ff9</myID>
+    <Name>Archon - Sword</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>4</Attacks>
+    <Damage>2-8(x4)</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+2 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Dive; Spell use</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>12, Fl 18 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>48500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>0c14478b-e7d7-41d4-96bc-5cee373332cb</myID>
+    <Name>Archon - Tome</Name>
+    <HD>12</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-10(x2)</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+3 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Spell use</SpecialAttack>
+    <EncounterSize>1-3</EncounterSize>
+    <Move>12, Fl 18 (C)</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>53500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>f4737459-1912-4677-954a-3d12f1fa7f6f</myID>
+    <Name>Archon - Warden</Name>
+    <HD>8</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-8(x2)/1-12</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+2 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Bear hug; Spell use</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>20%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>24500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>113</THACO>
+    <Organization>Group</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD></matrixHD>
@@ -1530,6 +2205,636 @@
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>9ee1d0b1-87ac-488f-ad8c-3d2387705043</myID>
+    <Name>Baatezu - Greater - Cornugon</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-4(x2)/2-5/1-3 or 1-3 + weapon+6 (strength)</Damage>
+    <AC>-2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>D,S</Treasure>
+    <Size>L (9&apos;)</Size>
+    <SpecialDefense>+2 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Fear; Wounding; Stun</SpecialAttack>
+    <EncounterSize>1-4</EncounterSize>
+    <Move>9, Fl 18 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>36500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>1dececbc-c78b-47ee-9b78-5cdd88c433ae</myID>
+    <Name>Baatezu - Greater - Gelugon</Name>
+    <HD>11</HD>
+    <Level>-1</Level>
+    <Attacks>4</Attacks>
+    <Damage>5-8(x2)/6-12/7-16 (1d4+4/1d4+4/2d4+4/3d4+4)</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>A,W</Treasure>
+    <Size>H (12&apos;)</Size>
+    <SpecialDefense>+2 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Tail freeze; Fear</SpecialAttack>
+    <EncounterSize>1-8</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>39500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>5c3a71e4-9058-4e54-a152-346bee49ff84</myID>
+    <Name>Baatezu - Greater - Pit Fiend</Name>
+    <HD>13</HD>
+    <Level>-1</Level>
+    <Attacks>6</Attacks>
+    <Damage>1-4(x2)/1-6(x2)/2-12/2-8 or weapon 6</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>G,W</Treasure>
+    <Size>L (12&apos;)</Size>
+    <SpecialDefense>+3 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Fear; Poison; Tail constriction</SpecialAttack>
+    <EncounterSize>1-4</EncounterSize>
+    <Move>15, Fl 24 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>57500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>7</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>a30bf01f-eef1-4429-8972-0ba6d889ebea</myID>
+    <Name>Baatezu - Greater-  Amnizu</Name>
+    <HD>9</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-8</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>V,Y</Treasure>
+    <Size>M (4&apos;)</Size>
+    <SpecialDefense>+2 to hit</SpecialDefense>
+    <SpecialAttack>Energy Channel; Forget</SpecialAttack>
+    <EncounterSize>1-2</EncounterSize>
+    <Move>6, Fl 15 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>32500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>d385f9f8-71c6-4dc3-88d8-c15fc0a956e2</myID>
+    <Name>Baatezu - Least - Nupperibo</Name>
+    <HD>1</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-2(x2) or by weapon</Damage>
+    <AC>9</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>Regeneration</SpecialDefense>
+    <SpecialAttack>Nil</SpecialAttack>
+    <EncounterSize>10-100</EncounterSize>
+    <Move>6</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Non (0)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>65</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>Special</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>19</THACO>
+    <Organization>Army</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e85ba4a7-e34d-4bdc-8f11-94f3be4a4daa</myID>
+    <Name>Baatezu - Least - Spinagon</Name>
+    <HD>3+3</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/by weapon</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S (3&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Flame Spikes</SpecialAttack>
+    <EncounterSize>1 (1-3)</EncounterSize>
+    <Move>6, Fl 18 (C)</Move>
+    <MagicResistance>15%</MagicResistance>
+    <Intelligence>Average to Very (8-12)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>7500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>17</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>77b1e035-2c2e-441e-b06f-d2f595643e23</myID>
+    <Name>Baatezu - Lemure</Name>
+    <HD>2</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-3</Damage>
+    <AC>7</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>Regeneration</SpecialDefense>
+    <SpecialAttack>Battle drive</SpecialAttack>
+    <EncounterSize>10-100</EncounterSize>
+    <Move>3</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Semi (2-4)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>120</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>Special</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>19</THACO>
+    <Organization>Horde</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>1a3eb83f-441e-4713-a846-564760409ca7</myID>
+    <Name>Baatezu - Lesser - Abishai - Black</Name>
+    <HD>4+1</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-5</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+1 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Poison; Dive</SpecialAttack>
+    <EncounterSize>2-20</EncounterSize>
+    <Move>9, Fl 12 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>21500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>17</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>ac8a1058-fcc5-45b8-a334-3ebe1c97c787</myID>
+    <Name>Baatezu - Lesser - Abishai - Green</Name>
+    <HD>5+2</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-5</Damage>
+    <AC>3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (7&apos;)</Size>
+    <SpecialDefense>+1 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Poison; Dive</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>9, Fl 12 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>23500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>3a5c7a32-0a2c-45b8-af2f-9cd2d83c51a2</myID>
+    <Name>Baatezu - Lesser - Abishai - Red</Name>
+    <HD>6+3</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-5</Damage>
+    <AC>1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Poison; Dive</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9, Fl 12 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>25500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>7ed89058-5d60-4c2e-9f01-46c0b7664fa8</myID>
+    <Name>Baatezu - Lesser - Barbazu</Name>
+    <HD>6+6</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-2(x2)/1-8 or 2-12 (weapon)</Damage>
+    <AC>3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Glaive; Disease; Battle frenzy</SpecialAttack>
+    <EncounterSize>20-100</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>23500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Troupe</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>73cae66b-1dd9-4be3-87c2-84adcfca5c03</myID>
+    <Name>Baatezu - Lesser - Erinyes</Name>
+    <HD>6+6</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Special</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Charm; Fear; Rope of entanglement</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12, Fl 21 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>29500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>3feaa2ca-c619-4e78-a40f-6a450ec138a7</myID>
+    <Name>Baatezu - Lesser - Hamatula</Name>
+    <HD>7</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/3-12</Damage>
+    <AC>1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Fear; Hug</SpecialAttack>
+    <EncounterSize>1 (3-12)</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>23000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>cb2f9f6f-c540-427a-8cc4-3752458a82e6</myID>
+    <Name>Baatezu - Lesser - Osyluth</Name>
+    <HD>5</HD>
+    <Level>-1</Level>
+    <Attacks>4</Attacks>
+    <Damage>1-4(x2)/1-8/3-12</Damage>
+    <AC>3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (9&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Fear; Poison</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>LE</Alignment>
+    <BaseXP>24000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Nine Hells</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>8fe87bcf-dc80-4c90-95fa-21c2ef099861</myID>
     <Name>Baatezu - Pit Fiend</Name>
     <HD>6+3</HD>
@@ -1800,6 +3105,51 @@
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>76e8b535-7141-4fda-aef5-3109d3e4139d</myID>
+    <Name>Balaena</Name>
+    <HD>9</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-10</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>G (30&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Tail slap; Shriek</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>Sw 18</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>NG</Alignment>
+    <BaseXP>5000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The River Oceanus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Pod or Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>cd4886ff-9f48-40ae-a360-5cb14598cfa3</myID>
     <Name>Baluchitherium</Name>
     <HD>14</HD>
@@ -1975,6 +3325,51 @@
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>4535670e-2305-44a9-aa22-ca22fb2cf3fb</myID>
+    <Name>Bariaur</Name>
+    <HD>7</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-8 or by weapon</Damage>
+    <AC>6</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (7&apos;)</Size>
+    <SpecialDefense>+2 on surprise rolls</SpecialDefense>
+    <SpecialAttack>Charge</SpecialAttack>
+    <EncounterSize>Special</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>CG</Alignment>
+    <BaseXP>3000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Gladsheim</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Day</ActivityCycle>
+    <Diet>Herbivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Flock</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -3235,6 +4630,51 @@
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e7ac1073-e624-4aad-b440-c6e02d178591</myID>
+    <Name>Bebilith</Name>
+    <HD>12</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/2-12</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>H (15&apos;)</Size>
+    <SpecialDefense>+2 to hit; Webs; Protection magic</SpecialDefense>
+    <SpecialAttack>Armor destruction; Poison</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9, Wb 18</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>17000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -6070,6 +7510,51 @@
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>851bf36a-2cb2-44f7-8377-2619e5413b7f</myID>
+    <Name>Bodak</Name>
+    <HD>9+9</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Spell immunity; Immunity to poison</SpecialDefense>
+    <SpecialAttack>Death gaze</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>6</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>5500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -18580,6 +20065,51 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>1284cd99-f9ae-4a1e-a17b-5cc7439e0e0d</myID>
+    <Name>Dragon - Adamantite</Name>
+    <HD>21 (Base)</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-12(X2)/6-48</Damage>
+    <AC>-10</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Special</Treasure>
+    <Size>G (54&apos; base)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 42 (C)</Move>
+    <MagicResistance>Special</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>NG</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Dragon</Type>
+    <Climate>Twin Paradises</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>b24d93db-39c7-47aa-86a9-f640ad9bec5d</myID>
     <Name>Dragon - Black</Name>
     <HD>6 to 8</HD>
@@ -20010,7 +21540,7 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>FF (Fiend Folio, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -21675,7 +23205,7 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
-    <THACO>20</THACO>
+    <THACO>0</THACO>
     <Organization>Clan</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -22135,6 +23665,51 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>4204db2c-fdf8-4b15-9412-77928d4b0389</myID>
+    <Name>Einheriar</Name>
+    <HD>Varies</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>Varies</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>Varies</SpecialDefense>
+    <SpecialAttack>Varies</SpecialAttack>
+    <EncounterSize>10-100</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>5%</MagicResistance>
+    <Intelligence>Average to High (8-14)</Intelligence>
+    <Alignment>Varies</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Troupe or Army</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>a691f5bc-1aab-49c2-af30-bcf4aeb75e5f</myID>
     <Name>Elemental - Air</Name>
     <HD>8 12 or 16</HD>
@@ -22530,7 +24105,7 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>MM (Monster Manual, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -22575,7 +24150,7 @@ gp (25%), 1d6x100 pp (25%), 3d6 gems (50%), 3d4 jewellery
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
-    <THACO>13, 9, or 5</THACO>
+    <THACO>0</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -28159,6 +29734,141 @@ double damage from all magical cold and ice attacks.
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>dea5b528-7c73-4e55-a134-2982c6fbb83c</myID>
+    <Name>Gehreleth - Faratsu</Name>
+    <HD>11</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-7(x2)/3-12 or by weapon +7</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+1 to hit; Adhesive</SpecialDefense>
+    <SpecialAttack>Battle frenzy; Adhesive</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 30 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>28000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Tarterus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>c1267ef9-b9e4-4925-8fa5-9f151aa7af89</myID>
+    <Name>Gehreleth - Kelubar</Name>
+    <HD>13</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/4-16 or by weapon +8</Damage>
+    <AC>-2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6.5&apos;)</Size>
+    <SpecialDefense>+2 to hit</SpecialDefense>
+    <SpecialAttack>Stench; Acidic slime</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12, Fl 24 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>33500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Tarterus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>7</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>50e275ee-bd7d-4ebe-87c4-8e4d760fd9ab</myID>
+    <Name>Gehreleth - Shator</Name>
+    <HD>15</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-9(x2)/5-20 or by weapon +9</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+3 to hit; +2 to surprise rolls; Immune to non-magical attack</SpecialDefense>
+    <SpecialAttack>Magical Weapons</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9, Fl 18 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>40000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Tarterus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>21f7f8bd-9bfc-461f-b4c9-d0f83adc78a4</myID>
     <Name>Genie - Dao</Name>
     <HD>8+3</HD>
@@ -30409,6 +32119,51 @@ double damage from all magical cold and ice attacks.
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>d9737c81-9635-46ae-819e-4b2d562d43cb</myID>
+    <Name>Githyanki</Name>
+    <HD>Per Class and Level</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>Per Armor</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>R (H)</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>Nil</SpecialDefense>
+    <SpecialAttack>Possible spell use; possible magical weapon</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>12, 96 on Astral</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Exceptional to Genius (15-18)</Intelligence>
+    <Alignment>E</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Astral or Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Dictatorship/Monarchy</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>a0e01f4d-ded8-4d57-bd28-ba7ca39ef381</myID>
     <Name>Githzarai</Name>
     <HD>Variable (up to 9)</HD>
@@ -30491,6 +32246,51 @@ double damage from all magical cold and ice attacks.
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>Per Class/Level</THACO>
     <Organization>Dictatorship/Monarchy</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>0a8226ce-c004-4f2a-a26d-f43609d61ad2</myID>
+    <Name>Githzerai</Name>
+    <HD>Per Class and Level</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>Per Armor</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>P (Hx2)</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>Nil</SpecialDefense>
+    <SpecialAttack>Possible spell use; possible magical weapon</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>12, 96 in Limbo</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional to Genius (15-18)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Monarchy/Dictatorship</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD></matrixHD>
@@ -35375,6 +37175,51 @@ Smigmal wears two earrings (each worth 400 gp) and a jeweled belt (3, 200 gp), a
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>30f94573-70f2-44e7-bb6d-96aae41538ac</myID>
+    <Name>Hordling</Name>
+    <HD>6+3 - 7+2 - 8+1 - or 9</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Varies</Damage>
+    <AC>3 -2 -1 - or 0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S-L</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1-6 (1)</EncounterSize>
+    <Move>6, 8, 12, or 15 (D with wings)</Move>
+    <MagicResistance>0% - 5% - 15% - or 30%</MagicResistance>
+    <Intelligence>Semi to Average (2-10)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Common (Prime: Very Rare)</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Hades or Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>5-7</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>66430671-8b3e-4d5c-9937-e5fa88756db3</myID>
     <Name>Hordling (Hordes of Hades)</Name>
     <HD>6+3 to 9</HD>
@@ -39504,7 +41349,7 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
-    <THACO>20</THACO>
+    <THACO>0</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -42979,6 +44824,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>d4df0af2-1472-46db-b8e1-39954b6af27c</myID>
+    <Name>Lammasu - Celestial</Name>
+    <HD>20 (144 HP)</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>2-12(x2)</Damage>
+    <AC>3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (12&apos;)</Size>
+    <SpecialDefense>+3 to hit; Spell use; Regeneration</SpecialDefense>
+    <SpecialAttack>Dive attack; Spell use</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 26 (C)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>G</Alignment>
+    <BaseXP>108500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Olympus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Special</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>1e5129cb-4a88-4139-b39c-4df6a5143b59</myID>
     <Name>Lammasu - Greater</Name>
     <HD>12+7</HD>
@@ -43289,6 +45179,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>6fd7ea05-99ef-4ee1-b281-520a99a5ba5e</myID>
+    <Name>Larva</Name>
+    <HD>1-1</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-5</Damage>
+    <AC>7</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>Nil</SpecialDefense>
+    <SpecialAttack>Wounding; Disease</SpecialAttack>
+    <EncounterSize>10-100</EncounterSize>
+    <Move>3</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Semi (2-4)</Intelligence>
+    <Alignment>E</Alignment>
+    <BaseXP>35</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Unknown</Diet>
+    <InLair>N/A</InLair>
+    <Morale>2-4</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Masses</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -45671,6 +47606,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>15</THACO>
     <Organization>Pack</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>7278ca79-3eaf-4c77-872f-11da3a441404</myID>
+    <Name>Maelephant</Name>
+    <HD>8+2</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-6(x2)/2-12</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (9&apos;)</Size>
+    <SpecialDefense>+1 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Crush; Charge; Memory loss</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>LN(E)</Alignment>
+    <BaseXP>21500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD></matrixHD>
@@ -48829,6 +50809,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>33a2670c-1d32-4d14-b6d3-862bb357eb0b</myID>
+    <Name>Marut</Name>
+    <HD>15</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>8-80</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (12&apos;)</Size>
+    <SpecialDefense>+3 to hit; Regeneration</SpecialDefense>
+    <SpecialAttack>Cause disease</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>LN</Alignment>
+    <BaseXP>36000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Nirvana and Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>f2fbb0f8-b920-4077-9805-2f5c5e854247</myID>
     <Name>Masher</Name>
     <HD>8</HD>
@@ -49004,6 +51029,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>53680c9f-8781-4226-90e0-17420e1bb36f</myID>
+    <Name>Mediator</Name>
+    <HD>3</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-24</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9</Move>
+    <MagicResistance>90%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>LN</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Nirvana</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>17</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -51304,6 +53374,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>a096b9d3-7403-4f38-bbe6-b2eab486543b</myID>
+    <Name>Moon Dog</Name>
+    <HD>9+3</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-12</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (3&apos;)</Size>
+    <SpecialDefense>+2 to hit; Shadowy hypnotic pattern</SpecialDefense>
+    <SpecialAttack>Bay; Howl</SpecialAttack>
+    <EncounterSize>1 (2-8)</EncounterSize>
+    <Move>30 or 9</Move>
+    <MagicResistance>25%</MagicResistance>
+    <Intelligence>High to Exceptional (13-16)</Intelligence>
+    <Alignment>NG</Alignment>
+    <BaseXP>30500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Elysium and Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary or Pack</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>5bf7090b-fc6d-4b52-af60-3e53ab038986</myID>
     <Name>Morkoth</Name>
     <HD>7</HD>
@@ -51385,6 +53500,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>c7253889-11e5-4fb3-b25d-07f72c6cac33</myID>
+    <Name>Mortai</Name>
+    <HD>20</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Special</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>G</Size>
+    <SpecialDefense>Nil</SpecialDefense>
+    <SpecialAttack>Wind and cloud related magic</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>Fl 48 (A)</Move>
+    <MagicResistance>80%</MagicResistance>
+    <Intelligence>Godlike (21+)</Intelligence>
+    <Alignment>NG(C)</Alignment>
+    <BaseXP>58500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Beastlands</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Unknown</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -52474,6 +54634,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>c265e7ec-d537-4d00-b400-2e01f2074a78</myID>
+    <Name>Night Hag</Name>
+    <HD>8</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-12</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>+3 to hit; Spell immunity</SpecialDefense>
+    <SpecialAttack>Cause disease</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9</Move>
+    <MagicResistance>65%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>16000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>c8d5d32e-0a64-4ee5-9638-7c58c6fce367</myID>
     <Name>Nightmare</Name>
     <HD>6+6</HD>
@@ -52555,6 +54760,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>9f6f1ca9-9163-4a9e-aa59-2ae2f9966686</myID>
+    <Name>Nightmare</Name>
+    <HD>6+6</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>4-10(x2)/2-8 (2d4+2/2d4+2/2d4)</Damage>
+    <AC>-4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (6&apos;)</Size>
+    <SpecialDefense>Paralyzing cloud</SpecialDefense>
+    <SpecialAttack>Burning hooves</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 36 (C)</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>2000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -52694,6 +54944,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e8e22044-0017-480e-bedd-b1d52990c0d9</myID>
+    <Name>Noctral</Name>
+    <HD>5</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/2-5</Damage>
+    <AC>1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>G</Treasure>
+    <Size>M (20&apos;)</Size>
+    <SpecialDefense>Surprise</SpecialDefense>
+    <SpecialAttack>Swoop</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>1, Fl 36 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>7000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Night</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -54679,6 +56974,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>4338a322-ba40-4eb3-ac32-cd5543ca97d8</myID>
+    <Name>Per</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-20 (+3 or +6)</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+1 to hit; Never surprised; Regeneration; Never checks morale</SpecialDefense>
+    <SpecialAttack>Magic weapons</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>LN</Alignment>
+    <BaseXP>27500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>Special</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>08b7e6f1-9ecc-43d2-9830-6aa083500ee7</myID>
     <Name>Pernicon</Name>
     <HD>1/2</HD>
@@ -55030,6 +57370,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>1</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>60866895-d21b-4a36-93dc-73006e8c6d2a</myID>
+    <Name>Phoenix</Name>
+    <HD>20</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-12 or 1-8(x2)</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>O</Treasure>
+    <Size>L (40&apos;+)</Size>
+    <SpecialDefense>+3 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Shriek</SpecialAttack>
+    <EncounterSize>1-3</EncounterSize>
+    <Move>6, Fl 39 (D)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>NG</Alignment>
+    <BaseXP>87000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Elysium</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -60979,6 +63364,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>229cedb6-ff2d-45e1-a4f7-cb4e63a4184d</myID>
+    <Name>Slaad - Blue</Name>
+    <HD>8+4</HD>
+    <Level>-1</Level>
+    <Attacks>5</Attacks>
+    <Damage>2-12(x4)/2-16</Damage>
+    <AC>2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>K,Q</Treasure>
+    <Size>L (10&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Disease</SpecialAttack>
+    <EncounterSize>2-12</EncounterSize>
+    <Move>6</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>16500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>f5a5c806-2b70-4a75-9868-fa3148ce1a5a</myID>
     <Name>Slaad - Death</Name>
     <HD>15+7</HD>
@@ -61024,6 +63454,96 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>497f895a-32f7-4d24-994b-4c931a707258</myID>
+    <Name>Slaad - Death</Name>
+    <HD>15+7</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>3-18(x2)/2-20 or sword +6</Damage>
+    <AC>-4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Z</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+3 to hit</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1-2</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>61500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>9bf1dbfd-8b84-48d4-9c72-0b7cd3618e38</myID>
+    <Name>Slaad - Gray</Name>
+    <HD>10+6</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>4-10(x2)/2-16</Damage>
+    <AC>-2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Rx2</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+2 to hit</SpecialDefense>
+    <SpecialAttack>Magical Weapons</SpecialAttack>
+    <EncounterSize>1-4</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>60%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>45000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>45b57adc-313c-460d-ab15-bf923ec495d8</myID>
     <Name>Slaad - Green</Name>
     <HD>9+3</HD>
@@ -61064,6 +63584,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>155de178-e00f-40a5-89cb-fa33f54cc8f4</myID>
+    <Name>Slaad - Green</Name>
+    <HD>9+5</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>3-8(x2)/2-16 or sword</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>R</Treasure>
+    <Size>L (7&apos;+)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>9</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>27500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -61284,6 +63849,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
+    <THACO>13</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>b4e85b72-90a2-4295-b820-eb7993142ba3</myID>
+    <Name>Slaad - Red</Name>
+    <HD>7+3</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-16</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>K,Q</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Stun; Egg-pellet</SpecialAttack>
+    <EncounterSize>3-18</EncounterSize>
+    <Move>6</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>CN</Alignment>
+    <BaseXP>7500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Limbo</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>8-10</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
     <THACO>13</THACO>
     <Organization>Group</Organization>
     <initRoll>0</initRoll>
@@ -62769,7 +65379,7 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>MM (Monster Manual, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -66559,6 +69169,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>d66b4625-e1d8-4430-88a3-5b0e58ddcd9b</myID>
+    <Name>T&apos;uen&apos;rin</Name>
+    <HD>16</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-10(x2)/2-20</Damage>
+    <AC>-8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>H,I</Treasure>
+    <Size>H (13&apos;)</Size>
+    <SpecialDefense>Never surprised</SpecialDefense>
+    <SpecialAttack>Awe</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>24, Fl 48 (D)</Move>
+    <MagicResistance>90%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>150000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Arcadia</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Herbivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>0e7604ca-fb39-4f43-bf22-9e9d52609b2c</myID>
     <Name>Tabaxi</Name>
     <HD>2</HD>
@@ -66874,6 +69529,546 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>b2126340-ef02-41b9-9295-f6164c2e978e</myID>
+    <Name>Tanar&apos;ri - Greater - Babau</Name>
+    <HD>8+14</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-5(x2)/2-8 or by weapon +7</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>D</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+1 to hit; Thief abilities</SpecialDefense>
+    <SpecialAttack>Corrosion; Gaze; Backstab</SpecialAttack>
+    <EncounterSize>1 (1-2)</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>42500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>cd331928-c408-4cc9-9ca4-3025cac8fda7</myID>
+    <Name>Tanar&apos;ri - Greater - Chasme</Name>
+    <HD>8+2</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/1-4</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Terror; Sleep drone; Wounding</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>6, Fl 24 (D)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Average to Very (8-12)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>30000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>38087fdb-005f-4ca6-897e-b77acda08a03</myID>
+    <Name>Tanar&apos;ri - Greater - Nabassu</Name>
+    <HD>7+2 to 7+20</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-8(x2)/3-12 or weapon +7</Damage>
+    <AC>4 to -5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Qx10</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Death gaze; Backstab; Paralyzation</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12, Fl 15 (C)</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss or Prime</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>19a21087-9493-4d6d-8a6b-7c268f5a6305</myID>
+    <Name>Tanar&apos;ri - Guardian - Molydeus</Name>
+    <HD>12</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>2-12/1-6/7-25</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>H (12&apos;)</Size>
+    <SpecialDefense>Cold iron to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Vorpal and dancing battle axe; Poison</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>90%</MagicResistance>
+    <Intelligence>High to Exceptional (13-16)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>53500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>926769f3-c66f-4219-ba27-e2414658f3b2</myID>
+    <Name>Tanar&apos;ri - Least - Dretch</Name>
+    <HD>2</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-5</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S (3-4&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>4-40</EncounterSize>
+    <Move>9</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>8000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>19</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>2560037c-1dbe-418e-a0e0-1a4c0636ed11</myID>
+    <Name>Tanar&apos;ri - Least - Manes</Name>
+    <HD>1</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-2(x2)/1-4 or by weapon</Damage>
+    <AC>8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S (3&apos;)</Size>
+    <SpecialDefense>Immune to mind-affecting spells</SpecialDefense>
+    <SpecialAttack>Acidic vapor</SpecialAttack>
+    <EncounterSize>50-500</EncounterSize>
+    <Move>6</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>Semi (2-4)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>1000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>Special</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Horde</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>ee49f8bb-f42e-45be-acdb-cb2e23b86805</myID>
+    <Name>Tanar&apos;ri - Least - Rutterkin</Name>
+    <HD>4</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-7(x2) or by weapon</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5-7&apos;)</Size>
+    <SpecialDefense>Nil</SpecialDefense>
+    <SpecialAttack>Snap-tong</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>10%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>12000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>17</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>f3d96110-6a8e-4d1f-ab90-b162fcd84535</myID>
+    <Name>Tanar&apos;ri - Lesser -  Bar-lgura</Name>
+    <HD>6+6</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-6(x2)/2-12</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>Camouflage</SpecialDefense>
+    <SpecialAttack>Spring attack</SpecialAttack>
+    <EncounterSize>2-12</EncounterSize>
+    <Move>9, Climb 15</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Low to Average (5-10)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>25500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Pack</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>d74bc3e9-552f-4cf8-bc12-f2779b183c64</myID>
+    <Name>Tanar&apos;ri - Lesser - Alu-Fiend</Name>
+    <HD>5</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>5 (base)</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (5-6&apos;)</Size>
+    <SpecialDefense>+1 or cold iron to hit; Magical Armor; Intuition</SpecialDefense>
+    <SpecialAttack>Magical weapons; Spell use</SpecialAttack>
+    <EncounterSize>1-2</EncounterSize>
+    <Move>12, Fl 15 (D)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Average to Genius (9-18)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>c07403fb-751a-4aba-9417-ef912c1a2974</myID>
+    <Name>Tanar&apos;ri - Lesser - Cambion - Baron/Marquis</Name>
+    <HD>6</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Z,A</Treasure>
+    <Size>M (6-7&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>High to Genius (13-18)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>38f761ab-5d92-4e0b-b4dc-22ce4e787ef8</myID>
+    <Name>Tanar&apos;ri - Lesser - Cambion - Major</Name>
+    <HD>4</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>By weapon</Damage>
+    <AC>2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>R,C</Treasure>
+    <Size>M (6-7&apos;)</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Average to Exceptional (9-16)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>17</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>55deb0df-23cc-438b-8bdd-b73621885fc4</myID>
+    <Name>Tanar&apos;ri - Lesser - Succubus</Name>
+    <HD>6</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-3(x2)</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>I,Q</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+2 to hit; Immune to fire; Never surprised</SpecialDefense>
+    <SpecialAttack>Energy drain</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12, Fl 18 (C)</Move>
+    <MagicResistance>30%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>29000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>770b7f61-ac67-4357-aa20-2d51bc2096ce</myID>
     <Name>Tanar&apos;ri - Marilith</Name>
     <HD>12</HD>
@@ -66911,6 +70106,276 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>9</THACO>
     <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>30517ac0-87c1-41d6-8fe6-942039041f02</myID>
+    <Name>Tanar&apos;ri - True - Balor</Name>
+    <HD>13</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>2-12 or by weapon</Damage>
+    <AC>-8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Hx3</Treasure>
+    <Size>L (12&apos;)</Size>
+    <SpecialDefense>+3 to hit</SpecialDefense>
+    <SpecialAttack>Terror; Body flames; Death throes; Explosion</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 36 (B)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>46000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>7</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>8950dba9-5112-4079-8800-b3c6505a758b</myID>
+    <Name>Tanar&apos;ri - True - Glabrezu</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>5</Attacks>
+    <Damage>2-12(x2)/1-3(x2)/2-5</Damage>
+    <AC>-7</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>H</Treasure>
+    <Size>H (15&apos;)</Size>
+    <SpecialDefense>+2 to hit</SpecialDefense>
+    <SpecialAttack>Grab</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Exceptional (15-16)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>44000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>1f77e3ef-f4dc-4a57-b854-00213dda4676</myID>
+    <Name>Tanar&apos;ri - True - Hezrou</Name>
+    <HD>9</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-6(x2)/4-16</Damage>
+    <AC>-6</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>C</Treasure>
+    <Size>L (7&apos;+)</Size>
+    <SpecialDefense>+2 to hit; Half damage from non magical attacks; Never surprised</SpecialDefense>
+    <SpecialAttack>Bearhug; Stench</SpecialAttack>
+    <EncounterSize>1-6</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Average to High (8-14)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>39000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>3a3551c5-0da0-44bf-b5b7-fc2fd83065be</myID>
+    <Name>Tanar&apos;ri - True - Marilith</Name>
+    <HD>12</HD>
+    <Level>-1</Level>
+    <Attacks>7</Attacks>
+    <Damage>4-24/weapon(x6)</Damage>
+    <AC>-9</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>C,F</Treasure>
+    <Size>L (7&apos;)</Size>
+    <SpecialDefense>+2 to hit; Never surprised; Spell immunity</SpecialDefense>
+    <SpecialAttack>Magical weapons; Constriction</SpecialAttack>
+    <EncounterSize>1-2</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Genius (17-18)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>45000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>c9d8a84e-a312-44bb-8249-9884b6699257</myID>
+    <Name>Tanar&apos;ri - True - Nalfeshnee</Name>
+    <HD>11</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-8</Damage>
+    <AC>-8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Hx2</Treasure>
+    <Size>H (20&apos;)</Size>
+    <SpecialDefense>+2 or cold iron to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Magical Spray</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>12, Fl 15 (D)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Godlike (21+)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>43500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>738cb65d-043f-4428-b37c-6016c34d24ce</myID>
+    <Name>Tanar&apos;ri - True - Vrock</Name>
+    <HD>8</HD>
+    <Level>-1</Level>
+    <Attacks>5</Attacks>
+    <Damage>1-4(x2)/1-8(x2)/1-6 or by weapon +7</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+2 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Spores; Screech; First attack; Dance of Ruin</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>12, Fl 18 (C)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>CE</Alignment>
+    <BaseXP>39000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>The Abyss</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Group</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD></matrixHD>
@@ -67999,6 +71464,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>61009d35-38e8-4731-85d9-726bfc5732e4</myID>
+    <Name>Titan</Name>
+    <HD>20</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>21-56 (7d6+14)</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>E,Q(x10),R</Treasure>
+    <Size>G (25&apos;)</Size>
+    <SpecialDefense>+1 to hit; Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1-10</EncounterSize>
+    <Move>36</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Supra-genius to Godlike (19-21+)</Intelligence>
+    <Alignment>CG</Alignment>
+    <BaseXP>70000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Olympus</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>17-18</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>5</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>e1bd8a27-feaa-465a-aaca-1677121c47ef</myID>
     <Name>Titanothere</Name>
     <HD>12</HD>
@@ -68354,6 +71864,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>5a45966f-1baa-4472-b2a4-b960835119c4</myID>
+    <Name>Translator</Name>
+    <HD>5</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Stun</Damage>
+    <AC>8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>S (3&apos;)</Size>
+    <SpecialDefense>Deific intervention</SpecialDefense>
+    <SpecialAttack>Spell erasing</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>Fl 64 (A)</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>N</Alignment>
+    <BaseXP>3000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Upper Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Nil</Diet>
+    <InLair>N/A</InLair>
+    <Morale>19-20</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -68844,7 +72399,7 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicAbility>Nil</PsionicAbility>
     <PsionicModes>Nil</PsionicModes>
     <Source>MM (Monster Manual, First Edition)</Source>
-    <THACO>N/A</THACO>
+    <THACO>20</THACO>
     <Organization>N/A</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -70654,6 +74209,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>0c322ebb-85cb-4490-be53-f2698b017abf</myID>
+    <Name>Vaporighu</Name>
+    <HD>10</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-6(x2)</Damage>
+    <AC>0</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>C,M</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>Cold iron to hit</SpecialDefense>
+    <SpecialAttack>Poison gas; Armor destruction; Fear</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>9</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>24000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Gehenna</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>d6728ab6-540c-4c68-9397-d51e36836181</myID>
     <Name>Vargouille</Name>
     <HD>1+1</HD>
@@ -71144,6 +74744,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e8366c8f-5aba-4b0b-8fae-b1fb5c0eedee</myID>
+    <Name>Warden Beast</Name>
+    <HD>6 or per animal +3</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>Per animal +2</Damage>
+    <AC>4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>Per animal</Size>
+    <SpecialDefense>Special</SpecialDefense>
+    <SpecialAttack>Special</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>Per animal</Move>
+    <MagicResistance>25%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>N</Alignment>
+    <BaseXP>10</BaseXP>
+    <XPperHP>10</XPperHP>
+    <Frequency>Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Beastlands</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Per animal</ActivityCycle>
+    <Diet>Per animal</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>0</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
@@ -73759,6 +77404,141 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <notes></notes>
   </CreatureClass>
   <CreatureClass>
+    <myID>6b718713-8314-48eb-87fc-65c67bd732ba</myID>
+    <Name>Yugoloth - Greater - Arcanaloth</Name>
+    <HD>12+24</HD>
+    <Level>-1</Level>
+    <Attacks>3</Attacks>
+    <Damage>1-4(x2)/2-12</Damage>
+    <AC>-8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>H</Treasure>
+    <Size>M (6&apos;)</Size>
+    <SpecialDefense>+3 to hit; Spell immunity</SpecialDefense>
+    <SpecialAttack>Claw; Sting</SpecialAttack>
+    <EncounterSize>1-3</EncounterSize>
+    <Move>12, Fl 18 (B)</Move>
+    <MagicResistance>60%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>49500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>d4bd06e2-4847-40ca-acfb-c25bace56370</myID>
+    <Name>Yugoloth - Greater - Nycaloth</Name>
+    <HD>11+22</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>9-16(x2) or by weapon +8</Damage>
+    <AC>-6</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Qx10,X</Treasure>
+    <Size>L (9&apos;)</Size>
+    <SpecialDefense>+2 to hit; Spell immunity</SpecialDefense>
+    <SpecialAttack>Magical axe; Bleeding</SpecialAttack>
+    <EncounterSize>1 (1-2)</EncounterSize>
+    <Move>12, Fl 36 (C)</Move>
+    <MagicResistance>70%</MagicResistance>
+    <Intelligence>Exceptional to Genius (15-18)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>66000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>9</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>c80738eb-8999-4a15-ae49-ad1572c600d2</myID>
+    <Name>Yugoloth - Greater - Ultroloth</Name>
+    <HD>13+26</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-12(x2) or by weapon +9</Damage>
+    <AC>-8</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>G,R</Treasure>
+    <Size>M (6.5&apos;)</Size>
+    <SpecialDefense>+3 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Magical weapon; Gaze of fascination</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>15, Fl 15 (C), Sw 15</Move>
+    <MagicResistance>60%</MagicResistance>
+    <Intelligence>Supra-genius (19-20)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>84000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Very Rare</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>15-16</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>7</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
     <myID>ba028609-3fca-4325-9ee0-b4e8c4442ccd</myID>
     <Name>Yugoloth - Guardian - Greater</Name>
     <HD>10</HD>
@@ -73885,6 +77665,231 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <PsionicModes>Nil</PsionicModes>
     <Source>TSR 2140 - Monstrous Manual (Second Edition)</Source>
     <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>f4f7b8eb-2eb4-4329-a9c0-0ccf7baef836</myID>
+    <Name>Yugoloth - Lesser - Dergholoth</Name>
+    <HD>8+16</HD>
+    <Level>-1</Level>
+    <Attacks>5</Attacks>
+    <Damage>Special</Damage>
+    <AC>-3</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>L (8&apos;)</Size>
+    <SpecialDefense>+1 to hit; Weapon parry</SpecialDefense>
+    <SpecialAttack>Grab; Feeblemind</SpecialAttack>
+    <EncounterSize>1-4</EncounterSize>
+    <Move>12</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>25500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>90c6b427-e255-41b1-9597-236be87c87ee</myID>
+    <Name>Yugoloth - Lesser - Hydroloth</Name>
+    <HD>7+14</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-8(x2)/1-4(x2)/1-10</Damage>
+    <AC>-2</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>I,Y</Treasure>
+    <Size>L (10&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Sleep attack</SpecialAttack>
+    <EncounterSize>1-6 (10-30)</EncounterSize>
+    <Move>6, Gl 12 (E) - Sw 24</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Average (8-10)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>26500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Solitary</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>f817c1fc-4173-4c6c-b353-7a77738de4ca</myID>
+    <Name>Yugoloth - Lesser - Mezzoloth</Name>
+    <HD>10+20</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>14-19(x2)</Damage>
+    <AC>-1</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (7&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Magic items</SpecialAttack>
+    <EncounterSize>2-5</EncounterSize>
+    <Move>15</Move>
+    <MagicResistance>50%</MagicResistance>
+    <Intelligence>Low (5-7)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>40500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>15</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>710e3ef2-5dd6-488f-8cfc-88ed0e2af61b</myID>
+    <Name>Yugoloth - Lesser - Piscoloth</Name>
+    <HD>9+18</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>2-16(x2)</Damage>
+    <AC>-5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>E</Treasure>
+    <Size>M (5&apos;)</Size>
+    <SpecialDefense>+1 to hit; Never surprised</SpecialDefense>
+    <SpecialAttack>Severing; Sting</SpecialAttack>
+    <EncounterSize>2-8</EncounterSize>
+    <Move>6, Sw 18</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>Very (11-12)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>40500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>ae68dce4-ffe7-422f-ab67-ae78aaaac135</myID>
+    <Name>Yugoloth - Lesser - Yagnoloth</Name>
+    <HD>10+20</HD>
+    <Level>-1</Level>
+    <Attacks>2</Attacks>
+    <Damage>1-12 or by weapon +10</Damage>
+    <AC>-4</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>R,H</Treasure>
+    <Size>L (12&apos;)</Size>
+    <SpecialDefense>+1 to hit</SpecialDefense>
+    <SpecialAttack>Magical weapons; Acid breath; Devour</SpecialAttack>
+    <EncounterSize>1</EncounterSize>
+    <Move>18</Move>
+    <MagicResistance>40%</MagicResistance>
+    <Intelligence>High to Exceptional (13-16)</Intelligence>
+    <Alignment>NE</Alignment>
+    <BaseXP>26500</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Uncommon</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Lower Planes</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Carnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>13-14</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>11</THACO>
     <Organization>Solitary</Organization>
     <initRoll>0</initRoll>
     <Tag></Tag>
@@ -74384,6 +78389,51 @@ While Kriitch remains within 10 feet of Falrinth, each has 25% Magic Resistance 
     <initRoll>0</initRoll>
     <Tag></Tag>
     <matrixHD>0</matrixHD>
+    <states/>
+    <AttackList/>
+    <notes></notes>
+  </CreatureClass>
+  <CreatureClass>
+    <myID>e373b699-a599-4fd3-8911-4a8373965d7c</myID>
+    <Name>Zoveri</Name>
+    <HD>7</HD>
+    <Level>-1</Level>
+    <Attacks>1</Attacks>
+    <Damage>1-6</Damage>
+    <AC>5</AC>
+    <MaxHP>1</MaxHP>
+    <HitPoints>1</HitPoints>
+    <Description>A strange and wonderful creature.</Description>
+    <Treasure>Nil</Treasure>
+    <Size>M (6-7&apos;)</Size>
+    <SpecialDefense>Dart</SpecialDefense>
+    <SpecialAttack>None</SpecialAttack>
+    <EncounterSize>1-4</EncounterSize>
+    <Move>Sw 15</Move>
+    <MagicResistance>Nil</MagicResistance>
+    <Intelligence>High (13-14)</Intelligence>
+    <Alignment>LG</Alignment>
+    <BaseXP>20000</BaseXP>
+    <XPperHP>1</XPperHP>
+    <Frequency>Common</Frequency>
+    <Atks>
+      <string>1d4</string>
+    </Atks>
+    <Type>Outsider</Type>
+    <Climate>Seven Heavens (Lunia)</Climate>
+    <Terrain>Any</Terrain>
+    <ActivityCycle>Any</ActivityCycle>
+    <Diet>Omnivore</Diet>
+    <InLair>N/A</InLair>
+    <Morale>11-12</Morale>
+    <PsionicAbility>N/A</PsionicAbility>
+    <PsionicModes>N/A</PsionicModes>
+    <Source>OPA (TSR 2118: Outer Planes Appendix)</Source>
+    <THACO>13</THACO>
+    <Organization>Group</Organization>
+    <initRoll>0</initRoll>
+    <Tag></Tag>
+    <matrixHD></matrixHD>
     <states/>
     <AttackList/>
     <notes></notes>
