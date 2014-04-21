@@ -1399,7 +1399,7 @@ public class PlayerClass implements Serializable, Comparable {
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
-		ArrayList<Integer> saves = new ArrayList<>();
+		ArrayList<Integer> saves = new ArrayList<Integer>();
 		for(int i=0;i<MAX_SAVES;i++)
 			saves.add(20);
 		
@@ -1450,7 +1450,7 @@ public class PlayerClass implements Serializable, Comparable {
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 
-		ArrayList<Integer> saves = new ArrayList<>();
+		ArrayList<Integer> saves = new ArrayList<Integer>();
 		for(int i=0;i<MAX_SAVES;i++)
 			saves.add(0);
 		
@@ -1521,7 +1521,7 @@ public class PlayerClass implements Serializable, Comparable {
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this,ost);
 		
-		ArrayList<AbilityScoreClass> aScores = new ArrayList<>();
+		ArrayList<AbilityScoreClass> aScores = new ArrayList<AbilityScoreClass>();
 		for(int i=0;i<MAX_ABILITIES;i++)
 			aScores.add(
 					new AbilityScoreClass(0,0, ABILITIES[i],ABILITIES_ABBREV[i],0,25));
@@ -1662,7 +1662,7 @@ public class PlayerClass implements Serializable, Comparable {
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
-		ArrayList<SkillsClass> aScores = new ArrayList<>();
+		ArrayList<SkillsClass> aScores = new ArrayList<SkillsClass>();
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)
 			aScores.add(new 
 					SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
@@ -1734,7 +1734,7 @@ public class PlayerClass implements Serializable, Comparable {
 		ArrayList<ExtraAbilitiesClass> extras = 
 				ExtraAbilitiesClass.getAllExtraAbilities(this, ost);
 		
-		ArrayList<SkillsClass> aScores = new ArrayList<>();
+		ArrayList<SkillsClass> aScores = new ArrayList<SkillsClass>();
 		for(int i=0;i<MAX_THIEF_SKILLS;i++)
 			aScores.add(new 
 					SkillsClass(THIEF_ABILITIES_NAMES[i], THIEF_ABILITIES_ABBREV[i], 0));
@@ -2620,7 +2620,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<EquipmentClass> getAllEquippedWeapons() {
-		ArrayList<EquipmentClass> aList = new ArrayList<>();
+		ArrayList<EquipmentClass> aList = new ArrayList<EquipmentClass>();
 		for(EquipmentClass oE: getGear()) {
 			if (oE.isEquipped() && 
 					oE.getType() == GEAR_TYPE_WEAPON)
@@ -2634,7 +2634,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @return
 	 */
 	public ArrayList<EquipmentClass> getAllWeapons() {
-		ArrayList<EquipmentClass> aList = new ArrayList<>();
+		ArrayList<EquipmentClass> aList = new ArrayList<EquipmentClass>();
 		for(EquipmentClass oE: getGear()) {
 			if (oE.getType() == GEAR_TYPE_WEAPON)
 				aList.add(oE);
@@ -2852,7 +2852,7 @@ public class PlayerClass implements Serializable, Comparable {
 	 * @param thisID
 	 */
 	public void removePCClass(String thisID) {
-		ArrayList<PCClass> pcList = new ArrayList<>();
+		ArrayList<PCClass> pcList = new ArrayList<PCClass>();
 
 		for(PCClass pC: getMyClass())
 			if (pC.getClassID().equalsIgnoreCase(thisID))

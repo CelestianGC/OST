@@ -506,7 +506,7 @@ public class ExtraAbilitiesClass implements Comparable{
 	 */
 	public static ArrayList<ExtraAbilitiesClass> getExtraFromName(String name, 
 						List<ExtraAbilitiesClass> list) {
-		ArrayList<ExtraAbilitiesClass> eList = new ArrayList<>();
+		ArrayList<ExtraAbilitiesClass> eList = new ArrayList<ExtraAbilitiesClass>();
 		for (ExtraAbilitiesClass eE: list) {
 			if (eE.getName().equalsIgnoreCase(name)) 
 				eList.add(eE);
@@ -602,7 +602,7 @@ public class ExtraAbilitiesClass implements Comparable{
 	public static ArrayList<ExtraAbilitiesClass> getClassExtraAbilities(
 			PlayerClass pc, MainClass ost) {
 
-		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
+		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<ExtraAbilitiesClass>();
 
 		if (pc != null) {
 			// iterate over all classes pc might have
@@ -640,7 +640,7 @@ public class ExtraAbilitiesClass implements Comparable{
 	public static ArrayList<ExtraAbilitiesClass> getRaceExtraAbilities(
 			PlayerClass pc, MainClass ost) {
 
-		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
+		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<ExtraAbilitiesClass>();
 
 		if (pc != null) {
 			// add race extra-abilities to the running total of
@@ -662,7 +662,7 @@ public class ExtraAbilitiesClass implements Comparable{
 	public static ArrayList<ExtraAbilitiesClass> getItemExtraAbilities(
 			PlayerClass pc, MainClass ost) {
 
-		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<>();
+		ArrayList<ExtraAbilitiesClass> extraList = new ArrayList<ExtraAbilitiesClass>();
 
 		if (pc != null) {
 			for (EquipmentClass oE: pc.getGear()) {

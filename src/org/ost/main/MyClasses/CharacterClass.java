@@ -1119,7 +1119,7 @@ public class CharacterClass implements Comparable{
 		 */
 		public static ArrayList<CharacterClass> getFromName(String name,
 				List<CharacterClass> list) {
-			ArrayList<CharacterClass> eList = new ArrayList<>();
+			ArrayList<CharacterClass> eList = new ArrayList<CharacterClass>();
 			for (CharacterClass eE: list) {
 				if (eE.getName().equalsIgnoreCase(name)) 
 					eList.add(eE);

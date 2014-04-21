@@ -536,6 +536,7 @@ public class MainClass implements Serializable {
 		this.mainFrame.mainProgressBar.setIndeterminate(true);
 		this.mainFrame.mainProgressBar.setValue(0);
 		this.mainFrame.mainProgressBar.setString(sProcess);
+		
 	}
 
 	/**
@@ -546,6 +547,8 @@ public class MainClass implements Serializable {
 		this.mainFrame.mainProgressBar.setValue(100);
 		this.mainFrame.mainProgressBar.setString(null);
 		this.mainFrame.mainProgressFrame.setVisible(false);
+		
 	}
+	
 	
 } // end main
